@@ -1,0 +1,198 @@
+geo,name,is.country,is.un_state,world_4region,lat,lng
+abkh,Abkhazia,True,False,europe,,
+and,Andorra,True,True,europe,42.50779,1.52109
+afg,Afghanistan,True,True,asia,33.0,66.0
+akr_a_dhe,Akrotiri and Dhekelia,True,False,europe,,
+atg,Antigua and Barbuda,True,True,americas,17.05,-61.8
+alb,Albania,True,True,europe,41.0,20.0
+aia,Anguilla,True,False,americas,18.21667,-63.05
+dza,Algeria,True,True,africa,28.0,3.0
+asm,American Samoa,True,False,asia,-11.056,-171.082
+arm,Armenia,True,True,europe,40.25,45.0
+ago,Angola,True,True,africa,-12.5,18.5
+arg,Argentina,True,True,americas,-34.0,-64.0
+aut,Austria,True,True,europe,47.33333,13.33333
+aus,Australia,True,True,asia,-25.0,135.0
+abw,Aruba,True,False,americas,12.5,-69.96667
+aze,Azerbaijan,True,True,europe,40.5,47.5
+bih,Bosnia and Herzegovina,True,True,europe,44.25,17.83333
+brb,Barbados,True,True,americas,13.16667,-59.53333
+bgd,Bangladesh,True,True,asia,24.0,90.0
+bhs,Bahamas,True,True,americas,25.04082,-77.37122
+bel,Belgium,True,True,europe,50.75,4.5
+bhr,Bahrain,True,True,asia,26.03333,50.55
+bfa,Burkina Faso,True,True,africa,12.5,-1.66667
+bgr,Bulgaria,True,True,europe,42.66667,25.25
+blr,Belarus,True,True,europe,53.0,28.0
+ben,Benin,True,True,africa,9.5,2.25
+bmu,Bermuda,True,False,americas,32.2949,-64.78303
+blz,Belize,True,True,americas,17.49952,-88.19756
+brn,Brunei,True,True,asia,4.5,114.66667
+bol,Bolivia,True,True,americas,-17.0,-65.0
+btn,Bhutan,True,True,asia,27.5,90.5
+bra,Brazil,True,True,americas,-10.0,-55.0
+bwa,Botswana,True,True,africa,-22.0,24.0
+vgb,British Virgin Islands,True,False,americas,18.5,-64.5
+bdi,Burundi,True,True,africa,-3.5,30.0
+khm,Cambodia,True,True,asia,13.0,105.0
+cmr,Cameroon,True,True,africa,6.0,12.5
+can,Canada,True,True,americas,60.10867,-113.64258
+cpv,Cape Verde,True,True,africa,16.0,-24.0
+cym,Cayman Islands,True,False,americas,19.5,-80.66667
+caf,Central African Republic,True,True,africa,7.0,21.0
+tcd,Chad,True,True,africa,15.0,19.0
+chl,Chile,True,True,americas,-33.45694,-70.64827
+chn,China,True,True,asia,35.0,105.0
+chanisl,Channel Islands,True,False,europe,,
+cxr,Christmas Island,True,False,asia,-10.5,105.66667
+cck,Cocos Island,True,False,asia,-12.1642,96.87332
+col,Colombia,True,True,americas,4.0,-73.25
+com,Comoros,True,True,africa,-12.23333,44.44553
+cod,"Congo, Dem. Rep.",True,True,africa,-2.5,23.5
+cog,"Congo, Rep.",True,True,africa,-1.0,15.5
+cok,Cook Is,True,False,asia,-21.24842,-159.78516
+cri,Costa Rica,True,True,americas,10.0,-84.0
+civ,Cote d'Ivoire,True,True,africa,8.0,-5.5
+hrv,Croatia,True,True,europe,45.16667,15.5
+cub,Cuba,True,True,americas,22.0,-79.5
+cyp,Cyprus,True,True,europe,35.0,33.0
+cze,Czech Republic,True,True,europe,49.75,15.0
+dnk,Denmark,True,True,europe,56.0,10.0
+dji,Djibouti,True,True,africa,11.58901,43.14503
+dma,Dominica,True,True,americas,15.5,-61.33333
+cheslo,Czechoslovakia,True,False,europe,,
+dom,Dominican Republic,True,True,americas,19.0,-70.66667
+ecu,Ecuador,True,True,americas,-1.25,-78.25
+egy,Egypt,True,True,africa,27.0,30.0
+slv,El Salvador,True,True,americas,13.83333,-88.91667
+gnq,Equatorial Guinea,True,True,africa,1.7,10.5
+deu_east,East Germany,True,False,europe,,
+eri,Eritrea,True,True,africa,15.0,39.0
+est,Estonia,True,True,europe,59.0,26.0
+eth,Ethiopia,True,True,africa,9.0,39.5
+fro,Faeroe Islands,True,False,europe,62.0,-7.0
+flk,Falkland Is (Malvinas),True,False,americas,-51.75,-59.16667
+fji,Fiji,True,True,asia,-18.0,178.0
+eri_a_eth,Eritrea and Ethiopia,True,False,africa,,
+fin,Finland,True,True,europe,64.0,26.0
+fra,France,True,True,europe,46.0,2.0
+guf,French Guiana,True,False,americas,4.0,-53.0
+pyf,French Polynesia,True,False,asia,-15.0,-140.0
+gab,Gabon,True,True,africa,-1.0,11.75
+gmb,Gambia,True,True,africa,13.5,-15.5
+geo,Georgia,True,True,europe,41.99998,43.4999
+deu,Germany,True,True,europe,51.5,10.5
+gha,Ghana,True,True,africa,8.1,-1.2
+gib,Gibraltar,True,False,europe,36.14474,-5.35257
+grc,Greece,True,True,europe,39.0,22.0
+grl,Greenland,True,False,europe,72.0,-40.0
+grd,Grenada,True,True,americas,12.11667,-61.66667
+glp,Guadeloupe,True,False,americas,16.25,-61.58333
+gum,Guam,True,False,asia,13.47861,144.81834
+gtm,Guatemala,True,True,americas,14.64072,-90.51327
+gbg,Guernsey,True,False,europe,49.45474,-2.57629
+gin,Guinea,True,True,africa,10.83333,-10.66667
+gnb,Guinea-Bissau,True,True,africa,12.0,-15.0
+guy,Guyana,True,True,americas,5.0,-59.0
+hti,Haiti,True,True,americas,19.0,-72.41667
+hos,Holy See,True,True,europe,41.90236,12.45332
+hnd,Honduras,True,True,americas,15.0,-86.5
+hkg,"Hong Kong, China",True,False,asia,22.28552,114.15769
+hun,Hungary,True,True,europe,47.0,20.0
+isl,Iceland,True,True,europe,65.0,-18.0
+ind,India,True,True,asia,22.0,79.0
+idn,Indonesia,True,True,asia,-5.0,120.0
+irn,Iran,True,True,asia,32.0,53.0
+irq,Iraq,True,True,asia,33.0,44.0
+irl,Ireland,True,True,europe,53.0,-8.0
+gbm,Isle of Man,True,False,europe,54.15,-4.48333
+isr,Israel,True,True,asia,31.5,34.75
+ita,Italy,True,True,europe,42.83333,12.83333
+jam,Jamaica,True,True,americas,18.16667,-77.25
+jpn,Japan,True,True,asia,35.68536,139.75309
+jey,Jersey,True,False,europe,49.21667,-2.11667
+jor,Jordan,True,True,asia,31.0,36.0
+kaz,Kazakhstan,True,True,asia,48.0,68.0
+ken,Kenya,True,True,africa,1.0,38.0
+kir,Kiribati,True,True,asia,1.421,172.984
+prk,North Korea,True,True,asia,40.0,127.0
+kor,South Korea,True,True,asia,36.5,127.75
+kwt,Kuwait,True,True,asia,29.36972,47.97833
+kgz,Kyrgyz Republic,True,False,asia,41.5,75.0
+lao,Lao,True,True,asia,18.0,105.0
+lva,Latvia,True,True,europe,57.0,25.0
+lbn,Lebanon,True,True,asia,33.83333,35.83333
+lso,Lesotho,True,True,africa,-29.5,28.25
+korea_union,"United Korea (former)
+",True,False,asia,,
+lbr,Liberia,True,True,africa,6.5,-9.5
+kos,Kosovo,True,False,europe,,
+lby,Libya,True,True,africa,28.0,17.0
+lie,Liechtenstein,True,True,europe,47.16667,9.53333
+ltu,Lithuania,True,True,europe,55.41667,24.0
+lux,Luxembourg,True,True,europe,49.61167,6.13
+mac,"Macao, China",True,False,asia,22.20056,113.54611
+mkd,"Macedonia, FYR",True,True,europe,41.66667,21.75
+mdg,Madagascar,True,True,africa,-20.0,47.0
+mwi,Malawi,True,True,africa,-13.5,34.0
+mys,Malaysia,True,True,asia,2.5,112.5
+mdv,Maldives,True,True,asia,3.2,73.0
+mli,Mali,True,True,africa,18.0,-2.0
+mlt,Malta,True,True,europe,35.91667,14.43333
+mhl,Marshall Islands,True,False,asia,7.113,171.236
+mtq,Martinique,True,False,americas,14.66667,-61.0
+mrt,Mauritania,True,True,africa,20.25,-10.5
+mus,Mauritius,True,True,africa,-20.3,57.58333
+myt,Mayotte,True,False,africa,-12.83333,45.16667
+mex,Mexico,True,True,americas,19.42847,-99.12766
+fsm,"Micronesia, Fed. Sts.",True,False,asia,6.924,158.162
+mda,Moldova,True,True,europe,47.25,28.58333
+mco,Monaco,True,True,europe,43.73333,7.41667
+mng,Mongolia,True,True,asia,46.0,105.0
+mne,Montenegro,True,True,europe,42.75,19.25
+msr,Montserrat,True,False,americas,16.75,-62.2
+mar,Morocco,True,True,africa,32.0,-6.0
+moz,Mozambique,True,True,africa,-18.25,35.0
+mmr,Myanmar,True,True,asia,21.0,96.0
+nam,Namibia,True,True,africa,-22.0,17.0
+nru,Nauru,True,True,asia,-0.517,166.933
+npl,Nepal,True,True,asia,28.0,84.0
+nld,Netherlands,True,True,europe,52.25,5.75
+ncl,New Caledonia,True,False,asia,-21.5,165.5
+nzl,New Zealand,True,True,asia,-42.0,174.0
+nic,Nicaragua,True,True,americas,13.0,-85.0
+ner,Niger,True,True,africa,18.0,9.0
+nga,Nigeria,True,True,africa,10.0,8.0
+niu,Niue,True,True,asia,-19.03333,-169.86667
+nfk,Norfolk Island,True,False,asia,-29.03333,167.95
+mnp,Northern Mariana Islands,True,False,asia,15.214,145.756
+ant,Netherlands Antilles,True,False,americas,,
+nor,Norway,True,True,europe,62.0,10.0
+omn,Oman,True,True,asia,21.0,57.0
+pak,Pakistan,True,True,asia,30.0,70.0
+ngokar,Ngorno-Karabakh,True,False,europe,,
+plw,Palau,True,True,asia,7.503,134.621
+pan,Panama,True,True,americas,8.9936,-79.51973
+png,Papua New Guinea,True,True,asia,-6.0,147.0
+pry,Paraguay,True,True,americas,-23.33333,-58.0
+per,Peru,True,True,americas,-10.0,-75.25
+phl,Philippines,True,True,asia,13.0,122.0
+cyp_nor,Northern Cyprus,True,False,europe,,
+pcn,Pitcairn,True,False,asia,-25.06667,-130.1
+pol,Poland,True,True,europe,52.0,20.0
+prt,Portugal,True,True,europe,39.6945,-8.13057
+pri,Puerto Rico,True,False,americas,18.46633,-66.10572
+qat,Qatar,True,True,asia,25.27932,51.52245
+reu,Reunion,True,False,africa,-20.88231,55.4504
+rou,Romania,True,True,europe,46.0,25.0
+rus,Russia,True,True,europe,60.0,100.0
+rwa,Rwanda,True,True,africa,-2.0,30.0
+shn,St. Helena,True,False,africa,-15.95,-5.7
+kna,St. Kitts and Nevis,True,False,americas,17.33333,-62.75
+lca,St. Lucia,True,True,americas,13.88333,-60.96667
+vct,St. Vincent and the Grenadines,True,False,americas,13.08333,-61.2
+spm,St.-Pierre-et-Miquelon,True,False,americas,46.83333,-56.33333
+wsm,Samoa,True,True,asia,-13.8,-172.13333
+smr,San Marino,True,True,europe,43.93667,12.44639
+stp,Sao Tome and Principe,True,True,africa,1.0,7.0
+sau,Saudi Arabia,True,True,asia,25.0,45.0
