@@ -3,7 +3,7 @@ ddf--data_for--child_mortality_rate_per1000--by--country--year.csv,child_mortali
 ddf--data_for--child_mortality_rate_percent--by--country--year.csv,child_mortality_rate_percent,country,year
 ddf--data_for--child_mortality_rate_percent--by--global--year.csv,child_mortality_rate_percent,global,year
 ddf--data_for--child_mortality_rate_percent--by--world_4region--year.csv,child_mortality_rate_percent,world_4region,year
-ddf--data_for--fertility_rate--by--countries--year.csv,fertility_rate,countries,year
+ddf--data_for--fertility_rate--by--countries--year.csv,fertility_rate,country,year
 ddf--data_for--fertility_rate--by--global--year.csv,fertility_rate,global,year
 ddf--data_for--fertility_rate--by--world_4region--year.csv,fertility_rate,world_4region,year
 ddf--data_for--gdp_const_ppp2011_dollar--by--country--year.csv,gdp_const_ppp2011_dollar,country,year
