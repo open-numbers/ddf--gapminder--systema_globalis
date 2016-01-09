@@ -1,4 +1,4 @@
-dimension,type,subdim_of,name,name_short,name_long,link,description,usability,total_entity,total_name,default_entities,drilldowns,drillups,incomplete_drillups,ordinal,measure,interval,cardinality,aliases
+concept,type,subdim_of,name,name_short,name_long,link,description,usability,total_entity,total_name,default_entities,drilldowns,drillups,incomplete_drillups,ordinal,measure,interval,cardinality,aliases
 geo,dimension,,Geography,Geo,,,Geographical & political divisions of the world.,,,,"world,asia,europe,africa,america",,,,,,,,
 global,subdim,geo,Global,Global,The Planet Earth,https://en.wikipedia.org/wiki/Earth,The complete planet earth and everything on it.,1.0,,,world,world_4region,,,0.0,0.0,0.0,1.0,"""tellus"",""world"",""earth"",""global"" ,""total"",""everyone"",""all"",""total world"",""world total"""
 world_4region,subdim,geo,World Regions,Regions,Four equal size world regions,,Gapminder's deivision of the world into four regions of similar land coverage.,1.0,world,All Regions,"asia,europe,africa,america",un_state,,,0.0,0.0,0.0,4.0,"""continent"",""regional"""
