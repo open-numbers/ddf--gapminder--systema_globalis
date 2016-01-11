@@ -196,3 +196,82 @@ wsm,Samoa,True,True,asia,-13.8,-172.13333
 smr,San Marino,True,True,europe,43.93667,12.44639
 stp,Sao Tome and Principe,True,True,africa,1.0,7.0
 sau,Saudi Arabia,True,True,asia,25.0,45.0
+stbar,St. Barthélemy,True,False,americas,,
+sen,Senegal,True,True,africa,14.5,-14.25
+srb,Serbia,True,True,europe,44.81892,20.45998
+syc,Seychelles,True,True,africa,-4.58333,55.66667
+sle,Sierra Leone,True,True,africa,8.5,-11.5
+stmar,St. Martin,True,False,americas,,
+sgp,Singapore,True,True,asia,1.28967,103.85007
+svk,Slovak Republic,True,True,europe,48.66667,19.5
+svn,Slovenia,True,True,europe,46.08333,15.0
+slb,Solomon Islands,True,True,asia,-8.0,159.0
+som,Somalia,True,True,africa,6.0,48.0
+zaf,South Africa,True,True,africa,-29.0,24.0
+esp,Spain,True,True,europe,40.0,-4.0
+lka,Sri Lanka,True,True,asia,7.75,80.75
+sdn,Sudan,True,True,africa,16.0,30.0
+scg,Serbia and Montenegro,True,False,europe,,
+sur,Suriname,True,True,americas,4.0,-56.0
+scg_ex_kos,Serbia excluding Kosovo,True,False,europe,,
+sjm,Svalbard,True,False,europe,78.0,20.0
+swz,Swaziland,True,True,africa,-26.5,31.5
+swe,Sweden,True,True,europe,62.0,15.0
+che,Switzerland,True,True,europe,47.00016,8.01427
+syr,Syria,True,True,asia,35.0,38.0
+twn,Taiwan,True,False,asia,24.0,121.0
+tjk,Tajikistan,True,True,asia,39.0,71.0
+tza,Tanzania,True,True,africa,-6.0,35.0
+som_somland,Somaliland,True,False,africa,,
+tha,Thailand,True,True,asia,15.5,101.0
+tls,Timor-Leste,True,True,asia,-8.83333,125.75
+sosset,South Ossetia,True,False,europe,,
+tgo,Togo,True,True,africa,8.66667,1.08333
+tkl,Tokelau,True,False,asia,-9.167,-171.83
+ton,Tonga,True,True,asia,-20.0,-175.0
+tto,Trinidad and Tobago,True,True,americas,11.0,-61.0
+tun,Tunisia,True,True,africa,34.0,9.0
+tur,Turkey,True,True,europe,39.0,35.0
+tkm,Turkmenistan,True,True,asia,39.75,59.66667
+tca,Turks and Caicos Islands,True,False,americas,21.73333,-71.58333
+tuv,Tuvalu,True,True,asia,-8.51719,179.14478
+uga,Uganda,True,True,africa,1.25,32.5
+ukr,Ukraine,True,True,europe,49.0,32.0
+are,United Arab Emirates,True,True,asia,23.75,54.5
+gbr,United Kingdom,True,True,europe,54.75844,-2.69531
+usa,United States,True,True,americas,39.76,-98.5
+ury,Uruguay,True,True,americas,-33.0,-56.0
+uzb,Uzbekistan,True,True,asia,41.66667,63.83333
+wlf,Wallis et Futuna,True,False,asia,-13.3,-176.2
+vut,Vanuatu,True,True,asia,-16.0,167.0
+transn,Transnistria,True,False,europe,,
+ven,Venezuela,True,True,americas,8.0,-66.0
+pse,West Bank and Gaza,True,True,asia,31.92157,35.20329
+esh,Western Sahara,True,False,africa,24.49215,-12.65625
+vnm,Vietnam,True,True,asia,16.16667,107.83333
+ussr,USSR,True,False,europe,,
+deu_west,West Germany,True,False,europe,,
+vir,Virgin Islands (U.S.),True,False,americas,18.34829,-64.98348
+yem_north,North Yemen (former),True,False,asia,,
+yem_south,South Yemen (former),True,False,asia,,
+yem,Yemen,True,True,asia,15.5,47.5
+yug,Yugoslavia,True,False,europe,,
+zmb,Zambia,True,True,africa,-14.33333,28.5
+zwe,Zimbabwe,True,True,africa,-19.0,29.75
+ala,Åland,True,False,europe,60.25,20.0
+ssd,South Sudan,True,True,africa,7.5,30.0
+nld_curacao,Curaçao,True,False,americas,12.16667,-68.96667
+sxm,Sint Maarten (Dutch part),True,False,americas,18.04167,-63.06667
+maf,St. Martin (French part),True,False,americas,,
+ata,Antarctica,True,False,europe,-90.0,0.0
+bouisl,Bouvet Island,True,False,africa,,
+iot,British Indian Ocean Territory,True,False,asia,-6.0,72.0
+fra_clipperton,Clipperton,True,False,,,
+fra_antarc,French Southern and Antarctic Lands,True,False,,,
+pse_gaza,Gaza Strip,True,False,asia,,
+heard_a_mcd,Heard and McDonald Islands,True,False,,,
+north_mar,Northern Marianas,True,False,asia,,
+sgero_a_ssandw,South Georgia and the South Sandwich Islands,True,False,americas,,
+usa_minor_out_isl,US Minor Outlying Islands,True,False,americas,,
+virg_isl,Virgin Islands,True,False,americas,,
+pse_west_bank,West Bank,True,False,asia,,
