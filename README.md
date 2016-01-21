@@ -1,3 +1,6 @@
+# Systema Globalis
+The name is inspired by [Systema Naturae](https://sv.wikipedia.org/wiki/Systema_naturae). The  the first systeatic compilaiotn and classificaiton of all living things, by Carl von Linné.
+
 ## Data
 This is the main dataset used in tools on the official Gapminder website. It contains local &amp; global statistics which are combined from hundreds of sources.
 
