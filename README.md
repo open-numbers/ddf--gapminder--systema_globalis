@@ -7,7 +7,7 @@ This is the main dataset used in tools on the official Gapminder website. It con
 ## How to update
 Currently the dataset is maintained by manually copyig data from multiple other datasets.
 The plan is to automate the process by using a file called ddf--imports.csv
-Described [here](https://github.com/open-numbers/Data-Description-Format-DDF/wiki/Imports) 
+Described [here](https://github.com/open-numbers/Data-Description-Format-DDF/wiki/File:-ddf-imports)
 
 ## License
 Gapmidner created this dataset and provides it under [Creative Common Attribution 4.0 International][CC].
