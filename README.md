@@ -1,5 +1,3 @@
-# ddf--gapminder--systema_globalis
-
 ## Data
 This is the main dataset used in tools on the official Gapminder website. It contains local &amp; global statistics which are combined from hundreds of sources.
 
