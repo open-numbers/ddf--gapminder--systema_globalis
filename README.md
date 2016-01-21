@@ -1,5 +1,5 @@
 # Systema Globalis
-The name is inspired by [Systema Naturae](https://en.wikipedia.org/wiki/Systema_Naturae); the  the first systematic compilation of all living things from year 1735, by the Swedish Scientist Carl von Linné. The goal of Systema Globalis is to compile all public statistics; Social, Economic and Environmental; into a comparable total dataset.
+The name is inspired by [Systema Naturae](https://en.wikipedia.org/wiki/Systema_Naturae); the first systematic compilation of all living things from year 1735, by the Swedish Scientist Carl von Linné. The goal of Systema Globalis is to compile all public statistics; Social, Economic and Environmental; into a comparable total dataset.
 
 ## Data
 This is the main dataset used in tools on the official Gapminder website. It contains local &amp; global statistics which are combined from hundreds of sources.
