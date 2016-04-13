@@ -51,7 +51,7 @@
 	],
 	/* 
 	 * define the outputs per collection of the recipe 
-     * when cooking, we execute procedures, with a certain input and output
+     * when cooking, we execute procedures, with a certain input (ingredients) and output (result), possibly with options
 	*/
 	"cooking": {
 		"datapoints": [
