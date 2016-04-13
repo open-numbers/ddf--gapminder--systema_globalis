@@ -1,11 +1,14 @@
 # Recipe.yaml
 
+# basic info
 info:
     id: ddf--gapminder--systema_globalis
     name: Systema Globalis
     provider: Gapminder Foundation
     description: Gapminder's fact-base with local & global statistics.
-ingredients:  # define the initial inputs of the recipe
+
+# define the initial inputs of the recipe
+ingredients:
     - id: wdi-datapoints
       dataset: ddf--world_bank--world_development_indicators
       key: [country, year]
@@ -72,8 +75,7 @@ ingredients:  # define the initial inputs of the recipe
     - id: gw-datapoints
       dataset: ddf--gapminder--gapminder_world
       key: [geo, year]
-      value:
-          "*"
+      value: "*"
     - id: gw-entities
       dataset: ddf--gapminder--gapminder_world
       key: "*"
@@ -82,6 +84,7 @@ ingredients:  # define the initial inputs of the recipe
       dataset: ddf--gapminder--gapminder_world
       key: concept
       value: "*"
+
 # define the outputs per collection of the recipe
 # when cooking, we execute procedures, with a certain input (ingredients) and output (result), possibly with options
 cooking:
@@ -98,7 +101,6 @@ cooking:
           ingredients: [wdi-datapoints-indicators-translated]
           result: wdi-datapoints-translated
           # merge ingredients together on the keys
-
         - procedure: merge
           # deep merge is when we check every datapoint for existence
           # if false, overwrite is on the file level. If key-value (e.g. geo,year-population_total) exists, whole file gets overwritten
@@ -118,5 +120,6 @@ cooking:
           ingredients: [wdi-concepts]               # what goes in
           result: wdi-concepts-translated            # what goes out
         - procedure: merge
-          options: { deep: true }
+          options:
+              deep: true
           ingredients: [gw-concepts, wdi-concepts-translated]
