@@ -10,16 +10,16 @@
 		{
 			"id": "wdi-datapoints",
 			"dataset": "ddf--world_bank--world_development_indicators",
-            "type": "datapoint",
+			"type": "datapoint",
 			"key":   ["country", "year"],
 			"value": ["dt_oda_odat_kd","dt_oda_odat_pc_zs","dt_oda_odat_gi_zs","dt_dod_dect_gn_zs","fi_res_totl_dt_zs","ny_gdp_mktp_kd","ny_gdp_pcap_kd","ny_gdp_pcap_kd_zg","ny_gnp_mktp_pp_cd","ny_gnp_pcap_kd","ny_gnp_pcap_cd","ny_gnp_pcap_pp_cd","si_pov_gini","si_dst_10th_10","si_dst_05th_20","si_dst_04th_20","si_dst_03rd_20","si_dst_02nd_20","si_dst_frst_20","si_dst_frst_10","ny_gdp_defl_kd_zg","ne_gdi_totl_zs","gc_tax_totl_gd_zs","bx_klt_dinv_wd_gd_zs","bm_klt_dinv_gd_zs","si_pov_2day","si_pov_ruhc","si_pov_urhc","si_pov_dday","nv_agr_totl_zs","nv_ind_totl_zs","nv_srv_tetc_zs","ne_exp_gnfs_zs","ne_imp_gnfs_zs","ms_mil_xprt_kd","ms_mil_mprt_kd","tx_val_tech_mf_zs","tg_val_totl_gd_zs","ne_rsb_gnfs_cd","ne_rsb_gnfs_zs","cm_mkt_lcap_gd_zs","ms_mil_xpnd_gd_zs","se_enr_prsc_fm_zs","se_adt_1524_lt_fm_zs","se_prm_uner","se_prm_uner_fe","se_prm_uner_ma","se_prm_cmpt_zs","se_prm_cmpt_ma_zs","se_prm_cmpt_fe_zs","se_xpd_prim_pc_zs","se_xpd_seco_pc_zs","se_xpd_tert_pc_zs","eg_use_pcap_kg_oe","ep_pmp_sgas_cd","eg_use_elec_kh_pc","en_atm_co2e_pp_gd_kd","ag_lnd_agri_zs","ag_lnd_frst_k2","ag_srf_totl_k2","sh_sta_maln_zs","sh_med_phys_zs","sh_sta_brtc_zs","sp_dyn_conu_zs","sh_sta_maln_zs","it_net_bbnd","it_net_bbnd_p2","it_cel_sets","it_cel_sets_p2","it_net_user_p2","sh_sta_acsn","sh_sta_acsn_ur","sh_sta_acsn_ru","sp_pop_grow","en_urb_mcty_tl_zs","sp_urb_totl","sp_urb_totl_in_zs","sp_urb_grow","si_pov_nahc","dt_tds_dect_ex_zs","dt_dod_dect_cd","dt_dod_pvlx_gn_zs","tx_val_mrch_xd_wd","tm_val_mrch_xd_wd","tt_pri_mrch_xd_wd","si_pov_dday","ny_gdp_pcap_pp_kd","ny_gdp_pcap_kd_zg"],
-		}, 
+		},
 		{
 			"id": "wdi-countries",
 			"dataset": "ddf--world_bank--world_development_indicators",
-            "type": "entity",
-            "entity": "country",
-            "key": "country",
+			"type": "entity",
+			"entity": "country",
+			"key": "country",
 			"value": "*"
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "wdi-concepts",
 			// which dataset, what type of data
 			"dataset": "ddf--world_bank--world_development_indicators",
-            "type": "concept",
+			"type": "concept",
 			// key and value like in index
 			"key": "concept",
 			"value": "*",
@@ -37,28 +37,28 @@
 		{
 			"id": "gw-datapoints",
 			"dataset": "ddf--gapminder--gapminder_world",
-            "type": "datapoint",
+			"type": "datapoint",
 			"key": ["geo", "year"],
 			"value": "*"
 		},
 		{
 			"id": "gw-entities",
 			"dataset": "ddf--gapminder--gapminder_world",
-            "type": "entity",
-            "entity": "*",
+			"type": "entity",
+			"entity": "*",
 			"key": "*",
 			"value": "*"
 		},
 		{
 			"id": "gw-concepts",
 			"dataset": "ddf--gapminder--gapminder_world",
-            "type": "concept",
+			"type": "concept",
 			"key": "concept",
 			"value": "*"
 		},
 	],
-	/* 
-	 * define the outputs per collection of the recipe 
+	/*
+	 * define the outputs per collection of the recipe
      * when cooking, we execute procedures, with a certain input (ingredients) and output (result), possibly with options
 	*/
 	"cooking": {
@@ -96,12 +96,12 @@
 					"column": "concept",                       // which column
 					"dictionary": "indicators_wdi_to_sg.json"  // which dictionary is used to translate
 				},
-				"ingredients": ["wdi-concepts"],               // what goes in 
+				"ingredients": ["wdi-concepts"],               // what goes in
 				"result": "wdi-concepts-translated"            // what goes out
 			},
 			{
 				"procedure": "merge",
-				"options": { "deep": true },  
+				"options": { "deep": true },
 				"ingredients": ["gw-concepts", "wdi-concepts-translated"]
 			}
 		]
