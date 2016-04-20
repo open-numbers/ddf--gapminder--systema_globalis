@@ -78,7 +78,7 @@
 		"entities":[
 			{
 				"procedure": "identity",         // identity function = nothing changes
-				"ingredients": ["gw.entities"]
+				"ingredients": ["gw-entities"]
 			}
 		],
 		"concepts":[
