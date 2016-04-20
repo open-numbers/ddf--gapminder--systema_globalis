@@ -1,0 +1,4 @@
+# Notes
+
+1. cooking: we can combine 2 translate_header procedures into one
+2. cooking: Maybe adding a `order` to procedures to indicate which procedures should run first
