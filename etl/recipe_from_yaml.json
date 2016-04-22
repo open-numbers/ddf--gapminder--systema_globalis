@@ -1,81 +1,7 @@
 {
- "info": {
-  "description": "Gapminder's fact-base with local & global statistics.",
-  "id": "ddf--gapminder--systema_globalis",
-  "provider": "Gapminder Foundation",
-  "name": "Systema Globalis"
- },
- "cooking": {
-  "concepts": [
-   {
-    "options": {
-     "column": "concept",
-     "dictionary": "indicators_wdi_to_sg.json"
-    },
-    "result": "wdi-concepts-translated",
-    "procedure": "translate_column",
-    "ingredients": [
-     "wdi-concepts"
-    ]
-   },
-   {
-    "options": {
-     "deep": true
-    },
-    "procedure": "merge",
-    "ingredients": [
-     "gw-concepts",
-     "wdi-concepts-translated"
-    ]
-   }
-  ],
-  "entities": [
-   {
-    "procedure": "identity",
-    "ingredients": [
-     "gw.entities"
-    ]
-   }
-  ],
-  "datapoints": [
-   {
-    "options": {
-     "dictionary": "indicators_wdi_to_sg.json"
-    },
-    "result": "wdi-datapoints-indicators-translated",
-    "procedure": "translate_header",
-    "ingredients": [
-     "wdi-datapoints"
-    ]
-   },
-   {
-    "options": {
-     "dictionary": {
-      "country": "geo"
-     }
-    },
-    "result": "wdi-datapoints-translated",
-    "procedure": "translate_header",
-    "ingredients": [
-     "wdi-datapoints-indicators-translated"
-    ]
-   },
-   {
-    "options": {
-     "deep": false
-    },
-    "procedure": "merge",
-    "ingredients": [
-     "gw-datapoints",
-     "wdi-datapoints-translated"
-    ]
-   }
-  ]
- },
  "ingredients": [
   {
-   "dataset": "ddf--world_bank--world_development_indicators",
-   "id": "wdi-datapoints",
+   "key": "country,year",
    "value": [
     "dt_oda_odat_kd",
     "dt_oda_odat_pc_zs",
@@ -166,20 +92,20 @@
     "ny_gdp_pcap_pp_kd",
     "ny_gdp_pcap_kd_zg"
    ],
+   "dataset": "ddf--world_bank--world_development_indicators",
+   "id": "wdi-datapoints"
+  },
+  {
    "key": [
-    "country",
-    "year"
-   ]
-  },
-  {
-   "dataset": "ddf--world_bank--world_development_indicators",
-   "id": "wdi-countries",
+    "country"
+   ],
    "value": "*",
-   "key": "country"
+   "dataset": "ddf--world_bank--world_development_indicators",
+   "id": "wdi-countries"
   },
   {
-   "dataset": "ddf--world_bank--world_development_indicators",
-   "id": "wdi-concepts",
+   "key": "concept",
+   "value": "*",
    "filter": {
     "concept": [
      "dt_oda_odat_kd",
@@ -272,29 +198,110 @@
      "ny_gdp_pcap_kd_zg"
     ]
    },
-   "value": "*",
-   "key": "concept"
+   "dataset": "ddf--world_bank--world_development_indicators",
+   "id": "wdi-concepts"
   },
   {
-   "dataset": "ddf--gapminder--gapminder_world",
-   "id": "gw-datapoints",
+   "key": "geo,time",
    "value": "*",
+   "dataset": "ddf--gapminder--gapminder_world",
+   "id": "gw-datapoints"
+  },
+  {
    "key": [
     "geo",
-    "year"
-   ]
+    "geographic_regions",
+    "income_groups",
+    "landlocked",
+    "g77_and_oecd_countries",
+    "geographic_regions_in_4_colors",
+    "main_religion_2008",
+    "world_4region",
+    "global"
+   ],
+   "value": "*",
+   "dataset": "ddf--gapminder--gapminder_world",
+   "id": "gw-entities"
   },
   {
-   "dataset": "ddf--gapminder--gapminder_world",
-   "id": "gw-entities",
+   "key": "concept",
    "value": "*",
-   "key": "*"
-  },
-  {
    "dataset": "ddf--gapminder--gapminder_world",
-   "id": "gw-concepts",
-   "value": "*",
-   "key": "concept"
+   "id": "gw-concepts"
   }
- ]
+ ],
+ "info": {
+  "name": "Systema Globalis",
+  "id": "ddf--gapminder--systema_globalis",
+  "description": "Gapminder's fact-base with local & global statistics.",
+  "provider": "Gapminder Foundation"
+ },
+ "cooking": {
+  "entities": [
+   {
+    "ingredients": [
+     "gw-entities"
+    ],
+    "procedure": "identity"
+   }
+  ],
+  "datapoints": [
+   {
+    "ingredients": [
+     "wdi-datapoints"
+    ],
+    "result": "wdi-datapoints-indicators-translated",
+    "procedure": "translate_header",
+    "options": {
+     "dictionary": "indicators_wdi_to_sg.json"
+    }
+   },
+   {
+    "ingredients": [
+     "wdi-datapoints-indicators-translated"
+    ],
+    "result": "wdi-datapoints-translated",
+    "procedure": "translate_header",
+    "options": {
+     "dictionary": {
+      "country": "geo",
+      "year": "time"
+     }
+    }
+   },
+   {
+    "ingredients": [
+     "gw-datapoints",
+     "wdi-datapoints-translated"
+    ],
+    "procedure": "merge",
+    "options": {
+     "deep": false
+    }
+   }
+  ],
+  "concepts": [
+   {
+    "ingredients": [
+     "wdi-concepts"
+    ],
+    "result": "wdi-concepts-translated",
+    "procedure": "translate_column",
+    "options": {
+     "dictionary": "indicators_wdi_to_sg.json",
+     "column": "concept"
+    }
+   },
+   {
+    "ingredients": [
+     "gw-concepts",
+     "wdi-concepts-translated"
+    ],
+    "procedure": "merge",
+    "options": {
+     "deep": true
+    }
+   }
+  ]
+ }
 }

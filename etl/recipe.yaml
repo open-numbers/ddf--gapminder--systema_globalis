@@ -11,7 +11,7 @@ info:
 ingredients:
     - id: wdi-datapoints
       dataset: ddf--world_bank--world_development_indicators
-      key: [country, year]
+      key: "country,year"
       value: [dt_oda_odat_kd,dt_oda_odat_pc_zs,dt_oda_odat_gi_zs,
       dt_dod_dect_gn_zs,fi_res_totl_dt_zs,ny_gdp_mktp_kd,
       ny_gdp_pcap_kd,ny_gdp_pcap_kd_zg,ny_gnp_mktp_pp_cd,ny_gnp_pcap_kd,
@@ -39,7 +39,7 @@ ingredients:
       ny_gdp_pcap_kd_zg]
     - id: wdi-countries
       dataset: ddf--world_bank--world_development_indicators
-      key: country
+      key: [country]
       value: "*"
     - id: wdi-concepts  # id used further in the recipe
       dataset: ddf--world_bank--world_development_indicators  # which dataset
@@ -74,11 +74,12 @@ ingredients:
           si_pov_dday,ny_gdp_pcap_pp_kd,ny_gdp_pcap_kd_zg]
     - id: gw-datapoints
       dataset: ddf--gapminder--gapminder_world
-      key: [geo, year]
+      key: "geo,time"
       value: "*"
     - id: gw-entities
       dataset: ddf--gapminder--gapminder_world
-      key: "*"
+      key: [geo, geographic_regions, income_groups, landlocked, g77_and_oecd_countries,
+      geographic_regions_in_4_colors, main_religion_2008, world_4region, global]
       value: "*"
     - id: gw-concepts
       dataset: ddf--gapminder--gapminder_world
@@ -98,6 +99,7 @@ cooking:
           options:
               dictionary:
                   country: geo
+                  year: time
           ingredients: [wdi-datapoints-indicators-translated]
           result: wdi-datapoints-translated
           # merge ingredients together on the keys
@@ -111,7 +113,7 @@ cooking:
           ingredients: [gw-datapoints, wdi-datapoints-translated]
     entities:
         - procedure: identity         # identity function = nothing changes
-          ingredients: [gw.entities]
+          ingredients: [gw-entities]
     concepts:
         - procedure: translate_column               # translate the values in a column
           options:
