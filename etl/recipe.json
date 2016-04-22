@@ -33,7 +33,7 @@
 		{
 			"id": "gw-datapoints",
 			"dataset": "ddf--gapminder--gapminder_world",
-			"key": ["geo", "year"],
+			"key": "geo,time",
 			"value": "*"
 		},
 		{
