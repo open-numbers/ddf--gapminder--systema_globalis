@@ -1,4 +1,4 @@
-country,year,alternative_gdp_per_capita_ppp_wb
+geo,time,alternative_gdp_per_capita_ppp_wb
 arb,1990,10073.45
 arb,1991,9574.28
 arb,1992,9890.81

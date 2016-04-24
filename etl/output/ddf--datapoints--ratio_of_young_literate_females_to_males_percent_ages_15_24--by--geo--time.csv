@@ -1,4 +1,4 @@
-country,year,ratio_of_young_literate_females_to_males_percent_ages_15_24
+geo,time,ratio_of_young_literate_females_to_males_percent_ages_15_24
 arb,1990,0.77
 arb,2000,0.87
 arb,2010,0.94

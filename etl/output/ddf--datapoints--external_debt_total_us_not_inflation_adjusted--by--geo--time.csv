@@ -1,4 +1,4 @@
-country,year,external_debt_total_us_not_inflation_adjusted
+geo,time,external_debt_total_us_not_inflation_adjusted
 eap,1970,7417815000.00
 eap,1971,9384134000.00
 eap,1972,11257303000.00

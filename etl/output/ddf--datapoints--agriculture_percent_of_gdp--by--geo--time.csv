@@ -1,4 +1,4 @@
-country,year,agriculture_percent_of_gdp
+geo,time,agriculture_percent_of_gdp
 arb,1994,11.96
 arb,1995,11.47
 arb,2000,9.85

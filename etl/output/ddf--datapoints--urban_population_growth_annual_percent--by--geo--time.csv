@@ -1,4 +1,4 @@
-country,year,urban_population_growth_annual_percent
+geo,time,urban_population_growth_annual_percent
 arb,1961,5.19
 arb,1962,5.20
 arb,1963,5.24

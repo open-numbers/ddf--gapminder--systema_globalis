@@ -1,4 +1,4 @@
-country,year,imports_percent_of_gdp
+geo,time,imports_percent_of_gdp
 arb,1968,22.02
 arb,1969,22.84
 arb,1970,22.24

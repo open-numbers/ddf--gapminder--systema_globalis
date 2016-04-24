@@ -1,4 +1,4 @@
-country,year,industry_percent_of_gdp
+geo,time,industry_percent_of_gdp
 arb,1994,39.22
 arb,1995,40.21
 arb,2000,46.31

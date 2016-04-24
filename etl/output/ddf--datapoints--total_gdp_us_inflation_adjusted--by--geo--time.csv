@@ -1,4 +1,4 @@
-country,year,total_gdp_us_inflation_adjusted
+geo,time,total_gdp_us_inflation_adjusted
 arb,1975,373840492534.12
 arb,1976,420948974733.48
 arb,1977,455883523391.35

@@ -1,4 +1,4 @@
-country,year,foreign_direct_investment_net_outflows_percent_of_gdp
+geo,time,foreign_direct_investment_net_outflows_percent_of_gdp
 arb,2005,0.89
 arb,2006,1.19
 arb,2007,1.54

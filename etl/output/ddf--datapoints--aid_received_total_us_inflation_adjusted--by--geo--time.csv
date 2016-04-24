@@ -1,4 +1,4 @@
-country,year,aid_received_total_us_inflation_adjusted
+geo,time,aid_received_total_us_inflation_adjusted
 arb,1960,7296220000.00
 arb,1961,7635140000.00
 arb,1962,6968860000.00

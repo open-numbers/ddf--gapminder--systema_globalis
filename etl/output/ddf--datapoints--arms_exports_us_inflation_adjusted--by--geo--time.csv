@@ -1,4 +1,4 @@
-country,year,arms_exports_us_inflation_adjusted
+geo,time,arms_exports_us_inflation_adjusted
 arb,1960,3000000.00
 arb,1961,0.00
 arb,1962,9000000.00

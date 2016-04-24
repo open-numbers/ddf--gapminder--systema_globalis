@@ -1,4 +1,4 @@
-country,year,energy_use_per_person
+geo,time,energy_use_per_person
 arb,1971,410.00
 arb,1972,412.57
 arb,1973,443.06

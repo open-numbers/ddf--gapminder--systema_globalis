@@ -1,4 +1,4 @@
-country,year,trade_balance_percent_of_gdp
+geo,time,trade_balance_percent_of_gdp
 arb,1968,14.74
 arb,1969,14.73
 arb,1970,15.70

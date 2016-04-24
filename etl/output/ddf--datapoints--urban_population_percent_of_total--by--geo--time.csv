@@ -1,4 +1,4 @@
-country,year,urban_population_percent_of_total
+geo,time,urban_population_percent_of_total
 arb,1960,31.29
 arb,1961,32.03
 arb,1962,32.78

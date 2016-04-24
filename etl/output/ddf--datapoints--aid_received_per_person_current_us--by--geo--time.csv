@@ -1,4 +1,4 @@
-country,year,aid_received_per_person_current_us
+geo,time,aid_received_per_person_current_us
 arb,1960,9.54
 arb,1961,10.25
 arb,1962,9.51

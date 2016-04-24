@@ -1,4 +1,4 @@
-country,year,cell_phones_per_100_people
+geo,time,cell_phones_per_100_people
 arb,1960,0.00
 arb,1965,0.00
 arb,1970,0.00

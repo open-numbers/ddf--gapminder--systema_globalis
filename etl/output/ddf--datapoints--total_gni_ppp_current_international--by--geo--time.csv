@@ -1,4 +1,4 @@
-country,year,total_gni_ppp_current_international
+geo,time,total_gni_ppp_current_international
 arb,1990,1494147810290.48
 arb,1991,1496533360101.09
 arb,1992,1608036782208.22

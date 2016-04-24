@@ -1,4 +1,4 @@
-country,year,income_share_of_poorest_20percent
+geo,time,income_share_of_poorest_20percent
 alb,1996,9.15
 alb,2002,8.19
 alb,2005,8.40

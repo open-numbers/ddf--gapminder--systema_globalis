@@ -1,4 +1,4 @@
-country,year,income_share_of_poorest_10percent
+geo,time,income_share_of_poorest_10percent
 alb,1996,3.86
 alb,2002,3.42
 alb,2005,3.48

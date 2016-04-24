@@ -1,4 +1,4 @@
-country,year,internet_users_per_100_people
+geo,time,internet_users_per_100_people
 arb,1990,0.00
 arb,1995,0.02
 arb,1996,0.04

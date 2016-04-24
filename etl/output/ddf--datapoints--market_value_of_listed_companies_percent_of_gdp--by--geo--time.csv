@@ -1,4 +1,4 @@
-country,year,market_value_of_listed_companies_percent_of_gdp
+geo,time,market_value_of_listed_companies_percent_of_gdp
 arb,2013,51.98
 arb,2014,54.83
 ceb,1996,9.80

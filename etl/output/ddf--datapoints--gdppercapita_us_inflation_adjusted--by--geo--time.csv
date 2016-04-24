@@ -1,4 +1,4 @@
-country,year,gdppercapita_us_inflation_adjusted
+geo,time,gdppercapita_us_inflation_adjusted
 arb,1975,2671.45
 arb,1976,2915.58
 arb,1977,3056.52

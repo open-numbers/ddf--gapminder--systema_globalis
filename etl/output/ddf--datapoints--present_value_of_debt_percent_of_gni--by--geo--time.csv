@@ -1,4 +1,4 @@
-country,year,present_value_of_debt_percent_of_gni
+geo,time,present_value_of_debt_percent_of_gni
 afg,2014,7.71
 alb,2014,26.45
 dza,2014,0.69

@@ -1,4 +1,4 @@
-country,year,electricity_use_total
+geo,time,electricity_use_total
 arb,1971,196.03
 arb,1972,210.90
 arb,1973,230.32

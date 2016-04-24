@@ -1,4 +1,4 @@
-country,year,inflation_annual_percent
+geo,time,inflation_annual_percent
 arb,1969,1.30
 arb,1970,3.24
 arb,1971,6.88

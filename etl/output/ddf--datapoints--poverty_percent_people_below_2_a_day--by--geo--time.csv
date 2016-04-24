@@ -1,4 +1,4 @@
-country,year,poverty_percent_people_below_2_a_day
+geo,time,poverty_percent_people_below_2_a_day
 eap,1981,93.27
 eap,1984,90.36
 eap,1987,85.26

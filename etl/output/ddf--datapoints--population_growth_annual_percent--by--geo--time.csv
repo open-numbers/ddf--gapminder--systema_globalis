@@ -1,4 +1,4 @@
-country,year,population_growth_annual_percent
+geo,time,population_growth_annual_percent
 arb,1961,2.75
 arb,1962,2.79
 arb,1963,2.81

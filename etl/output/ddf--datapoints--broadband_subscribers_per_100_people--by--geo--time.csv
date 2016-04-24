@@ -1,4 +1,4 @@
-country,year,broadband_subscribers_per_100_people
+geo,time,broadband_subscribers_per_100_people
 arb,2004,0.18
 arb,2005,0.36
 arb,2006,0.56

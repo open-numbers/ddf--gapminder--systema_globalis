@@ -1,4 +1,4 @@
-country,year,services_percent_of_gdp
+geo,time,services_percent_of_gdp
 arb,1994,48.82
 arb,1995,48.32
 arb,2000,43.85

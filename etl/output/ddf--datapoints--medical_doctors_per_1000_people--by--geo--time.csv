@@ -1,4 +1,4 @@
-country,year,medical_doctors_per_1000_people
+geo,time,medical_doctors_per_1000_people
 arb,1990,0.72
 arb,2000,1.19
 arb,2011,1.54

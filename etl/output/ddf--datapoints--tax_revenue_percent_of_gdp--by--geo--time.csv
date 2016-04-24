@@ -1,4 +1,4 @@
-country,year,tax_revenue_percent_of_gdp
+geo,time,tax_revenue_percent_of_gdp
 css,2003,19.95
 css,2004,20.62
 css,2005,22.62

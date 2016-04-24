@@ -1,4 +1,4 @@
-country,year,foreign_direct_investment_net_inflows_percent_of_gdp
+geo,time,foreign_direct_investment_net_inflows_percent_of_gdp
 arb,1970,0.57
 arb,1972,0.25
 arb,1973,-1.14

@@ -1,4 +1,4 @@
-country,year,arms_imports_us_inflation_adjusted
+geo,time,arms_imports_us_inflation_adjusted
 arb,1960,538000000.00
 arb,1961,578000000.00
 arb,1962,1414000000.00

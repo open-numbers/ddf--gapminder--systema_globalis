@@ -1,4 +1,4 @@
-country,year,gdp_per_capita_yearly_growth
+geo,time,gdp_per_capita_yearly_growth
 arb,1976,9.14
 arb,1977,4.83
 arb,1978,-1.64

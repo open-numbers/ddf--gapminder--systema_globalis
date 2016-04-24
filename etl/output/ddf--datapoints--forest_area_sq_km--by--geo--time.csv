@@ -1,4 +1,4 @@
-country,year,forest_area_sq_km
+geo,time,forest_area_sq_km
 arb,1990,501940.00
 arb,1991,499629.00
 arb,1992,497316.40

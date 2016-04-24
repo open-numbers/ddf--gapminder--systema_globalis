@@ -1,4 +1,4 @@
-country,year,exports_percent_of_gdp
+geo,time,exports_percent_of_gdp
 arb,1968,36.76
 arb,1969,37.57
 arb,1970,37.93

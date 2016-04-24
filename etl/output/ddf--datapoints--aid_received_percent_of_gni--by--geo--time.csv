@@ -1,4 +1,4 @@
-country,year,aid_received_percent_of_gni
+geo,time,aid_received_percent_of_gni
 arb,1976,9.75
 arb,1977,9.61
 arb,1978,7.90

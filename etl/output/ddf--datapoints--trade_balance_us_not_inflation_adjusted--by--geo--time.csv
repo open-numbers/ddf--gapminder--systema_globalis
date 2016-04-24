@@ -1,4 +1,4 @@
-country,year,trade_balance_us_not_inflation_adjusted
+geo,time,trade_balance_us_not_inflation_adjusted
 afg,1960,-15555547.02
 afg,1961,-19999991.47
 afg,1962,-24444430.22

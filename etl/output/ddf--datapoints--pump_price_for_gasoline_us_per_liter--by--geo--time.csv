@@ -1,4 +1,4 @@
-country,year,pump_price_for_gasoline_us_per_liter
+geo,time,pump_price_for_gasoline_us_per_liter
 arb,1998,0.31
 arb,2000,0.28
 arb,2002,0.29

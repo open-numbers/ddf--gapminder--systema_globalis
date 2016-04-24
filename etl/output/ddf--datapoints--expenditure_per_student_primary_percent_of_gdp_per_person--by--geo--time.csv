@@ -1,4 +1,4 @@
-country,year,expenditure_per_student_primary_percent_of_gdp_per_person
+geo,time,expenditure_per_student_primary_percent_of_gdp_per_person
 dza,1999,12.44
 dza,2000,10.11
 dza,2002,11.24

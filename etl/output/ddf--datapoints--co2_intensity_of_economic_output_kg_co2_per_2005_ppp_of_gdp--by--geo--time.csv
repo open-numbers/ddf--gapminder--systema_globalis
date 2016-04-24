@@ -1,4 +1,4 @@
-country,year,co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
+geo,time,co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
 arb,1990,0.32
 arb,1991,0.34
 arb,1992,0.35

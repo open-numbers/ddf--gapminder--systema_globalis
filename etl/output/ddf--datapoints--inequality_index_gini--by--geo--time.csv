@@ -1,4 +1,4 @@
-country,year,inequality_index_gini
+geo,time,inequality_index_gini
 alb,1996,27.01
 alb,2002,32.46
 alb,2005,30.60
