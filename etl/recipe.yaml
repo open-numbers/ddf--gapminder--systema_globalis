@@ -41,6 +41,7 @@ ingredients:
       dataset: ddf--world_bank--world_development_indicators
       key: [country]
       value: "*"
+      filter:
     - id: wdi-concepts  # id used further in the recipe
       dataset: ddf--world_bank--world_development_indicators  # which dataset
       # key and value like in index
@@ -78,8 +79,7 @@ ingredients:
       value: "*"
     - id: gw-entities
       dataset: ddf--gapminder--gapminder_world
-      key: [geo, geographic_regions, income_groups, landlocked, g77_and_oecd_countries,
-      geographic_regions_in_4_colors, main_religion_2008, world_4region, global]
+      key: [geo, country]
       value: "*"
     - id: gw-concepts
       dataset: ddf--gapminder--gapminder_world
