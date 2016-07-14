@@ -1,3 +1,4 @@
 .idea
 .~*
 etl/notebooks/.ipynb_checkpoints/
+.DS_Store
