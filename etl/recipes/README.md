@@ -35,14 +35,28 @@ store inside this section, such as `name`, `provider`, `description` and so on.
 inside configuration section. we define the configuration of dirs. currently we
 can set below path:
 
-- `recipes_dir`: the directory contians all recipes.
+- `recipes_dir`: the directory contains all recipes.
 - `dictionary_dir`: the directory contains all translation files. (translation 
 will be discussed later)
 
 ### include
 
-TODO
+one recipe can include other recipes inside itself. to include a recipe, simply 
+append the filename to the `include` section. note that it should be a absolute 
+path or a filename inside the `recipes_dir`.
 
 ### cooking procedures
 
-TODO
+in DDF module, we have 3 types of data: datapoints, concepts, entities. So there 
+are 3 types of cooking procedures of cooking procedures. 
+
+supported procedures currently:
+
+- datapoints:
+  - translate_header
+  - merge
+- entities:
+  - identity
+- concepts:
+  - translate_column
+  - merge
