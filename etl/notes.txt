@@ -12,3 +12,8 @@
 # problem
 
 如果数据量很大？
+
+# todo
+
+define all keywords.
+其实translate_header 和 translate_column可以合在一起

@@ -5,13 +5,13 @@ info:
     id: ddf--gapminder--systema_globalis
     name: Systema Globalis
     provider: Gapminder Foundation
-    description: "Gapminder's fact-base with local & global statistics."
+    description: |
+      Gapminder\'s fact-base with local & global statistics.
 
 config:
     recipes_dir: recipes
     dictionary_dir: translation_dictionaries
 
-cooking:
-    include:
-        - recipe_wdi.yaml
-        - recipe_cme.yaml
+include:
+    - recipe_ilo.yaml
+    - recipe_cme.yaml

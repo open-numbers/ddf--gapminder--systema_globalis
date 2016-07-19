@@ -1,0 +1,61 @@
+
+info:
+    id: cme-sg-dataset
+
+ingredients:
+    # CME
+    - id: cme-concepts
+      dataset: ddf--cme
+      key: concept
+      value: "*"
+      filter:
+          concept: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
+
+    - id: cme-datapoints
+      dataset: ddf--cme
+      key: "country,year"
+      value: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
+
+    # GW
+    - id: gw-datapoints
+      dataset: ddf--gapminder--gapminder_world
+      key: "geo,time"
+      value: "*"
+    - id: gw-entities
+      dataset: ddf--gapminder--geo_entity_domain
+      key: [geo, country]
+      value: "*"
+    - id: gw-countries
+      dataset: ddf--gapminder--geo_entity_domain
+      key: [country]
+      value: "*"
+    - id: gw-concepts
+      dataset: ddf--gapminder--gapminder_world
+      key: concept
+      value: "*"
+
+cooking:
+    datapoints:
+          # CME
+          - procedure: translate_header
+            options:
+                dictionary: indicators_cme_to_sg.json
+            ingredients: [cme-datapoints]
+            result: cme-datapoints-indicators-translated
+          - procedure: translate_header
+            options:
+                dictionary:
+                    iso: geo
+                    year: time
+            ingredients: [cme-datapoints-indicators-translated]
+            result: cme-datapoints-headers-translated
+        #   - procedure: translate_geo    # TODO: change the geo code of data set to match the ones in GW
+        #     options:
+        #         base: gw-countries
+        #     ingredients: [cme-datapoints-headers-translated]
+        #     result: [cme-datapoints-translated]
+          - procedure: merge
+            options:
+                deep:
+                    false
+            ingredients: [gw-datapoints, cme-datapoints-translated]  # TODO: this will not work. will overwrite the above one.
