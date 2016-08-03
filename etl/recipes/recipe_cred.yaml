@@ -1,0 +1,103 @@
+# basic info
+info:
+    id: cred-sg-dataset
+    base: 
+        - &d1 ddf--cred--em_dat
+        - &d2 ddf--gapminder--gapminder_world
+        
+ingredients:
+    - id: cred-datapoints
+      dataset: *d1
+      key: "country,disaster,year"
+      value:
+          - affected
+          - total_deaths
+    - id: gw-concepts
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - drought_affected_annual_number
+              - earthquake_affected_annual_number
+              - epidemic_affected_annual_number
+              - extreme_temperature_affected_annual_number
+              - flood_affected_annual_number
+              - storm_affected_annual_number
+              - drought_deaths_annual_number
+              - earthquake_deaths_annual_number
+              - epidemic_deaths_annual_number
+              - extreme_temperature_deaths_annual_number
+              - flood_deaths_annual_number
+              - storm_deaths_annual_number
+          
+    - id: cred-entities
+      dataset: *d1
+      key:
+          - country
+      value: "*"
+          
+
+cooking:
+    datapoints:
+        - procedure: filter
+          ingredients: [cred-datapoints]
+          options:
+              dictionary:
+                  drought_affected_annual_number:
+                      from: affected
+                      disaster: drought
+                  
+                  earthquake_affected_annual_number:
+                      from: affected
+                      disaster: earthquake
+                  
+                  epidemic_affected_annual_number:
+                      from: affected
+                      disaster: epidemic
+                  
+                  extreme_temperature_affected_annual_number:
+                      from: affected
+                      disaster: extreme_temperature
+                  
+                  flood_affected_annual_number:
+                      from: affected
+                      disaster: flood
+                  
+                  storm_affected_annual_number: 
+                      from: affected
+                      disaster: storm
+                  
+                  drought_deaths_annual_number:
+                      from: total_deaths
+                      disaster: drought
+                  
+                  earthquake_deaths_annual_number:
+                      from: total_deaths
+                      disaster: earthquake
+                  
+                  epidemic_deaths_annual_number:
+                      from: total_deaths
+                      disaster: epidemic
+                  
+                  extreme_temperature_deaths_annual_number:
+                      from: total_deaths
+                      disaster: extreme_temperature
+                  
+                  flood_deaths_annual_number:
+                      from: total_deaths
+                      disaster: flood
+                  
+                  storm_deaths_annual_number:
+                      from: total_deaths
+                      disaster: storm
+                  
+    entities:
+        - procedure: identity
+          ingredients: [cred-entities]
+          options:
+              copy: true
+    
+    concepts:
+        - procedure: identity
+          ingredients: [gw-concepts]

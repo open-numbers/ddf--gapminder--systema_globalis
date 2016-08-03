@@ -1,0 +1,50 @@
+# basic info
+info:
+    id: bp-sg-dataset
+    base: 
+        - &d1 ddf--bp--energy
+
+ingredients:
+    - id: bp-datapoints
+      dataset: *d1
+      key: "geo,year"
+      value: &FILTER_CONC 
+          - coal_consumption_mtoe
+          - electricity_generation
+          - gas_production_tonnes
+          - gas_proved_reserves_history
+          - oil_consumption_tonnes
+          - oil_production_tonnes
+          - oil_proved_reserves_history
+    - id: bp-entities
+      dataset: *d1
+      key: 
+          - geo
+      value: "*"
+    - id: bp-concepts
+      dataset: *d1
+      key: concept
+      value: *FILTER_CONC
+      
+cooking:
+    concepts:
+        - procedure: identity
+          ingredients: [bp-concepts]
+    entities:
+        - procedure: identity
+          ingredients: [bp-entities]
+    datapoints:
+        - procedure: run_op
+          ingredients: [bp-datapoints]
+          options:
+              op:  # TODO: any improvments?
+                  coal_consumption_mtoe: "coal_consumption_mtoe * 1000000"
+                  electricity_generation: "electricity_generation * 1000000000"
+                  gas_production_tonnes: "gas_production_tonnes * 1000000"
+                  gas_proved_reserves_history: "gas_proved_reserves_history * 900000000"
+                  oil_consumption_tonnes: "oil_consumption_tonnes * 1000000"
+                  oil_production_tonnes: "oil_production_tonnes * 1000000"
+                  oil_proved_reserves_history: "oil_proved_reserves_history * 136400000"
+                  
+          
+          
