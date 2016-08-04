@@ -48,11 +48,18 @@ supported procedures currently:
 - identity
 - merge
 - align
+
     discussion: https://github.com/semio/ddf_utils/issues/3
+
 - groupby
+
     discussion: https://github.com/semio/ddf_utils/issues/4
+
 - filter_col
+
     discussion: https://github.com/semio/ddf_utils/issues/2
+
 - filter_item
 - run_op
+
     discussion: https://github.com/semio/ddf_utils/issues/7
