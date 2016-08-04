@@ -29,7 +29,7 @@ ingredients:
       dataset: *d3
       key: [geo, country]
       value: "*"
-    - id: gw-concepts
+    - id: gw-concepts-continuous
       dataset: *d2
       key: concept
       value: '*'
@@ -71,9 +71,69 @@ ingredients:
               - population_aged_60plus_years_male_percent
               - population_aged_60plus_years_total_number
 
+    - id: gw-concepts-discrete
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - geographic_regions
+              - income_groups
+              - landlocked
+              - g77_and_oecd_countries
+              - geographic_regions_in_4_colors
+              - main_religion_2008
+              - description
+              - indicator_url
+              - name
+              - unit
+              - interpolation
+              - geo
+              - country
+              - name_short
+              - name_long
+              - age
+              - world_4region
+              - latitude
+              - longitude
+              - global
+              - color
+              - time
+              - gapminder_list
+              - alternative_1
+              - alternative_2
+              - alternative_3
+              - alternative_4_cdiac
+              - pandg
+              - god_id
+              - alt_5
+              - upper_case_name
+              - code
+              - number
+              - gwid
+              - arb1
+              - arb2
+              - arb3
+              - arb4
+              - arb5
+              - arb6
+
 cooking:
+    concepts:
+        - procedure: merge
+          ingredients:
+            - gw-concepts-discrete
+            - gw-concepts-continuous
+          options:
+              deep: true
+
+    entities:
+        - procedure: identity
+          ingredients:
+            - gw-entities
+
     datapoints:
-        - procedure: filter
+        - procedure: filter_row
           ingredients:
               - unpop-datapoints-gender
           result: unpop-datapoints-filtered
@@ -222,7 +282,7 @@ cooking:
           ingredients:
               - unpop-datapoints-filtered-aligned
           options:
-              by: age
+              by: [country_code, year]
               aggregate: sum
           result: unpop-datapoints-filtered-aligned-grouped
 
@@ -301,11 +361,3 @@ cooking:
               -  unpop-datapoints-filtered-aligned-grouped-op
           options:
               items: *CONCEPT_FILTER
-concepts:
-    - procedure: identity
-      ingredients:
-        - gw-concepts
-entities:
-    - procedure: identity
-      ingredients:
-        - gw-entities
