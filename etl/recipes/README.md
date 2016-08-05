@@ -47,26 +47,26 @@ _concepts_.
 
 supported procedures currently:
 
-- translate_header: translate the headers of the datapoints
-- translate_column: translate the values in a column
-- identity: identity function = nothing changes
-- merge: merge ingredients together on the keys
-- align: align two columns in two ingredients
-
-    discussion: https://github.com/semio/ddf_utils/issues/3
-
-- groupby: group ingredient data by keys
-
-    discussion: https://github.com/semio/ddf_utils/issues/4
-
-- filter_row: filter ingredient data by values
-
-    discussion: https://github.com/semio/ddf_utils/issues/2
-
-- filter_item: filter ingredient data by concepts
-
-    discussion: https://github.com/semio/ddf_utils/issues/14
-
-- run_op: run math operations on ingredient
-
-    discussion: https://github.com/semio/ddf_utils/issues/7
+- translate_header
+    - translate the headers of the datapoints
+- translate_column
+    - translate the values in a column
+- identity
+    - identity function = nothing changes
+- merge
+    - merge ingredients together on the keys
+- align
+    - align two columns in two ingredients
+    - discussion: https://github.com/semio/ddf_utils/issues/3
+- groupby
+    - group ingredient data by keys
+    - discussion: https://github.com/semio/ddf_utils/issues/4
+- filter_row
+    - filter ingredient data by values
+    - discussion: https://github.com/semio/ddf_utils/issues/2
+- filter_item
+    - filter ingredient data by concepts
+    - discussion: https://github.com/semio/ddf_utils/issues/14
+- run_op
+    - run math operations on ingredient
+    - discussion: https://github.com/semio/ddf_utils/issues/7
