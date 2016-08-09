@@ -7,7 +7,7 @@ info:
         - &d3 ddf--cme
 
 config:
-    recipes_dir: ./
+    recipes_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/recipes/
         
 include:
     - recipe_gw_common.yaml
@@ -52,6 +52,7 @@ cooking:
               - gw-concepts-discrete
           options:
               deep: true
+          result: cme-concepts-final
 
     entities:
         - procedure: identity
@@ -70,27 +71,4 @@ cooking:
                   country: geo
                   year: time
           ingredients: [cme-datapoints-indicators-translated]
-          result: cme-datapoints-headers-translated
-
-        - procedure: align
-          ingredients:
-              - cme-countries
-              - gw-countries
-          options:
-              search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
-                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
-              to_find: countryname
-              to_replace: country_new
-          result: cme-countries-aligned
-
-        - procedure: align
-          ingredients:
-              - cme-datapoints-headers-translated
-              - cme-countries-aligned
-          options:
-              search_cols:
-                  - country
-              to_find: geo
-              to_replace: geo
-          result: cme-datapoints-headers-countries-translated
+          result: cme-datapoints-final
