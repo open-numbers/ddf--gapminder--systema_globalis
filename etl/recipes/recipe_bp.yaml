@@ -1,14 +1,19 @@
 # basic info
 info:
     id: bp-sg-dataset
-    base: 
+    base:
         - &d1 ddf--bp--energy
+        - &d2 ddf--gapminder--geo_entity_domain
+        - &d3 ddf--gapminder--gapminder_world
+
+indclude:
+    - recipe_gw_common.yaml
 
 ingredients:
     - id: bp-datapoints
       dataset: *d1
       key: "geo,year"
-      value: &FILTER_CONC 
+      value: &FILTER_CONC
           - coal_consumption_mtoe
           - electricity_generation
           - gas_production_tonnes
@@ -16,28 +21,46 @@ ingredients:
           - oil_consumption_tonnes
           - oil_production_tonnes
           - oil_proved_reserves_history
-    - id: bp-entities
-      dataset: *d1
-      key: 
+    - id: gw-entities
+      dataset: *d2
+      key:
           - geo
       value: "*"
-    - id: bp-concepts
-      dataset: *d1
+    - id: gw-concepts
+      dataset: *d3
       key: concept
-      value: *FILTER_CONC
-      
+      value: "*"
+      filter:
+          concept:
+              - coal_consumption_total
+              - electricity_generation_total
+              - natural_gas_production_total
+              - natural_gas_proved_reserves_total
+              - oil_consumption_total
+              - oil_production_total
+              - oil_proved_reserves_total
+
 cooking:
     concepts:
-        - procedure: identity
-          ingredients: [bp-concepts]
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts
     entities:
         - procedure: identity
-          ingredients: [bp-entities]
+          ingredients: [gw-entities]
     datapoints:
-        - procedure: run_op
+        - procedure: translate_header
           ingredients: [bp-datapoints]
           options:
-              op:  # TODO: any improvments?
+              dictionary:
+                  year: time
+          result: bp-datapoints-translated
+
+        - procedure: run_op
+          ingredients: [bp-datapoints-translated]
+          options:
+              op:
                   coal_consumption_mtoe: "coal_consumption_mtoe * 1000000"
                   electricity_generation: "electricity_generation * 1000000000"
                   gas_production_tonnes: "gas_production_tonnes * 1000000"
@@ -45,6 +68,3 @@ cooking:
                   oil_consumption_tonnes: "oil_consumption_tonnes * 1000000"
                   oil_production_tonnes: "oil_production_tonnes * 1000000"
                   oil_proved_reserves_history: "oil_proved_reserves_history * 136400000"
-                  
-          
-          

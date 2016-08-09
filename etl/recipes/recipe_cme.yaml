@@ -1,61 +1,96 @@
 
 info:
     id: cme-sg-dataset
+    base:
+        - &d1 ddf--gapminder--gapminder_world
+        - &d2 ddf--gapminder--geo_entity_domain
+        - &d3 ddf--cme
+
+config:
+    recipes_dir: ./
+        
+include:
+    - recipe_gw_common.yaml
 
 ingredients:
     # CME
-    - id: cme-concepts
-      dataset: ddf--cme
+    - id: cme-datapoints
+      dataset: *d3
+      key: "country,year"
+      value: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
+    - id: cme-countries
+      dataset: *d3
+      key:
+          - country
+      value: "*"
+
+    # GW
+    - id: gw-entities
+      dataset: *d2
+      key: [geo]
+      value: "*"
+    - id: gw-countries
+      dataset: *d2
+      key: [country]
+      value: "*"
+    - id: gw-concepts-cme
+      dataset: *d1
       key: concept
       value: "*"
       filter:
-          concept: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
-
-    - id: cme-datapoints
-      dataset: ddf--cme
-      key: "country,year"
-      value: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
-
-    # GW
-    - id: gw-datapoints
-      dataset: ddf--gapminder--gapminder_world
-      key: "geo,time"
-      value: "*"
-    - id: gw-entities
-      dataset: ddf--gapminder--geo_entity_domain
-      key: [geo, country]
-      value: "*"
-    - id: gw-countries
-      dataset: ddf--gapminder--geo_entity_domain
-      key: [country]
-      value: "*"
-    - id: gw-concepts
-      dataset: ddf--gapminder--gapminder_world
-      key: concept
-      value: "*"
+          concept:
+              - newborn_deaths
+              - newborn_mortality_rate_per_1000
+              - under_five_mortality_from_cme_per_1000_born
 
 cooking:
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-cme
+              - gw-concepts-geo
+              - gw-concepts-discrete
+          options:
+              deep: true
+
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities
+            
     datapoints:
-          # CME
-          - procedure: translate_header
-            options:
-                dictionary: indicators_cme_to_sg.json
-            ingredients: [cme-datapoints]
-            result: cme-datapoints-indicators-translated
-          - procedure: translate_header
-            options:
-                dictionary:
-                    iso: geo
-                    year: time
-            ingredients: [cme-datapoints-indicators-translated]
-            result: cme-datapoints-headers-translated
-        #   - procedure: translate_geo    # TODO: change the geo code of data set to match the ones in GW
-        #     options:
-        #         base: gw-countries
-        #     ingredients: [cme-datapoints-headers-translated]
-        #     result: [cme-datapoints-translated]
-          - procedure: merge
-            options:
-                deep:
-                    false
-            ingredients: [gw-datapoints, cme-datapoints-translated]  # TODO: this will not work. will overwrite the above one.
+        - procedure: translate_header
+          options:
+              dictionary: indicators_cme_to_sg.json
+          ingredients: [cme-datapoints]
+          result: cme-datapoints-indicators-translated
+        - procedure: translate_header
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          ingredients: [cme-datapoints-indicators-translated]
+          result: cme-datapoints-headers-translated
+
+        - procedure: align
+          ingredients:
+              - cme-countries
+              - gw-countries
+          options:
+              search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
+              to_find: countryname
+              to_replace: country_new
+          result: cme-countries-aligned
+
+        - procedure: align
+          ingredients:
+              - cme-datapoints-headers-translated
+              - cme-countries-aligned
+          options:
+              search_cols:
+                  - country
+              to_find: geo
+              to_replace: geo
+          result: cme-datapoints-headers-countries-translated
