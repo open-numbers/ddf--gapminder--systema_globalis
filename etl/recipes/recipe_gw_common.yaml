@@ -1,6 +1,6 @@
 ingredients:
-    - id: gw-concepts-discrete
-      dataset: ddf--gapminder--gapminder_world
+    - id: gw-concepts-geo
+      dataset: ddf--gapminder--geo_entity_domain
       key: concept
       value: "*"
       filter:
@@ -11,22 +11,16 @@ ingredients:
               - g77_and_oecd_countries
               - geographic_regions_in_4_colors
               - main_religion_2008
-              - description
-              - indicator_url
-              - name
-              - unit
-              - interpolation
               - geo
               - country
-              - name_short
-              - name_long
-              - age
               - world_4region
               - latitude
               - longitude
               - global
               - color
-              - time
+              - scales
+              - drill_up
+              - domain
               - gapminder_list
               - alternative_1
               - alternative_2
@@ -45,3 +39,20 @@ ingredients:
               - arb4
               - arb5
               - arb6
+              - arb7
+
+    - id: gw-concepts-discrete
+      dataset: ddf--gapminder--gapminder_world
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - description
+              - indicator_url
+              - name
+              - unit
+              - interpolation
+              - age
+              - time
+              - name_short
+              - name_long
