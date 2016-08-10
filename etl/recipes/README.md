@@ -29,8 +29,12 @@ store inside this section, such as `name`, `provider`, `description` and so on.
 inside configuration section. we define the configuration of dirs. currently we
 can set below path:
 
-- `recipes_dir`: the directory contains all recipes to include.
-- `dictionary_dir`: the directory contains all translation files. (translation
+- `ddf_dir`: the directory that contains all ddf csv repos. Must set this
+variable in the main recipe.
+- `recipes_dir`: the directory contains all recipes to include. Must set this 
+variable if we have `include` section.
+- `dictionary_dir`: the directory contains all translation files. Must set this
+variable if we have json file in the options of procedures. (translation
 will be discussed later)
 
 ### include
