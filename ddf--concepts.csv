@@ -1,5 +1,6 @@
 concept,name,concept_type,domain,indicator_url,color,scales,drill_up,unit,interpolation,description,tags
 tags,Tags,string,,,,,,,,,
+tag,Tag,entity_domain,,,,,,,,,
 geo,Geographic location,entity_domain,,https://github.com/open-numbers/ddf--gapminder--dim_geo_countries_and_groups/blob/master/ddf--list--geo--country.csv,,"[""ordinal""]",,,,,
 geographic_regions,Geographic regions,entity_set,geo,http://spreadsheets.google.com/pub?key=phT4mwjvEuGBtdf1ZeO7_PQ,"{""palette"": {""america"": ""#ebcc21"", ""middle_east_north_africa"": ""#5be56b"", ""south_asia"": ""#35d1d1"", ""europe_central_asia"": ""#f49d37"", ""sub_saharan_africa"": ""#4e7af0"", ""east_asia_pacific"": ""#f03838""}, ""selectable"": false}","[""ordinal""]",,,,,
 income_groups,Income groups,entity_set,geo,http://spreadsheets.google.com/pub?key=phT4mwjvEuGCSmAe5aq7HKw,"{""palette"": {""lower_middle_income"": ""#7ea1d1"", ""upper_middle_income"": ""#a7cb7d"", ""high_income"": ""#7bc135"", ""low_income"": ""#4366f4""}}","[""ordinal""]",,,,,
