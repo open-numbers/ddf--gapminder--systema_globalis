@@ -56,3 +56,15 @@ ingredients:
               - time
               - name_short
               - name_long
+
+    - id: gw-entities-geo
+      dataset: ddf--gapminder--geo_entity_domain
+      key:
+          - geo
+      value: "*"
+
+    - id: gw-countries
+      dataset: ddf--gapminder--geo_entity_domain
+      key:
+          - country
+      value: "*"
