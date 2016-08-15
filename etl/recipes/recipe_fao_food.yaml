@@ -1,6 +1,6 @@
-# recipe for cdiac-co2 dataset
+# recipe for fao food_supply dataset
 info:
-    id: sg-cdiac-dataset
+    id: sg-fao_food-dataset
     base:
         - &d1 ddf--fao--food_supply
         - &d2 ddf--gapminder--gapminder_world

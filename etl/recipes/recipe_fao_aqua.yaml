@@ -1,4 +1,4 @@
-# recipe for cdiac-co2 dataset
+# recipe for fao aquastats dataset
 info:
     id: sg-fao-aqua-dataset
     base:
