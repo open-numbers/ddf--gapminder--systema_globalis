@@ -4,8 +4,17 @@ info:
     base:
         - &d1 ddf--fao--forestry
         - &d2 ddf--gapminder--gapminder_world
-        - &d3 ddf--gapminder--geo_entity_domain
         
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
     
 ingredients:
     - id: fao-datapoints
@@ -22,7 +31,7 @@ ingredients:
           - primfor
           - wooremov
           
-    - id: gw-concepts
+    - id: gw-concepts-fao_for
       dataset: *d2
       key: concept
       value: "*"
@@ -37,13 +46,6 @@ ingredients:
               - planted_forest_area_ha
               - primary_forest_area_ha
               - wood_removal_cubic_meters
-              
-    - id: gw-countries
-      dataset: *d3
-      key:
-          - country
-      value: "*"
-      
       
 cooking:
     datapoints:
@@ -69,6 +71,8 @@ cooking:
                   forperc: forest_coverage_percent
                   primfor: primary_forest_area_ha
                   wooremov: wood_removal_cubic_meters
+                  country: geo
+                  year: time
           result: fao-datapoints-op-translated
           
         - procedure: filter_item
@@ -76,14 +80,18 @@ cooking:
               - fao-datapoints-op-translated
           options:
               items: *FILTER_CONC
+          result: fao_fore-datapoints-final
               
     entities:
         - procedure: identity
           ingredients:
-              - gw-countries
+              - gw-entities-geo
               
     concepts:
-        - procedure: identity
+        - procedure: merge
           ingredients:
-              - gw-concepts
-                  
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-fao_for
+          options:
+              deep: true

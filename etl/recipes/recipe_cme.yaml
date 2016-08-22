@@ -3,11 +3,15 @@ info:
     id: cme-sg-dataset
     base:
         - &d1 ddf--gapminder--gapminder_world
-        - &d2 ddf--gapminder--geo_entity_domain
-        - &d3 ddf--cme
+        - &d2 ddf--cme
 
 config:
-    recipes_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/recipes/
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
         
 include:
     - recipe_gw_common.yaml
@@ -15,24 +19,15 @@ include:
 ingredients:
     # CME
     - id: cme-datapoints
-      dataset: *d3
+      dataset: *d2
       key: "country,year"
       value: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
     - id: cme-countries
-      dataset: *d3
+      dataset: *d2
       key:
           - country
       value: "*"
 
-    # GW
-    - id: gw-entities
-      dataset: *d2
-      key: [geo]
-      value: "*"
-    - id: gw-countries
-      dataset: *d2
-      key: [country]
-      value: "*"
     - id: gw-concepts-cme
       dataset: *d1
       key: concept
@@ -47,9 +42,9 @@ cooking:
     concepts:
         - procedure: merge
           ingredients:
-              - gw-concepts-cme
-              - gw-concepts-geo
               - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-cme
           options:
               deep: true
           result: cme-concepts-final
@@ -57,7 +52,7 @@ cooking:
     entities:
         - procedure: identity
           ingredients:
-              - gw-entities
+              - gw-entities-geo
             
     datapoints:
         - procedure: translate_header

@@ -7,9 +7,9 @@ info:
 
 config:
     # the path to search recipe files to include
-    recipes_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/recipes/
+    recipes_dir: ./
     # the path to search dictionary files
-    dictionary_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/translation_dictionaries
+    dictionary_dir: ../translation_dictionaries
     # the path to search ddf datasets
     ddf_dir: /Users/semio/src/work/Gapminder
 
@@ -52,6 +52,22 @@ cooking:
               - aqua-datapoints
           options:
               dictionary: indicators_fao_aqua_to_sg.json
+          result: aqua-datapoints-indicators-translated
+        - procedure: translate_header
+          ingredients:
+              - aqua-datapoints-indicators-translated
+          options:
+              dictionary:
+                  area: geo
+                  year: time
+          result: aqua-datapoints-translated
+        - procedure: filter_item
+          ingredients:
+              - aqua-datapoints-translated
+          options:
+              items: *CONC_FILTER
+          result: fao_aqua-datapoints-final
+              
     entities:
         - procedure: identity
           ingredients:

@@ -1,0 +1,8 @@
+{
+    "lr_ag15t99_f":  "literacy_rate_adult_female_percent_of_females_ages_15_above",
+    "lr_ag15t99_m":  "literacy_rate_adult_male_percent_of_males_ages_15_and_above",
+    "lr_ag15t24_f":  "literacy_rate_youth_female_percent_of_females_ages_15_24",
+    "lr_ag15t24_m":  "literacy_rate_youth_male_percent_of_males_ages_15_24",
+    "lr_ag15t24"  :  "literacy_rate_youth_total_percent_of_people_ages_15_24",
+    "lr_ag15t99"  :  "literacy_rate_adult_total_percent_of_people_ages_15_and_above"
+}

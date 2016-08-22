@@ -1,87 +1,248 @@
-# Recipe.yaml
-
 # basic info
 info:
     id: wdi-sg-dataset
+    base:
+        - &d1 ddf--world_bank--world_development_indicators
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
 
 # define the initial inputs of the recipe
 ingredients:
     # WDI
     - id: wdi-datapoints
-      dataset: ddf--world_bank--world_development_indicators
+      dataset: *d1
       key: "country,year"
-      value: ['ag_lnd_agri_zs', 'bm_klt_dinv_gd_zs', 'bx_klt_dinv_wd_gd_zs', 'cm_mkt_lcap_gd_zs', 'dt_dod_dect_cd', 'dt_dod_dect_gn_zs', 'dt_dod_pvlx_gn_zs', 'dt_oda_odat_gi_zs', 'dt_oda_odat_kd', 'dt_oda_odat_pc_zs', 'dt_tds_dect_ex_zs', 'eg_use_elec_kh_pc', 'eg_use_pcap_kg_oe', 'en_urb_mcty_tl_zs', 'fi_res_totl_dt_zs', 'gc_tax_totl_gd_zs', 'it_cel_sets', 'it_net_bbnd', 'ms_mil_mprt_kd', 'ms_mil_xpnd_gd_zs', 'ms_mil_xprt_kd', 'ne_exp_gnfs_zs', 'ne_gdi_totl_zs', 'ne_imp_gnfs_zs', 'ne_rsb_gnfs_cd', 'ne_rsb_gnfs_zs', 'nv_agr_totl_zs', 'nv_ind_totl_zs', 'nv_srv_tetc_zs', 'ny_gdp_defl_kd_zg', 'ny_gdp_mktp_kd', 'ny_gdp_pcap_kd', 'ny_gdp_pcap_kd_zg', 'ny_gdp_pcap_pp_kd', 'ny_gnp_mktp_pp_cd', 'ny_gnp_pcap_cd', 'ny_gnp_pcap_kd', 'ny_gnp_pcap_pp_cd', 'se_enr_prsc_fm_zs', 'se_prm_cmpt_fe_zs', 'se_prm_cmpt_ma_zs', 'se_prm_cmpt_zs', 'se_prm_uner', 'se_prm_uner_fe', 'se_prm_uner_ma', 'se_xpd_prim_pc_zs', 'se_xpd_seco_pc_zs', 'se_xpd_tert_pc_zs', 'sh_med_phys_zs', 'sh_sta_acsn', 'sh_sta_acsn_ru', 'sh_sta_acsn_ur', 'sh_sta_brtc_zs', 'sh_sta_maln_zs', 'si_pov_dday', 'si_pov_gini', 'sp_dyn_conu_zs', 'sp_pop_grow', 'sp_urb_grow', 'sp_urb_totl', 'sp_urb_totl_in_zs', 'tg_val_totl_gd_zs', 'tm_val_mrch_xd_wd', 'tt_pri_mrch_xd_wd', 'tx_val_mrch_xd_wd', 'tx_val_tech_mf_zs', 'sh_h2o_safe_ur_zs', 'sh_h2o_safe_ru_zs', 'sh_h2o_safe_zs', 'ms_mil_totl_tf_zs', 'ms_mil_totl_p1', 'ag_lnd_frst_k2', 'ag_srf_totl_k2', 'en_atm_co2e_pp_gd_kd', 'it_cel_sets_p2', 'it_net_bbnd_p2', 'it_net_user_p2', 'se_ant_1524_lt_fm_zs', 'si_pov_2day', 'si_pov_nagp or si_pov_nahc', 'si_dst_02nd_20', 'si_dst_03rd_20', 'si_dst_04th_20', 'si_dst_10th_10', 'si_dst_05th_20', 'si_dst_frst_10', 'si_dst_frst_20', 'si_pov_rugp', 'si_pov_urgp', 'it_mlt_main_p2 + it_cel_sets_p2', 'ep_pmp_sgas_cd', 'eg_use_comm_gd_pd_kd']
-      
-    # - id: wdi-countries
-    #   dataset: ddf--world_bank--world_development_indicators
-    #   key: [country]
-    #   value: "*"
-    #   filter:
-    - id: wdi-concepts  # id used further in the recipe
-      dataset: ddf--world_bank--world_development_indicators  # which dataset
-      # key and value like in index
+      value:
+          - ag_lnd_agri_zs
+          - bm_klt_dinv_gd_zs
+          - bx_klt_dinv_wd_gd_zs
+          - cm_mkt_lcap_gd_zs
+          - dt_dod_dect_cd
+          - dt_dod_dect_gn_zs
+          - dt_dod_pvlx_gn_zs
+          - dt_oda_odat_gi_zs
+          - dt_oda_odat_kd
+          - dt_oda_odat_pc_zs
+          - dt_tds_dect_ex_zs
+          - eg_use_elec_kh_pc
+          - eg_use_elec_kh_pc
+          - eg_use_pcap_kg_oe
+          - en_urb_mcty_tl_zs
+          - fi_res_totl_dt_zs
+          - gc_tax_totl_gd_zs
+          - it_cel_sets
+          - it_net_bbnd
+          - ms_mil_mprt_kd
+          - ms_mil_xpnd_gd_zs
+          - ms_mil_xprt_kd
+          - ne_exp_gnfs_zs
+          - ne_gdi_totl_zs
+          - ne_imp_gnfs_zs
+          - ne_rsb_gnfs_cd
+          - ne_rsb_gnfs_zs
+          - nv_agr_totl_zs
+          - nv_ind_totl_zs
+          - nv_srv_tetc_zs
+          - ny_gdp_defl_kd_zg
+          - ny_gdp_mktp_kd
+          - ny_gdp_pcap_kd
+          - ny_gdp_pcap_kd_zg
+          - ny_gdp_pcap_kd_zg
+          - ny_gdp_pcap_pp_kd
+          - ny_gnp_mktp_pp_cd
+          - ny_gnp_pcap_cd
+          - ny_gnp_pcap_kd
+          - ny_gnp_pcap_pp_cd
+          - se_enr_prsc_fm_zs
+          - se_prm_cmpt_fe_zs
+          - se_prm_cmpt_ma_zs
+          - se_prm_cmpt_zs
+          - se_prm_uner
+          - se_prm_uner_fe
+          - se_prm_uner_ma
+          - se_xpd_prim_pc_zs
+          - se_xpd_seco_pc_zs
+          - se_xpd_tert_pc_zs
+          - sh_med_phys_zs
+          - sh_sta_acsn
+          - sh_sta_acsn_ru
+          - sh_sta_acsn_ur
+          - sh_sta_brtc_zs
+          - sh_sta_maln_zs
+          - si_pov_dday
+          - si_pov_gini
+          - sp_dyn_conu_zs
+          - sp_pop_grow
+          - sp_urb_grow
+          - sp_urb_totl
+          - sp_urb_totl_in_zs
+          - tg_val_totl_gd_zs
+          - tm_val_mrch_xd_wd
+          - tt_pri_mrch_xd_wd
+          - tx_val_mrch_xd_wd
+          - tx_val_tech_mf_zs
+          - sh_h2o_safe_ur_zs
+          - sh_h2o_safe_ru_zs
+          - sh_h2o_safe_zs
+          - ms_mil_totl_tf_zs
+          - ms_mil_totl_p1
+          - ag_lnd_frst_k2
+          - ag_srf_totl_k2
+          - en_atm_co2e_pp_gd_kd
+          - it_cel_sets_p2
+          - it_net_bbnd_p2
+          - it_net_user_p2
+          # - se_ant_1524_lt_fm_zs
+          - si_pov_2day
+          - si_pov_nahc
+          - si_dst_02nd_20
+          - si_dst_03rd_20
+          - si_dst_04th_20
+          - si_dst_10th_10
+          - si_dst_05th_20
+          - si_dst_frst_10
+          - si_dst_frst_20
+          - si_pov_rugp
+          - si_pov_urgp
+          - it_mlt_main_p2 + it_cel_sets_p2
+          - ep_pmp_sgas_cd
+          # - eg_use_comm_gd_pd_kd
+          - it_net_user_p2
+
+    - id: gw-concepts-wdi
+      dataset: *d2
       key: concept
       value: "*"
-      # filters rows. In this case only selects rows where concept-column has one of these values
-      filter:  # TODO: check if this filter contains all wdi concepts needed.
-          concept: ['ag_lnd_agri_zs', 'bm_klt_dinv_gd_zs', 'bx_klt_dinv_wd_gd_zs', 'cm_mkt_lcap_gd_zs', 'dt_dod_dect_cd', 'dt_dod_dect_gn_zs', 'dt_dod_pvlx_gn_zs', 'dt_oda_odat_gi_zs', 'dt_oda_odat_kd', 'dt_oda_odat_pc_zs', 'dt_tds_dect_ex_zs', 'eg_use_elec_kh_pc', 'eg_use_pcap_kg_oe', 'en_urb_mcty_tl_zs', 'fi_res_totl_dt_zs', 'gc_tax_totl_gd_zs', 'it_cel_sets', 'it_net_bbnd', 'ms_mil_mprt_kd', 'ms_mil_xpnd_gd_zs', 'ms_mil_xprt_kd', 'ne_exp_gnfs_zs', 'ne_gdi_totl_zs', 'ne_imp_gnfs_zs', 'ne_rsb_gnfs_cd', 'ne_rsb_gnfs_zs', 'nv_agr_totl_zs', 'nv_ind_totl_zs', 'nv_srv_tetc_zs', 'ny_gdp_defl_kd_zg', 'ny_gdp_mktp_kd', 'ny_gdp_pcap_kd', 'ny_gdp_pcap_kd_zg', 'ny_gdp_pcap_pp_kd', 'ny_gnp_mktp_pp_cd', 'ny_gnp_pcap_cd', 'ny_gnp_pcap_kd', 'ny_gnp_pcap_pp_cd', 'se_enr_prsc_fm_zs', 'se_prm_cmpt_fe_zs', 'se_prm_cmpt_ma_zs', 'se_prm_cmpt_zs', 'se_prm_uner', 'se_prm_uner_fe', 'se_prm_uner_ma', 'se_xpd_prim_pc_zs', 'se_xpd_seco_pc_zs', 'se_xpd_tert_pc_zs', 'sh_med_phys_zs', 'sh_sta_acsn', 'sh_sta_acsn_ru', 'sh_sta_acsn_ur', 'sh_sta_brtc_zs', 'sh_sta_maln_zs', 'si_pov_dday', 'si_pov_gini', 'sp_dyn_conu_zs', 'sp_pop_grow', 'sp_urb_grow', 'sp_urb_totl', 'sp_urb_totl_in_zs', 'tg_val_totl_gd_zs', 'tm_val_mrch_xd_wd', 'tt_pri_mrch_xd_wd', 'tx_val_mrch_xd_wd', 'tx_val_tech_mf_zs', 'sh_h2o_safe_ur_zs', 'sh_h2o_safe_ru_zs', 'sh_h2o_safe_zs', 'ms_mil_totl_tf_zs', 'ms_mil_totl_p1', 'ag_lnd_frst_k2', 'ag_srf_totl_k2', 'en_atm_co2e_pp_gd_kd', 'it_cel_sets_p2', 'it_net_bbnd_p2', 'it_net_user_p2', 'se_ant_1524_lt_fm_zs', 'si_pov_2day', 'si_pov_nagp or si_pov_nahc', 'si_dst_02nd_20', 'si_dst_03rd_20', 'si_dst_04th_20', 'si_dst_10th_10', 'si_dst_05th_20', 'si_dst_frst_10', 'si_dst_frst_20', 'si_pov_rugp', 'si_pov_urgp', 'it_mlt_main_p2 + it_cel_sets_p2', 'ep_pmp_sgas_cd', 'eg_use_comm_gd_pd_kd']
+      filter:
+          concept:
+              - agricultural_land_percent_of_land_area
+              - foreign_direct_investment_net_outflows_percent_of_gdp
+              - foreign_direct_investment_net_inflows_percent_of_gdp
+              - market_value_of_listed_companies_percent_of_gdp
+              - external_debt_total_us_not_inflation_adjusted
+              - debt_to_foreigners_by_public_and_private_percent_of_gni
+              - present_value_of_debt_percent_of_gni
+              - aid_received_percent_of_gni
+              - aid_received_total_us_inflation_adjusted
+              - aid_received_per_person_current_us
+              - debt_servicing_costs_percent_of_exports_and_net_income_from_abroad
+              - electricity_use_per_person
+              - electricity_use_total
+              - energy_use_per_person
+              - population_in_urban_agglomerations_m_1_million_percent_of_total
+              - total_reserves_percent_of_debt_to_foreigners
+              - tax_revenue_percent_of_gdp
+              - cell_phones_total
+              - broadband_subscribers
+              - arms_imports_us_inflation_adjusted
+              - military_expenditure_percent_of_gdp
+              - arms_exports_us_inflation_adjusted
+              - exports_percent_of_gdp
+              - investments_percent_of_gdp
+              - imports_percent_of_gdp
+              - trade_balance_us_not_inflation_adjusted
+              - trade_balance_percent_of_gdp
+              - agriculture_percent_of_gdp
+              - industry_percent_of_gdp
+              - services_percent_of_gdp
+              - inflation_annual_percent
+              - total_gdp_us_inflation_adjusted
+              - gdppercapita_us_inflation_adjusted
+              - gdp_per_capita_yearly_growth
+              - gdppercapita_growth_percent_per_year
+              - alternative_gdp_per_capita_ppp_wb
+              - total_gni_ppp_current_international
+              - gnipercapita_atlasmethod_current_us
+              - gnipercapita_constant_2000_us
+              - gnipercapita_ppp_current_international
+              - ratio_of_girls_to_boys_in_primary_and_secondary_education_perc
+              - primary_school_completion_percent_of_girls
+              - primary_school_completion_percent_of_boys
+              - primary_completion_rate_total_percent_of_relevant_age_group
+              - children_out_of_school_primary
+              - children_out_of_school_primary_female
+              - children_out_of_school_primary_male
+              - expenditure_per_student_primary_percent_of_gdp_per_person
+              - expenditure_per_student_secondary_percent_of_gdp_per_person
+              - expenditure_per_student_tertiary_percent_of_gdp_per_person
+              - medical_doctors_per_1000_people
+              - improved_sanitation_overall_access_percent
+              - improved_sanitation_rural_access_percent
+              - improved_sanitation_urban_access_percent
+              - births_attended_by_skilled_health_staff_percent_of_total
+              - malnutrition_weight_for_age_percent_of_children_under_5
+              - extreme_poverty_percent_people_below_125_a_day
+              - inequality_index_gini
+              - contraceptive_use_percent_of_women_ages_15_49
+              - population_growth_annual_percent
+              - urban_population_growth_annual_percent
+              - urban_population
+              - urban_population_percent_of_total
+              - merchandise_trade_percent_of_gdp
+              - imports_unit_value_index_2000100
+              - net_barter_terms_of_trade_2000_100
+              - exports_unit_value_index_2000100
+              - high_technology_exports_percent_of_manufactured_exports
+              - improved_water_source_overall_access_percent
+              - improved_water_source_rural_access_percent
+              - improved_water_source_urban_access_percent
+              - armed_forces_personnel_percent_of_labor_force
+              - armed_forces_personnel_total
+              - forest_area_sq_km
+              - surface_area_sq_km
+              - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
+              - cell_phones_per_100_people
+              - broadband_subscribers_per_100_people
+              - internet_users_per_100_people
+              # - ratio_of_young_literate_females_to_males_percent_ages_15_24
+              - poverty_percent_people_below_2_a_day
+              - alternative_poverty_percent_below_nationally_defined_poverty
+              - income_share_of_2nd_poorest_20percent
+              - income_share_of_2nd_richest_20percent
+              - income_share_of_middle_20percent
+              - income_share_of_poorest_10percent
+              - income_share_of_poorest_20percent
+              - income_share_of_richest_10percent
+              - income_share_of_richest_20percent
+              - rural_poverty_percent_rural_people_below_national_rural
+              - urban_poverty_percent_urban_people_below_national_urban
+              - fixed_line_and_mobile_phone_subscribers_per_100_people
+              - pump_price_for_gasoline_us_per_liter
+              # - energy_use_total
+              - internet_users_total_number
 
-    # GW
-    - id: gw-datapoints
-      dataset: ddf--gapminder--gapminder_world
-      key: "geo,time"
-      value: "*"
-    - id: gw-entities
-      dataset: ddf--gapminder--geo_entity_domain
-      key: [geo, country]
-      value: "*"
-    - id: gw-countries
-      dataset: ddf--gapminder--geo_entity_domain
-      key: [country]
-      value: "*"
-    - id: gw-concepts
-      dataset: ddf--gapminder--gapminder_world
-      key: concept
-      value: "*"
-
-# define the outputs per collection of the recipe
-# when cooking, we execute procedures, with a certain input (ingredients) and output (result), possibly with options
 cooking:
     datapoints:
-        # WDI
-        - procedure: translate_header                          # translate the headers of the datapoints
+        - procedure: translate_header
           options:
-              dictionary: indicators_wdi_to_sg.json            # dictionary can be a file with a dictionary json
-          ingredients: [wdi-datapoints]                        # what goes in
-          result: wdi-datapoints-indicators-translated         # what goes out
+              dictionary: indicators_wdi_to_sg.json
+          ingredients: [wdi-datapoints]
+          result: wdi-datapoints-indicators-translated
         - procedure: translate_header
           options:
               dictionary:
                   country: geo
                   year: time
           ingredients: [wdi-datapoints-indicators-translated]
-          result: wdi-datapoints-translated
-          # merge ingredients together on the keys
-        - procedure: merge
-          # deep merge is when we check every datapoint for existence
-          # if false, overwrite is on the file level. If key-value (e.g. geo,year-population_total) exists, whole file gets overwritten
-          # if true, overwrite is on the row level. If values (e.g. afr,2015-population_total) exists, it gets overwritten, if it doesn't it stays
-          options:
-              deep: false
-          # first is the base, second overwrites first (third overwrites first and second etc)
-          ingredients: [gw-datapoints, wdi-datapoints-translated]
-
+          result: wdi-datapoints-final
     entities:
-        - procedure: identity         # identity function = nothing changes
-          ingredients: [gw-entities]
+        - procedure: identity
+          ingredients: [gw-entities-geo]
     concepts:
-        - procedure: translate_column               # translate the values in a column
-          options:
-              column: concept                       # which column
-              dictionary: indicators_wdi_to_sg.json  # which dictionary is used to translate
-          ingredients: [wdi-concepts]               # what goes in
-          result: wdi-concepts-translated            # what goes out
         - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-wdi
           options:
               deep: true
-          ingredients: [gw-concepts, wdi-concepts-translated]

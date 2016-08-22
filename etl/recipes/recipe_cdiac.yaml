@@ -7,9 +7,9 @@ info:
 
 config:
     # the path to search recipe files to include
-    recipes_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/recipes/
+    recipes_dir: ./
     # the path to search dictionary files
-    dictionary_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/translation_dictionaries
+    dictionary_dir: ../translation_dictionaries
     # the path to search ddf datasets
     ddf_dir: /Users/semio/src/work/Gapminder
 
@@ -82,9 +82,12 @@ cooking:
               - cdiac-datapoints-translated
           options:
               op:
-                  co2_emissions_tonnes_per_person: per_capita_co2_emissions_metric_tons_of_carbon * 3.667
-                  yearly_co2_emissions_tonnes: total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667
-                  yearly_co2_emissions_1000_tonnes: total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667 / 1000
+                  co2_emissions_tonnes_per_person: |
+                      per_capita_co2_emissions_metric_tons_of_carbon * 3.667
+                  yearly_co2_emissions_tonnes: |
+                      total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667
+                  yearly_co2_emissions_1000_tonnes: |
+                      total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667 / 1000
           result: cdiac-datapoints-translated-op
         - procedure: accumulate
           ingredients:
@@ -98,7 +101,7 @@ cooking:
               - cdiac-datapoints-translated-op-acc
           options:
               dictionary:
-                  total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c: yearly_co2_emissions_1000_tonnes
+                  total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c: cumulative_co2_emissions_tonnes
           result: cdiac-datapoints-translated-op-acc-2
         - procedure: filter_item
           ingredients:
@@ -127,4 +130,4 @@ cooking:
                   - nation
               to_find: geo
               to_replace: geo
-          retult: cdiac-sg-datapoints-final
+          result: cdiac-datapoints-final

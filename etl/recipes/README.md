@@ -74,3 +74,7 @@ supported procedures currently:
 - run_op
     - run math operations on ingredient
     - discussion: https://github.com/semio/ddf_utils/issues/7
+- accumulate
+    - run cumulative functions over an ingredient
+- copy
+    - make copy of indicators of ingredient

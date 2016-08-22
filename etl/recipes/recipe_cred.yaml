@@ -4,6 +4,17 @@ info:
     base: 
         - &d1 ddf--cred--em_dat
         - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
         
 ingredients:
     - id: cred-datapoints
@@ -12,12 +23,12 @@ ingredients:
       value:
           - affected
           - total_deaths
-    - id: gw-concepts
+    - id: gw-concepts-cred
       dataset: *d2
       key: concept
       value: "*"
       filter:
-          concept:
+          concept: &CONC_FILTER
               - drought_affected_annual_number
               - earthquake_affected_annual_number
               - epidemic_affected_annual_number
@@ -40,8 +51,32 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: filter
-          ingredients: [cred-datapoints]
+        - procedure: align
+          ingredients:
+              - cred-entities
+              - gw-countries
+          options:
+              search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
+              to_find: name
+              to_replace: geo
+              drop_not_found: false
+          result: cred-entities-aligned
+
+        - procedure: align
+          ingredients:
+              - cred-datapoints
+              - cred-entities-aligned
+          options:
+              search_cols:
+                  - country
+              to_find: country
+              to_replace: country
+          result: cred-datapoints-aligned
+
+        - procedure: filter_row
+          ingredients: [cred-datapoints-aligned]
           options:
               dictionary:
                   drought_affected_annual_number:
@@ -91,13 +126,34 @@ cooking:
                   storm_deaths_annual_number:
                       from: total_deaths
                       disaster: storm
-                  
+          result: cred-datapoints-filtered
+
+        - procedure: translate_header
+          ingredients:
+              - cred-datapoints-filtered
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: cred-datapoints-filtered-translated
+        - procedure: filter_item
+          ingredients:
+              - cred-datapoints-filtered-translated
+          options:
+              items: *CONC_FILTER
+          result: cred-datapoints-final
+
     entities:
         - procedure: identity
-          ingredients: [cred-entities]
-          options:
-              copy: true
+          ingredients: [gw-entities-geo]
+          # options:
+          #     copy: true
     
     concepts:
-        - procedure: identity
-          ingredients: [gw-concepts]
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-cred
+          options:
+              deep: true

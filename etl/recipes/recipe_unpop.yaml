@@ -4,11 +4,15 @@ info:
     base:
         - &d1 ddf--unpop--wpp_pop
         - &d2 ddf--gapminder--gapminder_world
-        - &d3 ddf--gapminder--geo_entity_domain
+        - &d3 ddf--unpop--wpp_demog
 
 config:
-    dictionary_dir: ../translation_dictionaries/
+    # the path to search recipe files to include
     recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
 
 include:
     - recipe_gw_common.yaml
@@ -28,20 +32,26 @@ ingredients:
       dataset: *d1
       key: [country_code]
       value: "*"
-    - id: gw-countries
+    - id: unpop-datapoints-demog
       dataset: *d3
-      key: [country]
-      value: "*"
-    - id: gw-entities
-      dataset: *d3
-      key: [geo, country]
-      value: "*"
-    - id: gw-concepts-continuous
+      key: "country_code,year"
+      value:
+          - crude_birth_rate
+          - crude_death_rate
+          - life_expectancy_at_birth_females
+          - life_expectancy_at_birth_males
+          - population_growth_rate
+    - id: gw-concepts-unpop
       dataset: *d2
       key: concept
       value: '*'
       filter:
           concept: &CONCEPT_FILTER
+              - crude_birth_rate_births_per_1000_population
+              - crude_death_rate_deaths_per_1000_population
+              - life_expectancy_female
+              - life_expectancy_male
+              - population_growth_annual_percent_with_projections
               - female_population_with_projections
               - male_population_with_projections
               - sex_ratio_0_14_years
@@ -83,19 +93,28 @@ cooking:
         - procedure: merge
           ingredients:
             - gw-concepts-discrete
-            - gw-concepts-continuous
+            - gw-concepts-geo
+            - gw-concepts-unpop
           options:
               deep: true
-
     entities:
         - procedure: identity
           ingredients:
-            - gw-entities
-
+            - gw-entities-geo
     datapoints:
-        - procedure: filter_row
+        # WPP population
+        - procedure: translate_header
           ingredients:
               - unpop-datapoints-gender
+          options:
+              dictionary:
+                  country_code: geo
+                  year: time
+          result: unpop-datapoints-gender-translated
+
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-gender-translated
           result: unpop-datapoints-filtered
           options:
               dictionary:
@@ -225,7 +244,7 @@ cooking:
                           'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
                           'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
             to_find: name
-            to_replace: country
+            to_replace: geo
           result: unpop-countries-aligned
         - procedure: align
           ingredients:
@@ -234,15 +253,15 @@ cooking:
           options:
               search_cols:
                   - country_code
-              to_find: country_code
-              to_replace: country_code
+              to_find: geo
+              to_replace: geo 
           result: unpop-datapoints-filtered-aligned
 
         - procedure: groupby
           ingredients:
               - unpop-datapoints-filtered-aligned
           options:
-              by: [country_code, year]
+              by: [geo, time]
               aggregate: sum
           result: unpop-datapoints-filtered-aligned-grouped
 
@@ -315,18 +334,42 @@ cooking:
                      "female_population_40_59_years / female_population_with_projections"
                  population_aged_60plus_years_female_percent:
                      "female_population_60plus_years / female_population_with_projections"
-          result: unpop-datapoints-filtered-aligned-grouped-op
+          result: unpop-datapoints-gender-final
 
+        # WPP demographics
         - procedure: translate_header
           ingredients:
-              - unpop-datapoints-filtered-aligned-grouped-op
+              - unpop-datapoints-demog
           options:
               dictionary:
                   country_code: geo
                   year: time
-          result: unpop-datapoints-filtered-aligned-grouped-op-translated
+                  crude_birth_rate: crude_birth_rate_births_per_1000_population
+                  crude_death_rate: crude_death_rate_deaths_per_1000_population
+                  life_expectancy_at_birth_females: life_expectancy_female
+                  life_expectancy_at_birth_males: life_expectancy_male
+                  population_growth_rate: population_growth_annual_percent_with_projections
+          result: unpop-datapoints-demog-translated
+        - procedure: align
+          ingredients:
+              - unpop-datapoints-demog-translated
+              - unpop-countries-aligned
+          options:
+              search_cols:
+                  - country_code
+              to_find: geo
+              to_replace: geo
+          result: unpop-datapoints-demog-final
+
+        # merging the results
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-demog-final
+              - unpop-datapoints-gender-final
+          result: unpop-datapoints-merged
         - procedure: filter_item
           ingredients:
-              -  unpop-datapoints-filtered-aligned-grouped-op-translated
+              - unpop-datapoints-merged
           options:
               items: *CONCEPT_FILTER
+          result: unpop-datapoints-final

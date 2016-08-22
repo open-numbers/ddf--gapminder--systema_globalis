@@ -37,10 +37,10 @@ ingredients:
               - children_per_woman_total_fertility_with_projections
               - old_version_of_income_per_person_version_8
               - subsistence_incomes_per_person
-              - old_version_of_income_per_person_version_3
-              - income_per_person_gdppercapita_ppp_inflation_adjusted
-              - income_per_person_long_series
-              - income_per_person_with_projections
+              # - old_version_of_income_per_person_version_3
+              # - income_per_person_gdppercapita_ppp_inflation_adjusted
+              # - income_per_person_long_series
+              # - income_per_person_with_projections
               - adults_with_hiv_percent_age_15_49
               - people_living_with_hiv_number_all_ages
               - infant_mortality_rate_per_1000_births
@@ -50,7 +50,7 @@ ingredients:
               - population_total
               - child_mortality_0_5_year_olds_dying_per_1000_born
               - child_mortality_0_5_year_olds_more_years_version_7
-              - number_of_child_deaths
+              # - number_of_child_deaths
     # Lex
     - id: lex-datapoints
       dataset: *d2

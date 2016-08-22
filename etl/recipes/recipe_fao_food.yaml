@@ -40,14 +40,22 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: filter_row
+        - procedure: translate_header
           ingredients:
               - fao_food-datapoints
           options:
               dictionary:
+                  country: geo
+                  year: time
+          result: fao_food-datapoints_
+        - procedure: filter_row
+          ingredients:
+              - fao_food-datapoints_
+          options:
+              dictionary:
                   food_supply_kilocalories_per_person_and_day:
                       from: food_supply_kcal_capita_day
-                      item: 2901
+                      item: '2901'
           result: fao_food-datapoints-filtered
         - procedure: align
           ingredients:
@@ -67,8 +75,8 @@ cooking:
           options:
               search_cols:
                   - country
-              to_find: country
-              to_replace: country
+              to_find: geo
+              to_replace: geo
           result: fao_food-datapoints-filtered-aligned
         - procedure: filter_item
           ingredients:
