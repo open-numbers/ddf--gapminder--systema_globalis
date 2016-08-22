@@ -24,7 +24,7 @@ include:
     - recipe_pwt.yaml
     - recipe_uis.yaml
     - recipe_unaids.yaml
-    # - recipe_unpop.yaml
+    - recipe_unpop.yaml
     - recipe_wdi.yaml
     - recipe_transpint.yaml
     - recipe_imperial.yaml
@@ -61,12 +61,16 @@ cooking:
               - transpint-datapoints-final
               - uis-datapoints-final
               - unaids-datapoints-final
-              # - unpop-datapoints-final
+              - unpop-datapoints-final
     entities:
         - procedure: identity
           ingredients:
               - gw-entities-geo
     concepts:
-        - procedure: identity
+        - procedure: merge
           ingredients:
               - gw-concepts-all
+              - gw-concepts-geo
+              - gw-concepts-discrete
+          options:
+              deep: true
