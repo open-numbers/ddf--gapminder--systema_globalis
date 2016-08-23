@@ -36,7 +36,7 @@ inside configuration section. we define the configuration of dirs. currently we
 can set below path:
 
 - `ddf_dir`: the directory that contains all ddf csv repos. Must set this
-variable in the main recipe.
+variable in the main recipe to run with chef.
 - `recipes_dir`: the directory contains all recipes to include. Must set this 
 variable if we have `include` section.
 - `dictionary_dir`: the directory contains all translation files. Must set this
