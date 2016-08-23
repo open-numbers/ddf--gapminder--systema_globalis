@@ -24,11 +24,11 @@ all basic info are stored in `info` section of the recipe. an `id` field is
 required inside this section. Any other information about the new dataset can be
 store inside this section, such as `name`, `provider`, `description` and so on.
 
-** Note on yaml format **
+**Note on yaml format**
 
 In this repo we use `base` to indicate where the ingredients comes from. We set 
-an _yaml anchor_ to each of them (`*d1` etc) so that we can reference them later 
-in the recipe (`&d1` etc).
+an _yaml anchor_ to each of them (`&d1` etc) so that we can reference them later 
+in the recipe (`*d1` etc).
 
 ### config
 
