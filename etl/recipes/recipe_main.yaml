@@ -37,7 +37,7 @@ ingredients:
       key: concept
       value: "*"
     - id: gw-datapoints-all
-      dataset: ddf--gapminder--gapminder_world
+      dataset: ddf--gapminder--systema_globalis
       key: "geo,time"
       value: "*"
 
