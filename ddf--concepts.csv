@@ -579,5 +579,5 @@ arb6,arb6,string,,,,,,,,,
 domain,Domain,string,,,,,,,,,
 scales,Scales,string,,,,,,,,,
 drill_up,drill up,string,,,,,,,,,
-time,Time,time,,,,"[""time""]",,,,,
+time,Time,time,,,,"[""time""]",,,,,"_root"
 shape_lores_svg,Shapes,string,,,,,,,,,
