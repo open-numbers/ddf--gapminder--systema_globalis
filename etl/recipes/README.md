@@ -1,4 +1,4 @@
-# Recipe Standard (draft)
+# Recipe Manual (draft)
 
 ## What is recipe
 
@@ -24,6 +24,12 @@ all basic info are stored in `info` section of the recipe. an `id` field is
 required inside this section. Any other information about the new dataset can be
 store inside this section, such as `name`, `provider`, `description` and so on.
 
+** Note on yaml format **
+
+In this repo we use `base` to indicate where the ingredients comes from. We set 
+an _yaml anchor_ to each of them (`*d1` etc) so that we can reference them later 
+in the recipe (`&d1` etc).
+
 ### config
 
 inside configuration section. we define the configuration of dirs. currently we
@@ -42,6 +48,15 @@ will be discussed later)
 one recipe can include other recipes inside itself. to include a recipe, simply
 append the filename to the `include` section. note that it should be a absolute
 path or a filename inside the `recipes_dir`.
+
+On the chef module, the process to generate a dataset have following steps:
+
+- read the main recipe
+- if there is include section, read each file in the include list and expand the 
+main recipe
+- if there is file name in dictionary option of each procedure, try to expand them 
+if the option value is a filename
+- run the procedures one by one.
 
 ### cooking procedures
 
