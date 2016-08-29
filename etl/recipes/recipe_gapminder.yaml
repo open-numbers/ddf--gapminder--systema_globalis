@@ -1,4 +1,5 @@
 # recipe for gapminder
+# TODO: some data missing comparing to candidate branch
 info:
     id: sg-gapminder-dataset
     base:
@@ -57,7 +58,7 @@ ingredients:
       key: "area,year"
       value:
           - data_quality
-    - id: lex-area  # the area mapping will be use in all other ingredients
+    - id: lex-area
       dataset: *d2
       key:
           - area
@@ -69,6 +70,11 @@ ingredients:
       value:
           - total_fertility_rate
           - total_fertility_rate_interpolated
+    - id: tfr-area
+      dataset: *d3
+      key:
+          - area  # TODO: check here
+      value: "*"
     # ddf--gapminder--hist_gdppc
     - id: gdppc-datapoints
       dataset: *d4
@@ -144,11 +150,12 @@ cooking:
               - lex-area
               - gw-countries
           options:
-                search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
                             'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
-                to_find: name
-                to_replace: country
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: country
           result: lex-area-aligned
 
         - procedure: align

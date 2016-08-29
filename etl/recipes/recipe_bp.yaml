@@ -72,9 +72,10 @@ cooking:
               - bp-countries
               - gw-countries
           options:
-              search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
                             'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
               to_find: geo_name
               to_replace: geo_new
           result: bp-countries-aligned

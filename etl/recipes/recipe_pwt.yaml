@@ -42,7 +42,6 @@ cooking:
               dictionary:
                   country: geo
                   year: time
-                  rgdpna: economic_growth_over_the_past_10_years
           result: pwt-datapoints-translated
         - procedure: run_op
           ingredients:
@@ -50,11 +49,25 @@ cooking:
           options:
               op:
                   alternative_gdppercapita_ppp_inflation_adjusted_from_pwt: |
-                      economic_growth_over_the_past_10_years / pop
+                      rgdpna / pop
           result: pwt-datapoints-translated-op
-        - procedure: filter_item
+        - procedure: accumulate
           ingredients:
               - pwt-datapoints-translated-op
+          options:
+              op:
+                  rgdpna: "aagr"
+          result: pwt-datapoints-translated-op-acc
+        - procedure: run_op
+          ingredients:
+              - pwt-datapoints-translated-op-acc
+          options:
+              op:
+                  economic_growth_over_the_past_10_years: rgdpna * 100
+          result: pwt-datapoints-translated-op-acc_
+        - procedure: filter_item
+          ingredients:
+              - pwt-datapoints-translated-op-acc_
           options:
               items: *CONC_FILTER
           result: pwt-datapoints-final

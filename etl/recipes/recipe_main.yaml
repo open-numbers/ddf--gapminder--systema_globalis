@@ -37,7 +37,7 @@ ingredients:
       key: concept
       value: "*"
     - id: gw-datapoints-all
-      dataset: ddf--gapminder--systema_globalis
+      dataset: ddf--gapminder--gapminder_world
       key: "geo,time"
       value: "*"
 
@@ -62,6 +62,8 @@ cooking:
               - uis-datapoints-final
               - unaids-datapoints-final
               - unpop-datapoints-final
+          options:
+              deep: true
     entities:
         - procedure: identity
           ingredients:

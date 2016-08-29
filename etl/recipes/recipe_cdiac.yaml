@@ -1,4 +1,5 @@
 # recipe for cdiac-co2 dataset
+# TODO: big diff to candidate
 info:
     id: sg-cdiac-dataset
     base:
@@ -89,23 +90,23 @@ cooking:
                   yearly_co2_emissions_1000_tonnes: |
                       total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667 / 1000
           result: cdiac-datapoints-translated-op
-        - procedure: accumulate
+        - procedure: copy
           ingredients:
               - cdiac-datapoints-translated-op
           options:
-              op:
-                  total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c: "cumsum"
-          result: cdiac-datapoints-translated-op-acc
-        - procedure: translate_header
-          ingredients:
-              - cdiac-datapoints-translated-op-acc
-          options:
               dictionary:
-                  total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c: cumulative_co2_emissions_tonnes
-          result: cdiac-datapoints-translated-op-acc-2
+                  yearly_co2_emissions_tonnes: cumulative_co2_emissions_tonnes
+          result: cdiac-datapoints-translated-op_
+        - procedure: accumulate
+          ingredients:
+              - cdiac-datapoints-translated-op_
+          options:
+              op:
+                  cumulative_co2_emissions_tonnes: "cumsum"
+          result: cdiac-datapoints-translated-op-acc
         - procedure: filter_item
           ingredients:
-              - cdiac-datapoints-translated-op-acc-2
+              - cdiac-datapoints-translated-op-acc
           options:
               items: *CONC_FILTER
           result: cdiac-sg-datapoints
@@ -115,9 +116,10 @@ cooking:
               - cdiac-nations
               - gw-countries
           options:
-              search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
                             'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
               to_find: name
               to_replace: nation_new
           result: cdiac-sg-nations

@@ -59,9 +59,10 @@ cooking:
               - oecd-donor
               - gw-countries
           options:
-              search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
                             'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
               to_find: name
               to_replace: geo
           result: oecd-donor-aligned
@@ -81,37 +82,64 @@ cooking:
               - oecd-datapoints-translated-aligned
           options:
               dictionary:
-                  economical_infrastructure_aid_given_percent_of_aid:
+                  economical_infrastructure_aid:
                       from: total_oda
                       sector: '200'
-                  education_aid_given_percent_of_aid:
+                  education_aid:
                       from: total_oda
                       sector: '110'
-                  government_and_society_aid_given_percent_of_aid:
+                  government_and_society_aid:
                       from: total_oda
                       sector: '150'
-                  health_aid_given_percent_of_aid:
+                  health_aid:
                       from: total_oda
                       sector: '120'
-                  multisector_cross_cutting_aid_given_percent_of_aid:
+                  multisector_cross_cutting_aid:
                       from: total_oda
                       sector: '400'
-                  other_social_services_aid_given_percent_of_aid:
+                  other_social_services_aid:
                       from: total_oda
                       sector: '160'
-                  population_policies_aid_given_percent_of_aid:
+                  population_policies_aid:
                       from: total_oda
                       sector: '130'
-                  production_sector_aid_given_percent_of_aid:
+                  production_sector_aid:
                       from: total_oda
                       sector: '300'
-                  water_and_sanitation_aid_given_percent_of_aid:
+                  water_and_sanitation_aid:
                       from: total_oda
                       sector: '140'
+                  total_aid:
+                      from: total_oda
+                      sector: '1000'
           result: oecd-datapoints-translated-aligned-filtered
-        - procedure: filter_item
+        - procedure: run_op
           ingredients:
               - oecd-datapoints-translated-aligned-filtered
+          options:
+              op:
+                  economical_infrastructure_aid_given_percent_of_aid: |
+                      economical_infrastructure_aid / total_aid * 100
+                  education_aid_given_percent_of_aid: |
+                    education_aid / total_aid * 100
+                  government_and_society_aid_given_percent_of_aid: |
+                      government_and_society_aid / total_aid * 100
+                  health_aid_given_percent_of_aid: |
+                      health_aid / total_aid * 100
+                  multisector_cross_cutting_aid_given_percent_of_aid: |
+                      multisector_cross_cutting_aid / total_aid * 100
+                  other_social_services_aid_given_percent_of_aid: |
+                      other_social_services_aid / total_aid * 100
+                  population_policies_aid_given_percent_of_aid: |
+                      population_policies_aid / total_aid * 100
+                  production_sector_aid_given_percent_of_aid: |
+                      production_sector_aid / total_aid * 100
+                  water_and_sanitation_aid_given_percent_of_aid: |
+                      water_and_sanitation_aid / total_aid * 100
+          result: oecd-datapoints-aligned-filtered-op
+        - procedure: filter_item
+          ingredients:
+              - oecd-datapoints-aligned-filtered-op
           options:
               items: *CONC_FILTER
           result: oecd-datapoints-final
@@ -127,4 +155,3 @@ cooking:
               - gw-concepts-oecd
           options:
               deep: true
-              

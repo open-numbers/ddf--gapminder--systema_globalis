@@ -1,4 +1,5 @@
 # basic info
+# TODO: sex_ratio should *100, percentage need to double check. big diff to candidate
 info:
     id: unpop_sg_dataset
     base:
@@ -240,9 +241,10 @@ cooking:
             - unpop-countries
             - gw-countries
           options:
-            search_cols: ['alternative_1', 'alternative_2', 'alternative_3',
+            search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
                           'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                          'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'name']
+                          'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                          'name']
             to_find: name
             to_replace: geo
           result: unpop-countries-aligned
@@ -254,7 +256,7 @@ cooking:
               search_cols:
                   - country_code
               to_find: geo
-              to_replace: geo 
+              to_replace: geo
           result: unpop-datapoints-filtered-aligned
 
         - procedure: groupby
@@ -270,11 +272,11 @@ cooking:
               - unpop-datapoints-filtered-aligned-grouped
           options:
               op:
-                 sex_ratio_0_14_years: "male_population_0_14_years / female_population_0_14_years"
-                 sex_ratio_15_24_years: "male_population_10_14_years / female_population_10_14_years"
-                 sex_ratio_15_49_years: "male_population_15_49_years / female_population_15_49_years"
-                 sex_ratio_above_50_years: "male_population_above_50_years / female_population_above_50_years"
-                 sex_ratio_all_age_groups: "male_population_with_projections / female_population_with_projections"
+                 sex_ratio_0_14_years: "male_population_0_14_years / female_population_0_14_years * 100"
+                 sex_ratio_15_24_years: "male_population_10_14_years / female_population_10_14_years * 100"
+                 sex_ratio_15_49_years: "male_population_15_49_years / female_population_15_49_years * 100"
+                 sex_ratio_above_50_years: "male_population_above_50_years / female_population_above_50_years * 100"
+                 sex_ratio_all_age_groups: "male_population_with_projections / female_population_with_projections * 100"
                  population_aged_0_4_years_total_number:
                      "male_population_0_4_years + female_population_0_4_years"
                  population_aged_5_9_years_total_number:
@@ -292,48 +294,48 @@ cooking:
                 #  population_total_number:
                 #      "male_population_with_projections + female_population_with_projections"
                  population_aged_0_4_years_both_sexes_percent:
-                     "(male_population_0_4_years + female_population_0_4_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_0_4_years + female_population_0_4_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_5_9_years_both_sexes_percent:
-                     "(male_population_5_9_years + female_population_5_9_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_5_9_years + female_population_5_9_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_10_14_years_both_sexes_percent:
-                     "(male_population_10_14_years + female_population_10_14_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_10_14_years + female_population_10_14_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_15_19_years_both_sexes_percent:
-                     "(male_population_15_19_years + female_population_15_19_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_15_19_years + female_population_15_19_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_20_39_years_both_sexes_percent:
-                     "(male_population_20_39_years + female_population_20_39_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_20_39_years + female_population_20_39_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_40_59_years_both_sexes_percent:
-                     "(male_population_40_59_years + female_population_40_59_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_40_59_years + female_population_40_59_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_60plus_years_both_sexes_percent:
-                     "(male_population_60plus_years + female_population_60plus_years) / (male_population_with_projections + female_population_with_projections)"
+                     "(male_population_60plus_years + female_population_60plus_years) / (male_population_with_projections + female_population_with_projections) * 100"
                  population_aged_0_4_years_male_percent:
-                     "male_population_0_4_years / male_population_with_projections"
+                     "male_population_0_4_years / male_population_with_projections * 100"
                  population_aged_5_9_years_male_percent:
-                     "male_population_5_9_years / male_population_with_projections"
+                     "male_population_5_9_years / male_population_with_projections * 100"
                  population_aged_10_14_years_male_percent:
-                     "male_population_10_14_years / male_population_with_projections"
+                     "male_population_10_14_years / male_population_with_projections * 100"
                  population_aged_15_19_years_male_percent:
-                     "male_population_15_19_years / male_population_with_projections"
+                     "male_population_15_19_years / male_population_with_projections * 100"
                  population_aged_20_39_years_male_percent:
-                     "male_population_20_39_years / male_population_with_projections"
+                     "male_population_20_39_years / male_population_with_projections * 100"
                  population_aged_40_59_years_male_percent:
-                     "male_population_40_59_years / male_population_with_projections"
+                     "male_population_40_59_years / male_population_with_projections * 100"
                  population_aged_60plus_years_male_percent:
-                     "male_population_60plus_years / male_population_with_projections"
+                     "male_population_60plus_years / male_population_with_projections * 100"
 
                  population_aged_0_4_years_female_percent:
-                     "female_population_0_4_years / female_population_with_projections"
+                     "female_population_0_4_years / female_population_with_projections * 100"
                  population_aged_5_9_years_female_percent:
-                     "female_population_5_9_years / female_population_with_projections"
+                     "female_population_5_9_years / female_population_with_projections * 100"
                  population_aged_10_14_years_female_percent:
-                     "female_population_10_14_years / female_population_with_projections"
+                     "female_population_10_14_years / female_population_with_projections * 100"
                  population_aged_15_19_years_female_percent:
-                     "female_population_15_19_years / female_population_with_projections"
+                     "female_population_15_19_years / female_population_with_projections * 100"
                  population_aged_20_39_years_female_percent:
-                     "female_population_20_39_years / female_population_with_projections"
+                     "female_population_20_39_years / female_population_with_projections * 100"
                  population_aged_40_59_years_female_percent:
-                     "female_population_40_59_years / female_population_with_projections"
+                     "female_population_40_59_years / female_population_with_projections * 100"
                  population_aged_60plus_years_female_percent:
-                     "female_population_60plus_years / female_population_with_projections"
+                     "female_population_60plus_years / female_population_with_projections * 100"
           result: unpop-datapoints-gender-final
 
         # WPP demographics
