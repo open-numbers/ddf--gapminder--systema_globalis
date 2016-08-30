@@ -62,6 +62,7 @@ cooking:
               - uis-datapoints-final
               - unaids-datapoints-final
               - unpop-datapoints-final
+              - wdi-datapoints-final
           options:
               deep: true
     entities:

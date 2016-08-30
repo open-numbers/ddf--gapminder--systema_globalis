@@ -273,7 +273,7 @@ cooking:
           options:
               op:
                  sex_ratio_0_14_years: "male_population_0_14_years / female_population_0_14_years * 100"
-                 sex_ratio_15_24_years: "male_population_10_14_years / female_population_10_14_years * 100"
+                 sex_ratio_15_24_years: "male_population_15_24_years / female_population_15_24_years * 100"
                  sex_ratio_15_49_years: "male_population_15_49_years / female_population_15_49_years * 100"
                  sex_ratio_above_50_years: "male_population_above_50_years / female_population_above_50_years * 100"
                  sex_ratio_all_age_groups: "male_population_with_projections / female_population_with_projections * 100"
