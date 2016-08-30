@@ -63,7 +63,7 @@ ingredients:
       key:
           - area
       value: "*"
-    # ddf--g-hist_tfr 
+    # ddf--g-hist_tfr
     - id: tfr-datapoints
       dataset: *d3
       key: "area,year"
@@ -88,12 +88,22 @@ ingredients:
       value:
           - estimated_hiv_prevalence_ages_15_49
           - people_living_with_hiv
+    - id: hiv-countries
+      dataset: *d5
+      key:
+          - country
+      value: "*"
     # ddf--gapminder--hist_imr
     - id: imr-datapoints
       dataset: *d6
       key: "area,year"
       value:
           - infant_mortality_rate
+    - id: imr-areas
+      dataset: *d6
+      key:
+          - area
+      value: "*"
     # ddf--gapminder--hist_marriage_age
     - id: marriage-datapoints
       dataset: *d7
@@ -113,6 +123,11 @@ ingredients:
       key: "area,year"
       value:
           - total_population
+    - id: pop-areas
+      dataset: *d9
+      key:
+          - area
+      value: "*"
     # ddf--gapminder--hist_u5mr
     - id: u5mr-datapoints
       dataset: *d10
@@ -145,7 +160,7 @@ cooking:
                   year: time
           result: lex-datapoints-translated
 
-        - procedure: align 
+        - procedure: align
           ingredients:
               - lex-area
               - gw-countries
@@ -175,7 +190,7 @@ cooking:
               - tfr-datapoints
           options:
               dictionary:
-                  total_fertility_rate: children_per_woman_temporary_update 
+                  total_fertility_rate: children_per_woman_temporary_update
                   area: geo
                   year: time
           result: tfr-datapoints-translated
@@ -217,7 +232,7 @@ cooking:
                   gdp_per_capita_by_purchasing_power_parities:
                       - old_version_of_income_per_person_version_8
                       - subsistence_incomes_per_person
-          result: gdppc-datapoints-translated_ 
+          result: gdppc-datapoints-translated_
         - procedure: align
           ingredients:
               - gdppc-datapoints-translated_
@@ -249,11 +264,23 @@ cooking:
           result: hiv-datapoints-translated
         - procedure: align
           ingredients:
+              - hiv-countries
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: hiv-countries-aligned
+        - procedure: align
+          ingredients:
               - hiv-datapoints-translated
-              - lex-area-aligned
+              - hiv-countries-aligned
           options:
               search_cols:
-                  - area
+                  - country
               to_find: geo
               to_replace: geo
           result: hiv-datapoints-final
@@ -270,8 +297,20 @@ cooking:
           result: imr-datapoints-translated
         - procedure: align
           ingredients:
+              - imr-areas
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: imr-areas-aligned
+        - procedure: align
+          ingredients:
               - imr-datapoints-translated
-              - lex-area-aligned
+              - imr-areas-aligned
           options:
               search_cols:
                   - area
@@ -334,8 +373,20 @@ cooking:
           result: pop-datapoints-translated
         - procedure: align
           ingredients:
+              - pop-areas
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: pop-areas-aligned
+        - procedure: align
+          ingredients:
               - pop-datapoints-translated
-              - lex-area-aligned
+              - pop-areas-aligned
           options:
               search_cols:
                   - area
@@ -392,4 +443,3 @@ cooking:
           options:
               items: *CONC_FILTER
           result: gw-sg-datapoints-final
-              
