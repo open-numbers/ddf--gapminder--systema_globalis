@@ -93,3 +93,9 @@ supported procedures currently:
     - run cumulative functions over an ingredient
 - copy
     - make copy of indicators of ingredient
+
+### General guideline for writing recipes
+
+- if you need to use `translate_header`/`translate_column`/`align`/`copy` in your
+recipe, place them at the beginning of recipe. This can improve the performance
+of running the recipe.
