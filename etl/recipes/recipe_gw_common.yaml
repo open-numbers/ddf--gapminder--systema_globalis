@@ -40,6 +40,7 @@ ingredients:
               - arb5
               - arb6
               - arb7
+              - arb8
 
     - id: gw-concepts-discrete
       dataset: ddf--gapminder--gapminder_world
