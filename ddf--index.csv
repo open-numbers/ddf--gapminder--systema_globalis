@@ -544,11 +544,10 @@ concept,description,ddf--concepts.csv
 "geo,time",yearly_co2_emissions_tonnes,ddf--datapoints--yearly_co2_emissions_tonnes--by--geo--time.csv
 country,gwid,ddf--entities--geo--country.csv
 country,name,ddf--entities--geo--country.csv
-country,geographic_regions,ddf--entities--geo--country.csv
+country,world_6region,ddf--entities--geo--country.csv
 country,income_groups,ddf--entities--geo--country.csv
 country,landlocked,ddf--entities--geo--country.csv
 country,g77_and_oecd_countries,ddf--entities--geo--country.csv
-country,geographic_regions_in_4_colors,ddf--entities--geo--country.csv
 country,main_religion_2008,ddf--entities--geo--country.csv
 country,gapminder_list,ddf--entities--geo--country.csv
 country,alternative_1,ddf--entities--geo--country.csv
@@ -574,12 +573,6 @@ country,longitude,ddf--entities--geo--country.csv
 g77_and_oecd_countries,name,ddf--entities--geo--g77_and_oecd_countries.csv
 g77_and_oecd_countries,gwid,ddf--entities--geo--g77_and_oecd_countries.csv
 g77_and_oecd_countries,is--g77_and_oecd_countries,ddf--entities--geo--g77_and_oecd_countries.csv
-geographic_regions,name,ddf--entities--geo--geographic_regions.csv
-geographic_regions,gwid,ddf--entities--geo--geographic_regions.csv
-geographic_regions,is--geographic_regions,ddf--entities--geo--geographic_regions.csv
-geographic_regions_in_4_colors,name,ddf--entities--geo--geographic_regions_in_4_colors.csv
-geographic_regions_in_4_colors,gwid,ddf--entities--geo--geographic_regions_in_4_colors.csv
-geographic_regions_in_4_colors,is--geographic_regions_in_4_colors,ddf--entities--geo--geographic_regions_in_4_colors.csv
 geo,is--global,ddf--entities--geo--global.csv
 geo,name,ddf--entities--geo--global.csv
 geo,latitude,ddf--entities--geo--global.csv
@@ -601,3 +594,11 @@ geo,description,ddf--entities--geo--world_4region.csv
 geo,latitude,ddf--entities--geo--world_4region.csv
 geo,longitude,ddf--entities--geo--world_4region.csv
 geo,color,ddf--entities--geo--world_4region.csv
+geo,is--world_6region,ddf--entities--geo--world_6region.csv
+geo,name,ddf--entities--geo--world_6region.csv
+geo,name_short,ddf--entities--geo--world_6region.csv
+geo,name_long,ddf--entities--geo--world_6region.csv
+geo,description,ddf--entities--geo--world_6region.csv
+geo,latitude,ddf--entities--geo--world_6region.csv
+geo,longitude,ddf--entities--geo--world_6region.csv
+geo,color,ddf--entities--geo--world_6region.csv
