@@ -266,7 +266,7 @@ virg_isl,,Virgin Islands,,,,,,,,,,,,,,,,,,,,,,,,TRUE,americas,,
 vir,i251,Virgin Islands (U.S.),america,high_income,coastline,others,america,christian,Virgin Islands (U.S.),United States Virgin Islands,,,,,VI,,VIRGIN ISLANDS (U.S.),VIR,850.0,,,,,,,TRUE,americas,18.34829,-64.98348
 wlf,i244,Wallis et Futuna,east_asia_pacific,,coastline,others,asia,christian,Wallis et Futuna,Wallis and Futuna,,,,,WF,,WALLIS AND FUTUNA ISLANDS,WLF,876.0,,,,,,,TRUE,asia,-13.3,-176.2
 pse_west_bank,,West Bank,,,,,,,,,,,,,,,,,,,,,,,,TRUE,asia,,
-pse,i247,West Bank and Gaza,middle_east_north_africa,lower_middle_income,coastline,g77,asia,muslim,West Bank and Gaza,Occupied Palestinian Territory,Palestinian territories,OPT,Occupied Palestinian Territory,,PS,State of Palestine,"PALESTINIAN TERRITORY, Occupied",PSE,275.0,"Palestine, State of",Palestine,,,,,TRUE,asia,31.921570000000003,35.20329
+pse,i247,Palestine,middle_east_north_africa,lower_middle_income,coastline,g77,asia,muslim,West Bank and Gaza,Occupied Palestinian Territory,Palestinian territories,OPT,Occupied Palestinian Territory,,PS,State of Palestine,"PALESTINIAN TERRITORY, Occupied",PSE,275.0,"Palestine, State of",Palestine,,,,,TRUE,asia,31.921570000000003,35.20329
 deu_west,i248,West Germany,europe_central_asia,,coastline,others,europe,,West Germany,,,,West Germany,,West_Germany,,,,,,,,,,,TRUE,europe,,
 esh,i249,Western Sahara,middle_east_north_africa,,coastline,others,africa,muslim,Western Sahara,,,,Western Sahara,,EH,,WESTERN SAHARA,ESH,732.0,,,,,,,TRUE,africa,24.49215,-12.65625
 yem,i254,Yemen,middle_east_north_africa,lower_middle_income,coastline,g77,asia,muslim,"Yemen, Rep.",Yemen Republic,,,Yemen,YEMEN,YE,,YEMEN,YEM,887.0,,,,,,,TRUE,asia,15.5,47.5
