@@ -579,3 +579,4 @@ scales,Scales,string,,,,,,,,,_none
 drill_up,drill up,string,,,,,,,,,_none
 time,Time,time,,,,"[""time""]",,,,,"_root"
 shape_lores_svg,Shapes,string,,,,,,,,,_none
+temp_string,Temporaty string,string,,,,,,,,,_none
