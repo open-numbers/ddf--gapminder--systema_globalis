@@ -22,10 +22,10 @@ ingredients:
       dataset: *d1
       key: "area,year"
       value:
-          - agricultural_water_withdrawal_as_of_total_water_withdrawal
+          - agricultural_water_withdrawal_as_pct_of_total_water_withdrawal
           - desalinated_water_produced
-          - industrial_water_withdrawal_as_of_total_water_withdrawal
-          - municipal_water_withdrawal_as_of_total_withdrawal
+          - industrial_water_withdrawal_as_pct_of_total_water_withdrawal
+          - municipal_water_withdrawal_as_pct_of_total_withdrawal
           - total_internal_renewable_water_resources_per_capita
           - total_renewable_water_resources_per_capita
           - total_water_withdrawal
