@@ -1,4 +1,4 @@
-concept,name,concept_type,domain,indicator_url,color,scales,drill_up,unit,interpolation,description,tag
+concept,name,concept_type,domain,indicator_url,color,scales,drill_up,unit,interpolation,description,tags
 landlocked,Landlocked,entity_set,geo,http://spreadsheets.google.com/pub?key=rBwKBodk7Y08pGiA4OAfzUA,"{""palette"": {""landlocked"": ""#f05656"", ""coastline"": ""#7487ef""}}","[""ordinal""]",,,,,
 description,Description,string,,,,,,,,,
 indicator_url,Indicator url,string,,,,,,,,,

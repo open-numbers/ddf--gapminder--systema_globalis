@@ -23,28 +23,28 @@ def concepts_tag_column():
     for k, v in m.iterrows():
 
         if v['Menu level 2'] == 'Water' and v['Menu level1'] == 'Environment':
-            m2.loc[k, 'tag'] = 'environment_water'
+            m2.loc[k, 'tags'] = 'environment_water'
             continue
 
         if v['Menu level 2'] == 'Water' and v['Menu level1'] == 'Infrastructure':
-            m2.loc[k, 'tag'] = 'infrastructure_water'
+            m2.loc[k, 'tags'] = 'infrastructure_water'
             continue
 
         if not pd.isnull(v['Menu level 2']):
-            m2.loc[k, 'tag'] = mappin.loc[v['Menu level 2'], 'tag_id']
+            m2.loc[k, 'tags'] = mappin.loc[v['Menu level 2'], 'tag_id']
         elif not pd.isnull(v['Menu level1']):
-            m2.loc[k, 'tag'] = mappin.loc[v['Menu level1'], 'tag_id']
+            m2.loc[k, 'tags'] = mappin.loc[v['Menu level1'], 'tag_id']
         else:
             continue
 
 
-    m2.loc['children_per_woman_total_fertility', 'tag'] = '_root, newborn_infants'
-    m2.loc['co2_emissions_tonnes_per_person', 'tag'] = '_root, emissions'
-    m2.loc['income_per_person_gdppercapita_ppp_inflation_adjusted', 'tag'] = '_root, incomes_growth'
-    m2.loc['child_mortality_0_5_year_olds_dying_per_1000_born', 'tag'] = '_root, mortality'
-    m2.loc['life_expectancy_years', 'tag'] = '_root, life_expectancy'
+    m2.loc['children_per_woman_total_fertility', 'tags'] = '_root, newborn_infants'
+    m2.loc['co2_emissions_tonnes_per_person', 'tags'] = '_root, emissions'
+    m2.loc['income_per_person_gdppercapita_ppp_inflation_adjusted', 'tags'] = '_root, incomes_growth'
+    m2.loc['child_mortality_0_5_year_olds_dying_per_1000_born', 'tags'] = '_root, mortality'
+    m2.loc['life_expectancy_years', 'tags'] = '_root, life_expectancy'
 
     concs = concs.set_index('concept')
-    concs['tag'] = m2['tag']
+    concs['tags'] = m2['tags']
 
     concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'))
