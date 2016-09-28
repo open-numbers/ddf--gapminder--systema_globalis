@@ -47,4 +47,6 @@ def concepts_tag_column():
     concs = concs.set_index('concept')
     concs['tags'] = m2['tags']
 
+    concs['tags'] = concs['tags'].fillna('_none')
+
     concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'))
