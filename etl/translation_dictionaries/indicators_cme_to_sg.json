@@ -1,0 +1,5 @@
+{
+      "neonatal_deaths_median": "newborn_deaths",
+      "nmr_median": "newborn_mortality_rate_per_1000",
+      "u5mr_median": "under_five_mortality_from_cme_per_1000_born"
+}

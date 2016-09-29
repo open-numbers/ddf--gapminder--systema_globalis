@@ -1,0 +1,59 @@
+# recipe for dataset
+info:
+    id: sg-wb-dataset
+    base:
+        - &d1 ddf--wb--edu
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id: gw-concepts-wb
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - math_achievement_4th_grade
+              - math_achievement_8th_grade
+    - id: wb-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - lo_timss_mat4
+          - lo_timss_mat8
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - wb-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+                  lo_timss_mat4: math_achievement_4th_grade
+                  lo_timss_mat8: math_achievement_8th_grade
+          result: wb-datapoints-final
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-wb
+          options:
+              deep: true

@@ -1,0 +1,6 @@
+{
+    "aids_related_deaths_all_ages_estimate": "annual_hiv_deaths_number_all_ages",
+    "coverage_of_people_receiving_art_total_estimate": "art_coverage_percent_cd4_l_350",
+    "new_hiv_infections_all_ages_estimate": "newly_hiv_infected_number_all_ages",
+    "new_hiv_infections_adults_15_estimate": "newly_hiv_infected_percent_age_15_49"
+}

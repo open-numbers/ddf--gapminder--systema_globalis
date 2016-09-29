@@ -1,0 +1,97 @@
+# recipe for dataset
+info:
+    id: sg-dataset
+    base:
+        - &d1 ddf--uis--stats
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id: gw-concepts-uis
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - literacy_rate_adult_female_percent_of_females_ages_15_above
+              - literacy_rate_adult_male_percent_of_males_ages_15_and_above
+              - literacy_rate_youth_female_percent_of_females_ages_15_24
+              - literacy_rate_youth_male_percent_of_males_ages_15_24
+              - literacy_rate_youth_total_percent_of_people_ages_15_24
+              - literacy_rate_adult_total_percent_of_people_ages_15_and_above
+    - id: uis-datapoints
+      dataset: *d1
+      key: "location,time"
+      value:
+          - lr_ag15t99_f
+          - lr_ag15t99_m
+          - lr_ag15t24_f
+          - lr_ag15t24_m
+          - lr_ag15t24
+          - lr_ag15t99
+    - id: uis-locations
+      dataset: *d1
+      key:
+          - location
+      value: "*"
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - uis-datapoints
+          options:
+              dictionary: indicators_uis_to_sg.json
+          result: uis-datapoints-indicators-translated
+        - procedure: translate_header
+          ingredients:
+              - uis-datapoints-indicators-translated
+          options:
+              dictionary:
+                  location: geo
+          result: uis-datapoints-translated
+        - procedure: align
+          ingredients:
+              - uis-locations
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: uis-locations-aligned
+        - procedure: align
+          ingredients:
+              - uis-datapoints-translated
+              - uis-locations-aligned
+          options:
+              search_cols:
+                  - location
+              to_find: geo
+              to_replace: geo
+          result: uis-datapoints-final
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-uis
+          options:
+              deep: true

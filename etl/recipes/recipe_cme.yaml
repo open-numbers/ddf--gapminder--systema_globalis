@@ -1,0 +1,69 @@
+
+info:
+    id: cme-sg-dataset
+    base:
+        - &d1 ddf--gapminder--gapminder_world
+        - &d2 ddf--cme
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+        
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    # CME
+    - id: cme-datapoints
+      dataset: *d2
+      key: "country,year"
+      value: ['u5mr_median', 'nmr_median', 'neonatal_deaths_median']
+    - id: cme-countries
+      dataset: *d2
+      key:
+          - country
+      value: "*"
+
+    - id: gw-concepts-cme
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - newborn_deaths
+              - newborn_mortality_rate_per_1000
+              - under_five_mortality_from_cme_per_1000_born
+
+cooking:
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-cme
+          options:
+              deep: true
+          result: cme-concepts-final
+
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+            
+    datapoints:
+        - procedure: translate_header
+          options:
+              dictionary: indicators_cme_to_sg.json
+          ingredients: [cme-datapoints]
+          result: cme-datapoints-indicators-translated
+        - procedure: translate_header
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          ingredients: [cme-datapoints-indicators-translated]
+          result: cme-datapoints-final

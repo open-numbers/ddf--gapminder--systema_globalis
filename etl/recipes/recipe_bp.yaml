@@ -1,0 +1,112 @@
+# basic info
+info:
+    id: bp-sg-dataset
+    base:
+        - &d1 ddf--bp--energy
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: bp-datapoints
+      dataset: *d1
+      key: "geo,year"
+      value: &FILTER_CONC
+          - coal_consumption_mtoe
+          - electricity_generation
+          - gas_production_tonnes
+          - gas_proved_reserves_history
+          - oil_consumption_tonnes
+          - oil_production_tonnes
+          - oil_proved_reserves_history
+    - id: bp-countries
+      dataset: *d1
+      key:
+          - geo
+      value: "*"
+    - id: gw-concepts-bp
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - coal_consumption_total
+              - electricity_generation_total
+              - natural_gas_production_total
+              - natural_gas_proved_reserves_total
+              - oil_consumption_total
+              - oil_production_total
+              - oil_proved_reserves_total
+
+cooking:
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-bp
+              - gw-concepts-discrete
+              - gw-concepts-geo
+          options:
+              deep: true
+          result: bp-concepts-final
+    entities:
+        - procedure: identity
+          ingredients: [gw-entities-geo]
+    datapoints:
+        - procedure: translate_header
+          ingredients: [bp-datapoints]
+          options:
+              dictionary:
+                  year: time
+          result: bp-datapoints-translated
+        - procedure: align
+          ingredients:
+              - bp-countries
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: geo_name
+              to_replace: geo_new
+          result: bp-countries-aligned
+
+        - procedure: align
+          ingredients:
+              - bp-datapoints-translated
+              - bp-countries-aligned
+          options:
+              search_cols:
+                  - geo
+              to_find: geo
+              to_replace: geo
+          result: bp-datapoints-translated-aligned
+
+        - procedure: run_op
+          ingredients: [bp-datapoints-translated]
+          options:
+              op:
+                  coal_consumption_total: "coal_consumption_mtoe * 1000000"
+                  electricity_generation_total: "electricity_generation * 1000000000"
+                  natural_gas_production_total: "gas_production_tonnes * 1000000"
+                  gas_proved_reserves_history: "gas_proved_reserves_history * 900000000"
+                  oil_consumption_total: "oil_consumption_tonnes * 1000000"
+                  oil_production_total: "oil_production_tonnes * 1000000"
+                  oil_proved_reserves_total: "oil_proved_reserves_history * 136400000"
+                  natural_gas_proved_reserves_total: "gas_proved_reserves_history * 900000000"
+          result: bp-datapoints-op
+        - procedure: filter_item
+          ingredients:
+              - bp-datapoints-op
+          options:
+              items: *CONC_FILTER
+          result: bp-datapoints-final

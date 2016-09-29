@@ -1,0 +1,86 @@
+# recipe for dataset
+info:
+    id: sg-pwt-dataset
+    base:
+        - &d1 ddf--pwt--penn_world_table
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id: gw-concepts-pwt
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - alternative_gdppercapita_ppp_inflation_adjusted_from_pwt
+              - economic_growth_over_the_past_10_years
+    - id: pwt-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - rgdpna
+          - pop
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - pwt-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: pwt-datapoints-translated
+        - procedure: run_op
+          ingredients:
+              - pwt-datapoints-translated
+          options:
+              op:
+                  alternative_gdppercapita_ppp_inflation_adjusted_from_pwt: |
+                      rgdpna / pop
+          result: pwt-datapoints-translated-op
+        - procedure: accumulate
+          ingredients:
+              - pwt-datapoints-translated-op
+          options:
+              op:
+                  rgdpna: "aagr"
+          result: pwt-datapoints-translated-op-acc
+        - procedure: run_op
+          ingredients:
+              - pwt-datapoints-translated-op-acc
+          options:
+              op:
+                  economic_growth_over_the_past_10_years: rgdpna * 100
+          result: pwt-datapoints-translated-op-acc_
+        - procedure: filter_item
+          ingredients:
+              - pwt-datapoints-translated-op-acc_
+          options:
+              items: *CONC_FILTER
+          result: pwt-datapoints-final
+
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-pwt
+          options:
+              deep: true

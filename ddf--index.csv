@@ -9,6 +9,7 @@ concept,drill_up,ddf--concepts.csv
 concept,unit,ddf--concepts.csv
 concept,interpolation,ddf--concepts.csv
 concept,description,ddf--concepts.csv
+concept,tags,ddf--concepts.csv
 "geo,time",20120905_extreme_poverty_percent_people_below_125_a_day,ddf--datapoints--20120905_extreme_poverty_percent_people_below_125_a_day--by--geo--time.csv
 "geo,time",adults_with_hiv_percent_age_15_49,ddf--datapoints--adults_with_hiv_percent_age_15_49--by--geo--time.csv
 "geo,time",age_at_1st_marriage_women,ddf--datapoints--age_at_1st_marriage_women--by--geo--time.csv
@@ -548,6 +549,7 @@ country,world_6region,ddf--entities--geo--country.csv
 country,income_groups,ddf--entities--geo--country.csv
 country,landlocked,ddf--entities--geo--country.csv
 country,g77_and_oecd_countries,ddf--entities--geo--country.csv
+country,geographic_regions_in_4_colors,ddf--entities--geo--country.csv
 country,main_religion_2008,ddf--entities--geo--country.csv
 country,gapminder_list,ddf--entities--geo--country.csv
 country,alternative_1,ddf--entities--geo--country.csv
@@ -594,6 +596,7 @@ geo,description,ddf--entities--geo--world_4region.csv
 geo,latitude,ddf--entities--geo--world_4region.csv
 geo,longitude,ddf--entities--geo--world_4region.csv
 geo,color,ddf--entities--geo--world_4region.csv
+geo,shape_lores_svg,ddf--entities--geo--world_4region.csv
 geo,is--world_6region,ddf--entities--geo--world_6region.csv
 geo,name,ddf--entities--geo--world_6region.csv
 geo,name_short,ddf--entities--geo--world_6region.csv
@@ -602,5 +605,6 @@ geo,description,ddf--entities--geo--world_6region.csv
 geo,latitude,ddf--entities--geo--world_6region.csv
 geo,longitude,ddf--entities--geo--world_6region.csv
 geo,color,ddf--entities--geo--world_6region.csv
+geo,shape_lores_svg,ddf--entities--geo--world_6region.csv
 tag,name,ddf--entities--tag.csv
 tag,parent,ddf--entities--tag.csv

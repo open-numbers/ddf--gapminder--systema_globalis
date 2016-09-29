@@ -1,0 +1,445 @@
+# recipe for gapminder
+# TODO: some data missing comparing to candidate branch
+info:
+    id: sg-gapminder-dataset
+    base:
+        - &d1 ddf--gapminder--gapminder_world
+        - &d2 ddf--gapminder--hist_lex
+        - &d3 ddf--gapminder--hist_tfr
+        - &d4 ddf--gapminder--hist_gdppc
+        - &d5 ddf--gapminder--hist_hiv
+        - &d6 ddf--gapminder--hist_imr
+        - &d7 ddf--gapminder--hist_marriage_age
+        - &d8 ddf--gapminder--hist_maternal_mort
+        - &d9 ddf--gapminder--hist_pop
+        - &d10 ddf--gapminder--hist_u5mr
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: gw-concepts-gapminder
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - data_quality_life_expectancy
+              - children_per_woman_temporary_update
+              - children_per_woman_total_fertility
+              - children_per_woman_total_fertility_with_projections
+              - old_version_of_income_per_person_version_8
+              - subsistence_incomes_per_person
+              # - old_version_of_income_per_person_version_3
+              # - income_per_person_gdppercapita_ppp_inflation_adjusted
+              # - income_per_person_long_series
+              # - income_per_person_with_projections
+              - adults_with_hiv_percent_age_15_49
+              - people_living_with_hiv_number_all_ages
+              - infant_mortality_rate_per_1000_births
+              - age_at_1st_marriage_women
+              - maternal_deaths_total_number
+              - maternal_mortality_ratio_per_100000_live_births
+              - population_total
+              - child_mortality_0_5_year_olds_dying_per_1000_born
+              - child_mortality_0_5_year_olds_more_years_version_7
+              # - number_of_child_deaths
+    # Lex
+    - id: lex-datapoints
+      dataset: *d2
+      key: "area,year"
+      value:
+          - data_quality
+    - id: lex-area
+      dataset: *d2
+      key:
+          - area
+      value: "*"
+    # ddf--g-hist_tfr
+    - id: tfr-datapoints
+      dataset: *d3
+      key: "area,year"
+      value:
+          - total_fertility_rate
+          - total_fertility_rate_interpolated
+    - id: tfr-area
+      dataset: *d3
+      key:
+          - area  # TODO: check here
+      value: "*"
+    # ddf--gapminder--hist_gdppc
+    - id: gdppc-datapoints
+      dataset: *d4
+      key: "area,year"
+      value:
+          - gdp_per_capita_by_purchasing_power_parities
+    # ddf--gapminder--hist_hiv
+    - id: hiv-datapoints
+      dataset: *d5
+      key: "country,year"
+      value:
+          - estimated_hiv_prevalence_ages_15_49
+          - people_living_with_hiv
+    - id: hiv-countries
+      dataset: *d5
+      key:
+          - country
+      value: "*"
+    # ddf--gapminder--hist_imr
+    - id: imr-datapoints
+      dataset: *d6
+      key: "area,year"
+      value:
+          - infant_mortality_rate
+    - id: imr-areas
+      dataset: *d6
+      key:
+          - area
+      value: "*"
+    # ddf--gapminder--hist_marriage_age
+    - id: marriage-datapoints
+      dataset: *d7
+      key: "country,year"
+      value:
+          - average_age_at_1st_marriage_girls
+    # ddf--gapminder--hist_maternal_mort
+    - id: mm-datapoints
+      dataset: *d8
+      key: "country,year"
+      value:
+          - maternal_deaths
+          - mmr
+    # ddf--gapminder--hist_pop
+    - id: pop-datapoints
+      dataset: *d9
+      key: "area,year"
+      value:
+          - total_population
+    - id: pop-areas
+      dataset: *d9
+      key:
+          - area
+      value: "*"
+    # ddf--gapminder--hist_u5mr
+    - id: u5mr-datapoints
+      dataset: *d10
+      key: "country,year"
+      value:
+          - under_five_mortality
+
+cooking:
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-gapminder
+              - gw-concepts-geo
+              - gw-concepts-discrete
+          options:
+              deep: true
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    datapoints:
+        # lex
+        - procedure: translate_header
+          ingredients:
+              - lex-datapoints
+          options:
+              dictionary:
+                  data_quality: data_quality_life_expectancy
+                  area: geo
+                  year: time
+          result: lex-datapoints-translated
+
+        - procedure: align
+          ingredients:
+              - lex-area
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: country
+          result: lex-area-aligned
+
+        - procedure: align
+          ingredients:
+              - lex-datapoints-translated
+              - lex-area-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: lex-datapoints-final
+
+        # ddf--gapminder--hist_tfr
+        - procedure: translate_header
+          ingredients:
+              - tfr-datapoints
+          options:
+              dictionary:
+                  total_fertility_rate: children_per_woman_temporary_update
+                  area: geo
+                  year: time
+          result: tfr-datapoints-translated
+        - procedure: copy
+          ingredients:
+              - tfr-datapoints-translated
+          options:
+              dictionary:
+                  total_fertility_rate_interpolated:
+                      - children_per_woman_total_fertility
+                      - children_per_woman_total_fertility_with_projections
+          return: tfr-datapoints-translated_
+        - procedure: align
+          ingredients:
+              - tfr-datapoints-translated_
+              - lex-area-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: tfr-datapoints-final
+
+        # ddf--gapminder--hist_gdppc
+        # TODO: some indicators included, check the gw indicators list
+        - procedure: translate_header
+          ingredients:
+              - gdppc-datapoints
+          options:
+              dictionary:
+                  area: geo
+                  year: time
+          result: gdppc-datapoints-translated
+        - procedure: copy
+          ingredients:
+              - gdppc-datapoints-translated
+          options:
+              dictionary:
+                  gdp_per_capita_by_purchasing_power_parities:
+                      - old_version_of_income_per_person_version_8
+                      - subsistence_incomes_per_person
+          result: gdppc-datapoints-translated_
+        - procedure: align
+          ingredients:
+              - gdppc-datapoints-translated_
+              - lex-area-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: gdppc-datapoints-translated-aligned
+        - procedure: run_op
+          ingredients:
+              - gdppc-datapoints-translated-aligned
+          options:
+              op:
+                  subsistence_incomes_per_person: "subsistence_incomes_per_person / 456.25"
+          result: gdppc-datapoints-final
+
+        # ddf--gapminder--hist_hiv
+        - procedure: translate_header
+          ingredients:
+              - hiv-datapoints
+          options:
+              dictionary:
+                  estimated_hiv_prevalence_ages_15_49: adults_with_hiv_percent_age_15_49
+                  people_living_with_hiv: people_living_with_hiv_number_all_ages
+                  country: geo
+                  year: time
+          result: hiv-datapoints-translated
+        - procedure: align
+          ingredients:
+              - hiv-countries
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: hiv-countries-aligned
+        - procedure: align
+          ingredients:
+              - hiv-datapoints-translated
+              - hiv-countries-aligned
+          options:
+              search_cols:
+                  - country
+              to_find: geo
+              to_replace: geo
+          result: hiv-datapoints-final
+
+        # ddf--gapminder--hist_imr
+        - procedure: translate_header
+          ingredients:
+              - imr-datapoints
+          options:
+              dictionary:
+                  infant_mortality_rate: infant_mortality_rate_per_1000_births
+                  area: geo
+                  year: time
+          result: imr-datapoints-translated
+        - procedure: align
+          ingredients:
+              - imr-areas
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: imr-areas-aligned
+        - procedure: align
+          ingredients:
+              - imr-datapoints-translated
+              - imr-areas-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: imr-datapoints-final
+
+        # ddf--gapminder--hist_marriage_age
+        - procedure: translate_header
+          ingredients:
+              - marriage-datapoints
+          options:
+              dictionary:
+                  average_age_at_1st_marriage_girls: age_at_1st_marriage_women
+                  country: geo
+                  year: time
+          result: marriage-datapoints-translated
+        - procedure: align
+          ingredients:
+              - marriage-datapoints-translated
+              - lex-area-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: marriage-datapoints-final
+
+        # ddf--gapminder--hist_maternal_mort
+        - procedure: translate_header
+          ingredients:
+              - mm-datapoints
+          options:
+              dictionary:
+                  maternal_deaths: maternal_deaths_total_number
+                  mmr: maternal_mortality_ratio_per_100000_live_births
+                  country: geo
+                  year: time
+          result: mm-datapoints-translated
+        - procedure: align
+          ingredients:
+              - mm-datapoints-translated
+              - lex-area-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: mm-datapoints-final
+
+        # ddf--gapminder--hist_pop
+        - procedure: translate_header
+          ingredients:
+              - pop-datapoints
+          options:
+              dictionary:
+                  total_population: population_total
+                  area: geo
+                  year: time
+          result: pop-datapoints-translated
+        - procedure: align
+          ingredients:
+              - pop-areas
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: pop-areas-aligned
+        - procedure: align
+          ingredients:
+              - pop-datapoints-translated
+              - pop-areas-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: pop-datapoints-final
+
+        # ddf--gapminder--hist_u5mr
+        # TODO: some indicators not included, check gw indicators list
+        - procedure: translate_header
+          ingredients:
+              - u5mr-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: u5mr-datapoints-translated
+        - procedure: copy
+          ingredients:
+              - u5mr-datapoints-translated
+          options:
+              dictionary:
+                  under_five_mortality:
+                      - child_mortality_0_5_year_olds_dying_per_1000_born
+                      - child_mortality_0_5_year_olds_more_years_version_7
+          result: u5mr-datapoints-translated_
+        - procedure: align
+          ingredients:
+              - u5mr-datapoints-translated_
+              - lex-area-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: u5mr-datapoints-final
+
+        # merging all data together
+        - procedure: merge
+          ingredients:
+              - lex-datapoints-final
+              - tfr-datapoints-final
+              - gdppc-datapoints-final
+              - hiv-datapoints-final
+              - imr-datapoints-final
+              - marriage-datapoints-final
+              - mm-datapoints-final
+              - pop-datapoints-final
+              - u5mr-datapoints-final
+          result: gw-sg-datapoints-merged
+        - procedure: filter_item
+          ingredients:
+              - gw-sg-datapoints-merged
+          options:
+              items: *CONC_FILTER
+          result: gw-sg-datapoints-final

@@ -1,0 +1,101 @@
+# recipe for fao food_supply dataset
+info:
+    id: sg-fao_food-dataset
+    base:
+        - &d1 ddf--fao--food_supply
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id: fao_food-datapoints
+      dataset: *d1
+      key: "country,item,year"
+      value:
+          - food_supply_kcal_capita_day
+
+    - id: gw-concepts-fao_food
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - food_supply_kilocalories_per_person_and_day
+
+    - id: fao_food-countries
+      dataset: *d1
+      key:
+          - country
+      value: "*"
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - fao_food-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: fao_food-datapoints_
+        - procedure: filter_row
+          ingredients:
+              - fao_food-datapoints_
+          options:
+              dictionary:
+                  food_supply_kilocalories_per_person_and_day:
+                      from: food_supply_kcal_capita_day
+                      item: '2901'
+          result: fao_food-datapoints-filtered
+        - procedure: align
+          ingredients:
+              - fao_food-countries
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: country_new
+          result: fao_food-countries-aligned
+        - procedure: align
+          ingredients:
+              - fao_food-datapoints-filtered
+              - fao_food-countries-aligned
+          options:
+              search_cols:
+                  - country
+              to_find: geo
+              to_replace: geo
+          result: fao_food-datapoints-filtered-aligned
+        - procedure: filter_item
+          ingredients:
+              - fao_food-datapoints-filtered-aligned
+          options:
+              items:
+                  - food_supply_kilocalories_per_person_and_day
+          result: fao_food-datapoints-final
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-fao_food
+              - gw-concepts-geo
+              - gw-concepts-discrete
+          options:
+              deep: true
+

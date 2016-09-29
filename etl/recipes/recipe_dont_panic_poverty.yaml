@@ -1,0 +1,36 @@
+# recipe for dataset
+info:
+    id: sg-dont-panic
+    base:  # the datasets for ingredients
+        - &d1 ddf--gapminder--dont_panic_poverty 
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ./translation_dictionaries
+
+
+# define your ingredients and procedures below
+ingredients:
+    # Ingredients have 5 parameters: id, dataset, key, value, filter
+    # in wich:
+    #     id: the name of ingredient, will be used in cooking procedures
+    #     dataset: which dataset is this ingredient from
+    #     key: the key to filter in ddf--index
+    #     value: the value to filter in ddf--index
+    #     filter: (optional) more keyword filters
+    #
+    # below some example of ingredients:
+    # 
+    - id: dont-panic-datapoints
+      dataset: *d1
+      key: "geo,time"
+      value: "*"
+    - id: dont-panic-concepts
+      dataset: *d1
+      key: concept
+      value:
+          - sg_gdp_p_cap_const_ppp2011_dollar
+          - sg_gini
+          - sg_population

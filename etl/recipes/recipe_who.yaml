@@ -1,0 +1,29 @@
+# recipe for dataset
+info:
+    id: sg-dataset
+    base:
+        - &d1 ddf--cdiac-co2
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/recipes/
+    # the path to search dictionary files
+    dictionary_dir: /Users/semio/src/work/Gapminder/ddf--gapminder--systema_globalis/etl/translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    pass
+
+cooking:
+    datapoints:
+        pass
+    entities:
+        pass
+    concepts:
+        pass

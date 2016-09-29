@@ -1,0 +1,69 @@
+# recipe for dataset
+info:
+    id: sg-transpint-dataset
+    base:
+        - &d1 ddf--transpint--corrupton
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id: gw-concepts-transpint
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - corruption_perception_index_cpi
+    - id: gw-datapoints-transpint
+      dataset: *d2
+      key: "geo,time"
+      value:
+          - corruption_perception_index_cpi
+    - id: transpint-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - cpi
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - transpint-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+                  cpi: corruption_perception_index_cpi
+          result: transpint-datapoints-translated
+        - procedure: merge
+          ingredients:
+              - transpint-datapoints-translated
+              - gw-datapoints-transpint
+          options:
+              deep: true
+          result: transpint-datapoints-final
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-transpint
+          options:
+              deep: true
+

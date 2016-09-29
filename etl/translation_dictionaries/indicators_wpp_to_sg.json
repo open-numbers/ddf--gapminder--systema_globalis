@@ -1,0 +1,7 @@
+{
+    "crude_birth_rate": "crude_birth_rate_births_per_1000_population",
+    "crude_death_rate": "crude_death_rate_deaths_per_1000_population",
+    "life_expectancy_at_birth_females": "life_expectancy_female",
+    "life_expectancy_at_birth_males": "life_expectancy_male",
+    "population_growth_rate": "population_growth_annual_percent_with_projections"
+}

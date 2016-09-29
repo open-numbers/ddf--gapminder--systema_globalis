@@ -1,0 +1,94 @@
+# recipe for dataset
+info:
+    id: sg-dataset
+    base:
+        - &d1 ddf--unaids--aidsinfo
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id: gw-concepts-unaids
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - annual_hiv_deaths_number_all_ages
+              - art_coverage_percent_cd4_l_350
+              - newly_hiv_infected_number_all_ages
+              - newly_hiv_infected_percent_age_15_49
+    - id: unaids-datapoints
+      dataset: *d1
+      key: "area,year"
+      value:
+          - aids_related_deaths_all_ages_estimate
+          - coverage_of_people_receiving_art_total_estimate
+          - new_hiv_infections_all_ages_estimate
+          - new_hiv_infections_adults_15_estimate
+    - id: unaids-areas
+      dataset: *d1
+      key:
+          - area
+      value: "*"
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - unaids-datapoints
+          options:
+              dictionary: indicators_unaids_to_sg.json
+          result: unaids-datapoints-indicators-translated
+        - procedure: translate_header
+          ingredients:
+              - unaids-datapoints-indicators-translated
+          options:
+              dictionary:
+                  area: geo
+                  year: time
+          result: unaids-datapoints-translated
+        - procedure: align
+          ingredients:
+              - unaids-areas
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: unaids-areas-aligned
+        - procedure: align
+          ingredients:
+              - unaids-datapoints-translated
+              - unaids-areas-aligned
+          options:
+              search_cols:
+                  - area
+              to_find: geo
+              to_replace: geo
+          result: unaids-datapoints-final
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-unaids
+          options:
+              deep: true

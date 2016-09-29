@@ -1,0 +1,122 @@
+# recipe for dataset
+info:
+    id: sg-imperial-dataset
+    base:
+        - &d1 ddf--imperial--metabolic
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+# define your ingredients and procedures below
+ingredients:
+    - id:  gw-concepts-imperial
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - body_mass_index_bmi_men_kgperm2
+              - body_mass_index_bmi_women_kgperm2
+              - blood_pressure_sbp_men_mmhg
+              - blood_pressure_sbp_women_mmhg
+              - cholesterol_fat_in_blood_men_mmolperl
+              - cholesterol_fat_in_blood_women_mmolperl
+    - id: imperial-datapoints
+      dataset: *d1
+      key: "country,sex,year"
+      value:
+          - bmi_mean_kg_per_m2
+          - sbp_mean_mm_hg
+          - tc_mean_mmol_per_l
+    - id: imperial-entities-country
+      dataset: *d1
+      key:
+          - country
+      value: "*"
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - imperial-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: imperial-datapoints-translated
+        
+        - procedure: align
+          ingredients:
+              - imperial-entities-country
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: geo
+          result: imperial-entities-country-aligned
+        - procedure: align
+          ingredients:
+              - imperial-datapoints-translated
+              - imperial-entities-country-aligned
+          options:
+              search_cols:
+                  - country
+              to_find: geo
+              to_replace: geo
+          result: imperial-datapoints-translated-aligned
+        - procedure: filter_row
+          ingredients:
+              - imperial-datapoints-translated-aligned
+          options:
+              dictionary:
+                  body_mass_index_bmi_men_kgperm2:
+                      from: bmi_mean_kg_per_m2
+                      sex: male
+                  body_mass_index_bmi_women_kgperm2:
+                      from: bmi_mean_kg_per_m2
+                      sex: female
+                  blood_pressure_sbp_men_mmhg:
+                      from: sbp_mean_mm_hg
+                      sex: male
+                  blood_pressure_sbp_women_mmhg:
+                      from: sbp_mean_mm_hg
+                      sex: female
+                  cholesterol_fat_in_blood_men_mmolperl:
+                      from: tc_mean_mmol_per_l
+                      sex: male
+                  cholesterol_fat_in_blood_women_mmolperl:
+                      from: tc_mean_mmol_per_l
+                      sex: female
+          result: imperial-datapoints-translated-aligned-filtered
+        - procedure: filter_item
+          ingredients:
+              - imperial-datapoints-translated-aligned-filtered
+          options:
+              items: *CONC_FILTER
+          result: imperial-datapoints-final
+
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+              
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-imperial
+          options:
+              deep: true

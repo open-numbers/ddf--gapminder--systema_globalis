@@ -1,0 +1,98 @@
+# basic info
+# TODO: the forest_products_removal_total_dollar in candidate branch is not updated
+info:
+    id: fao-sg-dataset
+    base:
+        - &d1 ddf--fao--forestry
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: fao-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - forbelbiom
+          - forabovbiom
+          - prodfor
+          - forest
+          - privown
+          - forperc
+          - plantfor
+          - primfor
+          - wooremov
+
+    - id: gw-concepts-fao_for
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &FILTER_CONC
+              - biomass_stock_in_forest_tons
+              - forest_products_removal_per_ha_dollar
+              - forest_products_removal_total_dollar
+              - privately_owned_forest_land_percent
+              - forest_land_total_area_ha
+              - forest_coverage_percent
+              - planted_forest_area_ha
+              - primary_forest_area_ha
+              - wood_removal_cubic_meters
+
+cooking:
+    datapoints:
+        - procedure: run_op
+          ingredients:
+              - fao-datapoints
+          options:
+              op:
+                  forest_products_removal_total_dollar: "prodfor * forest"
+                  privately_owned_forest_land_percent: "privown / forest * 100"
+                  biomass_stock_in_forest_tons: "forbelbiom + forabovbiom"
+                  forest_land_total_area_ha: "forest * 1000"
+                  planted_forest_area_ha: "plantfor * 1000"
+                  primary_forest_area_ha: "primfor * 1000"
+                  wood_removal_cubic_meters: "wooremov * 1000"
+
+          result: fao-datapoints-op
+
+        - procedure: translate_header
+          ingredients:
+              - fao-datapoints-op
+          options:
+              dictionary:
+                  prodfor: forest_products_removal_per_ha_dollar
+                  forperc: forest_coverage_percent
+                  country: geo
+                  year: time
+          result: fao-datapoints-op-translated
+
+        - procedure: filter_item
+          ingredients:
+              - fao-datapoints-op-translated
+          options:
+              items: *FILTER_CONC
+          result: fao_fore-datapoints-final
+
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-discrete
+              - gw-concepts-geo
+              - gw-concepts-fao_for
+          options:
+              deep: true

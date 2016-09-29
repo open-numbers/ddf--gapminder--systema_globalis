@@ -1,0 +1,135 @@
+# recipe for cdiac-co2 dataset
+# TODO: big diff to candidate
+info:
+    id: sg-cdiac-dataset
+    base:
+        - &d1 ddf--cdiac-co2
+        - &d2 ddf--gapminder--gapminder_world
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: cdiac-datapoints
+      dataset: *d1
+      key: "nation,year"  # note: don't put space between commas
+      value:
+          - per_capita_co2_emissions_metric_tons_of_carbon
+          - total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c
+
+    - id: gw-concepts-measures
+      dataset: *d2
+      key: concept
+      value: "*"
+      filter:
+          concept: &CONC_FILTER
+              - co2_emissions_tonnes_per_person
+              - cumulative_co2_emissions_tonnes
+              - yearly_co2_emissions_1000_tonnes
+              - yearly_co2_emissions_tonnes
+    - id: cdiac-nations
+      dataset: *d1
+      key:
+          - nation
+      value: "*"
+
+cooking:
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-measures
+              - gw-concepts-discrete
+              - gw-concepts-geo
+          options:
+              deep: true
+
+    entities:
+        - procedure: identity
+          ingredients:
+              - gw-entities-geo
+
+    datapoints:
+        # filter the latest version.
+        - procedure: filter_row
+          ingredients:
+              - cdiac-datapoints
+          options:
+              dictionary:
+                  per_capita_co2_emissions_metric_tons_of_carbon:
+                      from: per_capita_co2_emissions_metric_tons_of_carbon
+                      version: "1751_2011"
+                  total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c:
+                      from: total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c
+                      version: "1751_2009"
+          result: cdiac-datapoints
+        - procedure: translate_header
+          ingredients:
+              - cdiac-datapoints
+          options:
+              dictionary:
+                  nation: geo
+                  year: time
+          result: cdiac-datapoints-translated
+        - procedure: run_op
+          ingredients:
+              - cdiac-datapoints-translated
+          options:
+              op:
+                  co2_emissions_tonnes_per_person: |
+                      per_capita_co2_emissions_metric_tons_of_carbon * 3.667
+                  yearly_co2_emissions_tonnes: |
+                      total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667
+                  yearly_co2_emissions_1000_tonnes: |
+                      total_co2_emissions_from_fossil_fuels_thousand_metric_tons_of_c * 3.667 / 1000
+          result: cdiac-datapoints-translated-op
+        - procedure: copy
+          ingredients:
+              - cdiac-datapoints-translated-op
+          options:
+              dictionary:
+                  yearly_co2_emissions_tonnes: cumulative_co2_emissions_tonnes
+          result: cdiac-datapoints-translated-op_
+        - procedure: accumulate
+          ingredients:
+              - cdiac-datapoints-translated-op_
+          options:
+              op:
+                  cumulative_co2_emissions_tonnes: "cumsum"
+          result: cdiac-datapoints-translated-op-acc
+        - procedure: filter_item
+          ingredients:
+              - cdiac-datapoints-translated-op-acc
+          options:
+              items: *CONC_FILTER
+          result: cdiac-sg-datapoints
+
+        - procedure: align
+          ingredients:
+              - cdiac-nations
+              - gw-countries
+          options:
+              search_cols: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                            'code', 'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'arb7', 'arb8',
+                            'name']
+              to_find: name
+              to_replace: nation_new
+          result: cdiac-sg-nations
+        - procedure: align
+          ingredients:
+              - cdiac-sg-datapoints
+              - cdiac-sg-nations
+          options:
+              search_cols:
+                  - nation
+              to_find: geo
+              to_replace: geo
+          result: cdiac-datapoints-final
