@@ -575,6 +575,8 @@ arb4,arb4,string,,,,,,,,,_none
 arb5,arb5,string,,,,,,,,,_none
 arb6,arb6,string,,,,,,,,,_none
 domain,Domain,string,,,,,,,,,_none
+arb7,arb7,string,,,,,,,,,_none
+arb8,arb8,string,,,,,,,,,_none
 scales,Scales,string,,,,,,,,,_none
 drill_up,drill up,string,,,,,,,,,_none
 time,Time,time,,,,"[""time""]",,,,,_root
