@@ -73,9 +73,13 @@ def apply_patches():
                 shutil.copyfile(patch_path, local_path)
 
 
-if __name__ == '__main__':
+def do_all_changes():
     print("applying patches to DDF...")
     concepts_tag_column()
     remove_geographic_regions()
     apply_patches()
     print('Done.')
+
+
+if __name__ == '__main__':
+    do_all_changes()
