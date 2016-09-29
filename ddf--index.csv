@@ -575,12 +575,6 @@ country,longitude,ddf--entities--geo--country.csv
 g77_and_oecd_countries,name,ddf--entities--geo--g77_and_oecd_countries.csv
 g77_and_oecd_countries,gwid,ddf--entities--geo--g77_and_oecd_countries.csv
 g77_and_oecd_countries,is--g77_and_oecd_countries,ddf--entities--geo--g77_and_oecd_countries.csv
-geographic_regions,name,ddf--entities--geo--geographic_regions.csv
-geographic_regions,gwid,ddf--entities--geo--geographic_regions.csv
-geographic_regions,is--geographic_regions,ddf--entities--geo--geographic_regions.csv
-geographic_regions_in_4_colors,name,ddf--entities--geo--geographic_regions_in_4_colors.csv
-geographic_regions_in_4_colors,gwid,ddf--entities--geo--geographic_regions_in_4_colors.csv
-geographic_regions_in_4_colors,is--geographic_regions_in_4_colors,ddf--entities--geo--geographic_regions_in_4_colors.csv
 geo,is--global,ddf--entities--geo--global.csv
 geo,name,ddf--entities--geo--global.csv
 geo,latitude,ddf--entities--geo--global.csv
