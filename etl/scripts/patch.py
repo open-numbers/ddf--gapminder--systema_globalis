@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import pandas as pd
+import shutil
 import os
+import pandas as pd
+from ddf_utils.patch import apply_patch
 
 out_dir = '../../'
 
@@ -37,7 +39,7 @@ def concepts_tag_column():
         else:
             continue
 
-
+    # manually set some tags.
     m2.loc['children_per_woman_total_fertility', 'tags'] = '_root, newborn_infants'
     m2.loc['co2_emissions_tonnes_per_person', 'tags'] = '_root, emissions'
     m2.loc['income_per_person_gdppercapita_ppp_inflation_adjusted', 'tags'] = '_root, incomes_growth'
@@ -50,3 +52,30 @@ def concepts_tag_column():
     concs['tags'] = concs['tags'].fillna('_none')
 
     concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'))
+
+
+def remove_geographic_regions():
+    os.remove(os.path.join(out_dir, 'ddf--entities--geo--geographic_regions.csv'))
+    os.remove(os.path.join(out_dir, 'ddf--entities--geo--geographic_regions_in_4_colors.csv'))
+
+
+def apply_patches():
+    for f in os.listdir('./patches/'):
+        if '.csv' in f:
+            print(f)
+            local_path = os.path.join(out_dir, f)
+            patch_path = os.path.join('./patches', f)
+
+            if os.path.exists(local_path):
+                new_df = apply_patch(local_path, patch_path)
+                new_df.to_csv(local_path, index=False)
+            else:
+                shutil.copyfile(patch_path, local_path)
+
+
+if __name__ == '__main__':
+    print("applying patches to DDF...")
+    concepts_tag_column()
+    remove_geographic_regions()
+    apply_patches()
+    print('Done.')
