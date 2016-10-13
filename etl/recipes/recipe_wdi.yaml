@@ -137,7 +137,6 @@ ingredients:
               - aid_received_per_person_current_us
               - debt_servicing_costs_percent_of_exports_and_net_income_from_abroad
               - electricity_use_per_person
-              - electricity_use_total
               - energy_use_per_person
               - population_in_urban_agglomerations_m_1_million_percent_of_total
               - total_reserves_percent_of_debt_to_foreigners
@@ -234,6 +233,16 @@ cooking:
                   country: geo
                   year: time
           ingredients: [wdi-datapoints-indicators-translated]
+          result: wdi-datapoints-translated_
+        - procedure: run_op
+          ingredients:
+              - wdi-datapoints-translated_
+          options:
+              op:
+                  energy_use_per_person: "energy_use_per_person / 1000"
+                  ratio_of_girls_to_boys_in_primary_and_secondary_education_perc:
+                      ratio_of_girls_to_boys_in_primary_and_secondary_education_perc * 100
+                  internet_users_total_number: "internet_users_total_number * 100"
           result: wdi-datapoints-final
     entities:
         - procedure: identity
