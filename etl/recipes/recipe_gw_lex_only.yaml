@@ -1,0 +1,67 @@
+# recipe for dataset
+info:
+    id: dataset_name
+    base:  # the datasets for ingredients
+        - &d1 ddf--gapminder--life_expectancy
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ./translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+
+# define your ingredients and procedures below
+ingredients:
+    # Ingredients have 5 parameters: id, dataset, key, value, filter
+    # in wich:
+    #     id: the name of ingredient, will be used in cooking procedures
+    #     dataset: which dataset is this ingredient from
+    #     key: the key to filter in ddf--index
+    #     value: the value to filter in ddf--index
+    #     filter: (optional) more keyword filters
+    #
+    # below some example of ingredients:
+    # 
+    - id: lex-datapoints
+      dataset: *d1
+      key: "geo,time"
+      value:
+          - life_expectancy_at_birth_years
+    - id: lex-concepts
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - life_expectancy_at_birth_years
+    # 
+    # - id: gw-concepts-aqua
+    #   dataset: *d2
+    #   key: concept
+    #   value: "*"
+    #   filter:
+    #       concept: &CONC_FILTER
+    #         - agricultural_water_withdrawal_percent_of_total
+    #         - desalinated_water_produced_billion_cu_meters
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - lex-datapoints
+          options:
+              dictionary:
+                  life_expectancy_at_birth_years: life_expectancy_years
+          result: lex-datapoints-final
+    concepts:
+        - procedure: translate_column
+          ingredients:
+              - lex-concepts
+          options:
+              dictionary:
+                  life_expectancy_at_birth_years: life_expectancy_years
+              column: concept
+          result: lex-concepts-final 
+          
