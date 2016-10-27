@@ -170,7 +170,7 @@ cooking:
                       age_group: total
                   females_aged_15plus_employment_rate_percent:
                       from: employment_to_population_ratio
-                      sex: mf
+                      sex: f
                       age_group: total
                   females_aged_15_24_employment_rate_percent:
                       from: employment_to_population_ratio

@@ -27,7 +27,6 @@ ingredients:
               - annual_hiv_deaths_number_all_ages
               - art_coverage_percent_cd4_l_350
               - newly_hiv_infected_number_all_ages
-              - newly_hiv_infected_percent_age_15_49
     - id: unaids-datapoints
       dataset: *d1
       key: "area,year"
@@ -35,7 +34,6 @@ ingredients:
           - aids_related_deaths_all_ages_estimate
           - coverage_of_people_receiving_art_total_estimate
           - new_hiv_infections_all_ages_estimate
-          - new_hiv_infections_adults_15_estimate
     - id: unaids-areas
       dataset: *d1
       key:
