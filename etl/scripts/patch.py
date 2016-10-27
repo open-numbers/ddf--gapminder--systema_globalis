@@ -60,11 +60,47 @@ def remove_geographic_regions():
 
 
 def apply_patches():
-    for f in os.listdir('./patches/'):
-        if '.csv' in f:
-            print(f)
-            local_path = os.path.join(out_dir, f)
-            patch_path = os.path.join('./patches', f)
+    # list of patches to apply to files.
+    # FIXME: find out which patch should apply to which file in the diff file.
+    # then we can totally avoid manually setting it here and editting diff files.
+    patches = {
+        'ddf--concepts.csv': [
+            'ddf--concepts.1.csv',
+            'ddf--concepts.2.csv'
+        ],
+        'ddf--entities--geo--g77_and_oecd_countries.csv': [
+            'ddf--entities--geo--g77_and_oecd_countries.1.csv'
+        ],
+        'ddf--entities--geo--income_groups.csv': [
+            'ddf--entities--geo--income_groups.1.csv'
+        ],
+        'ddf--entities--geo--landlocked.csv': [
+            'ddf--entities--geo--landlocked.1.csv'
+        ],
+        'ddf--entities--geo--main_religion_2008.csv': [
+            'ddf--entities--geo--main_religion_2008.1.csv'
+        ],
+        'ddf--entities--geo--world_4region.csv': [
+            'ddf--entities--geo--world_4region.0.csv',
+            'ddf--entities--geo--world_4region.1.csv'
+        ],
+        'ddf--entities--geo--world_6region.csv': [
+            'ddf--entities--geo--world_6region.0.csv',
+            'ddf--entities--geo--world_6region.1.csv'
+        ],
+        'ddf--entities--tag.csv': [
+            'ddf--entities--tag.0.csv'
+        ],
+        'ddf--entities--geo--country.csv': [
+            'ddf--entities--geo--country.1.csv'
+        ]
+    }
+    # apply the patches
+    for f, ps in patches.items():
+        local_path = os.path.join(out_dir, f)
+        for p in ps:
+            print(p)
+            patch_path = os.path.join('./patches', p)
 
             if os.path.exists(local_path):
                 new_df = apply_patch(local_path, patch_path)
