@@ -41,6 +41,8 @@ ingredients:
               - arb6
               - arb7
               - arb8
+              - tags
+              - rank
 
     - id: gw-concepts-discrete
       dataset: ddf--gapminder--gapminder_world
