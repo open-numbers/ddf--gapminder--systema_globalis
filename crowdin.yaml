@@ -9,3 +9,8 @@ files:
     translation: /lang/%locale%/%original_file_name%
     first_line_contains_header: 1
     scheme: identifier,source_or_translation
+  - 
+    source: /lang/en/ddf--concepts*.csv
+    translation: /lang/%locale%/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,context,source_or_translation
