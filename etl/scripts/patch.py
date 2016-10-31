@@ -54,11 +54,6 @@ def concepts_tag_column():
     concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'))
 
 
-def remove_geographic_regions():
-    os.remove(os.path.join(out_dir, 'ddf--entities--geo--geographic_regions.csv'))
-    os.remove(os.path.join(out_dir, 'ddf--entities--geo--geographic_regions_in_4_colors.csv'))
-
-
 def apply_patches():
     # list of patches to apply to files.
     # FIXME: find out which patch should apply to which file in the diff file.
@@ -68,32 +63,9 @@ def apply_patches():
             'ddf--concepts.1.csv',
             'ddf--concepts.2.csv'
         ],
-        'ddf--entities--geo--g77_and_oecd_countries.csv': [
-            'ddf--entities--geo--g77_and_oecd_countries.1.csv'
-        ],
-        'ddf--entities--geo--income_groups.csv': [
-            'ddf--entities--geo--income_groups.1.csv'
-        ],
-        'ddf--entities--geo--landlocked.csv': [
-            'ddf--entities--geo--landlocked.1.csv'
-        ],
-        'ddf--entities--geo--main_religion_2008.csv': [
-            'ddf--entities--geo--main_religion_2008.1.csv'
-        ],
-        'ddf--entities--geo--world_4region.csv': [
-            'ddf--entities--geo--world_4region.0.csv',
-            'ddf--entities--geo--world_4region.1.csv'
-        ],
-        'ddf--entities--geo--world_6region.csv': [
-            'ddf--entities--geo--world_6region.0.csv',
-            'ddf--entities--geo--world_6region.1.csv'
-        ],
         'ddf--entities--tag.csv': [
             'ddf--entities--tag.0.csv'
         ],
-        'ddf--entities--geo--country.csv': [
-            'ddf--entities--geo--country.1.csv'
-        ]
     }
     # apply the patches
     for f, ps in patches.items():
@@ -112,7 +84,6 @@ def apply_patches():
 def do_all_changes():
     print("applying patches to DDF...")
     concepts_tag_column()
-    remove_geographic_regions()
     apply_patches()
     print('Done.')
 

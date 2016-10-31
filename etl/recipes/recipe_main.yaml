@@ -13,6 +13,7 @@ config:
 include:
     - recipe_gw_common.yaml
     - recipe_gw_lex_only.yaml
+    - recipe_gw_gdp.yaml
     # - recipe_bp.yaml
     # - recipe_cdiac.yaml
     # - recipe_cme.yaml
@@ -49,6 +50,7 @@ cooking:
           ingredients:
               - gw-datapoints-all
               - lex-datapoints-final
+              - gdp-datapoints-final
               # - bp-datapoints-final
               # - cdiac-datapoints-final
               # - cme-datapoints-final
@@ -80,5 +82,6 @@ cooking:
               - gw-concepts-geo
               - gw-concepts-discrete
               - lex-concepts-final
+              - gdp-concepts-final
           options:
               deep: true
