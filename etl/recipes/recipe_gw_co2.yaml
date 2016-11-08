@@ -1,0 +1,68 @@
+# recipe for dataset
+info:
+    id: sg_gw_co2
+    base:  # the datasets for ingredients
+        - &d1 ddf--gapminder--co2_emission
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ./translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+
+# define your ingredients and procedures below
+ingredients:
+    # Ingredients have 5 parameters: id, dataset, key, value, filter
+    # in wich:
+    #     id: the name of ingredient, will be used in cooking procedures
+    #     dataset: which dataset is this ingredient from
+    #     key: the key to filter in ddf--index
+    #     value: the value to filter in ddf--index
+    #     filter: (optional) more keyword filters
+    #
+    # below some example of ingredients:
+    # 
+    - id: co2-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - yearly_co2_emissions_1000_tonnes
+          - co2_emissions_tonnes_per_person
+          - cumulative_co2_emissions_tonnes
+    - id: co2-concepts
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - yearly_co2_emissions_1000_tonnes
+              - co2_emissions_tonnes_per_person
+              - cumulative_co2_emissions_tonnes
+    # 
+    # - id: gw-concepts-aqua
+    #   dataset: *d2
+    #   key: concept
+    #   value: "*"
+    #   filter:
+    #       concept: &CONC_FILTER
+    #         - agricultural_water_withdrawal_percent_of_total
+    #         - desalinated_water_produced_billion_cu_meters
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - co2-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: co2-datapoints-final
+    concepts:
+        - procedure: identity
+          ingredients:
+              - co2-concepts
+          result: co2-concepts-final 
+          

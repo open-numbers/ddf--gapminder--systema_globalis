@@ -14,6 +14,7 @@ include:
     - recipe_gw_common.yaml
     - recipe_gw_lex_only.yaml
     - recipe_gw_gdp.yaml
+    - recipe_gw_co2.yaml
     # - recipe_bp.yaml
     # - recipe_cdiac.yaml
     # - recipe_cme.yaml
@@ -71,6 +72,13 @@ cooking:
               # - dont-panic-datapoints
           # options:
           #     deep: true
+          result: datapoint-no-deep-merge
+        - procedure: merge
+          ingredients:
+              - datapoint-no-deep-merge
+              - co2-datapoints-final
+          options:
+              deep: true
     entities:
         - procedure: identity
           ingredients:
@@ -83,5 +91,6 @@ cooking:
               - gw-concepts-discrete
               - lex-concepts-final
               - gdp-concepts-final
+              - co2-concepts-final
           options:
               deep: true
