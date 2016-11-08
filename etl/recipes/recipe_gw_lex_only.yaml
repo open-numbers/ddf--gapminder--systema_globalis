@@ -29,14 +29,14 @@ ingredients:
       dataset: *d1
       key: "geo,time"
       value:
-          - life_expectancy_at_birth_years
+          - life_expectancy
     - id: lex-concepts
       dataset: *d1
       key: concept
       value: "*"
       filter:
           concept:
-              - life_expectancy_at_birth_years
+              - life_expectancy
     # 
     # - id: gw-concepts-aqua
     #   dataset: *d2
@@ -53,7 +53,7 @@ cooking:
               - lex-datapoints
           options:
               dictionary:
-                  life_expectancy_at_birth_years: life_expectancy_years
+                  life_expectancy: life_expectancy_years
           result: lex-datapoints-final
     concepts:
         - procedure: translate_column
@@ -61,7 +61,7 @@ cooking:
               - lex-concepts
           options:
               dictionary:
-                  life_expectancy_at_birth_years: life_expectancy_years
+                  life_expectancy: life_expectancy_years
               column: concept
           result: lex-concepts-final 
           
