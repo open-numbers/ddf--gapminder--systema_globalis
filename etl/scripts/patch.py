@@ -61,7 +61,8 @@ def apply_patches():
     patches = {
         'ddf--concepts.csv': [
             'ddf--concepts.1.csv',
-            'ddf--concepts.2.csv'
+            'ddf--concepts.2.csv',
+            'ddf--concepts.3.csv'
         ],
         'ddf--entities--tag.csv': [
             'ddf--entities--tag.0.csv'
