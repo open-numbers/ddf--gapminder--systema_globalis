@@ -15,6 +15,7 @@ include:
     - recipe_gw_lex_only.yaml
     - recipe_gw_gdp.yaml
     - recipe_gw_co2.yaml
+    - recipe_gw_pop.yaml
     # - recipe_bp.yaml
     # - recipe_cdiac.yaml
     # - recipe_cme.yaml
@@ -52,6 +53,7 @@ cooking:
               - gw-datapoints-all
               - lex-datapoints-final
               - gdp-datapoints-final
+              - pop-datapoints-final
               # - bp-datapoints-final
               # - cdiac-datapoints-final
               # - cme-datapoints-final
@@ -91,6 +93,7 @@ cooking:
               - gw-concepts-discrete
               - lex-concepts-final
               - gdp-concepts-final
+              - pop-concepts-final
               - co2-concepts-final
           options:
               deep: true
