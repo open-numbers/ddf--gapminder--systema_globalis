@@ -1,0 +1,10 @@
+@@,concept,name,concept_type,domain,indicator_url,color,scales,drill_up,unit,interpolation,description,tags
+...,...,...,...,...,...,...,...,...,...,...,...,...
+,income_per_person_gdppercapita_ppp_inflation_adjusted,"Income per person",measure,,https://github.com/open-numbers/ddf--gapminder--gdp_per_capita_cppp,,"[""log"", ""linear""]",,"GDP/capita in $/year adjusted for inflation & prices",,"Gross domestic product per person adjusted for differences in purchasing power (in international dollars, fixed 2011 prices, PPP based on 2011 ICP).","_root, incomes_growth"
+->,co2_emissions_tonnes_per_person,"CO2 per capita",measure,,https://github.com/open-numbers/ddf--gapminder--co2_emission,,"[""linear"", ""log""]->[""log"", ""linear""]",,"tonnes per person",,"Carbon dioxide emissions from the burning of fossil fuels (metric tonnes of CO2 per person). ","_root, emissions"
+,child_mortality_0_5_year_olds_dying_per_1000_born,"Child mortality rate",measure,,http://spreadsheets.google.com/pub?key=0ArfEDsV3bBwCcGhBd2NOQVZ1eWowNVpSNjl1c3lRSWc,,"[""log"", ""linear""]",,"deaths under age 5 per 1000 births",,"Death of children under five years of age per 1,000 live births ","_root, newborn_infants"
+...,...,...,...,...,...,...,...,...,...,...,...,...
+,sulfur_emissions_per_person_kg,"Sulfur emissions per person",measure,,http://spreadsheets.google.com/pub?key=phAwcNAVuyj0uBndTxZAXNQ,,"[""log"", ""linear""]",,kg,,"Sulfur emissions per person. Associated with acid rain. (Kilograms of sulfur per person and year). ",emissions
+---,yearly_co2_emissions_tonnes,"CO2 emissions (2012 version)",measure,,http://spreadsheets.google.com/pub?key=phAwcNAVuyj1NHPC9MyZ9SQ,,"[""log"", ""linear""]",,kilotons,,"Total carbon dioxide emissions from the burning of fossil fuels during the given year (1000 metric tonnes of CO2).",alternative_other_data
+,total_sulfur_emission_kilotonnes,"Sulfur emission",measure,,http://spreadsheets.google.com/pub?key=t9SYWh7siLJDzyZYN1R4HfQ,,"[""log"", ""linear""]",,kilotons,,"Total sulfur emissions per year. Associated with acid rain. 1000 tonnes of sulfur per year. ",emissions
+...,...,...,...,...,...,...,...,...,...,...,...,...
