@@ -4,3 +4,43 @@ files:
     translation: /langsplit/%locale%/ddf--concepts.csv/%original_file_name%
     first_line_contains_header: 1
     scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--country.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--country.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--g77_and_oecd_countries.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--g77_and_oecd_countries.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--global.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--global.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--income_groups.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--income_groups.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--landlocked.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--landlocked.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--main_religion_2008.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--main_religion_2008.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--world_4region.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--world_4region.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
+  - 
+    source: /langsplit/en/ddf--entities--geo--world_6region.csv/*
+    translation: /langsplit/%locale%/ddf--entities--geo--world_6region.csv/%original_file_name%
+    first_line_contains_header: 1
+    scheme: identifier,source_or_translation
