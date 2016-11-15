@@ -54,6 +54,7 @@ cooking:
               - lex-datapoints-final
               - gdp-datapoints-final
               - pop-datapoints-final
+              - co2-datapoints-final
               # - bp-datapoints-final
               # - cdiac-datapoints-final
               # - cme-datapoints-final
@@ -74,13 +75,6 @@ cooking:
               # - dont-panic-datapoints
           # options:
           #     deep: true
-          result: datapoint-no-deep-merge
-        - procedure: merge
-          ingredients:
-              - datapoint-no-deep-merge
-              - co2-datapoints-final
-          options:
-              deep: true
     entities:
         - procedure: identity
           ingredients:
