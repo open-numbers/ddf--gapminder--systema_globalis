@@ -1,8 +1,8 @@
 # recipe for dataset
 info:
-    id: dataset_name
+    id: sg_gw_co2
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--life_expectancy
+        - &d1 ddf--gapminder--co2_emission
 
 config:
     # the path to search recipe files to include
@@ -25,18 +25,22 @@ ingredients:
     #
     # below some example of ingredients:
     # 
-    - id: lex-datapoints
+    - id: co2-datapoints
       dataset: *d1
-      key: "geo,time"
+      key: "country,year"
       value:
-          - life_expectancy
-    - id: lex-concepts
+          - yearly_co2_emissions_1000_tonnes
+          - co2_emissions_tonnes_per_person
+          - cumulative_co2_emissions_tonnes
+    - id: co2-concepts
       dataset: *d1
       key: concept
       value: "*"
       filter:
           concept:
-              - life_expectancy
+              - yearly_co2_emissions_1000_tonnes
+              - co2_emissions_tonnes_per_person
+              - cumulative_co2_emissions_tonnes
     # 
     # - id: gw-concepts-aqua
     #   dataset: *d2
@@ -50,18 +54,15 @@ cooking:
     datapoints:
         - procedure: translate_header
           ingredients:
-              - lex-datapoints
+              - co2-datapoints
           options:
               dictionary:
-                  life_expectancy: life_expectancy_years
-          result: lex-datapoints-final
+                  country: geo
+                  year: time
+          result: co2-datapoints-final
     concepts:
-        - procedure: translate_column
+        - procedure: identity
           ingredients:
-              - lex-concepts
-          options:
-              dictionary:
-                  life_expectancy: life_expectancy_years
-              column: concept
-          result: lex-concepts-final 
+              - co2-concepts
+          result: co2-concepts-final 
           

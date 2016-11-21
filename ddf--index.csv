@@ -542,7 +542,6 @@ concept,tags,ddf--concepts.csv
 "geo,time",year_categorization_1820_2010,ddf--datapoints--year_categorization_1820_2010--by--geo--time.csv
 "geo,time",year_categorization_1950,ddf--datapoints--year_categorization_1950--by--geo--time.csv
 "geo,time",yearly_co2_emissions_1000_tonnes,ddf--datapoints--yearly_co2_emissions_1000_tonnes--by--geo--time.csv
-"geo,time",yearly_co2_emissions_tonnes,ddf--datapoints--yearly_co2_emissions_tonnes--by--geo--time.csv
 country,gwid,ddf--entities--geo--country.csv
 country,name,ddf--entities--geo--country.csv
 country,world_6region,ddf--entities--geo--country.csv

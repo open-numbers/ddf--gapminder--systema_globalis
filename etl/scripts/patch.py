@@ -54,6 +54,12 @@ def concepts_tag_column():
     concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'))
 
 
+def remove_yearly_co2_emissions_tonnes():
+    """remove datapoints for yearly_co2_emissions_tonnes"""
+    # FIXME: remove this function when chef is ready for this kind of tasks.
+    os.remove(os.path.join(out_dir, 'ddf--datapoints--yearly_co2_emissions_tonnes--by--geo--time.csv'))
+
+
 def apply_patches():
     # list of patches to apply to files.
     # FIXME: find out which patch should apply to which file in the diff file.
@@ -61,7 +67,9 @@ def apply_patches():
     patches = {
         'ddf--concepts.csv': [
             'ddf--concepts.1.csv',
-            'ddf--concepts.2.csv'
+            'ddf--concepts.2.csv',
+            'ddf--concepts.3.csv',
+            'ddf--concepts.4.csv'
         ],
         'ddf--entities--tag.csv': [
             'ddf--entities--tag.0.csv'
@@ -84,6 +92,7 @@ def apply_patches():
 def do_all_changes():
     print("applying patches to DDF...")
     concepts_tag_column()
+    remove_yearly_co2_emissions_tonnes()
     apply_patches()
     print('Done.')
 
