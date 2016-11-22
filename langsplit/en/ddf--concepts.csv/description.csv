@@ -43,7 +43,7 @@ gdppercapita_us_inflation_adjusted,GDP per capita in exchange rate terms and adj
 gdpperemployee_us_inflation_adjusted,"The average Gross Domestic Products per each employee during the given year, counted by constant 1990 US$."
 gdpperworking_hour_us_inflation_adjusted,"The average Gross Domestic Products per hour per person, counted by constant 1990 US$."
 gdppercapita_growth_over_next_10_years,"Average growth in GDP per capita over the subsequent 10 years, i.e. the data for 1980 concerns the average growth 1980-90. The data is based on income per person v12. Projections after 2005."
-gdppercapita_growth_percent_per_year,Annual growth in GDP pc. Based on World Bank data.
+gdppercapita_growth_percent_per_year,Annual growth in GDP per capita. Based on World Bank data.
 total_gni_ppp_current_international,PPP GNI (formerly PPP GNP) is gross national income converted to international dollars using purchasing power parity rates. An international dollar has the same purchasing power over GNI as a U.S. dollar has in the United States.
 gnipercapita_constant_2000_us,GNI per capita (constant 2000 US$)
 gnipercapita_atlasmethod_current_us,"GNI per capita, Atlas method (current US$)"
