@@ -11369,7 +11369,7 @@
 						"name": "longitude"
 					}
 				],
-				"primaryKey": "global"
+				"primaryKey": "geo"
 			}
 		},
 		{
@@ -11483,7 +11483,7 @@
 						"name": "shape_lores_svg"
 					}
 				],
-				"primaryKey": "world_4region"
+				"primaryKey": "geo"
 			}
 		},
 		{
@@ -11525,7 +11525,7 @@
 						"name": "shape_lores_svg"
 					}
 				],
-				"primaryKey": "world_6region"
+				"primaryKey": "geo"
 			}
 		},
 		{
