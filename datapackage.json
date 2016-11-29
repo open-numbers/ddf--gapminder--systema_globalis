@@ -7,7 +7,12 @@
 		"id": "en",
 		"name": "English"
 	},
-	"translations": [],
+	"translations": [
+		{
+			"id": "ar-SA",
+			"name": "العربية"
+		}
+	],
 	"license": "",
 	"author": "",
 	"resources": [
