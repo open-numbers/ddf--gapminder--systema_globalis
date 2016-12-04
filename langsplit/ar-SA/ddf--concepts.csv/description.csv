@@ -295,8 +295,8 @@
 "malnutrition_weight_for_age_percent_of_children_under_5","النسبة المئوية من الأطفال تحت عمر 5 سنوات الذين يزيد وزنهم على انحرافين معاريين تحت العدد المتوسط للمرجع الدولي للسكان لمنظمة الصحة العالمية 2006. "
 "sugar_per_person_g_per_day","كمية استهلاك الطعام من السكر والمحلِّيات (بالغرام للفرد واليوم).
 ملحوظة: البيانات لعام 2004 تستند إلى استخلاص تقريبي من جابميايندر."
-"food_supply_kilocalories_per_person_and_day",""
-"alcohol_consumption_per_adult_15plus_litres",""
+"food_supply_kilocalories_per_person_and_day","تقيس وحدة الكالوري مقدار ما يحتويه الطعام من الطاقة. وتختلف كمية الاستهلاك, لكنها تتراوح عادة في بين 1500-3000 كيلو كالوري يوميا. وتحتوي موزة واحدة عادة على 100 كيلو كالوري تقريبا."
+"alcohol_consumption_per_adult_15plus_litres","الاستهلاك المسجل زائد المقدر من الكحول, استهلاك متوسط البالغين (15+) للفرد باللتر"
 "smoking_adults_percent_of_population_over_age_15",""
 "smoking_women_percent_of_women_over_age_15",""
 "smoking_men_percent_of_men_over_age_15",""
