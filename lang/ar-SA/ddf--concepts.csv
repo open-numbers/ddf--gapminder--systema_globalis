@@ -276,9 +276,7 @@ total_health_spending_per_person_us,,إجمالي الإنفاق على الحص
 government_health_spending_per_person_us,,الإنفاق الحكومي على الصحة للفرد (بالدولار الأمريكي),
 medical_doctors_per_1000_people,,الأطباء,لكل 000 1 شخص
 people_living_with_hiv_number_all_ages,,الناس الذين يعيشون مع فيروس نقص المناعة البشرية HIV,"المجموع, جميع الأعمار"
-adults_with_hiv_percent_age_15_49,,"حصة البالغين الذين يعانون من فيروس نقص المناعة البشرية
-
-",% الأعمار بين 15 و49
+adults_with_hiv_percent_age_15_49,,"حصة البالغين الذين يعانون من فيروس نقص المناعة البشرية",% الأعمار بين 15 و49
 newly_hiv_infected_number_all_ages,,إجمالي المصابين الجدد بفيروس نقص المناعة البشرية,"المجموع, جميع الأعمار"
 newly_hiv_infected_percent_age_15_49,,إجمالي المصابين البالغين الجدد بفيروس نقص المناعة البشرية,% الأعمار بين 15 و49
 annual_hiv_deaths_number_all_ages,,الوفيات السنوية بفيروس نقص المناعة البشرية,"المجموع, جميع الأعمار"
