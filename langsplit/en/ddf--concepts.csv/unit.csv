@@ -1,0 +1,581 @@
+concept,unit
+tag,
+parent,
+geo,
+world_6region,
+income_groups,
+landlocked,
+g77_and_oecd_countries,
+main_religion_2008,
+country,
+world_4region,
+global,
+age,years
+latitude,degrees
+longitude,degrees
+children_per_woman_total_fertility,
+income_per_person_gdppercapita_ppp_inflation_adjusted,GDP/capita in $/year adjusted for inflation & prices
+co2_emissions_tonnes_per_person,tonnes per person
+child_mortality_0_5_year_olds_dying_per_1000_born,deaths under age 5 per 1000 births
+life_expectancy_years,years
+aid_given_2007_us,$
+aid_given_per_person_2007_us,$
+aid_given_percent_of_gni,
+water_and_sanitation_aid_given_percent_of_aid,% of aid
+economical_infrastructure_aid_given_percent_of_aid,% of aid
+production_sector_aid_given_percent_of_aid,% of aid
+multisector_cross_cutting_aid_given_percent_of_aid,% of aid
+education_aid_given_percent_of_aid,% of aid
+health_aid_given_percent_of_aid,% of aid
+population_policies_aid_given_percent_of_aid,% of aid
+government_and_society_aid_given_percent_of_aid,% of aid
+other_social_services_aid_given_percent_of_aid,% of aid
+aid_received_total_us_inflation_adjusted,$
+aid_received_per_person_current_us,$
+aid_received_percent_of_gni,
+dollar_billionaires_per_million_people,
+average_age_of_dollar_billionaires_years,years
+total_number_of_dollar_billionaires,
+debt_to_foreigners_by_public_and_private_percent_of_gni,"public & private, % of GNI"
+total_reserves_percent_of_debt_to_foreigners,% of debt to foreigners
+total_gdp_us_inflation_adjusted,$
+gdppercapita_us_inflation_adjusted,$
+gdpperemployee_us_inflation_adjusted,$
+gdpperworking_hour_us_inflation_adjusted,$
+gdppercapita_growth_over_next_10_years,
+gdppercapita_growth_percent_per_year,% per year
+total_gni_ppp_current_international,"PPP, current international $"
+gnipercapita_constant_2000_us,$
+gnipercapita_atlasmethod_current_us,$
+gnipercapita_ppp_current_international,$
+inequality_index_gini,
+income_share_of_richest_10percent,share
+income_share_of_richest_20percent,share
+income_share_of_2nd_richest_20percent,share
+income_share_of_middle_20percent,share
+income_share_of_2nd_poorest_20percent,share
+income_share_of_poorest_20percent,share
+income_share_of_poorest_10percent,share
+inflation_annual_percent,annual %
+central_bank_discount_rate_annual_percent,annual %
+investments_percent_of_gdp,% of GDP
+tax_revenue_percent_of_gdp,% of GDP
+foreign_direct_investment_net_inflows_percent_of_gdp,"direct, % of GDP"
+foreign_direct_investment_net_outflows_percent_of_gdp,"direct, % of GDP"
+patent_applications_total,total
+patents_granted_total,total
+patents_in_force_total,total
+poverty_percent_people_below_2_a_day,% people below $2 a day
+rural_poverty_percent_rural_people_below_national_rural,%
+urban_poverty_percent_urban_people_below_national_urban,%
+extreme_poverty_percent_people_below_125_a_day,% people below $1.25 a day
+agriculture_percent_of_gdp,% of GDP
+industry_percent_of_gdp,% of GDP
+services_percent_of_gdp,% of GDP
+exports_percent_of_gdp,% of GDP
+imports_percent_of_gdp,% of GDP
+arms_exports_us_inflation_adjusted,$
+arms_imports_us_inflation_adjusted,$
+total_gdp_ppp_inflation_adjusted,$
+high_technology_exports_percent_of_manufactured_exports,% of manufactured exports
+merchandise_trade_percent_of_gdp,% of GDP
+trade_balance_us_not_inflation_adjusted,"$, not infl.-adjusted"
+trade_balance_percent_of_gdp,%
+hourly_compensation_us,$
+working_hours_per_week,per week
+market_value_of_listed_companies_percent_of_gdp,% of GDP
+military_expenditure_percent_of_gdp,% of GDP
+math_achievement_4th_grade,TIMSS test score
+math_achievement_8th_grade,TIMSS test score
+ratio_of_girls_to_boys_in_primary_and_secondary_education_perc,"primary and secondary education, %"
+ratio_of_young_literate_females_to_males_percent_ages_15_24,"%, ages 15-24"
+literacy_rate_adult_female_percent_of_females_ages_15_above,"%, ages 15+"
+literacy_rate_adult_male_percent_of_males_ages_15_and_above,"%, ages 15+"
+literacy_rate_adult_total_percent_of_people_ages_15_and_above,"%, ages 15+"
+literacy_rate_youth_female_percent_of_females_ages_15_24,"%, ages 15-24"
+literacy_rate_youth_male_percent_of_males_ages_15_24,"%, ages 15-24"
+literacy_rate_youth_total_percent_of_people_ages_15_24,"%, ages 15-24"
+children_out_of_school_primary,
+children_out_of_school_primary_female,
+children_out_of_school_primary_male,
+primary_completion_rate_total_percent_of_relevant_age_group,% of relevant age group
+primary_school_completion_percent_of_boys,%
+primary_school_completion_percent_of_girls,%
+expenditure_per_student_primary_percent_of_gdp_per_person,% of GDP/capita
+expenditure_per_student_secondary_percent_of_gdp_per_person,% of GDP/capita
+expenditure_per_student_tertiary_percent_of_gdp_per_person,% of GDP/capita
+mean_years_in_school_women_25_years_and_older,
+mean_years_in_school_men_25_years_and_older,
+mean_years_in_school_women_25_to_34_years,
+mean_years_in_school_men_25_to_34_years,
+mean_years_in_school_women_of_reproductive_age_15_to_44,
+mean_years_in_school_women_percent_men_25_to_34_years,%
+energy_use_total,tons in oil eqv
+energy_use_per_person,tons in oil eqv
+energy_production_total,tons in oil eqv
+energy_production_per_person,tons in oil eqv
+pump_price_for_gasoline_us_per_liter,$/liter
+coal_consumption_total,tons in oil eqv
+coal_consumption_per_cap,tons in oil eqv
+electricity_use_per_person,kWh
+electricity_use_total,kWh
+residential_electricity_use_per_person,kWh
+residential_electricity_use_total,kWh
+electricity_generation_total,kWh
+electricity_generation_per_person,kWh
+hydro_power_generation_total,tons in oil eqv
+hydro_power_generation_per_person,tons in oil eqv
+nuclear_power_generation_total,tons in oil eqv
+nuclear_power_generation_per_person,tons in oil eqv
+natural_gas_production_total,tons in oil eqv
+natural_gas_production_per_person,tons in oil eqv
+natural_gas_proven_reserves_per_person,tons in oil eqv
+natural_gas_proved_reserves_total,tons in oil eqv
+oil_production_per_person,tons
+oil_production_total,tons
+oil_proven_reserves_per_person,tons
+oil_proved_reserves_total,tons
+oil_consumption_total,tons
+oil_consumption_per_cap,tons
+drought_deaths_annual_number,annual
+earthquake_deaths_annual_number,annual
+epidemic_deaths_annual_number,annual
+extreme_temperature_deaths_annual_number,annual
+flood_deaths_annual_number,annual
+storm_deaths_annual_number,annual
+tsunami_deaths_annual_number,annual
+plane_crash_deaths_annual_number,annual
+drought_affected_annual_number,annual
+earthquake_affected_annual_number,annual
+epidemic_affected_annual_number,annual
+extreme_temperature_affected_annual_number,annual
+flood_affected_annual_number,annual
+storm_affected_annual_number,annual
+tsunami_affected_annual_number,annual
+plane_crash_affected_annual_number,annual
+co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp,kg CO2 per $ of GDP
+cumulative_co2_emissions_tonnes,tonnes
+sulfur_emissions_per_person_kg,kg
+total_sulfur_emission_kilotonnes,kilotons
+forest_land_total_area_ha,ha
+primary_forest_area_ha,ha
+planted_forest_area_ha,ha
+wood_removal_cubic_meters,cubic meters
+forest_coverage_percent,%
+biomass_stock_in_forest_tons,tons
+privately_owned_forest_land_percent,%
+privately_owned_other_wooded_land_percent,%
+forest_products_removal_total_dollar,$
+forest_products_removal_per_ha_dollar,$
+agricultural_land_percent_of_land_area,% of land area
+forest_area_sq_km,sq. km
+surface_area_sq_km,sq. km
+renewable_water_cu_meters_per_person,cu meters per person
+internal_renewable_water_cu_meters_per_person,cu meters per person
+water_withdrawal_cu_meters_per_person,cu meters per person
+municipal_water_withdrawal_cu_meters_per_person,cu meters per person
+agricultural_water_withdrawal_percent_of_total,%
+industrial_water_withdrawal_percent_of_total,%
+municipal_water_withdrawal_percent_of_total,%
+desalinated_water_produced_billion_cu_meters,billion cu meters
+total_water_withdrawal_billion_cu_meters,billion cu meters
+infant_mortality_rate_per_1000_births,deaths under age 1 per 1000 births
+underweight_children,%
+all_causes_deaths_in_newborn_per_1000_births,per 1 000 births
+birth_asphyxia_deaths_in_newborn_per_1000_births,per 1 000 births
+congenital_deaths_in_newborn_per_1000_births,per 1 000 births
+diarrhoeal_deaths_in_newborn_per_1000_births,per 1 000 births
+pneumonia_deaths_in_newborn_per_1000_births,per 1 000 births
+prematurity_deaths_in_newborn_per_1000_births,per 1 000 births
+sepsis_deaths_in_newborn_per_1000_births,per 1 000 births
+tetanus_deaths_in_newborn_per_1000_births,per 1 000 births
+other_deaths_in_newborn_per_1000_births,per 1 000 births
+all_causes_deaths_in_newborn_total_deaths,
+birth_asphyxia_deaths_in_newborn_total_deaths,
+congenital_deaths_in_newborn_total_deaths,
+diarrhoeal_deaths_in_newborn_total_deaths,
+pneumonia_deaths_in_newborn_total_deaths,
+prematurity_deaths_in_newborn_total_deaths,
+sepsis_deaths_in_newborn_total_deaths,
+tetanus_deaths_in_newborn_total_deaths,
+other_deaths_in_newborn_total_deaths,
+all_causes_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+diarrhoeal_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+hiv_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+injury_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+malaria_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+measles_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+meningitis_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+ncd_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+pertussis_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+pneumonia_deaths_in_children_1_59_months_per_1000_births,"1-59 months, per 1 000 births"
+other_infections_deaths_in_children_1_59_months_per_1000_birt,"1-59 months, per 1 000 births"
+all_causes_deaths_in_children_1_59_months_total_deaths,1-59 months
+diarrhoeal_deaths_in_children_1_59_months_total_deaths,1-59 months
+hiv_deaths_in_children_1_59_months_total_deaths,1-59 months
+injury_deaths_in_children_1_59_months_total_deaths,1-59 months
+malaria_deaths_in_children_1_59_months_total_deaths,1-59 months
+measles_deaths_in_children_1_59_months_total_deaths,1-59 months
+meningitis_deaths_in_children_1_59_months_total_deaths,1-59 months
+ncd_deaths_in_children_1_59_months_total_deaths,1-59 months
+pertussis_deaths_in_children_1_59_months_total_deaths,1-59 months
+pneumonia_deaths_in_children_1_59_months_total_deaths,1-59 months
+other_infections_deaths_in_children_1_59_months_total_deaths,1-59 months
+breast_cancer_new_cases_per_100000_women,per 100 000 women
+cervical_cancer_new_cases_per_100000_women,per 100 000 women
+colonandrectum_cancer_new_cases_per_100000_women,per 100 000 women
+liver_cancer_new_cases_per_100000_women,per 100 000 women
+lung_cancer_new_cases_per_100000_women,per 100 000 women
+stomach_cancer_new_cases_per_100000_women,per 100 000 women
+breast_cancer_number_of_new_female_cases,
+cervical_cancer_number_of_new_female_cases,
+colonandrectum_cancer_number_of_new_female_cases,
+liver_cancer_number_of_new_female_cases,
+lung_cancer_number_of_new_female_cases,
+stomach_cancer_number_of_new_female_cases,
+breast_cancer_deaths_per_100000_women,per 100 000 women
+cervical_cancer_deaths_per_100000_women,per 100 000 women
+colonandrectum_cancer_deaths_per_100000_women,per 100 000 women
+liver_cancer_deaths_per_100000_women,per 100 000 women
+lung_cancer_deaths_per_100000_women,per 100 000 women
+stomach_cancer_deaths_per_100000_women,per 100 000 women
+breast_cancer_number_of_female_deaths,
+cervical_cancer_number_of_female_deaths,
+colonandrectum_cancer_number_of_female_deaths,
+liver_cancer_number_of_female_deaths,
+lung_cancer_number_of_female_deaths,
+stomach_cancer_number_of_female_deaths,
+colonandrectum_cancer_new_cases_per_100000_men,per 100 000 men
+liver_cancer_new_cases_per_100000_men,per 100 000 men
+lung_cancer_new_cases_per_100000_men,per 100 000 men
+prostate_cancer_new_cases_per_100000_men,per 100 000 men
+stomach_cancer_new_cases_per_100000_men,per 100 000 men
+colonandrectum_cancer_number_of_new_male_cases,
+liver_cancer_number_of_new_male_cases,
+lung_cancer_number_of_new_male_cases,
+prostate_cancer_number_of_new_male_cases,
+stomach_cancer_number_of_new_male_cases,
+colonandrectum_cancer_deaths_per_100000_men,per 100 000 men
+liver_cancer_deaths_per_100000_men,per 100 000 men
+lung_cancer_deaths_per_100000_men,per 100 000 men
+prostate_cancer_deaths_per_100000_men,per 100 000 men
+stomach_cancer_deaths_per_100000_men,per 100 000 men
+colonandrectum_cancer_number_of_male_deaths,
+liver_cancer_number_of_male_deaths,
+lung_cancer_number_of_male_deaths,
+prostate_cancer_number_of_male_deaths,
+stomach_cancer_number_of_male_deaths,
+total_health_spending_percent_of_gdp,% of GDP
+government_share_of_total_health_spending_percent,%
+private_share_of_total_health_spending_percent,%
+out_of_pocket_share_of_total_health_spending_percent,%
+government_health_spending_of_total_gov_spending_percent,% of total gov. spending
+total_health_spending_per_person_international_dollar,
+government_health_spending_per_person_international_dollar,
+total_health_spending_per_person_us,
+government_health_spending_per_person_us,
+medical_doctors_per_1000_people,per 1 000 people
+people_living_with_hiv_number_all_ages,"total, all ages"
+adults_with_hiv_percent_age_15_49,"%, age 15-49"
+newly_hiv_infected_number_all_ages,"total, all ages"
+newly_hiv_infected_percent_age_15_49,"%, age 15-49"
+annual_hiv_deaths_number_all_ages,"total, all ages"
+art_coverage_percent_cd4_l_350,CD4 < 350
+malaria_cases_per_100000_reported,reported
+malaria_deaths_per_100000_reported,reported
+malaria_number_of_cases_reported,reported
+malaria_number_of_deaths_reported,reported
+births_attended_by_skilled_health_staff_percent_of_total,%
+contraceptive_use_percent_of_women_ages_15_49,% of women ages 15-49
+maternal_mortality_ratio_per_100000_live_births,per 100 000 live births
+maternal_deaths_total_number,total number
+maternal_deaths_lifetime_risk_per_1000,per 1 000
+stillbirths_per_1000_births,per 1 000 births
+suicide_per_100000_people,per 100 000 people
+malnutrition_weight_for_age_percent_of_children_under_5,"%, age 5-"
+sugar_per_person_g_per_day,grams/day
+food_supply_kilocalories_per_person_and_day,kcal / person & day
+alcohol_consumption_per_adult_15plus_litres,"litres, age 15+"
+smoking_adults_percent_of_population_over_age_15,"%, age 15+"
+smoking_women_percent_of_women_over_age_15,"% of wome, 15+"
+smoking_men_percent_of_men_over_age_15,"% of men, 15+"
+body_mass_index_bmi_men_kgperm2,"(BMI), Kg/m2"
+body_mass_index_bmi_women_kgperm2,"(BMI), Kg/m2"
+blood_pressure_sbp_men_mmhg,"(SBP), mmHg"
+blood_pressure_sbp_women_mmhg,"(SBP), mmHg"
+cholesterol_fat_in_blood_men_mmolperl,"fat in blood, mmol/L"
+cholesterol_fat_in_blood_women_mmolperl,"fat in blood, mmol/L"
+infectious_tb_new_cases_per_100000_estimated,per 100 000
+infectious_tb_new_cases_per_100000_reported,per 100 000
+infectious_tb_number_of_new_cases_estimated,
+infectious_tb_number_of_new_cases_reported,
+infectious_tb_detection_rate_percent,%
+infectious_tb_detection_rate_percent_dots_only,%
+infectious_tb_treatment_dots_completed_percent,(DOTS) completed %
+tb_programme_dots_population_coverage_percent,(DOTS) % of population
+all_forms_of_tb_new_cases_per_100000_estimated,per 100 000
+all_forms_of_tb_existing_cases_per_100000_estimated,per 100 000
+all_forms_of_tb_deaths_per_100000_estimated,per 100 000
+all_forms_of_tb_new_cases_per_100000_reported,per 100 000
+all_forms_of_tb_number_of_new_cases_estimated,
+all_forms_of_tb_number_of_existing_cases_estimated,
+all_forms_of_tb_number_of_deaths_estimated,
+all_forms_of_tb_number_of_new_cases_reported,
+all_forms_of_tb_detection_rate_percent,%
+all_forms_of_tb_detection_rate_percent_dots_only,%
+tb_with_hivplus_new_cases_per_100000_estimated,per 100 000
+tb_with_hivplus_existing_cases_per_100000_estimated,per 100 000
+tb_with_hivplus_deaths_per_100000_estimated,per 100 000
+tb_with_hivplus_number_of_new_cases_estimated,
+tb_with_hivplus_number_of_existing_cases_estimated,
+tb_with_hivplus_number_of_deaths_estimated,
+bad_teeth_per_child_12_yr,12 years old
+dtp3_immunized_percent_of_one_year_olds,% of one-year-olds
+hepb3_immunized_percent_of_one_year_olds,% of one-year-olds
+hib3_immunized_percent_of_one_year_olds,% of one-year-olds
+mcv_immunized_percent_of_one_year_olds,% of one-year-olds
+pab_immunized_percent_of_newborns,% of newborns
+broadband_subscribers,total subscribers
+broadband_subscribers_per_100_people,
+cell_phones_total,total
+cell_phones_per_100_people,
+fixed_line_and_mobile_phone_subscribers_per_100_people,per 100 people
+internet_users_total_number,total
+internet_users_per_100_people,
+personal_computers_total,total
+personal_computers_per_100_people,
+improved_sanitation_overall_access_percent,%
+improved_sanitation_urban_access_percent,%
+improved_sanitation_rural_access_percent,%
+roads_paved_percent_of_total_roads,% of total roads
+improved_water_source_overall_access_percent,%
+improved_water_source_urban_access_percent,%
+improved_water_source_rural_access_percent,%
+population_aged_0_4_years_both_sexes_percent,both sexes %
+population_aged_5_9_years_both_sexes_percent,both sexes %
+population_aged_10_14_years_both_sexes_percent,both sexes %
+population_aged_15_19_years_both_sexes_percent,both sexes %
+population_aged_20_39_years_both_sexes_percent,both sexes %
+population_aged_40_59_years_both_sexes_percent,both sexes %
+population_aged_60plus_years_both_sexes_percent,both sexes %
+population_aged_0_4_years_total_number,total number
+population_aged_5_9_years_total_number,total number
+population_aged_10_14_years_total_number,total number
+population_aged_15_19_years_total_number,total number
+population_aged_20_39_years_total_number,total number
+population_aged_40_59_years_total_number,total number
+population_aged_60plus_years_total_number,total number
+population_aged_0_4_years_female_percent,%
+population_aged_5_9_years_female_percent,%
+population_aged_10_14_years_female_percent,%
+population_aged_15_19_years_female_percent,%
+population_aged_20_39_years_female_percent,%
+population_aged_40_59_years_female_percent,%
+population_aged_60plus_years_female_percent,%
+population_aged_0_4_years_male_percent,%
+population_aged_5_9_years_male_percent,%
+population_aged_10_14_years_male_percent,%
+population_aged_15_19_years_male_percent,%
+population_aged_20_39_years_male_percent,%
+population_aged_40_59_years_male_percent,%
+population_aged_60plus_years_male_percent,%
+population_growth_annual_percent,annual %
+crude_birth_rate_births_per_1000_population,births per 1000 population
+crude_death_rate_deaths_per_1000_population,deaths per 1000 population
+teen_fertility_rate_births_per_1000_women_ages_15_19,births per 1000 women ages 15-19
+new_births_total_number_estimated,"total number, estimated"
+sex_ratio_all_age_groups,all age groups
+sex_ratio_0_14_years,
+sex_ratio_15_24_years,
+sex_ratio_15_49_years,
+sex_ratio_above_50_years,
+population_in_urban_agglomerations_m_1_million_percent_of_total,% of total population
+urban_population,
+urban_population_percent_of_total,%
+urban_population_growth_annual_percent,annual %
+children_and_elderly_per_100_adults,per 100 adults
+median_age_years,years
+population_density_per_square_km,per square km
+population_total,people
+age_at_1st_marriage_women,women
+murder_per_100000_people,per 100 000 people
+corruption_perception_index_cpi,CPI
+democracy_score_use_as_color,
+hdi_human_development_index,HDI
+agriculture_workers_percent_of_labour_force,% of labour force
+industry_workers_percent_of_labour_force,% of labour force
+service_workers_percent_of_labour_force,% of labour force
+female_agriculture_workers_percent_of_female_labour_force,% of female labour force
+female_industry_workers_percent_of_female_labour_force,% of female labour force
+female_service_workers_percent_of_female_labour_force,% of female labour force
+male_agriculture_workers_percent_of_male_labour_force,% of male labour force
+male_industry_workers_percent_of_male_labour_force,% of male labour force
+male_service_workers_percent_of_male_labour_force,% of male labour force
+family_workers_percent_of_labour_force,% of labour force
+salaried_workers_percent_of_labour_force,% of labour force
+self_employed_percent_of_labour_force,% of labour force
+female_family_workers_percent_of_female_labour_force,% of female labour force
+female_salaried_workers_percent_of_female_labour_force,% of female labour force
+female_self_employed_percent_of_female_labour_force,% of female labour force
+male_family_workers_percent_of_male_labour_force,% of male labour force
+male_salaried_workers_percent_of_male_labour_force,% of male labour force
+male_self_employed_percent_of_male_labour_force,% of male labour force
+aged_15_24_employment_rate_percent,%
+aged_15plus_employment_rate_percent,%
+females_aged_15_24_employment_rate_percent,%
+females_aged_15plus_employment_rate_percent,%
+males_aged_15_24_employment_rate_percent,%
+males_aged_15plus_employment_rate_percent,%
+aged_15_64_labour_force_participation_rate_percent,%
+aged_25_54_labour_force_participation_rate_percent,%
+aged_15plus_labour_force_participation_rate_percent,%
+aged_65plus_labour_force_participation_rate_percent,%
+females_aged_15_64_labour_force_participation_rate_percent,%
+females_aged_25_54_labour_force_participation_rate_percent,%
+females_aged_15plus_labour_force_participation_rate_percent,%
+females_aged_65plus_labour_force_participation_rate_percent,%
+males_aged_15_64_labour_force_participation_rate_percent,%
+males_aged_25_54_labour_force_participation_rate_percent,%
+males_aged_15plus_labour_force_participation_rate_percent,%
+males_aged_65plus_labour_force_participation_rate_percent,%
+aged_15_24_unemployment_rate_percent,%
+aged_25_54_unemployment_rate_percent,%
+aged_15plus_unemployment_rate_percent,%
+aged_55plus_unemployment_rate_percent,%
+long_term_unemployment_rate_percent,%
+females_aged_15_24_unemployment_rate_percent,%
+females_aged_25_54_unemployment_rate_percent,%
+females_aged_15plus_unemployment_rate_percent,%
+females_aged_55plus_unemployment_rate_percent,%
+female_long_term_unemployment_rate_percent,%
+males_aged_15_24_unemployment_rate_percent,%
+males_aged_25_54_unemployment_rate_percent,%
+males_aged_15plus_unemployment_rate_percent,%
+males_aged_55plus_unemployment_rate_percent,%
+male_long_term_unemployment_rate_percent,%
+under_five_mortality_from_cme_per_1000_born,per 1 000 born
+under_five_mortality_from_ihme_per_1000_born,per 1 000 born
+old_version_of_income_per_person_version_3,
+old_version_of_income_per_person_version_8,
+alternative_gdppercapita_ppp_inflation_adjusted_from_pwt,"PPP$, inflation-adjusted"
+subsistence_incomes_per_person,
+alternative_poverty_percent_below_nationally_defined_poverty,% below nationally defined poverty line
+data_quality_income_per_person,
+data_quality_life_expectancy,
+data_quality_population,
+estimate_or_projection_of_under_five_mortality_rate_from_ihme,"age 5-, from IHME"
+data_quality_children_per_woman,
+data_method_maternal_mortality,
+economic_growth_over_the_past_10_years,
+how_far_to_the_north,
+income_per_person_with_projections,with projections
+life_expectancy_at_birth_with_projections,with projections
+children_per_woman_total_fertility_with_projections,"total fertility, with projections"
+total_population_with_projections,with projections
+female_population_with_projections,with projections
+male_population_with_projections,with projections
+population_growth_annual_percent_with_projections,"annual %, with projections"
+year_categorization_1820_2010,
+year_categorization_1950,
+traffic_deaths_per_100000_people,per 100 000 people
+burns_deaths_per_100000_people,per 100 000 people
+drownings_per_100000_people,per 100 000 people
+falls_deaths_per_100000_people,per 100 000 people
+poisonings_deaths_per_100000_people,per 100 000 people
+cars_trucks_and_buses_per_1000_persons,per 1 000 people
+traffic_deaths_women_per_100000_people,per 100 000 people
+traffic_deaths_men_per_100000_people,per 100 000 people
+suicide_women_per_100000_people,per 100 000 people
+suicide_men_per_100000_people,per 100 000 people
+murdered_women_per_100000_people,per 100 000 people
+murdered_men_per_100000_people,per 100 000 people
+car_deaths_per_100000_people,per 100 000 people
+motorcycle_deaths_per_100000_people,per 100 000 people
+murdered_children_0_14_per_100000_people,per 100 000 people
+murdered_15_29_per_100000_people,per 100 000 people
+murdered_30_44_per_100000_people,per 100 000 people
+murdered_45_59_per_100000_people,per 100 000 people
+murdered_60plus_per_100000_people,per 100 000 people
+suicide_age_0_14_per_100000_people,per 100 000 people
+suicide_age_15_29_per_100000_people,per 100 000 people
+suicide_age_30_44_per_100000_people,per 100 000 people
+suicide_age_45_59_per_100000_people,per 100 000 people
+suicide_age_60plus_per_100000_people,per 100 000 people
+traffic_mortality_children_0_14_per_100000_people,per 100 000 people
+traffic_mortality_15_29_per_100000_people,per 100 000 people
+traffic_mortality_30_44_per_100000_people,per 100 000 people
+traffic_mortality_45_59_per_100000_people,per 100 000 people
+traffic_mortality_60plus_per_100000_people,per 100 000 people
+ifpri_underweight_children,
+maternal_mortality_ratio_who,deaths per 100 000 live births
+battle_deaths_per_100_000,per 100 000
+armed_forces_personnel_total,
+armed_forces_personnel_percent_of_labor_force,% of labor force
+murder_total_deaths,
+suicide_total_deaths,total deaths
+traffic_total_deaths,total deaths
+debt_servicing_costs_percent_of_exports_and_net_income_from_abroad,% of exports and net income from abroad
+external_debt_total_us_not_inflation_adjusted,"US$, not inflation-adjusted"
+present_value_of_debt_percent_of_gni,% of GNI
+exports_unit_value_index_2000100,"index, 2000=100"
+imports_unit_value_index_2000100,"index, 2000=100"
+net_barter_terms_of_trade_2000_100,2000 = 100
+dead_kids_per_woman,
+surviving_kids_per_woman,
+20120905_extreme_poverty_percent_people_below_125_a_day,% people below $1.25 a day
+alternative_gdp_per_capita_ppp_wb,
+alternative_gdp_per_capita_ppp_pwt_7_1,
+number_of_child_deaths,
+energy_supply_per_person_toe,tons in oil eqv.
+energy_from_solid_biofuels_percent,%
+residential_energy_use_percent,%
+life_expectancy_at_birth_data_from_ihme,
+children_per_woman_temporary_update,
+alternative_gdp_per_capita_ppp_pwt_8_0,
+life_expectancy_male,
+life_expectancy_female,
+gdp_total_yearly_growth,% of total GDP
+gdp_per_capita_yearly_growth,% of GDP/capita
+yearly_co2_emissions_1000_tonnes,1000 tonnes
+child_mortality_0_5_year_olds_more_years_version_7,deaths under age 5 per 1 000 births
+number_of_people_in_poverty,millions
+income_per_person_long_series,
+newborn_mortality_rate_per_1000,
+newborn_deaths,
+sg_population,
+sg_gini,
+sg_gdp_p_cap_const_ppp2011_dollar,
+description,
+indicator_url,
+name,
+unit,
+interpolation,
+name_short,
+name_long,
+color,
+gapminder_list,
+alternative_1,
+alternative_2,
+alternative_3,
+alternative_4_cdiac,
+pandg,
+god_id,
+alt_5,
+upper_case_name,
+code,
+number,
+gwid,
+arb1,
+arb2,
+arb3,
+arb4,
+arb5,
+arb6,
+domain,
+rank,
+scales,
+drill_up,
+time,
+shape_lores_svg,
+temp_string,
+tags,
