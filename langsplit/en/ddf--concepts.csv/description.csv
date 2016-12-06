@@ -339,7 +339,7 @@ broadband_subscribers,"Broadband subscribers are the total number of broadband s
 broadband_subscribers_per_100_people,"Broadband subscribers are the total number of broadband subscribers with a digital subscriber line, cable modem, or other high-speed technologies, although definitions may vary from country to country. "
 cell_phones_total,The number of subscribers to a service providing access to the telephone network using cellular technology. 
 cell_phones_per_100_people,The number of subscribers per 100 people to a service providing access to the telephone network using cellular technology. 
-fixed_line_and_mobile_phone_subscribers_per_100_people,Fixes lines connect a customer's equipment to the public switched telephone network. Mobile phone subscribers refer to users of portable telephones subscribing to the telephone network using cellular technology. 
+fixed_line_and_mobile_phone_subscribers_per_100_people,Fixed lines connect a customer's equipment to the public switched telephone network. Mobile phone subscribers refer to users of portable telephones subscribing to the telephone network using cellular technology. 
 internet_users_total_number,Internet users are people with access to the worldwide network.
 internet_users_per_100_people,Internet users are people with access to the worldwide network.
 personal_computers_total,Personal computers (total)
