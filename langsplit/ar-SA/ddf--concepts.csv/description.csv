@@ -394,7 +394,7 @@
 "sex_ratio_15_49_years","معدل الجنس (الذكور مقسوما على الإناث، لكل 100) ضمن السكان بين 15 و49 عاما من العمر."
 "sex_ratio_above_50_years","معدل الجنس (الذكور مقسوما على الإناث، لكل 100) ضمن السكان فوق 50 عاما من العمر."
 "population_in_urban_agglomerations_m_1_million_percent_of_total","عدد السكان في التكتلات الحضرية > 1 مليون (% من إجمالي السكان)"
-"urban_population",""
+"urban_population","سكان المناطق الحضرية هي عدد السكان في منتصف العام للمناطق المعرّفة كمناطق حضرية في كل بلد على حدة ومقدمة بالتقارير إلى الأمم المتحدة."
 "urban_population_percent_of_total",""
 "urban_population_growth_annual_percent",""
 "children_and_elderly_per_100_adults",""
