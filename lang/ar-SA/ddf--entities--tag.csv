@@ -1,0 +1,85 @@
+tag,name
+categorizations,التصنيفات
+economy,الاقتصاد
+education,التعليم
+energy,الطاقة
+environment,البيئة
+advanced,للمستخدمين المتقدمين
+health,الصحة
+infrastructure,البنية التحتية
+population,السكان
+society,المجتمع
+work,العمل
+aid_given,المعونة المقدمة
+aid_received,المعونة المستلمة
+debt_trade,الدَّين والتجارة
+economic_situation,الوضع الاقتصادي
+incomes_growth,الدخل و النمو
+poverty_inequality,الفقر وعدم المساواة
+sectors,القطاعات
+achievement,الإنجاز
+gender_equality,المساواة بين الجنسين
+literacy,معرفة القراءة والكتابة
+mean_years_in_school,متوسط السنوات في المدرسة
+school_enrolment,الالتحاق بالمدارس
+schooling_cost,تكاليف التعليم
+coal,الفحم
+electricity,الكهرباء
+hydro,المائية
+natural_gas,الغاز الطبيعي
+nuclear,النووية
+oil,النفط
+total,الإجمالي
+disasters,الكوارث
+emissions,الانبعاثات
+forestry,الحراجة
+geography,الجغرافيا
+environment_water,المياه
+advanced_debt_trade,الديون المتقدمة والتجارة
+alternative_child_mortality_data,بيانات وفيات الأطفال البديلة
+alternative_demography_indicators,المؤشرات الديمغرافية البديلة
+alternative_energy,الطاقة البديلة
+alternative_gdp_data,بيانات الناتج المحلي الإجمالي البديلة
+alternative_health_data,البيانات الصحية البديلة
+alternative_other_data,بيانات بديلة أخرى
+alternative_poverty_measures,التدابير البديلة للفقر
+data_quality_use_as_color,نوعية البيانات (يفضل استخدامها كلون)
+economic_growth,النمو الاقتصادي
+families,الأُسر
+geography_infrastructure,الجغرافيا والبنية التحتية
+injury_deaths_by_gender_age_road_user,الوفيات الناجمة عن الإصابات حسب نوع الجنس والسن ومستخدم الطريق
+projections,الإسقاطات
+years_use_as_color,سنوات (يفضل استخدامها كلون)
+cancer_female,السرطان، الإناث
+cancer_male,السرطان، الذكور
+causes_of_child_deaths,أسباب وفيات الأطفال
+causes_of_newborn_deaths,أسباب وفيات حديثي الولادة
+health_economics,اقتصاديات الصحة
+hiv,فيروس نقص المناعة البشرية
+injuries_and_accidents,الإصابات والحوادث
+malaria,الملاريا
+maternal_health,صحة الأمهات
+mental_health,الصحة العقلية
+newborn_infants,الرضع وحديثو الولادة
+nutrition,التغذية
+risk_factors,عوامل الخطر
+tb_tuberculosis,السل
+teeth,الأسنان
+vaccine,اللقاح
+communication,الاتصالات
+sanitation,الصرف الصحي
+traffic,حركة المرور
+infrastructure_water,المياه
+both_sexes_by_age,كلا الجنسين حسب العمر (%)
+both_sexes_by_age_total,كلا الجنسين حسب العمر (المجموع)
+female_by_age,الإناث حسب العمر (%)
+male_by_age,الذكور حسب العمر (%)
+population_growth,النمو السكاني
+sex_ratio,نسبة الجنس
+urbanization,التحضر
+war_peace,الحرب والسلام
+employment_by_sector,العمالة حسب القطاع
+employment_by_status,العمالة حسب الحالة
+employment_rate,معدل العمالة
+labour_force_participation,المشاركة في القوة العاملة
+unemployment,البطالة
