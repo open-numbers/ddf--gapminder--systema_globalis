@@ -462,6 +462,7 @@ concept,tags,ddf--concepts.csv
 "geo,time",sex_ratio_15_49_years,ddf--datapoints--sex_ratio_15_49_years--by--geo--time.csv
 "geo,time",sex_ratio_above_50_years,ddf--datapoints--sex_ratio_above_50_years--by--geo--time.csv
 "geo,time",sex_ratio_all_age_groups,ddf--datapoints--sex_ratio_all_age_groups--by--geo--time.csv
+"geo,time",gapminder_gini,ddf--datapoints--gapminder_gini--by--geo--time.csv
 "geo,time",smoking_adults_percent_of_population_over_age_15,ddf--datapoints--smoking_adults_percent_of_population_over_age_15--by--geo--time.csv
 "geo,time",smoking_men_percent_of_men_over_age_15,ddf--datapoints--smoking_men_percent_of_men_over_age_15--by--geo--time.csv
 "geo,time",smoking_women_percent_of_women_over_age_15,ddf--datapoints--smoking_women_percent_of_women_over_age_15--by--geo--time.csv

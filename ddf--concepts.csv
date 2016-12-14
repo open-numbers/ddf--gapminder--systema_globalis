@@ -542,6 +542,7 @@ number_of_people_in_poverty,Number of people in poverty,measure,,https://docs.go
 income_per_person_long_series,Income per person (long series),measure,,https://docs.google.com/spreadsheet/pub?key=1SKMoV61HUNwWfYNCZs2M9zgMWqVrs9YrbJxs5HQbJSQ,,"[""linear"", ""log""]",,,,"Income per person, version 15, including historical data & projections",alternative_gdp_data
 newborn_mortality_rate_per_1000,Newborn mortality rate per 1000,measure,,https://docs.google.com/spreadsheet/pub?key=1S3Kcw96vp5-fZbaM7Lck_06IbJ8DagThGI5KHnzeSps,,"[""linear"", ""log""]",,,,Neonatal mortality rate. Children dying within the first 28 days per 1000 live births.,newborn_infants
 newborn_deaths,Newborn deaths,measure,,https://docs.google.com/spreadsheet/pub?key=1iTvolhgIMta3MmsoPkGnewJiaybev3MvR9e_7mxZ48o,,"[""linear"", ""log""]",,,,Neonatal deaths Children dying within the first 28 days.,newborn_infants
+gapminder_gini,Gapminder gini,measure,,https://github.com/open-numbers/ddf--gapminder--gini,,"[""linear""]",,,,,_none
 description,Description,string,,,,,,,,,_none
 indicator_url,Indicator url,string,,,,,,,,,_none
 name,Name,string,,https://github.com/open-numbers/ddf--gapminder--dim_geo_countries_and_groups/blob/master/ddf--list--geo--country.csv,,,,,,,_none

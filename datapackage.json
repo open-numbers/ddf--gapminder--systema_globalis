@@ -9554,6 +9554,27 @@
 			}
 		},
 		{
+			"path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
+			"name": "ddf--datapoints--gapminder_gini--by--geo--time",
+			"schema": {
+				"fields": [
+					{
+						"name": "geo"
+					},
+					{
+						"name": "time"
+					},
+					{
+						"name": "gapminder_gini"
+					}
+				],
+				"primaryKey": [
+					"geo",
+					"time"
+				]
+			}
+		},
+		{
 			"path": "ddf--datapoints--smoking_adults_percent_of_population_over_age_15--by--geo--time.csv",
 			"name": "ddf--datapoints--smoking_adults_percent_of_population_over_age_15--by--geo--time",
 			"schema": {
