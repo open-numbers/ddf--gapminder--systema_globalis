@@ -7,12 +7,12 @@ import os
 import json
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s -%(levelname)s- %(message)s',
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s -%(levelname)s- %(message)s',
                     datefmt="%H:%M:%S"
                     )
 
 out_dir = '../../'
-recipe_file = '../recipes/recipe_main_serve_section.yaml'
+recipe_file = '../recipes/recipe_main.yaml'
 
 if __name__ == '__main__':
     # removing old files
