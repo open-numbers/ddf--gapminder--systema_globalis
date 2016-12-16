@@ -1,4 +1,4 @@
-@@,geo,time,cell_phones_total,changes
+@@,geo,time,cell_phones_total,changes(%)
 +++,afg,1960,0,
 ...,...,...,...,
 ->,afg,2010,13000000->10215840,21.42

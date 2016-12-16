@@ -1,4 +1,4 @@
-@@,geo,time,aid_received_total_us_inflation_adjusted,changes
+@@,geo,time,aid_received_total_us_inflation_adjusted,changes(%)
 ->,afg,1983,39560000->43670000,10.39
 ->,afg,1986,6840000->7990000,16.81
 +++,afg,2011,6784940000,

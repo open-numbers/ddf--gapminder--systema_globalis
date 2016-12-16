@@ -15,7 +15,7 @@ def diff(lines):
             if l.startswith('+++,') or l.startswith('---,') or '...' in l:
                 keep.append(l)
             if l.startswith('@'):  # add header in header line
-                l = l+'changes'
+                l = l+'changes(%)'
                 keep.append(l)
         else:
             numbers = l.split(',')[-1]

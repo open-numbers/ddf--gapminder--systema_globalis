@@ -1,4 +1,4 @@
-@@,geo,time,tax_revenue_percent_of_gdp,changes
+@@,geo,time,tax_revenue_percent_of_gdp,changes(%)
 ->,afg,2008,5.226->6.03943,15.57
 ->,afg,2009,7.266->8.435,16.09
 +++,afg,2011,8.85457,

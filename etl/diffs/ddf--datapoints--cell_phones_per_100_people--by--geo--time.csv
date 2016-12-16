@@ -1,4 +1,4 @@
-@@,geo,time,cell_phones_per_100_people,changes
+@@,geo,time,cell_phones_per_100_people,changes(%)
 +++,afg,1960,0,
 ...,...,...,...,
 ->,afg,2002,0.1015->0.1126,10.94

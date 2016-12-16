@@ -1,4 +1,4 @@
-@@,geo,time,poverty_percent_people_below_2_a_day,changes
+@@,geo,time,poverty_percent_people_below_2_a_day,changes(%)
 +++,alb,1996,12.36,
 ---,alb,1997,6.5,
 ->,alb,2002,8.76->16.61,89.61

@@ -1,4 +1,4 @@
-@@,geo,time,malnutrition_weight_for_age_percent_of_children_under_5,changes
+@@,geo,time,malnutrition_weight_for_age_percent_of_children_under_5,changes(%)
 +++,afg,1997,44.9,
 ->,afg,2004,12.2->32.9,169.67
 +++,alb,1997,7.1,

@@ -1,4 +1,4 @@
-@@,geo,time,energy_use_per_person,changes
+@@,geo,time,energy_use_per_person,changes(%)
 ->,ago,2004,0.612->0.53976,11.80
 ->,ago,2005,0.5686->0.50992,10.32
 ->,ago,2007,0.6258->0.56155,10.27
