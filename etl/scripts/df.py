@@ -11,10 +11,11 @@ def diff(lines):
     for l in lines:
         l = l.strip()
         if '->' not in l:
+            l = l+','
             if l.startswith('+++,') or l.startswith('---,') or '...' in l:
                 keep.append(l)
-            if l.startswith('@'):
-                l = l+',changes'
+            if l.startswith('@'):  # add header in header line
+                l = l+'changes'
                 keep.append(l)
         else:
             numbers = l.split(',')[-1]
