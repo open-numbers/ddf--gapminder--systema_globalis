@@ -222,7 +222,7 @@ ingredients:
               # - fixed_line_and_mobile_phone_subscribers_per_100_people
               - pump_price_for_gasoline_us_per_liter
               # - energy_use_total
-              - internet_users_total_number
+              # - internet_users_total_number
 
 cooking:
     datapoints:
@@ -238,14 +238,13 @@ cooking:
                   year: time
           ingredients: [wdi-datapoints-indicators-translated]
           result: wdi-datapoints-translated_
-          # TODO: align geo
         - procedure: translate_column
           ingredients:
               [wdi-countries]
           options:
               column: short_name
               # column: country
-              target_column: geo 
+              target_column: geo
               dictionary:
                 base: gw-countries
                 key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
@@ -271,7 +270,6 @@ cooking:
                   energy_use_per_person: "energy_use_per_person / 1000"
                   ratio_of_girls_to_boys_in_primary_and_secondary_education_perc:
                       ratio_of_girls_to_boys_in_primary_and_secondary_education_perc * 100
-                  internet_users_per_100_people: "internet_users_total_number * 100"
                   # fixed_line_and_mobile_phone_subscribers_per_100_people: |
                   #     it_mlt_main_p2 + it_cel_sets_p2
           result: wdi-datapoints-oped
