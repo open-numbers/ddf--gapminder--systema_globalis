@@ -462,7 +462,7 @@
 "under_five_mortality_from_ihme_per_1000_born","وفاة الأطفال تحت سن الخامسة لكل 1,000 ولادة حية. التقديرات والتوقعات من معدات القياسات الصحية والتقييم، 1970-2015."
 "old_version_of_income_per_person_version_3","نسخة الدخل للفرد المستخدمة قبل 22 ديسمبر 2008 (النسخة 3). الناتج المحلي للفرد حسب تكافؤات القوة الشرائية (الأسعار الجارية الدولية للدولار, بالأسعار الثابتة لعام 1990). "
 "old_version_of_income_per_person_version_8","نسخة الدخل للفرد المستخدمة قبل 12 يوليو 2010 (النسخة 8). الناتج المحلي للفرد حسب تكافؤات القوة الشرائية (الأسعار الجارية الدولية للدولار, بالأسعار الثابتة لعام 2050). "
-"alternative_gdppercapita_ppp_inflation_adjusted_from_pwt",""
+"alternative_gdppercapita_ppp_inflation_adjusted_from_pwt","يعبَّر عنه بالدولار الدولية (تكافؤ القوة الشرائية) معدَّلا حسب التضخم (بأسعار عام 2000). ويقيس المؤشر نفس الشيء الذي يقيسه ""الدخل للفرد""، لكن مع اختلاف المصدر: جداول بين العالمية 6.2."
 "subsistence_incomes_per_person",""
 "alternative_poverty_percent_below_nationally_defined_poverty",""
 "data_quality_income_per_person",""
