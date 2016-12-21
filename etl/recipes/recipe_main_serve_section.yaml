@@ -1,0 +1,57 @@
+# recipe for dataset
+info:
+    id: sg-dataset
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+    - recipe_gw_lex_only.yaml
+    - recipe_gw_gdp.yaml
+    - recipe_gw_co2.yaml
+    - recipe_gw_pop.yaml
+
+ingredients:
+    - id: gw-concepts-all
+      dataset: ddf--gapminder--gapminder_world
+      key: concept
+      value: "*"
+    - id: gw-datapoints-all
+      dataset: ddf--gapminder--gapminder_world
+      key: "geo,time"
+      value: "*"
+
+cooking:
+    datapoints:
+        - procedure: merge
+          ingredients:
+              - gw-datapoints-all
+              - lex-datapoints-final
+              - gdp-datapoints-final
+              - pop-datapoints-final
+              - co2-datapoints-final
+          result: all_datapoints_merged
+    concepts:
+        - procedure: merge
+          ingredients:
+              - gw-concepts-all
+              - gw-concepts-geo
+              - gw-concepts-discrete
+              - lex-concepts-final
+              - gdp-concepts-final
+              - pop-concepts-final
+              - co2-concepts-final
+          options:
+              deep: true
+          result: all_concepts_merged
+
+serving:
+    - all_concepts_merged
+    - all_datapoints_merged
+    - gw-entities-geo
