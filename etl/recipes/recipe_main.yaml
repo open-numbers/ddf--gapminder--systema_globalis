@@ -16,7 +16,6 @@ include:
     - recipe_gw_gdp.yaml
     - recipe_gw_co2.yaml
     - recipe_gw_pop.yaml
-    - recipe_wdi.yaml
     # - recipe_bp.yaml
     # - recipe_cdiac.yaml
     # - recipe_cme.yaml
@@ -30,6 +29,7 @@ include:
     # - recipe_uis.yaml
     # - recipe_unaids.yaml
     # - recipe_unpop.yaml
+    # - recipe_wdi.yaml
     # - recipe_transpint.yaml
     # - recipe_imperial.yaml
     # - recipe_fao.yaml
@@ -49,14 +49,12 @@ ingredients:
 cooking:
     datapoints:
         - procedure: merge
-          result: all-datapoints-merged
           ingredients:
               - gw-datapoints-all
               - lex-datapoints-final
               - gdp-datapoints-final
               - pop-datapoints-final
               - co2-datapoints-final
-              - wdi-datapoints-final
               # - bp-datapoints-final
               # - cdiac-datapoints-final
               # - cme-datapoints-final
@@ -73,6 +71,7 @@ cooking:
               # - uis-datapoints-final
               # - unaids-datapoints-final
               # - unpop-datapoints-final
+              # - wdi-datapoints-final
               # - dont-panic-datapoints
           # options:
           #     deep: true
@@ -80,10 +79,8 @@ cooking:
         - procedure: identity
           ingredients:
               - gw-entities-geo
-          result: entities-final
     concepts:
         - procedure: merge
-          result: all-concepts-merged
           ingredients:
               - gw-concepts-all
               - gw-concepts-geo
