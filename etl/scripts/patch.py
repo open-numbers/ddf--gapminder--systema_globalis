@@ -94,8 +94,8 @@ def do_all_changes():
     concepts_tag_column()
     remove_yearly_co2_emissions_tonnes()
     apply_patches()
-    print('Done.')
 
 
 if __name__ == '__main__':
     do_all_changes()
+    print('Done.')
