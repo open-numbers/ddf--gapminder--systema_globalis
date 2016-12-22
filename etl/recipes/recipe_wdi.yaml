@@ -19,12 +19,17 @@ include:
 # define the initial inputs of the recipe
 ingredients:
     # WDI
+    - id: wdi-countries
+      dataset: *d1
+      key:
+          - country
+      value: '*'
     - id: wdi-datapoints
       dataset: *d1
       key: "country,year"
       value:
           - ag_lnd_agri_zs
-          - bm_klt_dinv_gd_zs
+          - bm_klt_dinv_wd_gd_zs # was bm_klt_dinv_gd_zs in 2016-02
           - bx_klt_dinv_wd_gd_zs
           - cm_mkt_lcap_gd_zs
           - dt_dod_dect_cd
@@ -114,7 +119,7 @@ ingredients:
           - si_dst_frst_20
           - si_pov_rugp
           - si_pov_urgp
-          - it_mlt_main_p2 + it_cel_sets_p2
+          - it_mlt_main_p2
           - ep_pmp_sgas_cd
           # - eg_use_comm_gd_pd_kd
           - it_net_user_p2
@@ -124,7 +129,7 @@ ingredients:
       key: concept
       value: "*"
       filter:
-          concept:
+          concept:  &CONCEPTS
               - agricultural_land_percent_of_land_area
               - foreign_direct_investment_net_outflows_percent_of_gdp
               - foreign_direct_investment_net_inflows_percent_of_gdp
@@ -157,7 +162,6 @@ ingredients:
               - inflation_annual_percent
               - total_gdp_us_inflation_adjusted
               - gdppercapita_us_inflation_adjusted
-              - gdp_per_capita_yearly_growth
               - gdppercapita_growth_percent_per_year
               - alternative_gdp_per_capita_ppp_wb
               - total_gni_ppp_current_international
@@ -215,10 +219,10 @@ ingredients:
               - income_share_of_richest_20percent
               - rural_poverty_percent_rural_people_below_national_rural
               - urban_poverty_percent_urban_people_below_national_urban
-              - fixed_line_and_mobile_phone_subscribers_per_100_people
+              # - fixed_line_and_mobile_phone_subscribers_per_100_people
               - pump_price_for_gasoline_us_per_liter
               # - energy_use_total
-              - internet_users_total_number
+              # - internet_users_total_number
 
 cooking:
     datapoints:
@@ -234,24 +238,53 @@ cooking:
                   year: time
           ingredients: [wdi-datapoints-indicators-translated]
           result: wdi-datapoints-translated_
+        - procedure: translate_column
+          ingredients:
+              [wdi-countries]
+          options:
+              column: short_name
+              # column: country
+              target_column: geo
+              dictionary:
+                base: gw-countries
+                key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                      'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                      'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
+                      'iso3166_1_alpha3', 'iso3166_2'
+                     ]
+                # key: country
+                value: country
+          result: wdi-country-aligned
+        - procedure: translate_column
+          ingredients: [wdi-datapoints-translated_]
+          options:
+              column: geo
+              dictionary:
+                base: wdi-country-aligned
+                key: country
+                value: geo
+          result: wdi-datapoints-aligned
         - procedure: run_op
           ingredients:
-              - wdi-datapoints-translated_
+              - wdi-datapoints-aligned
           options:
               op:
                   energy_use_per_person: "energy_use_per_person / 1000"
                   ratio_of_girls_to_boys_in_primary_and_secondary_education_perc:
                       ratio_of_girls_to_boys_in_primary_and_secondary_education_perc * 100
-                  internet_users_total_number: "internet_users_total_number * 100"
-          result: wdi-datapoints-final
-    entities:
-        - procedure: identity
-          ingredients: [gw-entities-geo]
-    concepts:
-        - procedure: merge
-          ingredients:
-              - gw-concepts-discrete
-              - gw-concepts-geo
-              - gw-concepts-wdi
+                  # fixed_line_and_mobile_phone_subscribers_per_100_people: |
+                  #     it_mlt_main_p2 + it_cel_sets_p2
+          result: wdi-datapoints-oped
+        - procedure: filter_item
+          ingredients: [wdi-datapoints-oped]
           options:
-              deep: true
+              items: *CONCEPTS
+          result: wdi-datapoints-final
+    # concepts:
+    #     - procedure: merge
+    #       ingredients:
+    #           - gw-concepts-discrete
+    #           - gw-concepts-geo
+    #           - gw-concepts-wdi
+    #       options:
+    #           deep: true

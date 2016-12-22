@@ -1,5 +1,5 @@
 {
-    "it_net_user_p2": "internet_users_total_number",
+    "it_net_user_p2": "internet_users_per_100_people",
     "si_pov_urgp": "urban_poverty_percent_urban_people_below_national_urban",
     "si_dst_03rd_20": "income_share_of_2nd_richest_20percent",
     "dt_dod_pvlx_gn_zs": "present_value_of_debt_percent_of_gni",
@@ -42,7 +42,7 @@
     "ne_imp_gnfs_zs": "imports_percent_of_gdp",
     "sh_sta_acsn": "improved_sanitation_overall_access_percent",
     "ny_gnp_pcap_cd": "gnipercapita_atlasmethod_current_us",
-    "bm_klt_dinv_gd_zs": "foreign_direct_investment_net_outflows_percent_of_gdp",
+    "bm_klt_dinv_wd_gd_zs": "foreign_direct_investment_net_outflows_percent_of_gdp",
     "ep_pmp_sgas_cd": "pump_price_for_gasoline_us_per_liter",
     "sh_sta_acsn_ur": "improved_sanitation_urban_access_percent",
     "ag_srf_totl_k2": "surface_area_sq_km",
