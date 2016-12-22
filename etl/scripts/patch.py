@@ -51,7 +51,7 @@ def concepts_tag_column():
 
     concs['tags'] = concs['tags'].fillna('_none')
 
-    concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'))
+    concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'), encoding='utf8')
 
 
 def remove_yearly_co2_emissions_tonnes():
@@ -84,7 +84,7 @@ def apply_patches():
 
             if os.path.exists(local_path):
                 new_df = apply_patch(local_path, patch_path)
-                new_df.to_csv(local_path, index=False)
+                new_df.to_csv(local_path, index=False, encoding='utf-8')
             else:
                 shutil.copyfile(patch_path, local_path)
 

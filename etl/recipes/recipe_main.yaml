@@ -80,6 +80,8 @@ cooking:
         - procedure: identity
           ingredients:
               - gw-entities-geo
+          options:
+              copy: true
           result: entities-final
     concepts:
         - procedure: merge
