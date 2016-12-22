@@ -51,13 +51,19 @@ def concepts_tag_column():
 
     concs['tags'] = concs['tags'].fillna('_none')
 
+    # remove concepts from dont panic poverty
+    concs = concs.drop(['sg_population', 'sg_gini', 'sg_gdp_p_cap_const_ppp2011_dollar'])
+
     concs.to_csv(os.path.join(out_dir, 'ddf--concepts.csv'), encoding='utf8')
 
 
-def remove_yearly_co2_emissions_tonnes():
-    """remove datapoints for yearly_co2_emissions_tonnes"""
+def remove_unneeded_dps():
+    """remove some datapoints"""
     # FIXME: remove this function when chef is ready for this kind of tasks.
     os.remove(os.path.join(out_dir, 'ddf--datapoints--yearly_co2_emissions_tonnes--by--geo--time.csv'))
+    os.remove(os.path.join(out_dir, 'ddf--datapoints--sg_gdp_p_cap_const_ppp2011_dollar--by--geo--time.csv'))
+    os.remove(os.path.join(out_dir, 'ddf--datapoints--sg_population--by--geo--time.csv'))
+    os.remove(os.path.join(out_dir, 'ddf--datapoints--sg_gini--by--geo--time.csv'))
 
 
 def apply_patches():
@@ -69,11 +75,15 @@ def apply_patches():
             'ddf--concepts.1.csv',
             'ddf--concepts.2.csv',
             'ddf--concepts.3.csv',
-            'ddf--concepts.4.csv'
+            'ddf--concepts.4.csv',
+            'ddf--concepts.5.csv'
         ],
         'ddf--entities--tag.csv': [
             'ddf--entities--tag.0.csv'
         ],
+        'ddf--index.csv' : [
+            'ddf--inedx.0.csv'
+        ]
     }
     # apply the patches
     for f, ps in patches.items():
@@ -92,7 +102,7 @@ def apply_patches():
 def do_all_changes():
     print("applying patches to DDF...")
     concepts_tag_column()
-    remove_yearly_co2_emissions_tonnes()
+    remove_unneeded_dps()
     apply_patches()
 
 
