@@ -17,6 +17,7 @@ include:
     - recipe_gw_co2.yaml
     - recipe_gw_pop.yaml
     - recipe_wdi.yaml
+    - recipe_gw_gini.yaml
     # - recipe_bp.yaml
     # - recipe_cdiac.yaml
     # - recipe_cme.yaml
@@ -57,6 +58,7 @@ cooking:
               - pop-datapoints-final
               - co2-datapoints-final
               - wdi-datapoints-final
+              - gini-datapoints
               # - bp-datapoints-final
               # - cdiac-datapoints-final
               # - cme-datapoints-final
@@ -80,6 +82,8 @@ cooking:
         - procedure: identity
           ingredients:
               - gw-entities-geo
+          options:
+              copy: true
           result: entities-final
     concepts:
         - procedure: merge
@@ -92,5 +96,6 @@ cooking:
               - gdp-concepts-final
               - pop-concepts-final
               - co2-concepts-final
+              - gini-concepts
           options:
               deep: true
