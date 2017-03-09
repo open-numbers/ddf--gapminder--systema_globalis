@@ -11192,8 +11192,8 @@
             }
         },
         {
-            "path": "ddf--entities--geo--country.csv",
-            "name": "ddf--entities--geo--country",
+            "path": "ddf--entities--geo--country--un_state.csv",
+            "name": "ddf--entities--geo--country--un_state",
             "schema": {
                 "fields": [
                     {
