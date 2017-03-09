@@ -11284,6 +11284,9 @@
                         "name": "is--country"
                     },
                     {
+                        "name": "is--un_state"
+                    },
+                    {
                         "name": "world_4region"
                     },
                     {
@@ -11294,24 +11297,6 @@
                     }
                 ],
                 "primaryKey": "country"
-            }
-        },
-        {
-            "path": "ddf--entities--geo--un_state.csv",
-            "name": "ddf--entities--geo--un_state",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "un_state"
-                    },
-                    {
-                        "name": "name"
-                    },
-                    {
-                        "name": "is--un_state"
-                    }
-                ],
-                "primaryKey": "un_state"
             }
         },
         {
