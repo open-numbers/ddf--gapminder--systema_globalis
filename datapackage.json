@@ -11192,8 +11192,8 @@
             }
         },
         {
-            "path": "ddf--entities--geo--country--un_state.csv",
-            "name": "ddf--entities--geo--country--un_state",
+            "path": "ddf--entities--geo--country.csv",
+            "name": "ddf--entities--geo--country",
             "schema": {
                 "fields": [
                     {
@@ -11284,7 +11284,7 @@
                         "name": "is--country"
                     },
                     {
-                        "name": "is--un_state"
+                        "name": "un_state"
                     },
                     {
                         "name": "world_4region"
