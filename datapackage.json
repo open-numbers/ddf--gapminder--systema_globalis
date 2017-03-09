@@ -11297,6 +11297,24 @@
             }
         },
         {
+            "path": "ddf--entities--geo--un_state.csv",
+            "name": "ddf--entities--geo--un_state",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "un_state"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "is--un_state"
+                    }
+                ],
+                "primaryKey": "un_state"
+            }
+        },
+        {
             "path": "ddf--entities--geo--g77_and_oecd_countries.csv",
             "name": "ddf--entities--geo--g77_and_oecd_countries",
             "schema": {
