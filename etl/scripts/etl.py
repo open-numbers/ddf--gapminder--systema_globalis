@@ -21,15 +21,10 @@ if __name__ == '__main__':
             os.remove(os.path.join(out_dir, f))
 
     recipe = chef.build_recipe(recipe_file)
-    res = chef.run_recipe(recipe)
-    print('saving result to disk...')
-    chef.dish_to_csv(res, out_dir)
+    res = chef.run_recipe(recipe, serve=True, outpath=out_dir)
 
     patch.do_all_changes()
 
-    # TODO: keep older datapacakge's basic info(author etc)
-    datapackage = get_datapackage(out_dir)
-    with open(os.path.join(out_dir, 'datapackage.json'), 'w', encoding='utf8') as f:
-        json.dump(datapackage, f, indent=4, ensure_ascii=False)
+    datapackage = get_datapackage(out_dir, use_existing=True, to_disk=True)
 
     print('Done.')
