@@ -64,6 +64,16 @@ def remove_unneeded_dps():
     os.remove(os.path.join(out_dir, 'ddf--datapoints--sg_gdp_p_cap_const_ppp2011_dollar--by--geo--time.csv'))
     os.remove(os.path.join(out_dir, 'ddf--datapoints--sg_population--by--geo--time.csv'))
     os.remove(os.path.join(out_dir, 'ddf--datapoints--sg_gini--by--geo--time.csv'))
+    os.remove(
+        os.path.join(
+            out_dir,
+            'ddf--datapoints--co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp--by--geo--time.csv'))
+    os.remove(
+        os.path.join(
+            out_dir,
+                'ddf--datapoints--extreme_poverty_percent_people_below_125_a_day--by--geo--time.csv'))
+    os.remove(os.path.join(out_dir, 'ddf--datapoints--gnipercapita_constant_2000_us--by--geo--time.csv'))
+    os.remove(os.path.join(out_dir, 'ddf--datapoints--poverty_percent_people_below_2_a_day--by--geo--time.csv'))
 
 
 def apply_patches():
@@ -76,7 +86,8 @@ def apply_patches():
             'ddf--concepts.2.csv',
             'ddf--concepts.3.csv',
             'ddf--concepts.4.csv',
-            'ddf--concepts.5.csv'
+            'ddf--concepts.5.csv',
+            'ddf--concepts.6.csv'
         ],
         'ddf--entities--tag.csv': [
             'ddf--entities--tag.0.csv'

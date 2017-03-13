@@ -5,6 +5,7 @@ ingredients:
       value: "*"
       filter:
           concept:
+              - un_state
               - geographic_regions
               - income_groups
               - landlocked
@@ -65,12 +66,10 @@ ingredients:
 
     - id: gw-entities-geo
       dataset: ddf--gapminder--geo_entity_domain
-      key:
-          - geo
+      key: geo
       value: "*"
 
     - id: gw-countries
       dataset: ddf--gapminder--geo_entity_domain
-      key:
-          - country
+      key: country
       value: "*"

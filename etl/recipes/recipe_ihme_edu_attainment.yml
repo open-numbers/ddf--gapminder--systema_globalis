@@ -1,0 +1,141 @@
+info:
+    id: cme-sg-dataset
+    base:
+        - &d1 ddf--gapminder--gapminder_world
+        - &d2 ddf--ihme--edu_attainment
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # the path to search ddf datasets
+    ddf_dir: /Users/semio/src/work/Gapminder
+        
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: edu-datapoints
+      dataset: *d2
+      key: location, age_group, sex, year
+      value: '*'
+    - id: edu-location
+      dataset: *d2
+      key: location
+      value: '*'
+
+cooking:
+    datapoints:
+        - procedure: translate_column
+          ingredients:
+              - edu-location
+          result: edu-location-aligned
+          options:
+              column: location_name
+              target_column: geo
+              dictionary:
+                  base: gw-countries
+                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
+                        'iso3166_1_alpha3', 'iso3166_2'
+                       ]
+                  value: country
+        - procedure: translate_column
+          ingredients:
+              - edu-datapoints
+          result: edu-datapoints-translated
+          options:
+              column: location
+              dictionary:
+                  base: edu-location-aligned
+                  key: location
+                  value: geo
+        - procedure: translate_header
+          ingredients:
+              - edu-datapoints-translated
+          result: edu-datapoints-aligned
+          options:
+              dictionary:
+                  location: geo
+                  year: time
+        - procedure: filter_row
+          ingredients:
+              - edu-datapoints-aligned
+          result: edu-datapoints-filtered
+          options:
+              dictionary:
+                  mean_years_in_school_men_25_to_34_years:
+                      from: education_per_capita_mean
+                      age_group: 25_to_34
+                      sex: males
+                  mean_years_in_school_women_25_to_34_years:
+                      from: education_per_capita_mean
+                      age_group: 25_to_34
+                      sex: females
+
+                  # Below are new indicators for SG
+                  mean_years_in_school_men_15_to_24_years:
+                      from: education_per_capita_mean
+                      sex: males
+                      age_group: 15_to_24
+                  mean_years_in_school_men_35_to_44_years:
+                      from: education_per_capita_mean
+                      sex: males
+                      age_group: 35_to_44
+                  mean_years_in_school_men_45_to_54_years:
+                      from: education_per_capita_mean
+                      sex: males
+                      age_group: 45_to_54
+                  mean_years_in_school_men_55_to_64_years:
+                      from: education_per_capita_mean
+                      sex: males
+                      age_group: 55_to_64
+                  mean_years_in_school_men_65_plus_years:
+                      from: education_per_capita_mean
+                      sex: males
+                      age_group: 65_plus
+                  mean_years_in_school_women_15_to_24_years:
+                      from: education_per_capita_mean
+                      sex: females
+                      age_group: 15_to_24
+                  mean_years_in_school_women_35_to_44_years:
+                      from: education_per_capita_mean
+                      sex: females
+                      age_group: 35_to_44
+                  mean_years_in_school_women_45_to_54_years:
+                      from: education_per_capita_mean
+                      sex: females
+                      age_group: 45_to_54
+                  mean_years_in_school_women_55_to_64_years:
+                      from: education_per_capita_mean
+                      sex: females
+                      age_group: 55_to_64
+                  mean_years_in_school_women_65_plus_years:
+                      from: education_per_capita_mean
+                      sex: females
+                      age_group: 65_plus
+        - procedure: run_op
+          ingredients:
+              - edu-datapoints-filtered
+          options:
+              op:
+                  mean_years_in_school_women_percent_men_25_to_34_years: |
+                      mean_years_in_school_women_25_to_34_years / mean_years_in_school_men_25_to_34_years * 100
+          result: edu-datapoints-women_percent_men
+        - procedure: merge
+          ingredients:
+              - edu-datapoints-filtered
+              - edu-datapoints-women_percent_men
+          result: edu-datapoints-final
+
+    concepts:
+        - procedure: extract_concepts
+          ingredients:
+              - edu-datapoints-final
+          options:
+              include_keys: false
+          result: edu-concepts-final
+
+                  

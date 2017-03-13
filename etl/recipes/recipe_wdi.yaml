@@ -10,8 +10,6 @@ config:
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ../translation_dictionaries
-    # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder
 
 include:
     - recipe_gw_common.yaml
@@ -19,10 +17,13 @@ include:
 # define the initial inputs of the recipe
 ingredients:
     # WDI
+    - id: wdi-concepts
+      dataset: *d1
+      key: concept
+      value: "*"
     - id: wdi-countries
       dataset: *d1
-      key:
-          - country
+      key: country
       value: '*'
     - id: wdi-datapoints
       dataset: *d1
@@ -117,112 +118,16 @@ ingredients:
           - si_dst_05th_20
           - si_dst_frst_10
           - si_dst_frst_20
-          - si_pov_rugp
-          - si_pov_urgp
+          - si_pov_ruhc
+          - si_pov_urhc
           - it_mlt_main_p2
           - ep_pmp_sgas_cd
           # - eg_use_comm_gd_pd_kd
           - it_net_user_p2
-
-    - id: gw-concepts-wdi
+    - id: gw-concepts-all
       dataset: *d2
       key: concept
       value: "*"
-      filter:
-          concept:  &CONCEPTS
-              - agricultural_land_percent_of_land_area
-              - foreign_direct_investment_net_outflows_percent_of_gdp
-              - foreign_direct_investment_net_inflows_percent_of_gdp
-              - market_value_of_listed_companies_percent_of_gdp
-              - external_debt_total_us_not_inflation_adjusted
-              - debt_to_foreigners_by_public_and_private_percent_of_gni
-              - present_value_of_debt_percent_of_gni
-              - aid_received_percent_of_gni
-              - aid_received_total_us_inflation_adjusted
-              - aid_received_per_person_current_us
-              - debt_servicing_costs_percent_of_exports_and_net_income_from_abroad
-              - electricity_use_per_person
-              - energy_use_per_person
-              - population_in_urban_agglomerations_m_1_million_percent_of_total
-              - total_reserves_percent_of_debt_to_foreigners
-              - tax_revenue_percent_of_gdp
-              - cell_phones_total
-              - broadband_subscribers
-              - arms_imports_us_inflation_adjusted
-              - military_expenditure_percent_of_gdp
-              - arms_exports_us_inflation_adjusted
-              - exports_percent_of_gdp
-              - investments_percent_of_gdp
-              - imports_percent_of_gdp
-              - trade_balance_us_not_inflation_adjusted
-              - trade_balance_percent_of_gdp
-              - agriculture_percent_of_gdp
-              - industry_percent_of_gdp
-              - services_percent_of_gdp
-              - inflation_annual_percent
-              - total_gdp_us_inflation_adjusted
-              - gdppercapita_us_inflation_adjusted
-              - gdppercapita_growth_percent_per_year
-              - alternative_gdp_per_capita_ppp_wb
-              - total_gni_ppp_current_international
-              - gnipercapita_atlasmethod_current_us
-              - gnipercapita_constant_2000_us
-              - gnipercapita_ppp_current_international
-              - ratio_of_girls_to_boys_in_primary_and_secondary_education_perc
-              - primary_school_completion_percent_of_girls
-              - primary_school_completion_percent_of_boys
-              - primary_completion_rate_total_percent_of_relevant_age_group
-              - children_out_of_school_primary
-              - children_out_of_school_primary_female
-              - children_out_of_school_primary_male
-              - expenditure_per_student_primary_percent_of_gdp_per_person
-              - expenditure_per_student_secondary_percent_of_gdp_per_person
-              - expenditure_per_student_tertiary_percent_of_gdp_per_person
-              - medical_doctors_per_1000_people
-              - improved_sanitation_overall_access_percent
-              - improved_sanitation_rural_access_percent
-              - improved_sanitation_urban_access_percent
-              - births_attended_by_skilled_health_staff_percent_of_total
-              - malnutrition_weight_for_age_percent_of_children_under_5
-              - extreme_poverty_percent_people_below_125_a_day
-              - inequality_index_gini
-              - contraceptive_use_percent_of_women_ages_15_49
-              - population_growth_annual_percent
-              - urban_population_growth_annual_percent
-              - urban_population
-              - urban_population_percent_of_total
-              - merchandise_trade_percent_of_gdp
-              - imports_unit_value_index_2000100
-              - net_barter_terms_of_trade_2000_100
-              - exports_unit_value_index_2000100
-              - high_technology_exports_percent_of_manufactured_exports
-              - improved_water_source_overall_access_percent
-              - improved_water_source_rural_access_percent
-              - improved_water_source_urban_access_percent
-              - armed_forces_personnel_percent_of_labor_force
-              - armed_forces_personnel_total
-              - forest_area_sq_km
-              - surface_area_sq_km
-              - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
-              - cell_phones_per_100_people
-              - broadband_subscribers_per_100_people
-              - internet_users_per_100_people
-              # - ratio_of_young_literate_females_to_males_percent_ages_15_24
-              - poverty_percent_people_below_2_a_day
-              - alternative_poverty_percent_below_nationally_defined_poverty
-              - income_share_of_2nd_poorest_20percent
-              - income_share_of_2nd_richest_20percent
-              - income_share_of_middle_20percent
-              - income_share_of_poorest_10percent
-              - income_share_of_poorest_20percent
-              - income_share_of_richest_10percent
-              - income_share_of_richest_20percent
-              - rural_poverty_percent_rural_people_below_national_rural
-              - urban_poverty_percent_urban_people_below_national_urban
-              # - fixed_line_and_mobile_phone_subscribers_per_100_people
-              - pump_price_for_gasoline_us_per_liter
-              # - energy_use_total
-              # - internet_users_total_number
 
 cooking:
     datapoints:
@@ -232,18 +137,23 @@ cooking:
           ingredients: [wdi-datapoints]
           result: wdi-datapoints-indicators-translated
         - procedure: translate_header
+          ingredients:
+              - wdi-datapoints-indicators-translated
+          options:
+              dictionary: indicators_wdi_update.json
+          result: wdi-datapoints-indicators-translated-updated
+        - procedure: translate_header
           options:
               dictionary:
                   country: geo
                   year: time
-          ingredients: [wdi-datapoints-indicators-translated]
+          ingredients: [wdi-datapoints-indicators-translated-updated]
           result: wdi-datapoints-translated_
         - procedure: translate_column
           ingredients:
               [wdi-countries]
           options:
               column: short_name
-              # column: country
               target_column: geo
               dictionary:
                 base: gw-countries
@@ -252,7 +162,6 @@ cooking:
                       'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
                       'iso3166_1_alpha3', 'iso3166_2'
                      ]
-                # key: country
                 value: country
           result: wdi-country-aligned
         - procedure: translate_column
@@ -264,27 +173,142 @@ cooking:
                 key: country
                 value: geo
           result: wdi-datapoints-aligned
-        - procedure: run_op
-          ingredients:
-              - wdi-datapoints-aligned
-          options:
-              op:
-                  energy_use_per_person: "energy_use_per_person / 1000"
-                  ratio_of_girls_to_boys_in_primary_and_secondary_education_perc:
-                      ratio_of_girls_to_boys_in_primary_and_secondary_education_perc * 100
-                  # fixed_line_and_mobile_phone_subscribers_per_100_people: |
-                  #     it_mlt_main_p2 + it_cel_sets_p2
-          result: wdi-datapoints-oped
+        # - procedure: run_op
+        #   ingredients:
+        #       - wdi-datapoints-aligned
+        #   options:
+        #       op:
+        #           energy_use_per_person: "energy_use_per_person / 1000"
+        #           ratio_of_girls_to_boys_in_primary_and_secondary_education_perc:
+        #               ratio_of_girls_to_boys_in_primary_and_secondary_education_perc * 100
+        #           # fixed_line_and_mobile_phone_subscribers_per_100_people: |
+        #           #     it_mlt_main_p2 + it_cel_sets_p2
+        #   result: wdi-datapoints-oped
         - procedure: filter_item
-          ingredients: [wdi-datapoints-oped]
+          ingredients: [wdi-datapoints-aligned]
           options:
-              items: *CONCEPTS
+              items:
+                  - agricultural_land_percent_of_land_area
+                  - foreign_direct_investment_net_outflows_percent_of_gdp
+                  - foreign_direct_investment_net_inflows_percent_of_gdp
+                  - market_value_of_listed_companies_percent_of_gdp
+                  - external_debt_total_us_not_inflation_adjusted
+                  - debt_to_foreigners_by_public_and_private_percent_of_gni
+                  - present_value_of_debt_percent_of_gni
+                  - aid_received_percent_of_gni
+                  - aid_received_total_us_inflation_adjusted
+                  - aid_received_per_person_current_us
+                  - debt_servicing_costs_percent_of_exports_and_net_income_from_abroad
+                  - electricity_use_per_person
+                  - energy_use_per_person
+                  - population_in_urban_agglomerations_m_1_million_percent_of_total
+                  - total_reserves_percent_of_debt_to_foreigners
+                  - tax_revenue_percent_of_gdp
+                  - cell_phones_total
+                  - broadband_subscribers
+                  - arms_imports_us_inflation_adjusted
+                  - military_expenditure_percent_of_gdp
+                  - arms_exports_us_inflation_adjusted
+                  - exports_percent_of_gdp
+                  - investments_percent_of_gdp
+                  - imports_percent_of_gdp
+                  - trade_balance_us_not_inflation_adjusted
+                  - trade_balance_percent_of_gdp
+                  - agriculture_percent_of_gdp
+                  - industry_percent_of_gdp
+                  - services_percent_of_gdp
+                  - inflation_annual_percent
+                  - total_gdp_us_inflation_adjusted
+                  - gdppercapita_us_inflation_adjusted
+                  - gdppercapita_growth_percent_per_year
+                  - alternative_gdp_per_capita_ppp_wb
+                  - total_gni_ppp_current_international
+                  - gnipercapita_atlasmethod_current_us
+                  - gnipercapita_constant_2010_us
+                  - gnipercapita_ppp_current_international
+                  - ratio_of_girls_to_boys_in_primary_and_secondary_education_perc
+                  - primary_school_completion_percent_of_girls
+                  - primary_school_completion_percent_of_boys
+                  - primary_completion_rate_total_percent_of_relevant_age_group
+                  - children_out_of_school_primary
+                  - children_out_of_school_primary_female
+                  - children_out_of_school_primary_male
+                  - expenditure_per_student_primary_percent_of_gdp_per_person
+                  - expenditure_per_student_secondary_percent_of_gdp_per_person
+                  - expenditure_per_student_tertiary_percent_of_gdp_per_person
+                  - medical_doctors_per_1000_people
+                  - improved_sanitation_overall_access_percent
+                  - improved_sanitation_rural_access_percent
+                  - improved_sanitation_urban_access_percent
+                  - births_attended_by_skilled_health_staff_percent_of_total
+                  - malnutrition_weight_for_age_percent_of_children_under_5
+                  - extreme_poverty_percent_people_below_190_a_day
+                  - inequality_index_gini
+                  - contraceptive_use_percent_of_women_ages_15_49
+                  - population_growth_annual_percent
+                  - urban_population_growth_annual_percent
+                  - urban_population
+                  - urban_population_percent_of_total
+                  - merchandise_trade_percent_of_gdp
+                  - imports_unit_value_index_2000100
+                  - net_barter_terms_of_trade_2000_100
+                  - exports_unit_value_index_2000100
+                  - high_technology_exports_percent_of_manufactured_exports
+                  - improved_water_source_overall_access_percent
+                  - improved_water_source_rural_access_percent
+                  - improved_water_source_urban_access_percent
+                  - armed_forces_personnel_percent_of_labor_force
+                  - armed_forces_personnel_total
+                  - forest_area_sq_km
+                  - surface_area_sq_km
+                  - co2_intensity_of_economic_output_kg_co2_per_2011_ppp_of_gdp
+                  - cell_phones_per_100_people
+                  - broadband_subscribers_per_100_people
+                  - internet_users_per_100_people
+                  - poverty_percent_people_below_310_a_day
+                  - alternative_poverty_percent_below_nationally_defined_poverty
+                  - income_share_of_2nd_poorest_20percent
+                  - income_share_of_2nd_richest_20percent
+                  - income_share_of_middle_20percent
+                  - income_share_of_poorest_10percent
+                  - income_share_of_poorest_20percent
+                  - income_share_of_richest_10percent
+                  - income_share_of_richest_20percent
+                  - rural_poverty_percent_rural_people_below_national_rural
+                  - urban_poverty_percent_urban_people_below_national_urban
+                  - pump_price_for_gasoline_us_per_liter
+                  # - ratio_of_young_literate_females_to_males_percent_ages_15_24
+                  # - fixed_line_and_mobile_phone_subscribers_per_100_people
+                  # - energy_use_total
+                  # - internet_users_total_number
           result: wdi-datapoints-final
-    # concepts:
-    #     - procedure: merge
-    #       ingredients:
-    #           - gw-concepts-discrete
-    #           - gw-concepts-geo
-    #           - gw-concepts-wdi
-    #       options:
-    #           deep: true
+    concepts:
+        - procedure: translate_column
+          ingredients:
+              - wdi-concepts
+          options:
+              column: concept
+              target_column: gw_concept
+              dictionary: indicators_wdi_to_sg.json
+          result: wdi-concepts-translated
+        - procedure: translate_column
+          ingredients:
+              - gw-concepts-all
+          options:
+              column: concept
+              dictionary: indicators_wdi_update.json
+              not_found: include
+          result: gw-concepts-all-updated
+
+        - procedure: translate_column
+          ingredients:
+              - gw-concepts-all-updated
+          options:
+              column: concept
+              target_column: description
+              dictionary:
+                  base: wdi-concepts-translated
+                  key: gw_concept
+                  value: long_definition
+              not_found: include
+          result: gw-concepts-all-wdi-translated
