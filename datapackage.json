@@ -4661,8 +4661,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--income_distribution--by--geo--time.csv",
-            "name": "ddf--datapoints--income_distribution--by--geo--time",
+            "path": "ddf--datapoints--income_mountains--by--geo--time.csv",
+            "name": "ddf--datapoints--income_mountains--by--geo--time",
             "schema": {
                 "fields": [
                     {
@@ -4672,7 +4672,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "income_distribution"
+                        "name": "income_mountains"
                     }
                 ],
                 "primaryKey": [
@@ -11578,7 +11578,7 @@
                         "name": "longitude"
                     },
                     {
-                        "name": "topojson_with_countries"
+                        "name": "topojson"
                     }
                 ],
                 "primaryKey": "geo"
@@ -14726,9 +14726,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "estimate_or_projection_of_under_five_mortality_rate_from_ihme",
+                "value": "extreme_temperature_affected_annual_number",
                 "resources": [
-                    "ddf--datapoints--estimate_or_projection_of_under_five_mortality_rate_from_ihme--by--geo--time"
+                    "ddf--datapoints--extreme_temperature_affected_annual_number--by--geo--time"
                 ]
             },
             {
@@ -14736,9 +14736,9 @@
                     "country",
                     "time"
                 ],
-                "value": "estimate_or_projection_of_under_five_mortality_rate_from_ihme",
+                "value": "extreme_temperature_affected_annual_number",
                 "resources": [
-                    "ddf--datapoints--estimate_or_projection_of_under_five_mortality_rate_from_ihme--by--geo--time"
+                    "ddf--datapoints--extreme_temperature_affected_annual_number--by--geo--time"
                 ]
             },
             {
@@ -14746,9 +14746,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "extreme_temperature_affected_annual_number",
+                "value": "estimate_or_projection_of_under_five_mortality_rate_from_ihme",
                 "resources": [
-                    "ddf--datapoints--extreme_temperature_affected_annual_number--by--geo--time"
+                    "ddf--datapoints--estimate_or_projection_of_under_five_mortality_rate_from_ihme--by--geo--time"
                 ]
             },
             {
@@ -14756,9 +14756,9 @@
                     "country",
                     "time"
                 ],
-                "value": "extreme_temperature_affected_annual_number",
+                "value": "estimate_or_projection_of_under_five_mortality_rate_from_ihme",
                 "resources": [
-                    "ddf--datapoints--extreme_temperature_affected_annual_number--by--geo--time"
+                    "ddf--datapoints--estimate_or_projection_of_under_five_mortality_rate_from_ihme--by--geo--time"
                 ]
             },
             {
@@ -14906,9 +14906,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "female_salaried_workers_percent_of_female_labour_force",
+                "value": "female_self_employed_percent_of_female_labour_force",
                 "resources": [
-                    "ddf--datapoints--female_salaried_workers_percent_of_female_labour_force--by--geo--time"
+                    "ddf--datapoints--female_self_employed_percent_of_female_labour_force--by--geo--time"
                 ]
             },
             {
@@ -14916,9 +14916,9 @@
                     "country",
                     "time"
                 ],
-                "value": "female_salaried_workers_percent_of_female_labour_force",
+                "value": "female_self_employed_percent_of_female_labour_force",
                 "resources": [
-                    "ddf--datapoints--female_salaried_workers_percent_of_female_labour_force--by--geo--time"
+                    "ddf--datapoints--female_self_employed_percent_of_female_labour_force--by--geo--time"
                 ]
             },
             {
@@ -14926,9 +14926,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "female_self_employed_percent_of_female_labour_force",
+                "value": "female_salaried_workers_percent_of_female_labour_force",
                 "resources": [
-                    "ddf--datapoints--female_self_employed_percent_of_female_labour_force--by--geo--time"
+                    "ddf--datapoints--female_salaried_workers_percent_of_female_labour_force--by--geo--time"
                 ]
             },
             {
@@ -14936,9 +14936,9 @@
                     "country",
                     "time"
                 ],
-                "value": "female_self_employed_percent_of_female_labour_force",
+                "value": "female_salaried_workers_percent_of_female_labour_force",
                 "resources": [
-                    "ddf--datapoints--female_self_employed_percent_of_female_labour_force--by--geo--time"
+                    "ddf--datapoints--female_salaried_workers_percent_of_female_labour_force--by--geo--time"
                 ]
             },
             {
@@ -15246,9 +15246,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "forest_products_removal_total_dollar",
+                "value": "forest_land_total_area_ha",
                 "resources": [
-                    "ddf--datapoints--forest_products_removal_total_dollar--by--geo--time"
+                    "ddf--datapoints--forest_land_total_area_ha--by--geo--time"
                 ]
             },
             {
@@ -15256,9 +15256,9 @@
                     "country",
                     "time"
                 ],
-                "value": "forest_products_removal_total_dollar",
+                "value": "forest_land_total_area_ha",
                 "resources": [
-                    "ddf--datapoints--forest_products_removal_total_dollar--by--geo--time"
+                    "ddf--datapoints--forest_land_total_area_ha--by--geo--time"
                 ]
             },
             {
@@ -15266,9 +15266,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "forest_land_total_area_ha",
+                "value": "forest_products_removal_total_dollar",
                 "resources": [
-                    "ddf--datapoints--forest_land_total_area_ha--by--geo--time"
+                    "ddf--datapoints--forest_products_removal_total_dollar--by--geo--time"
                 ]
             },
             {
@@ -15276,9 +15276,9 @@
                     "country",
                     "time"
                 ],
-                "value": "forest_land_total_area_ha",
+                "value": "forest_products_removal_total_dollar",
                 "resources": [
-                    "ddf--datapoints--forest_land_total_area_ha--by--geo--time"
+                    "ddf--datapoints--forest_products_removal_total_dollar--by--geo--time"
                 ]
             },
             {
@@ -15966,9 +15966,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "income_distribution",
+                "value": "income_mountains",
                 "resources": [
-                    "ddf--datapoints--income_distribution--by--geo--time"
+                    "ddf--datapoints--income_mountains--by--geo--time"
                 ]
             },
             {
@@ -15976,9 +15976,9 @@
                     "global",
                     "time"
                 ],
-                "value": "income_distribution",
+                "value": "income_mountains",
                 "resources": [
-                    "ddf--datapoints--income_distribution--by--geo--time"
+                    "ddf--datapoints--income_mountains--by--geo--time"
                 ]
             },
             {
@@ -16826,9 +16826,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "liver_cancer_deaths_per_100000_men",
+                "value": "liver_cancer_new_cases_per_100000_men",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time"
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time"
                 ]
             },
             {
@@ -16836,9 +16836,9 @@
                     "country",
                     "time"
                 ],
-                "value": "liver_cancer_deaths_per_100000_men",
+                "value": "liver_cancer_new_cases_per_100000_men",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time"
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time"
                 ]
             },
             {
@@ -16846,9 +16846,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "liver_cancer_new_cases_per_100000_men",
+                "value": "liver_cancer_deaths_per_100000_men",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time"
+                    "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time"
                 ]
             },
             {
@@ -16856,9 +16856,9 @@
                     "country",
                     "time"
                 ],
-                "value": "liver_cancer_new_cases_per_100000_men",
+                "value": "liver_cancer_deaths_per_100000_men",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_new_cases_per_100000_men--by--geo--time"
+                    "ddf--datapoints--liver_cancer_deaths_per_100000_men--by--geo--time"
                 ]
             },
             {
@@ -16906,9 +16906,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "liver_cancer_number_of_male_deaths",
+                "value": "liver_cancer_new_cases_per_100000_women",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time"
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time"
                 ]
             },
             {
@@ -16916,9 +16916,9 @@
                     "country",
                     "time"
                 ],
-                "value": "liver_cancer_number_of_male_deaths",
+                "value": "liver_cancer_new_cases_per_100000_women",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time"
+                    "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time"
                 ]
             },
             {
@@ -16926,9 +16926,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "liver_cancer_new_cases_per_100000_women",
+                "value": "liver_cancer_number_of_male_deaths",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time"
+                    "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time"
                 ]
             },
             {
@@ -16936,9 +16936,9 @@
                     "country",
                     "time"
                 ],
-                "value": "liver_cancer_new_cases_per_100000_women",
+                "value": "liver_cancer_number_of_male_deaths",
                 "resources": [
-                    "ddf--datapoints--liver_cancer_new_cases_per_100000_women--by--geo--time"
+                    "ddf--datapoints--liver_cancer_number_of_male_deaths--by--geo--time"
                 ]
             },
             {
@@ -17746,9 +17746,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "maternal_deaths_total_number",
+                "value": "maternal_mortality_ratio_who",
                 "resources": [
-                    "ddf--datapoints--maternal_deaths_total_number--by--geo--time"
+                    "ddf--datapoints--maternal_mortality_ratio_who--by--geo--time"
                 ]
             },
             {
@@ -17756,9 +17756,9 @@
                     "country",
                     "time"
                 ],
-                "value": "maternal_deaths_total_number",
+                "value": "maternal_mortality_ratio_who",
                 "resources": [
-                    "ddf--datapoints--maternal_deaths_total_number--by--geo--time"
+                    "ddf--datapoints--maternal_mortality_ratio_who--by--geo--time"
                 ]
             },
             {
@@ -17766,9 +17766,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "maternal_mortality_ratio_who",
+                "value": "maternal_deaths_total_number",
                 "resources": [
-                    "ddf--datapoints--maternal_mortality_ratio_who--by--geo--time"
+                    "ddf--datapoints--maternal_deaths_total_number--by--geo--time"
                 ]
             },
             {
@@ -17776,9 +17776,9 @@
                     "country",
                     "time"
                 ],
-                "value": "maternal_mortality_ratio_who",
+                "value": "maternal_deaths_total_number",
                 "resources": [
-                    "ddf--datapoints--maternal_mortality_ratio_who--by--geo--time"
+                    "ddf--datapoints--maternal_deaths_total_number--by--geo--time"
                 ]
             },
             {
@@ -19066,26 +19066,6 @@
                     "geo",
                     "time"
                 ],
-                "value": "other_infections_deaths_in_children_1_59_months_per_1000_birt",
-                "resources": [
-                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "other_infections_deaths_in_children_1_59_months_per_1000_birt",
-                "resources": [
-                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
                 "value": "nuclear_power_generation_total",
                 "resources": [
                     "ddf--datapoints--nuclear_power_generation_total--by--geo--time"
@@ -19119,6 +19099,26 @@
                 "value": "oil_proven_reserves_per_person",
                 "resources": [
                     "ddf--datapoints--oil_proven_reserves_per_person--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "other_infections_deaths_in_children_1_59_months_per_1000_birt",
+                "resources": [
+                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "other_infections_deaths_in_children_1_59_months_per_1000_birt",
+                "resources": [
+                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time"
                 ]
             },
             {
@@ -21406,9 +21406,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "suicide_per_100000_people",
+                "value": "suicide_women_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_women_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21416,9 +21416,9 @@
                     "country",
                     "time"
                 ],
-                "value": "suicide_per_100000_people",
+                "value": "suicide_women_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_women_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21426,9 +21426,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "suicide_women_per_100000_people",
+                "value": "suicide_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_women_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21436,9 +21436,9 @@
                     "country",
                     "time"
                 ],
-                "value": "suicide_women_per_100000_people",
+                "value": "suicide_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_women_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -23294,7 +23294,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "topojson_with_countries",
+                "value": "topojson",
                 "resources": [
                     "ddf--entities--geo--global"
                 ]
@@ -23303,7 +23303,7 @@
                 "primaryKey": [
                     "global"
                 ],
-                "value": "topojson_with_countries",
+                "value": "topojson",
                 "resources": [
                     "ddf--entities--geo--global"
                 ]
@@ -23590,6 +23590,105 @@
                 "value": "shape_lores_svg",
                 "resources": [
                     "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--world_6region",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "is--world_6region",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "name_short",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "latitude",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "color",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "shape_lores_svg",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
                 ]
             },
             {
@@ -23608,105 +23707,6 @@
                 "value": "parent",
                 "resources": [
                     "ddf--entities--tag"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "rank",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "is--world_6region",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "is--world_6region",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "name_short",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "name_long",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "description",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "latitude",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "longitude",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "color",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "shape_lores_svg",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
                 ]
             }
         ],

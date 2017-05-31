@@ -1,2 +1,2 @@
-geo,is--global,name,unicode_region_subtag,latitude,longitude,topojson_with_countries
-world,TRUE,World,001,0,0,"ddf--media--topojson_with_countries--for--geo--world.json"
+geo,is--global,name,unicode_region_subtag,latitude,longitude,topojson
+world,TRUE,World,001,0,0,world-50m.json
