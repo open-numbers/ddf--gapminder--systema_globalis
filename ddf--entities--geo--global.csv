@@ -1,2 +1,2 @@
 geo,is--global,name,unicode_region_subtag,latitude,longitude,topojson
-world,TRUE,World,001,0,0,world-50m.json
+world,TRUE,World,001,0,0,"assets/world-50m.json"
