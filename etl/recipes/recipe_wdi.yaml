@@ -147,7 +147,7 @@ cooking:
           ingredients:
               [wdi-countries]
           options:
-              column: short_name
+              column: table_name
               target_column: geo
               dictionary:
                 base: gw-countries
