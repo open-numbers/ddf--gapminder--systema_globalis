@@ -150,7 +150,7 @@ mrt,i140,Mauritania,sub_saharan_africa,lower_middle_income,coastline,g77,muslim,
 mus,i141,Mauritius,sub_saharan_africa,upper_middle_income,coastline,g77,,Mauritius,,,,Mauritius,MAURITIUS,MU,,MAURITIUS,MU,MUS,480,,MU,,,,,,,TRUE,TRUE,africa,-20.3,57.58333
 myt,i142,Mayotte,sub_saharan_africa,,coastline,others,muslim,Mayotte,,,,,,YT,,MAYOTTE,YT,MYT,175,,YT,,,,,,,TRUE,FALSE,africa,-12.83333,45.16667
 mex,i143,Mexico,america,upper_middle_income,coastline,oecd,christian,Mexico,,,,Mexico,MEXICO,MX,,MEXICO,MX,MEX,484,,MX,,,,,,,TRUE,TRUE,americas,19.42847,-99.12766
-fsm,i144,"Micronesia, Fed. Sts.",east_asia_pacific,lower_middle_income,coastline,g77,christian,"Micronesia, Fed. Sts.","Micronesia, Fed. Sts.",Micronesia (Fed. States of),Federated States of Micronesia,Micronesia (Federated States of),,FM,Micronesia (Federated States of,"MICRONESIA, FEDERATED STATES OF",FM,FSM,583,,FM,Micronesia,,,,,,TRUE,TRUE,asia,6.924,158.162
+fsm,i144,"Micronesia, Fed. Sts.",east_asia_pacific,lower_middle_income,coastline,g77,christian,"Micronesia, Fed. Sts.","Micronesia, Fed. Sts.",Micronesia (Fed. States of),Federated States of Micronesia,Micronesia (Federated States of),,FM,Micronesia (Federated States of,"MICRONESIA, FEDERATED STATES OF",FM,FSM,583,,FM,,,,,,,TRUE,TRUE,asia,6.924,158.162
 mda,i145,Moldova,europe_central_asia,lower_middle_income,landlocked,others,christian,Moldova,"Moldova, Rep. of",Republic of Moldova,Moldova (Republic of),Republic Of Moldov,MOLDOVA,MD,,"MOLDOVA, REPUBLIC OF",MD,MDA,498,,MD,,,,,,,TRUE,TRUE,europe,47.25,28.58333
 mco,i146,Monaco,europe_central_asia,high_income,coastline,others,christian,Monaco,,,,,,MC,,MONACO,MC,MCO,492,,MC,,,,,,,TRUE,TRUE,europe,43.73333,7.41667
 mng,i147,Mongolia,east_asia_pacific,lower_middle_income,landlocked,g77,,Mongolia,,,,Mongoli,MONGOLIA,MN,,MONGOLIA,MN,MNG,496,,MN,,,,,,,TRUE,TRUE,asia,46.0,105.0
@@ -172,7 +172,7 @@ ner,i162,Niger,sub_saharan_africa,low_income,landlocked,g77,muslim,Niger,,,,Nige
 nga,i163,Nigeria,sub_saharan_africa,lower_middle_income,coastline,g77,,Nigeria,,,,Nigeria,NIGERIA,NG,,NIGERIA,NG,NGA,566,,NG,,,,,,,TRUE,TRUE,africa,10.0,8.0
 niu,i164,Niue,east_asia_pacific,,coastline,others,christian,Niue,,,,Niue,,NU,,NIUE,NU,NIU,570,,NU,,,,,,,TRUE,FALSE,asia,-19.03333,-169.86667
 nfk,i165,Norfolk Island,east_asia_pacific,,coastline,others,,Norfolk Island,,,,,,NF,,NORFOLK ISLAND,NF,NFK,574,,NF,,,,,,,TRUE,FALSE,asia,-29.03333,167.95
-prk,i116,North Korea,east_asia_pacific,low_income,coastline,g77,,"Korea, Dem. Rep.",Dem. People's Rep. of Korea,"Korea, North","Korea, Democratic Republic of",Democratic People S Republic Of Korea,,KP,Democratic People's Republic of Korea,"KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",KP,PRK,408,,KP,Korea DPR,Dem. People's Republic of Korea,Korea (Democratic People's Rep. of),Korea North,Dem. People's Rep. Korea,,TRUE,TRUE,asia,40.0,127.0
+prk,i116,North Korea,east_asia_pacific,low_income,coastline,g77,,"Korea, Dem. Rep.",Dem. People's Rep. of Korea,"Korea, North","Korea, Democratic Republic of",Democratic People S Republic Of Korea,,KP,Democratic People's Republic of Korea,"KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF",KP,PRK,408,,KP,Korea DPR,Dem. People's Republic of Korea,Korea (Democratic People's Rep. of),Korea North,"Korea, Dem. People's Rep.",,TRUE,TRUE,asia,40.0,127.0
 yem_north,i252,North Yemen (former),middle_east_north_africa,,coastline,others,,Yemen Arab Republic (Former),,,,,,North_Yemen,,FORMER YEMEN,,,,,,,,,,,,TRUE,FALSE,asia,,
 cyp_nor,i166,Northern Cyprus,europe_central_asia,,coastline,others,,Northern Cyprus,,,,,,Northern_Cyprus,,,,,,,,,,,,,,TRUE,FALSE,europe,,
 mnp,i167,Northern Mariana Islands,east_asia_pacific,high_income,coastline,others,christian,Northern Mariana Islands,,,,,,MP,,NORTHERN MARIANA ISLANDS,MP,MNP,580,,MP,,,,,,,TRUE,FALSE,asia,15.214,145.756
@@ -227,7 +227,7 @@ lca,i189,St. Lucia,america,upper_middle_income,coastline,g77,christian,Saint Luc
 stmar,i190,St. Martin,america,high_income,coastline,others,,Saint Martin,,,,,,MF,,,,,,,,,,,,,,TRUE,FALSE,americas,,
 maf,,St. Martin (French part),,,,,,,,,,,,MF,,,MF,MAF,663,,MF,,,,,,,TRUE,FALSE,americas,,
 vct,i191,St. Vincent and the Grenadines,america,upper_middle_income,coastline,g77,christian,Saint Vincent and the Grenadines,St. Vincent and the Grenadines,St Vincent & the Grenadines,St. Vincent and G.,St. Vincent & The Grenadines,,VC,,SAINT VINCENT AND THE GRENADINES,VC,VCT,670,,VC,Saint Vincent and the Grenadines,,,,,,TRUE,TRUE,americas,13.08333,-61.2
-spm,i192,St.-Pierre-et-Miquelon,america,,coastline,others,christian,Saint-Pierre-et-Miquelon,,,,St. Pierre & Miquelon,,PM,,SAINT PIERRE AND MIQUELON,PM,SPM,666,,PM,,,,,,,TRUE,FALSE,americas,46.83333,-56.33333
+spm,i192,St.-Pierre-et-Miquelon,america,,coastline,others,christian,Saint-Pierre-et-Miquelon,Saint Pierre and Miquelon,,,St. Pierre & Miquelon,,PM,,SAINT PIERRE AND MIQUELON,PM,SPM,666,,PM,,,,,,,TRUE,FALSE,americas,46.83333,-56.33333
 sdn,i214,Sudan,sub_saharan_africa,lower_middle_income,coastline,g77,muslim,Sudan,,,,Sudan,SUDAN,SD,REPUBLIC OF SUDAN,SUDAN,SD,SDN,729,,SD,,,,,,,TRUE,TRUE,africa,16.0,30.0
 sur,i215,Suriname,america,upper_middle_income,coastline,g77,christian,Suriname,,,,Suriname,,SR,,SURINAME,SR,SUR,740,,SR,,,,,,,TRUE,TRUE,americas,4.0,-56.0
 sjm,i216,Svalbard,europe_central_asia,,coastline,others,,Svalbard,,,,,,SJ,,SVALBARD AND JAN MAYEN ISLANDS,SJ,SJM,744,,SJ,,,,,,,TRUE,FALSE,europe,78.0,20.0
@@ -264,7 +264,7 @@ vut,i245,Vanuatu,east_asia_pacific,lower_middle_income,coastline,g77,christian,V
 ven,i246,Venezuela,america,upper_middle_income,coastline,g77,christian,Venezuela,"Venezuela, RB",Venezuela (Bolivarian Republic of),Venezuela (Bolivarian Republic of,Venezuela,VENEZUELA,VE,,VENEZUELA,VE,VEN,862,,VE,,,,,,,TRUE,TRUE,americas,8.0,-66.0
 vnm,i250,Vietnam,east_asia_pacific,lower_middle_income,coastline,g77,eastern_religions,Vietnam,Viet Nam,,,Viet Nam,VIETNAM,VN,,VIET NAM,VN,VNM,704,,VN,,,,,,,TRUE,TRUE,asia,16.16667,107.83333
 vir,i251,Virgin Islands (U.S.),america,high_income,coastline,others,christian,Virgin Islands (U.S.),United States Virgin Islands,,,,,VI,,VIRGIN ISLANDS (U.S.),VI,VIR,850,,VI,,,,,,,TRUE,FALSE,americas,18.34829,-64.98348
-wlf,i244,Wallis et Futuna,east_asia_pacific,,coastline,others,christian,Wallis et Futuna,Wallis and Futuna,,,,,WF,,WALLIS AND FUTUNA ISLANDS,WF,WLF,876,,WF,,,,,,,TRUE,FALSE,asia,-13.3,-176.2
+wlf,i244,Wallis et Futuna,east_asia_pacific,,coastline,others,christian,Wallis et Futuna,Wallis and Futuna,Wallis and Futuna Islands,,,,WF,,WALLIS AND FUTUNA ISLANDS,WF,WLF,876,,WF,,,,,,,TRUE,FALSE,asia,-13.3,-176.2
 pse_west_bank,,West Bank,,,,,,,,,,,,,,,,,,,,,,,,,,TRUE,FALSE,asia,,
 deu_west,i248,West Germany,europe_central_asia,,coastline,others,,West Germany,,,,West Germany,,West_Germany,,FEDERAL REPUBLIC OF GERMANY,,,,,,,,,,,,TRUE,FALSE,europe,,
 esh,i249,Western Sahara,middle_east_north_africa,,coastline,others,muslim,Western Sahara,,,,Western Sahara,,EH,,WESTERN SAHARA,EH,ESH,732,,EH,,,,,,,TRUE,FALSE,africa,24.49215,-12.65625
