@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 from ddf_utils import chef
-from ddf_utils.index import get_datapackage
+from ddf_utils.datapackage import get_datapackage, dump_json
 import patch
 import os
 import json
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s -%(levelname)s- %(message)s',
+logging.basicConfig(level=logging.INFO, format='%(asctime)s -%(levelname)s- %(message)s',
                     datefmt="%H:%M:%S"
                     )
 
@@ -25,6 +25,6 @@ if __name__ == '__main__':
 
     patch.do_all_changes()
 
-    datapackage = get_datapackage(out_dir, use_existing=True, to_disk=True)
+    dump_json(os.path.join(out_dir, 'datapackage.json'), get_datapackage(out_dir))
 
     print('Done.')
