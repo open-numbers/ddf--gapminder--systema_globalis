@@ -19,6 +19,7 @@ include:
     - recipe_wdi.yaml
     - recipe_gw_gini.yaml
     - recipe_ihme_edu_attainment.yml
+    - recipe_unpop.yaml
 
 ingredients:
     - id: gw-concepts-all
@@ -43,6 +44,7 @@ cooking:
               - wdi-datapoints-final
               - gini-datapoints
               - edu-datapoints-final
+              - unpop-datapoints-final
     entities:
         - procedure: identity
           ingredients:
@@ -63,5 +65,6 @@ cooking:
               - co2-concepts-final
               - gini-concepts
               - edu-concepts-final
+              - unpop-concepts-final
           options:
               deep: true

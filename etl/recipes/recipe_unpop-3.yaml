@@ -1,0 +1,478 @@
+info:
+    id: unpop_sg_dataset
+    base:
+        - &d1 ddf--unpop--wpp_population
+        - &d2 ddf--gapminder--gapminder_world
+        - &d3 ddf--unpop--wpp_demog
+
+config:
+    recipes_dir: ./
+    dictionary_dir: ../translation_dictionaries
+    ddf_dir: /Users/semio/src/work/Gapminder
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: unpop-countries
+      dataset: *d1
+      key: "country"
+      value: "*"
+
+    - id: unpop-datapoints-3-1
+      dataset: *d1
+      key: country, gender, variant, year
+      value:
+          - population
+
+    - id: unpop-datapoints-3-2
+      dataset: *d1
+      key: country, age5yearinterval, variant, year
+      value:
+          - population
+
+    - id: unpop-datapoints-3-3
+      dataset: *d1
+      key: country, variant, year
+      value:
+          - population
+
+    - id: unpop-datapoints-3-4
+      dataset: *d1
+      key: country, age5yearinterval, gender, variant, year
+      value:
+          - population
+
+cooking:
+    datapoints:
+        # male/female population
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-1
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: estimates
+          result: unpop-datapoints-3-1-before2015
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-1
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: medium variant
+          result: unpop-datapoints-3-1-after2015
+
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-3-1-after2015
+              - unpop-datapoints-3-1-before2015
+          options:
+              deep: true
+          result: unpop-datapoints-3-1-country-year
+
+        - procedure: translate_column
+          ingredients:
+              - unpop-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gw-countries
+                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
+                        'iso3166_1_alpha3', 'iso3166_2'
+                       ]
+                  value: country
+          result: unpop-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - unpop-datapoints-3-1-country-year
+          options:
+              column: country
+              dictionary:
+                  base: unpop-countries-aligned
+                  key: country
+                  value: geo
+          result: unpop-datapoints-3-1-country-year-aligned
+
+
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-1-country-year-aligned
+          options:
+              dictionary:
+                  female_population_with_projections:
+                      from: population
+                      gender: female
+                  male_population_with_projections:
+                      from: population
+                      gender: male
+          result: unpop-datapoints-3-1-final
+
+        # population for age groups
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-2
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: estimates
+          result: unpop-datapoints-3-2-before2015
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-2
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: medium variant
+          result: unpop-datapoints-3-2-after2015
+
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-3-2-after2015
+              - unpop-datapoints-3-2-before2015
+          options:
+              deep: true
+          result: unpop-datapoints-3-2-country-year
+
+        - procedure: translate_column
+          ingredients:
+              - unpop-datapoints-3-2-country-year
+          options:
+              column: country
+              dictionary:
+                  base: unpop-countries-aligned
+                  key: country
+                  value: geo
+          result: unpop-datapoints-3-2-country-year-aligned
+
+
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-2-country-year-aligned
+          options:
+              dictionary:
+                  population_aged_0_4_years_total_number:
+                      from: population
+                      age5yearinterval: "0_4"
+                  population_aged_5_9_years_total_number:
+                      from: population
+                      age5yearinterval: "5_9"
+                  population_aged_10_14_years_total_number:
+                      from: population
+                      age5yearinterval: "10_14"
+                  population_aged_15_19_years_total_number:
+                      from: population
+                      age5yearinterval: "15_19"
+          result: unpop-datapoints-3-2-final-1
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-2-country-year-aligned
+          options:
+              dictionary:
+                  population_aged_20_39_years_total_number:
+                      from: population
+                      age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
+                  population_aged_40_59_years_total_number:
+                      from: population
+                      age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
+                  population_aged_60plus_years_total_number:
+                      from: population
+                      age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
+                                         '80plus', '80_84', '85_89', '90_94',
+                                         '95_99', '100plus']
+          result: unpop-datapoints-3-2-filtered
+
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-3-2-filtered
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  population_aged_20_39_years_total_number: sum
+                  population_aged_40_59_years_total_number: sum
+                  population_aged_60plus_years_total_number: sum
+          result: unpop-datapoints-3-2-final-2
+
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-3-2-final-1
+              - unpop-datapoints-3-2-final-2
+          result: unpop-datapoints-3-2-final
+
+        # calculate percentage indicators
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-3
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: estimates
+          result: unpop-datapoints-3-3-before2015
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-3
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: medium variant
+          result: unpop-datapoints-3-3-after2015
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-3-3-after2015
+              - unpop-datapoints-3-3-before2015
+          options:
+              deep: true
+          result: unpop-datapoints-3-3-country-year
+        - procedure: translate_column
+          ingredients:
+              - unpop-datapoints-3-3-country-year
+          options:
+              column: country
+              dictionary:
+                  base: unpop-countries-aligned
+                  key: country
+                  value: geo
+          result: unpop-datapoints-3-3-country-year-aligned
+
+        - procedure: translate_header
+          ingredients:
+              - unpop-datapoints-3-3-country-year-aligned
+          options:
+              dictionary:
+                  population: total_pop
+          result: unpop-datapoints-3-3-f
+
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-4
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: estimates
+          result: unpop-datapoints-3-4-before2015
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-4
+          options:
+              dictionary:
+                  population:
+                      from: population
+                      variant: medium variant
+          result: unpop-datapoints-3-4-after2015
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-3-4-after2015
+              - unpop-datapoints-3-4-before2015
+          options:
+              deep: true
+          result: unpop-datapoints-3-4-country-year
+        - procedure: translate_column
+          ingredients:
+              - unpop-datapoints-3-4-country-year
+          options:
+              column: country
+              dictionary:
+                  base: unpop-countries-aligned
+                  key: country
+                  value: geo
+          result: unpop-datapoints-3-4-country-year-aligned
+
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-4-country-year-aligned
+          result: unpop-datapoints-3-4-g1
+          options:
+              dictionary:
+                  pop_0_4_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: "0_4"
+                  pop_5_9_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: "5_9"
+                  pop_10_14_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: "10_14"
+                  pop_15_19_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: "15_19"
+                  pop_0_4_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: "0_4"
+                  pop_5_9_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: "5_9"
+                  pop_10_14_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: "10_14"
+                  pop_15_19_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: "15_19"
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-3-4-country-year-aligned
+          result: unpop-datapoints-3-4-g2
+          options:
+              dictionary:
+                  pop_20_39_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
+                  pop_40_59_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
+                  pop_60plus_male:
+                      from: population
+                      gender: male
+                      age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
+                                         '80plus', '80_84', '85_89', '90_94',
+                                         '95_99', '100plus']
+                  pop_20_39_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
+                  pop_40_59_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
+                  pop_60plus_female:
+                      from: population
+                      gender: female
+                      age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
+                                         '80plus', '80_84', '85_89', '90_94',
+                                         '95_99', '100plus']
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-3-4-g2
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  pop_20_39_male: sum
+                  pop_40_59_male: sum
+                  pop_60plus_male: sum
+                  pop_20_39_female: sum
+                  pop_40_59_female: sum
+                  pop_60plus_female: sum
+          result: unpop-datapoints-3-4-f1
+
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-3-1-final
+              - unpop-datapoints-3-2-final
+              - unpop-datapoints-3-3-f
+              - unpop-datapoints-3-4-g1
+              - unpop-datapoints-3-4-f1
+          result: unpop-datapoints-3-4-f2
+
+        - procedure: run_op
+          ingredients:
+              - unpop-datapoints-3-4-f2
+          options:
+              op:
+                  # both
+                  population_aged_0_4_years_both_sexes_percent: |
+                      population_aged_0_4_years_total_number / total_pop * 100
+                  population_aged_5_9_years_both_sexes_percent: |
+                      population_aged_5_9_years_total_number / total_pop * 100
+                  population_aged_10_14_years_both_sexes_percent: |
+                      population_aged_10_14_years_total_number / total_pop * 100
+                  population_aged_15_19_years_both_sexes_percent: |
+                      population_aged_15_19_years_total_number / total_pop * 100
+                  population_aged_20_39_years_both_sexes_percent: |
+                      population_aged_20_39_years_total_number / total_pop * 100
+                  population_aged_40_59_years_both_sexes_percent: |
+                      population_aged_40_59_years_total_number / total_pop * 100
+                  population_aged_60plus_years_both_sexes_percent: |
+                      population_aged_60plus_years_total_number / total_pop * 100
+                  # male
+                  population_aged_0_4_years_male_percent: |
+                      pop_0_4_male / male_population_with_projections * 100
+                  population_aged_5_9_years_male_percent: |
+                      pop_5_9_male / male_population_with_projections * 100
+                  population_aged_10_14_years_male_percent: |
+                      pop_10_14_male / male_population_with_projections * 100
+                  population_aged_15_19_years_male_percent: |
+                      pop_15_19_male / male_population_with_projections * 100
+                  population_aged_20_39_years_male_percent: |
+                      pop_20_39_male / male_population_with_projections * 100
+                  population_aged_40_59_years_male_percent: |
+                      pop_40_59_male / male_population_with_projections * 100
+                  population_aged_60plus_years_male_percent: |
+                      pop_60plus_male / male_population_with_projections * 100
+                  # female
+                  population_aged_0_4_years_female_percent: |
+                      pop_0_4_female / female_population_with_projections * 100
+                  population_aged_5_9_years_female_percent: |
+                      pop_5_9_female / female_population_with_projections * 100
+                  population_aged_10_14_years_female_percent: |
+                      pop_10_14_female / female_population_with_projections * 100
+                  population_aged_15_19_years_female_percent: |
+                      pop_15_19_female / female_population_with_projections * 100
+                  population_aged_20_39_years_female_percent: |
+                      pop_20_39_female / female_population_with_projections * 100
+                  population_aged_40_59_years_female_percent: |
+                      pop_40_59_female / female_population_with_projections * 100
+                  population_aged_60plus_years_female_percent: |
+                      pop_60plus_female / female_population_with_projections * 100
+          result: unpop-datapoints-3-final-0
+
+        - procedure: filter_item
+          ingredients:
+              - unpop-datapoints-3-final-0
+          result: unpop-datapoints-3-final
+          options:
+              items:
+                  - female_population_with_projections
+                  - male_population_with_projections
+                  - population_aged_0_4_years_both_sexes_percent
+                  - population_aged_0_4_years_female_percent
+                  - population_aged_0_4_years_male_percent
+                  - population_aged_0_4_years_total_number
+                  - population_aged_5_9_years_both_sexes_percent
+                  - population_aged_5_9_years_female_percent
+                  - population_aged_5_9_years_male_percent
+                  - population_aged_5_9_years_total_number
+                  - population_aged_10_14_years_both_sexes_percent
+                  - population_aged_10_14_years_female_percent
+                  - population_aged_10_14_years_male_percent
+                  - population_aged_10_14_years_total_number
+                  - population_aged_15_19_years_both_sexes_percent
+                  - population_aged_15_19_years_female_percent
+                  - population_aged_15_19_years_male_percent
+                  - population_aged_15_19_years_total_number
+                  - population_aged_20_39_years_both_sexes_percent
+                  - population_aged_20_39_years_female_percent
+                  - population_aged_20_39_years_male_percent
+                  - population_aged_20_39_years_total_number
+                  - population_aged_40_59_years_both_sexes_percent
+                  - population_aged_40_59_years_female_percent
+                  - population_aged_40_59_years_male_percent
+                  - population_aged_40_59_years_total_number
+                  - population_aged_60plus_years_both_sexes_percent
+                  - population_aged_60plus_years_female_percent
+                  - population_aged_60plus_years_male_percent
+                  - population_aged_60plus_years_total_number
+
