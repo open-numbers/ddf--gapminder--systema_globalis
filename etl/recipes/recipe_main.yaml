@@ -30,6 +30,10 @@ ingredients:
       dataset: ddf--gapminder--gapminder_world
       key: "geo,time"
       value: "*"
+    - id: static-assets-datapoints
+      dataset: ddf--gapminder--static_assets
+      key: geo, time
+      value: "*"
 
 cooking:
     datapoints:
@@ -45,6 +49,7 @@ cooking:
               - gini-datapoints
               - edu-datapoints-final
               - unpop-datapoints-final
+              - static-assets-datapoints
     entities:
         - procedure: identity
           ingredients:
