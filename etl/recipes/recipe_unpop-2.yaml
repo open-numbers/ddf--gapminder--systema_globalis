@@ -31,28 +31,59 @@ cooking:
           ingredients:
               - unpop-datapoints-2
           options:
-              dictionary:
+              filters:
                   lifeexpectancyatbirth:
-                      from: lifeexpectancyatbirth
-                      freq: 5Yearly
+                      freq: 5yearly
+          result: unpop-datapoints-2-1-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-2-1-0
+          options:
+              groupby:
+                  - variant
+                  - country
+                  - gender
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-2-1
         - procedure: filter_row
           ingredients:
               - unpop-datapoints-2-1
           options:
-              dictionary:
+              filters:
                   lifeexpectancyatbirth:
-                      from: lifeexpectancyatbirth
                       variant: estimates
+          result: unpop-datapoints-2-1-before2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-2-1-before2015-0
+          options:
+              groupby:
+                  - country
+                  - gender
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-2-1-before2015
         - procedure: filter_row
           ingredients:
               - unpop-datapoints-2-1
           options:
-              dictionary:
+              filters:
                   lifeexpectancyatbirth:
-                      from: lifeexpectancyatbirth
-                      variant: medium variant
+                      variant: medium_variant
+          result: unpop-datapoints-2-1-after2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-2-1-after2015-0
+          options:
+              groupby:
+                  - country
+                  - gender
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-2-1-after2015
 
         - procedure: merge
@@ -90,17 +121,12 @@ cooking:
                   value: geo
           result: unpop-datapoints-2-1-country-year-aligned
 
-        - procedure: filter_row
+        - procedure: flatten
           ingredients:
               - unpop-datapoints-2-1-country-year-aligned
           options:
+              flatten_dimensions:
+                  - gender
               dictionary:
-                  life_expectancy_female:
-                      from: lifeexpectancyatbirth
-                      gender: female
-                  life_expectancy_male:
-                      from: lifeexpectancyatbirth
-                      gender: male
+                  lifeexpectancyatbirth: "life_expectancy_{gender}"
           result: unpop-datapoints-2-final
-
-    

@@ -8,7 +8,7 @@ config:
     # the path to search dictionary files
     dictionary_dir: ../translation_dictionaries
     # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder
+    ddf_dir: /Users/semio/src/work/Gapminder/datasets/
 
 include:
     - recipe_gw_common.yaml
@@ -55,12 +55,9 @@ cooking:
               - unpop-datapoints-final
               - static-assets-datapoints
     entities:
-        - procedure: identity
+        - procedure: serve
           ingredients:
               - gw-entities-geo
-          options:
-              copy: true
-          result: entities-final
     concepts:
         - procedure: merge
           result: all-concepts-merged

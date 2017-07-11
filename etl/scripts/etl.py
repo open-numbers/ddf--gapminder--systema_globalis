@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ddf_utils import chef
+from ddf_utils.chef.api import Chef
 from ddf_utils.datapackage import get_datapackage, dump_json
 import patch
 import os
@@ -20,8 +20,8 @@ if __name__ == '__main__':
         if f.startswith("ddf--"):
             os.remove(os.path.join(out_dir, f))
 
-    recipe = chef.build_recipe(recipe_file)
-    res = chef.run_recipe(recipe, serve=True, outpath=out_dir)
+    chef = Chef.from_recipe(recipe_file)
+    chef.run(serve=True, outpath=out_dir)
 
     patch.do_all_changes()
 

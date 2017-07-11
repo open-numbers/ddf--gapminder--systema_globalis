@@ -33,31 +33,46 @@ cooking:
           ingredients:
               - unpop-datapoints-5
           options:
-              dictionary:
+              filters:
                   medianageofpopulation:
-                      from: medianageofpopulation
                       variant: estimates
                   dependencyratio1564:
-                      from: dependencyratio1564
                       variant: estimates
                   populationdensitypersqkm:
-                      from: populationdensitypersqkm
                       variant: estimates
+          result: unpop-datapoints-5-before2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-5-before2015-0
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-5-before2015
+
         - procedure: filter_row
           ingredients:
               - unpop-datapoints-5
           options:
-              dictionary:
+              filters:
                   medianageofpopulation:
-                      from: medianageofpopulation
-                      variant: medium variant
+                      variant: medium_variant
                   dependencyratio1564:
-                      from: dependencyratio1564
-                      variant: medium variant
+                      variant: medium_variant
                   populationdensitypersqkm:
-                      from: populationdensitypersqkm
-                      variant: medium variant
+                      variant: medium_variant
+          result: unpop-datapoints-5-after2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-5-after2015-0
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-5-after2015
 
         - procedure: merge

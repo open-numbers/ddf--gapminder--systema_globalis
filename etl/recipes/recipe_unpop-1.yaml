@@ -33,46 +33,68 @@ cooking:
           ingredients:
               - unpop-datapoints-1
           options:
-              dictionary:
+              filters:
                   birthper1000population:
-                      from: birthper1000population
-                      freq: 5Yearly
+                      freq: 5yearly
                   crudedeathrateper1000population:
-                      from: crudedeathrateper1000population
-                      freq: 5Yearly
+                      freq: 5yearly
                   populationgrowthrate:
-                      from: populationgrowthrate
-                      freq: 5Yearly
+                      freq: 5yearly
+          result: unpop-datapoints-1-1-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-1-1-0
+          options:
+              groupby:
+                  - country
+                  - variant
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-1-1
         - procedure: filter_row
           ingredients:
               - unpop-datapoints-1-1
           options:
-              dictionary:
+              filters:
                   birthper1000population:
-                      from: birthper1000population
                       variant: estimates
                   crudedeathrateper1000population:
-                      from: crudedeathrateper1000population
                       variant: estimates
                   populationgrowthrate:
-                      from: populationgrowthrate
                       variant: estimates
+          result: unpop-datapoints-1-1-before2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-1-1-before2015-0
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-1-1-before2015
         - procedure: filter_row
           ingredients:
               - unpop-datapoints-1-1
           options:
-              dictionary:
+              filters:
                   birthper1000population:
-                      from: birthper1000population
-                      variant: medium variant
+                      variant: medium_variant
                   crudedeathrateper1000population:
-                      from: crudedeathrateper1000population
-                      variant: medium variant
+                      variant: medium_variant
                   populationgrowthrate:
-                      from: populationgrowthrate
-                      variant: medium variant
+                      variant: medium_variant
+          result: unpop-datapoints-1-1-after2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-1-1-after2015-0
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  "*": sum
           result: unpop-datapoints-1-1-after2015
         - procedure: merge
           ingredients:
