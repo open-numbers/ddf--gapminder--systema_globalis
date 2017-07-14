@@ -8,7 +8,7 @@ info:
 config:
     recipes_dir: ./
     dictionary_dir: ../translation_dictionaries
-    ddf_dir: /Users/semio/src/work/Gapminder
+    ddf_dir: /Users/semio/src/work/Gapminder/datasets
 
 include:
     - recipe_gw_common.yaml

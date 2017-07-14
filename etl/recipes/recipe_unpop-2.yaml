@@ -21,7 +21,7 @@ ingredients:
 
     - id: unpop-datapoints-2
       dataset: *d1
-      key: country, freq, gender, variant, year
+      key: country, gender, variant, year
       value:
           - lifeexpectancyatbirth
 
@@ -30,26 +30,6 @@ cooking:
         - procedure: filter_row
           ingredients:
               - unpop-datapoints-2
-          options:
-              filters:
-                  lifeexpectancyatbirth:
-                      freq: 5yearly
-          result: unpop-datapoints-2-1-0
-        - procedure: groupby
-          ingredients:
-              - unpop-datapoints-2-1-0
-          options:
-              groupby:
-                  - variant
-                  - country
-                  - gender
-                  - year
-              aggregate:
-                  "*": sum
-          result: unpop-datapoints-2-1
-        - procedure: filter_row
-          ingredients:
-              - unpop-datapoints-2-1
           options:
               filters:
                   lifeexpectancyatbirth:
@@ -68,7 +48,7 @@ cooking:
           result: unpop-datapoints-2-1-before2015
         - procedure: filter_row
           ingredients:
-              - unpop-datapoints-2-1
+              - unpop-datapoints-2
           options:
               filters:
                   lifeexpectancyatbirth:

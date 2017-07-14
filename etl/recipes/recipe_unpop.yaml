@@ -24,15 +24,6 @@ ingredients:
       key: "country"
       value: "*"
 
-    - id: unpop-datapoints-1
-      dataset: *d1
-      key: country, freq, variant, year
-      value:
-          - birthper1000population
-          - crudedeathrateper1000population
-          - populationgrowthrate
-
-
     - id: gw-concepts-unpop
       dataset: *d2
       key: concept
