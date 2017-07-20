@@ -87,13 +87,17 @@ def apply_patches():
             'ddf--concepts.3.csv',
             'ddf--concepts.4.csv',
             'ddf--concepts.5.csv',
-            'ddf--concepts.6.csv'
+            'ddf--concepts.6.csv',
+            'ddf--concepts.7.csv'
         ],
         'ddf--entities--tag.csv': [
             'ddf--entities--tag.0.csv'
         ],
-        'ddf--index.csv' : [
+        'ddf--index.csv': [
             'ddf--inedx.0.csv'
+        ],
+        'ddf--entities--geo--global.csv': [
+            'ddf--entities--geo--global.1.csv'
         ]
     }
     # apply the patches

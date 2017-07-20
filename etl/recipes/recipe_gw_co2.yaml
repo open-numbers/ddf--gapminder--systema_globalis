@@ -24,7 +24,7 @@ ingredients:
     #     filter: (optional) more keyword filters
     #
     # below some example of ingredients:
-    # 
+    #
     - id: co2-datapoints
       dataset: *d1
       key: "country,year"
@@ -32,7 +32,7 @@ ingredients:
           - yearly_co2_emissions_1000_tonnes
           - co2_emissions_tonnes_per_person
           - cumulative_co2_emissions_tonnes
-    - id: co2-concepts
+    - id: co2-concepts-final
       dataset: *d1
       key: concept
       value: "*"
@@ -41,7 +41,7 @@ ingredients:
               - yearly_co2_emissions_1000_tonnes
               - co2_emissions_tonnes_per_person
               - cumulative_co2_emissions_tonnes
-    # 
+    #
     # - id: gw-concepts-aqua
     #   dataset: *d2
     #   key: concept
@@ -60,9 +60,3 @@ cooking:
                   country: geo
                   year: time
           result: co2-datapoints-final
-    concepts:
-        - procedure: identity
-          ingredients:
-              - co2-concepts
-          result: co2-concepts-final 
-          

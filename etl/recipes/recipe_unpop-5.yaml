@@ -1,0 +1,121 @@
+info:
+    id: unpop_sg_dataset
+    base:
+        - &d1 ddf--unpop--wpp_population
+        - &d2 ddf--gapminder--gapminder_world
+        - &d3 ddf--unpop--wpp_demog
+
+config:
+    recipes_dir: ./
+    dictionary_dir: ../translation_dictionaries
+    ddf_dir: /Users/semio/src/work/Gapminder/datasets
+
+include:
+    - recipe_gw_common.yaml
+
+
+ingredients:
+    - id: unpop-countries
+      dataset: *d1
+      key: "country"
+      value: "*"
+    - id: unpop-datapoints-5
+      dataset: *d1
+      key: country, variant, year
+      value:
+          - medianageofpopulation
+          - dependencyratio1564
+          - populationdensitypersqkm
+
+cooking:
+    datapoints:
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-5
+          options:
+              filters:
+                  medianageofpopulation:
+                      variant: estimates
+                  dependencyratio1564:
+                      variant: estimates
+                  populationdensitypersqkm:
+                      variant: estimates
+          result: unpop-datapoints-5-before2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-5-before2015-0
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  "*": sum
+          result: unpop-datapoints-5-before2015
+
+        - procedure: filter_row
+          ingredients:
+              - unpop-datapoints-5
+          options:
+              filters:
+                  medianageofpopulation:
+                      variant: medium_variant
+                  dependencyratio1564:
+                      variant: medium_variant
+                  populationdensitypersqkm:
+                      variant: medium_variant
+          result: unpop-datapoints-5-after2015-0
+        - procedure: groupby
+          ingredients:
+              - unpop-datapoints-5-after2015-0
+          options:
+              groupby:
+                  - country
+                  - year
+              aggregate:
+                  "*": sum
+          result: unpop-datapoints-5-after2015
+
+        - procedure: merge
+          ingredients:
+              - unpop-datapoints-5-after2015
+              - unpop-datapoints-5-before2015
+          options:
+              deep: true
+          result: unpop-datapoints-5-country-year
+
+        - procedure: translate_column
+          ingredients:
+              - unpop-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gw-countries
+                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
+                        'iso3166_1_alpha3', 'iso3166_2'
+                       ]
+                  value: country
+          result: unpop-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - unpop-datapoints-5-country-year
+          options:
+              column: country
+              dictionary:
+                  base: unpop-countries-aligned
+                  key: country
+                  value: geo
+          result: unpop-datapoints-5-country-year-aligned
+
+        - procedure: translate_header
+          ingredients:
+              - unpop-datapoints-5-country-year-aligned
+          options:
+              dictionary:
+                  medianageofpopulation: median_age_years
+                  dependencyratio1564: children_and_elderly_per_100_adults
+                  populationdensitypersqkm: population_density_per_square_km
+          result: unpop-datapoints-5-final

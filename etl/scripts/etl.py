@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from ddf_utils import chef
-from ddf_utils.index import get_datapackage
+from ddf_utils.chef.api import Chef
+from ddf_utils.datapackage import get_datapackage, dump_json
 import patch
 import os
 import json
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s -%(levelname)s- %(message)s',
+logging.basicConfig(level=logging.INFO, format='%(asctime)s -%(levelname)s- %(message)s',
                     datefmt="%H:%M:%S"
                     )
 
@@ -20,11 +20,11 @@ if __name__ == '__main__':
         if f.startswith("ddf--"):
             os.remove(os.path.join(out_dir, f))
 
-    recipe = chef.build_recipe(recipe_file)
-    res = chef.run_recipe(recipe, serve=True, outpath=out_dir)
+    chef = Chef.from_recipe(recipe_file)
+    chef.run(serve=True, outpath=out_dir)
 
     patch.do_all_changes()
 
-    datapackage = get_datapackage(out_dir, use_existing=True, to_disk=True)
+    dump_json(os.path.join(out_dir, 'datapackage.json'), get_datapackage(out_dir))
 
     print('Done.')
