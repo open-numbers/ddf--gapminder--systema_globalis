@@ -124,10 +124,10 @@ ingredients:
           - ep_pmp_sgas_cd
           # - eg_use_comm_gd_pd_kd
           - it_net_user_p2
-    - id: gw-concepts-all
-      dataset: *d2
-      key: concept
-      value: "*"
+    # - id: gw-concepts-all
+    #   dataset: *d2
+    #   key: concept
+    #   value: "*"
 
 cooking:
     datapoints:

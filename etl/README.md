@@ -2,4 +2,9 @@
 
 This branch is craeted by recipe and ddf_utils
 
-To recreate all ddf files, run `etl.py` in etl/scripts.
+To recreate all ddf files, first run `ddf cleanup` in the root dir to remove all old files, then run:
+
+```bash
+cd etl/recipe
+ddf run_recipe -i recipe_main.yaml -o ../../
+```

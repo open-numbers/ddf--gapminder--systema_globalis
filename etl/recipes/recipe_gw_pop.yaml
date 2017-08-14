@@ -33,7 +33,9 @@ ingredients:
     - id: pop-concepts
       dataset: *d1
       key: concept
-      value: "*"
+      value:
+          $nin:
+              - sourceurl
       filter:
           concept:
               - population
@@ -65,5 +67,5 @@ cooking:
               column: concept
               dictionary:
                   population: population_total
-          result: pop-concepts-final 
-          
+          result: pop-concepts-final
+

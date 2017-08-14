@@ -9,6 +9,10 @@ config:
     dictionary_dir: ../translation_dictionaries
     # the path to search ddf datasets
     ddf_dir: /Users/semio/src/work/Gapminder/datasets/
+    # external
+    external_csv_dir: ../external_csv
+    # procedures
+    procedure_dir: ./procedures
 
 include:
     - recipe_gw_common.yaml
@@ -26,10 +30,20 @@ ingredients:
       dataset: ddf--gapminder--gapminder_world
       key: concept
       value: "*"
+      filter:
+          concept:
+              $nin: &concepts_to_drop
+                  - yearly_co2_emissions_tonnes
+                  - sg_gdp_p_cap_const_ppp2011_dollar
+                  - sg_population
+                  - sg_gini
+                #   - geographic_regions 
+                  - geographic_regions_in_4_colors
     - id: gw-datapoints-all
       dataset: ddf--gapminder--gapminder_world
       key: "geo,time"
-      value: "*"
+      value:
+          $nin: *concepts_to_drop
     - id: static-assets-datapoints
       dataset: ddf--gapminder--static_assets
       key: geo, time
@@ -38,6 +52,19 @@ ingredients:
       dataset: ddf--gapminder--static_assets
       key: concept
       value: "*"
+
+    # external csvs
+    - id: concept_patch
+      key: concept
+      data: ddf--concepts.csv
+
+    - id: geo_global_patch
+      key: geo
+      data: ddf--entities--geo--global.csv
+
+    - id: tag_entity
+      key: tag
+      data: ddf--entities--tag.csv
 
 cooking:
     datapoints:
@@ -54,10 +81,29 @@ cooking:
               - edu-datapoints-final
               - unpop-datapoints-final
               - static-assets-datapoints
+        - procedure: filter
+          result: datapoints-final
+          ingredients:
+          - all-datapoints-merged
+          options:
+              item:
+                  $nin:
+                    - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
+                    - extreme_poverty_percent_people_below_125_a_day
+                    - gnipercapita_constant_2000_us
+                    - poverty_percent_people_below_2_a_day
     entities:
-        - procedure: serve
+        - procedure: merge
           ingredients:
               - gw-entities-geo
+              - geo_global_patch
+          options:
+              deep: true
+          result: geo_final
+        - procedure: serve
+          ingredients:
+              - geo_final
+              - tag_entity
     concepts:
         - procedure: merge
           result: all-concepts-merged
@@ -73,5 +119,40 @@ cooking:
               - gini-concepts
               - edu-concepts-final
               - unpop-concepts-final
+              - key: concept
+                data:
+                    - concept: tag
+                      concept_type: entity_domain
+                      name: Tag
+                    - concept: parent
+                      concept_type: string
+                      name: Tag parent
+                    - concept: shape_lores_svg
+                      concept_type: string
+                      name: Shapes
+                    - concept: temp_string
+                      concept_type: string
+                      name: Temporaty string
           options:
               deep: true
+        - procedure: translate_column
+          ingredients:
+            - all-concepts-merged
+          result: all-concepts-merged-translated
+          options:
+              column: concept
+              not_found: include
+              dictionary:
+                  geographic_regions: world_6region
+              debug: true
+        - procedure: custom_procedure.add_tag_column
+          ingredients:
+              - all-concepts-merged-translated
+          result: concepts_with_tag
+        - procedure: merge
+          ingredients:
+              - concepts_with_tag
+              - concept_patch
+          options:
+              deep: true
+          result: concepts_final
