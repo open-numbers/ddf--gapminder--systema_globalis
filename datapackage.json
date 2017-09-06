@@ -1,20 +1,10 @@
 {
     "name": "ddf--gapminder--systema_globalis",
     "language": {
-        "id": "en",
-        "name": "English"
+        "id": "en"
     },
-    "author": "",
-    "description": "",
-    "license": "",
-    "title": "ddf--gapminder--systema_globalis",
-    "translations": [
-        {
-            "id": "ar-SA",
-            "name": "العربية"
-        }
-    ],
-    "version": "1.2.2",
+    "last_updated": "2017-09-06 14:03:17",
+    "id": "sg-dataset",
     "resources": [
         {
             "path": "ddf--concepts.csv",
@@ -25,34 +15,37 @@
                         "name": "concept"
                     },
                     {
-                        "name": "name"
+                        "name": "color"
                     },
                     {
                         "name": "concept_type"
                     },
                     {
+                        "name": "description"
+                    },
+                    {
                         "name": "domain"
-                    },
-                    {
-                        "name": "indicator_url"
-                    },
-                    {
-                        "name": "color"
-                    },
-                    {
-                        "name": "scales"
                     },
                     {
                         "name": "drill_up"
                     },
                     {
-                        "name": "unit"
+                        "name": "indicator_url"
                     },
                     {
                         "name": "interpolation"
                     },
                     {
-                        "name": "description"
+                        "name": "name"
+                    },
+                    {
+                        "name": "name_catalog"
+                    },
+                    {
+                        "name": "name_short"
+                    },
+                    {
+                        "name": "scales"
                     },
                     {
                         "name": "tags"
@@ -11765,70 +11758,16 @@
                 "primaryKey": [
                     "concept"
                 ],
+                "value": "color",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
                 "value": "concept_type",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "scales",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "description",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "domain",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "unit",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "interpolation",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--concepts"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "concept"
-                ],
-                "value": "indicator_url",
                 "resources": [
                     "ddf--concepts"
                 ]
@@ -11846,7 +11785,7 @@
                 "primaryKey": [
                     "concept"
                 ],
-                "value": "drill_up",
+                "value": "name",
                 "resources": [
                     "ddf--concepts"
                 ]
@@ -11855,7 +11794,70 @@
                 "primaryKey": [
                     "concept"
                 ],
-                "value": "color",
+                "value": "name_catalog",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "indicator_url",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name_short",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "domain",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "scales",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "interpolation",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "drill_up",
                 "resources": [
                     "ddf--concepts"
                 ]
@@ -11866,16 +11868,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "world_4region",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "arb2",
+                "value": "is--country",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -11893,7 +11886,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "iso3166_1_alpha2",
+                "value": "alt_5",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -11902,7 +11895,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "alternative_3",
+                "value": "alternative_1",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -11911,34 +11904,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "god_id",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "arb4",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "world_6region",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "pandg",
+                "value": "main_religion_2008",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -11956,34 +11922,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "arb1",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "arb3",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "iso3166_1_numeric",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "alternative_4_cdiac",
+                "value": "arb4",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12001,7 +11940,79 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "upper_case_name",
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "iso3166_1_numeric",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "landlocked",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "god_id",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "arb3",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "alternative_3",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "iso3166_1_alpha2",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12028,7 +12039,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "iso3166_2",
+                "value": "arb1",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12037,7 +12048,43 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "iso3166_1_alpha3",
+                "value": "world_6region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "arb2",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "gwid",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "upper_case_name",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "world_4region",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12064,7 +12111,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "g77_and_oecd_countries",
+                "value": "alternative_4_cdiac",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12073,7 +12120,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "landlocked",
+                "value": "iso3166_1_alpha3",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12082,7 +12129,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "gwid",
+                "value": "iso3166_2",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12091,25 +12138,7 @@
                 "primaryKey": [
                     "country"
                 ],
-                "value": "is--country",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "longitude",
+                "value": "pandg",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12125,45 +12154,9 @@
             },
             {
                 "primaryKey": [
-                    "country"
-                ],
-                "value": "alt_5",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "main_religion_2008",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "alternative_1",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
                     "geo"
                 ],
-                "value": "world_4region",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "arb2",
+                "value": "is--country",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12181,7 +12174,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "iso3166_1_alpha2",
+                "value": "alt_5",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12190,7 +12183,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "alternative_3",
+                "value": "alternative_1",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12199,34 +12192,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "god_id",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "arb4",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "world_6region",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "pandg",
+                "value": "main_religion_2008",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12244,34 +12210,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "arb1",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "arb3",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "iso3166_1_numeric",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "alternative_4_cdiac",
+                "value": "arb4",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12289,7 +12228,89 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "upper_case_name",
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--g77_and_oecd_countries",
+                    "ddf--entities--geo--landlocked",
+                    "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--income_groups",
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "iso3166_1_numeric",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "landlocked",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "god_id",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "arb3",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "longitude",
+                "resources": [
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--country",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "alternative_3",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "iso3166_1_alpha2",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12316,7 +12337,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "iso3166_2",
+                "value": "arb1",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12325,7 +12346,47 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "iso3166_1_alpha3",
+                "value": "world_6region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "arb2",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "gwid",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries",
+                    "ddf--entities--geo--landlocked",
+                    "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--income_groups",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "upper_case_name",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "world_4region",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12345,9 +12406,9 @@
                 ],
                 "value": "latitude",
                 "resources": [
-                    "ddf--entities--geo--country",
-                    "ddf--entities--geo--global",
                     "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--global",
+                    "ddf--entities--geo--country",
                     "ddf--entities--geo--world_6region"
                 ]
             },
@@ -12355,7 +12416,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "g77_and_oecd_countries",
+                "value": "alternative_4_cdiac",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12364,7 +12425,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "landlocked",
+                "value": "iso3166_1_alpha3",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12373,20 +12434,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "gwid",
-                "resources": [
-                    "ddf--entities--geo--country",
-                    "ddf--entities--geo--g77_and_oecd_countries",
-                    "ddf--entities--geo--income_groups",
-                    "ddf--entities--geo--landlocked",
-                    "ddf--entities--geo--main_religion_2008"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "is--country",
+                "value": "iso3166_2",
                 "resources": [
                     "ddf--entities--geo--country"
                 ]
@@ -12395,150 +12443,104 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "name",
+                "value": "pandg",
                 "resources": [
-                    "ddf--entities--geo--country",
-                    "ddf--entities--geo--g77_and_oecd_countries",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unicode_region_subtag",
+                "resources": [
                     "ddf--entities--geo--global",
-                    "ddf--entities--geo--income_groups",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries",
                     "ddf--entities--geo--landlocked",
                     "ddf--entities--geo--main_religion_2008",
                     "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--income_groups",
                     "ddf--entities--geo--world_6region"
                 ]
             },
             {
                 "primaryKey": [
                     "geo"
+                ],
+                "value": "is--g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "rank",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "gwid",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ],
+                "value": "is--g77_and_oecd_countries",
+                "resources": [
+                    "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "topojson",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
                 ],
                 "value": "longitude",
                 "resources": [
-                    "ddf--entities--geo--country",
-                    "ddf--entities--geo--global",
-                    "ddf--entities--geo--world_4region",
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "unicode_region_subtag",
-                "resources": [
-                    "ddf--entities--geo--country",
-                    "ddf--entities--geo--global"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "alt_5",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "main_religion_2008",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "alternative_1",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "g77_and_oecd_countries"
-                ],
-                "value": "is--g77_and_oecd_countries",
-                "resources": [
-                    "ddf--entities--geo--g77_and_oecd_countries"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "g77_and_oecd_countries"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--geo--g77_and_oecd_countries"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "g77_and_oecd_countries"
-                ],
-                "value": "gwid",
-                "resources": [
-                    "ddf--entities--geo--g77_and_oecd_countries"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "g77_and_oecd_countries"
-                ],
-                "value": "rank",
-                "resources": [
-                    "ddf--entities--geo--g77_and_oecd_countries"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "is--g77_and_oecd_countries",
-                "resources": [
-                    "ddf--entities--geo--g77_and_oecd_countries"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "rank",
-                "resources": [
-                    "ddf--entities--geo--g77_and_oecd_countries",
-                    "ddf--entities--geo--income_groups",
-                    "ddf--entities--geo--landlocked",
-                    "ddf--entities--geo--main_religion_2008",
-                    "ddf--entities--geo--world_4region",
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "topojson",
-                "resources": [
-                    "ddf--entities--geo--global"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "is--global",
-                "resources": [
-                    "ddf--entities--geo--global"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "global"
-                ],
-                "value": "topojson",
-                "resources": [
                     "ddf--entities--geo--global"
                 ]
             },
@@ -12547,15 +12549,6 @@
                     "global"
                 ],
                 "value": "is--global",
-                "resources": [
-                    "ddf--entities--geo--global"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "global"
-                ],
-                "value": "unicode_region_subtag",
                 "resources": [
                     "ddf--entities--geo--global"
                 ]
@@ -12573,25 +12566,34 @@
                 "primaryKey": [
                     "global"
                 ],
-                "value": "name",
+                "value": "unicode_region_subtag",
                 "resources": [
                     "ddf--entities--geo--global"
                 ]
             },
             {
                 "primaryKey": [
-                    "global"
+                    "geo"
                 ],
-                "value": "longitude",
+                "value": "topojson",
                 "resources": [
                     "ddf--entities--geo--global"
                 ]
             },
             {
                 "primaryKey": [
-                    "income_groups"
+                    "geo"
                 ],
-                "value": "name",
+                "value": "is--global",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--income_groups",
                 "resources": [
                     "ddf--entities--geo--income_groups"
                 ]
@@ -12609,7 +12611,7 @@
                 "primaryKey": [
                     "income_groups"
                 ],
-                "value": "is--income_groups",
+                "value": "name",
                 "resources": [
                     "ddf--entities--geo--income_groups"
                 ]
@@ -12625,20 +12627,11 @@
             },
             {
                 "primaryKey": [
-                    "geo"
+                    "income_groups"
                 ],
                 "value": "is--income_groups",
                 "resources": [
                     "ddf--entities--geo--income_groups"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "landlocked"
-                ],
-                "value": "name",
-                "resources": [
-                    "ddf--entities--geo--landlocked"
                 ]
             },
             {
@@ -12663,6 +12656,15 @@
                 "primaryKey": [
                     "landlocked"
                 ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--landlocked"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "landlocked"
+                ],
                 "value": "rank",
                 "resources": [
                     "ddf--entities--geo--landlocked"
@@ -12679,18 +12681,9 @@
             },
             {
                 "primaryKey": [
-                    "main_religion_2008"
+                    "geo"
                 ],
                 "value": "is--main_religion_2008",
-                "resources": [
-                    "ddf--entities--geo--main_religion_2008"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "main_religion_2008"
-                ],
-                "value": "name",
                 "resources": [
                     "ddf--entities--geo--main_religion_2008"
                 ]
@@ -12708,6 +12701,15 @@
                 "primaryKey": [
                     "main_religion_2008"
                 ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--main_religion_2008"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "main_religion_2008"
+                ],
                 "value": "rank",
                 "resources": [
                     "ddf--entities--geo--main_religion_2008"
@@ -12715,7 +12717,7 @@
             },
             {
                 "primaryKey": [
-                    "geo"
+                    "main_religion_2008"
                 ],
                 "value": "is--main_religion_2008",
                 "resources": [
@@ -12726,7 +12728,7 @@
                 "primaryKey": [
                     "world_4region"
                 ],
-                "value": "description",
+                "value": "color",
                 "resources": [
                     "ddf--entities--geo--world_4region"
                 ]
@@ -12744,34 +12746,7 @@
                 "primaryKey": [
                     "world_4region"
                 ],
-                "value": "is--world_4region",
-                "resources": [
-                    "ddf--entities--geo--world_4region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_4region"
-                ],
                 "value": "longitude",
-                "resources": [
-                    "ddf--entities--geo--world_4region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_4region"
-                ],
-                "value": "name_long",
-                "resources": [
-                    "ddf--entities--geo--world_4region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_4region"
-                ],
-                "value": "latitude",
                 "resources": [
                     "ddf--entities--geo--world_4region"
                 ]
@@ -12789,6 +12764,24 @@
                 "primaryKey": [
                     "world_4region"
                 ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_4region"
+                ],
                 "value": "shape_lores_svg",
                 "resources": [
                     "ddf--entities--geo--world_4region"
@@ -12798,7 +12791,7 @@
                 "primaryKey": [
                     "world_4region"
                 ],
-                "value": "color",
+                "value": "is--world_4region",
                 "resources": [
                     "ddf--entities--geo--world_4region"
                 ]
@@ -12814,19 +12807,9 @@
             },
             {
                 "primaryKey": [
-                    "geo"
+                    "world_4region"
                 ],
-                "value": "description",
-                "resources": [
-                    "ddf--entities--geo--world_4region",
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "is--world_4region",
+                "value": "latitude",
                 "resources": [
                     "ddf--entities--geo--world_4region"
                 ]
@@ -12835,7 +12818,7 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "name_long",
+                "value": "color",
                 "resources": [
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
@@ -12855,6 +12838,26 @@
                 "primaryKey": [
                     "geo"
                 ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
                 "value": "shape_lores_svg",
                 "resources": [
                     "ddf--entities--geo--world_4region",
@@ -12865,10 +12868,9 @@
                 "primaryKey": [
                     "geo"
                 ],
-                "value": "color",
+                "value": "is--world_4region",
                 "resources": [
-                    "ddf--entities--geo--world_4region",
-                    "ddf--entities--geo--world_6region"
+                    "ddf--entities--geo--world_4region"
                 ]
             },
             {
@@ -12884,16 +12886,7 @@
                 "primaryKey": [
                     "world_6region"
                 ],
-                "value": "description",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "is--world_6region",
+                "value": "color",
                 "resources": [
                     "ddf--entities--geo--world_6region"
                 ]
@@ -12911,25 +12904,16 @@
                 "primaryKey": [
                     "world_6region"
                 ],
+                "value": "is--world_6region",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
                 "value": "longitude",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "name_long",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "latitude",
                 "resources": [
                     "ddf--entities--geo--world_6region"
                 ]
@@ -12947,6 +12931,24 @@
                 "primaryKey": [
                     "world_6region"
                 ],
+                "value": "name_long",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "description",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
                 "value": "shape_lores_svg",
                 "resources": [
                     "ddf--entities--geo--world_6region"
@@ -12956,7 +12958,7 @@
                 "primaryKey": [
                     "world_6region"
                 ],
-                "value": "color",
+                "value": "rank",
                 "resources": [
                     "ddf--entities--geo--world_6region"
                 ]
@@ -12965,7 +12967,7 @@
                 "primaryKey": [
                     "world_6region"
                 ],
-                "value": "rank",
+                "value": "latitude",
                 "resources": [
                     "ddf--entities--geo--world_6region"
                 ]
@@ -12974,7 +12976,7 @@
                 "primaryKey": [
                     "tag"
                 ],
-                "value": "name",
+                "value": "parent",
                 "resources": [
                     "ddf--entities--tag"
                 ]
@@ -12983,7 +12985,7 @@
                 "primaryKey": [
                     "tag"
                 ],
-                "value": "parent",
+                "value": "name",
                 "resources": [
                     "ddf--entities--tag"
                 ]
@@ -17372,7 +17374,7 @@
             },
             {
                 "primaryKey": [
-                    "geo",
+                    "global",
                     "time"
                 ],
                 "value": "income_mountains",
@@ -17382,7 +17384,7 @@
             },
             {
                 "primaryKey": [
-                    "global",
+                    "geo",
                     "time"
                 ],
                 "value": "income_mountains",
