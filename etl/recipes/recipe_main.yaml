@@ -37,8 +37,11 @@ ingredients:
                   - sg_gdp_p_cap_const_ppp2011_dollar
                   - sg_population
                   - sg_gini
-                #   - geographic_regions 
                   - geographic_regions_in_4_colors
+                  - unit
+    - id: gw-ontology-concepts
+      dataset: ddf--gapminder--ontology
+      key: concept
     - id: gw-datapoints-all
       dataset: ddf--gapminder--gapminder_world
       key: "geo,time"
@@ -119,6 +122,7 @@ cooking:
               - gini-concepts
               - edu-concepts-final
               - unpop-concepts-final
+              - gw-ontology-concepts
               - key: concept
                 data:
                     - concept: tag
@@ -144,7 +148,6 @@ cooking:
               not_found: include
               dictionary:
                   geographic_regions: world_6region
-              debug: true
         - procedure: custom_procedure.add_tag_column
           ingredients:
               - all-concepts-merged-translated
@@ -156,3 +159,12 @@ cooking:
           options:
               deep: true
           result: concepts_final
+        - procedure: filter
+          ingredients:
+            - concepts_final
+          options:
+            item:
+              $nin:
+                - unit
+          result: concepts_final_no_unit
+            
