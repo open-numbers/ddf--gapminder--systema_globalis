@@ -1,47 +1,49 @@
-"concept","color","concept_type","description","domain","drill_up","indicator_url","interpolation","name","scales","tags","unit"
-"world_6region","{""palette"": {""america"": ""#ebcc21"", ""middle_east_north_africa"": ""#5be56b"", ""south_asia"": ""#35d1d1"", ""europe_central_asia"": ""#f49d37"", ""sub_saharan_africa"": ""#4e7af0"", ""east_asia_pacific"": ""#f03838""}, ""selectable"": false}","","","","","","","World Regions (6 colors)","","categorizations",""
-"income_groups","","","","","","","","","","categorizations",""
-"landlocked","{""palette"": {""coastline"": ""#7487ef"", ""landlocked"": ""#f05656""}}","","","","","","","","","categorizations",""
-"g77_and_oecd_countries","{""palette"": {""g77"": ""#7487ef"", ""others"": ""#f05656"", ""oecd"": ""#71c44c""}}","","","","","","","","","categorizations",""
-"main_religion_2008","{""palette"": {""muslim"": ""#71c44c"", ""eastern_religions"": ""#f05656"", ""christian"": ""#7487ef""}, ""selectable"": false}","","","","","","","","","categorizations",""
-"country","","","","","[""world_6region"", ""income_groups"", ""landlocked"", ""g77_and_oecd_countries"", ""main_religion_2008""]","","","","","categorizations",""
-"world_4region","{""palette"": {""asia"": [""#ff5872"", ""#ff5178"", ""#ff658a"", ""#da0025"", ""#fa4e73"", ""#b2043a""], ""africa"": [""#00d5e9"", ""#00c8ec"", ""#00e1ec"", ""#0098df"", ""#77dff7"", ""#0586c6""], ""_default"": [""#ffb600"", ""#ffaa14"", ""#ffc500"", ""#fb6d19"", ""#ffb600"", ""#9b4838""], ""europe"": [""#ffe700"", ""#fbdd00"", ""#fff400"", ""#fbaf09"", ""#ffe700"", ""#b17f4a""], ""americas"": [""#7feb00"", ""#5de200"", ""#81f201"", ""#00b900"", ""#b5ea32"", ""#008d36""]}, ""shades"": {""fill3"": 2, ""fill2"": 1, ""print_fill"": 4, ""print_stroke"": 5, ""fill1"": 0, ""shade"": 3}, ""selectable"": false}","","","","","","","","","categorizations",""
-"child_mortality_0_5_year_olds_dying_per_1000_born","","","","","","","","","","_root, newborn_infants",""
-"life_expectancy_years","","","","","","","","","","_root, health",""
-"infant_mortality_rate_per_1000_births","","","","","","","","Infant mortality rate","","",""
-"year_categorization_1820_2010","","","","","","","","","","_none",""
-"year_categorization_1950","","","","","","","","","","_none",""
-"ifpri_underweight_children","","","","","","","","","","advanced",""
-"residential_energy_use_percent","","","","","","https://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdEV1RkJqTEItQnJYVXJlZzVuc3Y3Mmc","","","","",""
-"color","","","","","","","","Color","","",""
-"time","","","","","","","","","","_root",""
-"geo","","","","","","","","","","",""
-"world_6region","","","","","","","","","","",""
-"income_groups","{""palette"": {""lower_middle_income"": ""#7ea1d1"", ""upper_middle_income"": ""#a7cb7d"", ""high_income"": ""#7bc135"", ""low_income"": ""#4366f4""}}","","","","","","","","","",""
-"landlocked","","","","","","","","","","",""
-"g77_and_oecd_countries","","","","","","","","","","",""
-"main_religion_2008","","","","","","","","","","",""
-"country","","","","","","","","","","",""
-"world_4region","","","","","","","","","","",""
-"global","","","","","","","","","","",""
-"name","","","","","","","","","","",""
-"drill_up","","","","","","","","drill up","","",""
-"time","","","","","","","","","","",""
-"income_per_person_gdppercapita_ppp_inflation_adjusted","","","Gross domestic product per person adjusted for differences in purchasing power (in international dollars, fixed 2011 prices, PPP based on 2011 ICP).","","","","","Income per person","","","GDP/capita in $/year adjusted for inflation & prices"
-"co2_emissions_tonnes_per_person","","","","","","","","","[""log"", ""linear""]","",""
-"gapminder_gini","","","","","","","","","[""linear""]","",""
-"co2_intensity_of_economic_output_kg_co2_per_2011_ppp_of_gdp","","","","","","","","","","","kg CO2 per 2011 PPP $ of GDP"
-"ratio_of_girls_to_boys_in_primary_and_secondary_education_perc","","","","","","","","","","","primary and secondary education, gross ratio"
-"energy_use_per_person","","","","","","","","","","","KG in oil eqv"
-"extreme_poverty_percent_people_below_190_a_day","","","","","","","","","","","% people below $1.90 a day"
-"poverty_percent_people_below_310_a_day","","","","","","","","","","","% people below $3.10 a day"
-"income_mountains","","","","","","","","Precumputed shapes for mountain chart","","",""
-"topojson","","","","","","","","A file name for static topojson world map","","",""
-"children_per_woman_total_fertility","","","","","","","","","","_root, newborn_infants",""
-"co2_emissions_tonnes_per_person","","","","","","","","","","_root, emissions",""
-"income_per_person_gdppercapita_ppp_inflation_adjusted","","","","","","","","","","_root, incomes_growth",""
-"child_mortality_0_5_year_olds_dying_per_1000_born","","","","","","","","","","_root, mortality",""
-"life_expectancy_years","","","","","","","","","","_root, life_expectancy",""
-"","","","","","","","","","","",""
-"","","","","","","","","","","",""
-"","","","","","","","","","","",""
+concept,color,concept_type,description,domain,drill_up,indicator_url,interpolation,name,scales,tags
+world_6region,"{""palette"": {""america"": ""#ebcc21"", ""middle_east_north_africa"": ""#5be56b"", ""south_asia"": ""#35d1d1"", ""europe_central_asia"": ""#f49d37"", ""sub_saharan_africa"": ""#4e7af0"", ""east_asia_pacific"": ""#f03838""}, ""selectable"": false}",,,,,,,World Regions (6 colors),,categorizations
+income_groups,,,,,,,,,,categorizations
+landlocked,"{""palette"": {""coastline"": ""#7487ef"", ""landlocked"": ""#f05656""}}",,,,,,,,,categorizations
+g77_and_oecd_countries,"{""palette"": {""g77"": ""#7487ef"", ""others"": ""#f05656"", ""oecd"": ""#71c44c""}}",,,,,,,,,categorizations
+main_religion_2008,"{""palette"": {""muslim"": ""#71c44c"", ""eastern_religions"": ""#f05656"", ""christian"": ""#7487ef""}, ""selectable"": false}",,,,,,,,,categorizations
+country,,,,,"[""world_6region"", ""income_groups"", ""landlocked"", ""g77_and_oecd_countries"", ""main_religion_2008""]",,,,,categorizations
+world_4region,"{""palette"": {""asia"": [""#ff5872"", ""#ff5178"", ""#ff658a"", ""#da0025"", ""#fa4e73"", ""#b2043a""], ""africa"": [""#00d5e9"", ""#00c8ec"", ""#00e1ec"", ""#0098df"", ""#77dff7"", ""#0586c6""], ""_default"": [""#ffb600"", ""#ffaa14"", ""#ffc500"", ""#fb6d19"", ""#ffb600"", ""#9b4838""], ""europe"": [""#ffe700"", ""#fbdd00"", ""#fff400"", ""#fbaf09"", ""#ffe700"", ""#b17f4a""], ""americas"": [""#7feb00"", ""#5de200"", ""#81f201"", ""#00b900"", ""#b5ea32"", ""#008d36""]}, ""shades"": {""fill3"": 2, ""fill2"": 1, ""print_fill"": 4, ""print_stroke"": 5, ""fill1"": 0, ""shade"": 3}, ""selectable"": false}",,,,,,,,,categorizations
+child_mortality_0_5_year_olds_dying_per_1000_born,,,,,,,,,,"_root, newborn_infants"
+life_expectancy_years,,,,,,,,,,"_root, health"
+infant_mortality_rate_per_1000_births,,,,,,,,,,
+year_categorization_1820_2010,,,,,,,,,,_none
+year_categorization_1950,,,,,,,,,,_none
+ifpri_underweight_children,,,,,,,,,,advanced
+residential_energy_use_percent,,,,,,https://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdEV1RkJqTEItQnJYVXJlZzVuc3Y3Mmc,,,,
+color,,,,,,,,Color,,
+time,,,,,,,,,,_root
+geo,,,,,,,,,,
+world_6region,,,,,,,,,,
+income_groups,"{""palette"": {""lower_middle_income"": ""#7ea1d1"", ""upper_middle_income"": ""#a7cb7d"", ""high_income"": ""#7bc135"", ""low_income"": ""#4366f4""}}",,,,,,,,,
+landlocked,,,,,,,,,,
+g77_and_oecd_countries,,,,,,,,,,
+main_religion_2008,,,,,,,,,,
+country,,,,,,,,,,
+world_4region,,,,,,,,,,
+global,,,,,,,,,,
+name,,,,,,,,,,
+drill_up,,,,,,,,drill up,,
+time,,,,,,,,,,
+income_per_person_gdppercapita_ppp_inflation_adjusted,,,"Gross domestic product per person adjusted for differences in purchasing power (in international dollars, fixed 2011 prices, PPP based on 2011 ICP).",,,,,,,
+co2_emissions_tonnes_per_person,,,,,,,,,"[""log"", ""linear""]",
+gapminder_gini,,,,,,,,,"[""linear""]",
+co2_intensity_of_economic_output_kg_co2_per_2011_ppp_of_gdp,,,,,,,,,,
+ratio_of_girls_to_boys_in_primary_and_secondary_education_perc,,,,,,,,,,
+energy_use_per_person,,,,,,,,,,
+extreme_poverty_percent_people_below_190_a_day,,,,,,,,,,
+poverty_percent_people_below_310_a_day,,,,,,,,,,
+income_mountains,,,,,,,,Precumputed shapes for mountain chart,,
+topojson,,,,,,,,A file name for static topojson world map,,
+children_per_woman_total_fertility,,,,,,,,,,"_root, newborn_infants"
+co2_emissions_tonnes_per_person,,,,,,,,,,"_root, emissions"
+income_per_person_gdppercapita_ppp_inflation_adjusted,,,,,,,,,,"_root, incomes_growth"
+child_mortality_0_5_year_olds_dying_per_1000_born,,,,,,,,,,"_root, mortality"
+life_expectancy_years,,,,,,,,,,"_root, life_expectancy"
+tag,,entity_domain,,,,,,Tag,,_none
+parent,,string,,,,,,Tag Parent,,_none
+shape_lores_svg,,string,,,,,,Shapes,,_none
+temp_string,,string,,,,,,Temporaty string,,_none
+name_catalog,,string,,,,,,Catalog Name,,_none

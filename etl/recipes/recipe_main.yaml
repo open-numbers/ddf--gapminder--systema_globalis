@@ -123,26 +123,6 @@ cooking:
               - edu-concepts-final
               - unpop-concepts-final
               - gw-ontology-concepts
-              - key: concept
-                data:
-                    - concept: tag
-                      concept_type: entity_domain
-                      name: Tag
-                    - concept: parent
-                      concept_type: string
-                      name: Tag parent
-                    - concept: shape_lores_svg
-                      concept_type: string
-                      name: Shapes
-                    - concept: temp_string
-                      concept_type: string
-                      name: Temporaty string
-                    - concept: name_short
-                      concept_type: string
-                      name: Short Name
-                    - concept: name_catalog
-                      concept_type: string
-                      name: Catalog Name
           options:
               deep: true
         - procedure: translate_column
