@@ -40,8 +40,8 @@ topojson,,,,,,,,A file name for static topojson world map,,
 children_per_woman_total_fertility,,,,,,,,,,"_root, newborn_infants"
 co2_emissions_tonnes_per_person,,,,,,,,,,"_root, emissions"
 income_per_person_gdppercapita_ppp_inflation_adjusted,,,,,,,,,,"_root, incomes_growth"
-child_mortality_0_5_year_olds_dying_per_1000_born,,,,,,,,,,"_root, mortality"
-life_expectancy_years,,,,,,,,,,"_root, life_expectancy"
+child_mortality_0_5_year_olds_dying_per_1000_born,,,,,,,,,,"_root, health"
+life_expectancy_years,,,,,,,,,,"_root, health"
 tag,,entity_domain,,,,,,Tag,,_none
 parent,,string,,,,,,Tag Parent,,_none
 shape_lores_svg,,string,,,,,,Shapes,,_none
