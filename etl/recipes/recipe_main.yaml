@@ -42,6 +42,9 @@ ingredients:
     - id: gw-ontology-concepts
       dataset: ddf--gapminder--ontology
       key: concept
+    - id: tag_entity
+      key: tag
+      dataset: ddf--gapminder--ontology
     - id: gw-datapoints-all
       dataset: ddf--gapminder--gapminder_world
       key: "geo,time"
@@ -64,10 +67,6 @@ ingredients:
     - id: geo_global_patch
       key: geo
       data: ddf--entities--geo--global.csv
-
-    - id: tag_entity
-      key: tag
-      data: ddf--entities--tag.csv
 
 cooking:
     datapoints:
@@ -134,13 +133,9 @@ cooking:
               not_found: include
               dictionary:
                   geographic_regions: world_6region
-        - procedure: custom_procedure.add_tag_column
-          ingredients:
-              - all-concepts-merged-translated
-          result: concepts_with_tag
         - procedure: merge
           ingredients:
-              - concepts_with_tag
+              - all-concepts-merged-translated
               - concept_patch
           options:
               deep: true
@@ -152,5 +147,9 @@ cooking:
             item:
               $nin:
                 - unit
+            row:
+              concept:
+                  $nin:
+                      - unit
           result: concepts_final_no_unit
             
