@@ -1,0 +1,274 @@
+country,gapminder_list
+abkh,Abkhazia
+afg,Afghanistan
+akr_a_dhe,Akrotiri and Dhekelia
+ala,Åland
+alb,Albania
+dza,Algeria
+asm,American Samoa
+and,Andorra
+ago,Angola
+aia,Anguilla
+ata,
+atg,Antigua and Barbuda
+arg,Argentina
+arm,Armenia
+abw,Aruba
+aus,Australia
+aut,Austria
+aze,Azerbaijan
+bhs,Bahamas
+bhr,Bahrain
+bgd,Bangladesh
+brb,Barbados
+blr,Belarus
+bel,Belgium
+blz,Belize
+ben,Benin
+bmu,Bermuda
+btn,Bhutan
+bol,Bolivia
+bih,Bosnia and Herzegovina
+bwa,Botswana
+bouisl,
+bra,Brazil
+iot,
+vgb,British Virgin Islands
+brn,Brunei
+bgr,Bulgaria
+bfa,Burkina Faso
+bdi,Burundi
+khm,Cambodia
+cmr,Cameroon
+can,Canada
+cpv,Cape Verde
+cym,Cayman Islands
+caf,Central African Rep.
+tcd,Chad
+chanisl,Channel Islands
+chl,Chile
+chn,China
+cxr,Christmas Island
+fra_clipperton,
+cck,Cocos Island
+col,Colombia
+com,Comoros
+cod,Congo_Democratic_Republic
+cog,"Congo, Rep."
+cok,Cook Islands
+cri,Costa Rica
+civ,Cote d'Ivoire
+hrv,Croatia
+cub,Cuba
+nld_curacao,
+cyp,Cyprus
+cze,Czech Rep.
+cheslo,Czechoslovakia
+dnk,Denmark
+dji,Djibouti
+dma,Dominica
+dom,Dominican Rep.
+deu_east,East Germany
+ecu,Ecuador
+egy,Egypt
+slv,El Salvador
+gnq,Equatorial Guinea
+eri,Eritrea
+eri_a_eth,Eritrea and Ethiopia
+est,Estonia
+eth,Ethiopia
+fro,Faeroe Islands
+flk,Falkland Islands (Malvinas)
+fji,Fiji
+fin,Finland
+fra,France
+guf,French Guiana
+pyf,French Polynesia
+fra_antarc,
+gab,Gabon
+gmb,Gambia
+pse_gaza,
+geo,Georgia
+deu,Germany
+gha,Ghana
+gib,Gibraltar
+grc,Greece
+grl,Greenland
+grd,Grenada
+glp,Guadeloupe
+gum,Guam
+gtm,Guatemala
+gbg,Guernsey
+gin,Guinea
+gnb,Guinea-Bissau
+guy,Guyana
+hti,Haiti
+heard_a_mcd,
+hos,Holy See
+hnd,Honduras
+hkg,"Hong Kong, China"
+hun,Hungary
+isl,Iceland
+ind,India
+idn,Indonesia
+irn,Iran
+irq,Iraq
+irl,Ireland
+gbm,Isle of Man
+isr,Israel
+ita,Italy
+jam,Jamaica
+jpn,Japan
+jey,Jersey
+jor,Jordan
+kaz,Kazakhstan
+ken,Kenya
+kir,Kiribati
+kos,Kosovo
+kwt,Kuwait
+kgz,Kyrgyzstan
+lao,Laos
+lva,Latvia
+lbn,Lebanon
+lso,Lesotho
+lbr,Liberia
+lby,Libya
+lie,Liechtenstein
+ltu,Lithuania
+lux,Luxembourg
+mac,"Macao, China"
+mkd,"Macedonia, FYR"
+mdg,Madagascar
+mwi,Malawi
+mys,Malaysia
+mdv,Maldives
+mli,Mali
+mlt,Malta
+mhl,Marshall Islands
+mtq,Martinique
+mrt,Mauritania
+mus,Mauritius
+myt,Mayotte
+mex,Mexico
+fsm,"Micronesia, Fed. Sts."
+mda,Moldova
+mco,Monaco
+mng,Mongolia
+mne,Montenegro
+msr,Montserrat
+mar,Morocco
+moz,Mozambique
+mmr,Myanmar
+nam,Namibia
+nru,Nauru
+npl,Nepal
+nld,Netherlands
+ant,Netherlands Antilles
+ncl,New Caledonia
+nzl,New Zealand
+ngokar,Ngorno-Karabakh
+nic,Nicaragua
+ner,Niger
+nga,Nigeria
+niu,Niue
+nfk,Norfolk Island
+prk,"Korea, Dem. Rep."
+yem_north,Yemen Arab Republic (Former)
+cyp_nor,Northern Cyprus
+mnp,Northern Mariana Islands
+nor,Norway
+omn,Oman
+pak,Pakistan
+plw,Palau
+pse,West Bank and Gaza
+pan,Panama
+png,Papua New Guinea
+pry,Paraguay
+per,Peru
+phl,Philippines
+pcn,Pitcairn
+pol,Poland
+prt,Portugal
+pri,Puerto Rico
+qat,Qatar
+reu,Reunion
+rou,Romania
+rus,Russia
+rwa,Rwanda
+wsm,Samoa
+smr,San Marino
+stp,Sao Tome and Principe
+sau,Saudi Arabia
+sen,Senegal
+srb,Serbia
+scg,Serbia and Montenegro
+scg_ex_kos,Serbia excluding Kosovo
+syc,Seychelles
+sle,Sierra Leone
+sgp,Singapore
+sxm,
+svk,Slovak Republic
+svn,Slovenia
+slb,Solomon Islands
+som,Somalia
+som_somland,Somaliland
+zaf,South Africa
+sgero_a_ssandw,
+kor,"Korea, Rep."
+sosset,South Ossetia
+ssd,South Sudan
+yem_south,Yemen Democratic (Former)
+esp,Spain
+lka,Sri Lanka
+stbar,Saint Barthélemy
+shn,Saint Helena
+kna,Saint Kitts and Nevis
+lca,Saint Lucia
+stmar,Saint Martin
+maf,
+vct,Saint Vincent and the Grenadines
+spm,Saint-Pierre-et-Miquelon
+sdn,Sudan
+sur,Suriname
+sjm,Svalbard
+swz,Swaziland
+swe,Sweden
+che,Switzerland
+syr,Syria
+twn,Taiwan
+tjk,Tajikistan
+tza,Tanzania
+tha,Thailand
+tls,Timor-Leste
+tgo,Togo
+tkl,Tokelau
+ton,Tonga
+transn,Transnistria
+tto,Trinidad and Tobago
+tun,Tunisia
+tur,Turkey
+tkm,Turkmenistan
+tca,Turks and Caicos Islands
+tuv,Tuvalu
+uga,Uganda
+ukr,Ukraine
+are,United Arab Emirates
+gbr,United Kingdom
+korea_union,"Korea, United"
+usa,United States
+ury,Uruguay
+usa_minor_out_isl,
+ussr,USSR
+uzb,Uzbekistan
+vut,Vanuatu
+ven,Venezuela
+vnm,Vietnam
+vir,Virgin Islands (U.S.)
+wlf,Wallis et Futuna
+pse_west_bank,
+deu_west,West Germany
+esh,Western Sahara
+yem,"Yemen, Rep."
+yug,Yugoslavia
+zmb,Zambia
+zwe,Zimbabwe
