@@ -1,0 +1,276 @@
+country,name
+abkh,
+afg,Afghanistan
+akr_a_dhe,
+alb,Albanie
+dza,Algérie
+asm,Samoa américaines
+and,Andorre
+ago,Angola
+aia,Anguilla
+ata,Antarctique
+atg,Antigua-et-Barbuda
+arg,Argentine
+arm,Arménie
+abw,Aruba
+aus,Australie
+aut,Autriche
+aze,Azerbaïdjan
+bhs,Bahamas
+bhr,Bahreïn
+bgd,Bangladesh
+brb,Barbade
+blr,Biélorussie
+bel,Belgique
+blz,Belize
+ben,Bénin
+bmu,Bermudes
+btn,Bhoutan
+bol,Bolivie
+bih,Bosnie-Herzégovine
+bwa,Botswana
+bouisl,Île Bouvet
+bra,Brésil
+iot,Territoire britannique de l’océan Indien
+vgb,Îles Vierges britanniques
+brn,Brunéi Darussalam
+bgr,Bulgarie
+bfa,Burkina Faso
+bdi,Burundi
+khm,Cambodge
+cmr,Cameroun
+can,Canada
+cpv,Cap-Vert
+cym,Îles Caïmans
+caf,République centrafricaine
+tcd,Tchad
+chanisl,
+chl,Chili
+chn,Chine
+cxr,Île Christmas
+fra_clipperton,Île Clipperton
+cck,Îles Cocos
+col,Colombie
+com,Comores
+cod,Congo-Kinshasa
+cog,Congo-Brazzaville
+cok,Îles Cook
+cri,Costa Rica
+civ,Côte d’Ivoire
+hrv,Croatie
+cub,Cuba
+nld_curacao,
+cyp,Chypre
+cze,République tchèque
+cheslo,
+dnk,Danemark
+dji,Djibouti
+dma,Dominique
+dom,République dominicaine
+deu_east,
+ecu,Équateur
+egy,Égypte
+slv,El Salvador
+gnq,Guinée équatoriale
+eri,Érythrée
+eri_a_eth,
+est,Estonie
+eth,Éthiopie
+fro,Îles Féroé
+flk,Îles Malouines
+fji,Fidji
+fin,Finlande
+fra,France
+guf,Guyane française
+pyf,Polynésie française
+fra_antarc,
+gab,Gabon
+gmb,Gambie
+pse_gaza,
+geo,Géorgie
+deu,Allemagne
+gha,Ghana
+gib,Gibraltar
+grc,Grèce
+grl,Groenland
+grd,Grenade
+glp,Guadeloupe
+gum,Guam
+gtm,Guatemala
+gbg,Guernesey
+gin,Guinée
+gnb,Guinée-Bissau
+guy,Guyana
+hti,Haïti
+heard_a_mcd,Îles Heard et McDonald
+hos,État de la Cité du Vatican
+hnd,Honduras
+hkg,R.A.S. chinoise de Hong Kong
+hun,Hongrie
+isl,Islande
+ind,Inde
+idn,Indonésie
+irn,Iran
+irq,Irak
+irl,Irlande
+gbm,Île de Man
+isr,Israël
+ita,Italie
+jam,Jamaïque
+jpn,Japon
+jey,Jersey
+jor,Jordanie
+kaz,Kazakhstan
+ken,Kenya
+kir,Kiribati
+kos,Kosovo
+kwt,Koweït
+kgz,Kirghizistan
+lao,Laos
+lva,Lettonie
+lbn,Liban
+lso,Lesotho
+lbr,Libéria
+lby,Libye
+lie,Liechtenstein
+ltu,Lituanie
+lux,Luxembourg
+mac,R.A.S. chinoise de Macao
+mkd,Macédoine
+mdg,Madagascar
+mwi,Malawi
+mys,Malaisie
+mdv,Maldives
+mli,Mali
+mlt,Malte
+mhl,Îles Marshall
+mtq,Martinique
+mrt,Mauritanie
+mus,Maurice
+myt,Mayotte
+mex,Mexique
+fsm,États fédérés de Micronésie
+mda,Moldavie
+mco,Monaco
+mng,Mongolie
+mne,Monténégro
+msr,Montserrat
+mar,Maroc
+moz,Mozambique
+mmr,Myanmar (Birmanie)
+nam,Namibie
+nru,Nauru
+npl,Népal
+nld,Pays-Bas
+ant,
+ncl,Nouvelle-Calédonie
+nzl,Nouvelle-Zélande
+ngokar,
+nic,Nicaragua
+ner,Niger
+nga,Nigéria
+niu,Niue
+nfk,Île Norfolk
+prk,Corée du Nord
+yem_north,
+cyp_nor,
+mnp,Îles Mariannes du Nord
+north_mar,
+nor,Norvège
+omn,Oman
+pak,Pakistan
+plw,Palaos
+pan,Panama
+png,Papouasie-Nouvelle-Guinée
+pry,Paraguay
+per,Pérou
+phl,Philippines
+pcn,Îles Pitcairn
+pol,Pologne
+prt,Portugal
+pri,Porto Rico
+qat,Qatar
+reu,La Réunion
+rou,Roumanie
+rus,Russie
+rwa,Rwanda
+wsm,Samoa
+smr,Saint-Marin
+stp,Sao Tomé-et-Principe
+sau,Arabie saoudite
+sen,Sénégal
+srb,Serbie
+scg,
+scg_ex_kos,
+syc,Seychelles
+sle,Sierra Leone
+sgp,Singapour
+sxm,Saint-Martin (partie néerlandaise)
+svk,Slovaquie
+svn,Slovénie
+slb,Îles Salomon
+som,Somalie
+som_somland,
+zaf,Afrique du Sud
+sgero_a_ssandw,Géorgie du Sud et îles Sandwich du Sud
+kor,Corée du Sud
+sosset,
+ssd,Soudan du Sud
+yem_south,
+esp,Espagne
+lka,Sri Lanka
+stbar,Saint-Barthélemy
+shn,Sainte-Hélène
+kna,Saint-Christophe-et-Niévès
+lca,Sainte-Lucie
+stmar,
+maf,Saint-Martin
+vct,Saint-Vincent-et-les-Grenadines
+spm,Saint-Pierre-et-Miquelon
+sdn,Soudan
+sur,Suriname
+sjm,Svalbard et Jan Mayen
+swz,Swaziland
+swe,Suède
+che,Suisse
+syr,Syrie
+twn,Taïwan
+tjk,Tadjikistan
+tza,Tanzanie
+tha,Thaïlande
+tls,Timor oriental
+tgo,Togo
+tkl,Tokélaou
+ton,Tonga
+transn,
+tto,Trinité-et-Tobago
+tun,Tunisie
+tur,Turquie
+tkm,Turkménistan
+tca,Îles Turques-et-Caïques
+tuv,Tuvalu
+usa_minor_out_isl,Îles mineures éloignées des États-Unis
+ussr,
+uga,Ouganda
+ukr,Ukraine
+are,Émirats arabes unis
+gbr,Royaume-Uni
+korea_union,
+usa,États-Unis
+ury,Uruguay
+uzb,Ouzbékistan
+vut,Vanuatu
+ven,Venezuela
+vnm,Vietnam
+virg_isl,
+vir,Îles Vierges des États-Unis
+wlf,Wallis-et-Futuna
+pse_west_bank,
+pse,Territoires palestiniens
+deu_west,
+esh,Sahara occidental
+yem,Yémen
+yug,
+zmb,Zambie
+zwe,Zimbabwe
+ala,
