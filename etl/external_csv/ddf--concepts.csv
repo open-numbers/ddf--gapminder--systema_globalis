@@ -1,0 +1,29 @@
+concept,color,concept_type,description,drill_up,indicator_url,name,scales,tags
+age,,,,,,,,_none
+co2_emissions_tonnes_per_person,,,,,,,"[""log"", ""linear""]",
+code,,,,,,,,_none
+color,,,,,,Color,,
+country,,,,"[""world_6region"", ""income_groups"", ""landlocked"", ""g77_and_oecd_countries"", ""main_religion_2008""]",,,,categorizations
+description,,,,,,,,_none
+drill_up,,,,,,drill up,,
+g77_and_oecd_countries,"{""palette"": {""g77"": ""#7487ef"", ""others"": ""#f05656"", ""oecd"": ""#71c44c""}}",,,,,,,
+gapminder_gini,,,,,,,"[""linear""]",
+income_groups,"{""palette"": {""lower_middle_income"": ""#7ea1d1"", ""upper_middle_income"": ""#a7cb7d"", ""high_income"": ""#7bc135"", ""low_income"": ""#4366f4""}}",,,,,,,
+income_mountains,,,,,,Precumputed shapes for mountain chart,,_none
+income_per_person_gdppercapita_ppp_inflation_adjusted,,,"Gross domestic product per person adjusted for differences in purchasing power (in international dollars, fixed 2011 prices, PPP based on 2011 ICP).",,,,,
+indicator_url,,,,,,,,_none
+iso3166_2,,,,,,,,_none
+landlocked,"{""palette"": {""coastline"": ""#7487ef"", ""landlocked"": ""#f05656""}}",,,,,,,
+main_religion_2008,"{""palette"": {""muslim"": ""#71c44c"", ""eastern_religions"": ""#f05656"", ""christian"": ""#7487ef""}, ""selectable"": false}",,,,,,,
+name_long,,,,,,,,_none
+name_short,,,,,,,,_none
+number,,,,,,,,_none
+residential_energy_use_percent,,,,,https://docs.google.com/spreadsheet/pub?key=0ArfEDsV3bBwCdEV1RkJqTEItQnJYVXJlZzVuc3Y3Mmc,,,
+shape_lores_svg,,string,,,,Shapes,,_none
+temp_string,,string,,,,Temporaty string,,_none
+time,,,,,,,,_root
+topojson,,,,,,A file name for static topojson world map,,_none
+unicode_region_subtag,,,,,,,,_none
+world_4region,"{""palette"": {""asia"": [""#ff5872"", ""#ff5178"", ""#ff658a"", ""#da0025"", ""#fa4e73"", ""#b2043a""], ""africa"": [""#00d5e9"", ""#00c8ec"", ""#00e1ec"", ""#0098df"", ""#77dff7"", ""#0586c6""], ""_default"": [""#ffb600"", ""#ffaa14"", ""#ffc500"", ""#fb6d19"", ""#ffb600"", ""#9b4838""], ""europe"": [""#ffe700"", ""#fbdd00"", ""#fff400"", ""#fbaf09"", ""#ffe700"", ""#b17f4a""], ""americas"": [""#7feb00"", ""#5de200"", ""#81f201"", ""#00b900"", ""#b5ea32"", ""#008d36""]}, ""shades"": {""fill3"": 2, ""fill2"": 1, ""print_fill"": 4, ""print_stroke"": 5, ""fill1"": 0, ""shade"": 3}, ""selectable"": false}",,,,,,,
+world_6region,"{""palette"": {""america"": ""#ebcc21"", ""middle_east_north_africa"": ""#5be56b"", ""south_asia"": ""#35d1d1"", ""europe_central_asia"": ""#f49d37"", ""sub_saharan_africa"": ""#4e7af0"", ""east_asia_pacific"": ""#f03838""}, ""selectable"": false}",,,,,World Regions (6 colors),,categorizations
+interpolation,,,,,,,,_none

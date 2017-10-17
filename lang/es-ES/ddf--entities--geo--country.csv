@@ -1,0 +1,276 @@
+country,name
+abkh,
+afg,Afganistán
+akr_a_dhe,
+alb,Albania
+dza,Argelia
+asm,Samoa Americana
+and,Andorra
+ago,Angola
+aia,Anguila
+ata,Antártida
+atg,Antigua y Barbuda
+arg,Argentina
+arm,Armenia
+abw,Aruba
+aus,Australia
+aut,Austria
+aze,Azerbaiyán
+bhs,Bahamas
+bhr,Baréin
+bgd,Bangladés
+brb,Barbados
+blr,Bielorrusia
+bel,Bélgica
+blz,Belice
+ben,Benín
+bmu,Bermudas
+btn,Bután
+bol,Bolivia
+bih,Bosnia-Herzegovina
+bwa,Botsuana
+bouisl,Isla Bouvet
+bra,Brasil
+iot,Territorio Británico del Océano Índico
+vgb,Islas Vírgenes Británicas
+brn,Brunéi
+bgr,Bulgaria
+bfa,Burkina Faso
+bdi,Burundi
+khm,Camboya
+cmr,Camerún
+can,Canadá
+cpv,Cabo Verde
+cym,Islas Caimán
+caf,República Centroafricana
+tcd,Chad
+chanisl,
+chl,Chile
+chn,China
+cxr,Isla de Navidad
+fra_clipperton,Isla Clipperton
+cck,Islas Cocos
+col,Colombia
+com,Comoras
+cod,República Democrática del Congo
+cog,República del Congo
+cok,Islas Cook
+cri,Costa Rica
+civ,Côte d’Ivoire
+hrv,Croacia
+cub,Cuba
+nld_curacao,
+cyp,Chipre
+cze,República Checa
+cheslo,
+dnk,Dinamarca
+dji,Yibuti
+dma,Dominica
+dom,República Dominicana
+deu_east,
+ecu,Ecuador
+egy,Egipto
+slv,El Salvador
+gnq,Guinea Ecuatorial
+eri,Eritrea
+eri_a_eth,
+est,Estonia
+eth,Etiopía
+fro,Islas Feroe
+flk,Islas Malvinas
+fji,Fiyi
+fin,Finlandia
+fra,Francia
+guf,Guayana Francesa
+pyf,Polinesia Francesa
+fra_antarc,
+gab,Gabón
+gmb,Gambia
+pse_gaza,
+geo,Georgia
+deu,Alemania
+gha,Ghana
+gib,Gibraltar
+grc,Grecia
+grl,Groenlandia
+grd,Granada
+glp,Guadalupe
+gum,Guam
+gtm,Guatemala
+gbg,Guernesey
+gin,Guinea
+gnb,Guinea-Bisáu
+guy,Guyana
+hti,Haití
+heard_a_mcd,Islas Heard y McDonald
+hos,Ciudad del Vaticano
+hnd,Honduras
+hkg,RAE de Hong Kong (China)
+hun,Hungría
+isl,Islandia
+ind,India
+idn,Indonesia
+irn,Irán
+irq,Irak
+irl,Irlanda
+gbm,Isla de Man
+isr,Israel
+ita,Italia
+jam,Jamaica
+jpn,Japón
+jey,Jersey
+jor,Jordania
+kaz,Kazajistán
+ken,Kenia
+kir,Kiribati
+kos,Kosovo
+kwt,Kuwait
+kgz,Kirguistán
+lao,Laos
+lva,Letonia
+lbn,Líbano
+lso,Lesoto
+lbr,Liberia
+lby,Libia
+lie,Liechtenstein
+ltu,Lituania
+lux,Luxemburgo
+mac,RAE de Macao (China)
+mkd,Macedonia
+mdg,Madagascar
+mwi,Malaui
+mys,Malasia
+mdv,Maldivas
+mli,Mali
+mlt,Malta
+mhl,Islas Marshall
+mtq,Martinica
+mrt,Mauritania
+mus,Mauricio
+myt,Mayotte
+mex,México
+fsm,Micronesia
+mda,Moldavia
+mco,Mónaco
+mng,Mongolia
+mne,Montenegro
+msr,Montserrat
+mar,Marruecos
+moz,Mozambique
+mmr,Myanmar (Birmania)
+nam,Namibia
+nru,Nauru
+npl,Nepal
+nld,Países Bajos
+ant,
+ncl,Nueva Caledonia
+nzl,Nueva Zelanda
+ngokar,
+nic,Nicaragua
+ner,Níger
+nga,Nigeria
+niu,Niue
+nfk,Isla Norfolk
+prk,Corea del Norte
+yem_north,
+cyp_nor,
+mnp,Islas Marianas del Norte
+north_mar,
+nor,Noruega
+omn,Omán
+pak,Pakistán
+plw,Palaos
+pan,Panamá
+png,Papúa Nueva Guinea
+pry,Paraguay
+per,Perú
+phl,Filipinas
+pcn,Islas Pitcairn
+pol,Polonia
+prt,Portugal
+pri,Puerto Rico
+qat,Catar
+reu,Reunión
+rou,Rumanía
+rus,Rusia
+rwa,Ruanda
+wsm,Samoa
+smr,San Marino
+stp,Santo Tomé y Príncipe
+sau,Arabia Saudí
+sen,Senegal
+srb,Serbia
+scg,
+scg_ex_kos,
+syc,Seychelles
+sle,Sierra Leona
+sgp,Singapur
+sxm,Sint Maarten
+svk,Eslovaquia
+svn,Eslovenia
+slb,Islas Salomón
+som,Somalia
+som_somland,
+zaf,Sudáfrica
+sgero_a_ssandw,Islas Georgia del Sur y Sandwich del Sur
+kor,Corea del Sur
+sosset,
+ssd,Sudán del Sur
+yem_south,
+esp,España
+lka,Sri Lanka
+stbar,San Bartolomé
+shn,Santa Elena
+kna,San Cristóbal y Nieves
+lca,Santa Lucía
+stmar,
+maf,San Martín
+vct,San Vicente y las Granadinas
+spm,San Pedro y Miquelón
+sdn,Sudán
+sur,Surinam
+sjm,Svalbard y Jan Mayen
+swz,Suazilandia
+swe,Suecia
+che,Suiza
+syr,Siria
+twn,Taiwán
+tjk,Tayikistán
+tza,Tanzania
+tha,Tailandia
+tls,Timor-Leste
+tgo,Togo
+tkl,Tokelau
+ton,Tonga
+transn,
+tto,Trinidad y Tobago
+tun,Túnez
+tur,Turquía
+tkm,Turkmenistán
+tca,Islas Turcas y Caicos
+tuv,Tuvalu
+usa_minor_out_isl,Islas menores alejadas de EE. UU.
+ussr,
+uga,Uganda
+ukr,Ucrania
+are,Emiratos Árabes Unidos
+gbr,Reino Unido
+korea_union,
+usa,Estados Unidos
+ury,Uruguay
+uzb,Uzbekistán
+vut,Vanuatu
+ven,Venezuela
+vnm,Vietnam
+virg_isl,
+vir,Islas Vírgenes de EE. UU.
+wlf,Wallis y Futuna
+pse_west_bank,
+pse,Territorios Palestinos
+deu_west,
+esh,Sáhara Occidental
+yem,Yemen
+yug,
+zmb,Zambia
+zwe,Zimbabue
+ala,
