@@ -1,8 +1,8 @@
 info:
     id: cme-sg-dataset
     base:
-        - &d1 ddf--gapminder--gapminder_world
-        - &d2 ddf--ihme--edu_attainment
+        - &d1 open-numbers/ddf--gapminder--gapminder_world
+        - &d2 semio/ddf--ihme--edu_attainment
 
 config:
     # the path to search recipe files to include

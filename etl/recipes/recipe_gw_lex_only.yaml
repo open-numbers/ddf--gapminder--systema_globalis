@@ -2,7 +2,7 @@
 info:
     id: dataset_name
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--life_expectancy
+        - &d1 open-numbers/ddf--gapminder--life_expectancy
 
 config:
     # the path to search recipe files to include
