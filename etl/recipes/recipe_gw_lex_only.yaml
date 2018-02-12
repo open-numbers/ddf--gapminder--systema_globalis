@@ -27,7 +27,7 @@ ingredients:
     #
     - id: lex-datapoints
       dataset: *d1
-      key: "geo,time"
+      key: "country, year"
       value:
           - life_expectancy
     - id: lex-concepts
