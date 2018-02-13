@@ -42,9 +42,6 @@ ingredients:
     - id: gw-ontology-concepts
       dataset: open-numbers/ddf--gapminder--ontology
       key: concept
-    - id: tag_entity
-      key: tag
-      dataset: open-numbers/ddf--gapminder--ontology
     - id: gw-datapoints-all
       dataset: open-numbers/ddf--gapminder--gapminder_world
       key: "geo,time"
@@ -105,7 +102,6 @@ cooking:
         - procedure: serve
           ingredients:
               - geo_final
-              - tag_entity
     concepts:
         - procedure: merge
           result: all-concepts-merged
@@ -153,4 +149,3 @@ cooking:
                       - unit
                       - age
           result: concepts_final_no_unit
-            
