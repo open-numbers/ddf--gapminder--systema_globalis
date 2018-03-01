@@ -61,6 +61,10 @@ ingredients:
       key: concept
       data: ddf--concepts.csv
 
+    - id: tag_entity
+      key: tag
+      data: ddf--entities--tag.csv
+
     - id: geo_global_patch
       key: geo
       data: ddf--entities--geo--global.csv
@@ -102,6 +106,7 @@ cooking:
         - procedure: serve
           ingredients:
               - geo_final
+              - tag_entity
     concepts:
         - procedure: merge
           result: all-concepts-merged
