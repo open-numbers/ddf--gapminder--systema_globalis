@@ -1,5 +1,6 @@
 # exclude the source files
 etl/source/*
+*.bak
 
 # Tempfiles of OSX/Win
 Thumbs.db
