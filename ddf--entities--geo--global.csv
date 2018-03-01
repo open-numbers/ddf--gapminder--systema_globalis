@@ -1,2 +1,2 @@
-geo,latitude,longitude,name,topojson,unicode_region_subtag,is--global
+global,latitude,longitude,name,topojson,unicode_region_subtag,is--global
 world,0,0,World,assets/world-50m.json,001,TRUE

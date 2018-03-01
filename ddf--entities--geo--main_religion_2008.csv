@@ -1,4 +1,4 @@
-geo,gwid,name,rank,is--main_religion_2008
+main_religion_2008,gwid,name,rank,is--main_religion_2008
 christian,i279,Christian,3,TRUE
 eastern_religions,i281,Eastern religions,1,TRUE
 muslim,i280,Muslim,2,TRUE
