@@ -2,7 +2,7 @@
 info:
     id: dataset_name
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--gdp_per_capita_cppp
+        - &d1 open-numbers/ddf--gapminder--gdp_per_capita_cppp
 
 config:
     # the path to search recipe files to include

@@ -2,8 +2,8 @@
 info:
     id: wdi-sg-dataset
     base:
-        - &d1 ddf--world_bank--world_development_indicators
-        - &d2 ddf--gapminder--gapminder_world
+        - &d1 open-numbers/ddf--world_bank--world_development_indicators
+        - &d2 open-numbers/ddf--gapminder--gapminder_world
 
 config:
     # the path to search recipe files to include
