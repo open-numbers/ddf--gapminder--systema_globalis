@@ -90,5 +90,6 @@
     "ny_gnp_pcap_kd": "gnipercapita_constant_2010_us",
     "tm_val_mrch_xd_wd": "imports_unit_value_index_2000100",
     "nv_agr_totl_zs": "agriculture_percent_of_gdp",
-    "ms_mil_xpnd_gd_zs": "military_expenditure_percent_of_gdp"
+    "ms_mil_xpnd_gd_zs": "military_expenditure_percent_of_gdp",
+    "it_net_user_zs": "internet_users"
 }
