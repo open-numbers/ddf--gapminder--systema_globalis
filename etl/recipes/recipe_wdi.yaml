@@ -107,9 +107,10 @@ ingredients:
           - en_atm_co2e_pp_gd_kd
           - it_cel_sets_p2
           - it_net_bbnd_p2
-          - it_net_user_p2
+          # - it_net_user_p2
           # - se_ant_1524_lt_fm_zs
-          - si_pov_2day
+          - si_pov_umic
+          - si_pov_lmic
           - si_pov_nahc
           - si_dst_02nd_20
           - si_dst_03rd_20
@@ -120,10 +121,10 @@ ingredients:
           - si_dst_frst_20
           - si_pov_ruhc
           - si_pov_urhc
-          # - it_mlt_main_p2
+          - it_mlt_main_p2
           - ep_pmp_sgas_cd
           # - eg_use_comm_gd_pd_kd
-          - it_net_user_p2
+
     # - id: gw-concepts-all
     #   dataset: *d2
     #   key: concept

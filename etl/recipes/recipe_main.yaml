@@ -39,6 +39,11 @@ ingredients:
                   - sg_gini
                   - geographic_regions_in_4_colors
                   - unit
+                  # concepts from pervious wdi dataset, but not exists any more
+                  - electricity_use_total
+                  - energy_use_total
+                  - fixed_line_and_mobile_phone_subscribers_per_100_people
+                  - internet_users_total_number
     - id: gw-ontology-concepts
       dataset: open-numbers/ddf--gapminder--ontology
       key: concept
@@ -95,6 +100,10 @@ cooking:
                     - extreme_poverty_percent_people_below_125_a_day
                     - gnipercapita_constant_2000_us
                     - poverty_percent_people_below_2_a_day
+                    - electricity_use_total
+                    - energy_use_total
+                    - fixed_line_and_mobile_phone_subscribers_per_100_people
+                    - internet_users_total_number
     entities:
         - procedure: merge
           ingredients:
