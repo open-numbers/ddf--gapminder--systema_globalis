@@ -22,7 +22,7 @@ include:
     - recipe_gw_pop.yaml
     - recipe_wdi.yaml
     - recipe_gw_gini.yaml
-    - recipe_ihme_edu_attainment.yml
+    - recipe_ihme.yml
     - recipe_unpop.yaml
 
 ingredients:
@@ -86,6 +86,7 @@ cooking:
               - co2-datapoints-final
               - wdi-datapoints-final
               - gini-datapoints
+              - ihme-lex-datapoints-final
               - edu-datapoints-final
               - unpop-datapoints-final
               - static-assets-datapoints

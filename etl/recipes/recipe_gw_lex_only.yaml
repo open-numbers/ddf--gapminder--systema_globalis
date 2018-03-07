@@ -53,7 +53,7 @@ cooking:
               - lex-datapoints
           options:
               dictionary:
-                  life_expectancy: life_expectancy_years
+                  life_expectancy: life_expectancy_at_birth_with_projections
                   country: geo
                   year: time
           result: lex-datapoints-final
@@ -63,6 +63,6 @@ cooking:
               - lex-concepts
           options:
               dictionary:
-                  life_expectancy: life_expectancy_years
+                  life_expectancy: life_expectancy_at_birth_with_projections
               column: concept
           result: lex-concepts-final
