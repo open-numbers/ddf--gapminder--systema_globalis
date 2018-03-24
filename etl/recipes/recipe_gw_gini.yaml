@@ -2,7 +2,7 @@
 info:
     id: gw-gini
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--gini
+        - &d1 open-numbers/ddf--gapminder--gini
 
 config:
     # the path to search recipe files to include

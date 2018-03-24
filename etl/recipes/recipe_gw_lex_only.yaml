@@ -2,7 +2,7 @@
 info:
     id: dataset_name
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--life_expectancy
+        - &d1 open-numbers/ddf--gapminder--life_expectancy
 
 config:
     # the path to search recipe files to include
@@ -24,10 +24,10 @@ ingredients:
     #     filter: (optional) more keyword filters
     #
     # below some example of ingredients:
-    # 
+    #
     - id: lex-datapoints
       dataset: *d1
-      key: "geo,time"
+      key: "country, year"
       value:
           - life_expectancy
     - id: lex-concepts
@@ -37,7 +37,7 @@ ingredients:
       filter:
           concept:
               - life_expectancy
-    # 
+    #
     # - id: gw-concepts-aqua
     #   dataset: *d2
     #   key: concept
@@ -53,7 +53,9 @@ cooking:
               - lex-datapoints
           options:
               dictionary:
-                  life_expectancy: life_expectancy_years
+                  life_expectancy: life_expectancy_at_birth_with_projections
+                  country: geo
+                  year: time
           result: lex-datapoints-final
     concepts:
         - procedure: translate_column
@@ -61,7 +63,6 @@ cooking:
               - lex-concepts
           options:
               dictionary:
-                  life_expectancy: life_expectancy_years
+                  life_expectancy: life_expectancy_at_birth_with_projections
               column: concept
-          result: lex-concepts-final 
-          
+          result: lex-concepts-final

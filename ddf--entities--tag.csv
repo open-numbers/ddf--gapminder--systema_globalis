@@ -1,41 +1,9 @@
 tag,name,parent
-categorizations,Categorizations,
-economy,Economy,
-education,Education,
-energy,Energy,
-environment,Environment,
+achievement,Achievement,education
 advanced,For advanced users,
-health,Health,
-infrastructure,Infrastructure,
-population,Population,
-society,Society,
-work,Work,
+advanced_debt_trade,Advanced debt & trade,advanced
 aid_given,Aid given,economy
 aid_received,Aid received,economy
-debt_trade,Debt & trade,economy
-economic_situation,Economic situation,economy
-incomes_growth,Incomes & growth,economy
-poverty_inequality,Poverty & inequality,economy
-sectors,Sectors,economy
-achievement,Achievement,education
-gender_equality,Gender equality,education
-literacy,Literacy,education
-mean_years_in_school,Mean years in school,education
-school_enrolment,School enrolment,education
-schooling_cost,Schooling cost,education
-coal,Coal,energy
-electricity,Electricity,energy
-hydro,Hydro,energy
-natural_gas,Natural gas,energy
-nuclear,Nuclear,energy
-oil,Oil,energy
-total,Total,energy
-disasters,Disasters,environment
-emissions,Emissions,environment
-forestry,Forestry,environment
-geography,Geography,environment
-environment_water,Water,environment
-advanced_debt_trade,Advanced debt & trade,advanced
 alternative_child_mortality_data,Alternative child mortality data,advanced
 alternative_demography_indicators,Alternative demography indicators,advanced
 alternative_energy,Alternative energy,advanced
@@ -43,43 +11,75 @@ alternative_gdp_data,Alternative GDP data,advanced
 alternative_health_data,Alternative health data,advanced
 alternative_other_data,Alternative other data,advanced
 alternative_poverty_measures,Alternative poverty measures,advanced
-data_quality_use_as_color,Data quality (use as color),advanced
-economic_growth,Economic growth,advanced
-families,families,advanced
-geography_infrastructure,Geography and infrastructure,advanced
-injury_deaths_by_gender_age_road_user,"Injury deaths by gender, age, road user",advanced
-projections,Projections,advanced
-years_use_as_color,Years (use as color),advanced
-cancer_female,"Cancer, female",health
-cancer_male,"Cancer, male",health
-causes_of_child_deaths,Causes of child deaths,health
-causes_of_newborn_deaths,Causes of newborn deaths,health
-health_economics,Health Economics,health
-hiv,HIV,health
-injuries_and_accidents,Injuries and accidents,health
-malaria,Malaria,health
-maternal_health,Maternal health,health
-mental_health,Mental health,health
-newborn_infants,Newborn & Infants,health
-nutrition,Nutrition,health
-risk_factors,Risk factors,health
-tb_tuberculosis,TB (tuberculosis),health
-teeth,Teeth,health
-vaccine,Vaccine,health
-communication,Communication,infrastructure
-sanitation,Sanitation,infrastructure
-traffic,Traffic,infrastructure
-infrastructure_water,Water,infrastructure
 both_sexes_by_age,Both sexes by age (%),population
 both_sexes_by_age_total,Both sexes by age (total),population
-female_by_age,Female by age (%),population
-male_by_age,Male by age (%),population
-population_growth,Population growth,population
-sex_ratio,Sex ratio,population
-urbanization,Urbanization,population
-war_peace,War & peace,society
+cancer_female,"Cancer, female",health
+cancer_male,"Cancer, male",health
+categorizations,Categorizations,
+causes_of_child_deaths,Causes of child deaths,health
+causes_of_newborn_deaths,Causes of newborn deaths,health
+coal,Coal,energy
+communication,Communication,infrastructure
+data_quality_use_as_color,Data quality (use as color),advanced
+debt_trade,Debt & trade,economy
+disasters,Disasters,environment
+economic_growth,Economic growth,advanced
+economic_situation,Economic situation,economy
+economy,Economy,
+education,Education,
+electricity,Electricity,energy
+emissions,Emissions,environment
 employment_by_sector,Employment by sector,work
 employment_by_status,Employment by status,work
 employment_rate,Employment rate,work
+energy,Energy,
+environment,Environment,
+environment_water,Water,environment
+families,families,advanced
+female_by_age,Female by age (%),population
+forestry,Forestry,environment
+gender_equality,Gender equality,education
+geography,Geography,environment
+geography_infrastructure,Geography and infrastructure,advanced
+health,Health,
+health_economics,Health Economics,health
+hiv,HIV,health
+hydro,Hydro,energy
+incomes_growth,Incomes & growth,economy
+infrastructure,Infrastructure,
+infrastructure_water,Water,infrastructure
+injuries_and_accidents,Injuries and accidents,health
+injury_deaths_by_gender_age_road_user,"Injury deaths by gender, age, road user",advanced
 labour_force_participation,Labour force participation,work
+literacy,Literacy,education
+malaria,Malaria,health
+male_by_age,Male by age (%),population
+maternal_health,Maternal health,health
+mean_years_in_school,Mean years in school,education
+mental_health,Mental health,health
+natural_gas,Natural gas,energy
+newborn_infants,Newborn & Infants,health
+nuclear,Nuclear,energy
+nutrition,Nutrition,health
+oil,Oil,energy
+population,Population,
+population_growth,Population growth,population
+poverty_inequality,Poverty & inequality,economy
+projections,Projections,advanced
+risk_factors,Risk factors,health
+sanitation,Sanitation,infrastructure
+school_enrolment,School enrolment,education
+schooling_cost,Schooling cost,education
+sectors,Sectors,economy
+sex_ratio,Sex ratio,population
+society,Society,
+tb_tuberculosis,TB (tuberculosis),health
+teeth,Teeth,health
+total,Total,energy
+traffic,Traffic,infrastructure
 unemployment,Unemployment,work
+urbanization,Urbanization,population
+vaccine,Vaccine,health
+war_peace,War & peace,society
+work,Work,
+years_use_as_color,Years (use as color),advanced

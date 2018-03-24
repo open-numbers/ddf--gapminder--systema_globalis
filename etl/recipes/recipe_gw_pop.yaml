@@ -2,7 +2,7 @@
 info:
     id: sg-pop-dataset
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--population
+        - &d1 open-numbers/ddf--gapminder--population
 
 config:
     # the path to search recipe files to include

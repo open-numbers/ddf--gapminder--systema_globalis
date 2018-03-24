@@ -1,8 +1,8 @@
 info:
     id: cme-sg-dataset
     base:
-        - &d1 ddf--gapminder--gapminder_world
-        - &d2 ddf--ihme--edu_attainment
+        - &d1 semio/ddf--ihme--edu_attainment
+        - &d2 open-numbers/ddf--ihme--lex
 
 config:
     # the path to search recipe files to include
@@ -17,16 +17,85 @@ include:
 
 ingredients:
     - id: edu-datapoints
-      dataset: *d2
+      dataset: *d1
       key: location, age_group, sex, year
       value: '*'
     - id: edu-location
-      dataset: *d2
+      dataset: *d1
       key: location
       value: '*'
+    - id: ihme-lex-datapoints
+      dataset: *d2
+      key: location, sex, age, year
+      value:
+          - mean
+    - id: ihme-lex-location
+      dataset: *d2
+      key: location
+      value: "*"
+
 
 cooking:
     datapoints:
+        # LEX
+        - procedure: translate_column
+          ingredients:
+              - ihme-lex-location
+          result: ihme-lex-location-aligned
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gw-countries
+                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
+                        'iso3166_1_alpha3', 'iso3166_2'
+                       ]
+                  value: country
+        - procedure: translate_column
+          ingredients:
+              - ihme-lex-datapoints
+          result: ihme-lex-datapoints-translated
+          options:
+              column: location
+              dictionary:
+                  base: ihme-lex-location-aligned
+                  key: location
+                  value: geo
+
+        - procedure: translate_header
+          ingredients:
+              - ihme-lex-datapoints-translated
+          result: ihme-lex-datapoints-aligned
+          options:
+              dictionary:
+                  location: geo
+                  year: time
+        - procedure: filter
+          ingredients:
+              - ihme-lex-datapoints-aligned
+          options:
+              row:
+                  $and:
+                      age:
+                          $eq: 22  # all ages
+                      sex:
+                          $eq: 3   # both sexes
+          result: ihme-lex-datapoints-filtered
+
+        - procedure: flatten
+          ingredients:
+              - ihme-lex-datapoints-filtered
+          options:
+              flatten_dimensions:
+                  - age
+                  - sex
+              dictionary:
+                  mean: life_expectancy_years
+          result: ihme-lex-datapoints-final
+
+        # EDU
         - procedure: translate_column
           ingredients:
               - edu-location
@@ -42,6 +111,7 @@ cooking:
                         'iso3166_1_alpha3', 'iso3166_2'
                        ]
                   value: country
+
         - procedure: translate_column
           ingredients:
               - edu-datapoints
@@ -52,6 +122,7 @@ cooking:
                   base: edu-location-aligned
                   key: location
                   value: geo
+
         - procedure: translate_header
           ingredients:
               - edu-datapoints-translated
