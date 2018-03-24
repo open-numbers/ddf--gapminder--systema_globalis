@@ -3215,27 +3215,6 @@
             }
         },
         {
-            "path": "ddf--datapoints--internet_users_per_100_people--by--geo--time.csv",
-            "name": "ddf--datapoints--internet_users_per_100_people--by--geo--time",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "internet_users_per_100_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "path": "ddf--datapoints--population_aged_10_14_years_total_number--by--geo--time.csv",
             "name": "ddf--datapoints--population_aged_10_14_years_total_number--by--geo--time",
             "schema": {
