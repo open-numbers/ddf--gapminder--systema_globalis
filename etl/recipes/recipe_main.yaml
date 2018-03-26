@@ -44,6 +44,7 @@ ingredients:
                   - energy_use_total
                   - fixed_line_and_mobile_phone_subscribers_per_100_people
                   - internet_users_total_number
+                  - internet_users_per_100_people
     - id: gw-ontology-concepts
       dataset: open-numbers/ddf--gapminder--ontology
       key: concept
