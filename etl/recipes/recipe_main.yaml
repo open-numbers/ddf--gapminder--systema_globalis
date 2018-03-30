@@ -88,6 +88,8 @@ cooking:
               - pop-datapoints-final
               - co2-datapoints-final
               - wdi-datapoints-final
+              - u5mr-datapoints-final
+              - tfr-datapoints-final
               - gini-datapoints
               - ihme-lex-datapoints-final
               - edu-datapoints-final
