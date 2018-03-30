@@ -37,3 +37,6 @@ mean_years_in_school_women_35_to_44_years,,,"The average number of years of scho
 mean_years_in_school_women_45_to_54_years,,,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education.",,,,"[""linear"", ""log""]",
 mean_years_in_school_women_55_to_64_years,,,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education.",,,,"[""linear"", ""log""]",
 mean_years_in_school_women_65_plus_years,,,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education.",,,,"[""linear"", ""log""]",
+poverty_percent_people_below_550_a_day,,,,,,,"[""linear"", ""log""]",
+poverty_percent_people_below_320_a_day,,,,,,,"[""linear"", ""log""]",
+extreme_poverty_percent_people_below_190_a_day,,,,,,,"[""linear"", ""log""]",

@@ -24,6 +24,8 @@ include:
     - recipe_gw_gini.yaml
     - recipe_ihme.yml
     - recipe_unpop.yaml
+    - recipe_gw_tfr.yaml
+    - recipe_gw_u5mr.yaml
 
 ingredients:
     - id: gw-concepts-all
@@ -126,9 +128,9 @@ cooking:
               - static-assets-concepts
               - gw-concepts-geo
               - gw-concepts-discrete
-              - lex-concepts-final
-              - gdp-concepts-final
-              - pop-concepts-final
+              # - lex-concepts-final
+              # - gdp-concepts-final
+              # - pop-concepts-final
               - co2-concepts-final
               - gini-concepts
               - edu-concepts-final

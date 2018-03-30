@@ -1,41 +1,38 @@
-# recipe for dataset
 info:
-    id: sg-pop-dataset
-    base:  # the datasets for ingredients
-        - &d1 open-numbers/ddf--gapminder--population_historic
+    id: u5mr
+    base:
+        - &d1 open-numbers/ddf--gapminder--child_mortality
 
 config:
     # the path to search recipe files to include
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ./translation_dictionaries
-    # the path to search ddf datasets
-    # ddf_dir: /Users/semio/src/work/Gapminder
 
 
-# define your ingredients and procedures below
 ingredients:
-    - id: pop-datapoints
+    - id: u5mr-datapoints
       dataset: *d1
       key: "country,year"
       value:
-          - population_total
+          - child_mortality_0_5_year_olds_dying_per_1000_born
 
 cooking:
     datapoints:
         - procedure: translate_header
           ingredients:
-              - pop-datapoints
+              - u5mr-datapoints
           options:
               dictionary:
                   country: geo
                   year: time
-          result: pop-datapoints-translated
+          result: u5mr-datapoints-translated
+
         - procedure: filter
           ingredients:
-              - pop-datapoints-translated
+              - u5mr-datapoints-translated
           options:
               row:
                   time:
                       $lt: 2019
-          result: pop-datapoints-final
+          result: u5mr-datapoints-final
