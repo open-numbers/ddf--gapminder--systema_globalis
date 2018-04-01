@@ -1,41 +1,38 @@
-# recipe for dataset
 info:
-    id: sg-pop-dataset
-    base:  # the datasets for ingredients
-        - &d1 open-numbers/ddf--gapminder--population_historic
+    id: tfr
+    base:
+        - &d1 open-numbers/ddf--gapminder--fertility_rate
 
 config:
     # the path to search recipe files to include
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ./translation_dictionaries
-    # the path to search ddf datasets
-    # ddf_dir: /Users/semio/src/work/Gapminder
 
 
-# define your ingredients and procedures below
 ingredients:
-    - id: pop-datapoints
+    - id: tfr-datapoints
       dataset: *d1
       key: "country,year"
       value:
-          - population_total
+          - children_per_woman_total_fertility
 
 cooking:
     datapoints:
         - procedure: translate_header
           ingredients:
-              - pop-datapoints
+              - tfr-datapoints
           options:
               dictionary:
                   country: geo
                   year: time
-          result: pop-datapoints-translated
+          result: tfr-datapoints-translated
+
         - procedure: filter
           ingredients:
-              - pop-datapoints-translated
+              - tfr-datapoints-translated
           options:
               row:
                   time:
                       $lt: 2019
-          result: pop-datapoints-final
+          result: tfr-datapoints-final

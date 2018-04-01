@@ -9,43 +9,15 @@ config:
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ./translation_dictionaries
-    # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder
-
 
 # define your ingredients and procedures below
 ingredients:
-    # Ingredients have 5 parameters: id, dataset, key, value, filter
-    # in wich:
-    #     id: the name of ingredient, will be used in cooking procedures
-    #     dataset: which dataset is this ingredient from
-    #     key: the key to filter in ddf--index
-    #     value: the value to filter in ddf--index
-    #     filter: (optional) more keyword filters
-    #
-    # below some example of ingredients:
-    #
     - id: lex-datapoints
       dataset: *d1
       key: "country, year"
       value:
-          - life_expectancy
-    - id: lex-concepts
-      dataset: *d1
-      key: concept
-      value: "*"
-      filter:
-          concept:
-              - life_expectancy
-    #
-    # - id: gw-concepts-aqua
-    #   dataset: *d2
-    #   key: concept
-    #   value: "*"
-    #   filter:
-    #       concept: &CONC_FILTER
-    #         - agricultural_water_withdrawal_percent_of_total
-    #         - desalinated_water_produced_billion_cu_meters
+          - life_expectancy_years
+
 cooking:
     datapoints:
         - procedure: translate_header
@@ -53,16 +25,29 @@ cooking:
               - lex-datapoints
           options:
               dictionary:
-                  life_expectancy: life_expectancy_at_birth_with_projections
                   country: geo
                   year: time
-          result: lex-datapoints-final
-    concepts:
-        - procedure: translate_column
+          result: lex-datapoints-translated
+
+        - procedure: translate_header
           ingredients:
-              - lex-concepts
+              - lex-datapoints-translated
           options:
               dictionary:
-                  life_expectancy: life_expectancy_at_birth_with_projections
-              column: concept
-          result: lex-concepts-final
+                  life_expectancy_years: life_expectancy_at_birth_with_projections
+          result: lex-datapoints-with-projections
+
+        - procedure: filter
+          ingredients:
+              - lex-datapoints-translated
+          options:
+              row:
+                  time:
+                      $lt: 2019
+          result: lex-datapoints-no-projections
+
+        - procedure: merge
+          ingredients:
+              - lex-datapoints-with-projections
+              - lex-datapoints-no-projections
+          result: lex-datapoints-final

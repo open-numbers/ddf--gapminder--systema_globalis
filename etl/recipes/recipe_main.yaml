@@ -24,6 +24,8 @@ include:
     - recipe_gw_gini.yaml
     - recipe_ihme.yml
     - recipe_unpop.yaml
+    - recipe_gw_tfr.yaml
+    - recipe_gw_u5mr.yaml
 
 ingredients:
     - id: gw-concepts-all
@@ -44,6 +46,7 @@ ingredients:
                   - energy_use_total
                   - fixed_line_and_mobile_phone_subscribers_per_100_people
                   - internet_users_total_number
+                  - internet_users_per_100_people
     - id: gw-ontology-concepts
       dataset: open-numbers/ddf--gapminder--ontology
       key: concept
@@ -85,6 +88,8 @@ cooking:
               - pop-datapoints-final
               - co2-datapoints-final
               - wdi-datapoints-final
+              - u5mr-datapoints-final
+              - tfr-datapoints-final
               - gini-datapoints
               - ihme-lex-datapoints-final
               - edu-datapoints-final
@@ -125,9 +130,9 @@ cooking:
               - static-assets-concepts
               - gw-concepts-geo
               - gw-concepts-discrete
-              - lex-concepts-final
-              - gdp-concepts-final
-              - pop-concepts-final
+              # - lex-concepts-final
+              # - gdp-concepts-final
+              # - pop-concepts-final
               - co2-concepts-final
               - gini-concepts
               - edu-concepts-final
