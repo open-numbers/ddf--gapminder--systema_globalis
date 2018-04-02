@@ -1,0 +1,95 @@
+# basic info
+info:
+    id: bp-sg-dataset
+    base:
+        - &d1 semio/ddf--bp--energy
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    - id: bp-datapoints
+      dataset: *d1
+      key: "geo,year"
+      value:
+          - coal_consumption_mtoe
+          - electricity_generation
+          - gas_production_mtoe
+          - gas_proved_reserves_history
+          - oil_consumption_tonnes
+          - oil_production_tonnes
+          - oil_proved_reserves_history
+    - id: bp-countries
+      dataset: *d1
+      key: geo
+      value: "*"
+
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - bp-datapoints
+          options:
+              dictionary:
+                  year: time
+          result: bp-datapoints-translated
+
+        - procedure: translate_column
+          ingredients:
+              - bp-countries
+          options:
+              column: geo_name
+              target_column: geo_new
+              dictionary:
+                  base: gw-countries
+                  key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                         'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                         'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+                  value: country
+          result: bp-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - bp-datapoints-translated
+          options:
+              column: geo
+              dictionary:
+                  base: bp-countries-aligned
+                  key: geo
+                  value: geo_new
+          result: bp-datapoints-translated-aligned
+
+        - procedure: run_op
+          ingredients:
+              - bp-datapoints-translated-aligned
+          options:
+              op:
+                  coal_consumption_total: "coal_consumption_mtoe * 1000000"
+                  electricity_generation_total: "electricity_generation * 1000000000"
+                  natural_gas_production_total: "gas_production_mtoe * 1000000"
+                  gas_proved_reserves_history: "gas_proved_reserves_history * 900000000"
+                  oil_consumption_total: "oil_consumption_tonnes * 1000000"
+                  oil_production_total: "oil_production_tonnes * 1000000"
+                  oil_proved_reserves_total: "oil_proved_reserves_history * 136400000"
+                  natural_gas_proved_reserves_total: "gas_proved_reserves_history * 900000000"
+          result: bp-datapoints-op
+        - procedure: filter
+          ingredients:
+              - bp-datapoints-op
+          options:
+              item:
+                   - coal_consumption_total
+                   - electricity_generation_total
+                   - natural_gas_production_total
+                   - natural_gas_proved_reserves_total
+                   - oil_consumption_total
+                   - oil_production_total
+                   - oil_proved_reserves_total
+          result: bp-datapoints-final

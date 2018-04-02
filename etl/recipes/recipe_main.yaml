@@ -26,6 +26,7 @@ include:
     - recipe_unpop.yaml
     - recipe_gw_tfr.yaml
     - recipe_gw_u5mr.yaml
+    - recipe_bp.yaml
 
 ingredients:
     - id: gw-concepts-all
@@ -94,6 +95,7 @@ cooking:
               - ihme-lex-datapoints-final
               - edu-datapoints-final
               - unpop-datapoints-final
+              - bp-datapoints-final
               - static-assets-datapoints
         - procedure: filter
           result: datapoints-final
