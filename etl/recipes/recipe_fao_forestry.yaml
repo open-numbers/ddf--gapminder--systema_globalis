@@ -10,9 +10,6 @@ config:
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ../translation_dictionaries
-    # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder/airflow/datasets/
-
 
 ingredients:
     - id: fao-datapoints

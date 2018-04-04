@@ -49,7 +49,7 @@ ingredients:
               - unicode_region_subtag
 
     - id: gw-concepts-discrete
-      dataset: open-numbers/ddf--gapminder--gapminder_world
+      dataset: open-numbers/ddf--gapminder--ontology
       key: concept
       value: "*"
       filter:
@@ -58,11 +58,17 @@ ingredients:
               - indicator_url
               - name
               - unit
-              - interpolation
+              # - interpolation
               - age
               - time
               - name_short
-              - name_long
+              - tag
+              - name_catalog
+              - parent
+              - description_long
+              - source
+              - source_long
+              - source_url
 
     - id: gw-entities-geo
       dataset: open-numbers/ddf--gapminder--geo_entity_domain
