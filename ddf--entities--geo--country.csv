@@ -104,7 +104,7 @@ guf,,Guyana (Fr.),,,French Guiana,,,,,,,others,French Guiana,GF,i77,,TRUE,GF,GUF
 gum,,,,,,,,,,,,others,Guam,GU,i89,high_income,TRUE,GU,GUM,316,,coastline,13.47861,144.81834,christian,Guam,,FALSE,GU,GUAM,asia,east_asia_pacific
 guy,,,,,Guyana,,,,,,,g77,Guyana,GY,i94,lower_middle_income,TRUE,GY,GUY,328,,coastline,5.0,-59.0,christian,Guyana,,TRUE,GY,GUYANA,americas,america
 heard_a_mcd,,,,,,,,,,,,,,HM,,,TRUE,HM,HMD,334,,,,,,Heard and McDonald Islands,,FALSE,HM,,asia,
-hkg,"Hong Kong SAR, China","Hong Kong, China (SAR)",Hongkong,Hong Kong SAR,Hong Kong,"China, Hong Kong SAR",HONG KONG SPECIAL ADMINISTRATIVE REGION OF CHINA,,,,,others,"Hong Kong, China",HK,i98,high_income,TRUE,HK,HKG,344,,coastline,22.28552,114.15769,eastern_religions,"Hong Kong, China",HONG KONG,FALSE,HK,HONG KONG,asia,east_asia_pacific
+hkg,"Hong Kong SAR, China","Hong Kong, China (SAR)",Hongkong,Hong Kong SAR,Hong Kong,"China, Hong Kong SAR",HONG KONG SPECIAL ADMINISTRATIVE REGION OF CHINA,China Hong Kong SAR,,,,others,"Hong Kong, China",HK,i98,high_income,TRUE,HK,HKG,344,,coastline,22.28552,114.15769,eastern_religions,"Hong Kong, China",HONG KONG,FALSE,HK,HONG KONG,asia,east_asia_pacific
 hnd,,,,,Honduras,,,,,,,g77,Honduras,HN,i97,lower_middle_income,TRUE,HN,HND,340,,coastline,15.0,-86.5,christian,Honduras,HONDURAS,TRUE,HN,HONDURAS,americas,america
 hos,,,,,Holy_See,Vatican City,,,,,,others,Holy See,VA,i96,,TRUE,VA,VAT,336,,landlocked,41.90236,12.45332,christian,Holy See,,TRUE,VA,,europe,europe_central_asia
 hrv,,,,,Croatia,,,,,,,others,Croatia,HR,i54,high_income,TRUE,HR,HRV,191,,coastline,45.16667,15.5,christian,Croatia,CROATIA,TRUE,HR,CROATIA (local name: Hrvatska),europe,europe_central_asia
@@ -177,7 +177,7 @@ ngokar,,,,,,,,,,,,others,Ngorno-Karabakh,Ngorno_Karabakh,i160,,TRUE,,,,,,,,,Ngor
 nic,,,,,Nicaragua,,,,,,,g77,Nicaragua,NI,i161,lower_middle_income,TRUE,NI,NIC,558,,coastline,13.0,-85.0,christian,Nicaragua,NICARAGUA,TRUE,NI,NICARAGUA,americas,america
 niu,,,,,Niue,,,,,,,others,Niue,NU,i164,,TRUE,NU,NIU,570,,coastline,-19.03333,-169.86667,christian,Niue,,FALSE,NU,NIUE,asia,east_asia_pacific
 nld,,The Netherlands,,,Netherlands,,,,,,,oecd,Netherlands,NL,i156,high_income,TRUE,NL,NLD,528,,coastline,52.25,5.75,christian,Netherlands,NETHERLANDS,TRUE,NL,NETHERLANDS,europe,europe_central_asia
-nld_curacao,,,,,,,,,,,,others,,CW,i280,high_income,TRUE,CW,CUW,531,,coastline,12.16667,-68.96667,christian,Curaçao,,FALSE,CW,CURACAO,americas,america
+nld_curacao,,Curacao,,,,,,,,,,others,,CW,i280,high_income,TRUE,CW,CUW,531,,coastline,12.16667,-68.96667,christian,Curaçao,,FALSE,CW,CURACAO,americas,america
 nor,,,,,Norway,,,,,,,oecd,Norway,NO,i168,high_income,TRUE,NO,NOR,578,,coastline,62.0,10.0,christian,Norway,NORWAY,TRUE,NO,NORWAY,europe,europe_central_asia
 npl,,,,,Nepal,,,,,,,g77,Nepal,NP,i155,low_income,TRUE,NP,NPL,524,,landlocked,28.0,84.0,eastern_religions,Nepal,,TRUE,NP,NEPAL,asia,south_asia
 nru,,,,,Nauru,,,,,,,others,Nauru,NR,i154,,TRUE,NR,NRU,520,,coastline,-0.517,166.933,christian,Nauru,,TRUE,NR,NAURU,asia,east_asia_pacific
