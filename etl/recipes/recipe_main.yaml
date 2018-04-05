@@ -134,23 +134,23 @@ cooking:
         - procedure: merge
           result: all-concepts-merged
           ingredients:
-              - gw-ontology-concepts
-              - static-assets-concepts
               - gw-concepts-geo
+              - static-assets-concepts
+              - gw-ontology-concepts
           options:
               deep: true
-        - procedure: translate_column
-          ingredients:
-            - all-concepts-merged
-          result: all-concepts-merged-translated
-          options:
-              column: concept
-              not_found: include
-              dictionary:
-                  geographic_regions: world_6region
+        # - procedure: translate_column
+        #   ingredients:
+        #     - all-concepts-merged
+        #   result: all-concepts-merged-translated
+        #   options:
+        #       column: concept
+        #       not_found: include
+        #       dictionary:
+        #           geographic_regions: world_6region
         - procedure: merge
           ingredients:
-              - all-concepts-merged-translated
+              - all-concepts-merged
               - concept_patch
           options:
               deep: true
@@ -166,5 +166,4 @@ cooking:
               concept:
                   $nin:
                       - unit
-                      - age
           result: concepts_final_no_unit

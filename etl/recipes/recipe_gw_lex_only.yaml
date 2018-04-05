@@ -44,6 +44,12 @@ cooking:
               row:
                   time:
                       $lt: 2019
+                  # remove virg_isl and n_marianas
+                  # see https://gapminder.slack.com/archives/C0J37K49M/p1522422626000192
+                  geo:
+                      $nin:
+                          - virg_isl
+                          - n_marianas
           result: lex-datapoints-no-projections
 
         - procedure: merge
