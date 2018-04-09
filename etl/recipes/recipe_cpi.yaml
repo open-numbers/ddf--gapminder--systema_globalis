@@ -33,7 +33,7 @@ cooking:
 	      dictionary:
 		  country: geo
 		  year: time
-		  cpi: cpi_human_development_index
+		  cpi: corruption_perception_index_cpi
 	  result: cpi-datapoints-renamed
 	- procedure: translate_column
 	  ingredients:
