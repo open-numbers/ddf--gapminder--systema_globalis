@@ -25,6 +25,8 @@ include:
     - recipe_gw_tfr.yaml
     - recipe_gw_u5mr.yaml
     - recipe_bp.yaml
+    - recipe_hdi.yaml
+    - recipe_cpi.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -87,6 +89,8 @@ cooking:
               - edu-datapoints-final
               - unpop-datapoints-final
               - bp-datapoints-final
+              - hdi-datapoints-final
+              - cpi-datapoints-final
               - static-assets-datapoints
         - procedure: filter
           result: datapoints-final-0
