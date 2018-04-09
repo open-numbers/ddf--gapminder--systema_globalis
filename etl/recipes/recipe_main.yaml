@@ -7,8 +7,6 @@ config:
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ../translation_dictionaries
-    # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder/datasets/
     # external
     external_csv_dir: ../external_csv
     # procedures
@@ -26,27 +24,11 @@ include:
     - recipe_unpop.yaml
     - recipe_gw_tfr.yaml
     - recipe_gw_u5mr.yaml
+    - recipe_bp.yaml
+    - recipe_hdi.yaml
+    - recipe_cpi.yaml
 
 ingredients:
-    - id: gw-concepts-all
-      dataset: open-numbers/ddf--gapminder--gapminder_world
-      key: concept
-      value: "*"
-      filter:
-          concept:
-              $nin: &concepts_to_drop
-                  - yearly_co2_emissions_tonnes
-                  - sg_gdp_p_cap_const_ppp2011_dollar
-                  - sg_population
-                  - sg_gini
-                  - geographic_regions_in_4_colors
-                  - unit
-                  # concepts from pervious wdi dataset, but not exists any more
-                  - electricity_use_total
-                  - energy_use_total
-                  - fixed_line_and_mobile_phone_subscribers_per_100_people
-                  - internet_users_total_number
-                  - internet_users_per_100_people
     - id: gw-ontology-concepts
       dataset: open-numbers/ddf--gapminder--ontology
       key: concept
@@ -54,7 +36,19 @@ ingredients:
       dataset: open-numbers/ddf--gapminder--gapminder_world
       key: "geo,time"
       value:
-          $nin: *concepts_to_drop
+          $nin:
+              - yearly_co2_emissions_tonnes
+              - sg_gdp_p_cap_const_ppp2011_dollar
+              - sg_population
+              - sg_gini
+              - geographic_regions_in_4_colors
+              - unit
+              # concepts from pervious wdi dataset, but not exists any more
+              - electricity_use_total
+              - energy_use_total
+              - fixed_line_and_mobile_phone_subscribers_per_100_people
+              - internet_users_total_number
+              - internet_users_per_100_people
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
@@ -94,9 +88,12 @@ cooking:
               - ihme-lex-datapoints-final
               - edu-datapoints-final
               - unpop-datapoints-final
+              - bp-datapoints-final
+              - hdi-datapoints-final
+              - cpi-datapoints-final
               - static-assets-datapoints
         - procedure: filter
-          result: datapoints-final
+          result: datapoints-final-0
           ingredients:
           - all-datapoints-merged
           options:
@@ -110,6 +107,21 @@ cooking:
                     - energy_use_total
                     - fixed_line_and_mobile_phone_subscribers_per_100_people
                     - internet_users_total_number
+        # compose some indicators with existing indicators
+        - procedure: run_op
+          ingredients:
+              - datapoints-final-0
+          options:
+              op:
+                  # BP
+                  coal_consumption_per_cap: "coal_consumption_total / population_total"
+                  electricity_generation_per_person: "electricity_generation_total / population_total"
+                  natural_gas_production_per_person: "natural_gas_production_total / population_total"
+                  natural_gas_proven_reserves_per_person: "natural_gas_proved_reserves_total / population_total"
+                  oil_production_per_person: "oil_production_total / population_total"
+                  oil_consumption_per_cap: "oil_consumption_total / population_total"
+                  oil_proven_reserves_per_person: "oil_proved_reserves_total / population_total"
+          result: datapoints-final
     entities:
         - procedure: merge
           ingredients:
@@ -126,32 +138,23 @@ cooking:
         - procedure: merge
           result: all-concepts-merged
           ingredients:
-              - gw-concepts-all-wdi-translated
-              - static-assets-concepts
               - gw-concepts-geo
-              - gw-concepts-discrete
-              # - lex-concepts-final
-              # - gdp-concepts-final
-              # - pop-concepts-final
-              - co2-concepts-final
-              - gini-concepts
-              - edu-concepts-final
-              - unpop-concepts-final
+              - static-assets-concepts
               - gw-ontology-concepts
           options:
               deep: true
-        - procedure: translate_column
-          ingredients:
-            - all-concepts-merged
-          result: all-concepts-merged-translated
-          options:
-              column: concept
-              not_found: include
-              dictionary:
-                  geographic_regions: world_6region
+        # - procedure: translate_column
+        #   ingredients:
+        #     - all-concepts-merged
+        #   result: all-concepts-merged-translated
+        #   options:
+        #       column: concept
+        #       not_found: include
+        #       dictionary:
+        #           geographic_regions: world_6region
         - procedure: merge
           ingredients:
-              - all-concepts-merged-translated
+              - all-concepts-merged
               - concept_patch
           options:
               deep: true
@@ -167,5 +170,4 @@ cooking:
               concept:
                   $nin:
                       - unit
-                      - age
           result: concepts_final_no_unit

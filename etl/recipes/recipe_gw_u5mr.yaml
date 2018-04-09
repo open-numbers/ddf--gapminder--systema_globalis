@@ -35,4 +35,8 @@ cooking:
               row:
                   time:
                       $lt: 2019
+                  # remove virg_isl and n_marianas and all zeros
+                  # see https://gapminder.slack.com/archives/C0J37K49M/p1522422626000192
+                  child_mortality_0_5_year_olds_dying_per_1000_born:
+                      $ne: 0
           result: u5mr-datapoints-final
