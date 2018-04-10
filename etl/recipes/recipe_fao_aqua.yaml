@@ -2,7 +2,7 @@
 info:
     id: sg-fao-aqua-dataset
     base:
-	- &d1 semio/ddf--fao--aquastat
+    - &d1 semio/ddf--fao--aquastat
 
 
 config:
@@ -17,43 +17,43 @@ ingredients:
       dataset: *d1
       key: "area,year"
       value:
-	  - agricultural_water_withdrawal_as_pct_of_total_water_withdrawal
-	  - desalinated_water_produced
-	  - industrial_water_withdrawal_as_pct_of_total_water_withdrawal
-	  - municipal_water_withdrawal_as_pct_of_total_withdrawal
-	  - total_internal_renewable_water_resources_per_capita
-	  - total_renewable_water_resources_per_capita
-	  - total_water_withdrawal
-	  - total_water_withdrawal_per_capita
+      - agricultural_water_withdrawal_as_pct_of_total_water_withdrawal
+      - desalinated_water_produced
+      - industrial_water_withdrawal_as_pct_of_total_water_withdrawal
+      - municipal_water_withdrawal_as_pct_of_total_withdrawal
+      - total_internal_renewable_water_resources_per_capita
+      - total_renewable_water_resources_per_capita
+      - total_water_withdrawal
+      - total_water_withdrawal_per_capita
 
 
 cooking:
     datapoints:
-	- procedure: translate_header
-	  ingredients:
-	      - aqua-datapoints
-	  options:
-	      dictionary: indicators_fao_aqua_to_sg.json
-	  result: aqua-datapoints-indicators-translated
-	- procedure: translate_header
-	  ingredients:
-	      - aqua-datapoints-indicators-translated
-	  options:
-	      dictionary:
-		  area: geo
-		  year: time
-	  result: aqua-datapoints-translated
-	- procedure: filter
-	  ingredients:
-	      - aqua-datapoints-translated
-	  options:
-	      item:
-		  - agricultural_water_withdrawal_percent_of_total
-		  - desalinated_water_produced_billion_cu_meters
-		  - industrial_water_withdrawal_percent_of_total
-		  - municipal_water_withdrawal_percent_of_total
-		  - internal_renewable_water_cu_meters_per_person
-		  - renewable_water_cu_meters_per_person
-		  - total_water_withdrawal_billion_cu_meters
-		  - water_withdrawal_cu_meters_per_person
-	  result: fao_aqua-datapoints-final
+    - procedure: translate_header
+      ingredients:
+          - aqua-datapoints
+      options:
+          dictionary: indicators_fao_aqua_to_sg.json
+      result: aqua-datapoints-indicators-translated
+    - procedure: translate_header
+      ingredients:
+          - aqua-datapoints-indicators-translated
+      options:
+          dictionary:
+          area: geo
+          year: time
+      result: aqua-datapoints-translated
+    - procedure: filter
+      ingredients:
+          - aqua-datapoints-translated
+      options:
+          item:
+          - agricultural_water_withdrawal_percent_of_total
+          - desalinated_water_produced_billion_cu_meters
+          - industrial_water_withdrawal_percent_of_total
+          - municipal_water_withdrawal_percent_of_total
+          - internal_renewable_water_cu_meters_per_person
+          - renewable_water_cu_meters_per_person
+          - total_water_withdrawal_billion_cu_meters
+          - water_withdrawal_cu_meters_per_person
+      result: fao_aqua-datapoints-final

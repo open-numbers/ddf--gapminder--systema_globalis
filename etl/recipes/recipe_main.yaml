@@ -27,6 +27,9 @@ include:
     - recipe_bp.yaml
     - recipe_hdi.yaml
     - recipe_cpi.yaml
+    - recipe_fao_aqua.yaml
+    - recipe_fao_food.yaml
+    - recipe_food_forestry.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -91,6 +94,9 @@ cooking:
               - bp-datapoints-final
               - hdi-datapoints-final
               - cpi-datapoints-final
+              - fao_aqua-datapoints-final
+              - fao_food-datapoints-final
+              - fao_fore-datapoints-final
               - static-assets-datapoints
         - procedure: filter
           result: datapoints-final-0
