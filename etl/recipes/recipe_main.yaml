@@ -29,7 +29,7 @@ include:
     - recipe_cpi.yaml
     - recipe_fao_aqua.yaml
     - recipe_fao_food.yaml
-    - recipe_food_forestry.yaml
+    - recipe_fao_forestry.yaml
 
 ingredients:
     - id: gw-ontology-concepts
