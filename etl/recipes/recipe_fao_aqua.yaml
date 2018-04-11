@@ -12,6 +12,10 @@ config:
     dictionary_dir: ../translation_dictionaries
 
 
+include:
+    - recipe_gw_common.yaml
+
+
 ingredients:
     - id: aqua-datapoints
       dataset: *d1
@@ -25,6 +29,10 @@ ingredients:
           - total_renewable_water_resources_per_capita
           - total_water_withdrawal
           - total_water_withdrawal_per_capita
+
+    - id: aqua-areas
+      dataset: *d1
+      key: area
 
 
 cooking:
@@ -56,4 +64,30 @@ cooking:
               - renewable_water_cu_meters_per_person
               - total_water_withdrawal_billion_cu_meters
               - water_withdrawal_cu_meters_per_person
+      result: fao_aqua-datapoints-final-0
+
+    - procedure: translate_column
+      ingredients:
+          - aqua-areas
+      options:
+          column: name
+          target_column: geo
+          dictionary:
+              base: gw-countries
+              key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                     'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                     'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+              value: country
+      result: aqua-areas-aligned
+
+    - procedure: translate_column
+      ingredients:
+          - fao_aqua-datapoints-final-0
+      options:
+          column: geo
+          dictionary:
+              base: aqua-areas-aligned
+              key: area
+              value: geo
+          debug: true
       result: fao_aqua-datapoints-final
