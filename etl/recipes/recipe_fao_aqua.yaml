@@ -89,5 +89,4 @@ cooking:
               base: aqua-areas-aligned
               key: area
               value: geo
-          debug: true
       result: fao_aqua-datapoints-final
