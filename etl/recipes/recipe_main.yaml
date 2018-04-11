@@ -56,6 +56,7 @@ ingredients:
               - year_categorization_1950
               - year_categorization_1820_2010
               - old_version_of_income_per_person_version_3
+              - old_version_of_income_per_person_version_8
               - how_far_to_the_north
               - estimate_or_projection_of_under_five_mortality_rate_from_ihme
               - children_per_woman_temporary_update
