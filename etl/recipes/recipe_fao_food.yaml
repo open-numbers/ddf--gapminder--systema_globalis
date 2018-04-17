@@ -2,7 +2,7 @@
 info:
     id: sg-fao_food-dataset
     base:
-        - &d1 semio/ddf--fao--food_supply
+        - &d1 open-numbers/ddf--unfao--faostat
 
 config:
     # the path to search recipe files to include
@@ -15,13 +15,18 @@ config:
 ingredients:
     - id: fao_food-datapoints
       dataset: *d1
-      key: "country,item,year"
+      key: "geo,year"
       value:
-          - food_supply_kcal_capita_day
+          - forest_share_in_land_area_ele1
+          - forest_area_ile
+          - planted_forest_area_ile
+          - primary_forest_area_ile
+          - sugar_sweeteners_food_supply_quantity_g_capita_day_fce
+          - grand_total_food_supply_kcal_capita_day_fea
 
     - id: fao_food-countries
       dataset: *d1
-      key: country
+      key: geo
       value: "*"
 
 include:
@@ -34,48 +39,32 @@ cooking:
               - fao_food-datapoints
           options:
               dictionary:
-                  country: geo
                   year: time
-                  food_supply_kcal_capita_day: food_supply_kilocalories_per_person_and_day
-          result: fao_food-datapoints_
-        - procedure: filter
-          ingredients:
-              - fao_food-datapoints_
-          options:
-              row:
-                  item:
-                      $eq: '2901'
-          result: fao_food-datapoints-filtered
-        - procedure: flatten
-          ingredients:
-              - fao_food-datapoints-filtered
-          options:
-              flatten_dimensions:
-                  - item
-              dictionary:
-                  "*": "{concept}"
-          result: fao_food-datapoints-flattened
-
+                  forest_share_in_land_area_ele1: forest_coverage_percent
+                  forest_area_ile: forest_land_total_area_ha
+                  planted_forest_area_ile: planted_forest_area_ha
+                  primary_forest_area_ile: primary_forest_area_ha
+                  sugar_sweeteners_food_supply_quantity_g_capita_day_fce: sugar_per_person_g_per_day
+                  grand_total_food_supply_kcal_capita_day_fea: food_supply_kilocalories_per_person_and_day
+          result: fao_food-datapoints-translated
         - procedure: translate_column
           ingredients:
               - fao_food-countries
           options:
               dictionary:
                   base: gw-countries
-                  key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
-                         'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                         'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+                  key: iso3166_1_alpha3
                   value: country
-              column: name
-              target_column: geo
+              column: iso3_code
+              target_column: geo_new
           result: fao_food-countries-aligned
         - procedure: translate_column
           ingredients:
-              - fao_food-datapoints-flattened
+              - fao_food-datapoints-translated
           options:
               dictionary:
                   base: fao_food-countries-aligned
-                  key: country
-                  value: geo
+                  key: geo
+                  value: geo_new
               column: geo
           result: fao_food-datapoints-final
