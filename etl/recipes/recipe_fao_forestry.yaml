@@ -2,7 +2,7 @@
 info:
     id: fao-sg-dataset
     base:
-        - &d1 semio/ddf--fao--forestry
+        - &d1 open-numbers/ddf--unfao--fra
 
 
 config:
@@ -28,8 +28,6 @@ ingredients:
           - forest
           - privown
           - forperc
-          - plantfor
-          - primfor
           - wooremov
     - id: fao-forestry-countries
       dataset: *d1
@@ -47,8 +45,6 @@ cooking:
                   privately_owned_forest_land_percent: "privown / forest * 100"
                   biomass_stock_in_forest_tons: "(forbelbiom + forabovbiom) * 1000000"
                   forest_land_total_area_ha: "forest * 1000"
-                  planted_forest_area_ha: "plantfor * 1000"
-                  primary_forest_area_ha: "primfor * 1000"
                   wood_removal_cubic_meters: "wooremov * 1000"
           result: fao-datapoints-op
 
@@ -74,8 +70,6 @@ cooking:
                   - privately_owned_forest_land_percent
                   - forest_land_total_area_ha
                   - forest_coverage_percent
-                  - planted_forest_area_ha
-                  - primary_forest_area_ha
                   - wood_removal_cubic_meters
           result: fao_fore-datapoints-filtered-0
 
