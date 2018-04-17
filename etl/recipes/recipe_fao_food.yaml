@@ -49,22 +49,8 @@ cooking:
           result: fao_food-datapoints-translated
         - procedure: translate_column
           ingredients:
-              - fao_food-countries
-          options:
-              dictionary:
-                  base: gw-countries
-                  key: iso3166_1_alpha3
-                  value: country
-              column: iso3_code
-              target_column: geo_new
-          result: fao_food-countries-aligned
-        - procedure: translate_column
-          ingredients:
               - fao_food-datapoints-translated
           options:
-              dictionary:
-                  base: fao_food-countries-aligned
-                  key: geo
-                  value: geo_new
+              dictionary: faostat-geomapping.json
               column: geo
           result: fao_food-datapoints-final
