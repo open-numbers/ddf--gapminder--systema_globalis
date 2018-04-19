@@ -26,15 +26,46 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: translate_header
+        - procedure: filter
           ingredients:
               - cpi-datapoints
+          options:
+              row:
+                  year:
+                      $lt: 2012
+          result: cpi-datapoints-pre2012
+        - procedure: translate_header
+          ingredients:
+              - cpi-datapoints-pre2012
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+                  cpi: corruption_perception_index_cpi_pre2012
+          result: cpi-datapoints-pre2012-translated
+        - procedure: filter
+          ingredients:
+              - cpi-datapoints
+          options:
+              row:
+                  year:
+                      $gt: 2011
+          result: cpi-datapoints-post2011
+        - procedure: translate_header
+          ingredients:
+              - cpi-datapoints-post2011
           options:
               dictionary:
                   country: geo
                   year: time
                   cpi: corruption_perception_index_cpi
-          result: cpi-datapoints-renamed
+          result: cpi-datapoints-post2011-translated
+        - procedure: merge
+          ingredients:
+              - cpi-datapoints-post2011-translated
+              - cpi-datapoints-pre2012-translated
+          result: cpi-datapoints-filtered-merged
+
         - procedure: translate_column
           ingredients:
               - cpi-countries
@@ -52,7 +83,7 @@ cooking:
 
         - procedure: translate_column
           ingredients:
-              - cpi-datapoints-renamed
+              - cpi-datapoints-filtered-merged
           options:
               column: geo
               dictionary:
