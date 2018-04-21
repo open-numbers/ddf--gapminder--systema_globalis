@@ -123,9 +123,26 @@ cooking:
                     - fixed_line_and_mobile_phone_subscribers_per_100_people
                     - internet_users_total_number
         # compose some indicators with existing indicators
-        - procedure: run_op
+        # because run_op will use a lot of computer cpu/memory resources with large ingredients
+        # we need to filter out a small set of indicators before run_op
+        - procedure: filter
           ingredients:
               - datapoints-final-0
+          options:
+              item:
+                  $in:
+                      - coal_consumption_total
+                      - population_total
+                      - electricity_generation_total
+                      - natural_gas_production_total
+                      - natural_gas_proved_reserves_total
+                      - oil_production_total
+                      - oil_consumption_total
+                      - oil_proved_reserves_total
+          result: datapoints-final-for-op
+        - procedure: run_op
+          ingredients:
+              - datapoints-final-for-op
           options:
               op:
                   # BP
@@ -136,6 +153,11 @@ cooking:
                   oil_production_per_person: "oil_production_total / population_total"
                   oil_consumption_per_cap: "oil_consumption_total / population_total"
                   oil_proven_reserves_per_person: "oil_proved_reserves_total / population_total"
+          result: datapoints-final-1
+        - procedure: merge
+          ingredients:
+              - datapoints-final-0
+              - datapoints-final-1
           result: datapoints-final
     entities:
         - procedure: merge
