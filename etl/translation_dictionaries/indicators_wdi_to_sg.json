@@ -59,7 +59,7 @@
     "se_xpd_prim_pc_zs": "expenditure_per_student_primary_percent_of_gdp_per_person",
     "se_xpd_seco_pc_zs": "expenditure_per_student_secondary_percent_of_gdp_per_person",
     "se_xpd_tert_pc_zs": "expenditure_per_student_tertiary_percent_of_gdp_per_person",
-    "sh_h2o_basw_zs": "improved_water_source_overall_access_percent",
+    "sh_h2o_smdw_zs": "improved_water_source_overall_access_percent",
     "sh_h2o_smdw_ru_zs": "improved_water_source_rural_access_percent",
     "sh_h2o_smdw_ur_zs": "improved_water_source_urban_access_percent",
     "sh_med_phys_zs": "medical_doctors_per_1000_people",
