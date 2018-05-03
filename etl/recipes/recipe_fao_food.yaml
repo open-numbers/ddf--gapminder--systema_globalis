@@ -17,12 +17,18 @@ ingredients:
       dataset: *d1
       key: "geo,year"
       value:
-          - forest_share_in_land_area_ele1
+        #   - forest_share_in_land_area_ele1
           - forest_area_ile
           - planted_forest_area_ile
           - primary_forest_area_ile
           - sugar_sweeteners_food_supply_quantity_g_capita_day_fce
           - grand_total_food_supply_kcal_capita_day_fea
+
+    - id: fao_food-datapoints-alt-chn  # indicators using alternative name for chn
+      dataset: *d1
+      key: "geo,year"
+      value:
+          - forest_share_in_land_area_ele1
 
     - id: fao_food-countries
       dataset: *d1
@@ -40,17 +46,55 @@ cooking:
           options:
               dictionary:
                   year: time
-                  forest_share_in_land_area_ele1: forest_coverage_percent
-                  forest_area_ile: forest_land_total_area_ha
-                  planted_forest_area_ile: planted_forest_area_ha
-                  primary_forest_area_ile: primary_forest_area_ha
                   sugar_sweeteners_food_supply_quantity_g_capita_day_fce: sugar_per_person_g_per_day
                   grand_total_food_supply_kcal_capita_day_fea: food_supply_kilocalories_per_person_and_day
           result: fao_food-datapoints-translated
+        - procedure: run_op
+          ingredients:
+            - fao_food-datapoints-translated
+          options:
+            op:
+                forest_land_total_area_ha: forest_area_ile * 1000
+                planted_forest_area_ha: planted_forest_area_ile * 1000
+                primary_forest_area_ha: primary_forest_area_ile * 1000
+          result: fao_food-datapoints-translated-op
+        - procedure: filter
+          ingredients:
+            - fao_food-datapoints-translated-op
+          options:
+            item:
+                $nin:
+                    - forest_area_ile
+                    - planted_forest_area_ile
+                    - primary_forest_area_ile
+          result: fao_food-datapoints-translated-op-filtered
+
+        - procedure: translate_header
+          ingredients:
+              - fao_food-datapoints-alt-chn
+          options:
+              dictionary:
+                  year: time
+                  forest_share_in_land_area_ele1: forest_coverage_percent
+          result: fao_food-datapoints-alt-chn-translated
+
         - procedure: translate_column
           ingredients:
-              - fao_food-datapoints-translated
+              - fao_food-datapoints-translated-op-filtered
           options:
               dictionary: faostat-geomapping.json
               column: geo
+          result: fao_food-datapoints-final-0
+
+        - procedure: translate_column
+          ingredients:
+              - fao_food-datapoints-alt-chn-translated
+          options:
+              dictionary: faostat-geomapping-alt.json
+              column: geo
+          result: fao_food-datapoints-final-1
+        - procedure: merge
+          ingredients:
+            - fao_food-datapoints-final-0
+            - fao_food-datapoints-final-1
           result: fao_food-datapoints-final
