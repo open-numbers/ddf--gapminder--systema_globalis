@@ -3,10 +3,6 @@
     "language": {
         "id": "en"
     },
-    "base": [
-        "open-numbers/ddf--world_bank--world_development_indicators"
-    ],
-    "id": "wdi-sg-dataset",
     "translations": [
         {
             "id": "ar-SA",
@@ -28,7 +24,7 @@
             "id": "zh-CN"
         }
     ],
-    "created": "2018-05-03T03:07:31.752690+00:00",
+    "created": "2018-05-03T06:48:18.229776+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
