@@ -98,7 +98,7 @@ ingredients:
           - tx_val_tech_mf_zs
           - sh_h2o_smdw_ur_zs
           - sh_h2o_smdw_ru_zs
-          - sh_h2o_basw_zs
+          - sh_h2o_smdw_zs
           - ms_mil_totl_tf_zs
           - ms_mil_totl_p1
           - ag_lnd_frst_k2
