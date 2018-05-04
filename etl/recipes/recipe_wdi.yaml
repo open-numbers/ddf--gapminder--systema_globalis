@@ -79,9 +79,9 @@ ingredients:
           - se_xpd_seco_pc_zs
           - se_xpd_tert_pc_zs
           - sh_med_phys_zs
-          - sh_sta_smss_zs
-          - sh_sta_smss_ru_zs
-          - sh_sta_smss_ur_zs
+          - sh_sta_bass_zs
+          - sh_sta_bass_ru_zs
+          - sh_sta_bass_ur_zs
           - sh_sta_brtc_zs
           - sh_sta_maln_zs
           - si_pov_dday
@@ -96,9 +96,9 @@ ingredients:
           - tt_pri_mrch_xd_wd
           - tx_val_mrch_xd_wd
           - tx_val_tech_mf_zs
-          - sh_h2o_smdw_ur_zs
-          - sh_h2o_smdw_ru_zs
-          - sh_h2o_smdw_zs
+          - sh_h2o_basw_ur_zs
+          - sh_h2o_basw_ru_zs
+          - sh_h2o_basw_zs
           - ms_mil_totl_tf_zs
           - ms_mil_totl_p1
           - ag_lnd_frst_k2
