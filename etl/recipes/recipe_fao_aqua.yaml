@@ -31,6 +31,7 @@ ingredients:
           - total_water_withdrawal_per_capita
           - total_population
           - municipal_water_withdrawal
+          - municipal_water_withdrawal_per_capita
 
     - id: aqua-areas
       dataset: *d1
@@ -39,16 +40,9 @@ ingredients:
 
 cooking:
     datapoints:
-    - procedure: run_op
-      ingredients:
-          - aqua-datapoints
-      options:
-          op:
-              municipal_water_withdrawal_cu_meters_per_person: "municipal_water_withdrawal / total_population * (10 ** 6)"
-      result: aqua-datapoints-1
     - procedure: translate_header
       ingredients:
-          - aqua-datapoints-1
+          - aqua-datapoints
       options:
           dictionary: indicators_fao_aqua_to_sg.json
       result: aqua-datapoints-indicators-translated
