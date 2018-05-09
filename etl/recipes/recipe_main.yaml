@@ -61,6 +61,13 @@ ingredients:
               - estimate_or_projection_of_under_five_mortality_rate_from_ihme
               - children_per_woman_temporary_update
               - 20120905_extreme_poverty_percent_people_below_125_a_day
+              # indicators dropped
+              - improved_sanitation_overall_access_percent
+              - improved_sanitation_rural_access_percent
+              - improved_sanitation_urban_access_percent
+              - improved_water_source_overall_access_percent
+              - improved_water_source_rural_access_percent
+              - improved_water_source_urban_access_percent
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
