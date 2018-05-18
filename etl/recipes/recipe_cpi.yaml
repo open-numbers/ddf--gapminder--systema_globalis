@@ -1,7 +1,7 @@
 info:
     id: sg-cpi-indicator
     base:
-        - &d1 open-numbers/ddf--transpint--corrupton
+        - &d1 open-numbers/ddf--transparency_international--corruption_perception_index
 
 config:
     # the path to search recipe files to include
@@ -34,7 +34,9 @@ cooking:
                   country: geo
                   year: time
                   cpi: corruption_perception_index_cpi
-          result: cpi-datapoints-renamed
+                  cpi_pre2012: corruption_perception_index_cpi_pre2012
+          result: cpi-datapoints-translated
+
         - procedure: translate_column
           ingredients:
               - cpi-countries
@@ -52,7 +54,7 @@ cooking:
 
         - procedure: translate_column
           ingredients:
-              - cpi-datapoints-renamed
+              - cpi-datapoints-translated
           options:
               column: geo
               dictionary:

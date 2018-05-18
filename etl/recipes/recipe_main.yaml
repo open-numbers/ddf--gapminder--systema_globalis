@@ -27,6 +27,9 @@ include:
     - recipe_bp.yaml
     - recipe_hdi.yaml
     - recipe_cpi.yaml
+    - recipe_fao_aqua.yaml
+    - recipe_fao_food.yaml
+    - recipe_fao_forestry.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -49,6 +52,22 @@ ingredients:
               - fixed_line_and_mobile_phone_subscribers_per_100_people
               - internet_users_total_number
               - internet_users_per_100_people
+              # indicators won't be updated
+              - year_categorization_1950
+              - year_categorization_1820_2010
+              - old_version_of_income_per_person_version_3
+              - old_version_of_income_per_person_version_8
+              - how_far_to_the_north
+              - estimate_or_projection_of_under_five_mortality_rate_from_ihme
+              - children_per_woman_temporary_update
+              - 20120905_extreme_poverty_percent_people_below_125_a_day
+              # indicators dropped
+              - improved_sanitation_overall_access_percent
+              - improved_sanitation_rural_access_percent
+              - improved_sanitation_urban_access_percent
+              - improved_water_source_overall_access_percent
+              - improved_water_source_rural_access_percent
+              - improved_water_source_urban_access_percent
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
@@ -91,6 +110,9 @@ cooking:
               - bp-datapoints-final
               - hdi-datapoints-final
               - cpi-datapoints-final
+              - fao_aqua-datapoints-final
+              - fao_food-datapoints-final
+              - fao_fore-datapoints-final
               - static-assets-datapoints
         - procedure: filter
           result: datapoints-final-0
@@ -108,9 +130,26 @@ cooking:
                     - fixed_line_and_mobile_phone_subscribers_per_100_people
                     - internet_users_total_number
         # compose some indicators with existing indicators
-        - procedure: run_op
+        # because run_op will use a lot of computer cpu/memory resources with large ingredients
+        # we need to filter out a small set of indicators before run_op
+        - procedure: filter
           ingredients:
               - datapoints-final-0
+          options:
+              item:
+                  $in:
+                      - coal_consumption_total
+                      - population_total
+                      - electricity_generation_total
+                      - natural_gas_production_total
+                      - natural_gas_proved_reserves_total
+                      - oil_production_total
+                      - oil_consumption_total
+                      - oil_proved_reserves_total
+          result: datapoints-final-for-op
+        - procedure: run_op
+          ingredients:
+              - datapoints-final-for-op
           options:
               op:
                   # BP
@@ -121,6 +160,11 @@ cooking:
                   oil_production_per_person: "oil_production_total / population_total"
                   oil_consumption_per_cap: "oil_consumption_total / population_total"
                   oil_proven_reserves_per_person: "oil_proved_reserves_total / population_total"
+          result: datapoints-final-1
+        - procedure: merge
+          ingredients:
+              - datapoints-final-0
+              - datapoints-final-1
           result: datapoints-final
     entities:
         - procedure: merge
