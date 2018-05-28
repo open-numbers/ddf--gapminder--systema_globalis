@@ -1,276 +1,274 @@
-country,name
-abkh,
-afg,Afghanistan
-akr_a_dhe,
-alb,Albanien
-dza,Algeriet
-asm,Amerikanska Samoa
-and,Andorra
-ago,Angola
-aia,Anguilla
-ata,Antarktis
-atg,Antigua och Barbuda
-arg,Argentina
-arm,Armenien
-abw,Aruba
-aus,Australien
-aut,Österrike
-aze,Azerbajdzjan
-bhs,Bahamas
-bhr,Bahrain
-bgd,Bangladesh
-brb,Barbados
-blr,Vitryssland
-bel,Belgien
-blz,Belize
-ben,Benin
-bmu,Bermuda
-btn,Bhutan
-bol,Bolivia
-bih,Bosnien och Hercegovina
-bwa,Botswana
-bouisl,Bouvetön
-bra,Brasilien
-iot,Brittiska territoriet i Indiska oceanen
-vgb,Brittiska Jungfruöarna
-brn,Brunei
-bgr,Bulgarien
-bfa,Burkina Faso
-bdi,Burundi
-khm,Kambodja
-cmr,Kamerun
-can,Kanada
-cpv,Kap Verde
-cym,Caymanöarna
-caf,Centralafrikanska republiken
-tcd,Tchad
-chanisl,
-chl,Chile
-chn,Kina
-cxr,Julön
-fra_clipperton,Clippertonön
-cck,Kokosöarna
-col,Colombia
-com,Komorerna
-cod,Kongo-Kinshasa
-cog,Kongo-Brazzaville
-cok,Cooköarna
-cri,Costa Rica
-civ,Elfenbenskusten
-hrv,Kroatien
-cub,Kuba
-nld_curacao,
-cyp,Cypern
-cze,Tjeckien
-cheslo,
-dnk,Danmark
-dji,Djibouti
-dma,Dominica
-dom,Dominikanska republiken
-deu_east,
-ecu,Ecuador
-egy,Egypten
-slv,El Salvador
-gnq,Ekvatorialguinea
-eri,Eritrea
-eri_a_eth,
-est,Estland
-eth,Etiopien
-fro,Färöarna
-flk,Falklandsöarna
-fji,Fiji
-fin,Finland
-fra,Frankrike
-guf,Franska Guyana
-pyf,Franska Polynesien
-fra_antarc,
-gab,Gabon
-gmb,Gambia
-pse_gaza,Gazaremsan
-geo,Georgien
-deu,Tyskland
-gha,Ghana
-gib,Gibraltar
-grc,Grekland
-grl,Grönland
-grd,Grenada
-glp,Guadeloupe
-gum,Guam
-gtm,Guatemala
-gbg,Guernsey
-gin,Guinea
-gnb,Guinea-Bissau
-guy,Guyana
-hti,Haiti
-heard_a_mcd,Heardön och McDonaldöarna
-hos,Vatikanstaten
-hnd,Honduras
-hkg,"Hongkong, S.A.R. Kina"
-hun,Ungern
-isl,Island
-ind,Indien
-idn,Indonesien
-irn,Iran
-irq,Irak
-irl,Irland
-gbm,Isle of Man
-isr,Israel
-ita,Italien
-jam,Jamaica
-jpn,Japan
-jey,Jersey
-jor,Jordanien
-kaz,Kazakstan
-ken,Kenya
-kir,Kiribati
-kos,Kosovo
-kwt,Kuwait
-kgz,Kirgizistan
-lao,Laos
-lva,Lettland
-lbn,Libanon
-lso,Lesotho
-lbr,Liberia
-lby,Libyen
-lie,Liechtenstein
-ltu,Litauen
-lux,Luxemburg
-mac,"Macao, S.A.R. Kina"
-mkd,Makedonien
-mdg,Madagaskar
-mwi,Malawi
-mys,Malaysia
-mdv,Maldiverna
-mli,Mali
-mlt,Malta
-mhl,Marshallöarna
-mtq,Martinique
-mrt,Mauretanien
-mus,Mauritius
-myt,Mayotte
-mex,Mexiko
-fsm,Mikronesien
-mda,Moldavien
-mco,Monaco
-mng,Mongoliet
-mne,Montenegro
-msr,Montserrat
-mar,Marocko
-moz,Moçambique
-mmr,Myanmar (Burma)
-nam,Namibia
-nru,Nauru
-npl,Nepal
-nld,Nederländerna
-ant,
-ncl,Nya Kaledonien
-nzl,Nya Zeeland
-ngokar,
-nic,Nicaragua
-ner,Niger
-nga,Nigeria
-niu,Niue
-nfk,Norfolkön
-prk,Nordkorea
-yem_north,
-cyp_nor,
-mnp,Nordmarianerna
-north_mar,
-nor,Norge
-omn,Oman
-pak,Pakistan
-plw,Palau
-pan,Panama
-png,Papua Nya Guinea
-pry,Paraguay
-per,Peru
-phl,Filippinerna
-pcn,Pitcairnöarna
-pol,Polen
-prt,Portugal
-pri,Puerto Rico
-qat,Qatar
-reu,Réunion
-rou,Rumänien
-rus,Ryssland
-rwa,Rwanda
-wsm,Samoa
-smr,San Marino
-stp,São Tomé och Príncipe
-sau,Saudiarabien
-sen,Senegal
-srb,Serbien
-scg,Serbien och Montenegro
-scg_ex_kos,
-syc,Seychellerna
-sle,Sierra Leone
-sgp,Singapore
-sxm,Sint Maarten
-svk,Slovakien
-svn,Slovenien
-slb,Salomonöarna
-som,Somalia
-som_somland,
-zaf,Sydafrika
-sgero_a_ssandw,Sydgeorgien och Sydsandwichöarna
-kor,Sydkorea
-sosset,
-ssd,Sydsudan
-yem_south,
-esp,Spanien
-lka,Sri Lanka
-stbar,S:t Barthélemy
-shn,S:t Helena
-kna,S:t Kitts och Nevis
-lca,S:t Lucia
-stmar,
-maf,Saint-Martin
-vct,S:t Vincent och Grenadinerna
-spm,S:t Pierre och Miquelon
-sdn,Sudan
-sur,Surinam
-sjm,Svalbard och Jan Mayen
-swz,Swaziland
-swe,Sverige
-che,Schweiz
-syr,Syrien
-twn,Taiwan
-tjk,Tadzjikistan
-tza,Tanzania
-tha,Thailand
-tls,Östtimor
-tgo,Togo
-tkl,Tokelau
-ton,Tonga
-transn,
-tto,Trinidad och Tobago
-tun,Tunisien
-tur,Turkiet
-tkm,Turkmenistan
-tca,Turks- och Caicosöarna
-tuv,Tuvalu
-usa_minor_out_isl,USA:s yttre öar
-ussr,
-uga,Uganda
-ukr,Ukraina
-are,Förenade Arabemiraten
-gbr,Storbritannien
-korea_union,
-usa,USA
-ury,Uruguay
-uzb,Uzbekistan
-vut,Vanuatu
-ven,Venezuela
-vnm,Vietnam
-virg_isl,
-vir,Amerikanska Jungfruöarna
-wlf,Wallis- och Futunaöarna
-pse_west_bank,Västbanken
-pse,Palestinska territorierna
-deu_west,
-esh,Västsahara
-yem,Jemen
-yug,
-zmb,Zambia
-zwe,Zimbabwe
-ala,
+country,alt_5,alternative_1,alternative_2,alternative_3,alternative_4_cdiac,arb1,arb2,arb3,arb4,arb5,arb6,gapminder_list,god_id,gwid,iso3166_1_alpha2,iso3166_1_alpha3,iso3166_1_numeric,iso3166_2,name,pandg,unicode_region_subtag,upper_case_name
+abkh,,,,,,,,,,,,,,,,,,,,,,
+abw,,,,,,,,,,,,,,,,,,,Aruba,,,
+afg,,,,,,,,,,,,,,,,,,,Afghanistan,,,
+ago,,,,,,,,,,,,,,,,,,,Angola,,,
+aia,,,,,,,,,,,,,,,,,,,Anguilla,,,
+akr_a_dhe,,,,,,,,,,,,,,,,,,,,,,
+ala,,,,,,,,,,,,,,,,,,,,,,
+alb,,,,,,,,,,,,,,,,,,,Albanien,,,
+and,,,,,,,,,,,,,,,,,,,Andorra,,,
+ant,,,,,,,,,,,,,,,,,,,,,,
+are,,,,,,,,,,,,,,,,,,,Förenade Arabemiraten,,,
+arg,,,,,,,,,,,,,,,,,,,Argentina,,,
+arm,,,,,,,,,,,,,,,,,,,Armenien,,,
+asm,,,,,,,,,,,,,,,,,,,Amerikanska Samoa,,,
+ata,,,,,,,,,,,,,,,,,,,Antarktis,,,
+atg,,,,,,,,,,,,,,,,,,,Antigua och Barbuda,,,
+aus,,,,,,,,,,,,,,,,,,,Australien,,,
+aut,,,,,,,,,,,,,,,,,,,Österrike,,,
+aze,,,,,,,,,,,,,,,,,,,Azerbajdzjan,,,
+bdi,,,,,,,,,,,,,,,,,,,Burundi,,,
+bel,,,,,,,,,,,,,,,,,,,Belgien,,,
+ben,,,,,,,,,,,,,,,,,,,Benin,,,
+bfa,,,,,,,,,,,,,,,,,,,Burkina Faso,,,
+bgd,,,,,,,,,,,,,,,,,,,Bangladesh,,,
+bgr,,,,,,,,,,,,,,,,,,,Bulgarien,,,
+bhr,,,,,,,,,,,,,,,,,,,Bahrain,,,
+bhs,,,,,,,,,,,,,,,,,,,Bahamas,,,
+bih,,,,,,,,,,,,,,,,,,,Bosnien och Hercegovina,,,
+blr,,,,,,,,,,,,,,,,,,,Vitryssland,,,
+blz,,,,,,,,,,,,,,,,,,,Belize,,,
+bmu,,,,,,,,,,,,,,,,,,,Bermuda,,,
+bol,,,,,,,,,,,,,,,,,,,Bolivia,,,
+bouisl,,,,,,,,,,,,,,,,,,,Bouvetön,,,
+bra,,,,,,,,,,,,,,,,,,,Brasilien,,,
+brb,,,,,,,,,,,,,,,,,,,Barbados,,,
+brn,,,,,,,,,,,,,,,,,,,Brunei,,,
+btn,,,,,,,,,,,,,,,,,,,Bhutan,,,
+bwa,,,,,,,,,,,,,,,,,,,Botswana,,,
+caf,,,,,,,,,,,,,,,,,,,Centralafrikanska republiken,,,
+can,,,,,,,,,,,,,,,,,,,Kanada,,,
+cck,,,,,,,,,,,,,,,,,,,Kokosöarna,,,
+chanisl,,,,,,,,,,,,,,,,,,,,,,
+che,,,,,,,,,,,,,,,,,,,Schweiz,,,
+cheslo,,,,,,,,,,,,,,,,,,,,,,
+chl,,,,,,,,,,,,,,,,,,,Chile,,,
+chn,,,,,,,,,,,,,,,,,,,Kina,,,
+civ,,,,,,,,,,,,,,,,,,,Elfenbenskusten,,,
+cmr,,,,,,,,,,,,,,,,,,,Kamerun,,,
+cod,,,,,,,,,,,,,,,,,,,Kongo-Kinshasa,,,
+cog,,,,,,,,,,,,,,,,,,,Kongo-Brazzaville,,,
+cok,,,,,,,,,,,,,,,,,,,Cooköarna,,,
+col,,,,,,,,,,,,,,,,,,,Colombia,,,
+com,,,,,,,,,,,,,,,,,,,Komorerna,,,
+cpv,,,,,,,,,,,,,,,,,,,Kap Verde,,,
+cri,,,,,,,,,,,,,,,,,,,Costa Rica,,,
+cub,,,,,,,,,,,,,,,,,,,Kuba,,,
+cxr,,,,,,,,,,,,,,,,,,,Julön,,,
+cym,,,,,,,,,,,,,,,,,,,Caymanöarna,,,
+cyp,,,,,,,,,,,,,,,,,,,Cypern,,,
+cyp_nor,,,,,,,,,,,,,,,,,,,,,,
+cze,,,,,,,,,,,,,,,,,,,Tjeckien,,,
+deu,,,,,,,,,,,,,,,,,,,Tyskland,,,
+deu_east,,,,,,,,,,,,,,,,,,,,,,
+deu_west,,,,,,,,,,,,,,,,,,,,,,
+dji,,,,,,,,,,,,,,,,,,,Djibouti,,,
+dma,,,,,,,,,,,,,,,,,,,Dominica,,,
+dnk,,,,,,,,,,,,,,,,,,,Danmark,,,
+dom,,,,,,,,,,,,,,,,,,,Dominikanska republiken,,,
+dza,,,,,,,,,,,,,,,,,,,Algeriet,,,
+ecu,,,,,,,,,,,,,,,,,,,Ecuador,,,
+egy,,,,,,,,,,,,,,,,,,,Egypten,,,
+eri,,,,,,,,,,,,,,,,,,,Eritrea,,,
+eri_a_eth,,,,,,,,,,,,,,,,,,,,,,
+esh,,,,,,,,,,,,,,,,,,,Västsahara,,,
+esp,,,,,,,,,,,,,,,,,,,Spanien,,,
+est,,,,,,,,,,,,,,,,,,,Estland,,,
+eth,,,,,,,,,,,,,,,,,,,Etiopien,,,
+fin,,,,,,,,,,,,,,,,,,,Finland,,,
+fji,,,,,,,,,,,,,,,,,,,Fiji,,,
+flk,,,,,,,,,,,,,,,,,,,Falklandsöarna,,,
+fra,,,,,,,,,,,,,,,,,,,Frankrike,,,
+fra_antarc,,,,,,,,,,,,,,,,,,,,,,
+fra_clipperton,,,,,,,,,,,,,,,,,,,Clippertonön,,,
+fro,,,,,,,,,,,,,,,,,,,Färöarna,,,
+fsm,,,,,,,,,,,,,,,,,,,Mikronesien,,,
+gab,,,,,,,,,,,,,,,,,,,Gabon,,,
+gbg,,,,,,,,,,,,,,,,,,,Guernsey,,,
+gbm,,,,,,,,,,,,,,,,,,,Isle of Man,,,
+gbr,,,,,,,,,,,,,,,,,,,Storbritannien,,,
+geo,,,,,,,,,,,,,,,,,,,Georgien,,,
+gha,,,,,,,,,,,,,,,,,,,Ghana,,,
+gib,,,,,,,,,,,,,,,,,,,Gibraltar,,,
+gin,,,,,,,,,,,,,,,,,,,Guinea,,,
+glp,,,,,,,,,,,,,,,,,,,Guadeloupe,,,
+gmb,,,,,,,,,,,,,,,,,,,Gambia,,,
+gnb,,,,,,,,,,,,,,,,,,,Guinea-Bissau,,,
+gnq,,,,,,,,,,,,,,,,,,,Ekvatorialguinea,,,
+grc,,,,,,,,,,,,,,,,,,,Grekland,,,
+grd,,,,,,,,,,,,,,,,,,,Grenada,,,
+grl,,,,,,,,,,,,,,,,,,,Grönland,,,
+gtm,,,,,,,,,,,,,,,,,,,Guatemala,,,
+guf,,,,,,,,,,,,,,,,,,,Franska Guyana,,,
+gum,,,,,,,,,,,,,,,,,,,Guam,,,
+guy,,,,,,,,,,,,,,,,,,,Guyana,,,
+heard_a_mcd,,,,,,,,,,,,,,,,,,,Heardön och McDonaldöarna,,,
+hkg,,,,,,,,,,,,,,,,,,,"Hongkong, S.A.R. Kina",,,
+hnd,,,,,,,,,,,,,,,,,,,Honduras,,,
+hos,,,,,,,,,,,,,,,,,,,Vatikanstaten,,,
+hrv,,,,,,,,,,,,,,,,,,,Kroatien,,,
+hti,,,,,,,,,,,,,,,,,,,Haiti,,,
+hun,,,,,,,,,,,,,,,,,,,Ungern,,,
+idn,,,,,,,,,,,,,,,,,,,Indonesien,,,
+ind,,,,,,,,,,,,,,,,,,,Indien,,,
+iot,,,,,,,,,,,,,,,,,,,Brittiska territoriet i Indiska oceanen,,,
+irl,,,,,,,,,,,,,,,,,,,Irland,,,
+irn,,,,,,,,,,,,,,,,,,,Iran,,,
+irq,,,,,,,,,,,,,,,,,,,Irak,,,
+isl,,,,,,,,,,,,,,,,,,,Island,,,
+isr,,,,,,,,,,,,,,,,,,,Israel,,,
+ita,,,,,,,,,,,,,,,,,,,Italien,,,
+jam,,,,,,,,,,,,,,,,,,,Jamaica,,,
+jey,,,,,,,,,,,,,,,,,,,Jersey,,,
+jor,,,,,,,,,,,,,,,,,,,Jordanien,,,
+jpn,,,,,,,,,,,,,,,,,,,Japan,,,
+kaz,,,,,,,,,,,,,,,,,,,Kazakstan,,,
+ken,,,,,,,,,,,,,,,,,,,Kenya,,,
+kgz,,,,,,,,,,,,,,,,,,,Kirgizistan,,,
+khm,,,,,,,,,,,,,,,,,,,Kambodja,,,
+kir,,,,,,,,,,,,,,,,,,,Kiribati,,,
+kna,,,,,,,,,,,,,,,,,,,S:t Kitts och Nevis,,,
+kor,,,,,,,,,,,,,,,,,,,Sydkorea,,,
+korea_union,,,,,,,,,,,,,,,,,,,,,,
+kos,,,,,,,,,,,,,,,,,,,Kosovo,,,
+kwt,,,,,,,,,,,,,,,,,,,Kuwait,,,
+lao,,,,,,,,,,,,,,,,,,,Laos,,,
+lbn,,,,,,,,,,,,,,,,,,,Libanon,,,
+lbr,,,,,,,,,,,,,,,,,,,Liberia,,,
+lby,,,,,,,,,,,,,,,,,,,Libyen,,,
+lca,,,,,,,,,,,,,,,,,,,S:t Lucia,,,
+lie,,,,,,,,,,,,,,,,,,,Liechtenstein,,,
+lka,,,,,,,,,,,,,,,,,,,Sri Lanka,,,
+lso,,,,,,,,,,,,,,,,,,,Lesotho,,,
+ltu,,,,,,,,,,,,,,,,,,,Litauen,,,
+lux,,,,,,,,,,,,,,,,,,,Luxemburg,,,
+lva,,,,,,,,,,,,,,,,,,,Lettland,,,
+mac,,,,,,,,,,,,,,,,,,,"Macao, S.A.R. Kina",,,
+maf,,,,,,,,,,,,,,,,,,,Saint-Martin,,,
+mar,,,,,,,,,,,,,,,,,,,Marocko,,,
+mco,,,,,,,,,,,,,,,,,,,Monaco,,,
+mda,,,,,,,,,,,,,,,,,,,Moldavien,,,
+mdg,,,,,,,,,,,,,,,,,,,Madagaskar,,,
+mdv,,,,,,,,,,,,,,,,,,,Maldiverna,,,
+mex,,,,,,,,,,,,,,,,,,,Mexiko,,,
+mhl,,,,,,,,,,,,,,,,,,,Marshallöarna,,,
+mkd,,,,,,,,,,,,,,,,,,,Makedonien,,,
+mli,,,,,,,,,,,,,,,,,,,Mali,,,
+mlt,,,,,,,,,,,,,,,,,,,Malta,,,
+mmr,,,,,,,,,,,,,,,,,,,Myanmar (Burma),,,
+mne,,,,,,,,,,,,,,,,,,,Montenegro,,,
+mng,,,,,,,,,,,,,,,,,,,Mongoliet,,,
+mnp,,,,,,,,,,,,,,,,,,,Nordmarianerna,,,
+moz,,,,,,,,,,,,,,,,,,,Moçambique,,,
+mrt,,,,,,,,,,,,,,,,,,,Mauretanien,,,
+msr,,,,,,,,,,,,,,,,,,,Montserrat,,,
+mtq,,,,,,,,,,,,,,,,,,,Martinique,,,
+mus,,,,,,,,,,,,,,,,,,,Mauritius,,,
+mwi,,,,,,,,,,,,,,,,,,,Malawi,,,
+mys,,,,,,,,,,,,,,,,,,,Malaysia,,,
+myt,,,,,,,,,,,,,,,,,,,Mayotte,,,
+nam,,,,,,,,,,,,,,,,,,,Namibia,,,
+ncl,,,,,,,,,,,,,,,,,,,Nya Kaledonien,,,
+ner,,,,,,,,,,,,,,,,,,,Niger,,,
+nfk,,,,,,,,,,,,,,,,,,,Norfolkön,,,
+nga,,,,,,,,,,,,,,,,,,,Nigeria,,,
+ngokar,,,,,,,,,,,,,,,,,,,,,,
+nic,,,,,,,,,,,,,,,,,,,Nicaragua,,,
+niu,,,,,,,,,,,,,,,,,,,Niue,,,
+nld,,,,,,,,,,,,,,,,,,,Nederländerna,,,
+nld_curacao,,,,,,,,,,,,,,,,,,,,,,
+nor,,,,,,,,,,,,,,,,,,,Norge,,,
+npl,,,,,,,,,,,,,,,,,,,Nepal,,,
+nru,,,,,,,,,,,,,,,,,,,Nauru,,,
+nzl,,,,,,,,,,,,,,,,,,,Nya Zeeland,,,
+omn,,,,,,,,,,,,,,,,,,,Oman,,,
+pak,,,,,,,,,,,,,,,,,,,Pakistan,,,
+pan,,,,,,,,,,,,,,,,,,,Panama,,,
+pcn,,,,,,,,,,,,,,,,,,,Pitcairnöarna,,,
+per,,,,,,,,,,,,,,,,,,,Peru,,,
+phl,,,,,,,,,,,,,,,,,,,Filippinerna,,,
+plw,,,,,,,,,,,,,,,,,,,Palau,,,
+png,,,,,,,,,,,,,,,,,,,Papua Nya Guinea,,,
+pol,,,,,,,,,,,,,,,,,,,Polen,,,
+pri,,,,,,,,,,,,,,,,,,,Puerto Rico,,,
+prk,,,,,,,,,,,,,,,,,,,Nordkorea,,,
+prt,,,,,,,,,,,,,,,,,,,Portugal,,,
+pry,,,,,,,,,,,,,,,,,,,Paraguay,,,
+pse,,,,,,,,,,,,,,,,,,,Palestinska territorierna,,,
+pse_gaza,,,,,,,,,,,,,,,,,,,Gazaremsan,,,
+pse_west_bank,,,,,,,,,,,,,,,,,,,Västbanken,,,
+pyf,,,,,,,,,,,,,,,,,,,Franska Polynesien,,,
+qat,,,,,,,,,,,,,,,,,,,Qatar,,,
+reu,,,,,,,,,,,,,,,,,,,Réunion,,,
+rou,,,,,,,,,,,,,,,,,,,Rumänien,,,
+rus,,,,,,,,,,,,,,,,,,,Ryssland,,,
+rwa,,,,,,,,,,,,,,,,,,,Rwanda,,,
+sau,,,,,,,,,,,,,,,,,,,Saudiarabien,,,
+scg,,,,,,,,,,,,,,,,,,,Serbien och Montenegro,,,
+scg_ex_kos,,,,,,,,,,,,,,,,,,,,,,
+sdn,,,,,,,,,,,,,,,,,,,Sudan,,,
+sen,,,,,,,,,,,,,,,,,,,Senegal,,,
+sgero_a_ssandw,,,,,,,,,,,,,,,,,,,Sydgeorgien och Sydsandwichöarna,,,
+sgp,,,,,,,,,,,,,,,,,,,Singapore,,,
+shn,,,,,,,,,,,,,,,,,,,S:t Helena,,,
+sjm,,,,,,,,,,,,,,,,,,,Svalbard och Jan Mayen,,,
+slb,,,,,,,,,,,,,,,,,,,Salomonöarna,,,
+sle,,,,,,,,,,,,,,,,,,,Sierra Leone,,,
+slv,,,,,,,,,,,,,,,,,,,El Salvador,,,
+smr,,,,,,,,,,,,,,,,,,,San Marino,,,
+som,,,,,,,,,,,,,,,,,,,Somalia,,,
+som_somland,,,,,,,,,,,,,,,,,,,,,,
+sosset,,,,,,,,,,,,,,,,,,,,,,
+spm,,,,,,,,,,,,,,,,,,,S:t Pierre och Miquelon,,,
+srb,,,,,,,,,,,,,,,,,,,Serbien,,,
+ssd,,,,,,,,,,,,,,,,,,,Sydsudan,,,
+stbar,,,,,,,,,,,,,,,,,,,S:t Barthélemy,,,
+stmar,,,,,,,,,,,,,,,,,,,,,,
+stp,,,,,,,,,,,,,,,,,,,São Tomé och Príncipe,,,
+sur,,,,,,,,,,,,,,,,,,,Surinam,,,
+svk,,,,,,,,,,,,,,,,,,,Slovakien,,,
+svn,,,,,,,,,,,,,,,,,,,Slovenien,,,
+swe,,,,,,,,,,,,,,,,,,,Sverige,,,
+swz,,,,,,,,,,,,,,,,,,,Swaziland,,,
+sxm,,,,,,,,,,,,,,,,,,,Sint Maarten,,,
+syc,,,,,,,,,,,,,,,,,,,Seychellerna,,,
+syr,,,,,,,,,,,,,,,,,,,Syrien,,,
+tca,,,,,,,,,,,,,,,,,,,Turks- och Caicosöarna,,,
+tcd,,,,,,,,,,,,,,,,,,,Tchad,,,
+tgo,,,,,,,,,,,,,,,,,,,Togo,,,
+tha,,,,,,,,,,,,,,,,,,,Thailand,,,
+tjk,,,,,,,,,,,,,,,,,,,Tadzjikistan,,,
+tkl,,,,,,,,,,,,,,,,,,,Tokelau,,,
+tkm,,,,,,,,,,,,,,,,,,,Turkmenistan,,,
+tls,,,,,,,,,,,,,,,,,,,Östtimor,,,
+ton,,,,,,,,,,,,,,,,,,,Tonga,,,
+transn,,,,,,,,,,,,,,,,,,,,,,
+tto,,,,,,,,,,,,,,,,,,,Trinidad och Tobago,,,
+tun,,,,,,,,,,,,,,,,,,,Tunisien,,,
+tur,,,,,,,,,,,,,,,,,,,Turkiet,,,
+tuv,,,,,,,,,,,,,,,,,,,Tuvalu,,,
+twn,,,,,,,,,,,,,,,,,,,Taiwan,,,
+tza,,,,,,,,,,,,,,,,,,,Tanzania,,,
+uga,,,,,,,,,,,,,,,,,,,Uganda,,,
+ukr,,,,,,,,,,,,,,,,,,,Ukraina,,,
+ury,,,,,,,,,,,,,,,,,,,Uruguay,,,
+usa,,,,,,,,,,,,,,,,,,,USA,,,
+usa_minor_out_isl,,,,,,,,,,,,,,,,,,,USA:s yttre öar,,,
+ussr,,,,,,,,,,,,,,,,,,,,,,
+uzb,,,,,,,,,,,,,,,,,,,Uzbekistan,,,
+vct,,,,,,,,,,,,,,,,,,,S:t Vincent och Grenadinerna,,,
+ven,,,,,,,,,,,,,,,,,,,Venezuela,,,
+vgb,,,,,,,,,,,,,,,,,,,Brittiska Jungfruöarna,,,
+vir,,,,,,,,,,,,,,,,,,,Amerikanska Jungfruöarna,,,
+vnm,,,,,,,,,,,,,,,,,,,Vietnam,,,
+vut,,,,,,,,,,,,,,,,,,,Vanuatu,,,
+wlf,,,,,,,,,,,,,,,,,,,Wallis- och Futunaöarna,,,
+wsm,,,,,,,,,,,,,,,,,,,Samoa,,,
+yem,,,,,,,,,,,,,,,,,,,Jemen,,,
+yem_north,,,,,,,,,,,,,,,,,,,,,,
+yem_south,,,,,,,,,,,,,,,,,,,,,,
+yug,,,,,,,,,,,,,,,,,,,,,,
+zaf,,,,,,,,,,,,,,,,,,,Sydafrika,,,
+zmb,,,,,,,,,,,,,,,,,,,Zambia,,,
+zwe,,,,,,,,,,,,,,,,,,,Zimbabwe,,,
