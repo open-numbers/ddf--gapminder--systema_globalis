@@ -1,55 +1,11 @@
 ingredients:
     - id: gw-concepts-geo
-      dataset: ddf--gapminder--geo_entity_domain
+      dataset: open-numbers/ddf--gapminder--geo_entity_domain
       key: concept
       value: "*"
-      filter:
-          concept:
-              - un_state
-              - geographic_regions
-              - income_groups
-              - landlocked
-              - g77_and_oecd_countries
-              - geographic_regions_in_4_colors
-              - main_religion_2008
-              - geo
-              - country
-              - world_4region
-              - latitude
-              - longitude
-              - global
-              - color
-              - scales
-              - drill_up
-              - domain
-              - gapminder_list
-              - alternative_1
-              - alternative_2
-              - alternative_3
-              - alternative_4_cdiac
-              - pandg
-              - god_id
-              - alt_5
-              - upper_case_name
-              - iso3166_1_alpha2
-              - iso3166_1_alpha3
-              - iso3166_1_numeric
-              - iso3166_2
-              - gwid
-              - arb1
-              - arb2
-              - arb3
-              - arb4
-              - arb5
-              - arb6
-              - arb7
-              - arb8
-              - tags
-              - rank
-              - unicode_region_subtag
 
     - id: gw-concepts-discrete
-      dataset: ddf--gapminder--gapminder_world
+      dataset: open-numbers/ddf--gapminder--ontology
       key: concept
       value: "*"
       filter:
@@ -58,18 +14,23 @@ ingredients:
               - indicator_url
               - name
               - unit
-              - interpolation
               - age
               - time
               - name_short
-              - name_long
+              - tag
+              - name_catalog
+              - parent
+              - description_long
+              - source
+              - source_long
+              - source_url
 
     - id: gw-entities-geo
-      dataset: ddf--gapminder--geo_entity_domain
+      dataset: open-numbers/ddf--gapminder--geo_entity_domain
       key: geo
       value: "*"
 
     - id: gw-countries
-      dataset: ddf--gapminder--geo_entity_domain
+      dataset: open-numbers/ddf--gapminder--geo_entity_domain
       key: country
       value: "*"

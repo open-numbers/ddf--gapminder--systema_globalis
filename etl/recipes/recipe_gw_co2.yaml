@@ -2,15 +2,13 @@
 info:
     id: sg_gw_co2
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--co2_emission
+        - &d1 open-numbers/ddf--gapminder--co2_emission
 
 config:
     # the path to search recipe files to include
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ./translation_dictionaries
-    # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder
 
 
 # define your ingredients and procedures below

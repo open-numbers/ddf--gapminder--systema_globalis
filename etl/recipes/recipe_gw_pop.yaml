@@ -2,7 +2,7 @@
 info:
     id: sg-pop-dataset
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--population
+        - &d1 open-numbers/ddf--gapminder--population_historic
 
 config:
     # the path to search recipe files to include
@@ -10,44 +10,17 @@ config:
     # the path to search dictionary files
     dictionary_dir: ./translation_dictionaries
     # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder
+    # ddf_dir: /Users/semio/src/work/Gapminder
 
 
 # define your ingredients and procedures below
 ingredients:
-    # Ingredients have 5 parameters: id, dataset, key, value, filter
-    # in wich:
-    #     id: the name of ingredient, will be used in cooking procedures
-    #     dataset: which dataset is this ingredient from
-    #     key: the key to filter in ddf--index
-    #     value: the value to filter in ddf--index
-    #     filter: (optional) more keyword filters
-    #
-    # below some example of ingredients:
-    # 
     - id: pop-datapoints
       dataset: *d1
       key: "country,year"
       value:
-          - population
-    - id: pop-concepts
-      dataset: *d1
-      key: concept
-      value:
-          $nin:
-              - sourceurl
-      filter:
-          concept:
-              - population
-    # 
-    # - id: gw-concepts-aqua
-    #   dataset: *d2
-    #   key: concept
-    #   value: "*"
-    #   filter:
-    #       concept: &CONC_FILTER
-    #         - agricultural_water_withdrawal_percent_of_total
-    #         - desalinated_water_produced_billion_cu_meters
+          - population_total
+
 cooking:
     datapoints:
         - procedure: translate_header
@@ -57,15 +30,12 @@ cooking:
               dictionary:
                   country: geo
                   year: time
-                  population: population_total
-          result: pop-datapoints-final
-    concepts:
-        - procedure: translate_column
+          result: pop-datapoints-translated
+        - procedure: filter
           ingredients:
-              - pop-concepts
+              - pop-datapoints-translated
           options:
-              column: concept
-              dictionary:
-                  population: population_total
-          result: pop-concepts-final
-
+              row:
+                  time:
+                      $lt: 2019
+          result: pop-datapoints-final

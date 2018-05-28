@@ -1,14 +1,11 @@
 info:
     id: unpop_sg_dataset
     base:
-        - &d1 ddf--unpop--wpp_population
-        - &d2 ddf--gapminder--gapminder_world
-        - &d3 ddf--unpop--wpp_demog
+        - &d1 harpalshergill/ddf--unpop--wpp_population
 
 config:
     recipes_dir: ./
     dictionary_dir: ../translation_dictionaries
-    ddf_dir: /Users/semio/src/work/Gapminder
 
 include:
     - recipe_gw_common.yaml

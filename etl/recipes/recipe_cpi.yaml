@@ -1,0 +1,64 @@
+info:
+    id: sg-cpi-indicator
+    base:
+        - &d1 open-numbers/ddf--transparency_international--corruption_perception_index
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+
+
+include:
+    - recipe_gw_common.yaml
+
+
+ingredients:
+    - id: cpi-datapoints
+      dataset: *d1
+      key: country, year
+
+    - id: cpi-countries
+      dataset: *d1
+      key: country
+
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - cpi-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+                  cpi: corruption_perception_index_cpi
+                  cpi_pre2012: corruption_perception_index_cpi_pre2012
+          result: cpi-datapoints-translated
+
+        - procedure: translate_column
+          ingredients:
+              - cpi-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gw-countries
+                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
+                        'iso3166_1_alpha3', 'iso3166_2']
+                  value: country
+          result: cpi-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - cpi-datapoints-translated
+          options:
+              column: geo
+              dictionary:
+                  base: cpi-countries-aligned
+                  key: country
+                  value: geo
+          result: cpi-datapoints-final

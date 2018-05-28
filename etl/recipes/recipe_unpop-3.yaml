@@ -1,9 +1,8 @@
 info:
     id: unpop_sg_dataset
     base:
-        - &d1 ddf--unpop--wpp_population
-        - &d2 ddf--gapminder--gapminder_world
-        - &d3 ddf--unpop--wpp_demog
+        - &d1 harpalshergill/ddf--unpop--wpp_population
+
 
 config:
     recipes_dir: ./

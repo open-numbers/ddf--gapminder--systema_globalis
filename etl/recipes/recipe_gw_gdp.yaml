@@ -2,50 +2,31 @@
 info:
     id: dataset_name
     base:  # the datasets for ingredients
-        - &d1 ddf--gapminder--gdp_per_capita_cppp
+        - &d1 open-numbers/ddf--gapminder--gdp_per_capita_cppp
 
 config:
     # the path to search recipe files to include
     recipes_dir: ./
     # the path to search dictionary files
     dictionary_dir: ./translation_dictionaries
-    # the path to search ddf datasets
-    ddf_dir: /Users/semio/src/work/Gapminder
 
 
 # define your ingredients and procedures below
 ingredients:
-    # Ingredients have 5 parameters: id, dataset, key, value, filter
-    # in wich:
-    #     id: the name of ingredient, will be used in cooking procedures
-    #     dataset: which dataset is this ingredient from
-    #     key: the key to filter in ddf--index
-    #     value: the value to filter in ddf--index
-    #     filter: (optional) more keyword filters
-    #
-    # below some example of ingredients:
-    # 
     - id: gdp-datapoints
       dataset: *d1
-      key: "geo,time"
+      key: "country,year"
       value:
-          - gdp_per_capita_cppp
-    - id: gdp-concepts
-      dataset: *d1
-      key: concept
-      value: "*"
-      filter:
-          concept:
-              - gdp_per_capita_cppp
-    # 
-    # - id: gw-concepts-aqua
-    #   dataset: *d2
+          - income_per_person_gdppercapita_ppp_inflation_adjusted
+    # - id: gdp-concepts
+    #   dataset: *d1
     #   key: concept
     #   value: "*"
     #   filter:
-    #       concept: &CONC_FILTER
-    #         - agricultural_water_withdrawal_percent_of_total
-    #         - desalinated_water_produced_billion_cu_meters
+    #       concept:
+    #           - gdp_per_capita_cppp
+    #
+
 cooking:
     datapoints:
         - procedure: translate_header
@@ -53,15 +34,14 @@ cooking:
               - gdp-datapoints
           options:
               dictionary:
-                  gdp_per_capita_cppp: income_per_person_gdppercapita_ppp_inflation_adjusted
-          result: gdp-datapoints-final
-    concepts:
-        - procedure: translate_column
+                  country: geo
+                  year: time
+          result: gdp-datapoints-translated
+        - procedure: filter
           ingredients:
-              - gdp-concepts
+              - gdp-datapoints-translated
           options:
-              dictionary:
-                  gdp_per_capita_cppp: income_per_person_gdppercapita_ppp_inflation_adjusted
-              column: concept
-          result: gdp-concepts-final 
-          
+              row:
+                  time:
+                      $lt: 2019  # only include datapoints from 1800 to 2018
+          result: gdp-datapoints-final

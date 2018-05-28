@@ -1,0 +1,97 @@
+# basic info
+info:
+    id: fao-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--unfao--fra
+
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+
+
+include:
+    - recipe_gw_common.yaml
+
+
+ingredients:
+    - id: fao-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - forbelbiom
+          - forabovbiom
+          - forest
+          - privown
+          - forperc
+          - wooremov
+    - id: fao-forestry-countries
+      dataset: *d1
+      key: country
+
+
+cooking:
+    datapoints:
+        - procedure: run_op
+          ingredients:
+              - fao-datapoints
+          options:
+              op:
+                  privately_owned_forest_land_percent: "privown / forest * 100"
+                  biomass_stock_in_forest_tons: "(forbelbiom + forabovbiom) * 1000000"
+                  wood_removal_cubic_meters: "wooremov * 1000"
+          result: fao-datapoints-op
+
+        - procedure: translate_header
+          ingredients:
+              - fao-datapoints-op
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: fao-datapoints-op-translated
+
+        - procedure: filter
+          ingredients:
+              - fao-datapoints-op-translated
+          options:
+              item:
+                  - biomass_stock_in_forest_tons
+                  - privately_owned_forest_land_percent
+                  - wood_removal_cubic_meters
+          result: fao_fore-datapoints-filtered-0
+
+        - procedure: translate_column
+          ingredients:
+              - fao-forestry-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gw-countries
+                  key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                         'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                         'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+                  value: country
+          result: fao-forestry-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - fao_fore-datapoints-filtered-0
+          options:
+              column: geo
+              dictionary:
+                  base: fao-forestry-countries-aligned
+                  key: country
+                  value: geo
+          result: fao-forestry-datapoints-aligned
+        - procedure: filter
+          ingredients:
+              - fao-forestry-datapoints-aligned
+          options:
+              row:
+                  time:
+                      $lt: 9999
+          result: fao_fore-datapoints-final
