@@ -1,5 +1,5 @@
-world_4region,description,name,name_long,name_short
-africa,,,,
-europe,,,,
-americas,,,,
-asia,,,,
+world_4region,color,description,name,name_long,name_short,shape_lores_svg
+africa,,,,,,
+americas,,,,,,
+asia,,,,,,
+europe,,,,,,
