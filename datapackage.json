@@ -3,7 +3,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-05-27T13:00:08.131464+00:00",
+    "created": "2018-05-20T15:18:29.433427+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -23,11 +23,9 @@
         },
         {
             "id": "zh-CN"
-        },
-        {
-            "id": "he-IL"
         }
     ],
+    "version": "1.7.0",
     "resources": [
         {
             "path": "ddf--concepts.csv",
@@ -23450,7 +23448,6 @@
                     "ddf--datapoints--yearly_co2_emissions_1000_tonnes--by--geo--time"
                 ]
             }
-        ],
-        "synonym": []
+        ]
     }
 }

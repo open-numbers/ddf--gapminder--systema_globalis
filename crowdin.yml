@@ -1,5 +1,0 @@
-files:
-  - source: /langsplit/en/**/*.csv
-    translation: /langsplit/%locale%/**/%original_file_name%
-    first_line_contains_header: '1'
-    scheme: 'identifier,source_or_translation'
