@@ -1,5 +1,4 @@
 concept,description
-20120905_extreme_poverty_percent_people_below_125_a_day,WDI 20120905 The percentage of people living on less than $1.25 (2005 purchasing power parity dollars).
 adults_with_hiv_percent_age_15_49,"The estimated percentage of adults aged 15 to 49 years that are infected by HIV, including those without symptoms, those sick from AIDS and those healthy due to treatment of the HIV infection"
 age_at_1st_marriage_women,"The mean age, in years, of first marriage for women. Women who never married are excluded. Cohabitation is excluded. The data are based on multple sources and definitions might vary."
 aged_15_24_employment_rate_percent,"Percentage of total population, age group 15-24, that has been employed during the given year."
@@ -21,7 +20,7 @@ aid_given_per_person_2007_us,Total amount of official development assistance (OD
 aid_given_percent_of_gni,Percentage of the gross national income (GNI) of each recepient country that has been given as official development assistance (ODA) aid during this year.
 aid_received_per_person_current_us,"Net official development assistance (ODA) per capita consists of disbursements of loans made on concessional terms (net of repayments of principal) and grants by official agencies of the members of the Development Assistance Committee (DAC), by multilateral institutions, and by non-DAC countries to promote economic development and welfare in countries and territories in the DAC list of ODA recipients; and is calculated by dividing net ODA received by the midyear population estimate. It includes loans with a grant element of at least 25 percent (calculated at a rate of discount of 10 percent)."
 aid_received_percent_of_gni,"Net official development assistance (ODA) consists of disbursements of loans made on concessional terms (net of repayments of principal) and grants by official agencies of the members of the Development Assistance Committee (DAC), by multilateral institutions, and by non-DAC countries to promote economic development and welfare in countries and territories in the DAC list of ODA recipients. It includes loans with a grant element of at least 25 percent (calculated at a rate of discount of 10 percent)."
-aid_received_total_us_inflation_adjusted,"Net official development assistance (ODA) consists of disbursements of loans made on concessional terms (net of repayments of principal) and grants by official agencies of the members of the Development Assistance Committee (DAC), by multilateral institutions, and by non-DAC countries to promote economic development and welfare in countries and territories in the DAC list of ODA recipients. It includes loans with a grant element of at least 25 percent (calculated at a rate of discount of 10 percent). Data are in constant 2012 U.S. dollars."
+aid_received_total_us_inflation_adjusted,"Net official development assistance (ODA) consists of disbursements of loans made on concessional terms (net of repayments of principal) and grants by official agencies of the members of the Development Assistance Committee (DAC), by multilateral institutions, and by non-DAC countries to promote economic development and welfare in countries and territories in the DAC list of ODA recipients. It includes loans with a grant element of at least 25 percent (calculated at a rate of discount of 10 percent). Data are in constant 2014 U.S. dollars."
 alcohol_consumption_per_adult_15plus_litres,"Recorded plus estimated alcohol consumption, average adult (15+) per capita consumption in litres"
 all_causes_deaths_in_children_1_59_months_per_1000_births,"All causes deaths in children 1-59 months (per 1,000 births)"
 all_causes_deaths_in_children_1_59_months_total_deaths,All causes deaths in children 1-59 months (total deaths)
@@ -56,9 +55,15 @@ arb5,
 arb6,
 armed_forces_personnel_percent_of_labor_force,"Armed forces personnel are active duty military personnel, including paramilitary forces if the training, organization, equipment, and control suggest they may be used to support or replace regular military forces. Labor force comprises all people who meet the International Labour Organization's definition of the economically active population."
 armed_forces_personnel_total,"Armed forces personnel are active duty military personnel, including paramilitary forces if the training, organization, equipment, and control suggest they may be used to support or replace regular military forces."
-arms_exports_us_inflation_adjusted,"Arms transfers cover the supply of military weapons through sales, aid, gifts, and those made through manufacturing licenses. Data cover major conventional weapons such as aircraft, armored vehicles, artillery, radar systems, missiles, and ships designed for military use. Excluded are transfers of other military equipment such as small arms and light weapons, trucks, small artillery, ammunition, support equipment, technology transfers, and other services."
-arms_imports_us_inflation_adjusted,"Arms transfers cover the supply of military weapons through sales, aid, gifts, and those made through manufacturing licenses. Data cover major conventional weapons such as aircraft, armored vehicles, artillery, radar systems, missiles, and ships designed for military use. Excluded are transfers of other military equipment such as small arms and light weapons, trucks, small artillery, ammunition, support equipment, technology transfers, and other services."
+arms_exports_us_inflation_adjusted,"Arms transfers cover the supply of military weapons through sales, aid, gifts, and those made through manufacturing licenses. Data cover major conventional weapons such as aircraft, armored vehicles, artillery, radar systems, missiles, and ships designed for military use. Excluded are transfers of other military equipment such as small arms and light weapons, trucks, small artillery, ammunition, support equipment, technology transfers, and other services. Figures are SIPRI Trend Indicator Values (TIVs) expressed in US$ m. at constant (1990) prices.  A '0' indicates that the value of deliveries is less than US$0.5m"
+arms_imports_us_inflation_adjusted,"Arms transfers cover the supply of military weapons through sales, aid, gifts, and those made through manufacturing licenses. Data cover major conventional weapons such as aircraft, armored vehicles, artillery, radar systems, missiles, and ships designed for military use. Excluded are transfers of other military equipment such as small arms and light weapons, trucks, small artillery, ammunition, support equipment, technology transfers, and other services. Figures are SIPRI Trend Indicator Values (TIVs) expressed in US$ m. at constant (1990) prices. A '0' indicates that the value of deliveries is less than US$0.5m."
 art_coverage_percent_cd4_l_350,"For people who have been diagnosed as CD4 count < 350 / mm3, how many (%) have access to ART treatment, estimation."
+at_least_basic_sanitation_overall_access_percent,"The percentage of people using at least basic sanitation services, that is, improved sanitation facilities that are not shared with other households. This indicator encompasses both people using basic sanitation services as well as those using safely managed sanitation services. Improved sanitation facilities include flush/pour flush to piped sewer systems, septic tanks or pit latrines; ventilated improved pit latrines, compositing toilets or pit latrines with slabs."
+at_least_basic_sanitation_rural_access_percent,"The percentage of people using at least basic sanitation services, that is, improved sanitation facilities that are not shared with other households. This indicator encompasses both people using basic sanitation services as well as those using safely managed sanitation services. Improved sanitation facilities include flush/pour flush to piped sewer systems, septic tanks or pit latrines; ventilated improved pit latrines, compositing toilets or pit latrines with slabs."
+at_least_basic_sanitation_urban_access_percent,"The percentage of people using at least basic sanitation services, that is, improved sanitation facilities that are not shared with other households. This indicator encompasses both people using basic sanitation services as well as those using safely managed sanitation services. Improved sanitation facilities include flush/pour flush to piped sewer systems, septic tanks or pit latrines; ventilated improved pit latrines, compositing toilets or pit latrines with slabs."
+at_least_basic_water_source_overall_access_percent,"The percentage of people using at least basic water services. This indicator encompasses both people using basic water services as well as those using safely managed water services. Basic drinking water services is defined as drinking water from an improved source, provided collection time is not more than 30 minutes for a round trip. Improved water sources include piped water, boreholes or tubewells, protected dug wells, protected springs, and packaged or delivered water."
+at_least_basic_water_source_rural_access_percent,"The percentage of people using at least basic water services. This indicator encompasses both people using basic water services as well as those using safely managed water services. Basic drinking water services is defined as drinking water from an improved source, provided collection time is not more than 30 minutes for a round trip. Improved water sources include piped water, boreholes or tubewells, protected dug wells, protected springs, and packaged or delivered water."
+at_least_basic_water_source_urban_access_percent,"The percentage of people using at least basic water services. This indicator encompasses both people using basic water services as well as those using safely managed water services. Basic drinking water services is defined as drinking water from an improved source, provided collection time is not more than 30 minutes for a round trip. Improved water sources include piped water, boreholes or tubewells, protected dug wells, protected springs, and packaged or delivered water."
 average_age_of_dollar_billionaires_years,"The average age of billionaires in the country of their citizenship, calculation based on data from Forbes.com"
 bad_teeth_per_child_12_yr,"The weighted average of the number of Decayed, Missing or Filled teeth among the 12 years old in a country (DMFT). It is meant to reflect the prevalence of caries in a population."
 battle_deaths_per_100_000,"Battle deaths, age-adjusted mortality per 100 000 standard population."
@@ -92,7 +97,6 @@ children_and_elderly_per_100_adults,"The total dependency ratio is the ratio of 
 children_out_of_school_primary,Children out of school are the number of primary-school-age children not enrolled in primary or secondary school.
 children_out_of_school_primary_female,Children out of school are the number of primary-school-age children not enrolled in primary or secondary school.
 children_out_of_school_primary_male,Children out of school are the number of primary-school-age children not enrolled in primary or secondary school.
-children_per_woman_temporary_update,"Children per woman (TFR), temporary update"
 children_per_woman_total_fertility,Total fertility rate. The number of children that would be born to each woman with prevailing age-specific fertility rates.
 children_per_woman_total_fertility_with_projections,Total fertility rate. The number of children that would be born to each woman with prevailing age-specific fertility rates. Data after 2010 is based on the medium estimates from UN population division.
 cholesterol_fat_in_blood_men_mmolperl,"The mean TC (Total Cholesterol) of the male population, counted in mmol per L; this mean is calculated as if each country has the same age composition as the world population."
@@ -101,7 +105,6 @@ co2_emissions_tonnes_per_person,Carbon dioxide emissions from the burning of fos
 co2_intensity_of_economic_output_kg_co2_per_2011_ppp_of_gdp,"Carbon dioxide emissions are those stemming from the burning of fossil fuels and the manufacture of cement. They include carbon dioxide produced during consumption of solid, liquid, and gas fuels and gas flaring."
 coal_consumption_per_cap,Coal consumption per person (tonnes oil equivalent)
 coal_consumption_total,Total amount of coal consumption (tonnes oil equivalent)
-code,
 colonandrectum_cancer_deaths_per_100000_men,"Number of deaths due to colon&rectum cancer in 100,000 male residents during the certain year. This rate is calculated as if each country has the same age composition as the world population."
 colonandrectum_cancer_deaths_per_100000_women,"Number of deaths due to colon&rectum cancer in 100,000 female residents during the certain year. This rate is calculated as if each country has the same age composition as the world population."
 colonandrectum_cancer_new_cases_per_100000_men,"Number of new cases of colon&rectum cancer in 100,000 male residents during the certain year. This rate is calculated as if each country has the same age composition as the world population."
@@ -115,6 +118,7 @@ congenital_deaths_in_newborn_per_1000_births,"Congenital deaths in newborn (per 
 congenital_deaths_in_newborn_total_deaths,Congenital deaths in newborn (total deaths)
 contraceptive_use_percent_of_women_ages_15_49,"Contraceptive prevalence rate is the percentage of women who are practicing, or whose sexual partners are practicing, any form of contraception. It is usually measured for women ages 15-49 who are married or in union."
 corruption_perception_index_cpi,Transaprency International's score of perceptions of corruption. Higher values indicate less corruption.
+corruption_perception_index_cpi_pre2012,Transaprency International's score of perceptions of corruption. Higher values indicate less corruption.
 country,
 crude_birth_rate_births_per_1000_population,"The average number of births among 1,000 population during the given year (data after 2010 is based on the medium estimates from UN population division)."
 crude_death_rate_deaths_per_1000_population,"The average number of deaths among 1,000 population during the given year (data after 2010 is based on the medium estimates from UN population division)."
@@ -125,11 +129,12 @@ data_quality_income_per_person,"Rates the quality for each observation of ""Inco
 data_quality_life_expectancy,"Rates the quality for each observation of ""Life expectancy at birth"": (1) Yearly data; (2) Trend data; (3) Yearly guesstimates; (4) Trend guesstimates. You can use this ""indicator"" together with ""Life expectancy at birth"" to highlight the roughest observations."
 data_quality_population,"Rates the quality for each observation of ""Population, total"". The ratings are 1 (very good); 2 (good); 3 (fair); 4 (bad) and 5 (very bad). You can use this ""indicator"" together with total population to highlight the roughest observations."
 dead_kids_per_woman,How many children a woman has on average that dies before their 35th birthday. It is based on the Total fertilirty rate and age-specific mortality.
-debt_servicing_costs_percent_of_exports_and_net_income_from_abroad,"Total debt service is the sum of principal repayments and interest actually paid in currency, goods, or services on long-term debt, interest paid on short-term debt, and repayments (repurchases and charges) to the IMF."
+debt_servicing_costs_percent_of_exports_and_net_income_from_abroad,"Total debt service to exports of goods, services and primary income. Total debt service is the sum of principal repayments and interest actually paid in currency, goods, or services on long-term debt, interest paid on short-term debt, and repayments (repurchases and charges) to the IMF."
 debt_to_foreigners_by_public_and_private_percent_of_gni,"Total external debt stocks to gross national income. Total external debt is debt owed to nonresidents repayable in currency, goods, or services. Total external debt is the sum of public, publicly guaranteed, and private nonguaranteed long-term debt, use of IMF credit, and short-term debt. Short-term debt includes all debt having an original maturity of one year or less and interest in arrears on long-term debt. GNI (formerly GNP) is the sum of value added by all resident producers plus any product taxes (less subsidies) not included in the valuation of output plus net receipts of primary income (compensation of employees and property income) from abroad."
 democracy_score_use_as_color,"Overall polity score from the Polity IV dataset, calculated by subtracting an autocracy score from a democracy score. It is a summary measure of a country's democratic and free nature. -10 is the lowest value, 10 the highest."
 desalinated_water_produced_billion_cu_meters,"Total quantity of the production of freshwater by desalination of brackish or saltwater (mostly for domestic purposes) during the given year, counted in billion cubic meters."
 description,
+description_long,
 diarrhoeal_deaths_in_children_1_59_months_per_1000_births,"Diarrhoeal deaths in children 1-59 months (per 1,000 births)"
 diarrhoeal_deaths_in_children_1_59_months_total_deaths,Diarrhoeal deaths in children 1-59 months (total deaths)
 diarrhoeal_deaths_in_newborn_per_1000_births,"Diarrhoeal deaths in newborn (per 1,000 births)"
@@ -149,16 +154,13 @@ education_aid_given_percent_of_aid,Percentage of total allocable aid for officia
 electricity_generation_per_person,Electricity generation per person (kilowatt-hours)
 electricity_generation_total,Electricity generation (kilowatt-hours)
 electricity_use_per_person,"Electric power consumption measures the production of power plants and combined heat and power plants less transmission, distribution, and transformation losses and own use by heat and power plants."
-electricity_use_total,"The total amount of electricity consumed during the given year, counted in kilowatt-hours (kWh)."
 energy_from_solid_biofuels_percent,"Percent of total energy supply that comes from ""solid biofuels"". Solid biofuels includes ""traditional energy sources"" e.g. firewood."
 energy_production_per_person,"Energy production refers to forms of primary energy--petroleum (crude oil, natural gas liquids, and oil from nonconventional sources), natural gas, solid fuels (coal, lignite, and other derived fuels), and combustible renewables and waste--and primary electricity, all converted into tonnes of oil equivalents, calculated by dividing with the population of each country during the given year, counted in tonnes of oil equivalent (toe)."
 energy_production_total,"Energy production refers to forms of primary energy--petroleum (crude oil, natural gas liquids, and oil from nonconventional sources), natural gas, solid fuels (coal, lignite, and other derived fuels), and combustible renewables and waste--and primary electricity, all converted into tonnes of oil equivalents, counted in tonnes of oil equivalent (toe)."
 energy_supply_per_person_toe,"Total energy supply per person, tonnes of oil equivalent"
 energy_use_per_person,"Energy use refers to use of primary energy before transformation to other end-use fuels, which is equal to indigenous production plus imports and stock changes, minus exports and fuels supplied to ships and aircraft engaged in international transport."
-energy_use_total,"Energy use refers to use of primary energy before transformation to other end-use fuels, which is equal to indigenous production plus imports and stock changes, minus exports and fuels supplied to ships and aircraft engaged in international transport, counted in tonnes of oil equivalent (toe)."
 epidemic_affected_annual_number,"Total number of people getting affected, injured or killed in epidemic during the given year."
 epidemic_deaths_annual_number,Number of people killed in epidemic during the given year.
-estimate_or_projection_of_under_five_mortality_rate_from_ihme,"1=estimate; 2=projection (quality indicator for ""Under-five mortality from IHME"")"
 expenditure_per_student_primary_percent_of_gdp_per_person,"Government expenditure per student is the average general government expenditure (current, capital, and transfers) per student in the given level of education, expressed as a percentage of GDP per capita."
 expenditure_per_student_secondary_percent_of_gdp_per_person,"Government expenditure per student is the average general government expenditure (current, capital, and transfers) per student in the given level of education, expressed as a percentage of GDP per capita."
 expenditure_per_student_tertiary_percent_of_gdp_per_person,"Government expenditure per student is the average general government expenditure (current, capital, and transfers) per student in the given level of education, expressed as a percentage of GDP per capita."
@@ -188,7 +190,7 @@ females_aged_25_54_labour_force_participation_rate_percent,"For age group 25-54,
 females_aged_25_54_unemployment_rate_percent,"Percentage of women, age group 25-54, that has been registered as unemployed during the given year."
 females_aged_55plus_unemployment_rate_percent,"Percentage of women, age group above 55, that has been registered as unemployed during the given year."
 females_aged_65plus_labour_force_participation_rate_percent,"For age group 65+, percentage of female labour to total female population."
-fixed_line_and_mobile_phone_subscribers_per_100_people,Fixes lines connect a customer's equipment to the public switched telephone network. Mobile phone subscribers refer to users of portable telephones subscribing to the telephone network using cellular technology.
+fixed_line_subscribers_per_100_people,
 flood_affected_annual_number,"Total number of people getting affected, injured or killed in flood during the given year."
 flood_deaths_annual_number,Number of people killed in flood during the given year.
 food_supply_kilocalories_per_person_and_day,"Calories measures the energy content of the food. The required intake varies, but it is normally in the range of 1500-3000 kilocalories per day. One banana contains approximatly 100 kilocalories."
@@ -229,18 +231,11 @@ high_technology_exports_percent_of_manufactured_exports,"High-technology exports
 hiv_deaths_in_children_1_59_months_per_1000_births,"HIV deaths in children 1-59 months (per 1,000 births)"
 hiv_deaths_in_children_1_59_months_total_deaths,HIV deaths in children 1-59 months (total deaths)
 hourly_compensation_us,"Amount of financial compensation for each non-working hour, counted by US$."
-how_far_to_the_north,"The latitude of the country. A positive value means that the country is to the north of the equator, if it is negative it is to the south."
 hydro_power_generation_per_person,"The amount of hydro power generated per person during the given year, counted in tonnes of oil equivalent (toe)."
 hydro_power_generation_total,"The amount of hydro power generated during the given year, counted in tonnes of oil equivalent (toe)."
 ifpri_underweight_children,Percent of children under five who are more than two standard deviations below average weight for age.
 imports_percent_of_gdp,"Imports of goods and services represent the value of all goods and other market services received from the rest of the world. They include the value of merchandise, freight, insurance, transport, travel, royalties, license fees, and other services, such as communication, construction, financial, information, business, personal, and government services. They exclude compensation of employees and investment income (formerly called factor services) and transfer payments."
 imports_unit_value_index_2000100,"Import value indexes are the current value of imports (c.i.f.) converted to U.S. dollars and expressed as a percentage of the average for the base period (2000). UNCTAD's import value indexes are reported for most economies. For selected economies for which UNCTAD does not publish data, the import value indexes are derived from import volume indexes (line 73) and corresponding unit value indexes of imports (line 75) in the IMF's International Financial Statistics."
-improved_sanitation_overall_access_percent,"Access to improved sanitation facilities refers to the percentage of the population using improved sanitation facilities. Improved sanitation facilities are likely to ensure hygienic separation of human excreta from human contact. They include flush/pour flush (to piped sewer system, septic tank, pit latrine), ventilated improved pit (VIP) latrine, pit latrine with slab, and composting toilet."
-improved_sanitation_rural_access_percent,"Access to improved sanitation facilities refers to the percentage of the population using improved sanitation facilities. Improved sanitation facilities are likely to ensure hygienic separation of human excreta from human contact. They include flush/pour flush (to piped sewer system, septic tank, pit latrine), ventilated improved pit (VIP) latrine, pit latrine with slab, and composting toilet."
-improved_sanitation_urban_access_percent,"Access to improved sanitation facilities refers to the percentage of the population using improved sanitation facilities. Improved sanitation facilities are likely to ensure hygienic separation of human excreta from human contact. They include flush/pour flush (to piped sewer system, septic tank, pit latrine), ventilated improved pit (VIP) latrine, pit latrine with slab, and composting toilet."
-improved_water_source_overall_access_percent,"Access to an improved water source refers to the percentage of the population using an improved drinking water source. The improved drinking water source includes piped water on premises (piped household water connection located inside the users dwelling, plot or yard), and other improved drinking water sources (public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection)."
-improved_water_source_rural_access_percent,"Access to an improved water source refers to the percentage of the population using an improved drinking water source. The improved drinking water source includes piped water on premises (piped household water connection located inside the users dwelling, plot or yard), and other improved drinking water sources (public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection)."
-improved_water_source_urban_access_percent,"Access to an improved water source refers to the percentage of the population using an improved drinking water source. The improved drinking water source includes piped water on premises (piped household water connection located inside the users dwelling, plot or yard), and other improved drinking water sources (public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection)."
 income_groups,
 income_mountains,
 income_per_person_gdppercapita_ppp_inflation_adjusted,"Gross domestic product per person adjusted for differences in purchasing power (in international dollars, fixed 2011 prices, PPP based on 2011 ICP)."
@@ -270,9 +265,7 @@ inflation_annual_percent,Inflation as measured by the annual growth rate of the 
 injury_deaths_in_children_1_59_months_per_1000_births,"Injury deaths in children 1-59 months (per 1,000 births)"
 injury_deaths_in_children_1_59_months_total_deaths,Injury deaths in children 1-59 months (total deaths)
 internal_renewable_water_cu_meters_per_person,Quantity of internal renewable water resources per person per year in cubic meters. Internal Renewable Water Resources (IRWR): Long-term average annual flow of rivers and recharge of aquifers generated from endogenous precipitation. Double counting of surface water and groundwater resources is avoided by deducting the overlap from the sum of the surface water and groundwater resources.
-internet_users_per_100_people,"Internet users are individuals who have used the Internet (from any location) in the last 12 months. Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc."
-internet_users_total_number,Internet users are people with access to the worldwide network.
-interpolation,
+internet_users,
 investments_percent_of_gdp,"Gross capital formation (formerly gross domestic investment) consists of outlays on additions to the fixed assets of the economy plus net changes in the level of inventories. Fixed assets include land improvements (fences, ditches, drains, and so on); plant, machinery, and equipment purchases; and the construction of roads, railways, and the like, including schools, offices, hospitals, private residential dwellings, and commercial and industrial buildings. Inventories are stocks of goods held by firms to meet temporary or unexpected fluctuations in production or sales, and ""work in progress."" According to the 1993 SNA, net acquisitions of valuables are also considered capital formation."
 iso3166_1_alpha2,
 iso3166_1_alpha3,
@@ -343,20 +336,20 @@ maternal_mortality_ratio_who,"The number of maternal deaths divided by the numbe
 math_achievement_4th_grade,Average score in the international TIMSS test for children in the 4th grade.
 math_achievement_8th_grade,Average score in the international TIMSS test for childeren in the 8th grade.
 mcv_immunized_percent_of_one_year_olds,"Percentage of 1 year old children who have received at least one dose of measles-containing vaccine in a given year. (Some countries for children below 2 years, depending on their policies.)"
-mean_years_in_school_men_15_to_24_years,
+mean_years_in_school_men_15_to_24_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
 mean_years_in_school_men_25_to_34_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
 mean_years_in_school_men_25_years_and_older,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
-mean_years_in_school_men_35_to_44_years,
-mean_years_in_school_men_45_to_54_years,
-mean_years_in_school_men_55_to_64_years,
-mean_years_in_school_men_65_plus_years,
-mean_years_in_school_women_15_to_24_years,
+mean_years_in_school_men_35_to_44_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_men_45_to_54_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_men_55_to_64_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_men_65_plus_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_women_15_to_24_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
 mean_years_in_school_women_25_to_34_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
 mean_years_in_school_women_25_years_and_older,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
-mean_years_in_school_women_35_to_44_years,
-mean_years_in_school_women_45_to_54_years,
-mean_years_in_school_women_55_to_64_years,
-mean_years_in_school_women_65_plus_years,
+mean_years_in_school_women_35_to_44_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_women_45_to_54_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_women_55_to_64_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
+mean_years_in_school_women_65_plus_years,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
 mean_years_in_school_women_of_reproductive_age_15_to_44,"The average number of years of school attended by all people in the age and gender group specified, including primary, secondary and tertiary education."
 mean_years_in_school_women_percent_men_25_to_34_years,"The ratio of female to male number of years in school, among 25- to 34-year-olds, including primary, secondary and tertiary education."
 measles_deaths_in_children_1_59_months_per_1000_births,"Measles deaths in children 1-59 months (per 1,000 births)"
@@ -390,7 +383,7 @@ natural_gas_proved_reserves_total,Proven reserves of natural gas (tonnes oil equ
 natural_gas_proven_reserves_per_person,Natural gas proven reserves per person (tonnes oil equivalent)
 ncd_deaths_in_children_1_59_months_per_1000_births,"NCD deaths in children 1-59 months (per 1,000 births)"
 ncd_deaths_in_children_1_59_months_total_deaths,NCD deaths in children 1-59 months (total deaths)
-net_barter_terms_of_trade_2000_100,"Net barter terms of trade index is calculated as the percentage ratio of the export unit value indexes to the import unit value indexes, measured relative to the base year 2000. Unit value indexes are based on data reported by countries that demonstrate consistency under UNCTAD quality controls, supplemented by UNCTAD's estimates using the previous years trade values at the Standard International Trade Classification three-digit level as weights. To improve data coverage, especially for the latest periods, UNCTAD constructs a set of average prices indexes at the three-digit product classification of the Standard International Trade Classification revision 3 using UNCTADs Commodity Price Statistics, interna­tional and national sources, and UNCTAD secretariat estimates and calculates unit value indexes at the country level using the current year's trade values as weights."
+net_barter_terms_of_trade_2000_100,"Net barter terms of trade index is calculated as the percentage ratio of the export unit value indexes to the import unit value indexes, measured relative to the base year 2000. Unit value indexes are based on data reported by countries that demonstrate consistency under UNCTAD quality controls, supplemented by UNCTAD's estimates using the previous year’s trade values at the Standard International Trade Classification three-digit level as weights. To improve data coverage, especially for the latest periods, UNCTAD constructs a set of average prices indexes at the three-digit product classification of the Standard International Trade Classification revision 3 using UNCTAD’s Commodity Price Statistics, interna­tional and national sources, and UNCTAD secretariat estimates and calculates unit value indexes at the country level using the current year's trade values as weights."
 new_births_total_number_estimated,"Total number of estimated new births during the given year, based on the crude birth rate data from UN Population Division and the population data from Gapminder Foundation."
 newborn_deaths,Neonatal deaths Children dying within the first 28 days.
 newborn_mortality_rate_per_1000,Neonatal mortality rate. Children dying within the first 28 days per 1000 live births.
@@ -398,7 +391,6 @@ newly_hiv_infected_number_all_ages,The total number of persons in all ages that 
 newly_hiv_infected_percent_age_15_49,The estimated percentage of adults aged 15 to 49 years that are newly infected with HIV during the given year.
 nuclear_power_generation_per_person,"The amount of electricity produced by nuclear power plants per person in a given year, counted in tonnes of oil equivalent (toe)."
 nuclear_power_generation_total,"The amount of electricity produced by nuclear power plants in a given year, counted in tonnes of oil equivalent (toe)."
-number,
 number_of_child_deaths,The number of children dying before age 5
 number_of_people_in_poverty,Number of the poor population in millions living on less than $1.25 a day at 2005 international prices. Povcal data
 oil_consumption_per_cap,Oil Consumption per capita (tonnes per year per person)
@@ -407,8 +399,6 @@ oil_production_per_person,Crude oil production per person (tonnes oil equivalent
 oil_production_total,Total amount of crude oil production (tonnes oil equivalent)
 oil_proved_reserves_total,Proven reserves of oil (tonnes oil equivalent)
 oil_proven_reserves_per_person,Oil proven reserves per person (tonnes oil equivalent)
-old_version_of_income_per_person_version_3,"The version of Income per person used before 22 december 2008 (version 3). Gross Domestic Product per person by Purchasing Power Parities (in international dollars, fixed 1990 prices)."
-old_version_of_income_per_person_version_8,"The version of Income per person used before 12 july 2010 (version 8). Gross Domestic Product per person by Purchasing Power Parities (in international dollars, fixed 2050 prices)."
 other_deaths_in_newborn_per_1000_births,"Other deaths in newborn (per 1,000 births)"
 other_deaths_in_newborn_total_deaths,Other deaths in newborn (total deaths)
 other_infections_deaths_in_children_1_59_months_per_1000_birt,"Other infections deaths in children 1-59 months (per 1,000 births)"
@@ -468,7 +458,8 @@ population_growth_annual_percent_with_projections,"Annual change of population i
 population_in_urban_agglomerations_m_1_million_percent_of_total,Population in urban agglomerations of more than one million is the percentage of a country's population living in metropolitan areas that in 2000 had a population of more than one million people.
 population_policies_aid_given_percent_of_aid,Percentage of total allocable aid for official development assistance (ODA) given by the donor countries that has been used in population policies/programs and reproductive health.
 population_total,Total population
-poverty_percent_people_below_310_a_day,"Poverty headcount ratio at $3.10 a day is the percentage of the population living on less than $3.10 a day at 2011 international prices. As a result of revisions in PPP exchange rates, poverty rates for individual countries cannot be compared with poverty rates reported in earlier editions."
+poverty_percent_people_below_320_a_day,"Poverty headcount ratio at $3.20 a day is the percentage of the population living on less than $3.20 a day at 2011 international prices. As a result of revisions in PPP exchange rates, poverty rates for individual countries cannot be compared with poverty rates reported in earlier editions."
+poverty_percent_people_below_550_a_day,
 prematurity_deaths_in_newborn_per_1000_births,"Prematurity deaths in newborn (per 1,000 births)"
 prematurity_deaths_in_newborn_total_deaths,Prematurity deaths in newborn (total deaths)
 present_value_of_debt_percent_of_gni,"Present value of debt is the sum of short-term external debt plus the discounted sum of total debt service payments due on public, publicly guaranteed, and private nonguaranteed long-term external debt over the life of existing loans. The GNI denominator is a three-year average."
@@ -510,6 +501,9 @@ shape_lores_svg,
 smoking_adults_percent_of_population_over_age_15,"Percentage of both men and women (over age 15) that smoke. Note: only 2005 tobacco data is provided by WHOSIS. In order to compare with 2002 lung cancer data, 2005 tobacco data was copied into 2002, based on the assumption that people's habit of smoking won't significantly change during 3 years."
 smoking_men_percent_of_men_over_age_15,"Percentage of men (over age 15) that smoke. Note: only 2005 tobacco data is provided by WHOSIS. In order to compare with 2002 lung cancer data, 2005 tobacco data was copied into 2002, based on the assumption that people's habit of smoking won't significantly change during 3 years."
 smoking_women_percent_of_women_over_age_15,"Percentage of women (over age 15) that smoke. Note: only 2005 tobacco data is provided by WHOSIS. In order to compare with 2002 lung cancer data, 2005 tobacco data was copied into 2002, based on the assumption that people's habit of smoking won't significantly change during 3 years."
+source,
+source_long,
+source_url,
 stillbirths_per_1000_births,The number of stillbirths per 1000 births (live births plus stillbirths).
 stomach_cancer_deaths_per_100000_men,"Number of deaths due to stomach cancer in 100,000 male residents during the certain year. This rate is calculated as if each country has the same age composition as the world population."
 stomach_cancer_deaths_per_100000_women,"Number of deaths due to stomach cancer in 100,000 female residents during the certain year. This rate is calculated as if each country has the same age composition as the world population."
@@ -546,7 +540,6 @@ tb_with_hivplus_number_of_deaths_estimated,Estimated number of deaths caused by 
 tb_with_hivplus_number_of_existing_cases_estimated,Estimated number of existing TB cases (with HIV+) during the given year.
 tb_with_hivplus_number_of_new_cases_estimated,Estimated number of new TB cases (with HIV+) during the given year.
 teen_fertility_rate_births_per_1000_women_ages_15_19,"The number of births per 1,000 women ages 15-19."
-temp_string,
 tetanus_deaths_in_newborn_per_1000_births,"Tetanus deaths in newborn (per 1,000 births)"
 tetanus_deaths_in_newborn_total_deaths,Tetanus deaths in newborn (total deaths)
 time,
@@ -583,7 +576,7 @@ unicode_region_subtag,
 upper_case_name,
 urban_population,Urban population refers to people living in urban areas as defined by national statistical offices. It is calculated using World Bank population estimates and urban ratios from the United Nations World Urbanization Prospects. Aggregation of urban and rural population may not add up to total population because of different country coverages.
 urban_population_growth_annual_percent,Urban population refers to people living in urban areas as defined by national statistical offices. It is calculated using World Bank population estimates and urban ratios from the United Nations World Urbanization Prospects.
-urban_population_percent_of_total,Urban population refers to people living in urban areas as defined by national statistical offices. It is calculated using World Bank population estimates and urban ratios from the United Nations World Urbanization Prospects.
+urban_population_percent_of_total,Urban population refers to people living in urban areas as defined by national statistical offices. The data are collected and smoothed by United Nations Population Division.
 urban_poverty_percent_urban_people_below_national_urban,Urban poverty headcount ratio is the percentage of the urban population living below the national poverty lines.
 water_and_sanitation_aid_given_percent_of_aid,Percentage of total allocable aid for official development assistance (ODA) given by the donor countries that has been used in water and sanitation.
 water_withdrawal_cu_meters_per_person,"Total annual quantity of freshwater withdrawn per person per year, counted in cubic meters. It includes renewable freshwater resources as well as potential over-abstraction of renewable groundwater or withdrawal of fossil groundwater and eventual use of desalinated water or treated wastewater. It does not include other categories of water use, such as for cooling of power plants, mining, recreation, navigation, fisheries, etc., which are sectors that are characterized by a very low net consumption rate."
@@ -591,6 +584,4 @@ wood_removal_cubic_meters,"The wood removed (volume of round wood over bark) for
 working_hours_per_week,Total amount of yearly working hours devided by 52 weeks.
 world_4region,
 world_6region,
-year_categorization_1820_2010,"This ""indicator"" simply duplicates the years between 1820 and 2010. Use it to color the bubbles (by selecting this indicator under ""color"" in the top right-hand corner of the graph). This is useful when enabling ""trails"" for several countries. Use this one for long time series."
-year_categorization_1950,"This ""indicator"" simply duplicates the years between 1950 and 2008. Use it to color the bubbles (by selecting this indicator under ""color"" in the top right-hand corner of the graph). This is useful when enabling ""trails"" for several countries."
 yearly_co2_emissions_1000_tonnes,Total carbon dioxide emissions from the burning of fossil fuels during the given year (1000 metric tonnes of CO2).

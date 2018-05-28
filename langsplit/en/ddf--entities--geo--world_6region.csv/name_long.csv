@@ -1,7 +1,7 @@
-geo,name_long
-america,
-east_asia_pacific,
-europe_central_asia,
-middle_east_north_africa,
-sub_saharan_africa,
-south_asia,
+world_6region,name_long
+america,America
+east_asia_pacific,East Asia & Pacific
+europe_central_asia,Europe & Central Asia
+middle_east_north_africa,Middle East & North Africa
+south_asia,South Asia
+sub_saharan_africa,Sub-Saharan Africa

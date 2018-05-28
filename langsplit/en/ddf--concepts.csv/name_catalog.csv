@@ -1,5 +1,4 @@
 concept,name_catalog
-20120905_extreme_poverty_percent_people_below_125_a_day,Extreme poverty ($1.25) v20120905
 adults_with_hiv_percent_age_15_49,"Adults with HIV (%, age 15-49)"
 age_at_1st_marriage_women,Age at 1st marriage (women)
 aged_15_24_employment_rate_percent,Aged 15-24
@@ -59,6 +58,12 @@ armed_forces_personnel_total,Armed forces personnel
 arms_exports_us_inflation_adjusted,Arms exports
 arms_imports_us_inflation_adjusted,Arms imports
 art_coverage_percent_cd4_l_350,ART coverage
+at_least_basic_sanitation_overall_access_percent,"At least basic sanitation, overall"
+at_least_basic_sanitation_rural_access_percent,"At least basic sanitation, rural"
+at_least_basic_sanitation_urban_access_percent,"At least basic sanitation, urban"
+at_least_basic_water_source_overall_access_percent,"At least basic water source, overall"
+at_least_basic_water_source_rural_access_percent,"At least basic water source, rural"
+at_least_basic_water_source_urban_access_percent,"At least basic water source, urban"
 average_age_of_dollar_billionaires_years,Average age of dollar billionaires
 bad_teeth_per_child_12_yr,Bad teeth per child
 battle_deaths_per_100_000,Battle deaths
@@ -92,7 +97,6 @@ children_and_elderly_per_100_adults,Children and elderly /100 adults
 children_out_of_school_primary,Children out of school
 children_out_of_school_primary_female,Girls out of school
 children_out_of_school_primary_male,Boys out of school
-children_per_woman_temporary_update,Babies per woman temp update
 children_per_woman_total_fertility,Babies per woman
 children_per_woman_total_fertility_with_projections,Babies per woman w/ projections
 cholesterol_fat_in_blood_men_mmolperl,"Fat in blood, men"
@@ -101,7 +105,6 @@ co2_emissions_tonnes_per_person,CO2 emissions
 co2_intensity_of_economic_output_kg_co2_per_2011_ppp_of_gdp,CO2 intensity of economic output
 coal_consumption_per_cap,Coal consumption /person
 coal_consumption_total,"Coal consumption, total"
-code,
 colonandrectum_cancer_deaths_per_100000_men,Colon&Rectum c. deaths /100k men
 colonandrectum_cancer_deaths_per_100000_women,Colon&Rectum c. deaths /100k women
 colonandrectum_cancer_new_cases_per_100000_men,Colon&Rectum c. new cases /100k men
@@ -115,6 +118,7 @@ congenital_deaths_in_newborn_per_1000_births,Congenital deaths ‰ births
 congenital_deaths_in_newborn_total_deaths,Congenital deaths in newborn
 contraceptive_use_percent_of_women_ages_15_49,Contraceptive use
 corruption_perception_index_cpi,Corruption Perception Index
+corruption_perception_index_cpi_pre2012,Corruption Perception Index Pre-2012 method
 country,
 crude_birth_rate_births_per_1000_population,Crude birth rate
 crude_death_rate_deaths_per_1000_population,Crude death rate
@@ -130,6 +134,7 @@ debt_to_foreigners_by_public_and_private_percent_of_gni,Debt to foreigners
 democracy_score_use_as_color,Democracy score
 desalinated_water_produced_billion_cu_meters,Desalinated water produced
 description,
+description_long,
 diarrhoeal_deaths_in_children_1_59_months_per_1000_births,Diarrhoeal deaths ‰ births
 diarrhoeal_deaths_in_children_1_59_months_total_deaths,Diarrhoeal deaths
 diarrhoeal_deaths_in_newborn_per_1000_births,Diarrhoeal deaths ‰ births
@@ -149,16 +154,13 @@ education_aid_given_percent_of_aid,Education aid given
 electricity_generation_per_person,Electricity generation /person
 electricity_generation_total,"Electricity generation, total"
 electricity_use_per_person,Electricity use /person
-electricity_use_total,Electricity use
 energy_from_solid_biofuels_percent,Energy from solid biofuels (%)
 energy_production_per_person,Energy production /person
 energy_production_total,"Energy production, total"
 energy_supply_per_person_toe,Energy supply /person
 energy_use_per_person,"Energy use, per person"
-energy_use_total,Energy use
 epidemic_affected_annual_number,Epidemic affected
 epidemic_deaths_annual_number,Epidemic deaths
-estimate_or_projection_of_under_five_mortality_rate_from_ihme,Est. or projection of u5mr
 expenditure_per_student_primary_percent_of_gdp_per_person,"Expenditure per student, primary"
 expenditure_per_student_secondary_percent_of_gdp_per_person,"Expenditure per student, secondary"
 expenditure_per_student_tertiary_percent_of_gdp_per_person,"Expenditure per student, tertiary"
@@ -188,7 +190,7 @@ females_aged_25_54_labour_force_participation_rate_percent,Females aged 25-54
 females_aged_25_54_unemployment_rate_percent,Females aged 25-54
 females_aged_55plus_unemployment_rate_percent,Females aged 55+
 females_aged_65plus_labour_force_participation_rate_percent,Females aged 65+
-fixed_line_and_mobile_phone_subscribers_per_100_people,Fixed line and mobile phone subscribers /100
+fixed_line_subscribers_per_100_people,Fixed line subscribers (per 100 people)
 flood_affected_annual_number,Flood affected
 flood_deaths_annual_number,Flood deaths
 food_supply_kilocalories_per_person_and_day,Food supply
@@ -229,18 +231,11 @@ high_technology_exports_percent_of_manufactured_exports,High-technology exports
 hiv_deaths_in_children_1_59_months_per_1000_births,HIV deaths ‰ births
 hiv_deaths_in_children_1_59_months_total_deaths,HIV deaths
 hourly_compensation_us,Hourly compensation
-how_far_to_the_north,How far to the north
 hydro_power_generation_per_person,Hydro electricity production /person
 hydro_power_generation_total,"Hydro electricity production, total"
 ifpri_underweight_children,Underweight children
 imports_percent_of_gdp,Imports (% of GDP)
 imports_unit_value_index_2000100,Imports unit value
-improved_sanitation_overall_access_percent,"Improved sanitation, overall"
-improved_sanitation_rural_access_percent,"Improved sanitation, rural"
-improved_sanitation_urban_access_percent,"Improved sanitation, urban"
-improved_water_source_overall_access_percent,"Improved water, overall"
-improved_water_source_rural_access_percent,"Improved water, rural"
-improved_water_source_urban_access_percent,"Improved water, urban"
 income_groups,
 income_mountains,
 income_per_person_gdppercapita_ppp_inflation_adjusted,Income
@@ -270,9 +265,7 @@ inflation_annual_percent,Inflation
 injury_deaths_in_children_1_59_months_per_1000_births,Injury deaths ‰ births
 injury_deaths_in_children_1_59_months_total_deaths,"Injury deaths in children, total"
 internal_renewable_water_cu_meters_per_person,Internal renewable water
-internet_users_per_100_people,Internet users /100 people
-internet_users_total_number,Internet users
-interpolation,
+internet_users,Internet users
 investments_percent_of_gdp,Investments
 iso3166_1_alpha2,
 iso3166_1_alpha3,
@@ -398,7 +391,6 @@ newly_hiv_infected_number_all_ages,Newly HIV infected
 newly_hiv_infected_percent_age_15_49,"Newly HIV infected (%, age 15-49)"
 nuclear_power_generation_per_person,Nuclear electricity production /person
 nuclear_power_generation_total,Nuclear electricity production
-number,
 number_of_child_deaths,Number of child deaths
 number_of_people_in_poverty,Number of people in poverty
 oil_consumption_per_cap,Oil consumption /person
@@ -407,8 +399,6 @@ oil_production_per_person,Oil production /person
 oil_production_total,Oil production
 oil_proved_reserves_total,Oil proved reserves
 oil_proven_reserves_per_person,Oil proven reserves /person
-old_version_of_income_per_person_version_3,Old version of Income per person (version 3)
-old_version_of_income_per_person_version_8,Old version of Income per person (version 8)
 other_deaths_in_newborn_per_1000_births,Other deaths ‰ births
 other_deaths_in_newborn_total_deaths,Other deaths
 other_infections_deaths_in_children_1_59_months_per_1000_birt,Other infections deaths ‰ births
@@ -468,7 +458,8 @@ population_growth_annual_percent_with_projections,"Population growth, w projecti
 population_in_urban_agglomerations_m_1_million_percent_of_total,Population in urban agglomerations
 population_policies_aid_given_percent_of_aid,Population policies aid given
 population_total,Population
-poverty_percent_people_below_310_a_day,Extreme poverty
+poverty_percent_people_below_320_a_day,Extreme poverty
+poverty_percent_people_below_550_a_day,Extreme poverty
 prematurity_deaths_in_newborn_per_1000_births,Prematurity deaths ‰
 prematurity_deaths_in_newborn_total_deaths,Prematurity deaths
 present_value_of_debt_percent_of_gni,Present value of debt
@@ -510,6 +501,9 @@ shape_lores_svg,
 smoking_adults_percent_of_population_over_age_15,Smoking adults
 smoking_men_percent_of_men_over_age_15,Smoking men
 smoking_women_percent_of_women_over_age_15,Smoking women
+source,
+source_long,
+source_url,
 stillbirths_per_1000_births,Stillbirths
 stomach_cancer_deaths_per_100000_men,Stomach c. deaths /100k men
 stomach_cancer_deaths_per_100000_women,Stomach c. deaths /100k women
@@ -546,7 +540,6 @@ tb_with_hivplus_number_of_deaths_estimated,"TB deaths, estimated, TB with HIV+"
 tb_with_hivplus_number_of_existing_cases_estimated,"TB existing cases, estimated, TB with HIV+"
 tb_with_hivplus_number_of_new_cases_estimated,"TB new cases, estimated, TB with HIV+"
 teen_fertility_rate_births_per_1000_women_ages_15_19,Teen fertility rate
-temp_string,
 tetanus_deaths_in_newborn_per_1000_births,Tetanus deaths ‰ births
 tetanus_deaths_in_newborn_total_deaths,Tetanus deaths
 time,
@@ -591,6 +584,4 @@ wood_removal_cubic_meters,Wood removal
 working_hours_per_week,Working hours per week
 world_4region,
 world_6region,
-year_categorization_1820_2010,Year categorization 1820-2010
-year_categorization_1950,Year categorization 1950-
 yearly_co2_emissions_1000_tonnes,CO2 emissions yearly
