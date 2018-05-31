@@ -7,7 +7,7 @@
   "emp_mcfw_noc_rt": "male_family_workers_percent_of_male_employment",
   "emp_tagr_noc_rt": "agriculture_workers_percent_of_employment",
   "emp_tcfw_noc_rt": "family_workers_percent_of_employment",
-  "emp_tind_noc_rt": "try_workers_percent_of_employment",
+  "emp_tind_noc_rt": "industry_workers_percent_of_employment",
   "emp_tsrv_noc_rt": "service_workers_percent_of_employment",
   "gdp_205u_noc_nb": "gdpperworking_hour_us_inflation_adjusted",
   "how_temp_noc_nb": "working_hours_per_week",
