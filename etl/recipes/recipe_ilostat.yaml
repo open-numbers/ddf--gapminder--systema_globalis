@@ -1,0 +1,424 @@
+info:
+    id: ilostat-sg
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # external
+    external_csv_dir: ../external_csv
+    # procedures
+    procedure_dir: ./procedures
+
+
+include:
+    - recipe_gw_common.yaml
+
+ingredients:
+    -
+        id: ilo-employment-rate
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - emp_dwap_sex_age_rt
+    -
+        id: ilo-labour-force-part-rate
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - eap_dwap_sex_age_rt
+    -
+        id: ilo-employment-distribution
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - emp_2emp_sex_eco_dt
+    -
+        id: ilo-employment-state
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - emp_2emp_sex_ste_dt
+
+    -
+        id: ilo-unemployment-rate
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - une_deap_sex_age_rt
+
+    -
+        id: ilo-long_term-unemployment
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, classif2, time
+        value:
+            - une_tune_sex_age_dur_dt
+
+    -
+        id: ilo-noc-indicators
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, classif1, time
+        value:
+            - ees_fnag_noc_rt
+            - ees_mnag_noc_rt
+            - ees_tnag_noc_rt
+            - emp_fcfw_noc_rt
+            - emp_mcfw_noc_rt
+            - emp_tagr_noc_rt
+            - emp_tcfw_noc_rt
+            - emp_tind_noc_rt
+            - emp_tsrv_noc_rt
+            - gdp_205u_noc_nb
+            - how_temp_noc_nb
+            - lac_4hpt_noc_nb
+    -
+        id: ilo-ref_area
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area
+
+# end of ingredients
+
+cooking:
+    datapoints:
+        # translate ref_area to geo domain
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-ref_area
+            options:
+                column: ref_area_label
+                target_column: ref_area_new
+                dictionary:
+                    base: gw-countries
+                    key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
+                           'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
+                           'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+                    value: country
+            result: ilo-ref_area-aligned
+
+        # group: employment-rate
+        -
+            procedure: filter
+            ingredients:
+                - ilo-employment-rate
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - age_10yrbands_y15_24  # 15-24
+                            - age_ythadult_yge15    # 15+
+                            # - age_aggregate_total   # total
+            result: ilo-employment-rate-filtered
+
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-employment-rate-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_{classif1}_{concept}"
+            result: ilo-employment-rate-flattened
+
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-employment-rate-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-employment-rate-flattened-area-translated
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-employment-rate-flattened-area-translated
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: employment-rate-datapoints-final
+
+        # group: labour force participation rate
+        -
+            procedure: filter
+            ingredients:
+                - ilo-labour-force-part-rate
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - age_ythadult_y15_64  # 15-64
+                            - age_ythadult_yge15   # 15+
+                            - age_aggregate_y25_54  # 25-54
+                            - age_aggregate_yge65   # 65+
+            result: ilo-labour-force-part-rate-filtered
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-labour-force-part-rate-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_{classif1}_{concept}"
+            result: ilo-labour-force-part-rate-flattened
+
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-labour-force-part-rate-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-labour-force-part-rate-flattened-area-translated
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-labour-force-part-rate-flattened-area-translated
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-labour-force-part-rate-final
+
+        # group: employment distribution
+        -
+            procedure: filter
+            ingredients:
+                - ilo-employment-distribution
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - eco_sector_agr
+                            - eco_sector_ind
+                            - eco_sector_ser
+                    sex:
+                        # don't keep total because there is a separated
+                        # indicator for total
+                        $nin:
+                            - sex_t
+            result: ilo-employment-distribution-filtered
+
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-employment-distribution-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_{classif1}_{concept}"
+            result: ilo-employment-distribution-flattened
+
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-employment-distribution-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-employment-distribution-flattened-area-translated
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-employment-distribution-flattened-area-translated
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-employment-distribution-final
+
+        # group: employment state
+        -
+            procedure: filter
+            ingredients:
+                - ilo-employment-state
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - ste_aggregate_slf
+            result: ilo-employment-state-filtered
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-employment-state-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_{classif1}_{concept}"
+            result: ilo-employment-state-flattened
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-employment-state-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-employment-state-flattened-area-translated
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-employment-state-flattened-area-translated
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-employment-state-final
+
+        # group: unemployment rate
+        -
+            procedure: filter
+            ingredients:
+                - ilo-unemployment-rate
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - age_aggregate_y15_24
+                            - age_ythadult_yge15
+                            - age_aggregate_y25_54
+                            - age_aggregate_y55_64
+                            - age_aggregate_yge65
+            result: ilo-unemployment-rate-filtered
+
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-unemployment-rate-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_{classif1}_{concept}"
+            result: ilo-unemployment-rate-flattened
+
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-unemployment-rate-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-unemployment-rate-flattened-translated
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-unemployment-rate-flattened-translated
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-unemployment-rate-final
+
+        # groups: long-term unemployment rate
+        -
+            procedure: filter
+            ingredients:
+                - ilo-long_term-unemployment
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - age_aggregate_total
+                    classif2:
+                        $in:
+                            - dur_aggregate_mge12
+            result: ilo-long_term-unemployment-filtered
+
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-long_term-unemployment-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - classif2
+                    - sex
+                dictionary:
+                    "*": "{sex}_{classif1}_{classif2}_{concept}"
+            result: ilo-long_term-unemployment-flattened
+
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-long_term-unemployment-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-long_term-unemployment-flattened-area-transalted
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-long_term-unemployment-flattened-area-transalted
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-long_term-unemployment-final
+
+        # group: noc
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-noc-indicators
+            options:
+                flatten_dimensions:
+                    - classif1
+                dictionary:
+                    "*": "{concept}"
+            result: ilo-noc-indicators-flattened
+        -
+            procedure: translate_column
+            ingredients:
+                - ilo-noc-indicators-flattened
+            options:
+                column: ref_area
+                dictionary:
+                    base: ilo-ref_area-aligned
+                    key: ref_area
+                    value: ref_area_new
+            result: ilo-noc-indicators-flattened-area-translated
+
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-noc-indicators-flattened-area-translated
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-noc-indicators-final
+
+
+        # serving
+        -
+            procedure: merge
+            ingredients:
+                - employment-rate-datapoints-final
+                - ilo-labour-force-part-rate-final
+                - ilo-employment-distribution-final
+                - ilo-long_term-unemployment-final
+                - ilo-noc-indicators-final
+                - ilo-unemployment-rate-final
+                - ilo-employment-state-final
+            result: ilo-datapoints-final

@@ -30,6 +30,7 @@ include:
     - recipe_fao_aqua.yaml
     - recipe_fao_food.yaml
     - recipe_fao_forestry.yaml
+    - recipe_ilostat.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -52,6 +53,10 @@ ingredients:
               - fixed_line_and_mobile_phone_subscribers_per_100_people
               - internet_users_total_number
               - internet_users_per_100_people
+              - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
+              - extreme_poverty_percent_people_below_125_a_day
+              - gnipercapita_constant_2000_us
+              - poverty_percent_people_below_2_a_day
               # indicators won't be updated
               - year_categorization_1950
               - year_categorization_1820_2010
@@ -68,6 +73,28 @@ ingredients:
               - improved_water_source_overall_access_percent
               - improved_water_source_rural_access_percent
               - improved_water_source_urban_access_percent
+              - aged_55plus_unemployment_rate_percent
+              - agriculture_workers_percent_of_labour_force
+              - family_workers_percent_of_labour_force
+              - female_agriculture_workers_percent_of_female_labour_force
+              - female_family_workers_percent_of_female_labour_force
+              - female_industry_workers_percent_of_female_labour_force
+              - female_salaried_workers_percent_of_female_labour_force
+              - female_self_employed_percent_of_female_labour_force
+              - female_service_workers_percent_of_female_labour_force
+              - females_aged_55plus_unemployment_rate_percent
+              - industry_workers_percent_of_labour_force
+              - male_agriculture_workers_percent_of_male_labour_force
+              - male_family_workers_percent_of_male_labour_force
+              - male_industry_workers_percent_of_male_labour_force
+              - male_salaried_workers_percent_of_male_labour_force
+              - male_self_employed_percent_of_male_labour_force
+              - male_service_workers_percent_of_male_labour_force
+              - males_aged_55plus_unemployment_rate_percent
+              - salaried_workers_percent_of_labour_force
+              - self_employed_percent_of_labour_force
+              - service_workers_percent_of_labour_force
+
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
@@ -93,7 +120,6 @@ ingredients:
 cooking:
     datapoints:
         - procedure: merge
-          result: all-datapoints-merged
           ingredients:
               - gw-datapoints-all
               - lex-datapoints-final
@@ -113,22 +139,10 @@ cooking:
               - fao_aqua-datapoints-final
               - fao_food-datapoints-final
               - fao_fore-datapoints-final
+              - ilo-datapoints-final
               - static-assets-datapoints
-        - procedure: filter
           result: datapoints-final-0
-          ingredients:
-          - all-datapoints-merged
-          options:
-              item:
-                  $nin:
-                    - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
-                    - extreme_poverty_percent_people_below_125_a_day
-                    - gnipercapita_constant_2000_us
-                    - poverty_percent_people_below_2_a_day
-                    - electricity_use_total
-                    - energy_use_total
-                    - fixed_line_and_mobile_phone_subscribers_per_100_people
-                    - internet_users_total_number
+
         # compose some indicators with existing indicators
         # because run_op will use a lot of computer cpu/memory resources with large ingredients
         # we need to filter out a small set of indicators before run_op
@@ -187,15 +201,7 @@ cooking:
               - gw-ontology-concepts
           options:
               deep: true
-        # - procedure: translate_column
-        #   ingredients:
-        #     - all-concepts-merged
-        #   result: all-concepts-merged-translated
-        #   options:
-        #       column: concept
-        #       not_found: include
-        #       dictionary:
-        #           geographic_regions: world_6region
+
         - procedure: merge
           ingredients:
               - all-concepts-merged
