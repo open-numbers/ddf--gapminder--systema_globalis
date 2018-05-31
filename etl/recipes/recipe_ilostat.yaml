@@ -71,6 +71,7 @@ ingredients:
             - emp_tsrv_noc_rt
             - gdp_205u_noc_nb
             - how_temp_noc_nb
+            - lac_4hpt_noc_nb
     -
         id: ilo-ref_area
         dataset: open-numbers/ddf--ilo--ilostat

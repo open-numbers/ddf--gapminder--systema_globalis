@@ -55,5 +55,6 @@
   "sex_t_age_aggregate_y25-54_eap_dwap_sex_age_rt": "aged_25_54_labour_force_participation_rate_percent",
   "sex_t_age_aggregate_yge65_eap_dwap_sex_age_rt": "aged_65plus_labour_force_participation_rate_percent",
   "sex_t_age_ythadult_y15-64_eap_dwap_sex_age_rt": "aged_15_64_labour_force_participation_rate_percent",
-  "sex_t_age_ythadult_yge15_eap_dwap_sex_age_rt": "aged_15plus_labour_force_participation_rate_percent"
+  "sex_t_age_ythadult_yge15_eap_dwap_sex_age_rt": "aged_15plus_labour_force_participation_rate_percent",
+  "lac_4hpt_noc_nb": "hourly_compensation_us"
 }
