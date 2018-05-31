@@ -3,7 +3,6 @@
     "language": {
         "id": "en"
     },
-    "id": "ilostat-sg",
     "translations": [
         {
             "id": "ar-SA",
@@ -23,8 +22,12 @@
         },
         {
             "id": "zh-CN"
+        },
+        {
+            "id": "he-IL"
         }
     ],
+    "version": "1.8.0",
     "created": "2018-05-31T12:52:38.980705+00:00",
     "resources": [
         {
