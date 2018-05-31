@@ -23,9 +23,12 @@
         },
         {
             "id": "zh-CN"
+        },
+        {
+            "id": "he-IL"
         }
     ],
-    "version": "1.7.1",
+    "version": "1.7.2",
     "resources": [
         {
             "path": "ddf--concepts.csv",
