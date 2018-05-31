@@ -1,0 +1,228 @@
+ref_area,ref_area_label,ref_area_new,ref_area_sort
+abw,Aruba,abw,95
+afg,Afghanistan,afg,85
+ago,Angola,ago,90
+aia,Anguilla,aia,91
+alb,Albania,alb,86
+and,Andorra,and,89
+ant,Netherlands Antilles,ant,241
+are,United Arab Emirates,are,316
+arg,Argentina,arg,93
+arm,Armenia,arm,94
+asm,American Samoa,asm,88
+atg,Antigua and Barbuda,atg,92
+aus,Australia,aus,96
+aut,Austria,aut,97
+aze,Azerbaijan,aze,98
+bdi,Burundi,bdi,117
+bel,Belgium,bel,104
+ben,Benin,ben,106
+bfa,Burkina Faso,bfa,116
+bgd,Bangladesh,bgd,101
+bgr,Bulgaria,bgr,115
+bhr,Bahrain,bhr,100
+bhs,Bahamas,bhs,99
+bih,Bosnia and Herzegovina,bih,110
+blr,Belarus,blr,103
+blz,Belize,blz,105
+bmu,Bermuda,bmu,107
+bol,Bolivia,bol,109
+bra,Brazil,bra,112
+brb,Barbados,brb,102
+brn,Brunei Darussalam,brn,114
+btn,Bhutan,btn,108
+bwa,Botswana,bwa,111
+caf,Central African Republic,caf,123
+can,Canada,can,120
+cha,Channel Islands,chanisl,125
+che,Switzerland,che,295
+chl,Chile,chl,126
+chn,China,chn,127
+civ,Côte d'Ivoire,civ,140
+cmr,Cameroon,cmr,119
+cog,Congo,cog,130
+cok,Cook Islands,cok,132
+col,Colombia,col,128
+com,Comoros,com,129
+cpv,Cape Verde,cpv,121
+cri,Costa Rica,cri,133
+cs1,Czechoslovakia,cheslo,139
+cub,Cuba,cub,135
+cuw,Curaçao,nld_curacao,136
+cym,Cayman Islands,cym,122
+cyp,Cyprus,cyp,137
+cze,Czech Republic,cze,138
+deu,Germany,deu,163
+dji,Djibouti,dji,142
+dma,Dominica,dma,143
+dnk,Denmark,dnk,141
+dom,Dominican Republic,dom,144
+dza,Algeria,dza,87
+ecu,Ecuador,ecu,145
+egy,Egypt,egy,146
+eri,Eritrea,eri,149
+esh,Western Sahara,esh,326
+esp,Spain,esp,289
+est,Estonia,est,150
+eth,Ethiopia,eth,151
+fin,Finland,fin,156
+fji,Fiji,fji,155
+flk,Falkland Islands (Malvinas),flk,154
+fra,France,fra,157
+fro,Faeroe Islands,fro,153
+gab,Gabon,gab,160
+gbr,United Kingdom,gbr,317
+geo,Georgia,geo,162
+ggy,Guernsey,gbg,175
+gha,Ghana,gha,167
+gib,Gibraltar,gib,168
+gin,Guinea,gin,176
+glp,Guadeloupe,glp,172
+gmb,Gambia,gmb,161
+gnb,Guinea-Bissau,gnb,177
+gnq,Equatorial Guinea,gnq,148
+grc,Greece,grc,169
+grd,Grenada,grd,171
+grl,Greenland,grl,170
+gtm,Guatemala,gtm,174
+guf,French Guiana,guf,158
+gum,Guam,gum,173
+guy,Guyana,guy,178
+hkg,"Hong Kong, China",hkg,181
+hnd,Honduras,hnd,180
+hrv,Croatia,hrv,134
+hti,Haiti,hti,179
+hun,Hungary,hun,182
+idn,Indonesia,idn,185
+imn,Isle of Man,gbm,189
+ind,India,ind,184
+irl,Ireland,irl,188
+irq,Iraq,irq,187
+isl,Iceland,isl,183
+isr,Israel,isr,190
+ita,Italy,ita,191
+jam,Jamaica,jam,192
+jey,Jersey,jey,194
+jor,Jordan,jor,195
+jpn,Japan,jpn,193
+kaz,Kazakhstan,kaz,196
+ken,Kenya,ken,197
+kgz,Kyrgyzstan,kgz,203
+khm,Cambodia,khm,118
+kir,Kiribati,kir,198
+kna,Saint Kitts and Nevis,kna,269
+kos,Kosovo,kos,201
+kwt,Kuwait,kwt,202
+lao,Lao People's Democratic Republic,lao,204
+lbn,Lebanon,lbn,206
+lbr,Liberia,lbr,208
+lby,Libya,lby,209
+lca,Saint Lucia,lca,270
+lie,Liechtenstein,lie,210
+lka,Sri Lanka,lka,290
+lso,Lesotho,lso,207
+ltu,Lithuania,ltu,211
+lux,Luxembourg,lux,212
+lva,Latvia,lva,205
+mar,Morocco,mar,234
+mco,Monaco,mco,230
+mda,"Moldova, Republic of",mda,229
+mdg,Madagascar,mdg,215
+mdv,Maldives,mdv,221
+mex,Mexico,mex,228
+mhl,Marshall Islands,mhl,224
+mli,Mali,mli,222
+mlt,Malta,mlt,223
+mmr,Myanmar,mmr,236
+mne,Montenegro,mne,232
+mng,Mongolia,mng,231
+mnp,Northern Mariana Islands,mnp,249
+moz,Mozambique,moz,235
+mrt,Mauritania,mrt,226
+msr,Montserrat,msr,233
+mtq,Martinique,mtq,225
+mus,Mauritius,mus,227
+mwi,Malawi,mwi,216
+mys,Malaysia,mys,217
+nam,Namibia,nam,237
+ncl,New Caledonia,ncl,242
+ner,Niger,ner,245
+nfk,Norfolk Island,nfk,248
+nga,Nigeria,nga,246
+nic,Nicaragua,nic,244
+niu,Niue,niu,247
+nld,Netherlands,nld,240
+nor,Norway,nor,250
+npl,Nepal,npl,239
+nru,Nauru,nru,238
+nzl,New Zealand,nzl,243
+omn,Oman,omn,252
+pak,Pakistan,pak,253
+pan,Panama,pan,255
+per,Peru,per,258
+phl,Philippines,phl,259
+plw,Palau,plw,254
+png,Papua New Guinea,png,256
+pol,Poland,pol,260
+pri,Puerto Rico,pri,262
+prt,Portugal,prt,261
+pry,Paraguay,pry,257
+pse,Occupied Palestinian Territory,pse,251
+pyf,French Polynesia,pyf,159
+qat,Qatar,qat,263
+reu,Réunion,reu,267
+rou,Romania,rou,264
+rus,Russian Federation,rus,265
+rwa,Rwanda,rwa,266
+sau,Saudi Arabia,sau,276
+scg,Serbia and Montenegro,scg,279
+sdn,Sudan,sdn,291
+sen,Senegal,sen,277
+sgp,Singapore,sgp,282
+shn,Saint Helena,shn,268
+slb,Solomon Islands,slb,285
+sle,Sierra Leone,sle,281
+slv,El Salvador,slv,147
+smr,San Marino,smr,274
+som,Somalia,som,286
+spm,Saint Pierre and Miquelon,spm,271
+srb,Serbia,srb,278
+ssd,South Sudan,ssd,288
+stp,Sao Tome and Principe,stp,275
+sur,Suriname,sur,292
+svk,Slovakia,svk,283
+svn,Slovenia,svn,284
+swe,Sweden,swe,294
+swz,Swaziland,swz,293
+syc,Seychelles,syc,280
+syr,Syrian Arab Republic,syr,296
+tca,Turks and Caicos Islands,tca,311
+tcd,Chad,tcd,124
+tgo,Togo,tgo,304
+tha,Thailand,tha,302
+tjk,Tajikistan,tjk,298
+tkl,Tokelau,tkl,305
+tkm,Turkmenistan,tkm,310
+tls,Timor-Leste,tls,303
+ton,Tonga,ton,306
+tto,Trinidad and Tobago,tto,307
+tun,Tunisia,tun,308
+tur,Turkey,tur,309
+tuv,Tuvalu,tuv,312
+uga,Uganda,uga,314
+ukr,Ukraine,ukr,315
+urs,USSR,ussr,313
+ury,Uruguay,ury,320
+usa,United States,usa,318
+uzb,Uzbekistan,uzb,321
+vct,Saint Vincent and the Grenadines,vct,272
+vgb,British Virgin Islands,vgb,113
+vir,United States Virgin Islands,vir,319
+vnm,Viet Nam,vnm,324
+vut,Vanuatu,vut,322
+wlf,Wallis and Futuna Islands,wlf,325
+wsm,Samoa,wsm,273
+yem,Yemen,yem,327
+zaf,South Africa,zaf,287
+zmb,Zambia,zmb,331
+zwe,Zimbabwe,zwe,332

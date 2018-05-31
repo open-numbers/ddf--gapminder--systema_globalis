@@ -106,7 +106,7 @@ cooking:
                 row:
                     classif1:
                         $in:
-                            - age_10yrbands_y15-24  # 15-24
+                            - age_10yrbands_y15_24  # 15-24
                             - age_ythadult_yge15    # 15+
                             # - age_aggregate_total   # total
             result: ilo-employment-rate-filtered
@@ -152,9 +152,9 @@ cooking:
                 row:
                     classif1:
                         $in:
-                            - age_ythadult_y15-64  # 15-64
+                            - age_ythadult_y15_64  # 15-64
                             - age_ythadult_yge15   # 15+
-                            - age_aggregate_y25-54  # 25-54
+                            - age_aggregate_y25_54  # 25-54
                             - age_aggregate_yge65   # 65+
             result: ilo-labour-force-part-rate-filtered
         -
@@ -291,10 +291,10 @@ cooking:
                 row:
                     classif1:
                         $in:
-                            - age_aggregate_y15-24
+                            - age_aggregate_y15_24
                             - age_ythadult_yge15
-                            - age_aggregate_y25-54
-                            - age_aggregate_y55-64
+                            - age_aggregate_y25_54
+                            - age_aggregate_y55_64
                             - age_aggregate_yge65
             result: ilo-unemployment-rate-filtered
 
