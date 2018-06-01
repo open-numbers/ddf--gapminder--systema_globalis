@@ -21,13 +21,13 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, time
         value:
-            - emp_dwap_sex_age_rt
+            - emp_2wap_sex_age_rt
     -
         id: ilo-labour-force-part-rate
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, time
         value:
-            - eap_dwap_sex_age_rt
+            - eap_2wap_sex_age_rt
     -
         id: ilo-employment-distribution
         dataset: open-numbers/ddf--ilo--ilostat
@@ -46,7 +46,7 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, time
         value:
-            - une_deap_sex_age_rt
+            - une_2eap_sex_age_rt
 
     -
         id: ilo-long_term-unemployment
