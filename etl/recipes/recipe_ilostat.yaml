@@ -46,7 +46,7 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, time
         value:
-            - une_2eap_sex_age_rt
+            - une_deap_sex_age_rt
 
     -
         id: ilo-long_term-unemployment
