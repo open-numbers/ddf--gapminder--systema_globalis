@@ -94,6 +94,7 @@ ingredients:
               - salaried_workers_percent_of_labour_force
               - self_employed_percent_of_labour_force
               - service_workers_percent_of_labour_force
+              - hourly_compensation_us
 
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
