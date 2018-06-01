@@ -3,6 +3,7 @@
     "language": {
         "id": "en"
     },
+    "created": "2018-06-01T03:27:42.555982+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -28,7 +29,6 @@
         }
     ],
     "version": "1.8.0",
-    "created": "2018-05-31T12:52:38.980705+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
@@ -4498,8 +4498,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--hourly_compensation_us--by--geo--time.csv",
-            "name": "ddf--datapoints--hourly_compensation_us--by--geo--time",
+            "path": "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time.csv",
+            "name": "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time",
             "schema": {
                 "fields": [
                     {
@@ -4509,7 +4509,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "hourly_compensation_us"
+                        "name": "hourly_labour_cost_constant_2011_usd"
                     }
                 ],
                 "primaryKey": [
@@ -17079,9 +17079,9 @@
                     "country",
                     "time"
                 ],
-                "value": "hourly_compensation_us",
+                "value": "hourly_labour_cost_constant_2011_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_compensation_us--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time"
                 ]
             },
             {
@@ -17089,9 +17089,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "hourly_compensation_us",
+                "value": "hourly_labour_cost_constant_2011_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_compensation_us--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time"
                 ]
             },
             {
