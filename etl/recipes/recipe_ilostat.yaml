@@ -106,7 +106,7 @@ cooking:
                 row:
                     classif1:
                         $in:
-                            - age_10yrbands_y15_24  # 15-24
+                            - age_ythadult_y15_24   # 15-24
                             - age_ythadult_yge15    # 15+
                             # - age_aggregate_total   # total
             result: ilo-employment-rate-filtered
