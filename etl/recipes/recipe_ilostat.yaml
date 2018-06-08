@@ -77,6 +77,12 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area
 
+    # country synonyms
+    -
+        id: gm-country-synonym
+        dataset: open-numbers/ddf--gapminder--geo_entity_domain
+        key: country, synonym
+
 # end of ingredients
 
 cooking:
@@ -90,10 +96,8 @@ cooking:
                 column: ref_area_label
                 target_column: ref_area_new
                 dictionary:
-                    base: gw-countries
-                    key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
-                           'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                           'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+                    base: gm-country-synonym
+                    key: synonym
                     value: country
             result: ilo-ref_area-aligned
 
