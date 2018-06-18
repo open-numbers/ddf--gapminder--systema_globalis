@@ -412,36 +412,35 @@ cooking:
                         sex_f_long_term_unemployment / sex_f_population * 100
                     long_term_unemployment_rate_percent: |
                         sex_t_long_term_unemployment / sex_t_population * 100
-            result: ilo-lune-rate
+            result: ilo-lune-rate-pop
 
         -
             procedure: filter
             ingredients:
-                - ilo-lune-rate
+                - ilo-lune-rate-pop
             options:
                 item:
                     - male_long_term_unemployment_rate_percent
                     - female_long_term_unemployment_rate_percent
                     - long_term_unemployment_rate_percent
-                debug: true
-            result: ilo-lune-rate-final
+            result: ilo-lune-rate-only
 
         -
             procedure: translate_column
             ingredients:
-                - ilo-long_term-unemployment-flattened
+                - ilo-lune-rate-only
             options:
                 column: ref_area
                 dictionary:
                     base: ilo-ref_area-aligned
                     key: ref_area
                     value: ref_area_new
-            result: ilo-long_term-unemployment-flattened-area-transalted
+            result: ilo-lune-rate-area-transalted
 
         -
             procedure: translate_header
             ingredients:
-                - ilo-long_term-unemployment-flattened-area-transalted
+                - ilo-lune-rate-area-transalted
             options:
                 dictionary: indicators_ilostat_to_sg.json
             result: ilo-long_term-unemployment-final
@@ -490,8 +489,3 @@ cooking:
                 - ilo-unemployment-rate-final
                 - ilo-employment-state-final
             result: ilo-datapoints-final
-
-        -
-            procedure: serve
-            ingredients:
-                - ilo-lune-rate-final
