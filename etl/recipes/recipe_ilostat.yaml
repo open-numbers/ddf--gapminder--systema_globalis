@@ -354,6 +354,7 @@ cooking:
                     classif2:
                         $in:
                             - dur_aggregate_mge12
+                            - dur_aggregate_mge6lt12
             result: ilo-long_term-unemployment-filtered
 
         -
@@ -377,7 +378,7 @@ cooking:
                     - classif2
                     - sex
                 dictionary:
-                    "*": "{sex}_long_term_unemployment"
+                    "*": "{sex}_{classif2}_une"
             result: ilo-long_term-unemployment-flattened
 
 
@@ -407,11 +408,11 @@ cooking:
             options:
                 op:
                     male_long_term_unemployment_rate_percent: |
-                        sex_m_long_term_unemployment / sex_m_population * 100
+                        (sex_m_dur_aggregate_mge6lt12_une + sex_m_dur_aggregate_mge12_une) / sex_m_population * 100
                     female_long_term_unemployment_rate_percent: |
-                        sex_f_long_term_unemployment / sex_f_population * 100
+                        (sex_f_dur_aggregate_mge6lt12_une + sex_f_dur_aggregate_mge12_une) / sex_f_population * 100
                     long_term_unemployment_rate_percent: |
-                        sex_t_long_term_unemployment / sex_t_population * 100
+                        (sex_t_dur_aggregate_mge6lt12_une + sex_t_dur_aggregate_mge12_une) / sex_t_population * 100
             result: ilo-lune-rate-pop
 
         -
