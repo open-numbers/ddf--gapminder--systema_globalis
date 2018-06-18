@@ -53,7 +53,14 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, classif2, time
         value:
-            - une_tune_sex_age_dur_dt
+            - une_tune_sex_age_dur_nb
+
+    -
+        id: ilo-population
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - pop_2pop_sex_age_nb
 
     -
         id: ilo-noc-indicators
@@ -334,7 +341,7 @@ cooking:
                 dictionary: indicators_ilostat_to_sg.json
             result: ilo-unemployment-rate-final
 
-        # groups: long-term unemployment rate
+        # group: long-term unemployment rate
         -
             procedure: filter
             ingredients:
@@ -350,6 +357,17 @@ cooking:
             result: ilo-long_term-unemployment-filtered
 
         -
+            procedure: filter
+            ingredients:
+                - ilo-population
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - age_aggregate_total
+            result: ilo-population-filtered
+
+        -
             procedure: flatten
             ingredients:
                 - ilo-long_term-unemployment-filtered
@@ -359,8 +377,54 @@ cooking:
                     - classif2
                     - sex
                 dictionary:
-                    "*": "{sex}_{classif1}_{classif2}_{concept}"
+                    "*": "{sex}_long_term_unemployment"
             result: ilo-long_term-unemployment-flattened
+
+
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-population-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_population"
+            result: ilo-population-flattened
+
+        -
+            procedure: merge
+            ingredients:
+                - ilo-population-flattened
+                - ilo-long_term-unemployment-flattened
+            result: ilo-lune-pop-merged
+
+        -
+            procedure: run_op
+            ingredients:
+                - ilo-lune-pop-merged
+            options:
+                op:
+                    male_long_term_unemployment_rate_percent: |
+                        sex_m_long_term_unemployment / sex_m_population * 100
+                    female_long_term_unemployment_rate_percent: |
+                        sex_f_long_term_unemployment / sex_f_population * 100
+                    long_term_unemployment_rate_percent: |
+                        sex_t_long_term_unemployment / sex_t_population * 100
+            result: ilo-lune-rate
+
+        -
+            procedure: filter
+            ingredients:
+                - ilo-lune-rate
+            options:
+                item:
+                    - male_long_term_unemployment_rate_percent
+                    - female_long_term_unemployment_rate_percent
+                    - long_term_unemployment_rate_percent
+                debug: true
+            result: ilo-lune-rate-final
 
         -
             procedure: translate_column
@@ -426,3 +490,8 @@ cooking:
                 - ilo-unemployment-rate-final
                 - ilo-employment-state-final
             result: ilo-datapoints-final
+
+        -
+            procedure: serve
+            ingredients:
+                - ilo-lune-rate-final
