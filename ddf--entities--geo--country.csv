@@ -117,7 +117,7 @@ irl,,,,,Ireland,,,,,,,oecd,Ireland,IE,i105,high_income,TRUE,IE,IRL,372,,coastlin
 irn,Islamic Republic of Iran,"Iran, Islamic Rep.",Iran (Islamic Rep. of),"Iran, Islamic Rep. of",Islamic Republic Of Iran,Iran (Islamic Republic of),Iran  (Islamic Republic of),,,,,g77,Iran,IR,i103,upper_middle_income,TRUE,IR,IRN,364,,coastline,32.0,53.0,muslim,Iran,IRAN,TRUE,IR,IRAN (ISLAMIC REPUBLIC OF),asia,middle_east_north_africa
 irq,,,,,Iraq,,,,,,,g77,Iraq,IQ,i104,upper_middle_income,TRUE,IQ,IRQ,368,,coastline,33.0,44.0,muslim,Iraq,IRAQ,TRUE,IQ,IRAQ,asia,middle_east_north_africa
 isl,,,,,Iceland,,,,,,,oecd,Iceland,IS,i100,high_income,TRUE,IS,ISL,352,,coastline,65.0,-18.0,christian,Iceland,,TRUE,IS,ICELAND,europe,europe_central_asia
-isr,,,,,Israel,,,,,,,others,Israel,IL,i107,high_income,TRUE,IL,ISR,376,,coastline,31.5,34.75,,Israel,ISRAEL,TRUE,IL,ISRAEL,asia,middle_east_north_africa
+isr,,,,,Israel,,,,,,,oecd,Israel,IL,i107,high_income,TRUE,IL,ISR,376,,coastline,31.5,34.75,,Israel,ISRAEL,TRUE,IL,ISRAEL,asia,middle_east_north_africa
 ita,,,,,Italy (Including San Marino),,,,,,,oecd,Italy,IT,i108,high_income,TRUE,IT,ITA,380,,coastline,42.83333,12.83333,christian,Italy,ITALY,TRUE,IT,ITALY,europe,europe_central_asia
 jam,,,,,Jamaica,,,,,,,g77,Jamaica,JM,i109,upper_middle_income,TRUE,JM,JAM,388,,coastline,18.16667,-77.25,christian,Jamaica,JAMAICA,TRUE,JM,JAMAICA,americas,america
 jey,,,,,,,,,,,,others,Jersey,JE,i111,,TRUE,JE,JEY,832,,coastline,49.21667,-2.11667,,Jersey,,FALSE,JE,,europe,europe_central_asia
@@ -168,7 +168,7 @@ mus,,,,,Mauritius,,,,,,,g77,Mauritius,MU,i141,upper_middle_income,TRUE,MU,MUS,48
 mwi,,,,,Malawi,,,,,,,g77,Malawi,MW,i133,low_income,TRUE,MW,MWI,454,,landlocked,-13.5,34.0,christian,Malawi,MALAWI,TRUE,MW,MALAWI,africa,sub_saharan_africa
 mys,,,,,Malaysia,,,,,,,g77,Malaysia,MY,i134,upper_middle_income,TRUE,MY,MYS,458,,coastline,2.5,112.5,muslim,Malaysia,MALAYSIA,TRUE,MY,MALAYSIA,asia,east_asia_pacific
 myt,,,,,,,,,,,,others,Mayotte,YT,i142,,TRUE,YT,MYT,175,,coastline,-12.83333,45.16667,muslim,Mayotte,,FALSE,YT,MAYOTTE,africa,sub_saharan_africa
-nam,,,,,Namibia,,,,,,,g77,Namibia,,i153,upper_middle_income,TRUE,,NAM,516,,coastline,-22.0,17.0,christian,Namibia,NAMIBIA,TRUE,,NAMIBIA,africa,sub_saharan_africa
+nam,,,,,Namibia,,,,,,,g77,Namibia,NA,i153,upper_middle_income,TRUE,NA,NAM,516,,coastline,-22.0,17.0,christian,Namibia,NAMIBIA,TRUE,NA,NAMIBIA,africa,sub_saharan_africa
 ncl,,,,,New Caledonia,,,,,,,others,New Caledonia,NC,i158,high_income,TRUE,NC,NCL,540,,coastline,-21.5,165.5,christian,New Caledonia,,FALSE,NC,NEW CALEDONIA,asia,east_asia_pacific
 ner,,,,,Niger,,,,,,,g77,Niger,NE,i162,low_income,TRUE,NE,NER,562,,landlocked,18.0,9.0,muslim,Niger,NIGER,TRUE,NE,NIGER,africa,sub_saharan_africa
 nfk,,,,,,,,,,,,others,Norfolk Island,NF,i165,,TRUE,NF,NFK,574,,coastline,-29.03333,167.95,,Norfolk Island,,FALSE,NF,NORFOLK ISLAND,asia,east_asia_pacific
