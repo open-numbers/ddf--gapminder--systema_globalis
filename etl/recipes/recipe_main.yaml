@@ -31,6 +31,7 @@ include:
     - recipe_fao_food.yaml
     - recipe_fao_forestry.yaml
     - recipe_ilostat.yaml
+    - recipe_ihme-death_cause.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -141,6 +142,7 @@ cooking:
               - fao_food-datapoints-final
               - fao_fore-datapoints-final
               - ilo-datapoints-final
+              - ihme-death_cause-datapoints-final
               - static-assets-datapoints
           result: datapoints-final-0
 
