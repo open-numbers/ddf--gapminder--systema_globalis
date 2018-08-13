@@ -15,7 +15,7 @@ cooking:
   datapoints:
   - ingredients:
     - gbd-country
-    result: gbd-country-translated
+    result: gbd-country-translated-0
     procedure: translate_column
     options:
       target_column: location_new
@@ -40,6 +40,15 @@ cooking:
         - arb6
         - name
       column: name
+  - procedure: filter
+    ingredients:
+        - gbd-country-translated-0
+    options:
+        row:
+            location:
+                $nin:
+                    - "533"   # drop Georgia (state of US)
+    result: gbd-country-translated
   - ingredients:
     - gbd-datapoints
     result: gbd-datapoints-translated
