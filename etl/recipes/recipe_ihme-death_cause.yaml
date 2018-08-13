@@ -2068,7 +2068,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_children_0_14_per_100000_people
   - procedure: merge
-    result: ihme-death_cause-datapoints-final
+    result: ihme-death_cause-datapoints-merged
     ingredients:
       - dps-breast_cancer_deaths_per_100000_women-flatten
       - dps-breast_cancer_new_cases_per_100000_women-flatten
@@ -2149,3 +2149,11 @@ cooking:
       - dps-traffic_mortality_45_59_per_100000_people-flatten
       - dps-traffic_mortality_60plus_per_100000_people-flatten
       - dps-traffic_mortality_children_0_14_per_100000_people-flatten
+
+  - procedure: translate_header
+    ingredients:
+        - ihme-death_cause-datapoints-merged
+    options:
+        dictionary:
+            location: geo
+    result: ihme-death_cause-datapoints-final
