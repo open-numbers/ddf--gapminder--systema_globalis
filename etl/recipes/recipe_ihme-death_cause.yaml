@@ -16,7 +16,7 @@ include:
     - recipe_gw_common.yaml
 
 ingredients:
-- dataset: open-numbers/ddf--ihme--death_cause
+- dataset: open-numbers/ddf--ihme--global_burden_disease_deaths
   value:
   - deaths_rate
   - deaths_number
@@ -24,7 +24,7 @@ ingredients:
   - incidence_number
   key: sex, cause, age, location, year
   id: gbd-datapoints
-- dataset: open-numbers/ddf--ihme--death_cause
+- dataset: open-numbers/ddf--ihme--global_burden_disease_deaths
   value: '*'
   key: location
   id: gbd-country
