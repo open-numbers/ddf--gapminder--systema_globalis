@@ -20,16 +20,25 @@ ingredients:
   value:
   - deaths_rate
   - deaths_number
+  key: sex, cause, age, location, year
+  id: gbd-datapoints-deaths
+- dataset: open-numbers/ddf--ihme--global_burden_disease_cancer_incidence
+  value:
   - incidence_rate
   - incidence_number
   key: sex, cause, age, location, year
-  id: gbd-datapoints
+  id: gbd-datapoints-incidence
 - dataset: open-numbers/ddf--ihme--global_burden_disease_deaths
   value: '*'
   key: location
   id: gbd-country
 cooking:
   datapoints:
+  - procedure: merge
+    ingredients:
+        - gbd-datapoints-deaths
+        - gbd-datapoints-incidence
+    result: gbd-datapoints
   - ingredients:
     - gbd-country
     result: gbd-country-translated-0
