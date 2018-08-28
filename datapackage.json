@@ -3,7 +3,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-06-08T07:08:49.726799+00:00",
+    "id": "sg-dataset",
     "translations": [
         {
             "id": "ar-SA",
@@ -28,7 +28,7 @@
             "id": "he-IL"
         }
     ],
-    "version": "1.8.0",
+    "created": "2018-08-13T09:58:06.148825+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
