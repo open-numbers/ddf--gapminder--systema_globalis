@@ -1,6 +1,7 @@
 # recipe for dataset
 info:
-    id: sg-dataset
+    id: ddf--gapminder--systema_globalis
+    version: 1.7.3
 
 config:
     # the path to search recipe files to include
