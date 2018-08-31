@@ -1596,7 +1596,7 @@ cooking:
         sex:
         - '3'
       item:
-      - deaths_number
+      - deaths_rate
   - ingredients:
     - dps-traffic_deaths_per_100000_people-filtered
     result: dps-traffic_deaths_per_100000_people-filtered-flattened
@@ -1608,7 +1608,7 @@ cooking:
       - age
       - cause
       dictionary:
-        deaths_number: traffic_deaths_per_100000_people
+        deaths_rate: traffic_deaths_per_100000_people
   - ingredients:
     - gbd-datapoints-deaths
     result: dps-traffic_deaths_women_per_100000_people-filtered
