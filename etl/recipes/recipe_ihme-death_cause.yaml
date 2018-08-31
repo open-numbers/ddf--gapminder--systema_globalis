@@ -747,7 +747,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: murdered_15_29_per_100000_people
@@ -787,7 +786,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: murdered_30_44_per_100000_people
@@ -827,7 +825,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: murdered_45_59_per_100000_people
@@ -868,7 +865,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: murdered_60_79_per_100000_people
@@ -909,7 +905,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: murdered_80plus_per_100000_people
@@ -948,7 +943,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: murdered_children_0_14_per_100000_people
@@ -1247,7 +1241,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: suicide_age_0_14_per_100000_people
@@ -1287,7 +1280,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: suicide_age_15_29_per_100000_people
@@ -1327,7 +1319,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: suicide_age_30_44_per_100000_people
@@ -1367,7 +1358,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: suicide_age_45_59_per_100000_people
@@ -1408,7 +1398,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: suicide_age_60_79_per_100000_people
@@ -1449,7 +1438,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: suicide_age_80plus_per_100000_people
@@ -1671,7 +1659,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: traffic_mortality_15_29_per_100000_people
@@ -1711,7 +1698,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: traffic_mortality_30_44_per_100000_people
@@ -1751,7 +1737,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: traffic_mortality_45_59_per_100000_people
@@ -1792,7 +1777,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: traffic_mortality_60_79_per_100000_people
@@ -1833,7 +1817,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: traffic_mortality_80plus_per_100000_people
@@ -1872,7 +1855,6 @@ cooking:
       skip_totals_among_entities: []
       flatten_dimensions:
       - sex
-      - age
       - cause
       dictionary:
         deaths_rate: traffic_mortality_children_0_14_per_100000_people
