@@ -6,19 +6,15 @@ config:
   dictionary_dir: ../translation_dictionaries
   recipes_dir: ./
 ingredients:
-- dataset: open-numbers/ddf--ihme--global_burden_disease_deaths
+- dataset: open-numbers/ddf--ihme--death_cause_compact
   value:
   - deaths_rate
   - deaths_number
-  key: sex, cause, age, location, year
-  id: gbd-datapoints-deaths
-- dataset: open-numbers/ddf--ihme--global_burden_disease_cancer_incidence
-  value:
-  - incidence_rate
   - incidence_number
+  - incidence_rate
   key: sex, cause, age, location, year
-  id: gbd-datapoints-incidence
-- dataset: open-numbers/ddf--ihme--global_burden_disease_deaths
+  id: gbd-datapoints
+- dataset: open-numbers/ddf--ihme--death_cause_compact
   value: '*'
   key: location
   id: gbd-country
@@ -62,7 +58,7 @@ cooking:
           - '533'
       item: {}
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-breast_cancer_deaths_per_100000_women-filtered
     procedure: filter
     options:
@@ -88,7 +84,7 @@ cooking:
       dictionary:
         deaths_rate: breast_cancer_deaths_per_100000_women
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-breast_cancer_number_of_female_deaths-filtered
     procedure: filter
     options:
@@ -114,7 +110,7 @@ cooking:
       dictionary:
         deaths_number: breast_cancer_number_of_female_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-burns_deaths_per_100000_people-filtered
     procedure: filter
     options:
@@ -140,7 +136,7 @@ cooking:
       dictionary:
         deaths_rate: burns_deaths_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-cervical_cancer_deaths_per_100000_women-filtered
     procedure: filter
     options:
@@ -166,7 +162,7 @@ cooking:
       dictionary:
         deaths_rate: cervical_cancer_deaths_per_100000_women
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-cervical_cancer_number_of_female_deaths-filtered
     procedure: filter
     options:
@@ -192,7 +188,7 @@ cooking:
       dictionary:
         deaths_number: cervical_cancer_number_of_female_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_deaths_per_100000_men-filtered
     procedure: filter
     options:
@@ -218,7 +214,7 @@ cooking:
       dictionary:
         deaths_rate: colonandrectum_cancer_deaths_per_100000_men
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_deaths_per_100000_women-filtered
     procedure: filter
     options:
@@ -244,7 +240,7 @@ cooking:
       dictionary:
         deaths_rate: colonandrectum_cancer_deaths_per_100000_women
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_number_of_female_deaths-filtered
     procedure: filter
     options:
@@ -270,7 +266,7 @@ cooking:
       dictionary:
         deaths_number: colonandrectum_cancer_number_of_female_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_number_of_male_deaths-filtered
     procedure: filter
     options:
@@ -296,7 +292,7 @@ cooking:
       dictionary:
         deaths_number: colonandrectum_cancer_number_of_male_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-falls_deaths_per_100000_people-filtered
     procedure: filter
     options:
@@ -322,7 +318,7 @@ cooking:
       dictionary:
         deaths_rate: falls_deaths_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-hiv_deaths_in_children_1_59_months_total_deaths-filtered
     procedure: filter
     options:
@@ -348,7 +344,7 @@ cooking:
       dictionary:
         deaths_number: hiv_deaths_in_children_1_59_months_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-injury_deaths_in_children_1_59_months_total_deaths-filtered
     procedure: filter
     options:
@@ -374,7 +370,7 @@ cooking:
       dictionary:
         deaths_number: injury_deaths_in_children_1_59_months_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-liver_cancer_deaths_per_100000_men-filtered
     procedure: filter
     options:
@@ -400,7 +396,7 @@ cooking:
       dictionary:
         deaths_rate: liver_cancer_deaths_per_100000_men
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-liver_cancer_deaths_per_100000_women-filtered
     procedure: filter
     options:
@@ -426,7 +422,7 @@ cooking:
       dictionary:
         deaths_rate: liver_cancer_deaths_per_100000_women
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-liver_cancer_number_of_female_deaths-filtered
     procedure: filter
     options:
@@ -452,7 +448,7 @@ cooking:
       dictionary:
         deaths_number: liver_cancer_number_of_female_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-liver_cancer_number_of_male_deaths-filtered
     procedure: filter
     options:
@@ -478,7 +474,7 @@ cooking:
       dictionary:
         deaths_number: liver_cancer_number_of_male_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-lung_cancer_deaths_per_100000_men-filtered
     procedure: filter
     options:
@@ -504,7 +500,7 @@ cooking:
       dictionary:
         deaths_rate: lung_cancer_deaths_per_100000_men
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-lung_cancer_deaths_per_100000_women-filtered
     procedure: filter
     options:
@@ -530,7 +526,7 @@ cooking:
       dictionary:
         deaths_rate: lung_cancer_deaths_per_100000_women
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-lung_cancer_number_of_female_deaths-filtered
     procedure: filter
     options:
@@ -556,7 +552,7 @@ cooking:
       dictionary:
         deaths_number: lung_cancer_number_of_female_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-lung_cancer_number_of_male_deaths-filtered
     procedure: filter
     options:
@@ -582,7 +578,7 @@ cooking:
       dictionary:
         deaths_number: lung_cancer_number_of_male_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-malaria_deaths_in_children_1_59_months_total_deaths-filtered
     procedure: filter
     options:
@@ -608,7 +604,7 @@ cooking:
       dictionary:
         deaths_number: malaria_deaths_in_children_1_59_months_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-measles_deaths_in_children_1_59_months_total_deaths-filtered
     procedure: filter
     options:
@@ -634,7 +630,7 @@ cooking:
       dictionary:
         deaths_number: measles_deaths_in_children_1_59_months_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-meningitis_deaths_in_children_1_59_months_total_deaths-filtered
     procedure: filter
     options:
@@ -660,7 +656,7 @@ cooking:
       dictionary:
         deaths_number: meningitis_deaths_in_children_1_59_months_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-motorcycle_deaths_per_100000_people-filtered
     procedure: filter
     options:
@@ -686,7 +682,7 @@ cooking:
       dictionary:
         deaths_rate: motorcycle_deaths_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murder_total_deaths-filtered
     procedure: filter
     options:
@@ -712,7 +708,7 @@ cooking:
       dictionary:
         deaths_number: murder_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_15_29_per_100000_people-filtered
     procedure: filter
     options:
@@ -751,7 +747,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_15_29_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_30_44_per_100000_people-filtered
     procedure: filter
     options:
@@ -790,7 +786,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_30_44_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_45_59_per_100000_people-filtered
     procedure: filter
     options:
@@ -829,7 +825,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_45_59_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_60_79_per_100000_people-filtered
     procedure: filter
     options:
@@ -869,7 +865,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_60_79_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_80plus_per_100000_people-filtered
     procedure: filter
     options:
@@ -909,7 +905,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_80plus_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_children_0_14_per_100000_people-filtered
     procedure: filter
     options:
@@ -947,7 +943,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_children_0_14_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_men_per_100000_people-filtered
     procedure: filter
     options:
@@ -973,7 +969,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_men_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-murdered_women_per_100000_people-filtered
     procedure: filter
     options:
@@ -999,7 +995,7 @@ cooking:
       dictionary:
         deaths_rate: murdered_women_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-ncd_deaths_in_children_1_59_months_total_deaths-filtered
     procedure: filter
     options:
@@ -1025,7 +1021,7 @@ cooking:
       dictionary:
         deaths_number: ncd_deaths_in_children_1_59_months_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-poisonings_deaths_per_100000_people-filtered
     procedure: filter
     options:
@@ -1051,7 +1047,7 @@ cooking:
       dictionary:
         deaths_rate: poisonings_deaths_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-prostate_cancer_deaths_per_100000_men-filtered
     procedure: filter
     options:
@@ -1077,7 +1073,7 @@ cooking:
       dictionary:
         deaths_rate: prostate_cancer_deaths_per_100000_men
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-prostate_cancer_number_of_male_deaths-filtered
     procedure: filter
     options:
@@ -1103,7 +1099,7 @@ cooking:
       dictionary:
         deaths_number: prostate_cancer_number_of_male_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-stomach_cancer_deaths_per_100000_men-filtered
     procedure: filter
     options:
@@ -1129,7 +1125,7 @@ cooking:
       dictionary:
         deaths_rate: stomach_cancer_deaths_per_100000_men
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-stomach_cancer_deaths_per_100000_women-filtered
     procedure: filter
     options:
@@ -1155,7 +1151,7 @@ cooking:
       dictionary:
         deaths_rate: stomach_cancer_deaths_per_100000_women
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-stomach_cancer_number_of_female_deaths-filtered
     procedure: filter
     options:
@@ -1181,7 +1177,7 @@ cooking:
       dictionary:
         deaths_number: stomach_cancer_number_of_female_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-stomach_cancer_number_of_male_deaths-filtered
     procedure: filter
     options:
@@ -1207,7 +1203,7 @@ cooking:
       dictionary:
         deaths_number: stomach_cancer_number_of_male_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_age_0_14_per_100000_people-filtered
     procedure: filter
     options:
@@ -1245,7 +1241,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_age_0_14_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_age_15_29_per_100000_people-filtered
     procedure: filter
     options:
@@ -1284,7 +1280,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_age_15_29_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_age_30_44_per_100000_people-filtered
     procedure: filter
     options:
@@ -1323,7 +1319,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_age_30_44_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_age_45_59_per_100000_people-filtered
     procedure: filter
     options:
@@ -1362,7 +1358,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_age_45_59_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_age_60_79_per_100000_people-filtered
     procedure: filter
     options:
@@ -1402,7 +1398,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_age_60_79_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_age_80plus_per_100000_people-filtered
     procedure: filter
     options:
@@ -1442,7 +1438,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_age_80plus_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_men_per_100000_people-filtered
     procedure: filter
     options:
@@ -1468,7 +1464,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_men_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_per_100000_people-filtered
     procedure: filter
     options:
@@ -1494,7 +1490,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_total_deaths-filtered
     procedure: filter
     options:
@@ -1520,7 +1516,7 @@ cooking:
       dictionary:
         deaths_number: suicide_total_deaths
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-suicide_women_per_100000_people-filtered
     procedure: filter
     options:
@@ -1546,7 +1542,7 @@ cooking:
       dictionary:
         deaths_rate: suicide_women_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_deaths_men_per_100000_people-filtered
     procedure: filter
     options:
@@ -1572,7 +1568,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_deaths_men_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_deaths_per_100000_people-filtered
     procedure: filter
     options:
@@ -1598,7 +1594,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_deaths_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_deaths_women_per_100000_people-filtered
     procedure: filter
     options:
@@ -1624,7 +1620,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_deaths_women_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_mortality_15_29_per_100000_people-filtered
     procedure: filter
     options:
@@ -1663,7 +1659,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_15_29_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_mortality_30_44_per_100000_people-filtered
     procedure: filter
     options:
@@ -1702,7 +1698,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_30_44_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_mortality_45_59_per_100000_people-filtered
     procedure: filter
     options:
@@ -1741,7 +1737,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_45_59_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_mortality_60_79_per_100000_people-filtered
     procedure: filter
     options:
@@ -1781,7 +1777,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_60_79_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_mortality_80plus_per_100000_people-filtered
     procedure: filter
     options:
@@ -1821,7 +1817,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_80plus_per_100000_people
   - ingredients:
-    - gbd-datapoints-deaths
+    - gbd-datapoints
     result: dps-traffic_mortality_children_0_14_per_100000_people-filtered
     procedure: filter
     options:
@@ -1859,7 +1855,7 @@ cooking:
       dictionary:
         deaths_rate: traffic_mortality_children_0_14_per_100000_people
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-breast_cancer_new_cases_per_100000_women-filtered
     procedure: filter
     options:
@@ -1885,7 +1881,7 @@ cooking:
       dictionary:
         incidence_rate: breast_cancer_new_cases_per_100000_women
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-breast_cancer_number_of_new_female_cases-filtered
     procedure: filter
     options:
@@ -1911,7 +1907,7 @@ cooking:
       dictionary:
         incidence_number: breast_cancer_number_of_new_female_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-cervical_cancer_new_cases_per_100000_women-filtered
     procedure: filter
     options:
@@ -1937,7 +1933,7 @@ cooking:
       dictionary:
         incidence_rate: cervical_cancer_new_cases_per_100000_women
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-cervical_cancer_number_of_new_female_cases-filtered
     procedure: filter
     options:
@@ -1963,7 +1959,7 @@ cooking:
       dictionary:
         incidence_number: cervical_cancer_number_of_new_female_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_new_cases_per_100000_men-filtered
     procedure: filter
     options:
@@ -1989,7 +1985,7 @@ cooking:
       dictionary:
         incidence_rate: colonandrectum_cancer_new_cases_per_100000_men
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_new_cases_per_100000_women-filtered
     procedure: filter
     options:
@@ -2015,7 +2011,7 @@ cooking:
       dictionary:
         incidence_rate: colonandrectum_cancer_new_cases_per_100000_women
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_number_of_new_female_cases-filtered
     procedure: filter
     options:
@@ -2041,7 +2037,7 @@ cooking:
       dictionary:
         incidence_number: colonandrectum_cancer_number_of_new_female_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-colonandrectum_cancer_number_of_new_male_cases-filtered
     procedure: filter
     options:
@@ -2067,7 +2063,7 @@ cooking:
       dictionary:
         incidence_number: colonandrectum_cancer_number_of_new_male_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-liver_cancer_new_cases_per_100000_men-filtered
     procedure: filter
     options:
@@ -2093,7 +2089,7 @@ cooking:
       dictionary:
         incidence_rate: liver_cancer_new_cases_per_100000_men
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-liver_cancer_new_cases_per_100000_women-filtered
     procedure: filter
     options:
@@ -2119,7 +2115,7 @@ cooking:
       dictionary:
         incidence_rate: liver_cancer_new_cases_per_100000_women
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-liver_cancer_number_of_new_female_cases-filtered
     procedure: filter
     options:
@@ -2145,7 +2141,7 @@ cooking:
       dictionary:
         incidence_number: liver_cancer_number_of_new_female_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-liver_cancer_number_of_new_male_cases-filtered
     procedure: filter
     options:
@@ -2171,7 +2167,7 @@ cooking:
       dictionary:
         incidence_number: liver_cancer_number_of_new_male_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-lung_cancer_new_cases_per_100000_men-filtered
     procedure: filter
     options:
@@ -2197,7 +2193,7 @@ cooking:
       dictionary:
         incidence_rate: lung_cancer_new_cases_per_100000_men
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-lung_cancer_new_cases_per_100000_women-filtered
     procedure: filter
     options:
@@ -2223,7 +2219,7 @@ cooking:
       dictionary:
         incidence_rate: lung_cancer_new_cases_per_100000_women
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-lung_cancer_number_of_new_female_cases-filtered
     procedure: filter
     options:
@@ -2249,7 +2245,7 @@ cooking:
       dictionary:
         incidence_number: lung_cancer_number_of_new_female_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-lung_cancer_number_of_new_male_cases-filtered
     procedure: filter
     options:
@@ -2275,7 +2271,7 @@ cooking:
       dictionary:
         incidence_number: lung_cancer_number_of_new_male_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-prostate_cancer_new_cases_per_100000_men-filtered
     procedure: filter
     options:
@@ -2301,7 +2297,7 @@ cooking:
       dictionary:
         incidence_rate: prostate_cancer_new_cases_per_100000_men
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-prostate_cancer_number_of_new_male_cases-filtered
     procedure: filter
     options:
@@ -2327,7 +2323,7 @@ cooking:
       dictionary:
         incidence_number: prostate_cancer_number_of_new_male_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-stomach_cancer_new_cases_per_100000_men-filtered
     procedure: filter
     options:
@@ -2353,7 +2349,7 @@ cooking:
       dictionary:
         incidence_rate: stomach_cancer_new_cases_per_100000_men
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-stomach_cancer_new_cases_per_100000_women-filtered
     procedure: filter
     options:
@@ -2379,7 +2375,7 @@ cooking:
       dictionary:
         incidence_rate: stomach_cancer_new_cases_per_100000_women
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-stomach_cancer_number_of_new_female_cases-filtered
     procedure: filter
     options:
@@ -2405,7 +2401,7 @@ cooking:
       dictionary:
         incidence_number: stomach_cancer_number_of_new_female_cases
   - ingredients:
-    - gbd-datapoints-incidence
+    - gbd-datapoints
     result: dps-stomach_cancer_number_of_new_male_cases-filtered
     procedure: filter
     options:
