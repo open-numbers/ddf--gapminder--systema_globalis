@@ -2515,7 +2515,7 @@ cooking:
       deep: false
   - ingredients:
     - gbd-datapoints-final-0
-    result: ihme-death_cause-datapoints-final
+    result: ihme-death_cause-datapoints-final-0
     procedure: translate_column
     options:
       target_column: location
@@ -2525,5 +2525,14 @@ cooking:
         key:
         - location
       column: location
+  - ingredients:
+    - ihme-death_cause-datapoints-final-0
+    result: ihme-death_cause-datapoints-final
+    procedure: translate_header
+    options:
+      duplicated: error
+      dictionary:
+        location: geo
+        year: time
 info:
   id: sg-ihme-dataset
