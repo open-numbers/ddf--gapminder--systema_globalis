@@ -2521,7 +2521,7 @@ cooking:
       target_column: location
       dictionary:
         base: gbd-country-aligned
-        value: value_new
+        value: location_new
         key:
         - location
       column: location
