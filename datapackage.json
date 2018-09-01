@@ -3,11 +3,8 @@
     "language": {
         "id": "en"
     },
-    "base": [
-        "open-numbers/ddf--world_bank--world_development_indicators"
-    ],
     "created": "2018-09-01T13:16:56.385455+00:00",
-    "id": "wdi-sg-dataset",
+    "version": "1.7.3",
     "translations": [
         {
             "id": "ar-SA",
