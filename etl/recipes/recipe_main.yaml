@@ -1,6 +1,7 @@
 # recipe for dataset
 info:
-    id: sg-dataset
+    id: ddf--gapminder--systema_globalis
+    version: 1.7.3
 
 config:
     # the path to search recipe files to include
@@ -31,6 +32,7 @@ include:
     - recipe_fao_food.yaml
     - recipe_fao_forestry.yaml
     - recipe_ilostat.yaml
+    - recipe_ihme-death_cause.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -94,6 +96,7 @@ ingredients:
               - salaried_workers_percent_of_labour_force
               - self_employed_percent_of_labour_force
               - service_workers_percent_of_labour_force
+              - hourly_compensation_us
 
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
@@ -140,6 +143,7 @@ cooking:
               - fao_food-datapoints-final
               - fao_fore-datapoints-final
               - ilo-datapoints-final
+              - ihme-death_cause-datapoints-final
               - static-assets-datapoints
           result: datapoints-final-0
 

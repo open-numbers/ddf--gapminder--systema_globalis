@@ -38,7 +38,7 @@
     "ne_rsb_gnfs_zs": "trade_balance_percent_of_gdp",
     "nv_agr_totl_zs": "agriculture_percent_of_gdp",
     "nv_ind_totl_zs": "industry_percent_of_gdp",
-    "nv_srv_tetc_zs": "services_percent_of_gdp",
+    "nv_srv_totl_zs": "services_percent_of_gdp",
     "ny_gdp_defl_kd_zg": "inflation_annual_percent",
     "ny_gdp_mktp_kd": "total_gdp_us_inflation_adjusted",
     "ny_gdp_pcap_kd": "gdppercapita_us_inflation_adjusted",

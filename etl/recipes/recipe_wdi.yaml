@@ -57,7 +57,7 @@ ingredients:
           - ne_rsb_gnfs_zs
           - nv_agr_totl_zs
           - nv_ind_totl_zs
-          - nv_srv_tetc_zs
+          - nv_srv_totl_zs
           - ny_gdp_defl_kd_zg
           - ny_gdp_mktp_kd
           - ny_gdp_pcap_kd

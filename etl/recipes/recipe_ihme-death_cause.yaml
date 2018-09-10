@@ -1,0 +1,2538 @@
+include:
+- recipe_gw_common.yaml
+config:
+  external_csv_dir: ../external_csv
+  procedure_dir: ./procedure
+  dictionary_dir: ../translation_dictionaries
+  recipes_dir: ./
+ingredients:
+- dataset: open-numbers/ddf--ihme--death_cause_compact
+  value:
+  - deaths_rate
+  - deaths_number
+  - incidence_number
+  - incidence_rate
+  key: sex, cause, age, location, year
+  id: gbd-datapoints
+- dataset: open-numbers/ddf--ihme--death_cause_compact
+  value: '*'
+  key: location
+  id: gbd-country
+cooking:
+  datapoints:
+  - ingredients:
+    - gbd-country
+    result: gbd-country-aligned-0
+    procedure: translate_column
+    options:
+      target_column: location_new
+      dictionary:
+        base: gw-countries
+        value: country
+        key:
+        - gapminder_list
+        - alternative_1
+        - alternative_2
+        - alternative_3
+        - alternative_4_cdiac
+        - pandg
+        - god_id
+        - alt_5
+        - upper_case_name
+        - arb1
+        - arb2
+        - arb3
+        - arb4
+        - arb5
+        - arb6
+        - name
+      column: name
+  - ingredients:
+    - gbd-country-aligned-0
+    result: gbd-country-aligned
+    procedure: filter
+    options:
+      row:
+        location:
+          $nin:
+          - '533'
+      item: {}
+  - ingredients:
+    - gbd-datapoints
+    result: dps-breast_cancer_deaths_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '429'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-breast_cancer_deaths_per_100000_women-filtered
+    result: dps-breast_cancer_deaths_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: breast_cancer_deaths_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-breast_cancer_number_of_female_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '429'
+        sex:
+        - '2'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-breast_cancer_number_of_female_deaths-filtered
+    result: dps-breast_cancer_number_of_female_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: breast_cancer_number_of_female_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-burns_deaths_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '699'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-burns_deaths_per_100000_people-filtered
+    result: dps-burns_deaths_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: burns_deaths_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-cervical_cancer_deaths_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '432'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-cervical_cancer_deaths_per_100000_women-filtered
+    result: dps-cervical_cancer_deaths_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: cervical_cancer_deaths_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-cervical_cancer_number_of_female_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '432'
+        sex:
+        - '2'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-cervical_cancer_number_of_female_deaths-filtered
+    result: dps-cervical_cancer_number_of_female_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: cervical_cancer_number_of_female_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_deaths_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '441'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-colonandrectum_cancer_deaths_per_100000_men-filtered
+    result: dps-colonandrectum_cancer_deaths_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: colonandrectum_cancer_deaths_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_deaths_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '441'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-colonandrectum_cancer_deaths_per_100000_women-filtered
+    result: dps-colonandrectum_cancer_deaths_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: colonandrectum_cancer_deaths_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_number_of_female_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '441'
+        sex:
+        - '2'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-colonandrectum_cancer_number_of_female_deaths-filtered
+    result: dps-colonandrectum_cancer_number_of_female_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: colonandrectum_cancer_number_of_female_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_number_of_male_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '441'
+        sex:
+        - '1'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-colonandrectum_cancer_number_of_male_deaths-filtered
+    result: dps-colonandrectum_cancer_number_of_male_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: colonandrectum_cancer_number_of_male_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-falls_deaths_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '697'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-falls_deaths_per_100000_people-filtered
+    result: dps-falls_deaths_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: falls_deaths_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-hiv_deaths_in_children_1_59_months_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        cause:
+        - '298'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-hiv_deaths_in_children_1_59_months_total_deaths-filtered
+    result: dps-hiv_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: hiv_deaths_in_children_1_59_months_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-injury_deaths_in_children_1_59_months_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        cause:
+        - '687'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-injury_deaths_in_children_1_59_months_total_deaths-filtered
+    result: dps-injury_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: injury_deaths_in_children_1_59_months_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_deaths_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '417'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-liver_cancer_deaths_per_100000_men-filtered
+    result: dps-liver_cancer_deaths_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: liver_cancer_deaths_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_deaths_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '417'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-liver_cancer_deaths_per_100000_women-filtered
+    result: dps-liver_cancer_deaths_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: liver_cancer_deaths_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_number_of_female_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '417'
+        sex:
+        - '2'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-liver_cancer_number_of_female_deaths-filtered
+    result: dps-liver_cancer_number_of_female_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: liver_cancer_number_of_female_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_number_of_male_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '417'
+        sex:
+        - '1'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-liver_cancer_number_of_male_deaths-filtered
+    result: dps-liver_cancer_number_of_male_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: liver_cancer_number_of_male_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_deaths_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '426'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-lung_cancer_deaths_per_100000_men-filtered
+    result: dps-lung_cancer_deaths_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: lung_cancer_deaths_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_deaths_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '426'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-lung_cancer_deaths_per_100000_women-filtered
+    result: dps-lung_cancer_deaths_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: lung_cancer_deaths_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_number_of_female_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '426'
+        sex:
+        - '2'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-lung_cancer_number_of_female_deaths-filtered
+    result: dps-lung_cancer_number_of_female_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: lung_cancer_number_of_female_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_number_of_male_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '426'
+        sex:
+        - '1'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-lung_cancer_number_of_male_deaths-filtered
+    result: dps-lung_cancer_number_of_male_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: lung_cancer_number_of_male_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-malaria_deaths_in_children_1_59_months_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        cause:
+        - '345'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-malaria_deaths_in_children_1_59_months_total_deaths-filtered
+    result: dps-malaria_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: malaria_deaths_in_children_1_59_months_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-measles_deaths_in_children_1_59_months_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        cause:
+        - '341'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-measles_deaths_in_children_1_59_months_total_deaths-filtered
+    result: dps-measles_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: measles_deaths_in_children_1_59_months_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-meningitis_deaths_in_children_1_59_months_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        cause:
+        - '332'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-meningitis_deaths_in_children_1_59_months_total_deaths-filtered
+    result: dps-meningitis_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: meningitis_deaths_in_children_1_59_months_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-motorcycle_deaths_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '692'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-motorcycle_deaths_per_100000_people-filtered
+    result: dps-motorcycle_deaths_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: motorcycle_deaths_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murder_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-murder_total_deaths-filtered
+    result: dps-murder_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: murder_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_15_29_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '8'
+        - '9'
+        - '10'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_15_29_per_100000_people-filtered
+    result: dps-murdered_15_29_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-murdered_15_29_per_100000_people-filtered-aggregated
+    result: dps-murdered_15_29_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: murdered_15_29_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_30_44_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '11'
+        - '12'
+        - '13'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_30_44_per_100000_people-filtered
+    result: dps-murdered_30_44_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-murdered_30_44_per_100000_people-filtered-aggregated
+    result: dps-murdered_30_44_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: murdered_30_44_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_45_59_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '14'
+        - '15'
+        - '16'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_45_59_per_100000_people-filtered
+    result: dps-murdered_45_59_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-murdered_45_59_per_100000_people-filtered-aggregated
+    result: dps-murdered_45_59_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: murdered_45_59_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_60_79_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '17'
+        - '18'
+        - '19'
+        - '20'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_60_79_per_100000_people-filtered
+    result: dps-murdered_60_79_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-murdered_60_79_per_100000_people-filtered-aggregated
+    result: dps-murdered_60_79_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: murdered_60_79_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_80plus_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '30'
+        - '31'
+        - '32'
+        - '235'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_80plus_per_100000_people-filtered
+    result: dps-murdered_80plus_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-murdered_80plus_per_100000_people-filtered-aggregated
+    result: dps-murdered_80plus_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: murdered_80plus_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_children_0_14_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        - '23'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_children_0_14_per_100000_people-filtered
+    result: dps-murdered_children_0_14_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-murdered_children_0_14_per_100000_people-filtered-aggregated
+    result: dps-murdered_children_0_14_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: murdered_children_0_14_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_men_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '724'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_men_per_100000_people-filtered
+    result: dps-murdered_men_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: murdered_men_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murdered_women_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '724'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-murdered_women_per_100000_people-filtered
+    result: dps-murdered_women_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: murdered_women_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-ncd_deaths_in_children_1_59_months_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        cause:
+        - '409'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-ncd_deaths_in_children_1_59_months_total_deaths-filtered
+    result: dps-ncd_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: ncd_deaths_in_children_1_59_months_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-poisonings_deaths_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '700'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-poisonings_deaths_per_100000_people-filtered
+    result: dps-poisonings_deaths_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: poisonings_deaths_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-prostate_cancer_deaths_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '438'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-prostate_cancer_deaths_per_100000_men-filtered
+    result: dps-prostate_cancer_deaths_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: prostate_cancer_deaths_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-prostate_cancer_number_of_male_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '438'
+        sex:
+        - '1'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-prostate_cancer_number_of_male_deaths-filtered
+    result: dps-prostate_cancer_number_of_male_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: prostate_cancer_number_of_male_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_deaths_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '414'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-stomach_cancer_deaths_per_100000_men-filtered
+    result: dps-stomach_cancer_deaths_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: stomach_cancer_deaths_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_deaths_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '414'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-stomach_cancer_deaths_per_100000_women-filtered
+    result: dps-stomach_cancer_deaths_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: stomach_cancer_deaths_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_number_of_female_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '414'
+        sex:
+        - '2'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-stomach_cancer_number_of_female_deaths-filtered
+    result: dps-stomach_cancer_number_of_female_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: stomach_cancer_number_of_female_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_number_of_male_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '414'
+        sex:
+        - '1'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-stomach_cancer_number_of_male_deaths-filtered
+    result: dps-stomach_cancer_number_of_male_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: stomach_cancer_number_of_male_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_age_0_14_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        - '23'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_age_0_14_per_100000_people-filtered
+    result: dps-suicide_age_0_14_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-suicide_age_0_14_per_100000_people-filtered-aggregated
+    result: dps-suicide_age_0_14_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: suicide_age_0_14_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_age_15_29_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '8'
+        - '9'
+        - '10'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_age_15_29_per_100000_people-filtered
+    result: dps-suicide_age_15_29_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-suicide_age_15_29_per_100000_people-filtered-aggregated
+    result: dps-suicide_age_15_29_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: suicide_age_15_29_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_age_30_44_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '11'
+        - '12'
+        - '13'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_age_30_44_per_100000_people-filtered
+    result: dps-suicide_age_30_44_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-suicide_age_30_44_per_100000_people-filtered-aggregated
+    result: dps-suicide_age_30_44_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: suicide_age_30_44_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_age_45_59_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '14'
+        - '15'
+        - '16'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_age_45_59_per_100000_people-filtered
+    result: dps-suicide_age_45_59_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-suicide_age_45_59_per_100000_people-filtered-aggregated
+    result: dps-suicide_age_45_59_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: suicide_age_45_59_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_age_60_79_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '17'
+        - '18'
+        - '19'
+        - '20'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_age_60_79_per_100000_people-filtered
+    result: dps-suicide_age_60_79_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-suicide_age_60_79_per_100000_people-filtered-aggregated
+    result: dps-suicide_age_60_79_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: suicide_age_60_79_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_age_80plus_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '30'
+        - '31'
+        - '32'
+        - '235'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_age_80plus_per_100000_people-filtered
+    result: dps-suicide_age_80plus_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-suicide_age_80plus_per_100000_people-filtered-aggregated
+    result: dps-suicide_age_80plus_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: suicide_age_80plus_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_men_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '718'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_men_per_100000_people-filtered
+    result: dps-suicide_men_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: suicide_men_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_per_100000_people-filtered
+    result: dps-suicide_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: suicide_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-suicide_total_deaths-filtered
+    result: dps-suicide_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: suicide_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_women_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '718'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-suicide_women_per_100000_people-filtered
+    result: dps-suicide_women_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: suicide_women_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_deaths_men_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '688'
+        sex:
+        - '1'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_deaths_men_per_100000_people-filtered
+    result: dps-traffic_deaths_men_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: traffic_deaths_men_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_deaths_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_deaths_per_100000_people-filtered
+    result: dps-traffic_deaths_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: traffic_deaths_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_deaths_women_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '688'
+        sex:
+        - '2'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_deaths_women_per_100000_people-filtered
+    result: dps-traffic_deaths_women_per_100000_people-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_rate: traffic_deaths_women_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_mortality_15_29_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '8'
+        - '9'
+        - '10'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_mortality_15_29_per_100000_people-filtered
+    result: dps-traffic_mortality_15_29_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-traffic_mortality_15_29_per_100000_people-filtered-aggregated
+    result: dps-traffic_mortality_15_29_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: traffic_mortality_15_29_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_mortality_30_44_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '11'
+        - '12'
+        - '13'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_mortality_30_44_per_100000_people-filtered
+    result: dps-traffic_mortality_30_44_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-traffic_mortality_30_44_per_100000_people-filtered-aggregated
+    result: dps-traffic_mortality_30_44_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: traffic_mortality_30_44_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_mortality_45_59_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '14'
+        - '15'
+        - '16'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_mortality_45_59_per_100000_people-filtered
+    result: dps-traffic_mortality_45_59_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-traffic_mortality_45_59_per_100000_people-filtered-aggregated
+    result: dps-traffic_mortality_45_59_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: traffic_mortality_45_59_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_mortality_60_79_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '17'
+        - '18'
+        - '19'
+        - '20'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_mortality_60_79_per_100000_people-filtered
+    result: dps-traffic_mortality_60_79_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-traffic_mortality_60_79_per_100000_people-filtered-aggregated
+    result: dps-traffic_mortality_60_79_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: traffic_mortality_60_79_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_mortality_80plus_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '30'
+        - '31'
+        - '32'
+        - '235'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_mortality_80plus_per_100000_people-filtered
+    result: dps-traffic_mortality_80plus_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-traffic_mortality_80plus_per_100000_people-filtered-aggregated
+    result: dps-traffic_mortality_80plus_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: traffic_mortality_80plus_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_mortality_children_0_14_per_100000_people-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '1'
+        - '23'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_rate
+  - ingredients:
+    - dps-traffic_mortality_children_0_14_per_100000_people-filtered
+    result: dps-traffic_mortality_children_0_14_per_100000_people-filtered-aggregated
+    procedure: groupby
+    options:
+      groupby:
+      - cause
+      - sex
+      - location
+      - year
+      aggregate:
+        deaths_rate: sum
+  - ingredients:
+    - dps-traffic_mortality_children_0_14_per_100000_people-filtered-aggregated
+    result: dps-traffic_mortality_children_0_14_per_100000_people-filtered-aggregated-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - cause
+      dictionary:
+        deaths_rate: traffic_mortality_children_0_14_per_100000_people
+  - ingredients:
+    - gbd-datapoints
+    result: dps-breast_cancer_new_cases_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '429'
+        sex:
+        - '2'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-breast_cancer_new_cases_per_100000_women-filtered
+    result: dps-breast_cancer_new_cases_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: breast_cancer_new_cases_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-breast_cancer_number_of_new_female_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '429'
+        sex:
+        - '2'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-breast_cancer_number_of_new_female_cases-filtered
+    result: dps-breast_cancer_number_of_new_female_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: breast_cancer_number_of_new_female_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-cervical_cancer_new_cases_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '432'
+        sex:
+        - '2'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-cervical_cancer_new_cases_per_100000_women-filtered
+    result: dps-cervical_cancer_new_cases_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: cervical_cancer_new_cases_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-cervical_cancer_number_of_new_female_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '432'
+        sex:
+        - '2'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-cervical_cancer_number_of_new_female_cases-filtered
+    result: dps-cervical_cancer_number_of_new_female_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: cervical_cancer_number_of_new_female_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_new_cases_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '441'
+        sex:
+        - '1'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-colonandrectum_cancer_new_cases_per_100000_men-filtered
+    result: dps-colonandrectum_cancer_new_cases_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: colonandrectum_cancer_new_cases_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_new_cases_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '441'
+        sex:
+        - '2'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-colonandrectum_cancer_new_cases_per_100000_women-filtered
+    result: dps-colonandrectum_cancer_new_cases_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: colonandrectum_cancer_new_cases_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_number_of_new_female_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '441'
+        sex:
+        - '2'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-colonandrectum_cancer_number_of_new_female_cases-filtered
+    result: dps-colonandrectum_cancer_number_of_new_female_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: colonandrectum_cancer_number_of_new_female_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-colonandrectum_cancer_number_of_new_male_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '441'
+        sex:
+        - '1'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-colonandrectum_cancer_number_of_new_male_cases-filtered
+    result: dps-colonandrectum_cancer_number_of_new_male_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: colonandrectum_cancer_number_of_new_male_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_new_cases_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '417'
+        sex:
+        - '1'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-liver_cancer_new_cases_per_100000_men-filtered
+    result: dps-liver_cancer_new_cases_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: liver_cancer_new_cases_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_new_cases_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '417'
+        sex:
+        - '2'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-liver_cancer_new_cases_per_100000_women-filtered
+    result: dps-liver_cancer_new_cases_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: liver_cancer_new_cases_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_number_of_new_female_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '417'
+        sex:
+        - '2'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-liver_cancer_number_of_new_female_cases-filtered
+    result: dps-liver_cancer_number_of_new_female_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: liver_cancer_number_of_new_female_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-liver_cancer_number_of_new_male_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '417'
+        sex:
+        - '1'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-liver_cancer_number_of_new_male_cases-filtered
+    result: dps-liver_cancer_number_of_new_male_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: liver_cancer_number_of_new_male_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_new_cases_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '426'
+        sex:
+        - '1'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-lung_cancer_new_cases_per_100000_men-filtered
+    result: dps-lung_cancer_new_cases_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: lung_cancer_new_cases_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_new_cases_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '426'
+        sex:
+        - '2'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-lung_cancer_new_cases_per_100000_women-filtered
+    result: dps-lung_cancer_new_cases_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: lung_cancer_new_cases_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_number_of_new_female_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '426'
+        sex:
+        - '2'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-lung_cancer_number_of_new_female_cases-filtered
+    result: dps-lung_cancer_number_of_new_female_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: lung_cancer_number_of_new_female_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-lung_cancer_number_of_new_male_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '426'
+        sex:
+        - '1'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-lung_cancer_number_of_new_male_cases-filtered
+    result: dps-lung_cancer_number_of_new_male_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: lung_cancer_number_of_new_male_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-prostate_cancer_new_cases_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '438'
+        sex:
+        - '1'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-prostate_cancer_new_cases_per_100000_men-filtered
+    result: dps-prostate_cancer_new_cases_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: prostate_cancer_new_cases_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-prostate_cancer_number_of_new_male_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '438'
+        sex:
+        - '1'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-prostate_cancer_number_of_new_male_cases-filtered
+    result: dps-prostate_cancer_number_of_new_male_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: prostate_cancer_number_of_new_male_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_new_cases_per_100000_men-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '414'
+        sex:
+        - '1'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-stomach_cancer_new_cases_per_100000_men-filtered
+    result: dps-stomach_cancer_new_cases_per_100000_men-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: stomach_cancer_new_cases_per_100000_men
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_new_cases_per_100000_women-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '27'
+        cause:
+        - '414'
+        sex:
+        - '2'
+      item:
+      - incidence_rate
+  - ingredients:
+    - dps-stomach_cancer_new_cases_per_100000_women-filtered
+    result: dps-stomach_cancer_new_cases_per_100000_women-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_rate: stomach_cancer_new_cases_per_100000_women
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_number_of_new_female_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '414'
+        sex:
+        - '2'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-stomach_cancer_number_of_new_female_cases-filtered
+    result: dps-stomach_cancer_number_of_new_female_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: stomach_cancer_number_of_new_female_cases
+  - ingredients:
+    - gbd-datapoints
+    result: dps-stomach_cancer_number_of_new_male_cases-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '414'
+        sex:
+        - '1'
+      item:
+      - incidence_number
+  - ingredients:
+    - dps-stomach_cancer_number_of_new_male_cases-filtered
+    result: dps-stomach_cancer_number_of_new_male_cases-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        incidence_number: stomach_cancer_number_of_new_male_cases
+  - ingredients:
+    - dps-breast_cancer_deaths_per_100000_women-filtered-flattened
+    - dps-breast_cancer_number_of_female_deaths-filtered-flattened
+    - dps-burns_deaths_per_100000_people-filtered-flattened
+    - dps-cervical_cancer_deaths_per_100000_women-filtered-flattened
+    - dps-cervical_cancer_number_of_female_deaths-filtered-flattened
+    - dps-colonandrectum_cancer_deaths_per_100000_men-filtered-flattened
+    - dps-colonandrectum_cancer_deaths_per_100000_women-filtered-flattened
+    - dps-colonandrectum_cancer_number_of_female_deaths-filtered-flattened
+    - dps-colonandrectum_cancer_number_of_male_deaths-filtered-flattened
+    - dps-falls_deaths_per_100000_people-filtered-flattened
+    - dps-hiv_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    - dps-injury_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    - dps-liver_cancer_deaths_per_100000_men-filtered-flattened
+    - dps-liver_cancer_deaths_per_100000_women-filtered-flattened
+    - dps-liver_cancer_number_of_female_deaths-filtered-flattened
+    - dps-liver_cancer_number_of_male_deaths-filtered-flattened
+    - dps-lung_cancer_deaths_per_100000_men-filtered-flattened
+    - dps-lung_cancer_deaths_per_100000_women-filtered-flattened
+    - dps-lung_cancer_number_of_female_deaths-filtered-flattened
+    - dps-lung_cancer_number_of_male_deaths-filtered-flattened
+    - dps-malaria_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    - dps-measles_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    - dps-meningitis_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    - dps-motorcycle_deaths_per_100000_people-filtered-flattened
+    - dps-murder_total_deaths-filtered-flattened
+    - dps-murdered_15_29_per_100000_people-filtered-aggregated-flattened
+    - dps-murdered_30_44_per_100000_people-filtered-aggregated-flattened
+    - dps-murdered_45_59_per_100000_people-filtered-aggregated-flattened
+    - dps-murdered_60_79_per_100000_people-filtered-aggregated-flattened
+    - dps-murdered_80plus_per_100000_people-filtered-aggregated-flattened
+    - dps-murdered_children_0_14_per_100000_people-filtered-aggregated-flattened
+    - dps-murdered_men_per_100000_people-filtered-flattened
+    - dps-murdered_women_per_100000_people-filtered-flattened
+    - dps-ncd_deaths_in_children_1_59_months_total_deaths-filtered-flattened
+    - dps-poisonings_deaths_per_100000_people-filtered-flattened
+    - dps-prostate_cancer_deaths_per_100000_men-filtered-flattened
+    - dps-prostate_cancer_number_of_male_deaths-filtered-flattened
+    - dps-stomach_cancer_deaths_per_100000_men-filtered-flattened
+    - dps-stomach_cancer_deaths_per_100000_women-filtered-flattened
+    - dps-stomach_cancer_number_of_female_deaths-filtered-flattened
+    - dps-stomach_cancer_number_of_male_deaths-filtered-flattened
+    - dps-suicide_age_0_14_per_100000_people-filtered-aggregated-flattened
+    - dps-suicide_age_15_29_per_100000_people-filtered-aggregated-flattened
+    - dps-suicide_age_30_44_per_100000_people-filtered-aggregated-flattened
+    - dps-suicide_age_45_59_per_100000_people-filtered-aggregated-flattened
+    - dps-suicide_age_60_79_per_100000_people-filtered-aggregated-flattened
+    - dps-suicide_age_80plus_per_100000_people-filtered-aggregated-flattened
+    - dps-suicide_men_per_100000_people-filtered-flattened
+    - dps-suicide_per_100000_people-filtered-flattened
+    - dps-suicide_total_deaths-filtered-flattened
+    - dps-suicide_women_per_100000_people-filtered-flattened
+    - dps-traffic_deaths_men_per_100000_people-filtered-flattened
+    - dps-traffic_deaths_per_100000_people-filtered-flattened
+    - dps-traffic_deaths_women_per_100000_people-filtered-flattened
+    - dps-traffic_mortality_15_29_per_100000_people-filtered-aggregated-flattened
+    - dps-traffic_mortality_30_44_per_100000_people-filtered-aggregated-flattened
+    - dps-traffic_mortality_45_59_per_100000_people-filtered-aggregated-flattened
+    - dps-traffic_mortality_60_79_per_100000_people-filtered-aggregated-flattened
+    - dps-traffic_mortality_80plus_per_100000_people-filtered-aggregated-flattened
+    - dps-traffic_mortality_children_0_14_per_100000_people-filtered-aggregated-flattened
+    - dps-breast_cancer_new_cases_per_100000_women-filtered-flattened
+    - dps-breast_cancer_number_of_new_female_cases-filtered-flattened
+    - dps-cervical_cancer_new_cases_per_100000_women-filtered-flattened
+    - dps-cervical_cancer_number_of_new_female_cases-filtered-flattened
+    - dps-colonandrectum_cancer_new_cases_per_100000_men-filtered-flattened
+    - dps-colonandrectum_cancer_new_cases_per_100000_women-filtered-flattened
+    - dps-colonandrectum_cancer_number_of_new_female_cases-filtered-flattened
+    - dps-colonandrectum_cancer_number_of_new_male_cases-filtered-flattened
+    - dps-liver_cancer_new_cases_per_100000_men-filtered-flattened
+    - dps-liver_cancer_new_cases_per_100000_women-filtered-flattened
+    - dps-liver_cancer_number_of_new_female_cases-filtered-flattened
+    - dps-liver_cancer_number_of_new_male_cases-filtered-flattened
+    - dps-lung_cancer_new_cases_per_100000_men-filtered-flattened
+    - dps-lung_cancer_new_cases_per_100000_women-filtered-flattened
+    - dps-lung_cancer_number_of_new_female_cases-filtered-flattened
+    - dps-lung_cancer_number_of_new_male_cases-filtered-flattened
+    - dps-prostate_cancer_new_cases_per_100000_men-filtered-flattened
+    - dps-prostate_cancer_number_of_new_male_cases-filtered-flattened
+    - dps-stomach_cancer_new_cases_per_100000_men-filtered-flattened
+    - dps-stomach_cancer_new_cases_per_100000_women-filtered-flattened
+    - dps-stomach_cancer_number_of_new_female_cases-filtered-flattened
+    - dps-stomach_cancer_number_of_new_male_cases-filtered-flattened
+    result: gbd-datapoints-final-0
+    procedure: merge
+    options:
+      deep: false
+  - ingredients:
+    - gbd-datapoints-final-0
+    result: ihme-death_cause-datapoints-final-0
+    procedure: translate_column
+    options:
+      target_column: location
+      dictionary:
+        base: gbd-country-aligned
+        value: location_new
+        key:
+        - location
+      column: location
+  - ingredients:
+    - ihme-death_cause-datapoints-final-0
+    result: ihme-death_cause-datapoints-final
+    procedure: translate_header
+    options:
+      duplicated: error
+      dictionary:
+        location: geo
+        year: time
+info:
+  id: sg-ihme-dataset

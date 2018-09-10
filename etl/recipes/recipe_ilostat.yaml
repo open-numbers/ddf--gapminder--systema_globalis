@@ -21,13 +21,13 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, time
         value:
-            - emp_dwap_sex_age_rt
+            - emp_2wap_sex_age_rt
     -
         id: ilo-labour-force-part-rate
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, time
         value:
-            - eap_dwap_sex_age_rt
+            - eap_2wap_sex_age_rt
     -
         id: ilo-employment-distribution
         dataset: open-numbers/ddf--ilo--ilostat
@@ -53,7 +53,14 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, sex, classif1, classif2, time
         value:
-            - une_tune_sex_age_dur_dt
+            - une_tune_sex_age_dur_nb
+
+    -
+        id: ilo-population
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, sex, classif1, time
+        value:
+            - pop_2pop_sex_age_nb
 
     -
         id: ilo-noc-indicators
@@ -77,6 +84,12 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area
 
+    # country synonyms
+    -
+        id: gm-country-synonym
+        dataset: open-numbers/ddf--gapminder--geo_entity_domain
+        key: country, synonym
+
 # end of ingredients
 
 cooking:
@@ -90,10 +103,8 @@ cooking:
                 column: ref_area_label
                 target_column: ref_area_new
                 dictionary:
-                    base: gw-countries
-                    key:  ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
-                           'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                           'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name']
+                    base: gm-country-synonym
+                    key: synonym
                     value: country
             result: ilo-ref_area-aligned
 
@@ -106,7 +117,7 @@ cooking:
                 row:
                     classif1:
                         $in:
-                            - age_10yrbands_y15_24  # 15-24
+                            - age_ythadult_y15_24   # 15-24
                             - age_ythadult_yge15    # 15+
                             # - age_aggregate_total   # total
             result: ilo-employment-rate-filtered
@@ -330,7 +341,7 @@ cooking:
                 dictionary: indicators_ilostat_to_sg.json
             result: ilo-unemployment-rate-final
 
-        # groups: long-term unemployment rate
+        # group: long-term unemployment rate
         -
             procedure: filter
             ingredients:
@@ -343,7 +354,19 @@ cooking:
                     classif2:
                         $in:
                             - dur_aggregate_mge12
+                            - dur_aggregate_mge6lt12
             result: ilo-long_term-unemployment-filtered
+
+        -
+            procedure: filter
+            ingredients:
+                - ilo-population
+            options:
+                row:
+                    classif1:
+                        $in:
+                            - age_aggregate_total
+            result: ilo-population-filtered
 
         -
             procedure: flatten
@@ -355,25 +378,70 @@ cooking:
                     - classif2
                     - sex
                 dictionary:
-                    "*": "{sex}_{classif1}_{classif2}_{concept}"
+                    "*": "{sex}_{classif2}_une"
             result: ilo-long_term-unemployment-flattened
+
+
+        -
+            procedure: flatten
+            ingredients:
+                - ilo-population-filtered
+            options:
+                flatten_dimensions:
+                    - classif1
+                    - sex
+                dictionary:
+                    "*": "{sex}_population"
+            result: ilo-population-flattened
+
+        -
+            procedure: merge
+            ingredients:
+                - ilo-population-flattened
+                - ilo-long_term-unemployment-flattened
+            result: ilo-lune-pop-merged
+
+        -
+            procedure: run_op
+            ingredients:
+                - ilo-lune-pop-merged
+            options:
+                op:
+                    male_long_term_unemployment_rate_percent: |
+                        (sex_m_dur_aggregate_mge6lt12_une + sex_m_dur_aggregate_mge12_une) / sex_m_population * 100
+                    female_long_term_unemployment_rate_percent: |
+                        (sex_f_dur_aggregate_mge6lt12_une + sex_f_dur_aggregate_mge12_une) / sex_f_population * 100
+                    long_term_unemployment_rate_percent: |
+                        (sex_t_dur_aggregate_mge6lt12_une + sex_t_dur_aggregate_mge12_une) / sex_t_population * 100
+            result: ilo-lune-rate-pop
+
+        -
+            procedure: filter
+            ingredients:
+                - ilo-lune-rate-pop
+            options:
+                item:
+                    - male_long_term_unemployment_rate_percent
+                    - female_long_term_unemployment_rate_percent
+                    - long_term_unemployment_rate_percent
+            result: ilo-lune-rate-only
 
         -
             procedure: translate_column
             ingredients:
-                - ilo-long_term-unemployment-flattened
+                - ilo-lune-rate-only
             options:
                 column: ref_area
                 dictionary:
                     base: ilo-ref_area-aligned
                     key: ref_area
                     value: ref_area_new
-            result: ilo-long_term-unemployment-flattened-area-transalted
+            result: ilo-lune-rate-area-transalted
 
         -
             procedure: translate_header
             ingredients:
-                - ilo-long_term-unemployment-flattened-area-transalted
+                - ilo-lune-rate-area-transalted
             options:
                 dictionary: indicators_ilostat_to_sg.json
             result: ilo-long_term-unemployment-final
