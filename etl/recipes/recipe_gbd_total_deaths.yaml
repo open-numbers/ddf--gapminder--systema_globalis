@@ -1,0 +1,165 @@
+info:
+  id: sg-ihme-dataset
+include:
+- recipe_gw_common.yaml
+config:
+  external_csv_dir: ../external_csv
+  procedure_dir: ./procedure
+  dictionary_dir: ../translation_dictionaries
+  recipes_dir: ./
+ingredients:
+- dataset: open-numbers/ddf--ihme--death_cause_compact
+  value:
+  - deaths_number
+  key: sex, cause, age, location, year
+  id: gbd-datapoints
+- dataset: open-numbers/ddf--ihme--death_cause_compact
+  value: '*'
+  key: location
+  id: gbd-country
+cooking:
+  datapoints:
+  - ingredients:
+    - gbd-country
+    result: gbd-country-aligned-0
+    procedure: translate_column
+    options:
+      target_column: location_new
+      dictionary:
+        base: gw-countries
+        value: country
+        key:
+        - gapminder_list
+        - alternative_1
+        - alternative_2
+        - alternative_3
+        - alternative_4_cdiac
+        - pandg
+        - god_id
+        - alt_5
+        - upper_case_name
+        - arb1
+        - arb2
+        - arb3
+        - arb4
+        - arb5
+        - arb6
+        - name
+      column: name
+  - ingredients:
+    - gbd-country-aligned-0
+    result: gbd-country-aligned
+    procedure: filter
+    options:
+      row:
+        location:
+          $nin:
+          - '533'
+      item: {}
+  - ingredients:
+    - gbd-datapoints
+    result: dps-traffic_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '688'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-traffic_total_deaths-filtered
+    result: dps-traffic_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: traffic_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-suicide_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '718'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-suicide_total_deaths-filtered
+    result: dps-suicide_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: suicide_total_deaths
+  - ingredients:
+    - gbd-datapoints
+    result: dps-murder_total_deaths-filtered
+    procedure: filter
+    options:
+      row:
+        age:
+        - '22'
+        cause:
+        - '724'
+        sex:
+        - '3'
+      item:
+      - deaths_number
+  - ingredients:
+    - dps-murder_total_deaths-filtered
+    result: dps-murder_total_deaths-filtered-flattened
+    procedure: flatten
+    options:
+      skip_totals_among_entities: []
+      flatten_dimensions:
+      - sex
+      - age
+      - cause
+      dictionary:
+        deaths_number: murder_total_deaths
+  - ingredients:
+    - dps-traffic_total_deaths-filtered-flattened
+    - dps-suicide_total_deaths-filtered-flattened
+    - dps-murder_total_deaths-filtered-flattened
+    result: gbd-datapoints-final-0
+    procedure: merge
+    options:
+      deep: false
+  - ingredients:
+    - gbd-datapoints-final-0
+    result: gbd-total-deaths-datapoints-final-0
+    procedure: translate_column
+    options:
+      target_column: location
+      dictionary:
+        base: gbd-country-aligned
+        value: location_new
+        key:
+        - location
+      column: location
+  - ingredients:
+    - gbd-total-deaths-datapoints-final-0
+    result: gbd-total-deaths-datapoints-final
+    procedure: translate_header
+    options:
+      duplicated: error
+      dictionary:
+        location: geo
+        year: time
