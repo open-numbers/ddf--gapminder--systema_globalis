@@ -18,7 +18,7 @@ ingredients:
       key: "geo,year"
       value:
         #   - forest_share_in_land_area_ele1
-          - forest_area_ile
+          - forest_area_elu2
           - planted_forest_area_ile
           - primary_forest_area_ile
           - sugar_sweeteners_food_supply_quantity_g_capita_day_fce
@@ -54,7 +54,7 @@ cooking:
             - fao_food-datapoints-translated
           options:
             op:
-                forest_land_total_area_ha: forest_area_ile * 1000
+                forest_land_total_area_ha: forest_area_elu2 * 1000
                 planted_forest_area_ha: planted_forest_area_ile * 1000
                 primary_forest_area_ha: primary_forest_area_ile * 1000
           result: fao_food-datapoints-translated-op
@@ -64,7 +64,7 @@ cooking:
           options:
             item:
                 $nin:
-                    - forest_area_ile
+                    - forest_area_elu2
                     - planted_forest_area_ile
                     - primary_forest_area_ile
           result: fao_food-datapoints-translated-op-filtered
