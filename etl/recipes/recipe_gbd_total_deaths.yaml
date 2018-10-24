@@ -12,7 +12,7 @@ ingredients:
   value:
   - deaths_number
   key: sex, cause, age, location, year
-  id: gbd-datapoints
+  id: gbd-total_deaths-datapoints
 - dataset: open-numbers/ddf--ihme--death_cause_compact
   value: '*'
   key: location
@@ -57,7 +57,7 @@ cooking:
           - '533'
       item: {}
   - ingredients:
-    - gbd-datapoints
+    - gbd-total_deaths-datapoints
     result: dps-traffic_total_deaths-filtered
     procedure: filter
     options:
@@ -83,7 +83,7 @@ cooking:
       dictionary:
         deaths_number: traffic_total_deaths
   - ingredients:
-    - gbd-datapoints
+    - gbd-total_deaths-datapoints
     result: dps-suicide_total_deaths-filtered
     procedure: filter
     options:
@@ -109,7 +109,7 @@ cooking:
       dictionary:
         deaths_number: suicide_total_deaths
   - ingredients:
-    - gbd-datapoints
+    - gbd-total_deaths-datapoints
     result: dps-murder_total_deaths-filtered
     procedure: filter
     options:
@@ -138,12 +138,12 @@ cooking:
     - dps-traffic_total_deaths-filtered-flattened
     - dps-suicide_total_deaths-filtered-flattened
     - dps-murder_total_deaths-filtered-flattened
-    result: gbd-datapoints-final-0
+    result: gbd-total_deaths-datapoints-final-0
     procedure: merge
     options:
       deep: false
   - ingredients:
-    - gbd-datapoints-final-0
+    - gbd-total_deaths-datapoints-final-0
     result: gbd-total-deaths-datapoints-final-0
     procedure: translate_column
     options:
