@@ -3,7 +3,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-09-28T07:38:38.162289+00:00",
+    "created": "2018-10-25T08:03:06.818565+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -3490,27 +3490,6 @@
             }
         },
         {
-            "path": "ddf--datapoints--female_salaried_workers_percent_of_non_agricultural_female_employment--by--geo--time.csv",
-            "name": "ddf--datapoints--female_salaried_workers_percent_of_non_agricultural_female_employment--by--geo--time",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "female_salaried_workers_percent_of_non_agricultural_female_employment"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "path": "ddf--datapoints--female_self_employed_percent_of_female_employment--by--geo--time.csv",
             "name": "ddf--datapoints--female_self_employed_percent_of_female_employment--by--geo--time",
             "schema": {
@@ -6043,27 +6022,6 @@
                     },
                     {
                         "name": "male_population_with_projections"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "path": "ddf--datapoints--male_salaried_workers_percent_of_non_agricultural_male_employment--by--geo--time.csv",
-            "name": "ddf--datapoints--male_salaried_workers_percent_of_non_agricultural_male_employment--by--geo--time",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "male_salaried_workers_percent_of_non_agricultural_male_employment"
                     }
                 ],
                 "primaryKey": [
@@ -9508,27 +9466,6 @@
                     },
                     {
                         "name": "rural_poverty_percent_rural_people_below_national_rural"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "path": "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time.csv",
-            "name": "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "salaried_workers_percent_of_non_agricultural_employment"
                     }
                 ],
                 "primaryKey": [
@@ -16119,26 +16056,6 @@
                     "country",
                     "time"
                 ],
-                "value": "female_salaried_workers_percent_of_non_agricultural_female_employment",
-                "resources": [
-                    "ddf--datapoints--female_salaried_workers_percent_of_non_agricultural_female_employment--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "female_salaried_workers_percent_of_non_agricultural_female_employment",
-                "resources": [
-                    "ddf--datapoints--female_salaried_workers_percent_of_non_agricultural_female_employment--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "female_self_employed_percent_of_female_employment",
                 "resources": [
                     "ddf--datapoints--female_self_employed_percent_of_female_employment--by--geo--time"
@@ -18559,26 +18476,6 @@
                     "country",
                     "time"
                 ],
-                "value": "male_salaried_workers_percent_of_non_agricultural_male_employment",
-                "resources": [
-                    "ddf--datapoints--male_salaried_workers_percent_of_non_agricultural_male_employment--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "male_salaried_workers_percent_of_non_agricultural_male_employment",
-                "resources": [
-                    "ddf--datapoints--male_salaried_workers_percent_of_non_agricultural_male_employment--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "male_self_employed_percent_of_male_employment",
                 "resources": [
                     "ddf--datapoints--male_self_employed_percent_of_male_employment--by--geo--time"
@@ -21852,26 +21749,6 @@
                 "value": "rural_poverty_percent_rural_people_below_national_rural",
                 "resources": [
                     "ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "salaried_workers_percent_of_non_agricultural_employment",
-                "resources": [
-                    "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "salaried_workers_percent_of_non_agricultural_employment",
-                "resources": [
-                    "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time"
                 ]
             },
             {
