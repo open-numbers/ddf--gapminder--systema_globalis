@@ -26,9 +26,12 @@
         },
         {
             "id": "he-IL"
+        },
+        {
+            "id": "vi-VN"
         }
     ],
-    "version": "1.13.0",
+    "version": "1.14.0",
     "resources": [
         {
             "path": "ddf--concepts.csv",
