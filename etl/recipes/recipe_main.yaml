@@ -148,7 +148,6 @@ cooking:
               - vip-datapoints-final
               - gbd-total-deaths-datapoints-final
               - gbd-gw-bridged-final
-              - cancer-deaths-datapoints-final
               - static-assets-datapoints
           result: datapoints-final-0
 
