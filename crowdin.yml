@@ -1,7 +1,15 @@
 files:
-  - source: /langsplit/en/**/*.csv
+  - source: /langsplit/en/**/name*.csv
+    translation: /langsplit/%locale%/**/%original_file_name%
+    first_line_contains_header: 1
+    scheme: 'identifier,source_or_translation'
+  - source: /langsplit/en/**/description*.csv
+    translation: /langsplit/%locale%/**/%original_file_name%
+    first_line_contains_header: 1
+    scheme: 'identifier,source_or_translation'
+  - source: /langsplit/en/**/source*.csv
     ignore:
-      - shape_lores_svg.csv
+      - source_url
     translation: /langsplit/%locale%/**/%original_file_name%
     first_line_contains_header: 1
     scheme: 'identifier,source_or_translation'
