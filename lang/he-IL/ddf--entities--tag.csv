@@ -1,86 +1,86 @@
-tag,name,parent
-achievement,הישגים,
-advanced,עבור משתמשים מתקדמים,
-advanced_debt_trade,חוב מתקדם ומסחר,
-aid_given,הסיוע ניתן,
-aid_received,סיוע התקבל,
-alternative_child_mortality_data,נתוני תמותה חלופיים לילדים,
-alternative_demography_indicators,מדדי דמוגרפיה חלופיים,
-alternative_energy,אנרגיה חלופית,
-alternative_gdp_data,"נתוני תמ""ג אלטרנטיביים",
-alternative_health_data,נתוני בריאות אלטרנטיביים,
-alternative_other_data,נתונים אחרים אלטרנטיביים,
-alternative_poverty_measures,מדידת עוני אלטרנטיבית,
-both_sexes_by_age,שני המינים לפי גיל (%),
-both_sexes_by_age_total,"שני המינים לפי גיל (סה""כ)",
-cancer_female,"סרטן, נקבה",
-cancer_male,"סרטן, זכר",
-categorizations,חלוקה לקטגוריות,
-causes_of_child_deaths,גורם תמותה של ילדים,
-causes_of_newborn_deaths,גורם תמותה של ילודים,
-coal,פחם,
-communication,תקשורת,
-data_quality_use_as_color,איכות הנתונים (שימוש כצבע),
-debt_trade,חוב וסחר,
-disasters,אסונות,
-economic_growth,צמיחה כלכלית,
-economic_situation,מצב כלכלי,
-economy,כלכלה,
-education,חינוך,
-electricity,חשמל,
-emissions,פליטות,
-employment_by_sector,תעסוקה לפי מגזר,
-employment_by_status,תעסוקה לפי מעמד,
-employment_rate,שיעור תעסוקה,
-energy,אנרגיה,
-environment,סביבה,
-environment_water,מים,
-families,משפחות,
-female_by_age,נקבה לפי גיל (%),
-forestry,יעור,
-gender_equality,שוויון בין המינים,
-geography,גֵאוֹגרַפיָה,
-geography_infrastructure,גיאוגרפיה ותשתיות,
-health,בריאות,
-health_economics,כלכלת בריאות,
-hiv,איידס,
-hydro,הידרו,
-incomes_growth,הכנסות וצמיחה,
-infrastructure,תשתיות,
-infrastructure_water,מים,
-injuries_and_accidents,פציעות ותאונות,
-injury_deaths_by_gender_age_road_user,"פטירות מוות לפי מין, גיל, משתמש בכביש",
-labour_force_participation,השתתפות בכוח העבודה,
-literacy,אוריינות,
-malaria,מלריה,
-male_by_age,זכר לפי גיל (%),
-maternal_health,בריאות האם,
-mean_years_in_school,שנים ממוצעות בבית הספר,
-mental_health,בריאות הנפש,
-natural_gas,גז טבעי,
-newborn_infants,ילודים ותינוקות,
-nuclear,גרעיני,
-nutrition,תזונה,
-oil,נפט,
-population,אוכלוסיה,
-population_growth,צמיחת אוכלוסין,
+tag,name
+achievement,הישגים
+advanced,עבור משתמשים מתקדמים
+advanced_debt_trade,חוב מתקדם ומסחר
+aid_given,הסיוע ניתן
+aid_received,סיוע התקבל
+alternative_child_mortality_data,נתוני תמותה חלופיים לילדים
+alternative_demography_indicators,מדדי דמוגרפיה חלופיים
+alternative_energy,אנרגיה חלופית
+alternative_gdp_data,"נתוני תמ""ג אלטרנטיביים"
+alternative_health_data,נתוני בריאות אלטרנטיביים
+alternative_other_data,נתונים אחרים אלטרנטיביים
+alternative_poverty_measures,מדידת עוני אלטרנטיבית
+both_sexes_by_age,שני המינים לפי גיל (%)
+both_sexes_by_age_total,"שני המינים לפי גיל (סה""כ)"
+cancer_female,"סרטן, נקבה"
+cancer_male,"סרטן, זכר"
+categorizations,חלוקה לקטגוריות
+causes_of_child_deaths,גורם תמותה של ילדים
+causes_of_newborn_deaths,גורם תמותה של ילודים
+coal,פחם
+communication,תקשורת
+data_quality_use_as_color,איכות הנתונים (שימוש כצבע)
+debt_trade,חוב וסחר
+disasters,אסונות
+economic_growth,צמיחה כלכלית
+economic_situation,מצב כלכלי
+economy,כלכלה
+education,חינוך
+electricity,חשמל
+emissions,פליטות
+employment_by_sector,תעסוקה לפי מגזר
+employment_by_status,תעסוקה לפי מעמד
+employment_rate,שיעור תעסוקה
+energy,אנרגיה
+environment,סביבה
+environment_water,מים
+families,משפחות
+female_by_age,נקבה לפי גיל (%)
+forestry,יעור
+gender_equality,שוויון בין המינים
+geography,גֵאוֹגרַפיָה
+geography_infrastructure,גיאוגרפיה ותשתיות
+health,בריאות
+health_economics,כלכלת בריאות
+hiv,איידס
+hydro,הידרו
+incomes_growth,הכנסות וצמיחה
+infrastructure,תשתיות
+infrastructure_water,מים
+injuries_and_accidents,פציעות ותאונות
+injury_deaths_by_gender_age_road_user,"פטירות מוות לפי מין, גיל, משתמש בכביש"
+labour_force_participation,השתתפות בכוח העבודה
+literacy,אוריינות
+malaria,מלריה
+male_by_age,זכר לפי גיל (%)
+maternal_health,בריאות האם
+mean_years_in_school,שנים ממוצעות בבית הספר
+mental_health,בריאות הנפש
+natural_gas,גז טבעי
+newborn_infants,ילודים ותינוקות
+nuclear,גרעיני
+nutrition,תזונה
+oil,נפט
+population,אוכלוסיה
+population_growth,צמיחת אוכלוסין
 poverty_inequality,"עוני ואי - שוויון
-",
-projections,הקרנות,
-risk_factors,גורמי סיכון,
-sanitation,תברואה,
-school_enrolment,הרשמה לבית הספר,
-schooling_cost,עלות הלימודים,
-sectors,מגזרים,
-sex_ratio,יחס מין,
-society,החברה,
-tb_tuberculosis,שחפת,
-teeth,שיניים,
-total,"סה""כ",
-traffic,תנועה,
-unemployment,אבטלה,
-urbanization,עיור,
-vaccine,חיסונים,
-war_peace,מלחמה ושלום,
-work,עבודה,
-years_use_as_color,שנים (שימוש בצבע),
+"
+projections,הקרנות
+risk_factors,גורמי סיכון
+sanitation,תברואה
+school_enrolment,הרשמה לבית הספר
+schooling_cost,עלות הלימודים
+sectors,מגזרים
+sex_ratio,יחס מין
+society,החברה
+tb_tuberculosis,שחפת
+teeth,שיניים
+total,"סה""כ"
+traffic,תנועה
+unemployment,אבטלה
+urbanization,עיור
+vaccine,חיסונים
+war_peace,מלחמה ושלום
+work,עבודה
+years_use_as_color,שנים (שימוש בצבע)

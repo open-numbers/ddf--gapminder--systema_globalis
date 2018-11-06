@@ -1,5 +1,5 @@
-income_groups,gwid,name
-high_income,,הכנסה גבוהה
-low_income,,הכנסה נמוכה
-lower_middle_income,,הכנסה נמוכה יותר
-upper_middle_income,,הכנסה בינונית עליונה
+income_groups,name
+high_income,הכנסה גבוהה
+low_income,הכנסה נמוכה
+lower_middle_income,הכנסה נמוכה יותר
+upper_middle_income,הכנסה בינונית עליונה
