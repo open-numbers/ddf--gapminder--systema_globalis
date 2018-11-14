@@ -238,7 +238,11 @@
 "imports_unit_value_index_2000100",""
 "income_groups",""
 "income_mountains",""
-"income_per_person_gdppercapita_ppp_inflation_adjusted",""
+"income_per_person_gdppercapita_ppp_inflation_adjusted","ข้อมูลส่วนใหญ่มาจาก
+1. ธนาคารโลก: ข้อมูลในช่วงปี 1990 ถึง 2016 จะตรงกับตัวชี้วัดของธนาคารโลกคือ ผลิตภัณฑ์ในประเทศต่อหัว ตามความเสมอภาคแห่งอํานาจซื้อของปี 2011 (GDP per capita constant PPP 2011) (ยกเว้นบางประเทศที่ประมาณจาก Gapminder เช่น ซีเรียและคิวบา) ดูเพิ่มเติมที่: gapm.io/xwb171
+2. Maddison: ข้อมูลก่อนปี 1990 มาจากการประมาณในอดีตของ Gapminder โดย Mattias Lindgren ซึ่งใช้ข้อมูลของ Maddison ดูเพิ่มเติมที่: gapm.io/histdata
+3. กองทุนการเงินระหว่างประเทศ (IMF): ข้อมูลหลังปี 2016 ใช้ค่าผลิตภัณฑ์ในประเทศต่อหัวจากทำนายของ IMF ใน World Economic Outlook (WEO) 2017, October revision ดูเพิ่มเติมที่:gapm.io/ximfw
+4. การทำนายของ IMF มีถึงปี 2022 เท่านั้น หลังจากนั้นเราใช้การสมมติต่อเนื่องไปจนถึงปี 2040 ว่าทุกประเทศมีอัตราการเติบโตทางเศรษฐกิจอยู่ที่ร้อยละ 2.2 การทำนายที่เราใช้เพื่อแสดงเพียง"
 "income_per_person_long_series",""
 "income_per_person_with_projections",""
 "income_share_of_2nd_poorest_20percent",""
