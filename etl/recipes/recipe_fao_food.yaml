@@ -28,7 +28,7 @@ ingredients:
       dataset: *d1
       key: "geo,year"
       value:
-          - forest_share_in_land_area_ele1
+          - forest_land_share_in_land_area_ele1
 
     - id: fao_food-countries
       dataset: *d1
@@ -75,7 +75,7 @@ cooking:
           options:
               dictionary:
                   year: time
-                  forest_share_in_land_area_ele1: forest_coverage_percent
+                  forest_land_share_in_land_area_ele1: forest_coverage_percent
           result: fao_food-datapoints-alt-chn-translated
 
         - procedure: translate_column
