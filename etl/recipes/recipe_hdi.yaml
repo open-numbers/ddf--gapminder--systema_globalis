@@ -41,11 +41,8 @@ cooking:
               column: name
               target_column: geo
               dictionary:
-                  base: gw-countries
-                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
-                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
-                        'iso3166_1_alpha3', 'iso3166_2']
+                  base: gm-country-synonym
+                  key: synonym
                   value: country
           result: hdi-countries-aligned
 
