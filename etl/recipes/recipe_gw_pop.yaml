@@ -15,27 +15,8 @@ config:
 
 # define your ingredients and procedures below
 ingredients:
-    - id: pop-datapoints
+    - id: pop-datapoints-final
       dataset: *d1
-      key: "country,year"
+      key: geo, time
       value:
           - population_total
-
-cooking:
-    datapoints:
-        - procedure: translate_header
-          ingredients:
-              - pop-datapoints
-          options:
-              dictionary:
-                  country: geo
-                  year: time
-          result: pop-datapoints-translated
-        - procedure: filter
-          ingredients:
-              - pop-datapoints-translated
-          options:
-              row:
-                  time:
-                      $lt: 2019
-          result: pop-datapoints-final

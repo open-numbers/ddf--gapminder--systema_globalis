@@ -15,7 +15,7 @@ config:
 ingredients:
     - id: gdp-datapoints
       dataset: *d1
-      key: "country,year"
+      key: geo, year
       value:
           - income_per_person_gdppercapita_ppp_inflation_adjusted
     # - id: gdp-concepts
@@ -34,14 +34,5 @@ cooking:
               - gdp-datapoints
           options:
               dictionary:
-                  country: geo
                   year: time
-          result: gdp-datapoints-translated
-        - procedure: filter
-          ingredients:
-              - gdp-datapoints-translated
-          options:
-              row:
-                  time:
-                      $lt: 2019  # only include datapoints from 1800 to 2018
           result: gdp-datapoints-final
