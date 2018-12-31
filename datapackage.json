@@ -3,7 +3,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-09-28T07:38:38.162289+00:00",
+    "created": "2018-11-04T08:25:30.708697+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -26,9 +26,15 @@
         },
         {
             "id": "he-IL"
+        },
+        {
+            "id": "vi-VN"
+        },
+        {
+            "id": "th-TH"
         }
     ],
-    "version": "1.14.0",
+    "version": "1.15.1",
     "resources": [
         {
             "path": "ddf--concepts.csv",

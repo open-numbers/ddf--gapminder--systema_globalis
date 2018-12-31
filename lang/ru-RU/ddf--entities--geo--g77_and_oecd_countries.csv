@@ -1,4 +1,4 @@
-g77_and_oecd_countries,gwid,name
-g77,,
-oecd,,
-others,,
+g77_and_oecd_countries,name
+g77,ГРУППА 77
+oecd,ОЭСР
+others,Другие

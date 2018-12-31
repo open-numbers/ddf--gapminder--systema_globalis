@@ -34,3 +34,9 @@ ingredients:
       dataset: open-numbers/ddf--gapminder--geo_entity_domain
       key: country
       value: "*"
+
+    # country synonyms
+    -
+        id: gm-country-synonym
+        dataset: open-numbers/ddf--gapminder--geo_entity_domain
+        key: country, synonym

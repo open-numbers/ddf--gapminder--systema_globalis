@@ -1,5 +1,5 @@
-income_groups,gwid,name
-high_income,,
-low_income,,
-lower_middle_income,,
-upper_middle_income,,
+income_groups,name
+high_income,
+low_income,
+lower_middle_income,
+upper_middle_income,

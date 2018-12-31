@@ -1,85 +1,85 @@
-tag,name,parent
-achievement,,
-advanced,,
-advanced_debt_trade,,
-aid_given,,
-aid_received,,
-alternative_child_mortality_data,,
-alternative_demography_indicators,,
-alternative_energy,,
-alternative_gdp_data,,
-alternative_health_data,,
-alternative_other_data,,
-alternative_poverty_measures,,
-both_sexes_by_age,,
-both_sexes_by_age_total,,
-cancer_female,,
-cancer_male,,
-categorizations,,
-causes_of_child_deaths,,
-causes_of_newborn_deaths,,
-coal,,
-communication,,
-data_quality_use_as_color,,
-debt_trade,,
-disasters,,
-economic_growth,,
-economic_situation,,
-economy,,
-education,,
-electricity,,
-emissions,,
-employment_by_sector,,
-employment_by_status,,
-employment_rate,,
-energy,,
-environment,,
-environment_water,,
-families,,
-female_by_age,,
-forestry,,
-gender_equality,,
-geography,,
-geography_infrastructure,,
-health,,
-health_economics,,
-hiv,,
-hydro,,
-incomes_growth,,
-infrastructure,,
-infrastructure_water,,
-injuries_and_accidents,,
-injury_deaths_by_gender_age_road_user,,
-labour_force_participation,,
-literacy,,
-malaria,,
-male_by_age,,
-maternal_health,,
-mean_years_in_school,,
-mental_health,,
-natural_gas,,
-newborn_infants,,
-nuclear,,
-nutrition,,
-oil,,
-population,,
-population_growth,,
-poverty_inequality,,
-projections,,
-risk_factors,,
-sanitation,,
-school_enrolment,,
-schooling_cost,,
-sectors,,
-sex_ratio,,
-society,,
-tb_tuberculosis,,
-teeth,,
-total,,
-traffic,,
-unemployment,,
-urbanization,,
-vaccine,,
-war_peace,,
-work,,
-years_use_as_color,,
+tag,name
+achievement,Достижения
+advanced,Для опытных пользователей
+advanced_debt_trade,Больше данных про долги и торговлю
+aid_given,Оказанная гуманитарная помощь
+aid_received,Полученная гуманитарная помощь
+alternative_child_mortality_data,Прочие данные по детской смертности
+alternative_demography_indicators,Прочие данные по демографии
+alternative_energy,Прочие данные по энергетике
+alternative_gdp_data,Прочие данные по ВВП
+alternative_health_data,Прочие данные по здравоохранению
+alternative_other_data,Прочие данные
+alternative_poverty_measures,Прочие данные по бедности
+both_sexes_by_age,М+Ж по возрасту (%)
+both_sexes_by_age_total,М+Ж по возрасту (число)
+cancer_female,"Рак, женщины"
+cancer_male,"Рак, мужчины"
+categorizations,Категории
+causes_of_child_deaths,Причины детской смертности
+causes_of_newborn_deaths,Причины младенческой смертности
+coal,Уголь
+communication,Коммуникации
+data_quality_use_as_color,Качество данных (использовать как цвет)
+debt_trade,Долг и торговля
+disasters,Стихийные бедствия
+economic_growth,Экономический рост
+economic_situation,Экономическая ситуация
+economy,Экономика
+education,Образование
+electricity,Электричество
+emissions,Выбросы
+employment_by_sector,Занятость по секторам
+employment_by_status,Занятость по статусу
+employment_rate,Уровень занятости
+energy,Энергия
+environment,Экология
+environment_water,Вода
+families,Семьи
+female_by_age,Ж по возрасту (%)
+forestry,Лесное хозяйство
+gender_equality,Гендерное равенство
+geography,География
+geography_infrastructure,География и инфраструктура
+health,Здравоохронение
+health_economics,Экономика здравоохранения
+hiv,ВИЧ
+hydro,Гидроэнергия
+incomes_growth,Доход и экономический рост
+infrastructure,Инфраструктура
+infrastructure_water,Вода
+injuries_and_accidents,Травмы и несчастные случаи
+injury_deaths_by_gender_age_road_user,"Травмы умерших по полу, возрасту, дорожной ситуации"
+labour_force_participation,Участия в рабочей силе
+literacy,Грамотность
+malaria,Малярия
+male_by_age,М по возрасту (%)
+maternal_health,Материнское здоровье
+mean_years_in_school,Среднее количество лет в школе
+mental_health,Психическое здоровье
+natural_gas,Природный газ
+newborn_infants,Новорождённые и младенцы
+nuclear,Ядерная энергетика
+nutrition,Питание
+oil,Нефть
+population,Население
+population_growth,Рост населения
+poverty_inequality,Бедность & неравенство
+projections,Прогнозы
+risk_factors,Факторы риска
+sanitation,Канализация
+school_enrolment,Охват школьного образования
+schooling_cost,Стоимость обучения
+sectors,Секторы
+sex_ratio,Соотношение полов
+society,Общество
+tb_tuberculosis,Туберкулёз
+teeth,Зубы
+total,Всего
+traffic,Транспорт
+unemployment,Безработица
+urbanization,Урбанизация
+vaccine,Вакцины
+war_peace,Война & мир
+work,Работа
+years_use_as_color,Год (использовать как цвет)

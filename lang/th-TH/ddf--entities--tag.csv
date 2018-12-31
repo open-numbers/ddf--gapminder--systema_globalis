@@ -1,0 +1,85 @@
+tag,name
+achievement,ความสำเร็จ
+advanced,สำหรับผู้ใช้ขั้นสูง
+advanced_debt_trade,หนี้และการค้า (ขั้นสูง)
+aid_given,ความช่วยเหลือที่ให้
+aid_received,ความช่วยเหลือที่ได้รับ
+alternative_child_mortality_data,ข้อมูลอื่นของการเสียชีวิตของเด็ก
+alternative_demography_indicators,ตัวชี้วัดประชากรอื่น
+alternative_energy,พลังงานอื่น
+alternative_gdp_data,ข้อมูลผลิตภัณฑ์ในประเทศอื่น
+alternative_health_data,ข้อมูลสุขภาพอื่น
+alternative_other_data,ข้อมูลอื่น ๆ
+alternative_poverty_measures,วิธีวัดความยากจนอื่น
+both_sexes_by_age,ร้อยละของทั้งสองเพศตามอายุ
+both_sexes_by_age_total,จำนวนของทั้งสองเพศตามอายุ
+cancer_female,"มะเร็ง, ผู้หญิง"
+cancer_male,"มะเร็ง, ผู้ชาย"
+categorizations,การจัดประเภท
+causes_of_child_deaths,สาเหตุของการเสียชีวิตของเด็ก
+causes_of_newborn_deaths,สาเหตุของการเสียชีวิตของทารกแรกเกิด
+coal,ถ่าน
+communication,การสื่อสาร
+data_quality_use_as_color,คุณภาพข้อมูล (ใช้เป็นสี)
+debt_trade,หนี้และการค้า
+disasters,วินาศภัย
+economic_growth,การเติบโตทางเศรษฐกิจ
+economic_situation,สถานการณ์ทางเศรษฐกิจ
+economy,เศรษฐกิจ
+education,การศึกษา
+electricity,ไฟฟ้า
+emissions,การปลดปล่อย
+employment_by_sector,การจ้างงานตามภาคส่วน
+employment_by_status,การจ้างงานตามสถานะ
+employment_rate,อัตราการจ้างงาน
+energy,พลังงาน
+environment,สิ่งแวดล้อม
+environment_water,น้ำ
+families,ครอบครัว
+female_by_age,ร้อยละของเพศหญิงตามอายุ
+forestry,ป่าไม้
+gender_equality,ความเท่าเทียมทางเพศ
+geography,ภูมิศาสตร์
+geography_infrastructure,ภูมิศาสตร์และโครงสร้างพื้นฐาน
+health,สุขภาพ
+health_economics,เศรษฐศาสตร์สาธารณสุข
+hiv,เอชไอวี
+hydro,พลังงานน้ำ
+incomes_growth,รายได้และการเจริญเติบโต
+infrastructure,โครงสร้างพื้นฐาน
+infrastructure_water,น้ำ
+injuries_and_accidents,การบาดเจ็บและอุบัติเหตุ
+injury_deaths_by_gender_age_road_user,การเสียชีวิตจากการได้รับบาดเจ็บตามเพศ อายุ และผู้ใช้ถนน
+labour_force_participation,อัตราการมีส่วนร่วมในกําลังแรงงาน
+literacy,การรู้หนังสือ
+malaria,มาลาเรีย
+male_by_age,ร้อยละของเพศชายตามอายุ
+maternal_health,สุขภาพของมารดา
+mean_years_in_school,ระยะเวลาที่เข้าเรียนเฉลี่ย (ปี)
+mental_health,สุขภาพจิต
+natural_gas,แก๊สธรรมชาติ
+newborn_infants,ทารกแรกเกิดและทารก
+nuclear,นิวเคลียร์
+nutrition,โภชนาการ
+oil,น้ำมัน
+population,ประชากร
+population_growth,การเพิ่มขึ้นของประชากร
+poverty_inequality,ความยากจนและความเหลื่อมล้ำ
+projections,คาดการณ์
+risk_factors,ปัจจัยเสี่ยง
+sanitation,สุขาภิบาล
+school_enrolment,การเข้าเรียนในโรงเรียน
+schooling_cost,ค่าใช้จ่ายในการศึกษา
+sectors,ภาคส่วน
+sex_ratio,อัตราส่วนเพศ
+society,สังคม
+tb_tuberculosis,วัณโรค
+teeth,ฟัน
+total,ทั้งหมด
+traffic,การจราจร
+unemployment,อัตราการว่างงาน
+urbanization,การกลายเป็นเมือง
+vaccine,วัคซีน
+war_peace,สงครามและสันติภาพ
+work,งาน
+years_use_as_color,ปี (ใช้เป็นสี)

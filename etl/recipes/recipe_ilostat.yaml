@@ -67,9 +67,6 @@ ingredients:
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area, classif1, time
         value:
-            - ees_fnag_noc_rt
-            - ees_mnag_noc_rt
-            - ees_tnag_noc_rt
             - emp_fcfw_noc_rt
             - emp_mcfw_noc_rt
             - emp_tagr_noc_rt
@@ -79,16 +76,21 @@ ingredients:
             - gdp_205u_noc_nb
             - how_temp_noc_nb
             - lac_4hpt_noc_nb
+
+    -
+        id: ilo-nag-indicators
+        dataset: open-numbers/ddf--ilo--ilostat
+        key: ref_area, time
+        value:
+            - ees_fnag_noc_rt
+            - ees_mnag_noc_rt
+            - ees_tnag_noc_rt
+
     -
         id: ilo-ref_area
         dataset: open-numbers/ddf--ilo--ilostat
         key: ref_area
 
-    # country synonyms
-    -
-        id: gm-country-synonym
-        dataset: open-numbers/ddf--gapminder--geo_entity_domain
-        key: country, synonym
 
 # end of ingredients
 
@@ -477,6 +479,24 @@ cooking:
                 dictionary: indicators_ilostat_to_sg.json
             result: ilo-noc-indicators-final
 
+        # group: nag
+        - procedure: translate_column
+          ingredients:
+            - ilo-nag-indicators
+          result: ilo-nag-indicators-area-aligned
+          options:
+              column: ref_area
+              dictionary:
+                  base: ilo-ref_area-aligned
+                  key: ref_area
+                  value: ref_area_new
+        -
+            procedure: translate_header
+            ingredients:
+                - ilo-nag-indicators-area-aligned
+            options:
+                dictionary: indicators_ilostat_to_sg.json
+            result: ilo-nag-indicators-final
 
         # serving
         -
@@ -489,4 +509,5 @@ cooking:
                 - ilo-noc-indicators-final
                 - ilo-unemployment-rate-final
                 - ilo-employment-state-final
+                - ilo-nag-indicators-final
             result: ilo-datapoints-final

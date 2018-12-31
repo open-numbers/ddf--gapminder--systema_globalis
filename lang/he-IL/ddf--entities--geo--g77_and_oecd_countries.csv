@@ -1,4 +1,4 @@
-g77_and_oecd_countries,gwid,name
-g77,,G77
-oecd,,OECD
-others,,שונות
+g77_and_oecd_countries,name
+g77,G77
+oecd,OECD
+others,שונות
