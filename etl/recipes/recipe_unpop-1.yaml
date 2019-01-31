@@ -25,15 +25,13 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-1
           options:
-              filters:
-                  crudedeathrateper1000population:
-                      variant: estimates
-                  populationgrowthrate:
-                      variant: estimates
+              row:
+                variant:
+                    - estimates
           result: unpop-datapoints-1-1-before2015-0
         - procedure: groupby
           ingredients:
@@ -45,15 +43,13 @@ cooking:
               aggregate:
                   "*": sum
           result: unpop-datapoints-1-1-before2015
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-1
           options:
               filters:
-                  crudedeathrateper1000population:
-                      variant: medium_variant
-                  populationgrowthrate:
-                      variant: medium_variant
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-1-1-after2015-0
         - procedure: groupby
           ingredients:

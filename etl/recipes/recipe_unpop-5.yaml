@@ -27,17 +27,13 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-5
           options:
-              filters:
-                  medianageofpopulation:
-                      variant: estimates
-                  dependencyratio1564:
-                      variant: estimates
-                  populationdensitypersqkm:
-                      variant: estimates
+              row:
+                  variant:
+                      - estimates
           result: unpop-datapoints-5-before2015-0
         - procedure: groupby
           ingredients:
@@ -50,17 +46,13 @@ cooking:
                   "*": sum
           result: unpop-datapoints-5-before2015
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-5
           options:
-              filters:
-                  medianageofpopulation:
-                      variant: medium_variant
-                  dependencyratio1564:
-                      variant: medium_variant
-                  populationdensitypersqkm:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-5-after2015-0
         - procedure: groupby
           ingredients:

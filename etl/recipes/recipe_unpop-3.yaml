@@ -54,11 +54,11 @@ cooking:
                   population: population * 1000
           result: unpop-datapoints-3-1-1
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-1-1
           options:
-              filters:
+              row:
                   population:
                       variant: estimates
           result: unpop-datapoints-3-1-before2015-0
@@ -73,13 +73,13 @@ cooking:
               aggregate:
                   "*": sum
           result: unpop-datapoints-3-1-before2015
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-1-1
           options:
-              filters:
-                  population:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-3-1-after2015-0
         - procedure: groupby
           ingredients:
@@ -143,13 +143,13 @@ cooking:
                   population: population * 1000
           result: unpop-datapoints-3-2-1
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-2-1
           options:
-              filters:
-                  population:
-                      variant: estimates
+              row:
+                  variant:
+                      - estimates
           result: unpop-datapoints-3-2-before2015-0
         - procedure: groupby
           ingredients:
@@ -162,13 +162,13 @@ cooking:
               aggregate:
                   "*": sum
           result: unpop-datapoints-3-2-before2015
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-2-1
           options:
-              filters:
-                  population:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-3-2-after2015-0
         - procedure: groupby
           ingredients:
@@ -211,13 +211,12 @@ cooking:
                   population: "population_aged_{age5yearinterval}_years_total_number"
           result: unpop-datapoints-3-2-final-1
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-2-country-year-aligned
           options:
-              filters:
-                  population:
-                      age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
+              row:
+                  age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
           result: unpop-datapoints-3-2-filtered-1
 
         - procedure: translate_header
@@ -228,13 +227,12 @@ cooking:
                   population: population_aged_20_39_years_total_number
           result: unpop-datapoints-3-2-translated-1
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-2-country-year-aligned
           options:
-              filters:
-                  population:
-                      age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
+              row:
+                  age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
           result: unpop-datapoints-3-2-filtered-2
 
         - procedure: translate_header
@@ -245,15 +243,14 @@ cooking:
                   population: population_aged_40_59_years_total_number
           result: unpop-datapoints-3-2-translated-2
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-2-country-year-aligned
           options:
-              filters:
-                  population:
-                      age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
-                                         '80plus', '80_84', '85_89', '90_94',
-                                         '95_99', '100plus']
+              row:
+                  age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
+                                     '80plus', '80_84', '85_89', '90_94',
+                                     '95_99', '100plus']
           result: unpop-datapoints-3-2-filtered-3
 
         - procedure: translate_header
@@ -299,13 +296,13 @@ cooking:
                   population: population * 1000
           result: unpop-datapoints-3-3-1
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-3-1
           options:
-              filters:
-                  population:
-                      variant: estimates
+              row:
+                  variant:
+                      - estimates
           result: unpop-datapoints-3-3-before2015-0
         - procedure: groupby
           ingredients:
@@ -318,13 +315,13 @@ cooking:
                   "*": sum
           result: unpop-datapoints-3-3-before2015
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-3-1
           options:
-              filters:
-                  population:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-3-3-after2015-0
         - procedure: groupby
           ingredients:
@@ -370,13 +367,13 @@ cooking:
               op:
                   population: population * 1000
           result: unpop-datapoints-3-4-1
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-1
           options:
-              filters:
-                  population:
-                      variant: estimates
+              row:
+                  variant:
+                      - estimates
           result: unpop-datapoints-3-4-before2015-0
         - procedure: groupby
           ingredients:
@@ -390,13 +387,13 @@ cooking:
               aggregate:
                   "*": sum
           result: unpop-datapoints-3-4-before2015
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-1
           options:
-              filters:
-                  population:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-3-4-after2015-0
         - procedure: groupby
           ingredients:
@@ -439,14 +436,15 @@ cooking:
                   population: "pop_{age5yearinterval}_{gender}"
           result: unpop-datapoints-3-4-g1
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-country-year-aligned
           result: unpop-datapoints-3-4-g2-1
           options:
-              filters:
-                  population:
-                      gender: male
+              row:
+                  $and:
+                      gender:
+                          - male
                       age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
 
         - procedure: translate_header
@@ -457,14 +455,15 @@ cooking:
                   population: pop_20_39_male
           result: unpop-datapoints-3-4-g2-1-translated
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-country-year-aligned
           result: unpop-datapoints-3-4-g2-2
           options:
-              filters:
-                  population:
-                      gender: male
+              row:
+                  $and:
+                      gender:
+                          - male
                       age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
 
         - procedure: translate_header
@@ -475,14 +474,15 @@ cooking:
                   population: pop_40_59_male
           result: unpop-datapoints-3-4-g2-2-translated
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-country-year-aligned
           result: unpop-datapoints-3-4-g2-3
           options:
-              filters:
-                  population:
-                      gender: male
+              row:
+                  $and:
+                      gender:
+                          - male
                       age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
                                          '80plus', '80_84', '85_89', '90_94',
                                          '95_99', '100plus']
@@ -495,14 +495,15 @@ cooking:
                   population: pop_60plus_male
           result: unpop-datapoints-3-4-g2-3-translated
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-country-year-aligned
           result: unpop-datapoints-3-4-g2-4
           options:
-              filters:
-                  population:
-                      gender: female
+              row:
+                  $and:
+                      gender:
+                          - female
                       age5yearinterval: ["20_24", "25_29", "30_34", "35_39"]
 
         - procedure: translate_header
@@ -513,14 +514,15 @@ cooking:
                   population: pop_20_39_female
           result: unpop-datapoints-3-4-g2-4-translated
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-country-year-aligned
           result: unpop-datapoints-3-4-g2-5
           options:
-              filters:
-                  population:
-                      gender: female
+              row:
+                  $and:
+                      gender:
+                          - female
                       age5yearinterval: ["40_44", "45_49", "50_54", "55_59"]
 
         - procedure: translate_header
@@ -531,14 +533,15 @@ cooking:
                   population: pop_40_59_female
           result: unpop-datapoints-3-4-g2-5-translated
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-4-country-year-aligned
           result: unpop-datapoints-3-4-g2-6
           options:
-              filters:
-                  population:
-                      gender: female
+              row:
+                  $and:
+                      gender:
+                          - female
                       age5yearinterval: ['60_64', '65_69', '70_74', '75_79',
                                          '80plus', '80_84', '85_89', '90_94',
                                          '95_99', '100plus']
@@ -638,12 +641,12 @@ cooking:
                       pop_60plus_female / female_population_with_projections * 100
           result: unpop-datapoints-3-final-0
 
-        - procedure: filter_item
+        - procedure: filter
           ingredients:
               - unpop-datapoints-3-final-0
           result: unpop-datapoints-3-final
           options:
-              items:
+              item:
                   - female_population_with_projections
                   - male_population_with_projections
                   - population_aged_0_4_years_both_sexes_percent

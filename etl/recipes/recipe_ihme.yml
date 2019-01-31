@@ -172,11 +172,11 @@ cooking:
                       mean_years_in_school_women_65_plus_years
           result: edu-datapoints-flatten-translated
 
-        - procedure: filter_item
+        - procedure: filter
           ingredients:
               - edu-datapoints-flatten-translated
           options:
-              items:
+              item:
                   - mean_years_in_school_men_25_to_34_years
                   - mean_years_in_school_women_25_to_34_years
                   - mean_years_in_school_men_15_to_24_years

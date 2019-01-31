@@ -24,13 +24,13 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-2
           options:
-              filters:
-                  lifeexpectancyatbirth:
-                      variant: estimates
+              row:
+                variant:
+                    - estimates
           result: unpop-datapoints-2-1-before2015-0
         - procedure: groupby
           ingredients:
@@ -43,13 +43,13 @@ cooking:
               aggregate:
                   "*": sum
           result: unpop-datapoints-2-1-before2015
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-2
           options:
-              filters:
-                  lifeexpectancyatbirth:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-2-1-after2015-0
         - procedure: groupby
           ingredients:
