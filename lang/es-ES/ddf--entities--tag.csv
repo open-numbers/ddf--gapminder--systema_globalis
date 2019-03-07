@@ -1,85 +1,85 @@
 tag,name
-achievement,
-advanced,
-advanced_debt_trade,
-aid_given,
-aid_received,
-alternative_child_mortality_data,
-alternative_demography_indicators,
-alternative_energy,
-alternative_gdp_data,
-alternative_health_data,
-alternative_other_data,
-alternative_poverty_measures,
-both_sexes_by_age,
-both_sexes_by_age_total,
-cancer_female,
-cancer_male,
-categorizations,
-causes_of_child_deaths,
-causes_of_newborn_deaths,
-coal,
-communication,
-data_quality_use_as_color,
-debt_trade,
-disasters,
-economic_growth,
-economic_situation,
-economy,
-education,
-electricity,
-emissions,
-employment_by_sector,
-employment_by_status,
-employment_rate,
-energy,
-environment,
-environment_water,
-families,
-female_by_age,
-forestry,
-gender_equality,
-geography,
-geography_infrastructure,
-health,
-health_economics,
-hiv,
-hydro,
-incomes_growth,
-infrastructure,
-infrastructure_water,
-injuries_and_accidents,
-injury_deaths_by_gender_age_road_user,
-labour_force_participation,
-literacy,
-malaria,
-male_by_age,
-maternal_health,
-mean_years_in_school,
-mental_health,
-natural_gas,
-newborn_infants,
-nuclear,
-nutrition,
-oil,
-population,
-population_growth,
-poverty_inequality,
-projections,
-risk_factors,
-sanitation,
-school_enrolment,
-schooling_cost,
-sectors,
-sex_ratio,
-society,
-tb_tuberculosis,
-teeth,
-total,
-traffic,
-unemployment,
-urbanization,
-vaccine,
-war_peace,
-work,
-years_use_as_color,
+achievement,Logro
+advanced,Para usuarios avanzados
+advanced_debt_trade,Deuda & Comercio avanzado
+aid_given,Ayuda prestada
+aid_received,Ayuda recibida
+alternative_child_mortality_data,Datos alternativos de mortalidad infantil
+alternative_demography_indicators,Indicadores de demografía alternativos
+alternative_energy,Energía alternativa
+alternative_gdp_data,Datos del PIB alternativos
+alternative_health_data,Datos alternativos de salud
+alternative_other_data,Datos otros alternativos
+alternative_poverty_measures,Medidas alternativas de pobreza
+both_sexes_by_age,Ambos sexos por edad (%)
+both_sexes_by_age_total,Ambos sexos por edad (total)
+cancer_female,"Cáncer, mujeres"
+cancer_male,"Cáncer, hombres"
+categorizations,Categorizaciónes
+causes_of_child_deaths,Causas de muertes infantiles
+causes_of_newborn_deaths,Causas de muertes de recién nacidas
+coal,Carbón
+communication,Comunicación
+data_quality_use_as_color,Calidad de los datos (uso como color)
+debt_trade,Deuda y comercio
+disasters,Desastres
+economic_growth,Crecimiento económico
+economic_situation,Situación económica
+economy,Economía
+education,Educación
+electricity,Electricidad
+emissions,Emisiones
+employment_by_sector,Empleo por sector
+employment_by_status,Empleo por status
+employment_rate,Tasa de empleo
+energy,Energía
+environment,Medio ambiente
+environment_water,Agua
+families,familias
+female_by_age,Mujer por edad (%)
+forestry,Silvicultura
+gender_equality,Igualdad de género
+geography,Geografía
+geography_infrastructure,Geografía e infraestructura
+health,Salud
+health_economics,Economía de la salud
+hiv,VIH
+hydro,Hidráulica
+incomes_growth,Ingresos y crecimiento
+infrastructure,Infraestructura
+infrastructure_water,Agua
+injuries_and_accidents,Lesiones y accidentes
+injury_deaths_by_gender_age_road_user,"Muertes de lesiones por género, edad, usuario de carretera"
+labour_force_participation,Participación de la fuerza laboral
+literacy,Alfabetización
+malaria,Malaria
+male_by_age,Hombre por edad (%)
+maternal_health,Salud materna
+mean_years_in_school,Promedio de años escolares
+mental_health,Salud Mental
+natural_gas,Gas natural
+newborn_infants,Recién nacido y lactantes
+nuclear,Nuclear
+nutrition,Nutrición
+oil,Petróleo
+population,Población
+population_growth,Incremento de Población
+poverty_inequality,Pobreza & desigualdad
+projections,Proyecciones
+risk_factors,Factores de riesgo
+sanitation,Saneamiento
+school_enrolment,Matriculación escolar
+schooling_cost,Coste de la escolarización
+sectors,Sectores
+sex_ratio,Proporción de sexos
+society,Sociedad
+tb_tuberculosis,TB (tuberculosis)
+teeth,Dientes
+total,Total
+traffic,Tráfico
+unemployment,Desempleo
+urbanization,Urbanización
+vaccine,Vacuna
+war_peace,Guerra y paz
+work,Trabajo
+years_use_as_color,Años (uso como color)

@@ -1,5 +1,5 @@
 world_4region,description,name,name_long,name_short
-africa,,,,
-americas,,,,
-asia,,,,
-europe,,,,
+africa,"Todo el continente africano, Madagascar y algunas islas conforman aproximadamente una cuarta parte de la superficie terrestre del mundo.",África,"El continente africano, incluyendo Madagascar y otras islas",África
+americas,"América del norte, sur y central conforman aproximadamente una cuarta parte de la superficie terrestre del mundo.",Las Americas,"América del Norte, Sur y Centro",América
+asia,"Asia como se define en Gapminder, conforma aproximadamente una cuarta parte de la superficie terrestre del mundo.",Asia,"Australia, Islas del Pacífico, sur y sureste de Asia",Asia
+europe,"Europa occidental y Oriental incluyendo Rusia en su totalidad y los países del Asia central. Este grupo así definido por Gapminder, conforma aproximadamente una cuarta parte de la superficie terrestre del mundo.",Europa,"Asia central, Europa del Este & Oeste ",Europa
