@@ -1,14 +1,14 @@
 country,name
-abkh,
+abkh,Abjasia
 abw,Aruba
 afg,Afganistán
 ago,Angola
 aia,Anguila
-akr_a_dhe,
-ala,
+akr_a_dhe,Akrotiri y Dhekelia
+ala,Aland
 alb,Albania
 and,Andorra
-ant,
+ant,Antillas Holandesas
 are,Emiratos Árabes Unidos
 arg,Argentina
 arm,Armenia
@@ -40,9 +40,9 @@ bwa,Botsuana
 caf,República Centroafricana
 can,Canadá
 cck,Islas Cocos
-chanisl,
+chanisl,islas anglonormandas
 che,Suiza
-cheslo,
+cheslo,Checoslovaquia
 chl,Chile
 chn,China
 civ,Côte d’Ivoire
@@ -58,11 +58,11 @@ cub,Cuba
 cxr,Isla de Navidad
 cym,Islas Caimán
 cyp,Chipre
-cyp_nor,
+cyp_nor,Norte de Chipre
 cze,República Checa
 deu,Alemania
-deu_east,
-deu_west,
+deu_east,Alemania Oriental
+deu_west,Alemania Occidental
 dji,Yibuti
 dma,Dominica
 dnk,Dinamarca
@@ -71,7 +71,7 @@ dza,Argelia
 ecu,Ecuador
 egy,Egipto
 eri,Eritrea
-eri_a_eth,
+eri_a_eth,Eritrea y Etiopía
 esh,Sáhara Occidental
 esp,España
 est,Estonia
@@ -80,7 +80,7 @@ fin,Finlandia
 fji,Fiyi
 flk,Islas Malvinas
 fra,Francia
-fra_antarc,
+fra_antarc,Tierras Australes y Antárticas Francesas
 fra_clipperton,Isla Clipperton
 fro,Islas Feroe
 fsm,Micronesia
@@ -130,7 +130,7 @@ khm,Camboya
 kir,Kiribati
 kna,San Cristóbal y Nieves
 kor,Corea del Sur
-korea_union,
+korea_union,"Corea (anterior, unida)"
 kos,Kosovo
 kwt,Kuwait
 lao,Laos
@@ -173,11 +173,11 @@ ncl,Nueva Caledonia
 ner,Níger
 nfk,Isla Norfolk
 nga,Nigeria
-ngokar,
+ngokar,Ngorno-Karabaj
 nic,Nicaragua
 niu,Niue
 nld,Países Bajos
-nld_curacao,
+nld_curacao,Curazao
 nor,Noruega
 npl,Nepal
 nru,Nauru
@@ -196,8 +196,8 @@ prk,Corea del Norte
 prt,Portugal
 pry,Paraguay
 pse,Territorios Palestinos
-pse_gaza,
-pse_west_bank,
+pse_gaza,Franja de Gaza
+pse_west_bank,Cisjordania
 pyf,Polinesia Francesa
 qat,Catar
 reu,Reunión
@@ -205,8 +205,8 @@ rou,Rumanía
 rus,Rusia
 rwa,Ruanda
 sau,Arabia Saudí
-scg,
-scg_ex_kos,
+scg,Serbia y Montenegro
+scg_ex_kos,Serbia excluyendo Kosovo
 sdn,Sudán
 sen,Senegal
 sgero_a_ssandw,Islas Georgia del Sur y Sandwich del Sur
@@ -218,13 +218,13 @@ sle,Sierra Leona
 slv,El Salvador
 smr,San Marino
 som,Somalia
-som_somland,
-sosset,
+som_somland,Somalilandia
+sosset,Osetia del Sur
 spm,San Pedro y Miquelón
 srb,Serbia
 ssd,Sudán del Sur
 stbar,San Bartolomé
-stmar,
+stmar,St. Martin
 stp,Santo Tomé y Príncipe
 sur,Surinam
 svk,Eslovaquia
@@ -243,7 +243,7 @@ tkl,Tokelau
 tkm,Turkmenistán
 tls,Timor-Leste
 ton,Tonga
-transn,
+transn,Transnistria
 tto,Trinidad y Tobago
 tun,Túnez
 tur,Turquía
@@ -255,7 +255,7 @@ ukr,Ucrania
 ury,Uruguay
 usa,Estados Unidos
 usa_minor_out_isl,Islas menores alejadas de EE. UU.
-ussr,
+ussr,URSS
 uzb,Uzbekistán
 vct,San Vicente y las Granadinas
 ven,Venezuela
@@ -266,8 +266,8 @@ vut,Vanuatu
 wlf,Wallis y Futuna
 wsm,Samoa
 yem,Yemen
-yem_north,
-yem_south,
+yem_north,Yemen del norte (anterior)
+yem_south,Yemen del Sur (anterior)
 yug,Yugoslavia
 zaf,Sudáfrica
 zmb,Zambia
