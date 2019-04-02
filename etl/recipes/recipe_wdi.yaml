@@ -153,7 +153,7 @@ cooking:
               dictionary:
                 base: gm-country-synonym
                 key: synonym
-                value: country
+                value: geo
           result: wdi-country-aligned
         - procedure: translate_column
           ingredients: [wdi-datapoints-translated_]

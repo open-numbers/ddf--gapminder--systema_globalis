@@ -39,4 +39,4 @@ ingredients:
     -
         id: gm-country-synonym
         dataset: open-numbers/ddf--open_numbers
-        key: country, synonym
+        key: geo, synonym

@@ -107,7 +107,7 @@ cooking:
                 dictionary:
                     base: gm-country-synonym
                     key: synonym
-                    value: country
+                    value: geo
             result: ilo-ref_area-aligned
 
         # group: employment-rate

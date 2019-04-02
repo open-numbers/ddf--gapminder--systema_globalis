@@ -82,7 +82,7 @@ cooking:
               dictionary:
                   base: gm-country-synonym
                   key: synonym
-                  value: country
+                  value: geo
           result: unpop-countries-aligned
 
         - procedure: translate_column

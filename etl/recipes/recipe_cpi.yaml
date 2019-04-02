@@ -46,7 +46,7 @@ cooking:
               dictionary:
                   base: gm-country-synonym
                   key: synonym
-                  value: country
+                  value: geo
           result: cpi-countries-aligned
 
         - procedure: translate_column
