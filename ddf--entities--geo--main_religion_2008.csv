@@ -1,4 +1,4 @@
-main_religion_2008,gwid,is--main_religion_2008,name,rank
-christian,i279,TRUE,Christian,3
-eastern_religions,i281,TRUE,Eastern religions,1
-muslim,i280,TRUE,Muslim,2
+main_religion_2008,is--main_religion_2008,name,rank
+christian,TRUE,Christian,3
+eastern_religions,TRUE,Eastern religions,1
+muslim,TRUE,Muslim,2
