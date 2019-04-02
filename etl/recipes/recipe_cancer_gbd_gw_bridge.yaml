@@ -86,7 +86,7 @@ cooking:
       target_column: location_new
       dictionary:
         base: gm-country-synonym
-        value: key
+        value: geo
         key: synonym
       column: name
   - ingredients:
