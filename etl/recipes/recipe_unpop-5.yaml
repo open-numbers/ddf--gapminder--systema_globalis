@@ -27,17 +27,13 @@ ingredients:
 
 cooking:
     datapoints:
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-5
           options:
-              filters:
-                  medianageofpopulation:
-                      variant: estimates
-                  dependencyratio1564:
-                      variant: estimates
-                  populationdensitypersqkm:
-                      variant: estimates
+              row:
+                  variant:
+                      - estimates
           result: unpop-datapoints-5-before2015-0
         - procedure: groupby
           ingredients:
@@ -50,17 +46,13 @@ cooking:
                   "*": sum
           result: unpop-datapoints-5-before2015
 
-        - procedure: filter_row
+        - procedure: filter
           ingredients:
               - unpop-datapoints-5
           options:
-              filters:
-                  medianageofpopulation:
-                      variant: medium_variant
-                  dependencyratio1564:
-                      variant: medium_variant
-                  populationdensitypersqkm:
-                      variant: medium_variant
+              row:
+                  variant:
+                      - medium_variant
           result: unpop-datapoints-5-after2015-0
         - procedure: groupby
           ingredients:
@@ -88,13 +80,9 @@ cooking:
               column: name
               target_column: geo
               dictionary:
-                  base: gw-countries
-                  key: ['gapminder_list', 'alternative_1', 'alternative_2', 'alternative_3',
-                        'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name',
-                        'arb1', 'arb2', 'arb3', 'arb4', 'arb5', 'arb6', 'name', 'iso3166_1_alpha2',
-                        'iso3166_1_alpha3', 'iso3166_2'
-                       ]
-                  value: country
+                  base: gm-country-synonym
+                  key: synonym
+                  value: geo
           result: unpop-countries-aligned
 
         - procedure: translate_column

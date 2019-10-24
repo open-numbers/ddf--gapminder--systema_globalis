@@ -1,6 +1,6 @@
 ingredients:
     - id: gw-concepts-geo
-      dataset: open-numbers/ddf--gapminder--geo_entity_domain
+      dataset: open-numbers/ddf--open_numbers
       key: concept
       value: "*"
 
@@ -26,17 +26,17 @@ ingredients:
               - source_url
 
     - id: gw-entities-geo
-      dataset: open-numbers/ddf--gapminder--geo_entity_domain
+      dataset: open-numbers/ddf--open_numbers
       key: geo
       value: "*"
 
     - id: gw-countries
-      dataset: open-numbers/ddf--gapminder--geo_entity_domain
+      dataset: open-numbers/ddf--open_numbers
       key: country
       value: "*"
 
     # country synonyms
     -
         id: gm-country-synonym
-        dataset: open-numbers/ddf--gapminder--geo_entity_domain
-        key: country, synonym
+        dataset: open-numbers/ddf--open_numbers
+        key: geo, synonym

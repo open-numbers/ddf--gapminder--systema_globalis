@@ -65,7 +65,7 @@ ingredients:
     -
         id: ilo-noc-indicators
         dataset: open-numbers/ddf--ilo--ilostat
-        key: ref_area, classif1, time
+        key: ref_area, time
         value:
             - emp_fcfw_noc_rt
             - emp_mcfw_noc_rt
@@ -107,7 +107,7 @@ cooking:
                 dictionary:
                     base: gm-country-synonym
                     key: synonym
-                    value: country
+                    value: geo
             result: ilo-ref_area-aligned
 
         # group: employment-rate
@@ -450,31 +450,21 @@ cooking:
 
         # group: noc
         -
-            procedure: flatten
-            ingredients:
-                - ilo-noc-indicators
-            options:
-                flatten_dimensions:
-                    - classif1
-                dictionary:
-                    "*": "{concept}"
-            result: ilo-noc-indicators-flattened
-        -
             procedure: translate_column
             ingredients:
-                - ilo-noc-indicators-flattened
+                - ilo-noc-indicators
             options:
                 column: ref_area
                 dictionary:
                     base: ilo-ref_area-aligned
                     key: ref_area
                     value: ref_area_new
-            result: ilo-noc-indicators-flattened-area-translated
+            result: ilo-noc-indicators-area-translated
 
         -
             procedure: translate_header
             ingredients:
-                - ilo-noc-indicators-flattened-area-translated
+                - ilo-noc-indicators-area-translated
             options:
                 dictionary: indicators_ilostat_to_sg.json
             result: ilo-noc-indicators-final

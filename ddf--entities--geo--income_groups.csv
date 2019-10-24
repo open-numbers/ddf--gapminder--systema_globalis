@@ -1,5 +1,5 @@
-income_groups,gwid,is--income_groups,name,rank
-high_income,i268,TRUE,High income,1
-low_income,i266,TRUE,Low income,4
-lower_middle_income,i269,TRUE,Lower middle income,3
-upper_middle_income,i267,TRUE,Upper middle income,2
+income_groups,is--income_groups,name,rank
+high_income,TRUE,High income,1
+low_income,TRUE,Low income,4
+lower_middle_income,TRUE,Lower middle income,3
+upper_middle_income,TRUE,Upper middle income,2
