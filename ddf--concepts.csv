@@ -131,7 +131,7 @@ diarrhoeal_deaths_in_newborn_per_1000_births,,measure,"Diarrhoeal deaths in newb
 diarrhoeal_deaths_in_newborn_total_deaths,,measure,Diarrhoeal deaths in newborn (total deaths),,,,,Diarrhoeal deaths in newborn (total deaths),Diarrhoeal deaths,Diarrhoeal deaths in newborn,"[""log"", ""linear""]",,,https://www.who.int/healthinfo/global_burden_disease/en/,causes_of_newborn_deaths
 dollar_billionaires_per_million_people,,measure,"Number of billionaires among every 1 million people in the country of their citizenship, calculation based on data from Forbes.com",,,,,Dollar billionaires per million people,Dollar billionaires /1M people,Dollar billionaires,"[""log"", ""linear""]",,,https://www.forbes.com/billionaires/#version:static,poverty_inequality
 domain,,string,,,,,,Domain,,,,,,,_none
-drill_up,,string,,,,,,drill ups,,,,,,,
+drill_up,,string,,,,,,drill ups,,,,,,,_none
 drought_affected_annual_number,,measure,"Total number of people getting affected, injured or killed in drought during the given year.",,,,,Drought affected annual number,Drought affected,Drought affected,"[""linear"", ""log""]",,,https://www.emdat.be/database,disasters
 drought_deaths_annual_number,,measure,Number of people killed in drought during the given year.,,,,,Drought deaths annual number,Drought deaths,Drought deaths,"[""linear"", ""log""]",,,https://www.emdat.be/database,disasters
 drownings_per_100000_people,,measure,"Drownings, age-adjusted mortality per 100 000 standard population. This rate is calculated as if all countries had the same age composition of the population.",,,,,Drownings (per 100 000 people),Drownings /100k people,Drownings,"[""linear"", ""log""]",,,https://www.who.int/gho/en/,injuries_and_accidents
