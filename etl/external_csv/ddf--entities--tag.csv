@@ -66,7 +66,7 @@ risk_factors,Risk factors,health
 tb_tuberculosis,TB (tuberculosis),health
 teeth,Teeth,health
 vaccine,Vaccine,health
-communication,Communication,infrastructure
+communication,Communication,
 sanitation,Sanitation,infrastructure
 traffic,Traffic,infrastructure
 infrastructure_water,Water,infrastructure
