@@ -6,7 +6,7 @@ info:
 ingredients:
     - id: democracy-datapoints
       dataset: *d1
-      key: country, year
+      key: country, time
       value: "*"
 
     - id: democracy-concepts
