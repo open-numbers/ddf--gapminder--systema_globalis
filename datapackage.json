@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2019-11-24T12:59:01.069807+00:00",
+    "id": "ddf--gapminder--systema_globalis",
     "translations": [
         {
             "id": "ar-SA",
@@ -38,7 +38,8 @@
             "id": "th-TH"
         }
     ],
-    "version": "1.15.1",
+    "version": "1.16.1",
+    "created": "2019-11-27T09:46:39.854239+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -92,9 +93,36 @@
                     },
                     {
                         "name": "tags"
+                    },
+                    {
+                        "name": "updated"
+                    },
+                    {
+                        "name": "version"
                     }
                 ],
                 "primaryKey": "concept"
+            }
+        },
+        {
+            "name": "ddf--datapoints--abscorrup_idea--by--geo--time",
+            "path": "ddf--datapoints--abscorrup_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "abscorrup_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
             }
         },
         {
@@ -572,6 +600,27 @@
                     },
                     {
                         "name": "aid_received_total_us_inflation_adjusted"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--ajustice_idea--by--geo--time",
+            "path": "ddf--datapoints--ajustice_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "ajustice_idea"
                     }
                 ],
                 "primaryKey": [
@@ -1631,6 +1680,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--bwelfr_idea--by--geo--time",
+            "path": "ddf--datapoints--bwelfr_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "bwelfr_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--car_deaths_per_100000_people--by--geo--time",
             "path": "ddf--datapoints--car_deaths_per_100000_people--by--geo--time.csv",
             "schema": {
@@ -1664,6 +1734,27 @@
                     },
                     {
                         "name": "cars_trucks_and_buses_per_1000_persons"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--celec_idea--by--geo--time",
+            "path": "ddf--datapoints--celec_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "celec_idea"
                     }
                 ],
                 "primaryKey": [
@@ -1811,6 +1902,27 @@
                     },
                     {
                         "name": "cervical_cancer_number_of_new_female_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--checkgvt_idea--by--geo--time",
+            "path": "ddf--datapoints--checkgvt_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "checkgvt_idea"
                     }
                 ],
                 "primaryKey": [
@@ -2021,6 +2133,48 @@
                     },
                     {
                         "name": "cholesterol_fat_in_blood_women_mmolperl"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--civsocpart_idea--by--geo--time",
+            "path": "ddf--datapoints--civsocpart_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "civsocpart_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--cliberties_idea--by--geo--time",
+            "path": "ddf--datapoints--cliberties_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "cliberties_idea"
                     }
                 ],
                 "primaryKey": [
@@ -2744,6 +2898,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--dirdemo_idea--by--geo--time",
+            "path": "ddf--datapoints--dirdemo_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "dirdemo_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--dollar_billionaires_per_million_people--by--geo--time",
             "path": "ddf--datapoints--dollar_billionaires_per_million_people--by--geo--time.csv",
             "schema": {
@@ -2954,6 +3129,48 @@
             }
         },
         {
+            "name": "ddf--datapoints--efparlt_idea--by--geo--time",
+            "path": "ddf--datapoints--efparlt_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "efparlt_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--elecparti_idea--by--geo--time",
+            "path": "ddf--datapoints--elecparti_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "elecparti_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--electricity_generation_per_person--by--geo--time",
             "path": "ddf--datapoints--electricity_generation_per_person--by--geo--time.csv",
             "schema": {
@@ -3008,6 +3225,27 @@
                     },
                     {
                         "name": "electricity_use_per_person"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--elgov_idea--by--geo--time",
+            "path": "ddf--datapoints--elgov_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "elgov_idea"
                     }
                 ],
                 "primaryKey": [
@@ -3386,6 +3624,27 @@
                     },
                     {
                         "name": "family_workers_percent_of_employment"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--fassoas_idea--by--geo--time",
+            "path": "ddf--datapoints--fassoas_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "fassoas_idea"
                     }
                 ],
                 "primaryKey": [
@@ -3794,6 +4053,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--fexpression_idea--by--geo--time",
+            "path": "ddf--datapoints--fexpression_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "fexpression_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--fixed_line_subscribers_per_100_people--by--geo--time",
             "path": "ddf--datapoints--fixed_line_subscribers_per_100_people--by--geo--time.csv",
             "schema": {
@@ -3848,6 +4128,27 @@
                     },
                     {
                         "name": "flood_deaths_annual_number"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--fmvt_idea--by--geo--time",
+            "path": "ddf--datapoints--fmvt_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "fmvt_idea"
                     }
                 ],
                 "primaryKey": [
@@ -4025,6 +4326,69 @@
             }
         },
         {
+            "name": "ddf--datapoints--fppart_idea--by--geo--time",
+            "path": "ddf--datapoints--fppart_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "fppart_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--freligion_idea--by--geo--time",
+            "path": "ddf--datapoints--freligion_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "freligion_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--fundright_idea--by--geo--time",
+            "path": "ddf--datapoints--fundright_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "fundright_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--gapminder_gini--by--geo--time",
             "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
             "schema": {
@@ -4184,6 +4548,27 @@
                     },
                     {
                         "name": "gdpperworking_hour_us_inflation_adjusted"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--gendereq_idea--by--geo--time",
+            "path": "ddf--datapoints--gendereq_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "gendereq_idea"
                     }
                 ],
                 "primaryKey": [
@@ -4583,6 +4968,27 @@
                     },
                     {
                         "name": "ifpri_underweight_children"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--impadmin_idea--by--geo--time",
+            "path": "ddf--datapoints--impadmin_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "impadmin_idea"
                     }
                 ],
                 "primaryKey": [
@@ -5243,6 +5649,48 @@
             }
         },
         {
+            "name": "ddf--datapoints--isuffrage_idea--by--geo--time",
+            "path": "ddf--datapoints--isuffrage_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "isuffrage_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--judicindep_idea--by--geo--time",
+            "path": "ddf--datapoints--judicindep_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "judicindep_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--life_expectancy_at_birth_data_from_ihme--by--geo--time",
             "path": "ddf--datapoints--life_expectancy_at_birth_data_from_ihme--by--geo--time.csv",
             "schema": {
@@ -5633,6 +6081,27 @@
                     },
                     {
                         "name": "liver_cancer_number_of_new_male_cases"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--locdemo_idea--by--geo--time",
+            "path": "ddf--datapoints--locdemo_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "locdemo_idea"
                     }
                 ],
                 "primaryKey": [
@@ -6923,6 +7392,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--mediaint_idea--by--geo--time",
+            "path": "ddf--datapoints--mediaint_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "mediaint_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--median_age_years--by--geo--time",
             "path": "ddf--datapoints--median_age_years--by--geo--time.csv",
             "schema": {
@@ -8099,6 +8589,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--pisec_idea--by--geo--time",
+            "path": "ddf--datapoints--pisec_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "pisec_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--plane_crash_affected_annual_number--by--geo--time",
             "path": "ddf--datapoints--plane_crash_affected_annual_number--by--geo--time.csv",
             "schema": {
@@ -9065,6 +9576,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--prenforct_idea--by--geo--time",
+            "path": "ddf--datapoints--prenforct_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "prenforct_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--present_value_of_debt_percent_of_gni--by--geo--time",
             "path": "ddf--datapoints--present_value_of_debt_percent_of_gni--by--geo--time.csv",
             "schema": {
@@ -9485,6 +10017,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--rgov_idea--by--geo--time",
+            "path": "ddf--datapoints--rgov_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "rgov_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--roads_paved_percent_of_total_roads--by--geo--time",
             "path": "ddf--datapoints--roads_paved_percent_of_total_roads--by--geo--time.csv",
             "schema": {
@@ -9758,6 +10311,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--sgeq_idea--by--geo--time",
+            "path": "ddf--datapoints--sgeq_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "sgeq_idea"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--smoking_adults_percent_of_population_over_age_15--by--geo--time",
             "path": "ddf--datapoints--smoking_adults_percent_of_population_over_age_15--by--geo--time.csv",
             "schema": {
@@ -9812,6 +10386,27 @@
                     },
                     {
                         "name": "smoking_women_percent_of_women_over_age_15"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--sorigeq_idea--by--geo--time",
+            "path": "ddf--datapoints--sorigeq_idea--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "sorigeq_idea"
                     }
                 ],
                 "primaryKey": [
@@ -11781,6 +12376,24 @@
                 "resources": [
                     "ddf--concepts"
                 ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "updated",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "version",
+                "resources": [
+                    "ddf--concepts"
+                ]
             }
         ],
         "entities": [
@@ -12561,6 +13174,26 @@
                     "country",
                     "time"
                 ],
+                "value": "abscorrup_idea",
+                "resources": [
+                    "ddf--datapoints--abscorrup_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "abscorrup_idea",
+                "resources": [
+                    "ddf--datapoints--abscorrup_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "adults_with_hiv_percent_age_15_49",
                 "resources": [
                     "ddf--datapoints--adults_with_hiv_percent_age_15_49--by--geo--time"
@@ -13014,6 +13647,26 @@
                 "value": "aid_received_total_us_inflation_adjusted",
                 "resources": [
                     "ddf--datapoints--aid_received_total_us_inflation_adjusted--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "ajustice_idea",
+                "resources": [
+                    "ddf--datapoints--ajustice_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "ajustice_idea",
+                "resources": [
+                    "ddf--datapoints--ajustice_idea--by--geo--time"
                 ]
             },
             {
@@ -14021,6 +14674,26 @@
                     "country",
                     "time"
                 ],
+                "value": "bwelfr_idea",
+                "resources": [
+                    "ddf--datapoints--bwelfr_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "bwelfr_idea",
+                "resources": [
+                    "ddf--datapoints--bwelfr_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "car_deaths_per_100000_people",
                 "resources": [
                     "ddf--datapoints--car_deaths_per_100000_people--by--geo--time"
@@ -14054,6 +14727,26 @@
                 "value": "cars_trucks_and_buses_per_1000_persons",
                 "resources": [
                     "ddf--datapoints--cars_trucks_and_buses_per_1000_persons--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "celec_idea",
+                "resources": [
+                    "ddf--datapoints--celec_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "celec_idea",
+                "resources": [
+                    "ddf--datapoints--celec_idea--by--geo--time"
                 ]
             },
             {
@@ -14194,6 +14887,26 @@
                 "value": "cervical_cancer_number_of_new_female_cases",
                 "resources": [
                     "ddf--datapoints--cervical_cancer_number_of_new_female_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "checkgvt_idea",
+                "resources": [
+                    "ddf--datapoints--checkgvt_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "checkgvt_idea",
+                "resources": [
+                    "ddf--datapoints--checkgvt_idea--by--geo--time"
                 ]
             },
             {
@@ -14394,6 +15107,46 @@
                 "value": "cholesterol_fat_in_blood_women_mmolperl",
                 "resources": [
                     "ddf--datapoints--cholesterol_fat_in_blood_women_mmolperl--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "civsocpart_idea",
+                "resources": [
+                    "ddf--datapoints--civsocpart_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "civsocpart_idea",
+                "resources": [
+                    "ddf--datapoints--civsocpart_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "cliberties_idea",
+                "resources": [
+                    "ddf--datapoints--cliberties_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "cliberties_idea",
+                "resources": [
+                    "ddf--datapoints--cliberties_idea--by--geo--time"
                 ]
             },
             {
@@ -15081,6 +15834,26 @@
                     "country",
                     "time"
                 ],
+                "value": "dirdemo_idea",
+                "resources": [
+                    "ddf--datapoints--dirdemo_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "dirdemo_idea",
+                "resources": [
+                    "ddf--datapoints--dirdemo_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "dollar_billionaires_per_million_people",
                 "resources": [
                     "ddf--datapoints--dollar_billionaires_per_million_people--by--geo--time"
@@ -15281,6 +16054,46 @@
                     "country",
                     "time"
                 ],
+                "value": "efparlt_idea",
+                "resources": [
+                    "ddf--datapoints--efparlt_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "efparlt_idea",
+                "resources": [
+                    "ddf--datapoints--efparlt_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "elecparti_idea",
+                "resources": [
+                    "ddf--datapoints--elecparti_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "elecparti_idea",
+                "resources": [
+                    "ddf--datapoints--elecparti_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "electricity_generation_per_person",
                 "resources": [
                     "ddf--datapoints--electricity_generation_per_person--by--geo--time"
@@ -15334,6 +16147,26 @@
                 "value": "electricity_use_per_person",
                 "resources": [
                     "ddf--datapoints--electricity_use_per_person--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "elgov_idea",
+                "resources": [
+                    "ddf--datapoints--elgov_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "elgov_idea",
+                "resources": [
+                    "ddf--datapoints--elgov_idea--by--geo--time"
                 ]
             },
             {
@@ -15694,6 +16527,26 @@
                 "value": "family_workers_percent_of_employment",
                 "resources": [
                     "ddf--datapoints--family_workers_percent_of_employment--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "fassoas_idea",
+                "resources": [
+                    "ddf--datapoints--fassoas_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "fassoas_idea",
+                "resources": [
+                    "ddf--datapoints--fassoas_idea--by--geo--time"
                 ]
             },
             {
@@ -16081,6 +16934,26 @@
                     "country",
                     "time"
                 ],
+                "value": "fexpression_idea",
+                "resources": [
+                    "ddf--datapoints--fexpression_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "fexpression_idea",
+                "resources": [
+                    "ddf--datapoints--fexpression_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "fixed_line_subscribers_per_100_people",
                 "resources": [
                     "ddf--datapoints--fixed_line_subscribers_per_100_people--by--geo--time"
@@ -16134,6 +17007,26 @@
                 "value": "flood_deaths_annual_number",
                 "resources": [
                     "ddf--datapoints--flood_deaths_annual_number--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "fmvt_idea",
+                "resources": [
+                    "ddf--datapoints--fmvt_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "fmvt_idea",
+                "resources": [
+                    "ddf--datapoints--fmvt_idea--by--geo--time"
                 ]
             },
             {
@@ -16301,6 +17194,66 @@
                     "country",
                     "time"
                 ],
+                "value": "fppart_idea",
+                "resources": [
+                    "ddf--datapoints--fppart_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "fppart_idea",
+                "resources": [
+                    "ddf--datapoints--fppart_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "freligion_idea",
+                "resources": [
+                    "ddf--datapoints--freligion_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "freligion_idea",
+                "resources": [
+                    "ddf--datapoints--freligion_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "fundright_idea",
+                "resources": [
+                    "ddf--datapoints--fundright_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "fundright_idea",
+                "resources": [
+                    "ddf--datapoints--fundright_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "gapminder_gini",
                 "resources": [
                     "ddf--datapoints--gapminder_gini--by--geo--time"
@@ -16454,6 +17407,26 @@
                 "value": "gdpperworking_hour_us_inflation_adjusted",
                 "resources": [
                     "ddf--datapoints--gdpperworking_hour_us_inflation_adjusted--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "gendereq_idea",
+                "resources": [
+                    "ddf--datapoints--gendereq_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "gendereq_idea",
+                "resources": [
+                    "ddf--datapoints--gendereq_idea--by--geo--time"
                 ]
             },
             {
@@ -16834,6 +17807,26 @@
                 "value": "ifpri_underweight_children",
                 "resources": [
                     "ddf--datapoints--ifpri_underweight_children--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "impadmin_idea",
+                "resources": [
+                    "ddf--datapoints--impadmin_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "impadmin_idea",
+                "resources": [
+                    "ddf--datapoints--impadmin_idea--by--geo--time"
                 ]
             },
             {
@@ -17461,6 +18454,46 @@
                     "country",
                     "time"
                 ],
+                "value": "isuffrage_idea",
+                "resources": [
+                    "ddf--datapoints--isuffrage_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "isuffrage_idea",
+                "resources": [
+                    "ddf--datapoints--isuffrage_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "judicindep_idea",
+                "resources": [
+                    "ddf--datapoints--judicindep_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "judicindep_idea",
+                "resources": [
+                    "ddf--datapoints--judicindep_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "life_expectancy_at_birth_data_from_ihme",
                 "resources": [
                     "ddf--datapoints--life_expectancy_at_birth_data_from_ihme--by--geo--time"
@@ -17834,6 +18867,26 @@
                 "value": "liver_cancer_number_of_new_male_cases",
                 "resources": [
                     "ddf--datapoints--liver_cancer_number_of_new_male_cases--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "locdemo_idea",
+                "resources": [
+                    "ddf--datapoints--locdemo_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "locdemo_idea",
+                "resources": [
+                    "ddf--datapoints--locdemo_idea--by--geo--time"
                 ]
             },
             {
@@ -19061,6 +20114,26 @@
                     "country",
                     "time"
                 ],
+                "value": "mediaint_idea",
+                "resources": [
+                    "ddf--datapoints--mediaint_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "mediaint_idea",
+                "resources": [
+                    "ddf--datapoints--mediaint_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "median_age_years",
                 "resources": [
                     "ddf--datapoints--median_age_years--by--geo--time"
@@ -20181,6 +21254,26 @@
                     "country",
                     "time"
                 ],
+                "value": "pisec_idea",
+                "resources": [
+                    "ddf--datapoints--pisec_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "pisec_idea",
+                "resources": [
+                    "ddf--datapoints--pisec_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "plane_crash_affected_annual_number",
                 "resources": [
                     "ddf--datapoints--plane_crash_affected_annual_number--by--geo--time"
@@ -21101,6 +22194,26 @@
                     "country",
                     "time"
                 ],
+                "value": "prenforct_idea",
+                "resources": [
+                    "ddf--datapoints--prenforct_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "prenforct_idea",
+                "resources": [
+                    "ddf--datapoints--prenforct_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "present_value_of_debt_percent_of_gni",
                 "resources": [
                     "ddf--datapoints--present_value_of_debt_percent_of_gni--by--geo--time"
@@ -21501,6 +22614,26 @@
                     "country",
                     "time"
                 ],
+                "value": "rgov_idea",
+                "resources": [
+                    "ddf--datapoints--rgov_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "rgov_idea",
+                "resources": [
+                    "ddf--datapoints--rgov_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "roads_paved_percent_of_total_roads",
                 "resources": [
                     "ddf--datapoints--roads_paved_percent_of_total_roads--by--geo--time"
@@ -21761,6 +22894,26 @@
                     "country",
                     "time"
                 ],
+                "value": "sgeq_idea",
+                "resources": [
+                    "ddf--datapoints--sgeq_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "sgeq_idea",
+                "resources": [
+                    "ddf--datapoints--sgeq_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "smoking_adults_percent_of_population_over_age_15",
                 "resources": [
                     "ddf--datapoints--smoking_adults_percent_of_population_over_age_15--by--geo--time"
@@ -21814,6 +22967,26 @@
                 "value": "smoking_women_percent_of_women_over_age_15",
                 "resources": [
                     "ddf--datapoints--smoking_women_percent_of_women_over_age_15--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "sorigeq_idea",
+                "resources": [
+                    "ddf--datapoints--sorigeq_idea--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "sorigeq_idea",
+                "resources": [
+                    "ddf--datapoints--sorigeq_idea--by--geo--time"
                 ]
             },
             {
