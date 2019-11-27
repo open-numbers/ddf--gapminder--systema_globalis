@@ -1,0 +1,28 @@
+info:
+    id: dataset_name
+    base:
+        - &d1 lokkilok/ddf--gapminder--democracy
+
+ingredients:
+    - id: democracy-datapoints
+      dataset: *d1
+      key: country, year
+      value: "*"
+
+    - id: democracy-concepts
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept_type:
+              - measure
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+            - democracy-datapoints
+          result: democracy-datapoints-final
+          options:
+              dictionary:
+                  country: geo

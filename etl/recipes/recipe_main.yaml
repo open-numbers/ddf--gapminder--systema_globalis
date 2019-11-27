@@ -1,7 +1,7 @@
 # recipe for dataset
 info:
     id: ddf--gapminder--systema_globalis
-    version: 1.14.0
+    version: 1.16.1
 
 config:
     # the path to search recipe files to include
@@ -35,6 +35,7 @@ include:
     - recipe_cancer_gbd_gw_bridge.yaml
     - recipe_gbd_total_deaths.yaml
     - recipe_gm_vip.yaml
+    - recipe_democracy.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -148,6 +149,7 @@ cooking:
               - vip-datapoints-final
               - gbd-total-deaths-datapoints-final
               - gbd-gw-bridged-final
+              - democracy-datapoints-final
               - static-assets-datapoints
           result: datapoints-final-0
 
@@ -207,6 +209,7 @@ cooking:
               - gw-concepts-geo
               - static-assets-concepts
               - gw-ontology-concepts
+              - democracy-concepts
           options:
               deep: true
 
