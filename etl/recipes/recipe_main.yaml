@@ -209,7 +209,7 @@ cooking:
               - gw-concepts-geo
               - static-assets-concepts
               - gw-ontology-concepts
-              - democracy-concepts
+              - democracy-concepts-final
           options:
               deep: true
 

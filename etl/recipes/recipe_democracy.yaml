@@ -9,13 +9,22 @@ ingredients:
       key: country, time
       value: "*"
 
-    - id: democracy-concepts
+    - id: democracy-concepts-measures
       dataset: *d1
       key: concept
       value: "*"
       filter:
           concept_type:
               - measure
+
+    - id: democracy-concepts-discrete
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - updated
+              - version
 
 cooking:
     datapoints:
@@ -26,3 +35,12 @@ cooking:
           options:
               dictionary:
                   country: geo
+
+    concepts:
+        - procedure: merge
+          ingredients:
+              - democracy-concepts-discrete
+              - democracy-concepts-measures
+          options:
+              deep: true
+          result: democracy-concepts-final
