@@ -83,3 +83,7 @@ vaccine,Vaccine,health
 war_peace,War & peace,society
 work,Work,
 years_use_as_color,Years (use as color),advanced
+democracy,Democracy,society
+democracy_idea,IDEA indices,democracy
+democracy_eiu,EIU indices,democracy
+freedom_fh,Freedom House indices,democracy
