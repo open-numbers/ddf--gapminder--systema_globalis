@@ -1,5 +1,5 @@
 income_groups,name
-high_income,
-low_income,
-lower_middle_income,
-upper_middle_income,
+high_income,Ingresos altos
+low_income,Ingresos bajos
+lower_middle_income,Ingresos medio bajos
+upper_middle_income,Ingresos medio altos
