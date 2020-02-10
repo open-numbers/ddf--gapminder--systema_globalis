@@ -7,7 +7,13 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-02-02T13:09:00.621214+00:00",
+    "base": [
+        "open-numbers/ddf--gapminder--child_mortality",
+        "open-numbers/ddf--gapminder--gdp_per_capita_cppp",
+        "open-numbers/ddf--gapminder--life_expectancy",
+        "open-numbers/ddf--gapminder--population_historic"
+    ],
+    "id": "core_indicators",
     "translations": [
         {
             "id": "ar-SA",
@@ -38,7 +44,7 @@
             "id": "th-TH"
         }
     ],
-    "version": "1.16.2",
+    "created": "2020-02-10T03:29:45.302702+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
