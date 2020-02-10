@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-02-10T13:26:17.078095+00:00",
+    "created": "2020-02-10T13:34:46.696326+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11510,6 +11510,24 @@
             }
         },
         {
+            "name": "ddf--entities--geo--unicef_region",
+            "path": "ddf--entities--geo--unicef_region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "unicef_region"
+                    },
+                    {
+                        "name": "is--unicef_region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "unicef_region"
+            }
+        },
+        {
             "name": "ddf--entities--geo--world_4region",
             "path": "ddf--entities--geo--world_4region.csv",
             "schema": {
@@ -11971,6 +11989,24 @@
                 "primaryKey": [
                     "geo"
                 ],
+                "value": "is--unicef_region",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unicef_region"
+                ],
+                "value": "is--unicef_region",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
                 "value": "is--world_4region",
                 "resources": [
                     "ddf--entities--geo--world_4region"
@@ -12225,6 +12261,7 @@
                     "ddf--entities--geo--income_groups",
                     "ddf--entities--geo--landlocked",
                     "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--unicef_region",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
                 ]
@@ -12272,6 +12309,15 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--tag"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unicef_region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
                 ]
             },
             {
