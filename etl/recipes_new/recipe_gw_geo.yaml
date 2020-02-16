@@ -1,0 +1,52 @@
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # external
+    external_csv_dir: ../external_csv
+    # procedures
+    procedure_dir: ./procedures
+
+ingredients:
+    - id: gw-concepts-geo
+      dataset: open-numbers/ddf--open_numbers
+      key: concept
+      value: "*"
+
+    - id: gw-concepts-discrete
+      dataset: open-numbers/ddf--gapminder--ontology
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - description
+              - indicator_url
+              - name
+              - unit
+              - age
+              - time
+              - name_short
+              - tag
+              - name_catalog
+              - parent
+              - description_long
+              - source
+              - source_long
+              - source_url
+
+    - id: gw-entities-geo
+      dataset: open-numbers/ddf--open_numbers
+      key: geo
+      value: "*"
+
+    - id: gw-countries
+      dataset: open-numbers/ddf--open_numbers
+      key: country
+      value: "*"
+
+    # country synonyms
+    -
+        id: gm-country-synonym
+        dataset: open-numbers/ddf--open_numbers
+        key: geo, synonym
