@@ -2,7 +2,8 @@
 info:
     id: fao-sg-dataset
     base:
-        - &d1 newSG/ddf--gapminder--gbd_indicators
+        - &d1 open-numbers/ddf--gapminder--gbd_indicators
+
 
 config:
     # the path to search recipe files to include

@@ -2,7 +2,7 @@
 info:
     id: fao-sg-dataset
     base:
-        - &d1 newSG/ddf--gapminder--fao_fra
+        - &d1 open-numbers/ddf--gapminder--fao_fra
 
 config:
     # the path to search recipe files to include

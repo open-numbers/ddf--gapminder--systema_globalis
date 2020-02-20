@@ -3,6 +3,6 @@ info:
 
 ingredients:
     - id: ilo-datapoints
-      dataset: newSG/ddf--gapminder--ilostat
+      dataset: open-numbers/ddf--gapminder--ilostat
       key: geo, time
       value: "*"
