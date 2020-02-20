@@ -29,6 +29,7 @@ include:
     - recipe_gw_tfr.yaml
     - recipe_gw_gini.yaml
     - recipe_gw_co2.yaml
+    - recipe_ilostat.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -135,6 +136,7 @@ cooking:
               - hdi-datapoints-final
               - tfr-datapoints-final
               - gini-datapoints
+              - ilo-datapoints
               - static-assets-datapoints
           result: datapoints-final
     entities:

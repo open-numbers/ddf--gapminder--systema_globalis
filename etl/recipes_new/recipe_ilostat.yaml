@@ -1,0 +1,8 @@
+info:
+    id: ilostat-sg
+
+ingredients:
+    - id: ilo-datapoints
+      dataset: newSG/ddf--gapminder--ilostat
+      key: geo, time
+      value: "*"
