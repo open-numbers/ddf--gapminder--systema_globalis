@@ -34,5 +34,5 @@ cooking:
           options:
               row:
                   time:
-                      $lt: 2019
+                      $lt: 2020
           result: tfr-datapoints-final
