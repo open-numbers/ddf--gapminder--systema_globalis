@@ -2,7 +2,7 @@
 info:
     id: fao-sg-dataset
     base:
-        - &d1 newSG/ddf--gapminder--unpop_wpp
+        - &d1 newSG/ddf--gapminder--unfao_faostat
 
 config:
     # the path to search recipe files to include
@@ -11,7 +11,7 @@ config:
     dictionary_dir: ../translation_dictionaries
 
 ingredients:
-    - id: unpop-datapoints
+    - id: faostat-datapoints
       dataset: *d1
       key: "geo, time"
       value: "*"

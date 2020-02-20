@@ -11,7 +11,7 @@ config:
     dictionary_dir: ../translation_dictionaries
 
 include:
-    - recipe_gw_common.yaml
+    - recipe_gw_geo.yaml
 
 # define the initial inputs of the recipe
 ingredients:

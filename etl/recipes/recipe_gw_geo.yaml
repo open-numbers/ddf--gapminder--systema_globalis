@@ -1,3 +1,13 @@
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # external
+    external_csv_dir: ../external_csv
+    # procedures
+    procedure_dir: ./procedures
+
 ingredients:
     - id: gw-concepts-geo
       dataset: open-numbers/ddf--open_numbers
