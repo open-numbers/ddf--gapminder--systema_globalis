@@ -30,6 +30,7 @@ include:
     - recipe_gw_gini.yaml
     - recipe_gw_co2.yaml
     - recipe_ilostat.yaml
+    - recipe_death_rates.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -137,6 +138,7 @@ cooking:
               - tfr-datapoints-final
               - gini-datapoints
               - ilo-datapoints
+              - death-rates-datapoints
               - static-assets-datapoints
           result: datapoints-final
     entities:
