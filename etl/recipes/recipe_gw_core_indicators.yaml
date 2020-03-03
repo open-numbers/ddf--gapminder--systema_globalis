@@ -69,8 +69,8 @@ cooking:
               - gdp-datapoints-final
           result: core-indicator-datapoints
 
-serving:
-    - id: u5mr-datapoints-final
-    - id: lex-datapoints-final
-    - id: pop-datapoints-final
-    - id: gdp-datapoints-final
+# serving:
+#     - id: u5mr-datapoints-final
+#     - id: lex-datapoints-final
+#     - id: pop-datapoints-final
+#     - id: gdp-datapoints-final
