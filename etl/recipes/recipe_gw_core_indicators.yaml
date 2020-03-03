@@ -24,7 +24,7 @@ ingredients:
       key: geo, time
       value:
           - income_per_person_gdppercapita_ppp_inflation_adjusted
-    - id: u5mr-datapoints
+    - id: u5mr-datapoints-final
       dataset: *u5mr
       key: geo, time
       value:
@@ -55,30 +55,11 @@ cooking:
                   life_expectancy_at_birth: life_expectancy_years
           result: lex-datapoints-translated
 
-        - procedure: filter
-          ingredients:
-              - lex-datapoints-translated
-          options:
-              row:
-                  time:
-                      $lt: 2020
-          result: lex-datapoints-no-projections
-
         - procedure: merge
           ingredients:
               - lex-datapoints-with-projections
-              - lex-datapoints-no-projections
+              - lex-datapoints-translated
           result: lex-datapoints-final
-
-        ### u5mr ###
-        - procedure: filter
-          ingredients:
-              - u5mr-datapoints
-          options:
-              row:
-                  time:
-                      $lt: 2020
-          result: u5mr-datapoints-final
 
         - procedure: merge
           ingredients:
@@ -88,8 +69,8 @@ cooking:
               - gdp-datapoints-final
           result: core-indicator-datapoints
 
-# serving:
-#     - id: u5mr-datapoints-final
-#     - id: lex-datapoints-final
-#     - id: pop-datapoints-final
-#     - id: gdp-datapoints-final
+serving:
+    - id: u5mr-datapoints-final
+    - id: lex-datapoints-final
+    - id: pop-datapoints-final
+    - id: gdp-datapoints-final
