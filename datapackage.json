@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2019-11-24T12:59:01.069807+00:00",
+    "created": "2020-03-03T14:04:53.855782+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11380,6 +11380,9 @@
                         "name": "un_state"
                     },
                     {
+                        "name": "unicef_region"
+                    },
+                    {
                         "name": "unicode_region_subtag"
                     },
                     {
@@ -11504,6 +11507,24 @@
                     }
                 ],
                 "primaryKey": "main_religion_2008"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--unicef_region",
+            "path": "ddf--entities--geo--unicef_region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "unicef_region"
+                    },
+                    {
+                        "name": "is--unicef_region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "unicef_region"
             }
         },
         {
@@ -11968,6 +11989,24 @@
                 "primaryKey": [
                     "geo"
                 ],
+                "value": "is--unicef_region",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unicef_region"
+                ],
+                "value": "is--unicef_region",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
                 "value": "is--world_4region",
                 "resources": [
                     "ddf--entities--geo--world_4region"
@@ -12222,6 +12261,7 @@
                     "ddf--entities--geo--income_groups",
                     "ddf--entities--geo--landlocked",
                     "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--unicef_region",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
                 ]
@@ -12269,6 +12309,15 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--tag"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unicef_region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--unicef_region"
                 ]
             },
             {
@@ -12484,6 +12533,24 @@
                 "value": "un_state",
                 "resources": [
                     "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "unicef_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unicef_region",
+                "resources": [
                     "ddf--entities--geo--country"
                 ]
             },

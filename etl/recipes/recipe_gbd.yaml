@@ -1,8 +1,9 @@
 # basic info
 info:
-    id: cred-sg-dataset
+    id: fao-sg-dataset
     base:
-        - &d1 semio/ddf--cred--em_dat
+        - &d1 open-numbers/ddf--gapminder--gbd_indicators
+
 
 config:
     # the path to search recipe files to include
@@ -11,11 +12,7 @@ config:
     dictionary_dir: ../translation_dictionaries
 
 ingredients:
-    - id: cred-datapoints
+    - id: gbd-datapoints
       dataset: *d1
-      key: "country,disaster,year"
-      value:
-          - affected
-          - total_deaths
-
-    -
+      key: "geo, time"
+      value: "*"

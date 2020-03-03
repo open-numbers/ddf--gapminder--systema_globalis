@@ -1,36 +1,17 @@
+# basic info
 info:
-    id: unpop_sg_dataset
+    id: fao-sg-dataset
     base:
-        - &d1 harpalshergill/ddf--unpop--wpp_population
+        - &d1 open-numbers/ddf--gapminder--unpop_wpp
 
 config:
+    # the path to search recipe files to include
     recipes_dir: ./
+    # the path to search dictionary files
     dictionary_dir: ../translation_dictionaries
 
-include:
-    - recipe_gw_common.yaml
-    - recipe_unpop-1.yaml
-    - recipe_unpop-2.yaml
-    - recipe_unpop-3.yaml
-    - recipe_unpop-4.yaml
-    - recipe_unpop-5.yaml
-
-
-cooking:
-    datapoints:
-        - procedure: merge
-          ingredients:
-              - unpop-datapoints-1-final
-              - unpop-datapoints-2-final
-              - unpop-datapoints-3-final
-              - unpop-datapoints-4-final
-              - unpop-datapoints-5-final
-          result: unpop-datapoints-final-0
-        - procedure: translate_header
-          ingredients:
-              - unpop-datapoints-final-0
-          options:
-              dictionary:
-                  country: geo
-                  year: time
-          result: unpop-datapoints-final
+ingredients:
+    - id: unpop-datapoints
+      dataset: *d1
+      key: "geo, time"
+      value: "*"

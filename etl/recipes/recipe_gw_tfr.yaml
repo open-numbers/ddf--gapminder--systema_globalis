@@ -26,13 +26,4 @@ cooking:
               dictionary:
                   country: geo
                   year: time
-          result: tfr-datapoints-translated
-
-        - procedure: filter
-          ingredients:
-              - tfr-datapoints-translated
-          options:
-              row:
-                  time:
-                      $lt: 2019
           result: tfr-datapoints-final

@@ -1,0 +1,10 @@
+info:
+    id: sg-death-rates
+    base:
+        - &d1 open-numbers/ddf--gapminder--suicide_homicide_traffic_death_rates
+
+ingredients:
+    - id: death-rates-datapoints
+      dataset: *d1
+      key: geo, time
+      value: "*"

@@ -1,7 +1,7 @@
 # recipe for dataset
 info:
     id: ddf--gapminder--systema_globalis
-    version: 1.14.0
+    version: 1.16.2
 
 config:
     # the path to search recipe files to include
@@ -11,30 +11,26 @@ config:
     # external
     external_csv_dir: ../external_csv
     # procedures
-    procedure_dir: ./procedures
+    procedure_dir: ../recipes/procedures
 
 include:
-    - recipe_gw_common.yaml
-    - recipe_gw_lex_only.yaml
-    - recipe_gw_gdp.yaml
-    - recipe_gw_co2.yaml
-    - recipe_gw_pop.yaml
-    - recipe_wdi.yaml
-    - recipe_gw_gini.yaml
-    - recipe_ihme.yml
-    - recipe_unpop.yaml
-    - recipe_gw_tfr.yaml
-    - recipe_gw_u5mr.yaml
     - recipe_bp.yaml
-    - recipe_hdi.yaml
+    - recipe_fao_faostat.yaml
+    - recipe_fao_fra.yaml
+    - recipe_gbd.yaml
+    - recipe_gw_core_indicators.yaml
+    - recipe_gw_geo.yaml
+    - recipe_ihme_edu_attainment.yaml
+    - recipe_unpop.yaml
     - recipe_cpi.yaml
+    - recipe_hdi.yaml
+    - recipe_wdi.yaml
     - recipe_fao_aqua.yaml
-    - recipe_fao_food.yaml
-    - recipe_fao_forestry.yaml
+    - recipe_gw_tfr.yaml
+    - recipe_gw_gini.yaml
+    - recipe_gw_co2.yaml
     - recipe_ilostat.yaml
-    - recipe_cancer_gbd_gw_bridge.yaml
-    - recipe_gbd_total_deaths.yaml
-    - recipe_gm_vip.yaml
+    - recipe_death_rates.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -127,66 +123,23 @@ cooking:
         - procedure: merge
           ingredients:
               - gw-datapoints-all
-              - lex-datapoints-final
-              - gdp-datapoints-final
-              - pop-datapoints-final
+              - bp-datapoints
+              - core-indicator-datapoints
+              - faostat-datapoints
+              - fao-fra-datapoints
+              - gbd-datapoints
+              - edu-datapoints
+              - unpop-datapoints
               - co2-datapoints-final
-              - wdi-datapoints-final
-              - u5mr-datapoints-final
-              - tfr-datapoints-final
-              - gini-datapoints
-              - ihme-lex-datapoints-final
-              - edu-datapoints-final
-              - unpop-datapoints-final
-              - bp-datapoints-final
-              - hdi-datapoints-final
               - cpi-datapoints-final
               - fao_aqua-datapoints-final
-              - fao_food-datapoints-final
-              - fao_fore-datapoints-final
-              - ilo-datapoints-final
-              - vip-datapoints-final
-              - gbd-total-deaths-datapoints-final
-              - gbd-gw-bridged-final
+              - wdi-datapoints-final
+              - hdi-datapoints-final
+              - tfr-datapoints-final
+              - gini-datapoints
+              - ilo-datapoints
+              - death-rates-datapoints
               - static-assets-datapoints
-          result: datapoints-final-0
-
-        # compose some indicators with existing indicators
-        # because run_op will use a lot of computer cpu/memory resources with large ingredients
-        # we need to filter out a small set of indicators before run_op
-        - procedure: filter
-          ingredients:
-              - datapoints-final-0
-          options:
-              item:
-                  $in:
-                      - coal_consumption_total
-                      - population_total
-                      - electricity_generation_total
-                      - natural_gas_production_total
-                      - natural_gas_proved_reserves_total
-                      - oil_production_total
-                      - oil_consumption_total
-                      - oil_proved_reserves_total
-          result: datapoints-final-for-op
-        - procedure: run_op
-          ingredients:
-              - datapoints-final-for-op
-          options:
-              op:
-                  # BP
-                  coal_consumption_per_cap: "coal_consumption_total / population_total"
-                  electricity_generation_per_person: "electricity_generation_total / population_total"
-                  natural_gas_production_per_person: "natural_gas_production_total / population_total"
-                  natural_gas_proven_reserves_per_person: "natural_gas_proved_reserves_total / population_total"
-                  oil_production_per_person: "oil_production_total / population_total"
-                  oil_consumption_per_cap: "oil_consumption_total / population_total"
-                  oil_proven_reserves_per_person: "oil_proved_reserves_total / population_total"
-          result: datapoints-final-1
-        - procedure: merge
-          ingredients:
-              - datapoints-final-0
-              - datapoints-final-1
           result: datapoints-final
     entities:
         - procedure: merge

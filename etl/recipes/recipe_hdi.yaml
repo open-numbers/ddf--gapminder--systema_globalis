@@ -11,7 +11,7 @@ config:
 
 
 include:
-    - recipe_gw_common.yaml
+    - recipe_gw_geo.yaml
 
 ingredients:
     - id: hdi-datapoints
