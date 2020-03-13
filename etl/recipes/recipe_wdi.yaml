@@ -2,7 +2,7 @@
 info:
     id: wdi-sg-dataset
     base:
-        - &d1 open-numbers/ddf--world_bank--world_development_indicators
+        - &d1 open-numbers/ddf--open_numbers--world_development_indicators
 
 config:
     # the path to search recipe files to include
@@ -10,8 +10,6 @@ config:
     # the path to search dictionary files
     dictionary_dir: ../translation_dictionaries
 
-include:
-    - recipe_gw_geo.yaml
 
 # define the initial inputs of the recipe
 ingredients:
@@ -20,13 +18,9 @@ ingredients:
       dataset: *d1
       key: concept
       value: "*"
-    - id: wdi-countries
-      dataset: *d1
-      key: country
-      value: '*'
     - id: wdi-datapoints
       dataset: *d1
-      key: "country,year"
+      key: geo, time
       value:
           - ag_lnd_agri_zs
           - bm_klt_dinv_wd_gd_zs # was bm_klt_dinv_gd_zs in 2016-02
@@ -135,32 +129,6 @@ cooking:
         - procedure: translate_header
           options:
               dictionary: indicators_wdi_to_sg.json
-          ingredients: [wdi-datapoints]
-          result: wdi-datapoints-indicators-translated
-        - procedure: translate_header
-          options:
-              dictionary:
-                  country: geo
-                  year: time
-          ingredients: [wdi-datapoints-indicators-translated]
-          result: wdi-datapoints-translated_
-        - procedure: translate_column
           ingredients:
-              [wdi-countries]
-          options:
-              column: table_name
-              target_column: geo
-              dictionary:
-                base: gm-country-synonym
-                key: synonym
-                value: geo
-          result: wdi-country-aligned
-        - procedure: translate_column
-          ingredients: [wdi-datapoints-translated_]
-          options:
-              column: geo
-              dictionary:
-                base: wdi-country-aligned
-                key: country
-                value: geo
+              - wdi-datapoints
           result: wdi-datapoints-final
