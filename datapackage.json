@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-04-30T13:10:39.679536+00:00",
+    "created": "2020-05-13T18:21:39.675816+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -41,7 +41,7 @@
             "id": "cs-CZ"
         }
     ],
-    "version": "1.19.1",
+    "version": "1.19.2",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -68,6 +68,9 @@
                     },
                     {
                         "name": "drill_up"
+                    },
+                    {
+                        "name": "format"
                     },
                     {
                         "name": "indicator_url"
@@ -11973,6 +11976,15 @@
                     "concept"
                 ],
                 "value": "drill_up",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "format",
                 "resources": [
                     "ddf--concepts"
                 ]
