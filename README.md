@@ -4,6 +4,9 @@ The name is inspired by [Systema Naturae](https://en.wikipedia.org/wiki/Systema_
 ## Data
 This is the main dataset used in tools on the official Gapminder website. It contains local &amp; global statistics combined from hundreds of sources.
 
+## Tags
+🌶 Gapminder Offline app expects tags in the form of `v1.19.1`, don't use tags that aren't following that form  
+
 ## How to update
 Currently the dataset is maintained by manually copying data from multiple other datasets.
 The plan is to automate the process by using a file called ddf--imports.csv
