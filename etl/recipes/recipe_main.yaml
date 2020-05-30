@@ -141,6 +141,11 @@ cooking:
               - death-rates-datapoints
               - static-assets-datapoints
           result: datapoints-final
+        - procedure: serve
+          ingredients:
+              - datapoints-final
+          options:
+              path: datapoints-countries
     entities:
         - procedure: merge
           ingredients:
