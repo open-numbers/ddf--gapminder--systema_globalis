@@ -1,0 +1,36 @@
+
+info:
+    id: rural-urban-population-global-year
+    base: &wdi open-numbers/ddf--world_bank--world_development_indicators
+
+ingredients:
+    - id: wdi-datapoints
+      dataset: *wdi
+      key: economy, year
+      value:
+        - sp_urb_totl_in_zs
+        - sp_rur_totl_zs
+
+
+cooking:
+    datapoints:
+        - procedure: translate_column
+          ingredients:
+            - wdi-datapoints
+          options:
+            column: economy
+            dictionary:
+                wld: world
+            not_found: drop
+          result: wdi-datapoints-global
+        - procedure: translate_header
+          ingredients:
+            - wdi-datapoints-global
+          options:
+            dictionary:
+                economy: global
+                sp_urb_totl_in_zs: urban_populations
+                sp_rur_totl_zs: rural_populations
+            debug: true
+          result: wdi-datapoints-global-translated
+
