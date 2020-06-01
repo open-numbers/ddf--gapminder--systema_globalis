@@ -1,0 +1,173 @@
+config:
+  ddf_dir: ./
+  dictionary_dir: ./
+  external_csv_dir: ./
+  procedure_dir: ./
+  recipes_dir: ./
+cooking:
+  datapoints:
+  - ingredients:
+    - "unpop-dps-agebroad-gender"
+    options:
+      row:
+        agebroad:
+        - 0_14
+        - 20_39
+        - 40_59
+        - 60plus
+        - 65plus
+        - 70plus
+        gender:
+        - '1'
+        - '2'
+    procedure: filter
+    result: "unpop-dps-agebroad-gender-filtered"
+  - ingredients:
+    - "unpop-dps-age5year-gender"
+    options:
+      row:
+        age5yearinterval:
+        - 0_4
+        - 10_14
+        - 15_19
+        - 5_9
+        gender:
+        - '1'
+        - '2'
+    procedure: filter
+    result: "unpop-dps-age5year-gender-filtered"
+  - ingredients:
+    - "unpop-dps-agebroad"
+    options:
+      row:
+        agebroad:
+        - 0_14
+        - 20_39
+        - 40_59
+        - 60plus
+        - 65plus
+        - 70plus
+    procedure: filter
+    result: "unpop-dps-agebroad-filtered"
+  - ingredients:
+    - "unpop-dps-age5year"
+    options:
+      row:
+        age5yearinterval:
+        - 0_4
+        - 10_14
+        - 15_19
+        - 5_9
+    procedure: filter
+    result: "unpop-dps-age5year-filtered"
+  - ingredients:
+    - "unpop-dps-agebroad-gender-filtered"
+    options:
+      dictionary:
+        age5yearinterval: age
+        agebroad: age
+      duplicated: error
+    procedure: translate_header
+    result: "unpop-dps-agebroad-gender-filtered-age-translated"
+  - ingredients:
+    - "unpop-dps-age5year-gender-filtered"
+    options:
+      dictionary:
+        age5yearinterval: age
+        agebroad: age
+      duplicated: error
+    procedure: translate_header
+    result: "unpop-dps-age5year-gender-filtered-age-translated"
+  - ingredients:
+    - "unpop-dps-agebroad-filtered"
+    options:
+      dictionary:
+        age5yearinterval: age
+        agebroad: age
+      duplicated: error
+    procedure: translate_header
+    result: "unpop-dps-agebroad-filtered-age-translated"
+  - ingredients:
+    - "unpop-dps-age5year-filtered"
+    options:
+      dictionary:
+        age5yearinterval: age
+        agebroad: age
+      duplicated: error
+    procedure: translate_header
+    result: "unpop-dps-age5year-filtered-age-translated"
+  - ingredients:
+    - "unpop-dps-agebroad-gender-filtered-age-translated"
+    - "unpop-dps-age5year-gender-filtered-age-translated"
+    options:
+      deep: true
+    procedure: merge
+    result: "unpop-dps-age-gender"
+  - ingredients:
+    - "unpop-dps-age-gender"
+    options:
+      column: gender
+      dictionary:
+        '1': male
+        '2': female
+      target_column: gender
+    procedure: translate_column
+    result: "unpop-dps-age-gender-translated"
+  - ingredients:
+    - "unpop-dps-age-gender-translated"
+    options:
+      dictionary:
+        population_percentage: "population_aged_{age}_years_{gender}_percent"
+      flatten_dimensions:
+      - gender
+      - age
+    procedure: flatten
+    result: "unpop-dps-age-gender-translated-flatten"
+  - ingredients:
+    - "unpop-dps-agebroad-filtered-age-translated"
+    - "unpop-dps-age5year-filtered-age-translated"
+    options:
+      deep: true
+    procedure: merge
+    result: "unpop-dps-age"
+  - ingredients:
+    - "unpop-dps-age"
+    options:
+      dictionary:
+        population: "population_aged_{age}_years_total_numbers"
+        population_percentage: "population_aged_{age}_years_both_sexes_percent"
+      flatten_dimensions:
+      - age
+    procedure: flatten
+    result: "unpop-dps-age-flatten"
+  - ingredients:
+    - "unpop-dps-age-flatten"
+    - "unpop-dps-age-gender-translated-flatten"
+    options:
+      deep: false
+      debug: true
+    procedure: merge
+    result: "unpop-global-dps-final"
+ingredients:
+- dataset: "open-numbers/ddf--unpop--world_population_prospects"
+  id: "unpop-dps-agebroad-gender"
+  key: "global, time, agebroad, gender"
+  value:
+  - population_percentage
+- dataset: "open-numbers/ddf--unpop--world_population_prospects"
+  id: "unpop-dps-age5year-gender"
+  key: "global, time, age5yearinterval, gender"
+  value:
+  - population_percentage
+- dataset: "open-numbers/ddf--unpop--world_population_prospects"
+  id: "unpop-dps-agebroad"
+  key: "global, time, agebroad"
+  value:
+  - population
+  - population_percentage
+- dataset: "open-numbers/ddf--unpop--world_population_prospects"
+  id: "unpop-dps-age5year"
+  key: "global, time, age5yearinterval"
+  value:
+  - population
+  - population_percentage
