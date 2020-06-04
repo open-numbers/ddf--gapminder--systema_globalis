@@ -36,9 +36,12 @@
         },
         {
             "id": "th-TH"
+        },
+        {
+            "id": "cs-CZ"
         }
     ],
-    "version": "1.16.2",
+    "version": "1.20.1",
     "resources": [
         {
             "name": "ddf--concepts",
