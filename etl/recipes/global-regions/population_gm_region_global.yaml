@@ -22,6 +22,7 @@ cooking:
               - gmpop-region-datapoints
           options:
               dictionary:
+                  population: population_total
                   year: time
           result: gmpop-region-datapoints-translated
         - procedure: translate_header
@@ -29,5 +30,6 @@ cooking:
               - gmpop-global-datapoints
           options:
               dictionary:
+                  population: population_total
                   year: time
           result: gmpop-global-datapoints-translated
