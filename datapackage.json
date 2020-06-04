@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-06-04T14:33:12.078480+00:00",
+    "created": "2020-06-04T16:14:10.900324+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -10628,8 +10628,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--rural_population--by--global--time",
-            "path": "datapoints/ddf--datapoints--rural_population--by--global--time.csv",
+            "name": "ddf--datapoints--rural_population_percent--by--global--time",
+            "path": "datapoints/ddf--datapoints--rural_population_percent--by--global--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -10639,7 +10639,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "rural_population"
+                        "name": "rural_population_percent"
                     }
                 ],
                 "primaryKey": [
@@ -12308,27 +12308,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--urban_population--by--global--time",
-            "path": "datapoints/ddf--datapoints--urban_population--by--global--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "global"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "urban_population"
-                    }
-                ],
-                "primaryKey": [
-                    "global",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--urban_population_growth_annual_percent--by--geo--time",
             "path": "datapoints/ddf--datapoints--urban_population_growth_annual_percent--by--geo--time.csv",
             "schema": {
@@ -12345,6 +12324,27 @@
                 ],
                 "primaryKey": [
                     "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--urban_population_percent--by--global--time",
+            "path": "datapoints/ddf--datapoints--urban_population_percent--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "urban_population_percent"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
                     "time"
                 ]
             }
@@ -23676,9 +23676,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "rural_population",
+                "value": "rural_population_percent",
                 "resources": [
-                    "ddf--datapoints--rural_population--by--global--time"
+                    "ddf--datapoints--rural_population_percent--by--global--time"
                 ]
             },
             {
@@ -23686,9 +23686,9 @@
                     "global",
                     "time"
                 ],
-                "value": "rural_population",
+                "value": "rural_population_percent",
                 "resources": [
-                    "ddf--datapoints--rural_population--by--global--time"
+                    "ddf--datapoints--rural_population_percent--by--global--time"
                 ]
             },
             {
@@ -25268,18 +25268,7 @@
                 ],
                 "value": "urban_population",
                 "resources": [
-                    "ddf--datapoints--urban_population--by--geo--time",
-                    "ddf--datapoints--urban_population--by--global--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "global",
-                    "time"
-                ],
-                "value": "urban_population",
-                "resources": [
-                    "ddf--datapoints--urban_population--by--global--time"
+                    "ddf--datapoints--urban_population--by--geo--time"
                 ]
             },
             {
@@ -25300,6 +25289,26 @@
                 "value": "urban_population_growth_annual_percent",
                 "resources": [
                     "ddf--datapoints--urban_population_growth_annual_percent--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "urban_population_percent",
+                "resources": [
+                    "ddf--datapoints--urban_population_percent--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "urban_population_percent",
+                "resources": [
+                    "ddf--datapoints--urban_population_percent--by--global--time"
                 ]
             },
             {
