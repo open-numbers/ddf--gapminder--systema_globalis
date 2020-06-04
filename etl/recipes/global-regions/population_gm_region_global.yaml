@@ -1,5 +1,5 @@
 info:
-    id: rural-urban-population-global-year
+    id: gm-global-population
     base: &gmpop open-numbers/ddf--gapminder--population
 
 
@@ -22,7 +22,6 @@ cooking:
               - gmpop-region-datapoints
           options:
               dictionary:
-                  world_4region: geo
                   year: time
           result: gmpop-region-datapoints-translated
         - procedure: translate_header
@@ -30,15 +29,5 @@ cooking:
               - gmpop-global-datapoints
           options:
               dictionary:
-                  global: geo
                   year: time
           result: gmpop-global-datapoints-translated
-
-        - procedure: merge
-          ingredients:
-              - gmpop-global-datapoints-translated
-              - gmpop-region-datapoints-translated
-          options:
-              deep: true
-              debug: true
-          result: gmpop-global-region-datapoints-final

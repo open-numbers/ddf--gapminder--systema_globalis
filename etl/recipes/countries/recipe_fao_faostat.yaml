@@ -4,12 +4,6 @@ info:
     base:
         - &d1 open-numbers/ddf--gapminder--unfao_faostat
 
-config:
-    # the path to search recipe files to include
-    recipes_dir: ./
-    # the path to search dictionary files
-    dictionary_dir: ../translation_dictionaries
-
 ingredients:
     - id: faostat-datapoints
       dataset: *d1

@@ -6,8 +6,6 @@ info:
 config:
     # the path to search recipe files to include
     recipes_dir: ./
-    # the path to search dictionary files
-    dictionary_dir: ../translation_dictionaries
 
 
 include:

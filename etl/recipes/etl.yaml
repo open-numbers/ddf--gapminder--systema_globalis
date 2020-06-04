@@ -1,0 +1,70 @@
+info:
+    id: ddf--gapminder--systema_globalis
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../translation_dictionaries
+    # external
+    external_csv_dir: ../external_csv
+    # procedures
+    procedure_dir: ./procedures
+
+include:
+    - countries.yaml
+    - global-regions.yaml
+
+cooking:
+    datapoints:
+        - procedure: serve
+          ingredients:
+              - datapoints-final
+              - gmpop-region-datapoints-translated
+              - gmpop-global-datapoints-translated
+              - unpop-global-datapoints
+              - population-income-group-datapoints-translated
+              - wdi-datapoints-global-translated
+          options:
+              path: datapoints
+    entities:
+        - procedure: merge
+          ingredients:
+              - gw-entities-geo
+              - geo_global_patch
+          options:
+              deep: true
+          result: geo_final
+        - procedure: serve
+          ingredients:
+              - geo_final
+              - tag_entity
+    concepts:
+        - procedure: merge
+          result: all-concepts-merged
+          ingredients:
+              - gw-concepts-geo
+              - static-assets-concepts
+              - gw-ontology-concepts
+          options:
+              deep: true
+
+        - procedure: merge
+          ingredients:
+              - all-concepts-merged
+              - concept_patch
+          options:
+              deep: true
+          result: concepts_final
+        - procedure: filter
+          ingredients:
+            - concepts_final
+          options:
+            item:
+              $nin:
+                - unit
+            row:
+              concept:
+                  $nin:
+                      - unit
+          result: concepts_final_no_unit

@@ -1,7 +1,6 @@
 # recipe for dataset
 info:
     id: ddf--gapminder--systema_globalis
-    version: 1.16.2
 
 config:
     # the path to search recipe files to include
@@ -145,45 +144,4 @@ cooking:
           ingredients:
               - datapoints-final
           options:
-              path: datapoints-countries
-    entities:
-        - procedure: merge
-          ingredients:
-              - gw-entities-geo
-              - geo_global_patch
-          options:
-              deep: true
-          result: geo_final
-        - procedure: serve
-          ingredients:
-              - geo_final
-              - tag_entity
-    concepts:
-        - procedure: merge
-          result: all-concepts-merged
-          ingredients:
-              - gw-concepts-geo
-              - static-assets-concepts
-              - gw-ontology-concepts
-          options:
-              deep: true
-
-        - procedure: merge
-          ingredients:
-              - all-concepts-merged
-              - concept_patch
-          options:
-              deep: true
-          result: concepts_final
-        - procedure: filter
-          ingredients:
-            - concepts_final
-          options:
-            item:
-              $nin:
-                - unit
-            row:
-              concept:
-                  $nin:
-                      - unit
-          result: concepts_final_no_unit
+              path: datapoints
