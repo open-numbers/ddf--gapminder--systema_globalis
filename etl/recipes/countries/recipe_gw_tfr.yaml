@@ -1,0 +1,22 @@
+info:
+    id: tfr
+    base:
+        - &d1 open-numbers/ddf--gapminder--fertility_rate
+
+ingredients:
+    - id: tfr-datapoints
+      dataset: *d1
+      key: "country,year"
+      value:
+          - children_per_woman_total_fertility
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - tfr-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: tfr-datapoints-final

@@ -1,0 +1,52 @@
+config:
+  ddf_dir: ./
+  dictionary_dir: ./
+  external_csv_dir: ./
+  procedure_dir: ./
+  recipes_dir: ./
+
+ingredients:
+    - id: unpop-global-datapoints
+      dataset: open-numbers/ddf--gapminder--unpop_wpp
+      key: global, time
+      value:
+          - population_aged_0_4_years_both_sexes_percent
+          - population_aged_0_4_years_female_percent
+          - population_aged_0_4_years_male_percent
+          - population_aged_0_4_years_total_number
+          - population_aged_0_14_years_both_sexes_percent
+          - population_aged_0_14_years_female_percent
+          - population_aged_0_14_years_male_percent
+          - population_aged_0_14_years_total_number
+          - population_aged_10_14_years_both_sexes_percent
+          - population_aged_10_14_years_female_percent
+          - population_aged_10_14_years_male_percent
+          - population_aged_10_14_years_total_number
+          - population_aged_15_19_years_both_sexes_percent
+          - population_aged_15_19_years_female_percent
+          - population_aged_15_19_years_male_percent
+          - population_aged_15_19_years_total_number
+          - population_aged_20_39_years_both_sexes_percent
+          - population_aged_20_39_years_female_percent
+          - population_aged_20_39_years_male_percent
+          - population_aged_20_39_years_total_number
+          - population_aged_40_59_years_both_sexes_percent
+          - population_aged_40_59_years_female_percent
+          - population_aged_40_59_years_male_percent
+          - population_aged_40_59_years_total_number
+          - population_aged_5_9_years_both_sexes_percent
+          - population_aged_5_9_years_female_percent
+          - population_aged_5_9_years_male_percent
+          - population_aged_5_9_years_total_number
+          - population_aged_60plus_years_both_sexes_percent
+          - population_aged_60plus_years_female_percent
+          - population_aged_60plus_years_male_percent
+          - population_aged_60plus_years_total_number
+          - population_aged_65plus_years_both_sexes_percent
+          - population_aged_65plus_years_female_percent
+          - population_aged_65plus_years_male_percent
+          - population_aged_65plus_years_total_number
+          - population_aged_70plus_years_both_sexes_percent
+          - population_aged_70plus_years_female_percent
+          - population_aged_70plus_years_male_percent
+          - population_aged_70plus_years_total_number

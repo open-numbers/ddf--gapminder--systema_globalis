@@ -1,0 +1,11 @@
+# basic info
+info:
+    id: fao-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--gapminder--bp_energy
+
+ingredients:
+    - id: bp-datapoints
+      dataset: *d1
+      key: "geo, time"
+      value: "*"

@@ -5,7 +5,7 @@ from ddf_utils.chef.api import Chef
 
 
 out_dir = '../../'
-recipe_file = '../recipes/recipe_main.yaml'
+recipe_file = '../recipes/etl.yaml'
 
 try:
     datasets_dir = os.environ['DATASETS_DIR']

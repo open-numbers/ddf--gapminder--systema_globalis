@@ -1,0 +1,94 @@
+# recipe for fao aquastats dataset
+info:
+    id: sg-fao-aqua-dataset
+    base:
+    - &d1 open-numbers/ddf--unfao--aquastat
+
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+
+include:
+    - recipe_gw_geo.yaml
+
+
+ingredients:
+    - id: aqua-datapoints
+      dataset: *d1
+      key: "area,year"
+      value:
+          - agricultural_water_withdrawal_as_pct_of_total_water_withdrawal
+          - desalinated_water_produced
+          - industrial_water_withdrawal_as_pct_of_total_water_withdrawal
+          - municipal_water_withdrawal_as_pct_of_total_withdrawal
+          - total_internal_renewable_water_resources_per_capita
+          - total_renewable_water_resources_per_capita
+          - total_water_withdrawal
+          - total_water_withdrawal_per_capita
+          - total_population
+          - municipal_water_withdrawal
+          - municipal_water_withdrawal_per_capita
+
+    - id: aqua-areas
+      dataset: *d1
+      key: area
+
+
+cooking:
+    datapoints:
+    - procedure: translate_header
+      ingredients:
+          - aqua-datapoints
+      options:
+          dictionary: indicators_fao_aqua_to_sg.json
+      result: aqua-datapoints-indicators-translated
+    - procedure: translate_header
+      ingredients:
+          - aqua-datapoints-indicators-translated
+      options:
+          dictionary:
+              area: geo
+              year: time
+      result: aqua-datapoints-translated
+    - procedure: filter
+      ingredients:
+          - aqua-datapoints-translated
+      options:
+          item:
+              - agricultural_water_withdrawal_percent_of_total
+              - desalinated_water_produced_billion_cu_meters
+              - industrial_water_withdrawal_percent_of_total
+              - municipal_water_withdrawal_percent_of_total
+              - internal_renewable_water_cu_meters_per_person
+              - renewable_water_cu_meters_per_person
+              - total_water_withdrawal_billion_cu_meters
+              - water_withdrawal_cu_meters_per_person
+              - municipal_water_withdrawal_cu_meters_per_person
+      result: fao_aqua-datapoints-final-0
+
+    - procedure: translate_column
+      ingredients:
+          - aqua-areas
+      options:
+          column: name
+          target_column: geo
+          dictionary:
+              base: gm-country-synonym
+              key: synonym
+              value: geo
+      result: aqua-areas-aligned
+
+    - procedure: translate_column
+      ingredients:
+          - fao_aqua-datapoints-final-0
+      options:
+          column: geo
+          dictionary:
+              base: aqua-areas-aligned
+              key: area
+              value: geo
+      result: fao_aqua-datapoints-final

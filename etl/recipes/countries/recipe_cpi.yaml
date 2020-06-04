@@ -1,0 +1,59 @@
+info:
+    id: sg-cpi-indicator
+    base:
+        - &d1 open-numbers/ddf--transparency_international--corruption_perception_index
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+
+
+include:
+    - recipe_gw_geo.yaml
+
+
+ingredients:
+    - id: cpi-datapoints
+      dataset: *d1
+      key: country, year
+
+    - id: cpi-countries
+      dataset: *d1
+      key: country
+
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - cpi-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+                  cpi: corruption_perception_index_cpi
+                  cpi_pre2012: corruption_perception_index_cpi_pre2012
+          result: cpi-datapoints-translated
+
+        - procedure: translate_column
+          ingredients:
+              - cpi-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gm-country-synonym
+                  key: synonym
+                  value: geo
+          result: cpi-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - cpi-datapoints-translated
+          options:
+              column: geo
+              dictionary:
+                  base: cpi-countries-aligned
+                  key: country
+                  value: geo
+          result: cpi-datapoints-final

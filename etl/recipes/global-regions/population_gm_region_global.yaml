@@ -1,0 +1,35 @@
+info:
+    id: gm-global-population
+    base: &gmpop open-numbers/ddf--gapminder--population
+
+
+ingredients:
+    - id: gmpop-region-datapoints
+      dataset: *gmpop
+      key: world_4region, year
+      value:
+          - population
+    - id: gmpop-global-datapoints
+      dataset: *gmpop
+      key: global, year
+      value:
+          - population
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - gmpop-region-datapoints
+          options:
+              dictionary:
+                  population: population_total
+                  year: time
+          result: gmpop-region-datapoints-translated
+        - procedure: translate_header
+          ingredients:
+              - gmpop-global-datapoints
+          options:
+              dictionary:
+                  population: population_total
+                  year: time
+          result: gmpop-global-datapoints-translated

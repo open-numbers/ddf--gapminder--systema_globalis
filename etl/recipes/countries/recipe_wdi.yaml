@@ -1,0 +1,132 @@
+# basic info
+info:
+    id: wdi-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--open_numbers--world_development_indicators
+
+config:
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+
+# define the initial inputs of the recipe
+ingredients:
+    # WDI
+    - id: wdi-concepts
+      dataset: *d1
+      key: concept
+      value: "*"
+    - id: wdi-datapoints
+      dataset: *d1
+      key: geo, time
+      value:
+          - ag_lnd_agri_zs
+          - bm_klt_dinv_wd_gd_zs # was bm_klt_dinv_gd_zs in 2016-02
+          - bx_klt_dinv_wd_gd_zs
+          - cm_mkt_lcap_gd_zs
+          - dt_dod_dect_cd
+          - dt_dod_dect_gn_zs
+          - dt_dod_pvlx_gn_zs
+          - dt_oda_odat_gi_zs
+          - dt_oda_odat_kd
+          - dt_oda_odat_pc_zs
+          - dt_tds_dect_ex_zs
+          - eg_use_elec_kh_pc
+          - eg_use_elec_kh_pc
+          - eg_use_pcap_kg_oe
+          - en_urb_mcty_tl_zs
+          - fi_res_totl_dt_zs
+          - gc_tax_totl_gd_zs
+          - it_cel_sets
+          - it_net_bbnd
+          - ms_mil_mprt_kd
+          - ms_mil_xpnd_gd_zs
+          - ms_mil_xprt_kd
+          - ne_exp_gnfs_zs
+          - ne_gdi_totl_zs
+          - ne_imp_gnfs_zs
+          - ne_rsb_gnfs_cd
+          - ne_rsb_gnfs_zs
+          - nv_agr_totl_zs
+          - nv_ind_totl_zs
+          - nv_srv_totl_zs
+          - ny_gdp_defl_kd_zg
+          - ny_gdp_mktp_kd
+          - ny_gdp_pcap_kd
+          - ny_gdp_pcap_kd_zg
+          - ny_gdp_pcap_kd_zg
+          - ny_gdp_pcap_pp_kd
+          - ny_gnp_mktp_pp_cd
+          - ny_gnp_pcap_cd
+          - ny_gnp_pcap_kd
+          - ny_gnp_pcap_pp_cd
+          - se_enr_prsc_fm_zs
+          - se_prm_cmpt_fe_zs
+          - se_prm_cmpt_ma_zs
+          - se_prm_cmpt_zs
+          - se_prm_uner
+          - se_prm_uner_fe
+          - se_prm_uner_ma
+          - se_xpd_prim_pc_zs
+          - se_xpd_seco_pc_zs
+          - se_xpd_tert_pc_zs
+          - sh_med_phys_zs
+          - sh_sta_bass_zs
+          - sh_sta_bass_ru_zs
+          - sh_sta_bass_ur_zs
+          - sh_sta_brtc_zs
+          - sh_sta_maln_zs
+          - si_pov_dday
+          - si_pov_gini
+          - sp_dyn_conu_zs
+          - sp_pop_grow
+          - sp_urb_grow
+          - sp_urb_totl
+          - sp_urb_totl_in_zs
+          - tg_val_totl_gd_zs
+          - tm_val_mrch_xd_wd
+          - tt_pri_mrch_xd_wd
+          - tx_val_mrch_xd_wd
+          - tx_val_tech_mf_zs
+          - sh_h2o_basw_ur_zs
+          - sh_h2o_basw_ru_zs
+          - sh_h2o_basw_zs
+          - ms_mil_totl_tf_zs
+          - ms_mil_totl_p1
+          - ag_lnd_frst_k2
+          - ag_srf_totl_k2
+          - en_atm_co2e_pp_gd_kd
+          - it_cel_sets_p2
+          - it_net_bbnd_p2
+          # - it_net_user_p2
+          # - se_ant_1524_lt_fm_zs
+          - si_pov_umic
+          - si_pov_lmic
+          - si_pov_nahc
+          - si_dst_02nd_20
+          - si_dst_03rd_20
+          - si_dst_04th_20
+          - si_dst_10th_10
+          - si_dst_05th_20
+          - si_dst_frst_10
+          - si_dst_frst_20
+          - si_pov_ruhc
+          - si_pov_urhc
+          - it_mlt_main_p2
+          - ep_pmp_sgas_cd
+          - it_net_user_zs
+          # - eg_use_comm_gd_pd_kd
+
+    # - id: gw-concepts-all
+    #   dataset: *d2
+    #   key: concept
+    #   value: "*"
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          options:
+              dictionary: indicators_wdi_to_sg.json
+          ingredients:
+              - wdi-datapoints
+          result: wdi-datapoints-final

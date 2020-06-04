@@ -1,0 +1,15 @@
+ingredients:
+    - id: population-income-group-datapoints
+      dataset: open-numbers/ddf--gapminder--population_by_income_group
+      key: income_groups, year
+      value: "*"
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - population-income-group-datapoints
+          options:
+              dictionary:
+                  year: time
+          result: population-income-group-datapoints-translated

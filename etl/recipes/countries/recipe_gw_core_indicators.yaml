@@ -1,0 +1,74 @@
+info:
+    id: core_indicators
+    base:
+        - &u5mr open-numbers/ddf--gapminder--child_mortality
+        - &gdppc open-numbers/ddf--gapminder--gdp_per_capita_cppp
+        - &lex open-numbers/ddf--gapminder--life_expectancy
+        - &pop open-numbers/ddf--gapminder--population_historic
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+
+# define your ingredients and procedures below
+ingredients:
+    - id: lex-datapoints
+      dataset: *lex
+      key: geo, time
+      value:
+          - life_expectancy_at_birth
+    - id: gdp-datapoints-final
+      dataset: *gdppc
+      key: geo, time
+      value:
+          - income_per_person_gdppercapita_ppp_inflation_adjusted
+    - id: u5mr-datapoints-final
+      dataset: *u5mr
+      key: geo, time
+      value:
+          - child_mortality_0_5_year_olds_dying_per_1000_born
+
+    - id: pop-datapoints-final
+      dataset: *pop
+      key: geo, time
+      value:
+          - population_total
+
+cooking:
+    datapoints:
+        ### LEX ###
+        - procedure: translate_header
+          ingredients:
+              - lex-datapoints
+          options:
+              dictionary:
+                  life_expectancy_at_birth: life_expectancy_at_birth_with_projections
+          result: lex-datapoints-with-projections
+
+        - procedure: translate_header
+          ingredients:
+              - lex-datapoints
+          options:
+              dictionary:
+                  life_expectancy_at_birth: life_expectancy_years
+          result: lex-datapoints-translated
+
+        - procedure: merge
+          ingredients:
+              - lex-datapoints-with-projections
+              - lex-datapoints-translated
+          result: lex-datapoints-final
+
+        - procedure: merge
+          ingredients:
+              - u5mr-datapoints-final
+              - lex-datapoints-final
+              - pop-datapoints-final
+              - gdp-datapoints-final
+          result: core-indicator-datapoints
+
+# serving:
+#     - id: u5mr-datapoints-final
+#     - id: lex-datapoints-final
+#     - id: pop-datapoints-final
+#     - id: gdp-datapoints-final

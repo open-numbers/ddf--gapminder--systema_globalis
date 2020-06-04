@@ -1,0 +1,40 @@
+# recipe for dataset
+info:
+    id: gw-gini
+    base:  # the datasets for ingredients
+        - &d1 open-numbers/ddf--gapminder--gini
+
+
+# define your ingredients and procedures below
+ingredients:
+    # Ingredients have 5 parameters: id, dataset, key, value, filter
+    # in wich:
+    #     id: the name of ingredient, will be used in cooking procedures
+    #     dataset: which dataset is this ingredient from
+    #     key: the key to filter in ddf--index
+    #     value: the value to filter in ddf--index
+    #     filter: (optional) more keyword filters
+    #
+    # below some example of ingredients:
+    #
+    - id: gini-datapoints
+      dataset: *d1
+      key: "geo,time"
+      value:
+          - gapminder_gini
+    - id: gini-concepts
+      dataset: *d1
+      key: concept
+      value: "*"
+      filter:
+          concept:
+              - gapminder_gini
+    #
+    # - id: gw-concepts-aqua
+    #   dataset: *d2
+    #   key: concept
+    #   value: "*"
+    #   filter:
+    #       concept: &CONC_FILTER
+    #         - agricultural_water_withdrawal_percent_of_total
+    #         - desalinated_water_produced_billion_cu_meters

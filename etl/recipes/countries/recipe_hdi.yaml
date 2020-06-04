@@ -1,0 +1,55 @@
+info:
+    id: sg-hdi-indicator
+    base:
+        - &d1 open-numbers/ddf--undp--hdi
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+
+include:
+    - recipe_gw_geo.yaml
+
+ingredients:
+    - id: hdi-datapoints
+      dataset: *d1
+      key: country, year
+
+    - id: hdi-countries
+      dataset: *d1
+      key: country
+
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - hdi-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+                  hdi: hdi_human_development_index
+          result: hdi-datapoints-renamed
+        - procedure: translate_column
+          ingredients:
+              - hdi-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gm-country-synonym
+                  key: synonym
+                  value: geo
+          result: hdi-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - hdi-datapoints-renamed
+          options:
+              column: geo
+              dictionary:
+                  base: hdi-countries-aligned
+                  key: country
+                  value: geo
+          result: hdi-datapoints-final

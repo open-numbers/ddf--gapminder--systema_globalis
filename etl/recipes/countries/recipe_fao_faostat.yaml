@@ -1,0 +1,11 @@
+# basic info
+info:
+    id: fao-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--gapminder--unfao_faostat
+
+ingredients:
+    - id: faostat-datapoints
+      dataset: *d1
+      key: "geo, time"
+      value: "*"
