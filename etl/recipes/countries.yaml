@@ -1,7 +1,6 @@
 # recipe for dataset
 info:
     id: ddf--gapminder--systema_globalis
-    version: 1.16.2
 
 config:
     # the path to search recipe files to include
@@ -11,26 +10,26 @@ config:
     # external
     external_csv_dir: ../external_csv
     # procedures
-    procedure_dir: ../recipes/procedures
+    procedure_dir: ./procedures
 
 include:
-    - recipe_bp.yaml
-    - recipe_fao_faostat.yaml
-    - recipe_fao_fra.yaml
-    - recipe_gbd.yaml
-    - recipe_gw_core_indicators.yaml
-    - recipe_gw_geo.yaml
-    - recipe_ihme_edu_attainment.yaml
-    - recipe_unpop.yaml
-    - recipe_cpi.yaml
-    - recipe_hdi.yaml
-    - recipe_wdi.yaml
-    - recipe_fao_aqua.yaml
-    - recipe_gw_tfr.yaml
-    - recipe_gw_gini.yaml
-    - recipe_gw_co2.yaml
-    - recipe_ilostat.yaml
-    - recipe_death_rates.yaml
+    - countries/recipe_bp.yaml
+    - countries/recipe_fao_faostat.yaml
+    - countries/recipe_fao_fra.yaml
+    - countries/recipe_gbd.yaml
+    - countries/recipe_gw_core_indicators.yaml
+    - countries/recipe_gw_geo.yaml
+    - countries/recipe_ihme_edu_attainment.yaml
+    - countries/recipe_unpop.yaml
+    - countries/recipe_cpi.yaml
+    - countries/recipe_hdi.yaml
+    - countries/recipe_wdi.yaml
+    - countries/recipe_fao_aqua.yaml
+    - countries/recipe_gw_tfr.yaml
+    - countries/recipe_gw_gini.yaml
+    - countries/recipe_gw_co2.yaml
+    - countries/recipe_ilostat.yaml
+    - countries/recipe_death_rates.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -141,44 +140,8 @@ cooking:
               - death-rates-datapoints
               - static-assets-datapoints
           result: datapoints-final
-    entities:
-        - procedure: merge
-          ingredients:
-              - gw-entities-geo
-              - geo_global_patch
-          options:
-              deep: true
-          result: geo_final
         - procedure: serve
           ingredients:
-              - geo_final
-              - tag_entity
-    concepts:
-        - procedure: merge
-          result: all-concepts-merged
-          ingredients:
-              - gw-concepts-geo
-              - static-assets-concepts
-              - gw-ontology-concepts
+              - datapoints-final
           options:
-              deep: true
-
-        - procedure: merge
-          ingredients:
-              - all-concepts-merged
-              - concept_patch
-          options:
-              deep: true
-          result: concepts_final
-        - procedure: filter
-          ingredients:
-            - concepts_final
-          options:
-            item:
-              $nin:
-                - unit
-            row:
-              concept:
-                  $nin:
-                      - unit
-          result: concepts_final_no_unit
+              path: datapoints
