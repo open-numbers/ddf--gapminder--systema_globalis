@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-06-04T16:14:10.900324+00:00",
+    "created": "2020-06-04T17:00:16.776794+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -10649,6 +10649,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--rural_population_total--by--global--time",
+            "path": "datapoints/ddf--datapoints--rural_population_total--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "rural_population_total"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time",
             "path": "datapoints/ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time.csv",
             "schema": {
@@ -12366,6 +12387,27 @@
                 ],
                 "primaryKey": [
                     "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--urban_population_total--by--global--time",
+            "path": "datapoints/ddf--datapoints--urban_population_total--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "urban_population_total"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
                     "time"
                 ]
             }
@@ -23693,6 +23735,26 @@
             },
             {
                 "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "rural_population_total",
+                "resources": [
+                    "ddf--datapoints--rural_population_total--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "rural_population_total",
+                "resources": [
+                    "ddf--datapoints--rural_population_total--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
                     "country",
                     "time"
                 ],
@@ -25329,6 +25391,26 @@
                 "value": "urban_population_percent_of_total",
                 "resources": [
                     "ddf--datapoints--urban_population_percent_of_total--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "urban_population_total",
+                "resources": [
+                    "ddf--datapoints--urban_population_total--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "urban_population_total",
+                "resources": [
+                    "ddf--datapoints--urban_population_total--by--global--time"
                 ]
             },
             {

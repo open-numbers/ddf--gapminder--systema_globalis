@@ -10,6 +10,8 @@ ingredients:
       value:
         - sp_urb_totl_in_zs
         - sp_rur_totl_zs
+        - sp_urb_totl
+        - sp_rur_totl
 
 
 cooking:
@@ -31,5 +33,7 @@ cooking:
                 economy: global
                 sp_urb_totl_in_zs: urban_population_percent
                 sp_rur_totl_zs: rural_population_percent
+                sp_urb_totl: urban_population_total
+                sp_rur_totl: rural_population_total
                 year: time
           result: wdi-datapoints-global-translated
