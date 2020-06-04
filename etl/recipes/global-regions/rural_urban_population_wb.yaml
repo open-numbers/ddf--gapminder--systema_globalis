@@ -29,7 +29,7 @@ cooking:
           options:
             dictionary:
                 economy: global
-                sp_urb_totl_in_zs: urban_populations
-                sp_rur_totl_zs: rural_populations
+                sp_urb_totl_in_zs: urban_population
+                sp_rur_totl_zs: rural_population
                 year: time
           result: wdi-datapoints-global-translated
