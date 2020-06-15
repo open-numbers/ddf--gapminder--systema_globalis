@@ -1,7 +1,9 @@
 
 info:
-    id: rural-urban-population-global-year
     base: &wdi open-numbers/ddf--world_bank--world_development_indicators
+
+config:
+    dictionary_dir: ../../translation_dictionaries
 
 ingredients:
     - id: wdi-datapoints-for-global
@@ -16,7 +18,6 @@ ingredients:
         - se_prm_cmpt_ma_zs
         - se_prm_cmpt_fe_zs
         - si_pov_dday
-
 
 cooking:
     datapoints:

@@ -2,6 +2,9 @@
 info:
     base: &wdi open-numbers/ddf--world_bank--world_development_indicators
 
+config:
+    dictionary_dir: ../../translation_dictionaries
+
 ingredients:
     - id: wdi-datapoints-for-income_gruops
       dataset: *wdi
