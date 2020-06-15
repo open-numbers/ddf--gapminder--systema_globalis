@@ -4,7 +4,7 @@ info:
     base: &wdi open-numbers/ddf--world_bank--world_development_indicators
 
 ingredients:
-    - id: rural-urban-datapoints
+    - id: wdi-datapoints-for-global
       dataset: *wdi
       key: economy, year
       value:
@@ -12,28 +12,34 @@ ingredients:
         - sp_rur_totl_zs
         - sp_urb_totl
         - sp_rur_totl
+        - se_prm_cmpt_zs
+        - se_prm_cmpt_ma_zs
+        - se_prm_cmpt_fe_zs
+        - si_pov_dday
 
 
 cooking:
     datapoints:
         - procedure: translate_column
           ingredients:
-            - rural-urban-datapoints
+            - wdi-datapoints-for-global
           options:
             column: economy
             dictionary:
                 wld: world
             not_found: drop
-          result: rural-urban-datapoints-global
+          result: wdi-datapoints-global-only
         - procedure: translate_header
           ingredients:
-            - rural-urban-datapoints-global
+              - wdi-datapoints-global-only
+          options:
+              dictionary: indicators_wdi_to_sg.json
+          result: wdi-datapoints-global-indicator-translated
+        - procedure: translate_header
+          ingredients:
+            - wdi-datapoints-global-indicator-translated
           options:
             dictionary:
                 economy: global
-                sp_urb_totl_in_zs: urban_population_percent
-                sp_rur_totl_zs: rural_population_percent
-                sp_urb_totl: urban_population_total
-                sp_rur_totl: rural_population_total
                 year: time
           result: wdi-datapoints-global-translated
