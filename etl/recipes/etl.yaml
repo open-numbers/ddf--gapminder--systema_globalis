@@ -20,13 +20,18 @@ cooking:
         - procedure: serve
           ingredients:
               - datapoints-final
+          options:
+              path: countries-etc-datapoints
+        - procedure: serve
+          ingredients:
               - gmpop-region-datapoints-translated
               - gmpop-global-datapoints-translated
               - unpop-global-datapoints
               - population-income-group-datapoints-translated
               - wdi-datapoints-global-translated
+              - wdi-datapoints-income_groups-translated
           options:
-              path: datapoints
+              path: global-regions-datapoints
     entities:
         - procedure: merge
           ingredients:
