@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-06-12T13:03:37.302030+00:00",
+    "created": "2020-06-17T03:17:06.691060+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -3252,6 +3252,27 @@
                 ],
                 "primaryKey": [
                     "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--extreme_poverty_percent_people_below_190_a_day--by--global--time",
+            "path": "datapoints/ddf--datapoints--extreme_poverty_percent_people_below_190_a_day--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "extreme_poverty_percent_people_below_190_a_day"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
                     "time"
                 ]
             }
@@ -10229,6 +10250,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time",
+            "path": "datapoints/ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "primary_completion_rate_total_percent_of_relevant_age_group"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--primary_forest_area_ha--by--geo--time",
             "path": "datapoints/ddf--datapoints--primary_forest_area_ha--by--geo--time.csv",
             "schema": {
@@ -10271,6 +10313,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time",
+            "path": "datapoints/ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "primary_school_completion_percent_of_boys"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--primary_school_completion_percent_of_girls--by--geo--time",
             "path": "datapoints/ddf--datapoints--primary_school_completion_percent_of_girls--by--geo--time.csv",
             "schema": {
@@ -10287,6 +10350,27 @@
                 ],
                 "primaryKey": [
                     "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time",
+            "path": "datapoints/ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "primary_school_completion_percent_of_girls"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
                     "time"
                 ]
             }
@@ -10628,8 +10712,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--rural_population_percent--by--global--time",
-            "path": "datapoints/ddf--datapoints--rural_population_percent--by--global--time.csv",
+            "name": "ddf--datapoints--rural_population--by--global--time",
+            "path": "datapoints/ddf--datapoints--rural_population--by--global--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -10639,7 +10723,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "rural_population_percent"
+                        "name": "rural_population"
                     }
                 ],
                 "primaryKey": [
@@ -10649,8 +10733,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--rural_population_total--by--global--time",
-            "path": "datapoints/ddf--datapoints--rural_population_total--by--global--time.csv",
+            "name": "ddf--datapoints--rural_population_percent_of_total--by--global--time",
+            "path": "datapoints/ddf--datapoints--rural_population_percent_of_total--by--global--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -10660,7 +10744,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "rural_population_total"
+                        "name": "rural_population_percent_of_total"
                     }
                 ],
                 "primaryKey": [
@@ -12329,6 +12413,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--urban_population--by--global--time",
+            "path": "datapoints/ddf--datapoints--urban_population--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "urban_population"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--urban_population_growth_annual_percent--by--geo--time",
             "path": "datapoints/ddf--datapoints--urban_population_growth_annual_percent--by--geo--time.csv",
             "schema": {
@@ -12345,27 +12450,6 @@
                 ],
                 "primaryKey": [
                     "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--urban_population_percent--by--global--time",
-            "path": "datapoints/ddf--datapoints--urban_population_percent--by--global--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "global"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "urban_population_percent"
-                    }
-                ],
-                "primaryKey": [
-                    "global",
                     "time"
                 ]
             }
@@ -12392,8 +12476,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--urban_population_total--by--global--time",
-            "path": "datapoints/ddf--datapoints--urban_population_total--by--global--time.csv",
+            "name": "ddf--datapoints--urban_population_percent_of_total--by--global--time",
+            "path": "datapoints/ddf--datapoints--urban_population_percent_of_total--by--global--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -12403,7 +12487,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "urban_population_total"
+                        "name": "urban_population_percent_of_total"
                     }
                 ],
                 "primaryKey": [
@@ -17057,7 +17141,18 @@
                 ],
                 "value": "extreme_poverty_percent_people_below_190_a_day",
                 "resources": [
-                    "ddf--datapoints--extreme_poverty_percent_people_below_190_a_day--by--geo--time"
+                    "ddf--datapoints--extreme_poverty_percent_people_below_190_a_day--by--geo--time",
+                    "ddf--datapoints--extreme_poverty_percent_people_below_190_a_day--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "extreme_poverty_percent_people_below_190_a_day",
+                "resources": [
+                    "ddf--datapoints--extreme_poverty_percent_people_below_190_a_day--by--global--time"
                 ]
             },
             {
@@ -23330,7 +23425,18 @@
                 ],
                 "value": "primary_completion_rate_total_percent_of_relevant_age_group",
                 "resources": [
-                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--geo--time"
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--geo--time",
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "primary_completion_rate_total_percent_of_relevant_age_group",
+                "resources": [
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time"
                 ]
             },
             {
@@ -23370,7 +23476,18 @@
                 ],
                 "value": "primary_school_completion_percent_of_boys",
                 "resources": [
-                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--geo--time"
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--geo--time",
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "primary_school_completion_percent_of_boys",
+                "resources": [
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time"
                 ]
             },
             {
@@ -23390,7 +23507,18 @@
                 ],
                 "value": "primary_school_completion_percent_of_girls",
                 "resources": [
-                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--geo--time"
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--geo--time",
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "primary_school_completion_percent_of_girls",
+                "resources": [
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time"
                 ]
             },
             {
@@ -23718,9 +23846,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "rural_population_percent",
+                "value": "rural_population",
                 "resources": [
-                    "ddf--datapoints--rural_population_percent--by--global--time"
+                    "ddf--datapoints--rural_population--by--global--time"
                 ]
             },
             {
@@ -23728,9 +23856,9 @@
                     "global",
                     "time"
                 ],
-                "value": "rural_population_percent",
+                "value": "rural_population",
                 "resources": [
-                    "ddf--datapoints--rural_population_percent--by--global--time"
+                    "ddf--datapoints--rural_population--by--global--time"
                 ]
             },
             {
@@ -23738,9 +23866,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "rural_population_total",
+                "value": "rural_population_percent_of_total",
                 "resources": [
-                    "ddf--datapoints--rural_population_total--by--global--time"
+                    "ddf--datapoints--rural_population_percent_of_total--by--global--time"
                 ]
             },
             {
@@ -23748,9 +23876,9 @@
                     "global",
                     "time"
                 ],
-                "value": "rural_population_total",
+                "value": "rural_population_percent_of_total",
                 "resources": [
-                    "ddf--datapoints--rural_population_total--by--global--time"
+                    "ddf--datapoints--rural_population_percent_of_total--by--global--time"
                 ]
             },
             {
@@ -25330,7 +25458,18 @@
                 ],
                 "value": "urban_population",
                 "resources": [
-                    "ddf--datapoints--urban_population--by--geo--time"
+                    "ddf--datapoints--urban_population--by--geo--time",
+                    "ddf--datapoints--urban_population--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "urban_population",
+                "resources": [
+                    "ddf--datapoints--urban_population--by--global--time"
                 ]
             },
             {
@@ -25355,26 +25494,6 @@
             },
             {
                 "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "urban_population_percent",
-                "resources": [
-                    "ddf--datapoints--urban_population_percent--by--global--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "global",
-                    "time"
-                ],
-                "value": "urban_population_percent",
-                "resources": [
-                    "ddf--datapoints--urban_population_percent--by--global--time"
-                ]
-            },
-            {
-                "primaryKey": [
                     "country",
                     "time"
                 ],
@@ -25390,17 +25509,8 @@
                 ],
                 "value": "urban_population_percent_of_total",
                 "resources": [
-                    "ddf--datapoints--urban_population_percent_of_total--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "urban_population_total",
-                "resources": [
-                    "ddf--datapoints--urban_population_total--by--global--time"
+                    "ddf--datapoints--urban_population_percent_of_total--by--geo--time",
+                    "ddf--datapoints--urban_population_percent_of_total--by--global--time"
                 ]
             },
             {
@@ -25408,9 +25518,9 @@
                     "global",
                     "time"
                 ],
-                "value": "urban_population_total",
+                "value": "urban_population_percent_of_total",
                 "resources": [
-                    "ddf--datapoints--urban_population_total--by--global--time"
+                    "ddf--datapoints--urban_population_percent_of_total--by--global--time"
                 ]
             },
             {
