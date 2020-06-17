@@ -2,7 +2,8 @@ include:
     - global-regions/population_age_group_gender.yaml
     - global-regions/population_by_income_group.yaml
     - global-regions/population_gm_region_global.yaml
-    - global-regions/rural_urban_population_wb.yaml
+    - global-regions/wdi_global.yaml
+    - global-regions/wdi_income_groups.yaml
 
 serving:
     - id: gmpop-region-datapoints-translated
@@ -18,5 +19,8 @@ serving:
       options:
           path: global-region-datapoints
     - id: wdi-datapoints-global-translated
+      options:
+          path: global-region-datapoints
+    - id: wdi-datapoints-income_groups-translated
       options:
           path: global-region-datapoints
