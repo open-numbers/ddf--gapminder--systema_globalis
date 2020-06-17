@@ -6,7 +6,7 @@ config:
     dictionary_dir: ../../translation_dictionaries
 
 ingredients:
-    - id: wdi-datapoints-for-income_gruops
+    - id: wdi-datapoints-for-income_groups
       dataset: *wdi
       key: economy, year
       value:
