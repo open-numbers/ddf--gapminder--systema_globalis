@@ -1,2 +1,10 @@
-geo,iso3166_1_alpha2,iso3166_1_alpha3,iso3166_1_numeric,landlocked,latitude,longitude,main_religion_2008,name,un_state,unicode_region_subtag,world_4region,world_6region
-bes,BQ,BES,535,coastline,12.1833333,-68.233333,christian,"Bonaire, Sint Eustatius and Saba",FALSE,BQ,americas,america
+geo,color,iso3166_1_alpha2,iso3166_1_alpha3,iso3166_1_numeric,landlocked,latitude,longitude,main_religion_2008,name,un_state,unicode_region_subtag,world_4region,world_6region
+australia_and_new_zealand,#eb1c2d,,,,,,,,Australia and New Zealand,,,,
+bes,,BQ,BES,535,coastline,12.1833333,-68.233333,christian,"Bonaire, Sint Eustatius and Saba",FALSE,BQ,americas,america
+central_and_southern_asia,#f36d25,,,,,,,,Central and Southern Asia,,,,
+eastern_and_south_eastern_asia,#279b48,,,,,,,,Eastern and South-Eastern Asia,,,,
+europe_and_northern_america,#02558b,,,,,,,,Europe and Northern America,,,,
+latin_america_and_the_caribbean,#00aed9,,,,,,,,Latin America and the Caribbean,,,,
+least_developed,,,,,,,,,Least Developed Countries,,,,
+northern_africa_and_western_asia,#f99d26,,,,,,,,Northern Africa and Western Asia,,,,
+oceania_exc_australia_and_new_zealand,#8f1838,,,,,,,,Oceania (exc. Australia and New Zealand),,,,

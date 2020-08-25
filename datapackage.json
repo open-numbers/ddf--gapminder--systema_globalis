@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-08-25T09:11:27.933210+00:00",
+    "created": "2020-08-25T18:28:48.653192+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11638,6 +11638,12 @@
                         "name": "name"
                     },
                     {
+                        "name": "un_sdg_ldc"
+                    },
+                    {
+                        "name": "un_sdg_region"
+                    },
+                    {
                         "name": "un_state"
                     },
                     {
@@ -11860,6 +11866,9 @@
                         "name": "world_6region"
                     },
                     {
+                        "name": "color"
+                    },
+                    {
                         "name": "is--world_6region"
                     },
                     {
@@ -11888,6 +11897,9 @@
                 "fields": [
                     {
                         "name": "geo"
+                    },
+                    {
+                        "name": "color"
                     },
                     {
                         "name": "iso3166_1_alpha2"
@@ -13257,7 +13269,9 @@
                 ],
                 "value": "color",
                 "resources": [
-                    "ddf--entities--geo--world_4region"
+                    "ddf--entities--geo",
+                    "ddf--entities--geo--world_4region",
+                    "ddf--entities--geo--world_6region"
                 ]
             },
             {
@@ -13267,6 +13281,15 @@
                 "value": "color",
                 "resources": [
                     "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "world_6region"
+                ],
+                "value": "color",
+                "resources": [
+                    "ddf--entities--geo--world_6region"
                 ]
             },
             {
@@ -14039,6 +14062,42 @@
                 "value": "topojson",
                 "resources": [
                     "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "un_sdg_ldc",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "un_sdg_ldc",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "un_sdg_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "un_sdg_region",
+                "resources": [
+                    "ddf--entities--geo--country"
                 ]
             },
             {
