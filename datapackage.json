@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-08-25T19:19:48.095266+00:00",
+    "created": "2020-08-25T20:29:51.124754+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11798,6 +11798,45 @@
             }
         },
         {
+            "name": "ddf--entities--geo--un_sdg_ldc",
+            "path": "ddf--entities--geo--un_sdg_ldc.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "un_sdg_ldc"
+                    },
+                    {
+                        "name": "is--un_sdg_ldc"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "un_sdg_ldc"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--un_sdg_region",
+            "path": "ddf--entities--geo--un_sdg_region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "un_sdg_region"
+                    },
+                    {
+                        "name": "color"
+                    },
+                    {
+                        "name": "is--un_sdg_region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "un_sdg_region"
+            }
+        },
+        {
             "name": "ddf--entities--geo--unicef_region",
             "path": "ddf--entities--geo--unicef_region.csv",
             "schema": {
@@ -11866,9 +11905,6 @@
                         "name": "world_6region"
                     },
                     {
-                        "name": "color"
-                    },
-                    {
                         "name": "is--world_6region"
                     },
                     {
@@ -11897,9 +11933,6 @@
                 "fields": [
                     {
                         "name": "geo"
-                    },
-                    {
-                        "name": "color"
                     },
                     {
                         "name": "iso3166_1_alpha2"
@@ -13269,9 +13302,17 @@
                 ],
                 "value": "color",
                 "resources": [
-                    "ddf--entities--geo",
-                    "ddf--entities--geo--world_4region",
-                    "ddf--entities--geo--world_6region"
+                    "ddf--entities--geo--un_sdg_region",
+                    "ddf--entities--geo--world_4region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_sdg_region"
+                ],
+                "value": "color",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_region"
                 ]
             },
             {
@@ -13281,15 +13322,6 @@
                 "value": "color",
                 "resources": [
                     "ddf--entities--geo--world_4region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "world_6region"
-                ],
-                "value": "color",
-                "resources": [
-                    "ddf--entities--geo--world_6region"
                 ]
             },
             {
@@ -13506,6 +13538,42 @@
                 "value": "is--main_religion_2008",
                 "resources": [
                     "ddf--entities--geo--main_religion_2008"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--un_sdg_ldc",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_ldc"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_sdg_ldc"
+                ],
+                "value": "is--un_sdg_ldc",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_ldc"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--un_sdg_region",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_sdg_region"
+                ],
+                "value": "is--un_sdg_region",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_region"
                 ]
             },
             {
@@ -13785,6 +13853,8 @@
                     "ddf--entities--geo--income_groups",
                     "ddf--entities--geo--landlocked",
                     "ddf--entities--geo--main_religion_2008",
+                    "ddf--entities--geo--un_sdg_ldc",
+                    "ddf--entities--geo--un_sdg_region",
                     "ddf--entities--geo--unicef_region",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
@@ -13844,6 +13914,24 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--tag"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_sdg_ldc"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_ldc"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "un_sdg_region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--un_sdg_region"
                 ]
             },
             {

@@ -1,0 +1,9 @@
+un_sdg_region,color,is--un_sdg_region,name
+un_australia_and_new_zealand,#eb1c2d,TRUE,Australia and New Zealand
+un_central_and_southern_asia,#f36d25,TRUE,Central and Southern Asia
+un_eastern_and_south_eastern_asia,#279b48,TRUE,Eastern and South-Eastern Asia
+un_europe_and_northern_america,#02558b,TRUE,Europe and Northern America
+un_latin_america_and_the_caribbean,#00aed9,TRUE,Latin America and the Caribbean
+un_northern_africa_and_western_asia,#f99d26,TRUE,Northern Africa and Western Asia
+un_oceania_exc_australia_and_new_zealand,#8f1838,TRUE,Oceania (exc. Australia and New Zealand)
+un_sub_saharan_africa,#e11484,TRUE,Sub-Saharan Africa
