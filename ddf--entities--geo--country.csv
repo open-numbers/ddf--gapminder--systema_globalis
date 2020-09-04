@@ -230,7 +230,7 @@ sur,g77,middle_income,upper_middle_income,TRUE,SR,SUR,740,,coastline,4.0,-56.0,c
 svk,oecd,high_income,high_income,TRUE,SK,SVK,703,,landlocked,48.66667,19.5,christian,Slovak Republic,un_not_least_developed,un_europe_and_northern_america,TRUE,eca,SK,europe,europe_central_asia
 svn,others,high_income,high_income,TRUE,SI,SVN,705,,coastline,46.08333,15.0,christian,Slovenia,un_not_least_developed,un_europe_and_northern_america,TRUE,eca,SI,europe,europe_central_asia
 swe,oecd,high_income,high_income,TRUE,SE,SWE,752,,coastline,62.0,15.0,christian,Sweden,un_not_least_developed,un_europe_and_northern_america,TRUE,eca,SE,europe,europe_central_asia
-swz,g77,middle_income,lower_middle_income,TRUE,SZ,SWZ,748,,landlocked,-26.5,31.5,christian,Swaziland,un_not_least_developed,un_sub_saharan_africa,TRUE,ssa,SZ,africa,sub_saharan_africa
+swz,g77,middle_income,lower_middle_income,TRUE,SZ,SWZ,748,,landlocked,-26.5,31.5,christian,Eswatini,un_not_least_developed,un_sub_saharan_africa,TRUE,ssa,SZ,africa,sub_saharan_africa
 sxm,,high_income,high_income,TRUE,SX,SXM,534,,,18.04167,-63.06667,,Sint Maarten (Dutch part),un_not_least_developed,un_latin_america_and_the_caribbean,FALSE,,SX,americas,
 syc,g77,high_income,high_income,TRUE,SC,SYC,690,,coastline,-4.58333,55.66667,christian,Seychelles,un_not_least_developed,un_sub_saharan_africa,TRUE,ssa,SC,africa,sub_saharan_africa
 syr,g77,low_income,low_income,TRUE,SY,SYR,760,,coastline,35.0,38.0,muslim,Syria,un_not_least_developed,un_northern_africa_and_western_asia,TRUE,mena,SY,asia,middle_east_north_africa
