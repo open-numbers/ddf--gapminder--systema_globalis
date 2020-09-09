@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-09-05T02:59:57.336998+00:00",
+    "created": "2020-09-09T17:44:30.159332+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -2261,6 +2261,48 @@
                     },
                     {
                         "name": "congenital_deaths_in_newborn_total_deaths"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "consumption_co2_emissions_1000_tonnes"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "consumption_emissions_tonnes_per_person"
                     }
                 ],
                 "primaryKey": [
@@ -16412,6 +16454,46 @@
                 "value": "congenital_deaths_in_newborn_total_deaths",
                 "resources": [
                     "ddf--datapoints--congenital_deaths_in_newborn_total_deaths--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "consumption_co2_emissions_1000_tonnes",
+                "resources": [
+                    "ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "consumption_co2_emissions_1000_tonnes",
+                "resources": [
+                    "ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "consumption_emissions_tonnes_per_person",
+                "resources": [
+                    "ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "consumption_emissions_tonnes_per_person",
+                "resources": [
+                    "ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time"
                 ]
             },
             {

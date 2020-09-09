@@ -23,6 +23,8 @@ ingredients:
       value:
           - yearly_co2_emissions_1000_tonnes
           - co2_emissions_tonnes_per_person
+          - consumption_co2_emissions_1000_tonnes
+          - consumption_emissions_tonnes_per_person
           - cumulative_co2_emissions_tonnes
     - id: co2-concepts-final
       dataset: *d1
@@ -32,6 +34,8 @@ ingredients:
           concept:
               - yearly_co2_emissions_1000_tonnes
               - co2_emissions_tonnes_per_person
+              - consumption_co2_emissions_1000_tonnes
+              - consumption_emissions_tonnes_per_person
               - cumulative_co2_emissions_tonnes
     #
     # - id: gw-concepts-aqua
