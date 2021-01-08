@@ -31,7 +31,6 @@ high_income,2015,1186883555
 high_income,2016,1188672273
 high_income,2017,1246648509
 high_income,2018,1208185207
-high_income,2019,1233907726
 low_income,1987,2843719158
 low_income,1988,2905810904
 low_income,1989,2968074025
@@ -64,7 +63,6 @@ low_income,2015,629626394
 low_income,2016,646653211
 low_income,2017,717952444
 low_income,2018,705463872
-low_income,2019,668454965
 lower_middle_income,1987,817512729
 lower_middle_income,1988,944664247
 lower_middle_income,1989,872997584
@@ -97,7 +95,6 @@ lower_middle_income,2015,2934509338
 lower_middle_income,2016,3017520715
 lower_middle_income,2017,2976160191
 lower_middle_income,2018,3022908194
-lower_middle_income,2019,2913534363
 upper_middle_income,1987,570651740
 upper_middle_income,1988,467608727
 upper_middle_income,1989,559027000
@@ -130,4 +127,3 @@ upper_middle_income,2015,2626006794
 upper_middle_income,2016,2608374209
 upper_middle_income,2017,2604262439
 upper_middle_income,2018,2691662561
-upper_middle_income,2019,2894663388
