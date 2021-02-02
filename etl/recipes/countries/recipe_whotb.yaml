@@ -54,7 +54,7 @@ cooking:
           ingredients:
               - whotb-countries
           options:
-              column: iso3
+              column: iso_numeric
               target_column: geo
               dictionary:
                   base: gm-country-synonym
