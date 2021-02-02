@@ -1,13 +1,13 @@
 {
-    'e_mort_100k': 'all_forms_of_tb_deaths_per_100000_estimated',
-    'e_mort_num': 'all_forms_of_tb_number_of_deaths_estimated',
-    'e_mort_tbhiv_100k': 'tb_with_hivplus_deaths_per_100000_estimated',
-    'e_mort_tbhiv_num': 'tb_with_hivplus_number_of_deaths_estimated',
-    'e_inc_100k': 'all_forms_of_tb_existing_cases_per_100000_estimated',
-    'e_inc_num': 'all_forms_of_tb_number_of_existing_cases_estimated',
-    'e_inc_tbhiv_100k': 'tb_with_hivplus_existing_cases_per_100000_estimated',
-    'e_inc_tbhiv_num': 'tb_with_hivplus_number_of_existing_cases_estimated',
-    'c_newinc_100k': 'all_forms_of_tb_new_cases_per_100000_estimated',
-    'c_newinc': 'all_forms_of_tb_number_of_new_cases_estimated',
-    'c_cdr': 'all_forms_of_tb_detection_rate_percent'
+    "e_mort_100k": "all_forms_of_tb_deaths_per_100000_estimated",
+    "e_mort_num": "all_forms_of_tb_number_of_deaths_estimated",
+    "e_mort_tbhiv_100k": "tb_with_hivplus_deaths_per_100000_estimated",
+    "e_mort_tbhiv_num": "tb_with_hivplus_number_of_deaths_estimated",
+    "e_inc_100k": "all_forms_of_tb_existing_cases_per_100000_estimated",
+    "e_inc_num": "all_forms_of_tb_number_of_existing_cases_estimated",
+    "e_inc_tbhiv_100k": "tb_with_hivplus_existing_cases_per_100000_estimated",
+    "e_inc_tbhiv_num": "tb_with_hivplus_number_of_existing_cases_estimated",
+    "c_newinc_100k": "all_forms_of_tb_new_cases_per_100000_estimated",
+    "c_newinc": "all_forms_of_tb_number_of_new_cases_estimated",
+    "c_cdr": "all_forms_of_tb_detection_rate_percent"
 }
