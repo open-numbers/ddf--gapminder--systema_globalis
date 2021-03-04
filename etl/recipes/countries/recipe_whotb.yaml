@@ -1,0 +1,74 @@
+info:
+    id: sg-whotb-recipe
+    base:
+        - &d1 open-numbers/ddf--who--tb_burden_estimates
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+include:
+    - recipe_gw_geo.yaml
+
+ingredients:
+    - id: whotb-datapoints
+      dataset: *d1
+      key: country, year
+      value:
+          - e_mort_100k
+          - e_mort_num
+          - e_mort_tbhiv_100k
+          - e_mort_tbhiv_num
+          - e_inc_100k
+          - e_inc_num
+          - e_inc_tbhiv_100k
+          - e_inc_tbhiv_num
+          - c_newinc_100k
+          - c_newinc
+          - c_cdr
+    - id: whotb-countries
+      dataset: *d1
+      key: country
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - whotb-datapoints
+          options:
+              dictionary:
+                  country: geo
+                  year: time
+          result: whotb-datapoints-pkey-translated
+
+        - procedure: translate_header
+          ingredients:
+              - whotb-datapoints-pkey-translated
+          options:
+              dictionary: indicators_whotb_to_sg.json
+          result: whotb-datapoints-translated
+
+        - procedure: translate_column
+          ingredients:
+              - whotb-countries
+          options:
+              column: iso_numeric
+              target_column: geo
+              dictionary:
+                  base: gm-country-synonym
+                  key: synonym
+                  value: geo
+          result: whotb-countries-aligned
+
+        - procedure: translate_column
+          ingredients:
+              - whotb-datapoints-translated
+          options:
+              column: geo
+              dictionary:
+                  base: whotb-countries-aligned
+                  key: country
+                  value: geo
+          result: whotb-datapoints-final

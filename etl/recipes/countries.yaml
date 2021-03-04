@@ -30,6 +30,7 @@ include:
     - countries/recipe_gw_co2.yaml
     - countries/recipe_ilostat.yaml
     - countries/recipe_death_rates.yaml
+    - countries/recipe_whotb.yaml
 
 ingredients:
     - id: gw-ontology-concepts
@@ -94,6 +95,18 @@ ingredients:
               - self_employed_percent_of_labour_force
               - service_workers_percent_of_labour_force
               - hourly_compensation_us
+              # tb incidators renamed
+              - all_forms_of_tb_deaths_per_100000_estimated
+              - all_forms_of_tb_number_of_deaths_estimated
+              - tb_with_hivplus_deaths_per_100000_estimated
+              - tb_with_hivplus_number_of_deaths_estimated
+              - all_forms_of_tb_existing_cases_per_100000_estimated
+              - all_forms_of_tb_number_of_existing_cases_estimated
+              - tb_with_hivplus_existing_cases_per_100000_estimated
+              - tb_with_hivplus_number_of_existing_cases_estimated
+              - all_forms_of_tb_new_cases_per_100000_estimated
+              - all_forms_of_tb_number_of_new_cases_estimated
+              - all_forms_of_tb_detection_rate_percent
 
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
@@ -138,5 +151,6 @@ cooking:
               - gini-datapoints
               - ilo-datapoints
               - death-rates-datapoints
+              - whotb-datapoints-final
               - static-assets-datapoints
           result: datapoints-final
