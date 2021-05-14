@@ -1,0 +1,23 @@
+info:
+    id: ddf--gapminder--systema_globalis
+
+ingredients:
+    - id: gw-multidimensional
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: geo, gender, time
+      value: "*"
+
+    - id: gw-gender-entities
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: gender
+      value: "*"
+
+cooking:
+  datapoints:
+    - procedure: serve
+      ingredients:
+        - gw-multidimensional
+  entities:
+    - procedure: serve
+      ingredients:
+        - gw-gender-entities
