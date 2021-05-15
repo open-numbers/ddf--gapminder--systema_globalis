@@ -15,7 +15,9 @@ ingredients:
     - id: gw-multidimensional-concepts
       dataset: open-numbers/ddf--gapminder--gapminder_world
       key: concept
-      value: "*"
+      value:
+        $nin:
+          - interpolation
       filter:
         concept:
           - literacy_rate_youth
