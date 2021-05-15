@@ -60,6 +60,7 @@ cooking:
               - gw-concepts-geo
               - static-assets-concepts
               - gw-ontology-concepts
+              - gw-multidimensional-concepts
           options:
               deep: true
 

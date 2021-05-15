@@ -12,12 +12,9 @@ ingredients:
       key: gender
       value: "*"
 
-cooking:
-  datapoints:
-    - procedure: serve
-      ingredients:
-        - gw-multidimensional
-  entities:
-    - procedure: serve
-      ingredients:
-        - gw-gender-entities
+    - id: gw-multidimensional-concepts
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: concept
+      value:
+        - literacy_rate_youth
+        - literacy_rate_adult
