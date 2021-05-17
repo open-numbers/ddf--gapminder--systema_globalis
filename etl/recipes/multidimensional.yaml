@@ -20,5 +20,6 @@ ingredients:
           - interpolation
       filter:
         concept:
+          - gender
           - literacy_rate_youth
           - literacy_rate_adult
