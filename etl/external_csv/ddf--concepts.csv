@@ -6,3 +6,5 @@ time,_root
 unicode_region_subtag,_none
 drill_up,_none
 gender,_none
+literacy_rate_youth,literacy
+literacy_rate_adult,literacy
