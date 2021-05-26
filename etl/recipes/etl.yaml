@@ -14,6 +14,7 @@ config:
 include:
     - countries.yaml
     - global-regions.yaml
+    - multidimensional.yaml
 
 cooking:
     datapoints:
@@ -22,6 +23,11 @@ cooking:
               - datapoints-final
           options:
               path: countries-etc-datapoints
+        - procedure: serve
+          ingredients:
+              - gw-multidimensional
+          options:
+              path: multidimensional
         - procedure: serve
           ingredients:
               - gmpop-region-datapoints-translated
@@ -44,6 +50,9 @@ cooking:
           ingredients:
               - geo_final
               - tag_entity
+        - procedure: serve
+          ingredients:
+            - gw-gender-entities
     concepts:
         - procedure: merge
           result: all-concepts-merged
@@ -51,6 +60,7 @@ cooking:
               - gw-concepts-geo
               - static-assets-concepts
               - gw-ontology-concepts
+              - gw-multidimensional-concepts
           options:
               deep: true
 

@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-05-04T22:10:22.248256+00:00",
+    "created": "2021-05-24T07:10:59.434164+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -5336,6 +5336,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--literacy_rate_adult--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--literacy_rate_adult--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_adult"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--literacy_rate_adult_female_percent_of_females_ages_15_above--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--literacy_rate_adult_female_percent_of_females_ages_15_above--by--geo--time.csv",
             "schema": {
@@ -5390,6 +5411,27 @@
                     },
                     {
                         "name": "literacy_rate_adult_total_percent_of_people_ages_15_and_above"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--literacy_rate_youth--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--literacy_rate_youth--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_youth"
                     }
                 ],
                 "primaryKey": [
@@ -11633,6 +11675,21 @@
             }
         },
         {
+            "name": "ddf--entities--gender",
+            "path": "ddf--entities--gender.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "gender"
+            }
+        },
+        {
             "name": "ddf--entities--geo--country",
             "path": "ddf--entities--geo--country.csv",
             "schema": {
@@ -13188,6 +13245,56 @@
                     "time"
                 ]
             }
+        },
+        {
+            "name": "ddf--datapoints--literacy_rate_adult--by--geo--gender--time",
+            "path": "multidimensional/ddf--datapoints--literacy_rate_adult--by--geo--gender--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_adult"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "gender",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--literacy_rate_youth--by--geo--gender--time",
+            "path": "multidimensional/ddf--datapoints--literacy_rate_youth--by--geo--gender--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_youth"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "gender",
+                    "time"
+                ]
+            }
         }
     ],
     "ddfSchema": {
@@ -13879,6 +13986,15 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--geo--g77_and_oecd_countries"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "gender"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--gender"
                 ]
             },
             {
@@ -19390,6 +19506,48 @@
             {
                 "primaryKey": [
                     "country",
+                    "gender",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "gender",
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
                     "time"
                 ],
                 "value": "literacy_rate_adult_female_percent_of_females_ages_15_above",
@@ -19445,6 +19603,48 @@
                 "value": "literacy_rate_adult_total_percent_of_people_ages_15_and_above",
                 "resources": [
                     "ddf--datapoints--literacy_rate_adult_total_percent_of_people_ages_15_and_above--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "gender",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "gender",
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--time"
                 ]
             },
             {
