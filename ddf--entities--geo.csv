@@ -1,2 +1,9 @@
 geo,iso3166_1_alpha2,iso3166_1_alpha3,iso3166_1_numeric,landlocked,latitude,longitude,main_religion_2008,name,un_state,unicode_region_subtag,world_4region,world_6region
 bes,BQ,BES,535,coastline,12.1833333,-68.233333,christian,"Bonaire, Sint Eustatius and Saba",FALSE,BQ,americas,america
+unhcr_americas,,,,,,,,Americas,,,,
+unhcr_asia_pacific,,,,,,,,Asia and the Pacific,,,,
+unhcr_east_horn_africa_great_lates,,,,,,,,"East and Horn of Africa, and Great Lakes",,,,
+unhcr_europe,,,,,,,,Europe,,,,
+unhcr_middle_east_north_africa,,,,,,,,Middle East and North Africa,,,,
+unhcr_southern_africa,,,,,,,,Southern Africa,,,,
+unhcr_west_central_africa,,,,,,,,West and Central Africa,,,,

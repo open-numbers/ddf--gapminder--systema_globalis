@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-05-30T12:48:53.119064+00:00",
+    "created": "2021-06-25T12:56:08.873749+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11746,6 +11746,9 @@
                         "name": "un_state"
                     },
                     {
+                        "name": "unhcr_region"
+                    },
+                    {
                         "name": "unicef_region"
                     },
                     {
@@ -14362,6 +14365,24 @@
                 "value": "un_state",
                 "resources": [
                     "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unhcr_region",
+                "resources": [
                     "ddf--entities--geo--country"
                 ]
             },
