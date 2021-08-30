@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-05-28T02:40:33.182032+00:00",
+    "created": "2021-08-22T13:21:45.301266+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11746,6 +11746,9 @@
                         "name": "un_state"
                     },
                     {
+                        "name": "unhcr_region"
+                    },
+                    {
                         "name": "unicef_region"
                     },
                     {
@@ -11933,6 +11936,24 @@
                     }
                 ],
                 "primaryKey": "un_sdg_region"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--unhcr_region",
+            "path": "ddf--entities--geo--unhcr_region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "unhcr_region"
+                    },
+                    {
+                        "name": "is--unhcr_region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "unhcr_region"
             }
         },
         {
@@ -13729,6 +13750,24 @@
                 "primaryKey": [
                     "geo"
                 ],
+                "value": "is--unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--unhcr_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unhcr_region"
+                ],
+                "value": "is--unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--unhcr_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
                 "value": "is--unicef_region",
                 "resources": [
                     "ddf--entities--geo--unicef_region"
@@ -14013,6 +14052,7 @@
                     "ddf--entities--geo--main_religion_2008",
                     "ddf--entities--geo--un_sdg_ldc",
                     "ddf--entities--geo--un_sdg_region",
+                    "ddf--entities--geo--unhcr_region",
                     "ddf--entities--geo--unicef_region",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
@@ -14090,6 +14130,15 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--geo--un_sdg_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unhcr_region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--unhcr_region"
                 ]
             },
             {
@@ -14362,6 +14411,24 @@
                 "value": "un_state",
                 "resources": [
                     "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unhcr_region",
+                "resources": [
                     "ddf--entities--geo--country"
                 ]
             },
