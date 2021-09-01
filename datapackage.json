@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-12-14T14:02:04.158921+00:00",
+    "created": "2021-08-22T13:21:45.301266+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -41,7 +41,7 @@
             "id": "cs-CZ"
         }
     ],
-    "version": "2.1.1",
+    "version": "2.2.0",
     "resources": [
         {
             "name": "ddf--datapoints--adults_with_hiv_percent_age_15_49--by--geo--time",
@@ -653,27 +653,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--all_forms_of_tb_detection_rate_percent--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_detection_rate_percent--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "all_forms_of_tb_detection_rate_percent"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--all_forms_of_tb_detection_rate_percent_dots_only--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_detection_rate_percent_dots_only--by--geo--time.csv",
             "schema": {
@@ -695,8 +674,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--all_forms_of_tb_existing_cases_per_100000_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_existing_cases_per_100000_estimated--by--geo--time.csv",
+            "name": "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -706,7 +685,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "all_forms_of_tb_existing_cases_per_100000_estimated"
+                        "name": "all_forms_of_tb_incidence_and_number_of_new_cases_estimated"
                     }
                 ],
                 "primaryKey": [
@@ -716,8 +695,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--all_forms_of_tb_new_cases_per_100000_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_new_cases_per_100000_estimated--by--geo--time.csv",
+            "name": "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -727,7 +706,49 @@
                         "name": "time"
                     },
                     {
-                        "name": "all_forms_of_tb_new_cases_per_100000_estimated"
+                        "name": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--all_forms_of_tb_incidence_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_estimated--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "all_forms_of_tb_incidence_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--all_forms_of_tb_incidence_per_100000_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_per_100000_estimated--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "all_forms_of_tb_incidence_per_100000_estimated"
                     }
                 ],
                 "primaryKey": [
@@ -779,48 +800,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--all_forms_of_tb_number_of_existing_cases_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_number_of_existing_cases_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "all_forms_of_tb_number_of_existing_cases_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--all_forms_of_tb_number_of_new_cases_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_number_of_new_cases_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "all_forms_of_tb_number_of_new_cases_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--all_forms_of_tb_number_of_new_cases_reported--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_number_of_new_cases_reported--by--geo--time.csv",
             "schema": {
@@ -833,6 +812,27 @@
                     },
                     {
                         "name": "all_forms_of_tb_number_of_new_cases_reported"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--all_forms_of_tb_treatment_coverage_percent--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_treatment_coverage_percent--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "all_forms_of_tb_treatment_coverage_percent"
                     }
                 ],
                 "primaryKey": [
@@ -5336,6 +5336,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--literacy_rate_adult--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--literacy_rate_adult--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_adult"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--literacy_rate_adult_female_percent_of_females_ages_15_above--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--literacy_rate_adult_female_percent_of_females_ages_15_above--by--geo--time.csv",
             "schema": {
@@ -5390,6 +5411,27 @@
                     },
                     {
                         "name": "literacy_rate_adult_total_percent_of_people_ages_15_and_above"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--literacy_rate_youth--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--literacy_rate_youth--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_youth"
                     }
                 ],
                 "primaryKey": [
@@ -10607,6 +10649,90 @@
             }
         },
         {
+            "name": "ddf--datapoints--tb_hivplus_deaths_per_100000_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--tb_hivplus_deaths_per_100000_estimated--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "tb_hivplus_deaths_per_100000_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--tb_hivplus_incidence_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--tb_hivplus_incidence_estimated--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "tb_hivplus_incidence_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--tb_hivplus_incidence_per_100000_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--tb_hivplus_incidence_per_100000_estimated--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "tb_hivplus_incidence_per_100000_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--tb_hivplus_number_of_deaths_estimated--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--tb_hivplus_number_of_deaths_estimated--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "tb_hivplus_number_of_deaths_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--tb_programme_dots_population_coverage_percent--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--tb_programme_dots_population_coverage_percent--by--geo--time.csv",
             "schema": {
@@ -10628,48 +10754,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--tb_with_hivplus_deaths_per_100000_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--tb_with_hivplus_deaths_per_100000_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "tb_with_hivplus_deaths_per_100000_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--tb_with_hivplus_existing_cases_per_100000_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--tb_with_hivplus_existing_cases_per_100000_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "tb_with_hivplus_existing_cases_per_100000_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--tb_with_hivplus_new_cases_per_100000_estimated--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--tb_with_hivplus_new_cases_per_100000_estimated--by--geo--time.csv",
             "schema": {
@@ -10682,48 +10766,6 @@
                     },
                     {
                         "name": "tb_with_hivplus_new_cases_per_100000_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--tb_with_hivplus_number_of_deaths_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--tb_with_hivplus_number_of_deaths_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "tb_with_hivplus_number_of_deaths_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--tb_with_hivplus_number_of_existing_cases_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--tb_with_hivplus_number_of_existing_cases_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "tb_with_hivplus_number_of_existing_cases_estimated"
                     }
                 ],
                 "primaryKey": [
@@ -11633,6 +11675,21 @@
             }
         },
         {
+            "name": "ddf--entities--gender",
+            "path": "ddf--entities--gender.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "gender"
+            }
+        },
+        {
             "name": "ddf--entities--geo--country",
             "path": "ddf--entities--geo--country.csv",
             "schema": {
@@ -11687,6 +11744,9 @@
                     },
                     {
                         "name": "un_state"
+                    },
+                    {
+                        "name": "unhcr_region"
                     },
                     {
                         "name": "unicef_region"
@@ -11876,6 +11936,24 @@
                     }
                 ],
                 "primaryKey": "un_sdg_region"
+            }
+        },
+        {
+            "name": "ddf--entities--geo--unhcr_region",
+            "path": "ddf--entities--geo--unhcr_region.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "unhcr_region"
+                    },
+                    {
+                        "name": "is--unhcr_region"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "unhcr_region"
             }
         },
         {
@@ -13188,6 +13266,56 @@
                     "time"
                 ]
             }
+        },
+        {
+            "name": "ddf--datapoints--literacy_rate_adult--by--geo--gender--time",
+            "path": "multidimensional/ddf--datapoints--literacy_rate_adult--by--geo--gender--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_adult"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "gender",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--literacy_rate_youth--by--geo--gender--time",
+            "path": "multidimensional/ddf--datapoints--literacy_rate_youth--by--geo--gender--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "gender"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "literacy_rate_youth"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "gender",
+                    "time"
+                ]
+            }
         }
     ],
     "ddfSchema": {
@@ -13622,6 +13750,24 @@
                 "primaryKey": [
                     "geo"
                 ],
+                "value": "is--unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--unhcr_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unhcr_region"
+                ],
+                "value": "is--unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--unhcr_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
                 "value": "is--unicef_region",
                 "resources": [
                     "ddf--entities--geo--unicef_region"
@@ -13883,6 +14029,15 @@
             },
             {
                 "primaryKey": [
+                    "gender"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--gender"
+                ]
+            },
+            {
+                "primaryKey": [
                     "geo"
                 ],
                 "value": "name",
@@ -13897,6 +14052,7 @@
                     "ddf--entities--geo--main_religion_2008",
                     "ddf--entities--geo--un_sdg_ldc",
                     "ddf--entities--geo--un_sdg_region",
+                    "ddf--entities--geo--unhcr_region",
                     "ddf--entities--geo--unicef_region",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
@@ -13974,6 +14130,15 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--geo--un_sdg_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "unhcr_region"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--unhcr_region"
                 ]
             },
             {
@@ -14246,6 +14411,24 @@
                 "value": "un_state",
                 "resources": [
                     "ddf--entities--geo",
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "unhcr_region",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "unhcr_region",
+                "resources": [
                     "ddf--entities--geo--country"
                 ]
             },
@@ -14921,26 +15104,6 @@
                     "country",
                     "time"
                 ],
-                "value": "all_forms_of_tb_detection_rate_percent",
-                "resources": [
-                    "ddf--datapoints--all_forms_of_tb_detection_rate_percent--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "all_forms_of_tb_detection_rate_percent",
-                "resources": [
-                    "ddf--datapoints--all_forms_of_tb_detection_rate_percent--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "all_forms_of_tb_detection_rate_percent_dots_only",
                 "resources": [
                     "ddf--datapoints--all_forms_of_tb_detection_rate_percent_dots_only--by--geo--time"
@@ -14961,9 +15124,9 @@
                     "country",
                     "time"
                 ],
-                "value": "all_forms_of_tb_existing_cases_per_100000_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_estimated",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_existing_cases_per_100000_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time"
                 ]
             },
             {
@@ -14971,9 +15134,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "all_forms_of_tb_existing_cases_per_100000_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_estimated",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_existing_cases_per_100000_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time"
                 ]
             },
             {
@@ -14981,9 +15144,9 @@
                     "country",
                     "time"
                 ],
-                "value": "all_forms_of_tb_new_cases_per_100000_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_new_cases_per_100000_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time"
                 ]
             },
             {
@@ -14991,9 +15154,49 @@
                     "geo",
                     "time"
                 ],
-                "value": "all_forms_of_tb_new_cases_per_100000_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_new_cases_per_100000_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "all_forms_of_tb_incidence_estimated",
+                "resources": [
+                    "ddf--datapoints--all_forms_of_tb_incidence_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "all_forms_of_tb_incidence_estimated",
+                "resources": [
+                    "ddf--datapoints--all_forms_of_tb_incidence_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "all_forms_of_tb_incidence_per_100000_estimated",
+                "resources": [
+                    "ddf--datapoints--all_forms_of_tb_incidence_per_100000_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "all_forms_of_tb_incidence_per_100000_estimated",
+                "resources": [
+                    "ddf--datapoints--all_forms_of_tb_incidence_per_100000_estimated--by--geo--time"
                 ]
             },
             {
@@ -15041,46 +15244,6 @@
                     "country",
                     "time"
                 ],
-                "value": "all_forms_of_tb_number_of_existing_cases_estimated",
-                "resources": [
-                    "ddf--datapoints--all_forms_of_tb_number_of_existing_cases_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "all_forms_of_tb_number_of_existing_cases_estimated",
-                "resources": [
-                    "ddf--datapoints--all_forms_of_tb_number_of_existing_cases_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "all_forms_of_tb_number_of_new_cases_estimated",
-                "resources": [
-                    "ddf--datapoints--all_forms_of_tb_number_of_new_cases_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "all_forms_of_tb_number_of_new_cases_estimated",
-                "resources": [
-                    "ddf--datapoints--all_forms_of_tb_number_of_new_cases_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "all_forms_of_tb_number_of_new_cases_reported",
                 "resources": [
                     "ddf--datapoints--all_forms_of_tb_number_of_new_cases_reported--by--geo--time"
@@ -15094,6 +15257,26 @@
                 "value": "all_forms_of_tb_number_of_new_cases_reported",
                 "resources": [
                     "ddf--datapoints--all_forms_of_tb_number_of_new_cases_reported--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "all_forms_of_tb_treatment_coverage_percent",
+                "resources": [
+                    "ddf--datapoints--all_forms_of_tb_treatment_coverage_percent--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "all_forms_of_tb_treatment_coverage_percent",
+                "resources": [
+                    "ddf--datapoints--all_forms_of_tb_treatment_coverage_percent--by--geo--time"
                 ]
             },
             {
@@ -19390,6 +19573,48 @@
             {
                 "primaryKey": [
                     "country",
+                    "gender",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "gender",
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_adult",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_adult--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
                     "time"
                 ],
                 "value": "literacy_rate_adult_female_percent_of_females_ages_15_above",
@@ -19445,6 +19670,48 @@
                 "value": "literacy_rate_adult_total_percent_of_people_ages_15_and_above",
                 "resources": [
                     "ddf--datapoints--literacy_rate_adult_total_percent_of_people_ages_15_and_above--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "gender",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "gender",
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--gender--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "literacy_rate_youth",
+                "resources": [
+                    "ddf--datapoints--literacy_rate_youth--by--geo--time"
                 ]
             },
             {
@@ -25061,6 +25328,86 @@
                     "country",
                     "time"
                 ],
+                "value": "tb_hivplus_deaths_per_100000_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_deaths_per_100000_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "tb_hivplus_deaths_per_100000_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_deaths_per_100000_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "tb_hivplus_incidence_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_incidence_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "tb_hivplus_incidence_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_incidence_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "tb_hivplus_incidence_per_100000_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_incidence_per_100000_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "tb_hivplus_incidence_per_100000_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_incidence_per_100000_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "tb_hivplus_number_of_deaths_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_number_of_deaths_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "tb_hivplus_number_of_deaths_estimated",
+                "resources": [
+                    "ddf--datapoints--tb_hivplus_number_of_deaths_estimated--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "tb_programme_dots_population_coverage_percent",
                 "resources": [
                     "ddf--datapoints--tb_programme_dots_population_coverage_percent--by--geo--time"
@@ -25081,46 +25428,6 @@
                     "country",
                     "time"
                 ],
-                "value": "tb_with_hivplus_deaths_per_100000_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_deaths_per_100000_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_deaths_per_100000_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_deaths_per_100000_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_existing_cases_per_100000_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_existing_cases_per_100000_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_existing_cases_per_100000_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_existing_cases_per_100000_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "tb_with_hivplus_new_cases_per_100000_estimated",
                 "resources": [
                     "ddf--datapoints--tb_with_hivplus_new_cases_per_100000_estimated--by--geo--time"
@@ -25134,46 +25441,6 @@
                 "value": "tb_with_hivplus_new_cases_per_100000_estimated",
                 "resources": [
                     "ddf--datapoints--tb_with_hivplus_new_cases_per_100000_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_number_of_deaths_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_number_of_deaths_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_number_of_deaths_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_number_of_deaths_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_number_of_existing_cases_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_number_of_existing_cases_estimated--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "tb_with_hivplus_number_of_existing_cases_estimated",
-                "resources": [
-                    "ddf--datapoints--tb_with_hivplus_number_of_existing_cases_estimated--by--geo--time"
                 ]
             },
             {

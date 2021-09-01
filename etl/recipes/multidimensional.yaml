@@ -1,0 +1,25 @@
+info:
+    id: ddf--gapminder--systema_globalis
+
+ingredients:
+    - id: gw-multidimensional
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: geo, gender, time
+      value: "*"
+
+    - id: gw-gender-entities
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: gender
+      value: "*"
+
+    - id: gw-multidimensional-concepts
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: concept
+      value:
+        $nin:
+          - interpolation
+      filter:
+        concept:
+          - gender
+          - literacy_rate_youth
+          - literacy_rate_adult

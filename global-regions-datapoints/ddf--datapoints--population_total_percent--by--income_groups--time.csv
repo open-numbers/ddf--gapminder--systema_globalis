@@ -31,6 +31,7 @@ high_income,2015,16.08288
 high_income,2016,15.92536
 high_income,2017,16.51658
 high_income,2018,15.8324
+high_income,2019,15.9968
 low_income,1987,56.28316
 low_income,1988,56.47367
 low_income,1989,56.6703
@@ -63,6 +64,7 @@ low_income,2015,8.53176
 low_income,2016,8.6636
 low_income,2017,9.512
 low_income,2018,9.2446
+low_income,2019,8.66608
 lower_middle_income,1987,16.18029
 lower_middle_income,1988,18.3593
 lower_middle_income,1989,16.6684
@@ -95,6 +97,7 @@ lower_middle_income,2015,39.76409
 lower_middle_income,2016,40.42754
 lower_middle_income,2017,39.43052
 lower_middle_income,2018,39.61305
+lower_middle_income,2019,37.77204
 upper_middle_income,1987,11.29439
 upper_middle_income,1988,9.08785
 upper_middle_income,1989,10.67367
@@ -127,3 +130,4 @@ upper_middle_income,2015,35.58373
 upper_middle_income,2016,34.94596
 upper_middle_income,2017,34.50333
 upper_middle_income,2018,35.27232
+upper_middle_income,2019,37.52739
