@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-11-03T08:59:26.120699+00:00",
+    "created": "2021-11-04T13:21:59.093611+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -4496,8 +4496,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time.csv",
+            "name": "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -4507,7 +4507,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "hourly_labour_cost_constant_2011_usd"
+                        "name": "hourly_labour_cost_constant_2017_usd"
                     }
                 ],
                 "primaryKey": [
@@ -18775,9 +18775,9 @@
                     "country",
                     "time"
                 ],
-                "value": "hourly_labour_cost_constant_2011_usd",
+                "value": "hourly_labour_cost_constant_2017_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time"
                 ]
             },
             {
@@ -18785,9 +18785,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "hourly_labour_cost_constant_2011_usd",
+                "value": "hourly_labour_cost_constant_2017_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time"
                 ]
             },
             {
