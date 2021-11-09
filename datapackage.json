@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-11-07T13:32:26.844608+00:00",
+    "created": "2021-11-09T13:32:43.300313+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -4340,27 +4340,6 @@
                     },
                     {
                         "name": "government_share_of_total_health_spending_percent"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--hdi_human_development_index--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--hdi_human_development_index--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "hdi_human_development_index"
                     }
                 ],
                 "primaryKey": [
@@ -18628,26 +18607,6 @@
                 "value": "government_share_of_total_health_spending_percent",
                 "resources": [
                     "ddf--datapoints--government_share_of_total_health_spending_percent--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "hdi_human_development_index",
-                "resources": [
-                    "ddf--datapoints--hdi_human_development_index--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "hdi_human_development_index",
-                "resources": [
-                    "ddf--datapoints--hdi_human_development_index--by--geo--time"
                 ]
             },
             {
