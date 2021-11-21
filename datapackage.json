@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-08-22T13:21:45.301266+00:00",
+    "created": "2021-11-16T13:32:26.825043+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -4496,8 +4496,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time.csv",
+            "name": "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -4507,7 +4507,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "hourly_labour_cost_constant_2011_usd"
+                        "name": "hourly_labour_cost_constant_2017_usd"
                     }
                 ],
                 "primaryKey": [
@@ -11975,6 +11975,24 @@
             }
         },
         {
+            "name": "ddf--entities--geo--west_and_rest",
+            "path": "ddf--entities--geo--west_and_rest.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "west_and_rest"
+                    },
+                    {
+                        "name": "is--west_and_rest"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "west_and_rest"
+            }
+        },
+        {
             "name": "ddf--entities--geo--world_4region",
             "path": "ddf--entities--geo--world_4region.csv",
             "schema": {
@@ -13786,6 +13804,24 @@
                 "primaryKey": [
                     "geo"
                 ],
+                "value": "is--west_and_rest",
+                "resources": [
+                    "ddf--entities--geo--west_and_rest"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "west_and_rest"
+                ],
+                "value": "is--west_and_rest",
+                "resources": [
+                    "ddf--entities--geo--west_and_rest"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
                 "value": "is--world_4region",
                 "resources": [
                     "ddf--entities--geo--world_4region"
@@ -14054,6 +14090,7 @@
                     "ddf--entities--geo--un_sdg_region",
                     "ddf--entities--geo--unhcr_region",
                     "ddf--entities--geo--unicef_region",
+                    "ddf--entities--geo--west_and_rest",
                     "ddf--entities--geo--world_4region",
                     "ddf--entities--geo--world_6region"
                 ]
@@ -14148,6 +14185,15 @@
                 "value": "name",
                 "resources": [
                     "ddf--entities--geo--unicef_region"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "west_and_rest"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo--west_and_rest"
                 ]
             },
             {
@@ -18775,9 +18821,9 @@
                     "country",
                     "time"
                 ],
-                "value": "hourly_labour_cost_constant_2011_usd",
+                "value": "hourly_labour_cost_constant_2017_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time"
                 ]
             },
             {
@@ -18785,9 +18831,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "hourly_labour_cost_constant_2011_usd",
+                "value": "hourly_labour_cost_constant_2017_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_labour_cost_constant_2011_usd--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time"
                 ]
             },
             {
