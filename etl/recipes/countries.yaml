@@ -130,14 +130,6 @@ ingredients:
       key: geo
       data: ddf--entities--geo--global.csv
 
-    - id: geo_country_patch
-      key: geo
-      data: ddf--entities--geo--country.csv
-
-    - id: geo_patch
-      key: geo
-      data: ddf--entities--geo.csv
-
 cooking:
     datapoints:
         - procedure: merge

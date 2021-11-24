@@ -43,19 +43,12 @@ cooking:
           ingredients:
               - gw-entities-geo
               - geo_global_patch
-              - geo_country_patch
-              - geo_patch
           options:
               deep: true
           result: geo_final
         - procedure: serve
           ingredients:
               - geo_final
-          options:
-            custom_column_order:
-              flag_svg: -1
-        - procedure: serve
-          ingredients:
               - tag_entity
         - procedure: serve
           ingredients:
