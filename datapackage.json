@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-11-24T04:04:15.775287+00:00",
+    "created": "2021-11-25T13:22:07.136232+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11759,9 +11759,6 @@
                     },
                     {
                         "name": "world_6region"
-                    },
-                    {
-                        "name": "flag_svg"
                     }
                 ],
                 "primaryKey": "country"
@@ -12110,9 +12107,6 @@
                     },
                     {
                         "name": "world_6region"
-                    },
-                    {
-                        "name": "flag_svg"
                     }
                 ],
                 "primaryKey": "geo"
@@ -13534,25 +13528,6 @@
                 "value": "description",
                 "resources": [
                     "ddf--entities--geo--world_4region"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country"
-                ],
-                "value": "flag_svg",
-                "resources": [
-                    "ddf--entities--geo--country"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo"
-                ],
-                "value": "flag_svg",
-                "resources": [
-                    "ddf--entities--geo",
-                    "ddf--entities--geo--country"
                 ]
             },
             {
