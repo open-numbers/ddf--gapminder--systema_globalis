@@ -1,2 +1,2 @@
-geo,iso3166_1_alpha2,iso3166_1_alpha3,iso3166_1_numeric,landlocked,latitude,longitude,main_religion_2008,name,un_state,unicode_region_subtag,world_4region,world_6region,flag_svg
-bes,BQ,BES,535,coastline,12.1833333,-68.233333,christian,"Bonaire, Sint Eustatius and Saba",FALSE,BQ,americas,america,"<svg height=""600"" viewBox=""0 0 9 6"" width=""900"" xmlns=""http://www.w3.org/2000/svg""><rect fill=""#21468B"" height=""6"" width=""9""/><rect fill=""#FFF"" height=""4"" width=""9""/><rect fill=""#AE1C28"" height=""2"" width=""9""/></svg>"
+geo,iso3166_1_alpha2,iso3166_1_alpha3,iso3166_1_numeric,landlocked,latitude,longitude,main_religion_2008,name,un_state,unicode_region_subtag,world_4region,world_6region
+bes,BQ,BES,535,coastline,12.1833333,-68.233333,christian,"Bonaire, Sint Eustatius and Saba",FALSE,BQ,americas,america
