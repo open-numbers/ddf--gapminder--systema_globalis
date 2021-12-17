@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2021-11-16T13:32:26.825043+00:00",
+    "created": "2021-12-05T13:22:06.150132+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11755,6 +11755,9 @@
                         "name": "unicode_region_subtag"
                     },
                     {
+                        "name": "west_and_rest"
+                    },
+                    {
                         "name": "world_4region"
                     },
                     {
@@ -14523,6 +14526,24 @@
                 "value": "unicode_region_subtag",
                 "resources": [
                     "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country"
+                ],
+                "value": "west_and_rest",
+                "resources": [
+                    "ddf--entities--geo--country"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "west_and_rest",
+                "resources": [
+                    "ddf--entities--geo--country"
                 ]
             },
             {
