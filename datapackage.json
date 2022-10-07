@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2022-08-16T02:25:10.023010+00:00",
+    "created": "2022-09-30T13:22:13.855448+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -41,7 +41,7 @@
             "id": "cs-CZ"
         }
     ],
-    "version": "2.2.0",
+    "version": "2.3.0",
     "resources": [
         {
             "name": "ddf--datapoints--adults_with_hiv_percent_age_15_49--by--geo--time",
