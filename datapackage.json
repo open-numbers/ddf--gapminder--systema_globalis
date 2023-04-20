@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-02-21T13:01:24.293745+00:00",
+    "created": "2023-04-20T02:52:47.890852+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -4634,27 +4634,6 @@
                     },
                     {
                         "name": "income_mountains"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "income_per_person_gdppercapita_ppp_inflation_adjusted"
                     }
                 ],
                 "primaryKey": [
@@ -18975,26 +18954,6 @@
                 "value": "income_mountains",
                 "resources": [
                     "ddf--datapoints--income_mountains--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "income_per_person_gdppercapita_ppp_inflation_adjusted",
-                "resources": [
-                    "ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "income_per_person_gdppercapita_ppp_inflation_adjusted",
-                "resources": [
-                    "ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time"
                 ]
             },
             {
