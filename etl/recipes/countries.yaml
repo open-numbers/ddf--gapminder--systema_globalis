@@ -109,6 +109,9 @@ ingredients:
               - all_forms_of_tb_detection_rate_percent
               # core indicators, which we will move to fasttrack
               - income_per_person_gdppercapita_ppp_inflation_adjusted
+              - life_expectancy_at_birth_with_projections
+              - life_expectancy_years
+              - population_total
 
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
