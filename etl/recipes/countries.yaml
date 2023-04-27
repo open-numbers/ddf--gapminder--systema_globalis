@@ -141,7 +141,8 @@ cooking:
           ingredients:
               - gw-datapoints-all
               - bp-datapoints
-              - core-indicator-datapoints
+              # - core-indicator-datapoints
+              - u5mr-datapoints-final
               - faostat-datapoints
               - fao-fra-datapoints
               - gbd-datapoints
