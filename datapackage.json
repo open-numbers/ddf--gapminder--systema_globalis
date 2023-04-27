@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-04-20T02:52:47.890852+00:00",
+    "created": "2023-04-27T14:42:00.729367+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -5231,27 +5231,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "life_expectancy_at_birth_with_projections"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--life_expectancy_female--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--life_expectancy_female--by--geo--time.csv",
             "schema": {
@@ -5285,27 +5264,6 @@
                     },
                     {
                         "name": "life_expectancy_male"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--life_expectancy_years--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--life_expectancy_years--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "life_expectancy_years"
                     }
                 ],
                 "primaryKey": [
@@ -19521,26 +19479,6 @@
                     "country",
                     "time"
                 ],
-                "value": "life_expectancy_at_birth_with_projections",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "life_expectancy_at_birth_with_projections",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "life_expectancy_female",
                 "resources": [
                     "ddf--datapoints--life_expectancy_female--by--geo--time"
@@ -19574,26 +19512,6 @@
                 "value": "life_expectancy_male",
                 "resources": [
                     "ddf--datapoints--life_expectancy_male--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "life_expectancy_years",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_years--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "life_expectancy_years",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_years--by--geo--time"
                 ]
             },
             {
