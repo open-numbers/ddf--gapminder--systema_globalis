@@ -107,6 +107,11 @@ ingredients:
               - all_forms_of_tb_new_cases_per_100000_estimated
               - all_forms_of_tb_number_of_new_cases_estimated
               - all_forms_of_tb_detection_rate_percent
+              # core indicators, which we will move to fasttrack
+              - income_per_person_gdppercapita_ppp_inflation_adjusted
+              - life_expectancy_at_birth_with_projections
+              - life_expectancy_years
+              - population_total
 
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
@@ -136,7 +141,8 @@ cooking:
           ingredients:
               - gw-datapoints-all
               - bp-datapoints
-              - core-indicator-datapoints
+              # - core-indicator-datapoints
+              - u5mr-datapoints-final
               - faostat-datapoints
               - fao-fra-datapoints
               - gbd-datapoints

@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2022-09-30T13:22:13.855448+00:00",
+    "created": "2023-05-15T03:25:29.463470+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -4643,27 +4643,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "income_per_person_gdppercapita_ppp_inflation_adjusted"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--income_per_person_long_series--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--income_per_person_long_series--by--geo--time.csv",
             "schema": {
@@ -5252,27 +5231,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "life_expectancy_at_birth_with_projections"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--life_expectancy_female--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--life_expectancy_female--by--geo--time.csv",
             "schema": {
@@ -5306,27 +5264,6 @@
                     },
                     {
                         "name": "life_expectancy_male"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--life_expectancy_years--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--life_expectancy_years--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "life_expectancy_years"
                     }
                 ],
                 "primaryKey": [
@@ -9233,27 +9170,6 @@
                     },
                     {
                         "name": "population_policies_aid_given_percent_of_aid"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--population_total--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--population_total--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "population_total"
                     }
                 ],
                 "primaryKey": [
@@ -18982,26 +18898,6 @@
                     "country",
                     "time"
                 ],
-                "value": "income_per_person_gdppercapita_ppp_inflation_adjusted",
-                "resources": [
-                    "ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "income_per_person_gdppercapita_ppp_inflation_adjusted",
-                "resources": [
-                    "ddf--datapoints--income_per_person_gdppercapita_ppp_inflation_adjusted--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "income_per_person_long_series",
                 "resources": [
                     "ddf--datapoints--income_per_person_long_series--by--geo--time"
@@ -19562,26 +19458,6 @@
                     "country",
                     "time"
                 ],
-                "value": "life_expectancy_at_birth_with_projections",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "life_expectancy_at_birth_with_projections",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_at_birth_with_projections--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "life_expectancy_female",
                 "resources": [
                     "ddf--datapoints--life_expectancy_female--by--geo--time"
@@ -19615,26 +19491,6 @@
                 "value": "life_expectancy_male",
                 "resources": [
                     "ddf--datapoints--life_expectancy_male--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "life_expectancy_years",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_years--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "life_expectancy_years",
-                "resources": [
-                    "ddf--datapoints--life_expectancy_years--by--geo--time"
                 ]
             },
             {
@@ -23843,22 +23699,11 @@
             },
             {
                 "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "population_total",
-                "resources": [
-                    "ddf--datapoints--population_total--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
                     "geo",
                     "time"
                 ],
                 "value": "population_total",
                 "resources": [
-                    "ddf--datapoints--population_total--by--geo--time",
                     "ddf--datapoints--population_total--by--global--time",
                     "ddf--datapoints--population_total--by--income_groups--time",
                     "ddf--datapoints--population_total--by--world_4region--time"
