@@ -8,4 +8,6 @@ ingredients:
     - id: bp-datapoints
       dataset: *d1
       key: "geo, time"
-      value: "*"
+      value:
+        $nin:
+          - population_total
