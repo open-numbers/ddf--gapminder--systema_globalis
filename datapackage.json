@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-04-27T14:42:00.729367+00:00",
+    "created": "2023-05-15T03:25:29.463470+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -9170,27 +9170,6 @@
                     },
                     {
                         "name": "population_policies_aid_given_percent_of_aid"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--population_total--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--population_total--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "population_total"
                     }
                 ],
                 "primaryKey": [
@@ -23720,22 +23699,11 @@
             },
             {
                 "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "population_total",
-                "resources": [
-                    "ddf--datapoints--population_total--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
                     "geo",
                     "time"
                 ],
                 "value": "population_total",
                 "resources": [
-                    "ddf--datapoints--population_total--by--geo--time",
                     "ddf--datapoints--population_total--by--global--time",
                     "ddf--datapoints--population_total--by--income_groups--time",
                     "ddf--datapoints--population_total--by--world_4region--time"
