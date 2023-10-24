@@ -47,7 +47,7 @@ ingredients:
               - sg_gini
               - geographic_regions_in_4_colors
               - unit
-              # concepts from pervious wdi dataset, but not exists any more
+              # concepts from pervious wdi dataset, but not exists any more / renamed
               - electricity_use_total
               - energy_use_total
               - fixed_line_and_mobile_phone_subscribers_per_100_people
@@ -57,6 +57,11 @@ ingredients:
               - extreme_poverty_percent_people_below_125_a_day
               - gnipercapita_constant_2000_us
               - poverty_percent_people_below_2_a_day
+              - exports_unit_value_index_2000100
+              - imports_unit_value_index_2000100
+              - net_barter_terms_of_trade_2000_100
+              - imports_unit_value_index_2000100
+              - net_barter_terms_of_trade_2000_100
               # indicators won't be updated
               - year_categorization_1950
               - year_categorization_1820_2010
