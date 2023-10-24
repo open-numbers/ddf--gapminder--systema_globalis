@@ -4,18 +4,11 @@ The name is inspired by [Systema Naturae](https://en.wikipedia.org/wiki/Systema_
 ## Data
 This is the main dataset used in tools on the official Gapminder website. It contains local &amp; global statistics combined from hundreds of sources.
 
+## Format
+Data is in the [DDF data model](https://open-numbers.github.io/ddf.html), specifically the [DDFcsv format](https://docs.google.com/document/d/1aynARjsrSgOKsO1dEqboTqANRD1O9u7J_xmxy8m5jW8/). You can read this [quick introduction into DDFcsv](https://docs.google.com/document/d/1huvUrQMZUeRJVzooS2p5TkQpyXjEtbTw3ui0YLBscxE/) to get you started.
+
 ## Tags
 🌶 Gapminder Offline app expects tags in the form of `v1.19.1`, don't use tags that aren't following that form  
-
-## How to update
-Currently the dataset is maintained by manually copying data from multiple other datasets.
-The plan is to automate the process by using a file called ddf--imports.csv
-Described [here](https://github.com/open-numbers/Data-Description-Format-DDF/wiki/File:-ddf-imports)
-
-##Dependencies
-If you added more dataset dependencies, add them manually to the excel file in data_process, and save as csv to the dataset folder. All GS-dependencies must be of type ddf and public as an Open Numbers github repo.
-Files:
-* ddf--dependencies is manually edited
 
 ## License
 Gapminder created this dataset and provides it under [Creative Common Attribution 4.0 International][CC].
