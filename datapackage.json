@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-12-19T02:38:08.394026+00:00",
+    "created": "2024-01-08T03:00:09.805753+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -12911,27 +12911,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--population_total--by--global--time",
-            "path": "global-regions-datapoints/ddf--datapoints--population_total--by--global--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "global"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "population_total"
-                    }
-                ],
-                "primaryKey": [
-                    "global",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--population_total--by--income_groups--time",
             "path": "global-regions-datapoints/ddf--datapoints--population_total--by--income_groups--time.csv",
             "schema": {
@@ -12948,27 +12927,6 @@
                 ],
                 "primaryKey": [
                     "income_groups",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--population_total--by--world_4region--time",
-            "path": "global-regions-datapoints/ddf--datapoints--population_total--by--world_4region--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "world_4region"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "population_total"
-                    }
-                ],
-                "primaryKey": [
-                    "world_4region",
                     "time"
                 ]
             }
@@ -23704,19 +23662,7 @@
                 ],
                 "value": "population_total",
                 "resources": [
-                    "ddf--datapoints--population_total--by--global--time",
-                    "ddf--datapoints--population_total--by--income_groups--time",
-                    "ddf--datapoints--population_total--by--world_4region--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "global",
-                    "time"
-                ],
-                "value": "population_total",
-                "resources": [
-                    "ddf--datapoints--population_total--by--global--time"
+                    "ddf--datapoints--population_total--by--income_groups--time"
                 ]
             },
             {
@@ -23737,16 +23683,6 @@
                 "value": "population_total",
                 "resources": [
                     "ddf--datapoints--population_total--by--income_groups--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "time",
-                    "world_4region"
-                ],
-                "value": "population_total",
-                "resources": [
-                    "ddf--datapoints--population_total--by--world_4region--time"
                 ]
             },
             {
