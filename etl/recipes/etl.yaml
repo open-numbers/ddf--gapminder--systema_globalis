@@ -30,10 +30,10 @@ cooking:
               path: multidimensional
         - procedure: serve
           ingredients:
-              - gmpop-region-datapoints-translated
-              - gmpop-global-datapoints-translated
-              - unpop-global-datapoints
-              - population-income-group-datapoints-translated
+              # - gmpop-region-datapoints-translated
+              # - gmpop-global-datapoints-translated
+              # - unpop-global-datapoints
+              # - population-income-group-datapoints-translated
               - wdi-datapoints-global-translated
               - wdi-datapoints-income_groups-translated
           options:
