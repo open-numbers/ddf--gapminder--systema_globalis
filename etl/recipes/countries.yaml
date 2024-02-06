@@ -210,7 +210,6 @@ cooking:
               - fao_aqua-datapoints-final
               - wdi-datapoints-final
               - hdi-datapoints-final
-              - tfr-datapoints-final
               - gini-datapoints
               - ilo-datapoints
               - death-rates-datapoints
