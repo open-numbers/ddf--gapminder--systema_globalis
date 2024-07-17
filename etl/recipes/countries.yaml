@@ -25,7 +25,6 @@ include:
     - countries/recipe_hdi.yaml
     - countries/recipe_wdi.yaml
     - countries/recipe_fao_aqua.yaml
-    - countries/recipe_gw_tfr.yaml
     - countries/recipe_gw_gini.yaml
     - countries/recipe_gw_co2.yaml
     - countries/recipe_ilostat.yaml
@@ -117,7 +116,61 @@ ingredients:
               - life_expectancy_at_birth_with_projections
               - life_expectancy_years
               - population_total
-
+              - life_expectancy_female
+              - population_aged_40_59_years_both_sexes_percent
+              - population_aged_0_14_years_both_sexes_percent
+              - female_population_with_projections
+              - population_aged_20_39_years_total_number
+              - population_aged_15_19_years_both_sexes_percent
+              - median_age_years
+              - population_aged_0_4_years_both_sexes_percent
+              - crude_death_rate_deaths_per_1000_population
+              - population_aged_20_39_years_male_percent
+              - population_aged_10_14_years_total_number
+              - male_population_with_projections
+              - children_and_elderly_per_100_adults
+              - life_expectancy_male
+              - population_aged_20_39_years_female_percent
+              - population_aged_10_14_years_male_percent
+              - population_aged_0_14_years_female_percent
+              - population_aged_0_14_years_male_percent
+              - population_aged_20_39_years_both_sexes_percent
+              - population_aged_0_14_years_total_number
+              - population_aged_0_4_years_total_number
+              - population_aged_10_14_years_female_percent
+              - population_aged_0_4_years_female_percent
+              - population_aged_10_14_years_both_sexes_percent
+              - population_aged_15_19_years_total_number
+              - population_aged_0_4_years_male_percent
+              - population_aged_15_19_years_male_percent
+              - population_aged_65plus_years_female_percent
+              - sex_ratio_15_24_years
+              - population_density_per_square_km
+              - population_aged_70plus_years_both_sexes_percent
+              - sex_ratio_all_age_groups
+              - population_growth_annual_percent_with_projections
+              - population_aged_65plus_years_both_sexes_percent
+              - population_aged_15_19_years_female_percent
+              - population_aged_70plus_years_total_number
+              - sex_ratio_0_14_years
+              - population_aged_65plus_years_total_number
+              - sex_ratio_above_50_years
+              - population_aged_60plus_years_total_number
+              - sex_ratio_15_49_years
+              - population_aged_70plus_years_male_percent
+              - population_aged_65plus_years_male_percent
+              - population_aged_60plus_years_male_percent
+              - population_aged_70plus_years_female_percent
+              - population_aged_60plus_years_female_percent
+              - population_aged_60plus_years_both_sexes_percent
+              - population_aged_5_9_years_both_sexes_percent
+              - population_aged_40_59_years_male_percent
+              - population_aged_5_9_years_total_number
+              - population_aged_5_9_years_female_percent
+              - population_aged_40_59_years_total_number
+              - population_aged_5_9_years_male_percent
+              - population_aged_40_59_years_female_percent
+              - children_per_woman_total_fertility
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
@@ -146,7 +199,6 @@ cooking:
           ingredients:
               - gw-datapoints-all
               - bp-datapoints
-              # - core-indicator-datapoints
               - u5mr-datapoints-final
               - faostat-datapoints
               - fao-fra-datapoints
@@ -158,7 +210,6 @@ cooking:
               - fao_aqua-datapoints-final
               - wdi-datapoints-final
               - hdi-datapoints-final
-              - tfr-datapoints-final
               - gini-datapoints
               - ilo-datapoints
               - death-rates-datapoints
