@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2024-08-07T04:35:30.096052+00:00",
+    "created": "2024-08-08T12:42:30.159852+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -1883,27 +1883,6 @@
                     },
                     {
                         "name": "children_out_of_school_primary_male"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "children_per_woman_total_fertility_with_projections"
                     }
                 ],
                 "primaryKey": [
@@ -14449,26 +14428,6 @@
                 "value": "children_out_of_school_primary_male",
                 "resources": [
                     "ddf--datapoints--children_out_of_school_primary_male--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "children_per_woman_total_fertility_with_projections",
-                "resources": [
-                    "ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "children_per_woman_total_fertility_with_projections",
-                "resources": [
-                    "ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time"
                 ]
             },
             {
