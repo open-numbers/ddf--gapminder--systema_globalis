@@ -200,7 +200,7 @@ cooking:
       ingredients:
         - gw-ontology-concepts-all
       options:
-        rows:
+        row:
           concept:
             $nin:
               *removed_concepts
