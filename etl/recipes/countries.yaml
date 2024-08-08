@@ -32,9 +32,12 @@ include:
     - countries/recipe_whotb.yaml
 
 ingredients:
-    - id: gw-ontology-concepts
+    - id: gw-ontology-concepts-all
       dataset: open-numbers/ddf--gapminder--ontology
       key: concept
+    - id: gw-datapoints-all
+      dataset: open-numbers/ddf--gapminder--gapminder_world
+      key: "geo,time"
       value:
         $nin: &removed_concepts
           - yearly_co2_emissions_tonnes
@@ -169,12 +172,6 @@ ingredients:
           - population_aged_40_59_years_female_percent
           - children_per_woman_total_fertility
           - children_per_woman_total_fertility_with_projections
-    - id: gw-datapoints-all
-      dataset: open-numbers/ddf--gapminder--gapminder_world
-      key: "geo,time"
-      value:
-        $nin:
-          *removed_concepts
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
@@ -198,25 +195,35 @@ ingredients:
       data: ddf--entities--geo--global.csv
 
 cooking:
-    datapoints:
-        - procedure: merge
-          ingredients:
-              - gw-datapoints-all
-              - bp-datapoints
-              - u5mr-datapoints-final
-              - faostat-datapoints
-              - fao-fra-datapoints
-              - gbd-datapoints
-              - edu-datapoints
-              - unpop-datapoints
-              - co2-datapoints-final
-              - cpi-datapoints-final
-              - fao_aqua-datapoints-final
-              - wdi-datapoints-final
-              - hdi-datapoints-final
-              - gini-datapoints
-              - ilo-datapoints
-              - death-rates-datapoints
-              - whotb-datapoints-final
-              - static-assets-datapoints
-          result: datapoints-final
+  concepts:
+    - procedure: filter
+      ingredients:
+        - gw-ontology-concepts-all
+      options:
+        rows:
+          concept:
+            $nin:
+              *removed_concepts
+      result: gw-ontology-concepts
+  datapoints:
+    - procedure: merge
+      ingredients:
+        - gw-datapoints-all
+        - bp-datapoints
+        - u5mr-datapoints-final
+        - faostat-datapoints
+        - fao-fra-datapoints
+        - gbd-datapoints
+        - edu-datapoints
+        - unpop-datapoints
+        - co2-datapoints-final
+        - cpi-datapoints-final
+        - fao_aqua-datapoints-final
+        - wdi-datapoints-final
+        - hdi-datapoints-final
+        - gini-datapoints
+        - ilo-datapoints
+        - death-rates-datapoints
+        - whotb-datapoints-final
+        - static-assets-datapoints
+      result: datapoints-final
