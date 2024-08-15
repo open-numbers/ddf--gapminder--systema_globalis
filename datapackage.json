@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2024-07-17T12:52:17.285429+00:00",
+    "created": "2024-08-08T12:42:30.159852+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -1883,27 +1883,6 @@
                     },
                     {
                         "name": "children_out_of_school_primary_male"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "children_per_woman_total_fertility_with_projections"
                     }
                 ],
                 "primaryKey": [
@@ -10726,7 +10705,9 @@
                         "name": "tags"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
@@ -10741,7 +10722,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "gender"
+                "primaryKey": [
+                    "gender"
+                ]
             }
         },
         {
@@ -10819,7 +10802,9 @@
                         "name": "world_6region"
                     }
                 ],
-                "primaryKey": "country"
+                "primaryKey": [
+                    "country"
+                ]
             }
         },
         {
@@ -10840,7 +10825,9 @@
                         "name": "rank"
                     }
                 ],
-                "primaryKey": "g77_and_oecd_countries"
+                "primaryKey": [
+                    "g77_and_oecd_countries"
+                ]
             }
         },
         {
@@ -10870,7 +10857,9 @@
                         "name": "unicode_region_subtag"
                     }
                 ],
-                "primaryKey": "global"
+                "primaryKey": [
+                    "global"
+                ]
             }
         },
         {
@@ -10891,7 +10880,9 @@
                         "name": "rank"
                     }
                 ],
-                "primaryKey": "income_3groups"
+                "primaryKey": [
+                    "income_3groups"
+                ]
             }
         },
         {
@@ -10912,7 +10903,9 @@
                         "name": "rank"
                     }
                 ],
-                "primaryKey": "income_groups"
+                "primaryKey": [
+                    "income_groups"
+                ]
             }
         },
         {
@@ -10933,7 +10926,9 @@
                         "name": "rank"
                     }
                 ],
-                "primaryKey": "landlocked"
+                "primaryKey": [
+                    "landlocked"
+                ]
             }
         },
         {
@@ -10954,7 +10949,9 @@
                         "name": "rank"
                     }
                 ],
-                "primaryKey": "main_religion_2008"
+                "primaryKey": [
+                    "main_religion_2008"
+                ]
             }
         },
         {
@@ -10972,7 +10969,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "un_sdg_ldc"
+                "primaryKey": [
+                    "un_sdg_ldc"
+                ]
             }
         },
         {
@@ -10993,7 +10992,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "un_sdg_region"
+                "primaryKey": [
+                    "un_sdg_region"
+                ]
             }
         },
         {
@@ -11011,7 +11012,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "unhcr_region"
+                "primaryKey": [
+                    "unhcr_region"
+                ]
             }
         },
         {
@@ -11029,7 +11032,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "unicef_region"
+                "primaryKey": [
+                    "unicef_region"
+                ]
             }
         },
         {
@@ -11047,7 +11052,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "west_and_rest"
+                "primaryKey": [
+                    "west_and_rest"
+                ]
             }
         },
         {
@@ -11089,7 +11096,9 @@
                         "name": "shape_lores_svg"
                     }
                 ],
-                "primaryKey": "world_4region"
+                "primaryKey": [
+                    "world_4region"
+                ]
             }
         },
         {
@@ -11119,7 +11128,9 @@
                         "name": "shape_lores_svg"
                     }
                 ],
-                "primaryKey": "world_6region"
+                "primaryKey": [
+                    "world_6region"
+                ]
             }
         },
         {
@@ -11137,7 +11148,9 @@
                         "name": "parent"
                     }
                 ],
-                "primaryKey": "tag"
+                "primaryKey": [
+                    "tag"
+                ]
             }
         },
         {
@@ -14415,26 +14428,6 @@
                 "value": "children_out_of_school_primary_male",
                 "resources": [
                     "ddf--datapoints--children_out_of_school_primary_male--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "children_per_woman_total_fertility_with_projections",
-                "resources": [
-                    "ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "children_per_woman_total_fertility_with_projections",
-                "resources": [
-                    "ddf--datapoints--children_per_woman_total_fertility_with_projections--by--geo--time"
                 ]
             },
             {
