@@ -46,6 +46,7 @@ health_economics,Health Economics,health
 hiv,HIV,health
 hydro,Hydro,energy
 incomes_growth,Incomes & growth,economy
+inequality,Inequality,economy
 infrastructure,Infrastructure,
 infrastructure_water,Water,infrastructure
 injuries_and_accidents,Injuries and accidents,health
@@ -64,7 +65,7 @@ nutrition,Nutrition,health
 oil,Oil,energy
 population,Population,
 population_growth,Population growth,population
-poverty_inequality,Poverty & inequality,economy
+poverty,Poverty,economy
 projections,Projections,advanced
 risk_factors,Risk factors,health
 sanitation,Sanitation,infrastructure
