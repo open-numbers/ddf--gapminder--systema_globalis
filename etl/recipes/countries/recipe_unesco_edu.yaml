@@ -8,6 +8,8 @@ config:
     # the path to search dictionary files
     dictionary_dir: ../../translation_dictionaries
 
+include:
+    - recipe_gw_geo.yaml
 
 # define the initial inputs of the recipe
 ingredients:
@@ -21,6 +23,10 @@ ingredients:
         - ofst_1_cp
         - ofst_1_m_cp
         - ofst_1_f_cp
+    - id: unesco-countries
+      dataset: *d1
+      key: country
+      value: "*"
 
 cooking:
     datapoints:
@@ -35,7 +41,27 @@ cooking:
         - procedure: translate_header
           options:
               dictionary: indicators_unesco_to_sg.json
-              debug: true
           ingredients:
               - unesco-datapoints-geo-time
+          result: unesco-datapoints-headers-translated
+        - procedure: translate_column
+          ingredients:
+              - unesco-countries
+          options:
+              column: name
+              target_column: geo
+              dictionary:
+                  base: gm-country-synonym
+                  key: synonym
+                  value: geo
+          result: unesco-countries-aligned
+        - procedure: translate_column
+          ingredients:
+              - unesco-datapoints-headers-translated
+          options:
+              column: geo
+              dictionary:
+                  base: unesco-countries-aligned
+                  key: country
+                  value: geo
           result: unesco-datapoints-final
