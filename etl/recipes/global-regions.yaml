@@ -1,6 +1,2 @@
 include:
-    # - global-regions/population_age_group_gender.yaml
-    # - global-regions/population_by_income_group.yaml
-    # - global-regions/population_gm_region_global.yaml
     - global-regions/wdi_global.yaml
-    - global-regions/wdi_income_groups.yaml
