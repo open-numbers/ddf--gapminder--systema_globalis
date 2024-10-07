@@ -206,7 +206,6 @@ cooking:
         - edu-datapoints
         - unpop-datapoints
         - co2-datapoints-final
-        - cpi-datapoints-final
         - fao_aqua-datapoints-final
         - wdi-datapoints-final
         - hdi-datapoints-final
