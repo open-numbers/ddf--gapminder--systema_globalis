@@ -1,0 +1,41 @@
+# basic info
+info:
+    id: unesco-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--unesco--education
+
+config:
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+
+# define the initial inputs of the recipe
+ingredients:
+    - id: unesco-datapoints
+      dataset: *d1
+      key: country, year
+      value:
+        - cr_1
+        - cr_1_f
+        - cr_1_m
+        - ofst_1_cp
+        - ofst_1_m_cp
+        - ofst_1_f_cp
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          options:
+              dictionary:
+                country: geo
+                year: time
+          ingredients:
+              - unesco-datapoints
+          result: unesco-datapoints-geo-time
+        - procedure: translate_header
+          options:
+              dictionary: indicators_unesco_to_sg.json
+              debug: true
+          ingredients:
+              - unesco-datapoints-geo-time
+          result: unesco-datapoints-final

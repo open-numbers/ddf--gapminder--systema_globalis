@@ -30,6 +30,7 @@ include:
     - countries/recipe_ilostat.yaml
     - countries/recipe_death_rates.yaml
     - countries/recipe_whotb.yaml
+    - countries/recipe_unesco_edu.yaml
 
 ingredients:
     - id: gw-ontology-concepts-all
@@ -210,5 +211,6 @@ cooking:
         - ilo-datapoints
         - death-rates-datapoints
         - whotb-datapoints-final
+        - unesco-datapoints-final
         - static-assets-datapoints
       result: datapoints-final
