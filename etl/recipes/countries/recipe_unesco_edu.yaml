@@ -7,6 +7,7 @@ info:
 config:
     # the path to search dictionary files
     dictionary_dir: ../../translation_dictionaries
+    recipes_dir: ./
 
 include:
     - recipe_gw_geo.yaml
