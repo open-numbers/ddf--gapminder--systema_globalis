@@ -34,7 +34,6 @@ cooking:
         - procedure: translate_header
           options:
               dictionary: indicators_unesco_to_sg.json
-              debug: true
           ingredients:
               - unesco-global-datapoints-geo-time
           result: unesco-global-datapoints-final
