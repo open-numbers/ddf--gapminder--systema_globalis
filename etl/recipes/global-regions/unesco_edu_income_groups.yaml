@@ -13,7 +13,7 @@ config:
 ingredients:
     - id: unesco-income_groups-datapoints
       dataset: *d1
-      key: global, year
+      key: income_group, year
       value:
         - cr_1
         - cr_1_f
