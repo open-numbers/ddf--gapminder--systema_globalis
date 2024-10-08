@@ -32,6 +32,7 @@ cooking:
           ingredients:
               - wdi-datapoints-global-translated
               - unesco-global-datapoints-final
+              - unesco-income_groups-datapoints-final
           options:
               path: global-regions-datapoints
     entities:

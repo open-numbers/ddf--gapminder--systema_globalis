@@ -1,3 +1,4 @@
 include:
     - global-regions/wdi_global.yaml
     - global-regions/unesco_edu_global.yaml
+    - global-regions/unesco_edu_income_groups.yaml
