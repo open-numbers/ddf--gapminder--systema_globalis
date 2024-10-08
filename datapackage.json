@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2024-10-08T07:10:29.453755+00:00",
+    "created": "2024-10-08T09:59:49.639626+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -11217,6 +11217,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--income_groups--time",
+            "path": "global-regions-datapoints/ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--income_groups--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "income_groups"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "primary_completion_rate_total_percent_of_relevant_age_group"
+                    }
+                ],
+                "primaryKey": [
+                    "income_groups",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time",
             "path": "global-regions-datapoints/ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time.csv",
             "schema": {
@@ -11238,6 +11259,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--primary_school_completion_percent_of_boys--by--income_groups--time",
+            "path": "global-regions-datapoints/ddf--datapoints--primary_school_completion_percent_of_boys--by--income_groups--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "income_groups"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "primary_school_completion_percent_of_boys"
+                    }
+                ],
+                "primaryKey": [
+                    "income_groups",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time",
             "path": "global-regions-datapoints/ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time.csv",
             "schema": {
@@ -11254,6 +11296,27 @@
                 ],
                 "primaryKey": [
                     "global",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--primary_school_completion_percent_of_girls--by--income_groups--time",
+            "path": "global-regions-datapoints/ddf--datapoints--primary_school_completion_percent_of_girls--by--income_groups--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "income_groups"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "primary_school_completion_percent_of_girls"
+                    }
+                ],
+                "primaryKey": [
+                    "income_groups",
                     "time"
                 ]
             }
@@ -20654,7 +20717,8 @@
                 "value": "primary_completion_rate_total_percent_of_relevant_age_group",
                 "resources": [
                     "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--geo--time",
-                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time"
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time",
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--income_groups--time"
                 ]
             },
             {
@@ -20665,6 +20729,26 @@
                 "value": "primary_completion_rate_total_percent_of_relevant_age_group",
                 "resources": [
                     "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_3groups",
+                    "time"
+                ],
+                "value": "primary_completion_rate_total_percent_of_relevant_age_group",
+                "resources": [
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--income_groups--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_groups",
+                    "time"
+                ],
+                "value": "primary_completion_rate_total_percent_of_relevant_age_group",
+                "resources": [
+                    "ddf--datapoints--primary_completion_rate_total_percent_of_relevant_age_group--by--income_groups--time"
                 ]
             },
             {
@@ -20705,7 +20789,8 @@
                 "value": "primary_school_completion_percent_of_boys",
                 "resources": [
                     "ddf--datapoints--primary_school_completion_percent_of_boys--by--geo--time",
-                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time"
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time",
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--income_groups--time"
                 ]
             },
             {
@@ -20716,6 +20801,26 @@
                 "value": "primary_school_completion_percent_of_boys",
                 "resources": [
                     "ddf--datapoints--primary_school_completion_percent_of_boys--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_3groups",
+                    "time"
+                ],
+                "value": "primary_school_completion_percent_of_boys",
+                "resources": [
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--income_groups--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_groups",
+                    "time"
+                ],
+                "value": "primary_school_completion_percent_of_boys",
+                "resources": [
+                    "ddf--datapoints--primary_school_completion_percent_of_boys--by--income_groups--time"
                 ]
             },
             {
@@ -20736,7 +20841,8 @@
                 "value": "primary_school_completion_percent_of_girls",
                 "resources": [
                     "ddf--datapoints--primary_school_completion_percent_of_girls--by--geo--time",
-                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time"
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time",
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--income_groups--time"
                 ]
             },
             {
@@ -20747,6 +20853,26 @@
                 "value": "primary_school_completion_percent_of_girls",
                 "resources": [
                     "ddf--datapoints--primary_school_completion_percent_of_girls--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_3groups",
+                    "time"
+                ],
+                "value": "primary_school_completion_percent_of_girls",
+                "resources": [
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--income_groups--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "income_groups",
+                    "time"
+                ],
+                "value": "primary_school_completion_percent_of_girls",
+                "resources": [
+                    "ddf--datapoints--primary_school_completion_percent_of_girls--by--income_groups--time"
                 ]
             },
             {
