@@ -24,6 +24,7 @@ cooking:
         - procedure: translate_header
           options:
               dictionary:
+                income_group: income_groups
                 year: time
           ingredients:
               - unesco-income_groups-datapoints
