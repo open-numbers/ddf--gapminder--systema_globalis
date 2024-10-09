@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2024-08-26T09:14:45.120065+00:00",
+    "created": "2024-10-08T09:59:49.639626+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -2282,48 +2282,6 @@
                     },
                     {
                         "name": "contraceptive_use_percent_of_women_ages_15_49"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--corruption_perception_index_cpi--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--corruption_perception_index_cpi--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "corruption_perception_index_cpi"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--corruption_perception_index_cpi_pre2012--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--corruption_perception_index_cpi_pre2012--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "corruption_perception_index_cpi_pre2012"
                     }
                 ],
                 "primaryKey": [
@@ -11154,6 +11112,69 @@
             }
         },
         {
+            "name": "ddf--datapoints--children_out_of_school_primary--by--global--time",
+            "path": "global-regions-datapoints/ddf--datapoints--children_out_of_school_primary--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "children_out_of_school_primary"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--children_out_of_school_primary_female--by--global--time",
+            "path": "global-regions-datapoints/ddf--datapoints--children_out_of_school_primary_female--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "children_out_of_school_primary_female"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--children_out_of_school_primary_male--by--global--time",
+            "path": "global-regions-datapoints/ddf--datapoints--children_out_of_school_primary_male--by--global--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "global"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "children_out_of_school_primary_male"
+                    }
+                ],
+                "primaryKey": [
+                    "global",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--global--time",
             "path": "global-regions-datapoints/ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--global--time.csv",
             "schema": {
@@ -14387,7 +14408,18 @@
                 ],
                 "value": "children_out_of_school_primary",
                 "resources": [
-                    "ddf--datapoints--children_out_of_school_primary--by--geo--time"
+                    "ddf--datapoints--children_out_of_school_primary--by--geo--time",
+                    "ddf--datapoints--children_out_of_school_primary--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "children_out_of_school_primary",
+                "resources": [
+                    "ddf--datapoints--children_out_of_school_primary--by--global--time"
                 ]
             },
             {
@@ -14407,7 +14439,18 @@
                 ],
                 "value": "children_out_of_school_primary_female",
                 "resources": [
-                    "ddf--datapoints--children_out_of_school_primary_female--by--geo--time"
+                    "ddf--datapoints--children_out_of_school_primary_female--by--geo--time",
+                    "ddf--datapoints--children_out_of_school_primary_female--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "children_out_of_school_primary_female",
+                "resources": [
+                    "ddf--datapoints--children_out_of_school_primary_female--by--global--time"
                 ]
             },
             {
@@ -14427,7 +14470,18 @@
                 ],
                 "value": "children_out_of_school_primary_male",
                 "resources": [
-                    "ddf--datapoints--children_out_of_school_primary_male--by--geo--time"
+                    "ddf--datapoints--children_out_of_school_primary_male--by--geo--time",
+                    "ddf--datapoints--children_out_of_school_primary_male--by--global--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "children_out_of_school_primary_male",
+                "resources": [
+                    "ddf--datapoints--children_out_of_school_primary_male--by--global--time"
                 ]
             },
             {
@@ -14808,46 +14862,6 @@
                 "value": "contraceptive_use_percent_of_women_ages_15_49",
                 "resources": [
                     "ddf--datapoints--contraceptive_use_percent_of_women_ages_15_49--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "corruption_perception_index_cpi",
-                "resources": [
-                    "ddf--datapoints--corruption_perception_index_cpi--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "corruption_perception_index_cpi",
-                "resources": [
-                    "ddf--datapoints--corruption_perception_index_cpi--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "corruption_perception_index_cpi_pre2012",
-                "resources": [
-                    "ddf--datapoints--corruption_perception_index_cpi_pre2012--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "corruption_perception_index_cpi_pre2012",
-                "resources": [
-                    "ddf--datapoints--corruption_perception_index_cpi_pre2012--by--geo--time"
                 ]
             },
             {

@@ -1,0 +1,8 @@
+{
+  "cr_1": "primary_completion_rate_total_percent_of_relevant_age_group",
+  "cr_1_f": "primary_school_completion_percent_of_girls",
+  "cr_1_m": "primary_school_completion_percent_of_boys",
+  "ofst_1_cp": "children_out_of_school_primary",
+  "ofst_1_m_cp": "children_out_of_school_primary_male",
+  "ofst_1_f_cp": "children_out_of_school_primary_female"
+}

@@ -1,4 +1,3 @@
-
 info:
     base: &wdi open-numbers/ddf--world_bank--world_development_indicators
 
@@ -14,9 +13,6 @@ ingredients:
         - sp_rur_totl_zs
         - sp_urb_totl
         - sp_rur_totl
-        - se_prm_cmpt_zs
-        - se_prm_cmpt_ma_zs
-        - se_prm_cmpt_fe_zs
         - si_pov_dday
 
 cooking:

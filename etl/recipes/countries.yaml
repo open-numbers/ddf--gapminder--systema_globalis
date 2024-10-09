@@ -21,7 +21,6 @@ include:
     - countries/recipe_gw_geo.yaml
     - countries/recipe_ihme_edu_attainment.yaml
     - countries/recipe_unpop.yaml
-    - countries/recipe_cpi.yaml
     - countries/recipe_hdi.yaml
     - countries/recipe_wdi.yaml
     - countries/recipe_fao_aqua.yaml
@@ -30,6 +29,7 @@ include:
     - countries/recipe_ilostat.yaml
     - countries/recipe_death_rates.yaml
     - countries/recipe_whotb.yaml
+    - countries/recipe_unesco_edu.yaml
 
 ingredients:
     - id: gw-ontology-concepts-all
@@ -156,6 +156,10 @@ ingredients:
           - population_aged_40_59_years_female_percent
           - children_per_woman_total_fertility
           - children_per_woman_total_fertility_with_projections
+          # other indicators moved to fasttrack
+          - corruption_perception_index_cpi
+          - corruption_perception_index_cpi_pre2012
+          
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
@@ -202,7 +206,6 @@ cooking:
         - edu-datapoints
         - unpop-datapoints
         - co2-datapoints-final
-        - cpi-datapoints-final
         - fao_aqua-datapoints-final
         - wdi-datapoints-final
         - hdi-datapoints-final
@@ -210,5 +213,6 @@ cooking:
         - ilo-datapoints
         - death-rates-datapoints
         - whotb-datapoints-final
+        - unesco-datapoints-final
         - static-assets-datapoints
       result: datapoints-final

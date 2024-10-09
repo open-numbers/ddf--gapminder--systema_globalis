@@ -31,7 +31,8 @@ cooking:
         - procedure: serve
           ingredients:
               - wdi-datapoints-global-translated
-              - wdi-datapoints-income_groups-translated
+              - unesco-global-datapoints-final
+              - unesco-income_groups-datapoints-final
           options:
               path: global-regions-datapoints
     entities:
