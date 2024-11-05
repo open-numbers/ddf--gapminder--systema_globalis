@@ -1,0 +1,37 @@
+# basic info
+info:
+    id: unesco-income_group-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--unesco--education
+
+config:
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+
+# define the initial inputs of the recipe
+ingredients:
+    - id: unesco-income_groups-datapoints
+      dataset: *d1
+      key: income_group, year
+      value:
+        - cr_1
+        - cr_1_f
+        - cr_1_m
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          options:
+              dictionary:
+                income_group: income_groups
+                year: time
+          ingredients:
+              - unesco-income_groups-datapoints
+          result: unesco-income_groups-datapoints-geo-time
+        - procedure: translate_header
+          options:
+              dictionary: indicators_unesco_to_sg.json
+          ingredients:
+              - unesco-income_groups-datapoints-geo-time
+          result: unesco-income_groups-datapoints-final
