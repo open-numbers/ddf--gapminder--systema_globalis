@@ -159,7 +159,11 @@ ingredients:
           # other indicators moved to fasttrack
           - corruption_perception_index_cpi
           - corruption_perception_index_cpi_pre2012
-          
+          - dtp3_immunized_percent_of_one_year_olds
+          - hepb3_immunized_percent_of_one_year_olds
+          - hib3_immunized_percent_of_one_year_olds
+          - mcv_immunized_percent_of_one_year_olds
+          - pab_immunized_percent_of_newborns
     - id: static-assets-datapoints
       dataset: open-numbers/ddf--gapminder--static_assets
       key: geo, time
