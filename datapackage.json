@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2024-11-17T12:32:34.526239+00:00",
+    "created": "2024-12-20T08:05:53.729346+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -2711,27 +2711,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--dtp3_immunized_percent_of_one_year_olds--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--dtp3_immunized_percent_of_one_year_olds--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "dtp3_immunized_percent_of_one_year_olds"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--earthquake_affected_annual_number--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--earthquake_affected_annual_number--by--geo--time.csv",
             "schema": {
@@ -4277,48 +4256,6 @@
                     },
                     {
                         "name": "health_aid_given_percent_of_aid"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--hepb3_immunized_percent_of_one_year_olds--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--hepb3_immunized_percent_of_one_year_olds--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "hepb3_immunized_percent_of_one_year_olds"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--hib3_immunized_percent_of_one_year_olds--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--hib3_immunized_percent_of_one_year_olds--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "hib3_immunized_percent_of_one_year_olds"
                     }
                 ],
                 "primaryKey": [
@@ -6386,27 +6323,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--mcv_immunized_percent_of_one_year_olds--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--mcv_immunized_percent_of_one_year_olds--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "mcv_immunized_percent_of_one_year_olds"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--mean_years_in_school_men_15_to_24_years--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--mean_years_in_school_men_15_to_24_years--by--geo--time.csv",
             "schema": {
@@ -7763,27 +7679,6 @@
                     },
                     {
                         "name": "out_of_pocket_share_of_total_health_spending_percent"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--pab_immunized_percent_of_newborns--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--pab_immunized_percent_of_newborns--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "pab_immunized_percent_of_newborns"
                     }
                 ],
                 "primaryKey": [
@@ -15248,26 +15143,6 @@
                     "country",
                     "time"
                 ],
-                "value": "dtp3_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--dtp3_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "dtp3_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--dtp3_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "earthquake_affected_annual_number",
                 "resources": [
                     "ddf--datapoints--earthquake_affected_annual_number--by--geo--time"
@@ -16759,46 +16634,6 @@
                     "country",
                     "time"
                 ],
-                "value": "hepb3_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--hepb3_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "hepb3_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--hepb3_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "hib3_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--hib3_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "hib3_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--hib3_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "high_technology_exports_percent_of_manufactured_exports",
                 "resources": [
                     "ddf--datapoints--high_technology_exports_percent_of_manufactured_exports--by--geo--time"
@@ -18803,26 +18638,6 @@
                     "country",
                     "time"
                 ],
-                "value": "mcv_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--mcv_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "mcv_immunized_percent_of_one_year_olds",
-                "resources": [
-                    "ddf--datapoints--mcv_immunized_percent_of_one_year_olds--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "mean_years_in_school_men_15_to_24_years",
                 "resources": [
                     "ddf--datapoints--mean_years_in_school_men_15_to_24_years--by--geo--time"
@@ -20116,26 +19931,6 @@
                 "value": "out_of_pocket_share_of_total_health_spending_percent",
                 "resources": [
                     "ddf--datapoints--out_of_pocket_share_of_total_health_spending_percent--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "pab_immunized_percent_of_newborns",
-                "resources": [
-                    "ddf--datapoints--pab_immunized_percent_of_newborns--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "pab_immunized_percent_of_newborns",
-                "resources": [
-                    "ddf--datapoints--pab_immunized_percent_of_newborns--by--geo--time"
                 ]
             },
             {
