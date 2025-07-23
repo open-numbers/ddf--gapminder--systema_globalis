@@ -27,7 +27,7 @@ include:
     - countries/recipe_gw_gini.yaml
     - countries/recipe_gw_co2.yaml
     - countries/recipe_ilostat.yaml
-    - countries/recipe_death_rates.yaml
+    # - countries/recipe_death_rates.yaml # do we still need this?
     - countries/recipe_whotb.yaml
     - countries/recipe_unesco_edu.yaml
 
@@ -41,6 +41,13 @@ ingredients:
       value:
         $nin: &removed_concepts
           - yearly_co2_emissions_tonnes
+          - yearly_co2_emissions_1000_tonnes
+          - gapminder_gini
+          - consumption_emissions_tonnes_per_person
+          - consumption_co2_emissions_1000_tonnes
+          - co2_emissions_tonnes_per_person
+          - child_mortality_0_5_year_olds_more_years_version_7
+          - child_mortality_0_5_year_olds_dying_per_1000_born
           - sg_gdp_p_cap_const_ppp2011_dollar
           - sg_population
           - sg_gini
