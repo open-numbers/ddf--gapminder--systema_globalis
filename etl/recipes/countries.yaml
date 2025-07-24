@@ -27,7 +27,7 @@ include:
     - countries/recipe_gw_gini.yaml
     - countries/recipe_gw_co2.yaml
     - countries/recipe_ilostat.yaml
-    # - countries/recipe_death_rates.yaml # do we still need this?
+    - countries/recipe_death_rates.yaml # do we still need this?
     - countries/recipe_whotb.yaml
     - countries/recipe_unesco_edu.yaml
 
