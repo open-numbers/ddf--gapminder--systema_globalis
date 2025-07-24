@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2025-07-17T12:31:54.242173+00:00",
+    "created": "2025-07-24T02:09:25.102560+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -1766,48 +1766,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--child_mortality_0_5_year_olds_dying_per_1000_born--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--child_mortality_0_5_year_olds_dying_per_1000_born--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "child_mortality_0_5_year_olds_dying_per_1000_born"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--child_mortality_0_5_year_olds_more_years_version_7--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--child_mortality_0_5_year_olds_more_years_version_7--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "child_mortality_0_5_year_olds_more_years_version_7"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--children_and_elderly_per_100_adults--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--children_and_elderly_per_100_adults--by--geo--time.csv",
             "schema": {
@@ -1925,27 +1883,6 @@
                     },
                     {
                         "name": "cholesterol_fat_in_blood_women_mmolperl"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--co2_emissions_tonnes_per_person--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--co2_emissions_tonnes_per_person--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "co2_emissions_tonnes_per_person"
                     }
                 ],
                 "primaryKey": [
@@ -2198,48 +2135,6 @@
                     },
                     {
                         "name": "congenital_deaths_in_newborn_total_deaths"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "consumption_co2_emissions_1000_tonnes"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "consumption_emissions_tonnes_per_person"
                     }
                 ],
                 "primaryKey": [
@@ -3878,27 +3773,6 @@
                     },
                     {
                         "name": "forest_products_removal_total_dollar"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--gapminder_gini--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--gapminder_gini--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "gapminder_gini"
                     }
                 ],
                 "primaryKey": [
@@ -10460,27 +10334,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--yearly_co2_emissions_1000_tonnes--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--yearly_co2_emissions_1000_tonnes--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "yearly_co2_emissions_1000_tonnes"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--concepts",
             "path": "ddf--concepts.csv",
             "schema": {
@@ -14210,46 +14063,6 @@
                     "country",
                     "time"
                 ],
-                "value": "child_mortality_0_5_year_olds_dying_per_1000_born",
-                "resources": [
-                    "ddf--datapoints--child_mortality_0_5_year_olds_dying_per_1000_born--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "child_mortality_0_5_year_olds_dying_per_1000_born",
-                "resources": [
-                    "ddf--datapoints--child_mortality_0_5_year_olds_dying_per_1000_born--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "child_mortality_0_5_year_olds_more_years_version_7",
-                "resources": [
-                    "ddf--datapoints--child_mortality_0_5_year_olds_more_years_version_7--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "child_mortality_0_5_year_olds_more_years_version_7",
-                "resources": [
-                    "ddf--datapoints--child_mortality_0_5_year_olds_more_years_version_7--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "children_and_elderly_per_100_adults",
                 "resources": [
                     "ddf--datapoints--children_and_elderly_per_100_adults--by--geo--time"
@@ -14403,26 +14216,6 @@
                     "country",
                     "time"
                 ],
-                "value": "co2_emissions_tonnes_per_person",
-                "resources": [
-                    "ddf--datapoints--co2_emissions_tonnes_per_person--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "co2_emissions_tonnes_per_person",
-                "resources": [
-                    "ddf--datapoints--co2_emissions_tonnes_per_person--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "coal_consumption_per_cap",
                 "resources": [
                     "ddf--datapoints--coal_consumption_per_cap--by--geo--time"
@@ -14656,46 +14449,6 @@
                 "value": "congenital_deaths_in_newborn_total_deaths",
                 "resources": [
                     "ddf--datapoints--congenital_deaths_in_newborn_total_deaths--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "consumption_co2_emissions_1000_tonnes",
-                "resources": [
-                    "ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "consumption_co2_emissions_1000_tonnes",
-                "resources": [
-                    "ddf--datapoints--consumption_co2_emissions_1000_tonnes--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "consumption_emissions_tonnes_per_person",
-                "resources": [
-                    "ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "consumption_emissions_tonnes_per_person",
-                "resources": [
-                    "ddf--datapoints--consumption_emissions_tonnes_per_person--by--geo--time"
                 ]
             },
             {
@@ -16267,26 +16020,6 @@
                 "value": "forest_products_removal_total_dollar",
                 "resources": [
                     "ddf--datapoints--forest_products_removal_total_dollar--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "gapminder_gini",
-                "resources": [
-                    "ddf--datapoints--gapminder_gini--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "gapminder_gini",
-                "resources": [
-                    "ddf--datapoints--gapminder_gini--by--geo--time"
                 ]
             },
             {
@@ -22729,26 +22462,6 @@
                 "value": "working_hours_per_week",
                 "resources": [
                     "ddf--datapoints--working_hours_per_week--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "yearly_co2_emissions_1000_tonnes",
-                "resources": [
-                    "ddf--datapoints--yearly_co2_emissions_1000_tonnes--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "yearly_co2_emissions_1000_tonnes",
-                "resources": [
-                    "ddf--datapoints--yearly_co2_emissions_1000_tonnes--by--geo--time"
                 ]
             }
         ],
