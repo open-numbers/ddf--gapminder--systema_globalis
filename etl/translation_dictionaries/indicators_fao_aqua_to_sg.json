@@ -7,5 +7,5 @@
     "total_renewable_water_resources_per_capita": "renewable_water_cu_meters_per_person",
     "total_water_withdrawal": "total_water_withdrawal_billion_cu_meters",
     "total_water_withdrawal_per_capita": "water_withdrawal_cu_meters_per_person",
-    "municipal_water_withdrawal_per_capita": "municipal_water_withdrawal_cu_meters_per_person"
+    "municipal_water_withdrawal_per_capita_total_population": "municipal_water_withdrawal_cu_meters_per_person"
 }
