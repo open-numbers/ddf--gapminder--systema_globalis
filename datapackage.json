@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2025-07-24T02:09:25.102560+00:00",
+    "created": "2025-07-30T03:25:18.126150+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -3047,8 +3047,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--geo--time.csv",
+            "name": "ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -3058,7 +3058,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "extreme_poverty_percent_people_below_215_a_day"
+                        "name": "extreme_poverty_percent_people_below_300_a_day"
                     }
                 ],
                 "primaryKey": [
@@ -8003,8 +8003,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--poverty_percent_people_below_365_a_day--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--poverty_percent_people_below_365_a_day--by--geo--time.csv",
+            "name": "ddf--datapoints--poverty_percent_people_below_420_a_day--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--poverty_percent_people_below_420_a_day--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -8014,7 +8014,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "poverty_percent_people_below_365_a_day"
+                        "name": "poverty_percent_people_below_420_a_day"
                     }
                 ],
                 "primaryKey": [
@@ -8024,8 +8024,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--poverty_percent_people_below_685_a_day--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--poverty_percent_people_below_685_a_day--by--geo--time.csv",
+            "name": "ddf--datapoints--poverty_percent_people_below_830_a_day--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--poverty_percent_people_below_830_a_day--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -8035,7 +8035,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "poverty_percent_people_below_685_a_day"
+                        "name": "poverty_percent_people_below_830_a_day"
                     }
                 ],
                 "primaryKey": [
@@ -10902,8 +10902,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--global--time",
-            "path": "global-regions-datapoints/ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--global--time.csv",
+            "name": "ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--global--time",
+            "path": "global-regions-datapoints/ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--global--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -10913,7 +10913,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "extreme_poverty_percent_people_below_215_a_day"
+                        "name": "extreme_poverty_percent_people_below_300_a_day"
                     }
                 ],
                 "primaryKey": [
@@ -15316,9 +15316,9 @@
                     "country",
                     "time"
                 ],
-                "value": "extreme_poverty_percent_people_below_215_a_day",
+                "value": "extreme_poverty_percent_people_below_300_a_day",
                 "resources": [
-                    "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--geo--time"
+                    "ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--geo--time"
                 ]
             },
             {
@@ -15326,10 +15326,10 @@
                     "geo",
                     "time"
                 ],
-                "value": "extreme_poverty_percent_people_below_215_a_day",
+                "value": "extreme_poverty_percent_people_below_300_a_day",
                 "resources": [
-                    "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--geo--time",
-                    "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--global--time"
+                    "ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--geo--time",
+                    "ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--global--time"
                 ]
             },
             {
@@ -15337,9 +15337,9 @@
                     "global",
                     "time"
                 ],
-                "value": "extreme_poverty_percent_people_below_215_a_day",
+                "value": "extreme_poverty_percent_people_below_300_a_day",
                 "resources": [
-                    "ddf--datapoints--extreme_poverty_percent_people_below_215_a_day--by--global--time"
+                    "ddf--datapoints--extreme_poverty_percent_people_below_300_a_day--by--global--time"
                 ]
             },
             {
@@ -20091,9 +20091,9 @@
                     "country",
                     "time"
                 ],
-                "value": "poverty_percent_people_below_365_a_day",
+                "value": "poverty_percent_people_below_420_a_day",
                 "resources": [
-                    "ddf--datapoints--poverty_percent_people_below_365_a_day--by--geo--time"
+                    "ddf--datapoints--poverty_percent_people_below_420_a_day--by--geo--time"
                 ]
             },
             {
@@ -20101,9 +20101,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "poverty_percent_people_below_365_a_day",
+                "value": "poverty_percent_people_below_420_a_day",
                 "resources": [
-                    "ddf--datapoints--poverty_percent_people_below_365_a_day--by--geo--time"
+                    "ddf--datapoints--poverty_percent_people_below_420_a_day--by--geo--time"
                 ]
             },
             {
@@ -20111,9 +20111,9 @@
                     "country",
                     "time"
                 ],
-                "value": "poverty_percent_people_below_685_a_day",
+                "value": "poverty_percent_people_below_830_a_day",
                 "resources": [
-                    "ddf--datapoints--poverty_percent_people_below_685_a_day--by--geo--time"
+                    "ddf--datapoints--poverty_percent_people_below_830_a_day--by--geo--time"
                 ]
             },
             {
@@ -20121,9 +20121,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "poverty_percent_people_below_685_a_day",
+                "value": "poverty_percent_people_below_830_a_day",
                 "resources": [
-                    "ddf--datapoints--poverty_percent_people_below_685_a_day--by--geo--time"
+                    "ddf--datapoints--poverty_percent_people_below_830_a_day--by--geo--time"
                 ]
             },
             {
