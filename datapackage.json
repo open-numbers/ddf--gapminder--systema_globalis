@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2025-07-30T03:25:18.126150+00:00",
+    "created": "2025-11-27T02:15:05.923589+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -401,8 +401,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--aid_given_2007_us--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--aid_given_2007_us--by--geo--time.csv",
+            "name": "ddf--datapoints--aid_given_2023_us--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--aid_given_2023_us--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -412,7 +412,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "aid_given_2007_us"
+                        "name": "aid_given_2023_us"
                     }
                 ],
                 "primaryKey": [
@@ -422,8 +422,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--aid_given_per_person_2007_us--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--aid_given_per_person_2007_us--by--geo--time.csv",
+            "name": "ddf--datapoints--aid_given_per_person_2023_us--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--aid_given_per_person_2023_us--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -433,7 +433,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "aid_given_per_person_2007_us"
+                        "name": "aid_given_per_person_2023_us"
                     }
                 ],
                 "primaryKey": [
@@ -674,27 +674,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "all_forms_of_tb_incidence_and_number_of_new_cases_estimated"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time.csv",
             "schema": {
@@ -707,6 +686,27 @@
                     },
                     {
                         "name": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_reported--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_reported--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "all_forms_of_tb_incidence_and_number_of_new_cases_reported"
                     }
                 ],
                 "primaryKey": [
@@ -6827,111 +6827,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--murdered_15_29_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--murdered_15_29_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "murdered_15_29_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--murdered_30_44_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--murdered_30_44_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "murdered_30_44_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--murdered_45_59_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--murdered_45_59_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "murdered_45_59_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--murdered_60plus_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--murdered_60plus_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "murdered_60plus_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--murdered_children_0_14_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--murdered_children_0_14_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "murdered_children_0_14_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--murdered_men_per_100000_people--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--murdered_men_per_100000_people--by--geo--time.csv",
             "schema": {
@@ -7478,8 +7373,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time.csv",
+            "name": "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_births--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_births--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -7489,7 +7384,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "other_infections_deaths_in_children_1_59_months_per_1000_birt"
+                        "name": "other_infections_deaths_in_children_1_59_months_per_1000_births"
                     }
                 ],
                 "primaryKey": [
@@ -9116,8 +9011,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--suicide_age_0_14_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_0_14_per_100000_people--by--geo--time.csv",
+            "name": "ddf--datapoints--suicide_age_15_19_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_15_19_per_100000_people--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -9127,7 +9022,28 @@
                         "name": "time"
                     },
                     {
-                        "name": "suicide_age_0_14_per_100000_people"
+                        "name": "suicide_age_15_19_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_age_15_24_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_15_24_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_age_15_24_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -9158,8 +9074,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--suicide_age_30_44_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_30_44_per_100000_people--by--geo--time.csv",
+            "name": "ddf--datapoints--suicide_age_25_34_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_25_34_per_100000_people--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -9169,7 +9085,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "suicide_age_30_44_per_100000_people"
+                        "name": "suicide_age_25_34_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -9179,8 +9095,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--suicide_age_45_59_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_45_59_per_100000_people--by--geo--time.csv",
+            "name": "ddf--datapoints--suicide_age_30_49_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_30_49_per_100000_people--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -9190,7 +9106,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "suicide_age_45_59_per_100000_people"
+                        "name": "suicide_age_30_49_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -9200,8 +9116,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--suicide_age_60plus_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_60plus_per_100000_people--by--geo--time.csv",
+            "name": "ddf--datapoints--suicide_age_35_44_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_35_44_per_100000_people--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -9211,7 +9127,112 @@
                         "name": "time"
                     },
                     {
-                        "name": "suicide_age_60plus_per_100000_people"
+                        "name": "suicide_age_35_44_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_age_45_54_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_45_54_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_age_45_54_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_age_55_64_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_55_64_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_age_55_64_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_age_65_74_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_65_74_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_age_65_74_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_age_75_84_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_75_84_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_age_75_84_per_100000_people"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--suicide_age_85plus_per_100000_people--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--suicide_age_85plus_per_100000_people--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "suicide_age_85plus_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -9926,111 +9947,6 @@
                     },
                     {
                         "name": "traffic_deaths_women_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--traffic_mortality_15_29_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--traffic_mortality_15_29_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "traffic_mortality_15_29_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--traffic_mortality_30_44_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--traffic_mortality_30_44_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "traffic_mortality_30_44_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--traffic_mortality_45_59_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--traffic_mortality_45_59_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "traffic_mortality_45_59_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--traffic_mortality_60plus_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--traffic_mortality_60plus_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "traffic_mortality_60plus_per_100000_people"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--traffic_mortality_children_0_14_per_100000_people--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--traffic_mortality_children_0_14_per_100000_people--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "traffic_mortality_children_0_14_per_100000_people"
                     }
                 ],
                 "primaryKey": [
@@ -12763,9 +12679,9 @@
                     "country",
                     "time"
                 ],
-                "value": "aid_given_2007_us",
+                "value": "aid_given_2023_us",
                 "resources": [
-                    "ddf--datapoints--aid_given_2007_us--by--geo--time"
+                    "ddf--datapoints--aid_given_2023_us--by--geo--time"
                 ]
             },
             {
@@ -12773,9 +12689,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "aid_given_2007_us",
+                "value": "aid_given_2023_us",
                 "resources": [
-                    "ddf--datapoints--aid_given_2007_us--by--geo--time"
+                    "ddf--datapoints--aid_given_2023_us--by--geo--time"
                 ]
             },
             {
@@ -12783,9 +12699,9 @@
                     "country",
                     "time"
                 ],
-                "value": "aid_given_per_person_2007_us",
+                "value": "aid_given_per_person_2023_us",
                 "resources": [
-                    "ddf--datapoints--aid_given_per_person_2007_us--by--geo--time"
+                    "ddf--datapoints--aid_given_per_person_2023_us--by--geo--time"
                 ]
             },
             {
@@ -12793,9 +12709,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "aid_given_per_person_2007_us",
+                "value": "aid_given_per_person_2023_us",
                 "resources": [
-                    "ddf--datapoints--aid_given_per_person_2007_us--by--geo--time"
+                    "ddf--datapoints--aid_given_per_person_2023_us--by--geo--time"
                 ]
             },
             {
@@ -13023,9 +12939,9 @@
                     "country",
                     "time"
                 ],
-                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time"
                 ]
             },
             {
@@ -13033,9 +12949,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time"
                 ]
             },
             {
@@ -13043,9 +12959,9 @@
                     "country",
                     "time"
                 ],
-                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_reported",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_reported--by--geo--time"
                 ]
             },
             {
@@ -13053,9 +12969,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated",
+                "value": "all_forms_of_tb_incidence_and_number_of_new_cases_reported",
                 "resources": [
-                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_per_100000_estimated--by--geo--time"
+                    "ddf--datapoints--all_forms_of_tb_incidence_and_number_of_new_cases_reported--by--geo--time"
                 ]
             },
             {
@@ -18971,106 +18887,6 @@
                     "country",
                     "time"
                 ],
-                "value": "murdered_15_29_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_15_29_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "murdered_15_29_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_15_29_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "murdered_30_44_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_30_44_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "murdered_30_44_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_30_44_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "murdered_45_59_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_45_59_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "murdered_45_59_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_45_59_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "murdered_60plus_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_60plus_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "murdered_60plus_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_60plus_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "murdered_children_0_14_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_children_0_14_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "murdered_children_0_14_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--murdered_children_0_14_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "murdered_men_per_100000_people",
                 "resources": [
                     "ddf--datapoints--murdered_men_per_100000_people--by--geo--time"
@@ -19591,9 +19407,9 @@
                     "country",
                     "time"
                 ],
-                "value": "other_infections_deaths_in_children_1_59_months_per_1000_birt",
+                "value": "other_infections_deaths_in_children_1_59_months_per_1000_births",
                 "resources": [
-                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time"
+                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_births--by--geo--time"
                 ]
             },
             {
@@ -19601,9 +19417,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "other_infections_deaths_in_children_1_59_months_per_1000_birt",
+                "value": "other_infections_deaths_in_children_1_59_months_per_1000_births",
                 "resources": [
-                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_birt--by--geo--time"
+                    "ddf--datapoints--other_infections_deaths_in_children_1_59_months_per_1000_births--by--geo--time"
                 ]
             },
             {
@@ -21287,9 +21103,9 @@
                     "country",
                     "time"
                 ],
-                "value": "suicide_age_0_14_per_100000_people",
+                "value": "suicide_age_15_19_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_0_14_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_15_19_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21297,9 +21113,29 @@
                     "geo",
                     "time"
                 ],
-                "value": "suicide_age_0_14_per_100000_people",
+                "value": "suicide_age_15_19_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_0_14_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_15_19_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_age_15_24_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_15_24_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_age_15_24_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_15_24_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21327,9 +21163,9 @@
                     "country",
                     "time"
                 ],
-                "value": "suicide_age_30_44_per_100000_people",
+                "value": "suicide_age_25_34_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_30_44_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_25_34_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21337,9 +21173,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "suicide_age_30_44_per_100000_people",
+                "value": "suicide_age_25_34_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_30_44_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_25_34_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21347,9 +21183,9 @@
                     "country",
                     "time"
                 ],
-                "value": "suicide_age_45_59_per_100000_people",
+                "value": "suicide_age_30_49_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_45_59_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_30_49_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21357,9 +21193,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "suicide_age_45_59_per_100000_people",
+                "value": "suicide_age_30_49_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_45_59_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_30_49_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21367,9 +21203,9 @@
                     "country",
                     "time"
                 ],
-                "value": "suicide_age_60plus_per_100000_people",
+                "value": "suicide_age_35_44_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_60plus_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_35_44_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -21377,9 +21213,109 @@
                     "geo",
                     "time"
                 ],
-                "value": "suicide_age_60plus_per_100000_people",
+                "value": "suicide_age_35_44_per_100000_people",
                 "resources": [
-                    "ddf--datapoints--suicide_age_60plus_per_100000_people--by--geo--time"
+                    "ddf--datapoints--suicide_age_35_44_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_age_45_54_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_45_54_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_age_45_54_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_45_54_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_age_55_64_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_55_64_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_age_55_64_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_55_64_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_age_65_74_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_65_74_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_age_65_74_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_65_74_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_age_75_84_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_75_84_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_age_75_84_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_75_84_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "suicide_age_85plus_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_85plus_per_100000_people--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "suicide_age_85plus_per_100000_people",
+                "resources": [
+                    "ddf--datapoints--suicide_age_85plus_per_100000_people--by--geo--time"
                 ]
             },
             {
@@ -22060,106 +21996,6 @@
                 "value": "traffic_deaths_women_per_100000_people",
                 "resources": [
                     "ddf--datapoints--traffic_deaths_women_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "traffic_mortality_15_29_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_15_29_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "traffic_mortality_15_29_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_15_29_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "traffic_mortality_30_44_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_30_44_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "traffic_mortality_30_44_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_30_44_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "traffic_mortality_45_59_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_45_59_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "traffic_mortality_45_59_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_45_59_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "traffic_mortality_60plus_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_60plus_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "traffic_mortality_60plus_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_60plus_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "traffic_mortality_children_0_14_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_children_0_14_per_100000_people--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "traffic_mortality_children_0_14_per_100000_people",
-                "resources": [
-                    "ddf--datapoints--traffic_mortality_children_0_14_per_100000_people--by--geo--time"
                 ]
             },
             {

@@ -1,194 +1,216 @@
 # recipe for dataset
 info:
-    id: ddf--gapminder--systema_globalis
+  id: ddf--gapminder--systema_globalis
 
 config:
-    # the path to search recipe files to include
-    recipes_dir: ./
-    # the path to search dictionary files
-    dictionary_dir: ../translation_dictionaries
-    # external
-    external_csv_dir: ../external_csv
-    # procedures
-    procedure_dir: ./procedures
+  # the path to search recipe files to include
+  recipes_dir: ./
+  # the path to search dictionary files
+  dictionary_dir: ../translation_dictionaries
+  # external
+  external_csv_dir: ../external_csv
+  # procedures
+  procedure_dir: ./procedures
 
 include:
-    - countries/recipe_bp.yaml
-    - countries/recipe_fao_faostat.yaml
-    - countries/recipe_fao_fra.yaml
-    - countries/recipe_gbd.yaml
-    - countries/recipe_gw_geo.yaml
-    - countries/recipe_ihme_edu_attainment.yaml
-    - countries/recipe_unpop.yaml
-    - countries/recipe_hdi.yaml
-    - countries/recipe_wdi.yaml
-    - countries/recipe_fao_aqua.yaml
-    - countries/recipe_ilostat.yaml
-    - countries/recipe_death_rates.yaml # do we still need this?
-    - countries/recipe_whotb.yaml
-    - countries/recipe_unesco_edu.yaml
+  - countries/recipe_bp.yaml
+  - countries/recipe_fao_faostat.yaml
+  - countries/recipe_fao_fra.yaml
+  - countries/recipe_gbd.yaml
+  - countries/recipe_gw_geo.yaml
+  - countries/recipe_ihme_edu_attainment.yaml
+  - countries/recipe_unpop.yaml
+  - countries/recipe_hdi.yaml
+  - countries/recipe_wdi.yaml
+  - countries/recipe_fao_aqua.yaml
+  - countries/recipe_ilostat.yaml
+  - countries/recipe_whotb.yaml
+  - countries/recipe_unesco_edu.yaml
+  - countries/recipe_em_dat.yaml
+  - countries/recipe_billionaire.yaml
+  - countries/recipe_who_gho.yaml
+  - countries/recipe_oecd.yaml
 
 ingredients:
-    - id: gw-ontology-concepts-all
-      dataset: open-numbers/ddf--gapminder--ontology
-      key: concept
-    - id: gw-datapoints-all
-      dataset: open-numbers/ddf--gapminder--gapminder_world
-      key: "geo,time"
-      value:
-        $nin: &removed_concepts
-          - yearly_co2_emissions_tonnes
-          - yearly_co2_emissions_1000_tonnes
-          - gapminder_gini
-          - consumption_emissions_tonnes_per_person
-          - consumption_co2_emissions_1000_tonnes
-          - co2_emissions_tonnes_per_person
-          - child_mortality_0_5_year_olds_more_years_version_7
-          - child_mortality_0_5_year_olds_dying_per_1000_born
-          - sg_gdp_p_cap_const_ppp2011_dollar
-          - sg_population
-          - sg_gini
-          - geographic_regions_in_4_colors
-          - unit
-          # concepts from pervious wdi dataset, but not exists any more / renamed
-          - electricity_use_total
-          - energy_use_total
-          - fixed_line_and_mobile_phone_subscribers_per_100_people
-          - internet_users_total_number
-          - internet_users_per_100_people
-          - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
-          - extreme_poverty_percent_people_below_125_a_day
-          - gnipercapita_constant_2000_us
-          - poverty_percent_people_below_2_a_day
-          - exports_unit_value_index_2000100
-          - imports_unit_value_index_2000100
-          - net_barter_terms_of_trade_2000_100
-          - imports_unit_value_index_2000100
-          - net_barter_terms_of_trade_2000_100
-          # indicators won't be updated
-          - year_categorization_1950
-          - year_categorization_1820_2010
-          - old_version_of_income_per_person_version_3
-          - old_version_of_income_per_person_version_8
-          - how_far_to_the_north
-          - estimate_or_projection_of_under_five_mortality_rate_from_ihme
-          - children_per_woman_temporary_update
-          - 20120905_extreme_poverty_percent_people_below_125_a_day
-          # indicators dropped
-          - improved_sanitation_overall_access_percent
-          - improved_sanitation_rural_access_percent
-          - improved_sanitation_urban_access_percent
-          - improved_water_source_overall_access_percent
-          - improved_water_source_rural_access_percent
-          - improved_water_source_urban_access_percent
-          - aged_55plus_unemployment_rate_percent
-          - agriculture_workers_percent_of_labour_force
-          - family_workers_percent_of_labour_force
-          - female_agriculture_workers_percent_of_female_labour_force
-          - female_family_workers_percent_of_female_labour_force
-          - female_industry_workers_percent_of_female_labour_force
-          - female_salaried_workers_percent_of_female_labour_force
-          - female_self_employed_percent_of_female_labour_force
-          - female_service_workers_percent_of_female_labour_force
-          - females_aged_55plus_unemployment_rate_percent
-          - industry_workers_percent_of_labour_force
-          - male_agriculture_workers_percent_of_male_labour_force
-          - male_family_workers_percent_of_male_labour_force
-          - male_industry_workers_percent_of_male_labour_force
-          - male_salaried_workers_percent_of_male_labour_force
-          - male_self_employed_percent_of_male_labour_force
-          - male_service_workers_percent_of_male_labour_force
-          - males_aged_55plus_unemployment_rate_percent
-          - salaried_workers_percent_of_labour_force
-          - self_employed_percent_of_labour_force
-          - service_workers_percent_of_labour_force
-          - hourly_compensation_us
-          # tb incidators renamed
-          - tb_with_hivplus_deaths_per_100000_estimated
-          - tb_with_hivplus_number_of_deaths_estimated
-          - all_forms_of_tb_existing_cases_per_100000_estimated
-          - all_forms_of_tb_number_of_existing_cases_estimated
-          - tb_with_hivplus_existing_cases_per_100000_estimated
-          - tb_with_hivplus_number_of_existing_cases_estimated
-          - all_forms_of_tb_new_cases_per_100000_estimated
-          - all_forms_of_tb_number_of_new_cases_estimated
-          - all_forms_of_tb_detection_rate_percent
-          # core indicators, which we will move to fasttrack
-          - income_per_person_gdppercapita_ppp_inflation_adjusted
-          - life_expectancy_at_birth_with_projections
-          - life_expectancy_years
-          - population_total
-          - population_aged_40_59_years_both_sexes_percent
-          - population_aged_0_14_years_both_sexes_percent
-          - population_aged_20_39_years_total_number
-          - population_aged_15_19_years_both_sexes_percent
-          - population_aged_0_4_years_both_sexes_percent
-          - population_aged_20_39_years_male_percent
-          - population_aged_10_14_years_total_number
-          - population_aged_20_39_years_female_percent
-          - population_aged_10_14_years_male_percent
-          - population_aged_0_14_years_female_percent
-          - population_aged_0_14_years_male_percent
-          - population_aged_20_39_years_both_sexes_percent
-          - population_aged_0_14_years_total_number
-          - population_aged_0_4_years_total_number
-          - population_aged_10_14_years_female_percent
-          - population_aged_0_4_years_female_percent
-          - population_aged_10_14_years_both_sexes_percent
-          - population_aged_15_19_years_total_number
-          - population_aged_0_4_years_male_percent
-          - population_aged_15_19_years_male_percent
-          - population_aged_65plus_years_female_percent
-          - population_aged_70plus_years_both_sexes_percent
-          - population_aged_65plus_years_both_sexes_percent
-          - population_aged_15_19_years_female_percent
-          - population_aged_70plus_years_total_number
-          - population_aged_65plus_years_total_number
-          - population_aged_60plus_years_total_number
-          - population_aged_70plus_years_male_percent
-          - population_aged_65plus_years_male_percent
-          - population_aged_60plus_years_male_percent
-          - population_aged_70plus_years_female_percent
-          - population_aged_60plus_years_female_percent
-          - population_aged_60plus_years_both_sexes_percent
-          - population_aged_5_9_years_both_sexes_percent
-          - population_aged_40_59_years_male_percent
-          - population_aged_5_9_years_total_number
-          - population_aged_5_9_years_female_percent
-          - population_aged_40_59_years_total_number
-          - population_aged_5_9_years_male_percent
-          - population_aged_40_59_years_female_percent
-          - children_per_woman_total_fertility
-          - children_per_woman_total_fertility_with_projections
-          # other indicators moved to fasttrack
-          - corruption_perception_index_cpi
-          - corruption_perception_index_cpi_pre2012
-          - dtp3_immunized_percent_of_one_year_olds
-          - hepb3_immunized_percent_of_one_year_olds
-          - hib3_immunized_percent_of_one_year_olds
-          - mcv_immunized_percent_of_one_year_olds
-          - pab_immunized_percent_of_newborns
-    - id: static-assets-datapoints
-      dataset: open-numbers/ddf--gapminder--static_assets
-      key: geo, time
-      value: "*"
-    - id: static-assets-concepts
-      dataset: open-numbers/ddf--gapminder--static_assets
-      key: concept
-      value: "*"
+  - id: gw-ontology-concepts-all
+    dataset: open-numbers/ddf--gapminder--ontology
+    key: concept
+  - id: gw-datapoints-all
+    dataset: open-numbers/ddf--gapminder--gapminder_world
+    key: "geo,time"
+    value:
+      $nin: &removed_concepts
+        - yearly_co2_emissions_tonnes
+        - yearly_co2_emissions_1000_tonnes
+        - gapminder_gini
+        - consumption_emissions_tonnes_per_person
+        - consumption_co2_emissions_1000_tonnes
+        - co2_emissions_tonnes_per_person
+        - child_mortality_0_5_year_olds_more_years_version_7
+        - child_mortality_0_5_year_olds_dying_per_1000_born
+        - sg_gdp_p_cap_const_ppp2011_dollar
+        - sg_population
+        - sg_gini
+        - geographic_regions_in_4_colors
+        - unit
+        # concepts from pervious wdi dataset, but not exists any more / renamed
+        - electricity_use_total
+        - energy_use_total
+        - fixed_line_and_mobile_phone_subscribers_per_100_people
+        - internet_users_total_number
+        - internet_users_per_100_people
+        - co2_intensity_of_economic_output_kg_co2_per_2005_ppp_of_gdp
+        - extreme_poverty_percent_people_below_125_a_day
+        - gnipercapita_constant_2000_us
+        - poverty_percent_people_below_2_a_day
+        - exports_unit_value_index_2000100
+        - imports_unit_value_index_2000100
+        - net_barter_terms_of_trade_2000_100
+        - imports_unit_value_index_2000100
+        - net_barter_terms_of_trade_2000_100
+        # indicators won't be updated
+        - year_categorization_1950
+        - year_categorization_1820_2010
+        - old_version_of_income_per_person_version_3
+        - old_version_of_income_per_person_version_8
+        - how_far_to_the_north
+        - estimate_or_projection_of_under_five_mortality_rate_from_ihme
+        - children_per_woman_temporary_update
+        - 20120905_extreme_poverty_percent_people_below_125_a_day
+        # indicators dropped
+        - improved_sanitation_overall_access_percent
+        - improved_sanitation_rural_access_percent
+        - improved_sanitation_urban_access_percent
+        - improved_water_source_overall_access_percent
+        - improved_water_source_rural_access_percent
+        - improved_water_source_urban_access_percent
+        - aged_55plus_unemployment_rate_percent
+        - agriculture_workers_percent_of_labour_force
+        - family_workers_percent_of_labour_force
+        - female_agriculture_workers_percent_of_female_labour_force
+        - female_family_workers_percent_of_female_labour_force
+        - female_industry_workers_percent_of_female_labour_force
+        - female_salaried_workers_percent_of_female_labour_force
+        - female_self_employed_percent_of_female_labour_force
+        - female_service_workers_percent_of_female_labour_force
+        - females_aged_55plus_unemployment_rate_percent
+        - industry_workers_percent_of_labour_force
+        - male_agriculture_workers_percent_of_male_labour_force
+        - male_family_workers_percent_of_male_labour_force
+        - male_industry_workers_percent_of_male_labour_force
+        - male_salaried_workers_percent_of_male_labour_force
+        - male_self_employed_percent_of_male_labour_force
+        - male_service_workers_percent_of_male_labour_force
+        - males_aged_55plus_unemployment_rate_percent
+        - salaried_workers_percent_of_labour_force
+        - self_employed_percent_of_labour_force
+        - service_workers_percent_of_labour_force
+        - hourly_compensation_us
+        - suicide_age_0_14_per_100000_people
+        - suicide_age_30_44_per_100000_people
+        - suicide_age_45_59_per_100000_people
+        - suicide_age_60plus_per_100000_people
+        - other_infections_deaths_in_children_1_59_months_per_1000_birt
+        - murdered_15_29_per_100000_people
+        - murdered_30_44_per_100000_people
+        - murdered_45_59_per_100000_people
+        - murdered_60plus_per_100000_people
+        - murdered_children_0_14_per_100000_people
+        - traffic_mortality_15_29_per_100000_people
+        - traffic_mortality_30_44_per_100000_people
+        - traffic_mortality_45_59_per_100000_people
+        - traffic_mortality_60plus_per_100000_people
+        - traffic_mortality_children_0_14_per_100000_people
+        # tb incidators renamed
+        - tb_with_hivplus_deaths_per_100000_estimated
+        - tb_with_hivplus_number_of_deaths_estimated
+        - all_forms_of_tb_existing_cases_per_100000_estimated
+        - all_forms_of_tb_number_of_existing_cases_estimated
+        - tb_with_hivplus_existing_cases_per_100000_estimated
+        - tb_with_hivplus_number_of_existing_cases_estimated
+        - all_forms_of_tb_new_cases_per_100000_estimated
+        - all_forms_of_tb_number_of_new_cases_estimated
+        - all_forms_of_tb_detection_rate_percent
+        - all_forms_of_tb_incidence_and_number_of_new_cases_estimated
+        # core indicators, which we will move to fasttrack
+        - income_per_person_gdppercapita_ppp_inflation_adjusted
+        - life_expectancy_at_birth_with_projections
+        - life_expectancy_years
+        - population_total
+        - population_aged_40_59_years_both_sexes_percent
+        - population_aged_0_14_years_both_sexes_percent
+        - population_aged_20_39_years_total_number
+        - population_aged_15_19_years_both_sexes_percent
+        - population_aged_0_4_years_both_sexes_percent
+        - population_aged_20_39_years_male_percent
+        - population_aged_10_14_years_total_number
+        - population_aged_20_39_years_female_percent
+        - population_aged_10_14_years_male_percent
+        - population_aged_0_14_years_female_percent
+        - population_aged_0_14_years_male_percent
+        - population_aged_20_39_years_both_sexes_percent
+        - population_aged_0_14_years_total_number
+        - population_aged_0_4_years_total_number
+        - population_aged_10_14_years_female_percent
+        - population_aged_0_4_years_female_percent
+        - population_aged_10_14_years_both_sexes_percent
+        - population_aged_15_19_years_total_number
+        - population_aged_0_4_years_male_percent
+        - population_aged_15_19_years_male_percent
+        - population_aged_65plus_years_female_percent
+        - population_aged_70plus_years_both_sexes_percent
+        - population_aged_65plus_years_both_sexes_percent
+        - population_aged_15_19_years_female_percent
+        - population_aged_70plus_years_total_number
+        - population_aged_65plus_years_total_number
+        - population_aged_60plus_years_total_number
+        - population_aged_70plus_years_male_percent
+        - population_aged_65plus_years_male_percent
+        - population_aged_60plus_years_male_percent
+        - population_aged_70plus_years_female_percent
+        - population_aged_60plus_years_female_percent
+        - population_aged_60plus_years_both_sexes_percent
+        - population_aged_5_9_years_both_sexes_percent
+        - population_aged_40_59_years_male_percent
+        - population_aged_5_9_years_total_number
+        - population_aged_5_9_years_female_percent
+        - population_aged_40_59_years_total_number
+        - population_aged_5_9_years_male_percent
+        - population_aged_40_59_years_female_percent
+        - children_per_woman_total_fertility
+        - children_per_woman_total_fertility_with_projections
+        # other indicators moved to fasttrack
+        - corruption_perception_index_cpi
+        - corruption_perception_index_cpi_pre2012
+        - dtp3_immunized_percent_of_one_year_olds
+        - hepb3_immunized_percent_of_one_year_olds
+        - hib3_immunized_percent_of_one_year_olds
+        - mcv_immunized_percent_of_one_year_olds
+        - pab_immunized_percent_of_newborns
+        # oecd indicators renamed
+        - aid_given_2007_us
+        - aid_given_per_person_2007_us
+  - id: static-assets-datapoints
+    dataset: open-numbers/ddf--gapminder--static_assets
+    key: geo, time
+    value: "*"
+  - id: static-assets-concepts
+    dataset: open-numbers/ddf--gapminder--static_assets
+    key: concept
+    value: "*"
 
-    # external csvs
-    - id: concept_patch
-      key: concept
-      data: ddf--concepts.csv
+  # external csvs
+  - id: concept_patch
+    key: concept
+    data: ddf--concepts.csv
 
-    - id: tag_entity
-      key: tag
-      data: ddf--entities--tag.csv
+  - id: tag_entity
+    key: tag
+    data: ddf--entities--tag.csv
 
-    - id: geo_global_patch
-      key: geo
-      data: ddf--entities--geo--global.csv
+  - id: geo_global_patch
+    key: geo
+    data: ddf--entities--geo--global.csv
 
 cooking:
   concepts:
@@ -216,8 +238,11 @@ cooking:
         - wdi-datapoints-final
         - hdi-datapoints-final
         - ilo-datapoints
-        - death-rates-datapoints
         - whotb-datapoints-final
         - unesco-datapoints-final
         - static-assets-datapoints
+        - em_dat-datapoints
+        - billionaire-datapoints-final
+        - who-gho-datapoints
+        - oecd-datapoints-final
       result: datapoints-final

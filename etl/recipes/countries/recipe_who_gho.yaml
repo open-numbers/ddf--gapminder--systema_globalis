@@ -1,0 +1,11 @@
+# basic info
+info:
+  id: gho-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--gapminder--who_gho
+
+ingredients:
+  - id: who-gho-datapoints
+    dataset: *d1
+    key: "geo, time"
+    value: "*"

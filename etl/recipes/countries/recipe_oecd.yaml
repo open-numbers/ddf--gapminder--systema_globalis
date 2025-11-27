@@ -1,0 +1,164 @@
+# basic info
+info:
+  id: oecd-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--oecd--dac
+    - &d2 open-numbers/ddf--gapminder--fasttrack
+
+config:
+  # the path to search dictionary files
+  dictionary_dir: ../../translation_dictionaries
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+# define the initial inputs of the recipe
+ingredients:
+  - id: oecd-datapoints
+    dataset: *d1
+    key: amount_type, donor, sector, year
+    value:
+      - total_oda
+  - id: oecd-donors
+    dataset: *d1
+    key: donor
+    value: "*"
+  - id: population-datapoints
+    dataset: *d2
+    key: country, time
+    value:
+      - pop
+
+cooking:
+  datapoints:
+    # First, translate column headers to standard names
+    - procedure: translate_header
+      options:
+        dictionary:
+          donor: geo
+          year: time
+      ingredients:
+        - oecd-datapoints
+      result: oecd-datapoints-renamed
+
+    # Align donor entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - oecd-donors
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: oecd-donors-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - oecd-datapoints-renamed
+      options:
+        column: geo
+        dictionary:
+          base: oecd-donors-aligned
+          key: donor
+          value: geo
+      result: oecd-datapoints-geo-aligned
+
+    # Filter for constant amount type (d) only
+    - procedure: filter
+      ingredients:
+        - oecd-datapoints-geo-aligned
+      options:
+        row:
+          amount_type: d
+      result: oecd-datapoints-constant
+
+    # Filter for the sectors we need plus total (1000)
+    - procedure: filter
+      ingredients:
+        - oecd-datapoints-constant
+      options:
+        row:
+          sector:
+            [
+              "110",
+              "120",
+              "130",
+              "140",
+              "150",
+              "160",
+              "200",
+              "300",
+              "400",
+              "1000",
+            ]
+      result: oecd-datapoints-filtered
+
+    # Flatten the sector and amount_type dimensions to create separate columns
+    - procedure: flatten
+      ingredients:
+        - oecd-datapoints-filtered
+      options:
+        flatten_dimensions:
+          - sector
+          - amount_type
+        dictionary:
+          "total_oda": "total_oda_{sector}"
+      result: oecd-datapoints-flattened
+
+    # Translate population data column headers
+    - procedure: translate_header
+      options:
+        dictionary:
+          country: geo
+      ingredients:
+        - population-datapoints
+      result: population-datapoints-renamed
+
+    # Merge population data with ODA data
+    - procedure: merge
+      ingredients:
+        - oecd-datapoints-flattened
+        - population-datapoints-renamed
+      result: oecd-datapoints-with-population
+
+    # Calculate all percentage indicators, total aid, and per capita aid in one run_op
+    - procedure: run_op
+      ingredients:
+        - oecd-datapoints-with-population
+      options:
+        op:
+          education_aid_given_percent_of_aid: "total_oda_110 / total_oda_1000 * 100"
+          health_aid_given_percent_of_aid: "total_oda_120 / total_oda_1000 * 100"
+          population_policies_aid_given_percent_of_aid: "total_oda_130 / total_oda_1000 * 100"
+          water_and_sanitation_aid_given_percent_of_aid: "total_oda_140 / total_oda_1000 * 100"
+          government_and_society_aid_given_percent_of_aid: "total_oda_150 / total_oda_1000 * 100"
+          other_social_services_aid_given_percent_of_aid: "total_oda_160 / total_oda_1000 * 100"
+          economical_infrastructure_aid_given_percent_of_aid: "total_oda_200 / total_oda_1000 * 100"
+          production_sector_aid_given_percent_of_aid: "total_oda_300 / total_oda_1000 * 100"
+          multisector_cross_cutting_aid_given_percent_of_aid: "total_oda_400 / total_oda_1000 * 100"
+          aid_given_2023_us: "total_oda_1000 * 1000000"
+          aid_given_per_person_2023_us: "total_oda_1000 * 1000000 / pop"
+      result: oecd-percentages-calculated
+
+    # Filter to keep only geo, time, and the final indicators
+    - procedure: filter
+      ingredients:
+        - oecd-percentages-calculated
+      options:
+        item:
+          - education_aid_given_percent_of_aid
+          - health_aid_given_percent_of_aid
+          - population_policies_aid_given_percent_of_aid
+          - water_and_sanitation_aid_given_percent_of_aid
+          - government_and_society_aid_given_percent_of_aid
+          - other_social_services_aid_given_percent_of_aid
+          - economical_infrastructure_aid_given_percent_of_aid
+          - production_sector_aid_given_percent_of_aid
+          - multisector_cross_cutting_aid_given_percent_of_aid
+          - aid_given_2023_us
+          - aid_given_per_person_2023_us
+      result: oecd-datapoints-final

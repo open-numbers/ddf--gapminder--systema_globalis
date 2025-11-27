@@ -24,6 +24,12 @@ ingredients:
         - ofst_1_cp
         - ofst_1_m_cp
         - ofst_1_f_cp
+        - lr_ag15t24
+        - lr_ag15t24_f
+        - lr_ag15t24_m
+        - lr_ag15t99
+        - lr_ag15t99_m
+        - lr_ag15t99_f
     - id: unesco-countries
       dataset: *d1
       key: country

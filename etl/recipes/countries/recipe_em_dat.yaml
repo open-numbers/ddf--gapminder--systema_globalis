@@ -1,0 +1,24 @@
+# recipe for fao aquastats dataset
+info:
+    id: sg-em_dat-dataset
+    base:
+    - &d1 open-numbers/ddf--open_numbers--em_dat_indicators
+
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+
+include:
+    - recipe_gw_geo.yaml
+
+
+ingredients:
+    - id: em_dat-datapoints
+      dataset: *d1
+      key: geo, time
+      value: "*"
+
