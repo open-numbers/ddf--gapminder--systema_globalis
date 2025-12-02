@@ -68,6 +68,8 @@ ingredients:
         - net_barter_terms_of_trade_2000_100
         - imports_unit_value_index_2000100
         - net_barter_terms_of_trade_2000_100
+        - arms_exports_us_inflation_adjusted
+        - arms_imports_us_inflation_adjusted
         # indicators won't be updated
         - year_categorization_1950
         - year_categorization_1820_2010
@@ -190,6 +192,9 @@ ingredients:
         # oecd indicators renamed
         - aid_given_2007_us
         - aid_given_per_person_2007_us
+        # ILO indicators renamed
+        - hourly_labour_cost_constant_2017_usd
+
   - id: static-assets-datapoints
     dataset: open-numbers/ddf--gapminder--static_assets
     key: geo, time

@@ -1,4 +1,4 @@
-geo,time,hourly_labour_cost_constant_2017_usd
+geo,time,hourly_labour_cost_constant_2021_usd
 alb,2022,7.94
 arg,2011,0.88
 arg,2012,0.99
@@ -660,4 +660,3 @@ zaf,2020,4.58
 zaf,2021,4.86
 zaf,2022,5.07
 zaf,2023,5.2
-zwe,2022,11164.23

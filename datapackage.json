@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2025-11-27T02:15:05.923589+00:00",
+    "created": "2025-12-01T13:07:19.593290+00:00",
     "translations": [
         {
             "id": "ar-SA",
@@ -1010,8 +1010,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--arms_exports_us_inflation_adjusted--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--arms_exports_us_inflation_adjusted--by--geo--time.csv",
+            "name": "ddf--datapoints--arms_exports_sipri_tiv--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--arms_exports_sipri_tiv--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -1021,7 +1021,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "arms_exports_us_inflation_adjusted"
+                        "name": "arms_exports_sipri_tiv"
                     }
                 ],
                 "primaryKey": [
@@ -1031,8 +1031,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--arms_imports_us_inflation_adjusted--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--arms_imports_us_inflation_adjusted--by--geo--time.csv",
+            "name": "ddf--datapoints--arms_imports_sipri_tiv--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--arms_imports_sipri_tiv--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -1042,7 +1042,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "arms_imports_us_inflation_adjusted"
+                        "name": "arms_imports_sipri_tiv"
                     }
                 ],
                 "primaryKey": [
@@ -4202,8 +4202,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time.csv",
+            "name": "ddf--datapoints--hourly_labour_cost_constant_2021_usd--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--hourly_labour_cost_constant_2021_usd--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -4213,7 +4213,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "hourly_labour_cost_constant_2017_usd"
+                        "name": "hourly_labour_cost_constant_2021_usd"
                     }
                 ],
                 "primaryKey": [
@@ -13259,9 +13259,9 @@
                     "country",
                     "time"
                 ],
-                "value": "arms_exports_us_inflation_adjusted",
+                "value": "arms_exports_sipri_tiv",
                 "resources": [
-                    "ddf--datapoints--arms_exports_us_inflation_adjusted--by--geo--time"
+                    "ddf--datapoints--arms_exports_sipri_tiv--by--geo--time"
                 ]
             },
             {
@@ -13269,9 +13269,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "arms_exports_us_inflation_adjusted",
+                "value": "arms_exports_sipri_tiv",
                 "resources": [
-                    "ddf--datapoints--arms_exports_us_inflation_adjusted--by--geo--time"
+                    "ddf--datapoints--arms_exports_sipri_tiv--by--geo--time"
                 ]
             },
             {
@@ -13279,9 +13279,9 @@
                     "country",
                     "time"
                 ],
-                "value": "arms_imports_us_inflation_adjusted",
+                "value": "arms_imports_sipri_tiv",
                 "resources": [
-                    "ddf--datapoints--arms_imports_us_inflation_adjusted--by--geo--time"
+                    "ddf--datapoints--arms_imports_sipri_tiv--by--geo--time"
                 ]
             },
             {
@@ -13289,9 +13289,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "arms_imports_us_inflation_adjusted",
+                "value": "arms_imports_sipri_tiv",
                 "resources": [
-                    "ddf--datapoints--arms_imports_us_inflation_adjusted--by--geo--time"
+                    "ddf--datapoints--arms_imports_sipri_tiv--by--geo--time"
                 ]
             },
             {
@@ -16343,9 +16343,9 @@
                     "country",
                     "time"
                 ],
-                "value": "hourly_labour_cost_constant_2017_usd",
+                "value": "hourly_labour_cost_constant_2021_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2021_usd--by--geo--time"
                 ]
             },
             {
@@ -16353,9 +16353,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "hourly_labour_cost_constant_2017_usd",
+                "value": "hourly_labour_cost_constant_2021_usd",
                 "resources": [
-                    "ddf--datapoints--hourly_labour_cost_constant_2017_usd--by--geo--time"
+                    "ddf--datapoints--hourly_labour_cost_constant_2021_usd--by--geo--time"
                 ]
             },
             {
