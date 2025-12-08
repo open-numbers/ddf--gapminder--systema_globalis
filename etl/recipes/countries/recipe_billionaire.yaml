@@ -1,0 +1,22 @@
+info:
+    id: billionaire-sg
+
+ingredients:
+    - id: billionaire-datapoints
+      dataset: open-numbers/ddf--gapminder--billionaires
+      key: country, time
+      value:
+          - average_age_of_dollar_billionaires_years
+          - total_number_of_dollar_billionaires
+          - dollar_billionaires_per_million_people
+
+
+cooking:
+    datapoints:
+        - procedure: translate_header
+          ingredients:
+              - billionaire-datapoints
+          options:
+              dictionary:
+                  country: geo
+          result: billionaire-datapoints-final
