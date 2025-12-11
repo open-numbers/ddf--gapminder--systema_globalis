@@ -1,0 +1,140 @@
+# Penn World Table recipe for Systema Globalis
+# Extracts GDP per capita PPP and calculates 10-year CAGR (average annual growth)
+# For year X, growth shows the average annual rate from year (X-10) to year X
+
+info:
+  id: pwt-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--pwt--penn_world_table
+
+ingredients:
+  # Get expenditure-side real GDP at chained PPPs
+  # (better for welfare/living standards comparisons)
+  - id: pwt-rgdpe
+    dataset: *d1
+    key: "country, year"
+    value:
+      - rgdpe
+
+  # Get population datapoints
+  - id: pwt-pop
+    dataset: *d1
+    key: "country, year"
+    value:
+      - pop
+
+cooking:
+  datapoints:
+    # Merge GDP and population data
+    - procedure: merge
+      ingredients:
+        - pwt-rgdpe
+        - pwt-pop
+      options:
+        deep: true
+      result: pwt-merged
+
+    # Calculate GDP per capita PPP (inflation adjusted)
+    # rgdpe is in millions of 2021 US$, pop is in millions
+    # So rgdpe/pop gives us GDP per capita in 2021 US$
+    - procedure: run_op
+      ingredients:
+        - pwt-merged
+      options:
+        op:
+          alternative_gdppercapita_ppp_inflation_adjusted_from_pwt: |
+            rgdpe / pop
+      result: pwt-with-gdppc
+
+    # Translate header from 'year' to 'time' to match SG dimensions
+    - procedure: translate_header
+      ingredients:
+        - pwt-with-gdppc
+      options:
+        dictionary:
+          year: time
+          country: geo
+      result: pwt-translated
+
+    # Use window to get values from 10 years ago
+    # Window size is 11 to capture 11 years of data (e.g., 1970-1980)
+    # This gives us 10 years of growth (1980 data shows growth from 1970 to 1980)
+    # first() gets the value from 10 years ago, last() gets the current value
+    - procedure: window
+      ingredients:
+        - pwt-translated
+      options:
+        window:
+          column: time
+          size: 11
+          min_periods: 11
+        aggregate:
+          alternative_gdppercapita_ppp_inflation_adjusted_from_pwt:
+            function: first
+      result: pwt-10_years_ago-with-window
+    - procedure: translate_header
+      ingredients:
+        - pwt-10_years_ago-with-window
+      options:
+        dictionary:
+          alternative_gdppercapita_ppp_inflation_adjusted_from_pwt: gdppc_10_years_ago
+      result: pwt-10_years_ago-with-window-translated
+    - procedure: window
+      ingredients:
+        - pwt-translated
+      options:
+        window:
+          column: time
+          size: 11
+          min_periods: 11
+        aggregate:
+          alternative_gdppercapita_ppp_inflation_adjusted_from_pwt:
+            function: last
+      result: pwt-current-with-window
+    - procedure: translate_header
+      ingredients:
+        - pwt-current-with-window
+      options:
+        dictionary:
+          alternative_gdppercapita_ppp_inflation_adjusted_from_pwt: gdppc_current
+      result: pwt-current-with-window-translated
+    - procedure: merge
+      ingredients:
+        - pwt-current-with-window-translated
+        - pwt-10_years_ago-with-window-translated
+      result: pwt-with-window-all
+
+    # Calculate 10-year economic growth rate using CAGR
+    # CAGR = (((GDP_current / GDP_10_years_ago) ** (1/10)) - 1) * 100
+    # This gives average annual growth rate over the 10-year period
+    - procedure: run_op
+      ingredients:
+        - pwt-with-window-all
+      options:
+        op:
+          economic_growth_over_the_past_10_years: |
+            (((gdppc_current / gdppc_10_years_ago) ** (1/10)) - 1) * 100
+      result: pwt-with-growth
+
+    - procedure: merge
+      ingredients:
+        - pwt-with-growth
+        - pwt-translated
+      result: pwt-all
+
+    # Keep only the final indicators we need
+    - procedure: filter
+      ingredients:
+        - pwt-all
+      options:
+        item:
+          - alternative_gdppercapita_ppp_inflation_adjusted_from_pwt
+          - economic_growth_over_the_past_10_years
+      result: pwt-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - pwt-datapoints-final
+      result: pwt-concepts-final

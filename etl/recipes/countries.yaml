@@ -30,6 +30,7 @@ include:
   - countries/recipe_billionaire.yaml
   - countries/recipe_who_gho.yaml
   - countries/recipe_oecd.yaml
+  - countries/recipe_pwt.yaml
 
 ingredients:
   - id: gw-ontology-concepts-all
@@ -250,4 +251,5 @@ cooking:
         - billionaire-datapoints-final
         - who-gho-datapoints
         - oecd-datapoints-final
+        - pwt-datapoints-final
       result: datapoints-final
