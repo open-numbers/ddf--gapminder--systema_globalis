@@ -7,7 +7,19 @@ info:
   base:
     - &d1 open-numbers/ddf--pwt--penn_world_table
 
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
 ingredients:
+  # Get country entities for geo alignment
+  - id: pwt-countries
+    dataset: *d1
+    key: country
+
   # Get expenditure-side real GDP at chained PPPs
   # (better for welfare/living standards comparisons)
   - id: pwt-rgdpe
@@ -54,6 +66,31 @@ cooking:
         dictionary:
           year: time
           country: geo
+      result: pwt-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - pwt-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: pwt-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - pwt-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: pwt-countries-aligned
+          key: country
+          value: geo
       result: pwt-translated
 
     # Use window to get values from 10 years ago
