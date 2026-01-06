@@ -1,0 +1,75 @@
+# WIPO Patent Indicators recipe for Systema Globalis
+# Extracts patent applications, grants, and patents in force
+
+info:
+  id: wipo-sg-dataset
+  base:
+    - &d1 ddf--wipo--patent_indicators
+
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+ingredients:
+  # Get country entities for geo alignment
+  - id: wipo-countries
+    dataset: *d1
+    key: country
+
+  # Get patent indicators
+  - id: wipo-datapoints
+    dataset: *d1
+    key: country, year
+    value:
+      - patent_applications_total
+      - patent_grants_total
+      - patents_in_force_total
+
+cooking:
+  datapoints:
+    # Translate header from 'year' to 'time' and 'country' to 'geo'
+    # Also rename patent_grants_total to patents_granted_total
+    - procedure: translate_header
+      ingredients:
+        - wipo-datapoints
+      options:
+        dictionary:
+          year: time
+          country: geo
+          patent_grants_total: patents_granted_total
+      result: wipo-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - wipo-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: wipo-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - wipo-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: wipo-countries-aligned
+          key: country
+          value: geo
+      result: wipo-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - wipo-datapoints-final
+      result: wipo-concepts-final

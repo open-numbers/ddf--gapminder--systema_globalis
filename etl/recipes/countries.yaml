@@ -31,6 +31,7 @@ include:
   - countries/recipe_who_gho.yaml
   - countries/recipe_oecd.yaml
   - countries/recipe_pwt.yaml
+  - countries/recipe_wipo.yaml
 
 ingredients:
   - id: gw-ontology-concepts-all
@@ -252,4 +253,5 @@ cooking:
         - who-gho-datapoints
         - oecd-datapoints-final
         - pwt-datapoints-final
+        - wipo-datapoints-final
       result: datapoints-final
