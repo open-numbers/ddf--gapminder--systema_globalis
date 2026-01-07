@@ -4,7 +4,7 @@
 info:
   id: wipo-sg-dataset
   base:
-    - &d1 ddf--wipo--patent_indicators
+    - &d1 open-numbers/ddf--wipo--patent_indicators
 
 config:
   # the path to search recipe files to include
