@@ -196,6 +196,9 @@ ingredients:
         - aid_given_per_person_2007_us
         # ILO indicators renamed
         - hourly_labour_cost_constant_2017_usd
+        # PWT indicators removed
+        - alternative_gdp_per_capita_ppp_pwt_7_1
+        - alternative_gdp_per_capita_ppp_pwt_8_0
 
   - id: static-assets-datapoints
     dataset: open-numbers/ddf--gapminder--static_assets
