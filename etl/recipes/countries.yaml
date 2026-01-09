@@ -44,6 +44,7 @@ ingredients:
       $nin: &removed_concepts
         - yearly_co2_emissions_tonnes
         - yearly_co2_emissions_1000_tonnes
+        - cumulative_co2_emissions_tonnes
         - gapminder_gini
         - consumption_emissions_tonnes_per_person
         - consumption_co2_emissions_1000_tonnes
@@ -55,6 +56,11 @@ ingredients:
         - sg_gini
         - geographic_regions_in_4_colors
         - unit
+        - data_method_maternal_mortality
+        - data_quality_children_per_woman
+        - data_quality_income_per_person
+        - data_quality_life_expectancy
+        - data_quality_population
         # concepts from pervious wdi dataset, but not exists any more / renamed
         - electricity_use_total
         - energy_use_total
