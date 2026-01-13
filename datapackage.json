@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2026-01-07T01:59:54.270Z",
+    "created": "2026-01-13T02:16:05.127Z",
     "translations": [
         {
             "name": "العربية",
@@ -1347,48 +1347,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_7_1--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_7_1--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "alternative_gdp_per_capita_ppp_pwt_7_1"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_8_0--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_8_0--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "alternative_gdp_per_capita_ppp_pwt_8_0"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--alternative_gdp_per_capita_ppp_wb--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--alternative_gdp_per_capita_ppp_wb--by--geo--time.csv",
             "schema": {
@@ -2460,6 +2418,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--coal_consumption_per_cap--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--coal_consumption_per_cap--by--geo--time.csv",
             "schema": {
@@ -2766,132 +2745,6 @@
                     },
                     {
                         "name": "crude_death_rate_deaths_per_1000_population"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--cumulative_co2_emissions_tonnes--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--cumulative_co2_emissions_tonnes--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "cumulative_co2_emissions_tonnes"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--data_method_maternal_mortality--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--data_method_maternal_mortality--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "data_method_maternal_mortality"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--data_quality_children_per_woman--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--data_quality_children_per_woman--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "data_quality_children_per_woman"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--data_quality_income_per_person--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--data_quality_income_per_person--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "data_quality_income_per_person"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--data_quality_life_expectancy--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--data_quality_life_expectancy--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "data_quality_life_expectancy"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--data_quality_population--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--data_quality_population--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "data_quality_population"
                     }
                 ],
                 "primaryKey": [
@@ -12719,26 +12572,6 @@
                     "country",
                     "time"
                 ],
-                "value": "alternative_gdp_per_capita_ppp_pwt_7_1",
-                "resources": [
-                    "ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_7_1--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "alternative_gdp_per_capita_ppp_pwt_8_0",
-                "resources": [
-                    "ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_8_0--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "alternative_gdp_per_capita_ppp_wb",
                 "resources": [
                     "ddf--datapoints--alternative_gdp_per_capita_ppp_wb--by--geo--time"
@@ -13219,6 +13052,16 @@
                     "country",
                     "time"
                 ],
+                "value": "co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp",
+                "resources": [
+                    "ddf--datapoints--co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "coal_consumption_per_cap",
                 "resources": [
                     "ddf--datapoints--coal_consumption_per_cap--by--geo--time"
@@ -13362,66 +13205,6 @@
                 "value": "crude_death_rate_deaths_per_1000_population",
                 "resources": [
                     "ddf--datapoints--crude_death_rate_deaths_per_1000_population--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "cumulative_co2_emissions_tonnes",
-                "resources": [
-                    "ddf--datapoints--cumulative_co2_emissions_tonnes--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "data_method_maternal_mortality",
-                "resources": [
-                    "ddf--datapoints--data_method_maternal_mortality--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "data_quality_children_per_woman",
-                "resources": [
-                    "ddf--datapoints--data_quality_children_per_woman--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "data_quality_income_per_person",
-                "resources": [
-                    "ddf--datapoints--data_quality_income_per_person--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "data_quality_life_expectancy",
-                "resources": [
-                    "ddf--datapoints--data_quality_life_expectancy--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "data_quality_population",
-                "resources": [
-                    "ddf--datapoints--data_quality_population--by--geo--time"
                 ]
             },
             {
@@ -17613,26 +17396,6 @@
                     "geo",
                     "time"
                 ],
-                "value": "alternative_gdp_per_capita_ppp_pwt_7_1",
-                "resources": [
-                    "ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_7_1--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "alternative_gdp_per_capita_ppp_pwt_8_0",
-                "resources": [
-                    "ddf--datapoints--alternative_gdp_per_capita_ppp_pwt_8_0--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
                 "value": "alternative_gdp_per_capita_ppp_wb",
                 "resources": [
                     "ddf--datapoints--alternative_gdp_per_capita_ppp_wb--by--geo--time"
@@ -18116,6 +17879,16 @@
                     "geo",
                     "time"
                 ],
+                "value": "co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp",
+                "resources": [
+                    "ddf--datapoints--co2_intensity_of_economic_output_kg_co2_per_2021_ppp_of_gdp--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
                 "value": "coal_consumption_per_cap",
                 "resources": [
                     "ddf--datapoints--coal_consumption_per_cap--by--geo--time"
@@ -18259,66 +18032,6 @@
                 "value": "crude_death_rate_deaths_per_1000_population",
                 "resources": [
                     "ddf--datapoints--crude_death_rate_deaths_per_1000_population--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "cumulative_co2_emissions_tonnes",
-                "resources": [
-                    "ddf--datapoints--cumulative_co2_emissions_tonnes--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "data_method_maternal_mortality",
-                "resources": [
-                    "ddf--datapoints--data_method_maternal_mortality--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "data_quality_children_per_woman",
-                "resources": [
-                    "ddf--datapoints--data_quality_children_per_woman--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "data_quality_income_per_person",
-                "resources": [
-                    "ddf--datapoints--data_quality_income_per_person--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "data_quality_life_expectancy",
-                "resources": [
-                    "ddf--datapoints--data_quality_life_expectancy--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "data_quality_population",
-                "resources": [
-                    "ddf--datapoints--data_quality_population--by--geo--time"
                 ]
             },
             {
