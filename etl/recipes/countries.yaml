@@ -32,6 +32,7 @@ include:
   - countries/recipe_oecd.yaml
   - countries/recipe_pwt.yaml
   - countries/recipe_wipo.yaml
+  - countries/recipe_igme_cme.yaml
 
 ingredients:
   - id: gw-ontology-concepts-all
@@ -264,4 +265,5 @@ cooking:
         - oecd-datapoints-final
         - pwt-datapoints-final
         - wipo-datapoints-final
+        - igme-datapoints-final
       result: datapoints-final
