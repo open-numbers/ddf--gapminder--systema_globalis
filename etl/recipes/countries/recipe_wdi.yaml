@@ -119,9 +119,17 @@ ingredients:
 
 cooking:
   datapoints:
+    # convert se_adt_1524_lt_fm_zs from 0-1 to percent (0-100)
+    - procedure: run_op
+      ingredients:
+        - wdi-datapoints
+      options:
+        op:
+          se_adt_1524_lt_fm_zs: "se_adt_1524_lt_fm_zs * 100"
+      result: wdi-datapoints-converted
     - procedure: translate_header
       options:
         dictionary: indicators_wdi_to_sg.json
       ingredients:
-        - wdi-datapoints
+        - wdi-datapoints-converted
       result: wdi-datapoints-final
