@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2026-01-14T07:05:30.122Z",
+    "created": "2026-01-15T02:33:51.521Z",
     "translations": [
         {
             "name": "العربية",
@@ -9041,6 +9041,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--rural_population--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--rural_population--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "rural_population"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--rural_population--by--global--time",
             "path": "global-regions-datapoints/ddf--datapoints--rural_population--by--global--time.csv",
             "schema": {
@@ -9057,6 +9078,27 @@
                 ],
                 "primaryKey": [
                     "global",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--rural_population_percent_of_total--by--geo--time",
+            "path": "countries-etc-datapoints/ddf--datapoints--rural_population_percent_of_total--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "rural_population_percent_of_total"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
                     "time"
                 ]
             }
@@ -16102,6 +16144,26 @@
                     "country",
                     "time"
                 ],
+                "value": "rural_population",
+                "resources": [
+                    "ddf--datapoints--rural_population--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
+                "value": "rural_population_percent_of_total",
+                "resources": [
+                    "ddf--datapoints--rural_population_percent_of_total--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "country",
+                    "time"
+                ],
                 "value": "rural_poverty_percent_rural_people_below_national_rural",
                 "resources": [
                     "ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time"
@@ -20948,7 +21010,8 @@
                 ],
                 "value": "rural_population",
                 "resources": [
-                    "ddf--datapoints--rural_population--by--global--time"
+                    "ddf--datapoints--rural_population--by--global--time",
+                    "ddf--datapoints--rural_population--by--geo--time"
                 ]
             },
             {
@@ -20958,7 +21021,8 @@
                 ],
                 "value": "rural_population_percent_of_total",
                 "resources": [
-                    "ddf--datapoints--rural_population_percent_of_total--by--global--time"
+                    "ddf--datapoints--rural_population_percent_of_total--by--global--time",
+                    "ddf--datapoints--rural_population_percent_of_total--by--geo--time"
                 ]
             },
             {
