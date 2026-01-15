@@ -76,6 +76,8 @@ ingredients:
       - sp_urb_grow
       - sp_urb_totl
       - sp_urb_totl_in_zs
+      - sp_rur_totl
+      - sp_rur_totl_zs
       - tg_val_totl_gd_zs
       - tm_val_mrch_xd_wd
       - tt_pri_mrch_xd_wd
@@ -92,7 +94,7 @@ ingredients:
       - it_cel_sets_p2
       - it_net_bbnd_p2
       # - it_net_user_p2
-      # - se_ant_1524_lt_fm_zs
+      - se_adt_1524_lt_fm_zs
       - si_pov_umic
       - si_pov_lmic
       - si_pov_nahc
