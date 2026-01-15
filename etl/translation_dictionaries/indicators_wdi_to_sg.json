@@ -48,7 +48,7 @@
     "ny_gnp_pcap_cd": "gnipercapita_atlasmethod_current_us",
     "ny_gnp_pcap_kd": "gnipercapita_constant_2015_us",
     "ny_gnp_pcap_pp_cd": "gnipercapita_ppp_current_international",
-    "se_ant_1524_lt_fm_zs": "ratio_of_young_literate_females_to_males_percent_ages_15_24",
+    "se_adt_1524_lt_fm_zs": "ratio_of_young_literate_females_to_males_percent_ages_15_24",
     "se_enr_prsc_fm_zs": "ratio_of_girls_to_boys_in_primary_and_secondary_education_perc",
     "se_xpd_prim_pc_zs": "expenditure_per_student_primary_percent_of_gdp_per_person",
     "se_xpd_seco_pc_zs": "expenditure_per_student_secondary_percent_of_gdp_per_person",
