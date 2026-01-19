@@ -1,0 +1,75 @@
+# NCD-RisC Blood Pressure Indicators recipe for Systema Globalis
+# Extracts systolic blood pressure indicators for men and women
+
+info:
+  id: ncdrisc-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--ncdrisc--indicators
+
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+ingredients:
+  # Get country entities for geo alignment
+  - id: ncdrisc-countries
+    dataset: *d1
+    key: country
+
+  # Get blood pressure indicators
+  - id: ncdrisc-datapoints
+    dataset: *d1
+    key: country, year
+    value:
+      - mean_sbp_male_age_std
+      - mean_sbp_female_age_std
+
+cooking:
+  datapoints:
+    # Translate header from 'year' to 'time' and 'country' to 'geo'
+    # Also rename indicators to target names
+    - procedure: translate_header
+      ingredients:
+        - ncdrisc-datapoints
+      options:
+        dictionary:
+          year: time
+          country: geo
+          mean_sbp_male_age_std: blood_pressure_sbp_men_mmhg
+          mean_sbp_female_age_std: blood_pressure_sbp_women_mmhg
+      result: ncdrisc-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - ncdrisc-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: ncdrisc-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - ncdrisc-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: ncdrisc-countries-aligned
+          key: country
+          value: geo
+      result: ncdrisc-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - ncdrisc-datapoints-final
+      result: ncdrisc-concepts-final
