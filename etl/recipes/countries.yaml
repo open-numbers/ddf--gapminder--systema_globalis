@@ -34,6 +34,7 @@ include:
   - countries/recipe_wipo.yaml
   - countries/recipe_igme_cme.yaml
   - countries/recipe_ncdrisc.yaml
+  - countries/recipe_imf_mfs.yaml
 
 ingredients:
   - id: gw-ontology-concepts-all
@@ -268,4 +269,5 @@ cooking:
         - wipo-datapoints-final
         - igme-datapoints-final
         - ncdrisc-datapoints-final
+        - imf-mfs-datapoints-final
       result: datapoints-final
