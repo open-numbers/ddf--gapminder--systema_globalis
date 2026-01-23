@@ -35,6 +35,7 @@ include:
   - countries/recipe_igme_cme.yaml
   - countries/recipe_ncdrisc.yaml
   - countries/recipe_imf_mfs.yaml
+  - countries/recipe_polity5.yaml
 
 ingredients:
   - id: gw-ontology-concepts-all
@@ -270,4 +271,5 @@ cooking:
         - igme-datapoints-final
         - ncdrisc-datapoints-final
         - imf-mfs-datapoints-final
+        - polity5-datapoints-final
       result: datapoints-final
