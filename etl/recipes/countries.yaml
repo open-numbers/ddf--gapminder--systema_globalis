@@ -37,6 +37,7 @@ include:
   - countries/recipe_imf_mfs.yaml
   - countries/recipe_polity5.yaml
   - countries/recipe_wb_edstats.yaml
+  - countries/recipe_wb_pip.yaml
 
 ingredients:
   - id: gw-ontology-concepts-all
@@ -274,4 +275,5 @@ cooking:
         - imf-mfs-datapoints-final
         - polity5-datapoints-final
         - wb-edstats-datapoints-final
+        - wb-pip-datapoints-final
       result: datapoints-final

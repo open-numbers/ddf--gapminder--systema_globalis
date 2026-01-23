@@ -1,0 +1,38 @@
+# World Bank PIP (Poverty and Inequality Platform) recipe for Systema Globalis
+# Extracts poverty population indicator
+
+info:
+  id: wb-pip-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--worldbank--povcalnet
+
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+ingredients:
+  # Get poverty indicator (geo alignment already done in source)
+  - id: wb-pip-datapoints
+    dataset: *d1
+    key: country, time
+    value:
+      - population_under_3
+
+cooking:
+  datapoints:
+    # Translate header from 'country' to 'geo' and rename indicator
+    - procedure: translate_header
+      ingredients:
+        - wb-pip-datapoints
+      options:
+        dictionary:
+          country: geo
+          population_under_3: number_of_people_in_poverty
+      result: wb-pip-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - wb-pip-datapoints-final
+      result: wb-pip-concepts-final
