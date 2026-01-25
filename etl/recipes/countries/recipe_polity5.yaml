@@ -28,11 +28,32 @@ ingredients:
 
 cooking:
   datapoints:
+    # Filter out historic entities that have been superseded:
+    # - eth (historic Ethiopia) for 1993 - replaced by modern Ethiopia
+    # - sud (historic Sudan) for 2011 - replaced by modern Sudan after South Sudan split
+    - procedure: filter
+      ingredients:
+        - polity5-datapoints
+      options:
+        row:
+          $nor:
+            - $and:
+                - country:
+                    $eq: eth
+                - year:
+                    $eq: 1993
+            - $and:
+                - country:
+                    $eq: sud
+                - year:
+                    $eq: 2011
+      result: polity5-datapoints-filtered
+
     # Translate header from 'year' to 'time' and 'country' to 'geo'
     # Also rename indicator to target name
     - procedure: translate_header
       ingredients:
-        - polity5-datapoints
+        - polity5-datapoints-filtered
       options:
         dictionary:
           year: time
