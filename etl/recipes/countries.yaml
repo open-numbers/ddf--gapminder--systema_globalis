@@ -85,6 +85,8 @@ ingredients:
         - arms_exports_us_inflation_adjusted
         - arms_imports_us_inflation_adjusted
         - co2_intensity_of_economic_output_kg_co2_per_2017_ppp_of_gdp
+        - rural_poverty_percent_rural_people_below_national_rural
+        - urban_poverty_percent_urban_people_below_national_urban
         # indicators won't be updated
         - year_categorization_1950
         - year_categorization_1820_2010
