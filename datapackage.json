@@ -7,7 +7,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2026-01-22T12:35:26.950Z",
+    "created": "2026-01-25T04:31:41.924Z",
     "translations": [
         {
             "name": "العربية",
@@ -9125,27 +9125,6 @@
             }
         },
         {
-            "name": "ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "rural_poverty_percent_rural_people_below_national_rural"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
             "name": "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time",
             "path": "countries-etc-datapoints/ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time.csv",
             "schema": {
@@ -10884,27 +10863,6 @@
                 ],
                 "primaryKey": [
                     "global",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--urban_poverty_percent_urban_people_below_national_urban--by--geo--time",
-            "path": "countries-etc-datapoints/ddf--datapoints--urban_poverty_percent_urban_people_below_national_urban--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "urban_poverty_percent_urban_people_below_national_urban"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
                     "time"
                 ]
             }
@@ -16164,16 +16122,6 @@
                     "country",
                     "time"
                 ],
-                "value": "rural_poverty_percent_rural_people_below_national_rural",
-                "resources": [
-                    "ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
                 "value": "salaried_workers_percent_of_non_agricultural_employment",
                 "resources": [
                     "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time"
@@ -16977,16 +16925,6 @@
                 "value": "urban_population_percent_of_total",
                 "resources": [
                     "ddf--datapoints--urban_population_percent_of_total--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "country",
-                    "time"
-                ],
-                "value": "urban_poverty_percent_urban_people_below_national_urban",
-                "resources": [
-                    "ddf--datapoints--urban_poverty_percent_urban_people_below_national_urban--by--geo--time"
                 ]
             },
             {
@@ -21030,16 +20968,6 @@
                     "geo",
                     "time"
                 ],
-                "value": "rural_poverty_percent_rural_people_below_national_rural",
-                "resources": [
-                    "ddf--datapoints--rural_poverty_percent_rural_people_below_national_rural--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
                 "value": "salaried_workers_percent_of_non_agricultural_employment",
                 "resources": [
                     "ddf--datapoints--salaried_workers_percent_of_non_agricultural_employment--by--geo--time"
@@ -21845,16 +21773,6 @@
                 "resources": [
                     "ddf--datapoints--urban_population_percent_of_total--by--global--time",
                     "ddf--datapoints--urban_population_percent_of_total--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "urban_poverty_percent_urban_people_below_national_urban",
-                "resources": [
-                    "ddf--datapoints--urban_poverty_percent_urban_people_below_national_urban--by--geo--time"
                 ]
             },
             {
