@@ -1,0 +1,72 @@
+# UNICEF Stillbirth recipe for Systema Globalis
+# Extracts stillbirth rate indicator
+
+info:
+  id: unicef-stillbirth-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--unicef--stillbirth
+
+config:
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+ingredients:
+  # Get country entities for geo alignment
+  - id: unicef-stillbirth-countries
+    dataset: *d1
+    key: country
+
+  # Get stillbirth_rate indicator
+  - id: unicef-stillbirth-datapoints
+    dataset: *d1
+    key: country, year
+    value:
+      - stillbirth_rate
+
+cooking:
+  datapoints:
+    # Translate header from 'year' to 'time' and 'country' to 'geo'
+    # Also rename indicator to target name
+    - procedure: translate_header
+      ingredients:
+        - unicef-stillbirth-datapoints
+      options:
+        dictionary:
+          year: time
+          country: geo
+          stillbirth_rate: stillbirths_per_1000_births
+      result: unicef-stillbirth-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - unicef-stillbirth-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: unicef-stillbirth-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - unicef-stillbirth-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: unicef-stillbirth-countries-aligned
+          key: country
+          value: geo
+      result: unicef-stillbirth-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - unicef-stillbirth-datapoints-final
+      result: unicef-stillbirth-concepts-final
