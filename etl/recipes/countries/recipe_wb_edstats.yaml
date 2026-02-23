@@ -1,0 +1,75 @@
+# World Bank Education Statistics recipe for Systema Globalis
+# Extracts TIMSS math achievement indicators
+
+info:
+  id: wb-edstats-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--worldbank--education_statistics
+
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+ingredients:
+  # Get country entities for geo alignment
+  - id: wb-edstats-countries
+    dataset: *d1
+    key: country
+
+  # Get TIMSS math achievement indicators
+  - id: wb-edstats-datapoints
+    dataset: *d1
+    key: country, year
+    value:
+      - lo_timss_mat4
+      - lo_timss_mat8
+
+cooking:
+  datapoints:
+    # Translate header from 'year' to 'time' and 'country' to 'geo'
+    # Also rename indicators to target names
+    - procedure: translate_header
+      ingredients:
+        - wb-edstats-datapoints
+      options:
+        dictionary:
+          year: time
+          country: geo
+          lo_timss_mat4: math_achievement_4th_grade
+          lo_timss_mat8: math_achievement_8th_grade
+      result: wb-edstats-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - wb-edstats-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: wb-edstats-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - wb-edstats-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: wb-edstats-countries-aligned
+          key: country
+          value: geo
+      result: wb-edstats-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - wb-edstats-datapoints-final
+      result: wb-edstats-concepts-final

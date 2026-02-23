@@ -1,0 +1,81 @@
+# IGME Child Mortality Estimates recipe for Systema Globalis
+# Extracts newborn deaths, newborn mortality rate, and under-five mortality rate
+
+info:
+    id: igme-cme-sg-dataset
+    base:
+        - &d1 open-numbers/ddf--igme--cme
+
+config:
+    # the path to search recipe files to include
+    recipes_dir: ./
+    # the path to search dictionary files
+    dictionary_dir: ../../translation_dictionaries
+
+include:
+    - recipe_gw_geo.yaml
+
+ingredients:
+    # Get geo entities for geo alignment
+    - id: igme-geos
+      dataset: *d1
+      key: geo
+
+    # Get CME indicators
+    - id: igme-datapoints
+      dataset: *d1
+      key: geo, year
+      value:
+          - neonatal_deaths_median
+          - nmr_median
+          - u5mr_median
+
+cooking:
+    datapoints:
+        # Translate headers: year -> time, indicator names
+        - procedure: translate_header
+          ingredients:
+              - igme-datapoints
+          options:
+              dictionary: indicators_cme_to_sg.json
+          result: igme-headers-translated
+
+        - procedure: translate_header
+          ingredients:
+              - igme-headers-translated
+          options:
+              dictionary:
+                  year: time
+          result: igme-headers-final
+
+        # Align geo entities with open-numbers geo domain
+        - procedure: translate_column
+          ingredients:
+              - igme-geos
+          options:
+              column: name
+              target_column: geo_aligned
+              dictionary:
+                  base: gm-country-synonym
+                  key: synonym
+                  value: geo
+          result: igme-geos-aligned
+
+        # Apply geo alignment to datapoints
+        - procedure: translate_column
+          ingredients:
+              - igme-headers-final
+          options:
+              column: geo
+              dictionary:
+                  base: igme-geos-aligned
+                  key: geo
+                  value: geo_aligned
+          result: igme-datapoints-final
+
+    concepts:
+        # Extract concepts from the final datapoints
+        - procedure: extract_concepts
+          ingredients:
+              - igme-datapoints-final
+          result: igme-concepts-final

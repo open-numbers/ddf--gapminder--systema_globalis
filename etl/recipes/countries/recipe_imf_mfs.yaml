@@ -1,0 +1,73 @@
+# IMF Monetary and Financial Statistics Interest Rates recipe for Systema Globalis
+# Extracts central bank discount rate indicator
+
+info:
+  id: imf-mfs-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--imf--mfs_ir
+
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+ingredients:
+  # Get country entities for geo alignment
+  - id: imf-mfs-countries
+    dataset: *d1
+    key: country
+
+  # Get discount rate indicator
+  - id: imf-mfs-datapoints
+    dataset: *d1
+    key: country, year
+    value:
+      - disr_rt_pt_a_pt
+
+cooking:
+  datapoints:
+    # Translate header from 'year' to 'time' and 'country' to 'geo'
+    # Also rename indicator to target name
+    - procedure: translate_header
+      ingredients:
+        - imf-mfs-datapoints
+      options:
+        dictionary:
+          year: time
+          country: geo
+          disr_rt_pt_a_pt: central_bank_discount_rate_annual_percent
+      result: imf-mfs-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - imf-mfs-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: imf-mfs-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - imf-mfs-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: imf-mfs-countries-aligned
+          key: country
+          value: geo
+      result: imf-mfs-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - imf-mfs-datapoints-final
+      result: imf-mfs-concepts-final

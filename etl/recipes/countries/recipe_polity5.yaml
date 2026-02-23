@@ -1,0 +1,94 @@
+# INSCR Polity5 recipe for Systema Globalis
+# Extracts democracy score indicator
+
+info:
+  id: polity5-sg-dataset
+  base:
+    - &d1 open-numbers/ddf--inscr--polity5
+
+config:
+  # the path to search recipe files to include
+  recipes_dir: ./
+
+include:
+  - recipe_gw_geo.yaml
+
+ingredients:
+  # Get country entities for geo alignment
+  - id: polity5-countries
+    dataset: *d1
+    key: country
+
+  # Get polity2 indicator (Revised Combined Polity Score)
+  - id: polity5-datapoints
+    dataset: *d1
+    key: country, year
+    value:
+      - polity2
+
+cooking:
+  datapoints:
+    # Filter out historic entities that have been superseded:
+    # - eth (historic Ethiopia) for 1993 - replaced by modern Ethiopia
+    # - sud (historic Sudan) for 2011 - replaced by modern Sudan after South Sudan split
+    - procedure: filter
+      ingredients:
+        - polity5-datapoints
+      options:
+        row:
+          $nor:
+            - $and:
+                - country:
+                    $eq: eth
+                - year:
+                    $eq: 1993
+            - $and:
+                - country:
+                    $eq: sud
+                - year:
+                    $eq: 2011
+      result: polity5-datapoints-filtered
+
+    # Translate header from 'year' to 'time' and 'country' to 'geo'
+    # Also rename indicator to target name
+    - procedure: translate_header
+      ingredients:
+        - polity5-datapoints-filtered
+      options:
+        dictionary:
+          year: time
+          country: geo
+          polity2: democracy_score_use_as_color
+      result: polity5-headers-translated
+
+    # Align country entities with geo domain
+    - procedure: translate_column
+      ingredients:
+        - polity5-countries
+      options:
+        column: name
+        target_column: geo
+        dictionary:
+          base: gm-country-synonym
+          key: synonym
+          value: geo
+      result: polity5-countries-aligned
+
+    # Apply geo alignment to datapoints
+    - procedure: translate_column
+      ingredients:
+        - polity5-headers-translated
+      options:
+        column: geo
+        dictionary:
+          base: polity5-countries-aligned
+          key: country
+          value: geo
+      result: polity5-datapoints-final
+
+  concepts:
+    # Extract concepts from the final datapoints
+    - procedure: extract_concepts
+      ingredients:
+        - polity5-datapoints-final
+      result: polity5-concepts-final
