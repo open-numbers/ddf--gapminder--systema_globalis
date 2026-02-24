@@ -1,6 +1,6 @@
 # ETL
 
-This dataset is built from recipes under `etl/recipes`, with the main entrypoint:
+This dataset is built from recipes under `etl/recipes`, with the main entry point:
 
 - `etl/recipes/etl.yaml`
 
@@ -8,7 +8,7 @@ You can run `etl/scripts/etl.py` or use the `ddf` command to run the recipes.
 
 ## How to update
 
-This dataset relys on following datasets. In order to update this dataset, one should update the source datasets and run the etl script.
+This dataset relies on the following datasets. To update this dataset, update the source datasets and run the ETL script.
 
 ### Source datasets
 
@@ -53,3 +53,9 @@ Note: WDI is currently sourced from two differently named dataset IDs:
 `open-numbers/ddf--open_numbers--world_development_indicators` (countries)
 and `open-numbers/ddf--world_bank--world_development_indicators`
 (global-regions).
+
+### Beware of unit/definition changes
+
+Although the ETL script runs automatically, it does not check whether concept definitions have changed. Careful
+examination is required to ensure concept definitions remain coherent with datapoint updates. In case of a
+definition change, update the `ddf--gapminder--ontology` dataset and the change will be propagated to this dataset.
