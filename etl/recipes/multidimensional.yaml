@@ -8,18 +8,7 @@ ingredients:
       value: "*"
 
     - id: gw-gender-entities
-      dataset: open-numbers/ddf--gapminder--gapminder_world
+      dataset: open-numbers/ddf--gapminder--ontology
       key: gender
       value: "*"
 
-    - id: gw-multidimensional-concepts
-      dataset: open-numbers/ddf--gapminder--gapminder_world
-      key: concept
-      value:
-        $nin:
-          - interpolation
-      filter:
-        concept:
-          - gender
-          - literacy_rate_youth
-          - literacy_rate_adult
